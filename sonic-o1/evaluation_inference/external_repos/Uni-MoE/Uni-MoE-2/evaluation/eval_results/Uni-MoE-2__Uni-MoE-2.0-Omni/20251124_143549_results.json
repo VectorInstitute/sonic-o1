@@ -1,0 +1,147 @@
+{
+  "results": {
+    "ai2d": {
+      "alias": "ai2d",
+      "exact_match,flexible-extract": 0.8144430051813472,
+      "exact_match_stderr,flexible-extract": 0.006996819965636448
+    }
+  },
+  "group_subtasks": {
+    "ai2d": []
+  },
+  "configs": {
+    "ai2d": {
+      "task": "ai2d",
+      "dataset_path": "lmms-lab/ai2d",
+      "dataset_kwargs": {
+        "token": true
+      },
+      "test_split": "test",
+      "full_docs": false,
+      "process_results_use_image": false,
+      "doc_to_visual": "<function ai2d_doc_to_visual at 0x7f70d2836b60>",
+      "doc_to_text": "<function ai2d_doc_to_text at 0x7f70d2836f20>",
+      "doc_to_target": "<function ai2d_doc_to_target at 0x7f70d2837380>",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_new_tokens": 16,
+        "temperature": 0.0,
+        "do_sample": false,
+        "until": [
+          "\n\n"
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "name": "flexible-extract",
+          "filter": [
+            {
+              "function": "<class 'utils.MultiChoiceRegexFilter'>",
+              "group_select": 0,
+              "ignore_case": true,
+              "ignore_punctuation": true,
+              "regex_pattern": "([A-Z])\\."
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": [
+        {
+          "version": 0.0
+        }
+      ],
+      "lmms_eval_specific_kwargs": {
+        "default": {
+          "prompt_format": "mcq",
+          "pre_prompt": "",
+          "post_prompt": "\nAnswer with the option's letter from the given choices directly."
+        },
+        "gpt4v": {
+          "prompt_format": "mcq",
+          "pre_prompt": "",
+          "post_prompt": "\nAbove choices are given in {option}. {content} format.\nPlease answer with the option letter from the given choices directly."
+        },
+        "qwen_vl": {
+          "prompt_format": "qa",
+          "pre_prompt": "",
+          "post_prompt": " Answer:"
+        },
+        "xcomposer2_4khd": {
+          "prompt_format": "mcq_xcomposer",
+          "pre_prompt": "[UNUSED_TOKEN_146]user\nQuestion: ",
+          "post_prompt": "[UNUSED_TOKEN_145]\n[UNUSED_TOKEN_146]assistant\nThe answer is"
+        },
+        "prompt_format": "mcq",
+        "pre_prompt": "",
+        "post_prompt": "\nAnswer with the option's letter from the given choices directly."
+      },
+      "model_specific_target_kwargs": {
+        "default": "mcq",
+        "qwen_vl": "qa"
+      }
+    }
+  },
+  "versions": {
+    "ai2d": "Yaml"
+  },
+  "n-shot": {
+    "ai2d": 0
+  },
+  "higher_is_better": {
+    "ai2d": {
+      "exact_match": true
+    }
+  },
+  "n-samples": {
+    "ai2d": {
+      "original": 3088,
+      "effective": 3088
+    }
+  },
+  "config": {
+    "model": "uni_moe_2_omni",
+    "model_args": "pretrained=/data/share/Model/Uni-MoE-2/Uni-MoE-2.0-Omni",
+    "batch_size": "1",
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": "",
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": "20251124_143549",
+  "task_hashes": {
+    "ai2d": "9f6c1c902d2786555299699e653486e3f4ca1a4fc92cdf53c781ddcad50f3e8f"
+  },
+  "model_source": "uni_moe_2_omni",
+  "model_name": "/data/share/Model/Uni-MoE-2/Uni-MoE-2.0-Omni",
+  "model_name_sanitized": "Uni-MoE-2__Uni-MoE-2.0-Omni",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 490537.367400618,
+  "end_time": 492152.840050107,
+  "total_evaluation_time_seconds": "1615.4726494890056"
+}

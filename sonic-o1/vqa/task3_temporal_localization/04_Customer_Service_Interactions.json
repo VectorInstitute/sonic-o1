@@ -1,0 +1,3242 @@
+{
+  "topic_id": 4,
+  "topic_name": "Customer Service Interactions",
+  "task": "task3_temporal_localization",
+  "generated_at": "2025-11-23 16:25:38",
+  "num_entries": 41,
+  "entries": [
+    {
+      "video_id": "PRzkzJuo6mI",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 142.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the receptionist lists the luxurious features like an infinity pool and Michelin star chef, when does he clarify that those features are for the hotel next door?",
+          "temporal_relation": "after",
+          "anchor_event": "The receptionist describes the infinity pool, luxury spa, and three Michelin star chef.",
+          "target_event": "The receptionist explicitly states, 'So that's for the hotel next door.'",
+          "answer": {
+            "start_s": 18.509,
+            "end_s": 19.631
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (receptionist describes features) occurs from 6.429s to 16.626s. E2 (receptionist clarifies it's for the next door hotel) occurs from 18.509s to 19.631s. This is a clear 'after' relationship."
+        },
+        {
+          "question_id": "002",
+          "question": "After the customer asks why he didn't receive a wake-up call, when does the receptionist admit that he forgot?",
+          "temporal_relation": "after",
+          "anchor_event": "The customer asks, 'Why didn't you give me my wake-up call?'",
+          "target_event": "The receptionist says, 'Ah yes. I forgot.'",
+          "answer": {
+            "start_s": 52.451,
+            "end_s": 53.912
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (customer asks about wake-up call) occurs from 44.399s to 45.781s. E2 (receptionist admits forgetting) occurs from 52.451s to 53.912s. This follows a clear 'after' temporal relation."
+        },
+        {
+          "question_id": "003",
+          "question": "After the receptionist finishes processing the customer's first credit card payment and says 'All done, thank you', when is the next time he asks the customer if they want to pay by credit card?",
+          "temporal_relation": "next",
+          "anchor_event": "The receptionist finishes processing the first credit card and says 'All done, thank you.'",
+          "target_event": "The receptionist asks, 'Would you like to pay by credit card as well?'",
+          "answer": {
+            "start_s": 67.013,
+            "end_s": 68.153
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (receptionist finishes first card payment) occurs from 64.93s to 65.79s. E2 (receptionist asks to pay by credit card again) occurs from 67.013s to 68.153s. This is the 'next' instance of that specific question immediately after the anchor. [Judge: Timestamps for the target event are accurate and d]"
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 4
+        }
+      ],
+      "demographics_total_individuals": 4,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The segment clearly shows two main male actors (receptionist and customer) who are Asian, appear to be middle-aged, and speak English. Additionally, two other male staff members are visible in the background for a significant portion of the segment, also appearing Asian and middle-aged. All fit the provided demographic profile.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "JJOTu9IkiUo",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 32.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the customer says 'I'm still hungry, man.', when does the chef begin preparing the kaedama noodles?",
+          "temporal_relation": "after",
+          "anchor_event": "The customer states he is still hungry.",
+          "target_event": "The chef starts the process of preparing and adding the kaedama (add-on noodles) to the customer's bowl.",
+          "answer": {
+            "start_s": 5.121,
+            "end_s": 11.2
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=customer's statement ends at 2.96s. E2=chef begins preparing the kaedama (grabbing strainer, boiling, adding to bowl) from 5.121s to 11.2s. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the chef finishes adding the kaedama noodles into the customer's bowl, when does the chef say 'Enjoy'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The chef finishes placing the kaedama noodles into the customer's ramen bowl.",
+          "target_event": "The chef verbally says 'Enjoy' to the customer.",
+          "answer": {
+            "start_s": 12.8,
+            "end_s": 13.272
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=chef finishes adding noodles around 11.2s. E2=chef says 'Enjoy' from 12.8s to 13.272s. Relation=once_finished."
+        },
+        {
+          "question_id": "003",
+          "question": "After the customer says 'Gochisousama', when does the chef present the next dish and say 'Next, rice'?",
+          "temporal_relation": "after",
+          "anchor_event": "The customer thanks the chef by saying 'Gochisousama'.",
+          "target_event": "The chef presents a bowl of white rice and verbally says 'Next, rice'.",
+          "answer": {
+            "start_s": 17.396,
+            "end_s": 18.457
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=customer says 'Gochisousama' from 16.576s to 17.376s. E2=chef presents rice and says 'Next, rice' from 17.396s to 18.457s. Relation=after."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "Two unique male individuals are present. One is visibly Asian, middle-aged, and speaks English (the chef). The other is an audible male voice speaking English (the customer), and his hand is visible. Both fit the provided demographic profile.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "4PyTLRh7k5w",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 40.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man approaches the streamer and begins whispering threats, when does the streamer apologize?",
+          "temporal_relation": "after",
+          "anchor_event": "A man approaches the streamer, leans in, and begins whispering to him, stating he is a gangster and the streamer needs to leave.",
+          "target_event": "The streamer says 'I apologize'.",
+          "answer": {
+            "start_s": 17.876,
+            "end_s": 18.557
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=man starts whispering threats at 3.778s, saying 'I'm a gangster' and 'you better fucking leave here right now' (ends 12.97s). E2=streamer apologizes at 17.876s, ending at 18.557s. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "After the man first tells the streamer he's 'fucking with the mob over here' and to 'leave now', when is the next time the man tells the streamer he's not gone yet?",
+          "temporal_relation": "next",
+          "anchor_event": "A man tells the streamer 'You're fucking with the mob over here. You better leave now.'",
+          "target_event": "The man tells the streamer 'You're not gone yet'.",
+          "answer": {
+            "start_s": 24.666,
+            "end_s": 27.83
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=man says 'you're fucking with the mob over here. You better leave now.' at 14.272s, ending at 17.196s. E2=next, man says 'You're not gone yet. As soon as you go, you better go.' at 24.666s, ending at 27.83s. Relation=next. [Judge: Timestamps are accurate and do not require correct]"
+        },
+        {
+          "question_id": "003",
+          "question": "Once the man explicitly tells the streamer 'The sooner you leave, the better,' when does the streamer stand up and start to walk away?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The man tells the streamer 'The sooner you leave, the better.'",
+          "target_event": "The streamer stands up from his seat and begins to walk away from the table.",
+          "answer": {
+            "start_s": 28.9,
+            "end_s": 31.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=man finishes saying 'The sooner you leave, the better' at 22.103s. E2=streamer stands up and starts walking away, also saying 'Thank you very much for your business' at 28.9s, and is fully moving away by 31.0s. Relation=once_finished."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "Two unique male individuals are visible and audible in the segment. One is a young man with purple hair who speaks (Young, White, Male, English). The other is an older man who leans in and speaks to him (Older adult, White, Male, English).",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "Once the driver asks \"Do you guys speak English?\", when does the McDonald's employee respond by asking \"Como se llama?\" (What is your name?)",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The driver asks the McDonald's employee, \"Do you guys speak English?\"",
+          "target_event": "The McDonald's employee responds to the driver's question by asking, \"Como se llama?\" in Spanish.",
+          "answer": {
+            "start_s": 25.274,
+            "end_s": 27.498
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (driver asks \"Do you guys speak English?\") at 24.454-25.254.0s. E2 (employee asks \"Como se llama?\") at 25.274-27.498.0s. The target immediately follows the anchor."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the McDonald's employee asks if the McDoubles are 'solo' or 'combo', when does the driver respond with 'Combo, s\u00ed'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The McDonald's employee asks the driver \"Solito o en combo?\" regarding the McDoubles.",
+          "target_event": "The driver responds to the employee by saying \"Combo, s\u00ed.\"",
+          "answer": {
+            "start_s": 60.47,
+            "end_s": 62.335
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (employee asks \"Solito o en combo?\") at 58.026-60.327.0s. E2 (driver says \"Combo, s\u00ed\") at 60.470-62.335.0s. The target immediately follows the anchor."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the driver requests an extra McDouble as 'solito' (alone), when does the McDonald's employee confirm the order with \"Solo, s\u00ed?\"",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The driver asks for 'un extra McDoubles, no combo, solito' (one extra McDouble, no combo, alone).",
+          "target_event": "The McDonald's employee confirms by saying \"Solo, s\u00ed?\".",
+          "answer": {
+            "start_s": 120.924,
+            "end_s": 123.087
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (driver requests extra McDouble 'solito') at 115.396-120.582.0s. E2 (employee confirms \"Solo, s\u00ed?\") at 120.924-123.87.0s. The target immediately follows the anchor."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        }
+      ],
+      "demographics_total_individuals": 3,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "One female employee is visible and speaks both Spanish and some English. Two distinct male voices are heard from inside the car, speaking both English and Spanish. All individuals match the provided demographic categories.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 240.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the speaker asks about having two more McDouble combos, when does the speaker confirm the total order by saying 'So, all three McDoubles'?",
+          "temporal_relation": "after",
+          "anchor_event": "The speaker asks 'Do you have two more McDouble combos?'",
+          "target_event": "The speaker confirms the total order by saying 'So, all three McDoubles.'",
+          "answer": {
+            "start_s": 178.65,
+            "end_s": 182.054
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) occurs at 171.861s and ends at 174.185s. E2 (target) occurs at 178.65s and ends at 182.054s. The target event happens after the anchor."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the speaker finishes saying 'Gracias', when does the speaker say 'I went to McDonald's in Puerto Rico'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The speaker says 'Gracias'.",
+          "target_event": "The speaker says 'I went to McDonald's in Puerto Rico.'",
+          "answer": {
+            "start_s": 218.853,
+            "end_s": 222.597
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) occurs at 216.373s and ends at 2q8.736s. E2 (target) occurs immediately after at 218.853s and ends at 222.597s, forming an 'once_finished' relation."
+        },
+        {
+          "question_id": "003",
+          "question": "After the speaker asks '1 hour?', when does the speaker ask 'Can you call someone who knows English?'",
+          "temporal_relation": "after",
+          "anchor_event": "The speaker asks '1 hour?'",
+          "target_event": "The speaker asks 'Can you call someone who knows English?'",
+          "answer": {
+            "start_s": 158.966,
+            "end_s": 159.907
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) occurs at 148.966s and ends at 150.966s. E2 (target) occurs at 158.966s and ends at 159.907s. The target event happens after the anchor."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Hispanic",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "Two distinct individuals were identified speaking English in this segment. Based on the human-reviewed ground truth for the full video, which includes Hispanic race, Male and Female genders, and Young and Middle age groups, these characteristics were distributed to represent two unique English-speaking individuals from the segment.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "Once the speaker states that the next train will depart in 20 minutes, when does the bullet train to Pohang arrive at the platform?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The speaker says, 'we are going to our next train which will depart in 20 minutes'",
+          "target_event": "The bullet train to Pohang is seen arriving at the platform.",
+          "answer": {
+            "start_s": 25.0,
+            "end_s": 27.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech) ends at 24.0s. E2 (target visual event) starts at 25.0s and ends at 27.0s. The target event happens shortly after the anchor speech finishes."
+        },
+        {
+          "question_id": "002",
+          "question": "After the speaker mentions the weather is super hot, when does he describe Pohang as having the largest steel manufacturing company?",
+          "temporal_relation": "after",
+          "anchor_event": "The speaker says, 'the weather today is super hot'",
+          "target_event": "The speaker talks about Pohang having the largest steel manufacturing company POSCO.",
+          "answer": {
+            "start_s": 110.0,
+            "end_s": 115.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech) ends at 108.0s. E2 (target speech) starts at 110.0s and finishes at 115.0s. The target speech occurs after the anchor speech."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the speaker says that the whole place is a seafood fish market, when does he state that the town's landscape is beautiful?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The speaker says, 'the whole place is seafood fish market'",
+          "target_event": "The speaker states, 'the town landscape is beautiful'",
+          "answer": {
+            "start_s": 184.833,
+            "end_s": 187.2
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech) finishes at 182.833s. E2 (target speech) starts at 184.833s and ends at 187.200s. The target speech occurs once the anchor speech is finished."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "Korean",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "40+",
+          "language": "Korean",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "40+",
+          "language": "Korean",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 4,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The segment features the male vlogger (Asian, Middle, English speaker) interacting and narrating. Three other individuals are clearly visible at the start: one male (Asian, Middle), one female (Asian, Older adult). A different male (Asian, Older adult) is seen walking with the vlogger later with an umbrella. The non-English speaking individuals are assumed to speak Korean based on the location and context.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the speaker states that the whole place is a seafood fish market, when does he describe the town landscape as beautiful?",
+          "temporal_relation": "after",
+          "anchor_event": "The speaker states 'The whole place is seafood fish market'",
+          "target_event": "The speaker says 'The town landscape is beautiful'",
+          "answer": {
+            "start_s": 185.0,
+            "end_s": 187.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=speaker states 'The whole place is seafood fish market' from 181.0s to 183.7s. E2=speaker says 'The town landscape is beautiful' from 185.0s to 187.0s. The target occurs after the anchor."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the speaker finishes saying 'I think we just go ahead with this', when is the interior of the small shop first shown?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The speaker says 'I think we just go ahead with this'",
+          "target_event": "The camera shows the interior of the small shop with tables and a woman behind a counter",
+          "answer": {
+            "start_s": 201.5,
+            "end_s": 202.5
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=speaker says 'I think we just go ahead with this' from 199.3s to 201.1s. E2=the shop interior is shown from 201.5s to 202.5s. This transition occurs immediately after the speech finishes."
+        },
+        {
+          "question_id": "003",
+          "question": "While the Korean woman is serving food at the table, when does she add rice to one of the bowls?",
+          "temporal_relation": "during",
+          "anchor_event": "The Korean woman serves various dishes and rice bowls to the table",
+          "target_event": "The woman uses chopsticks to add rice from a small bowl into a metal rice bowl",
+          "answer": {
+            "start_s": 256.2,
+            "end_s": 263.0
+          },
+          "requires_audio": false,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=Korean woman serves food from 247.000s to 264000s. E2=she adds rice to a bowl from 256.200s to 263.000s. The rice addition occurs during the larger serving process."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "40+",
+          "language": "Korean",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "Korean",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 4,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The segment clearly shows two main male travelers (one middle-aged, one older adult, both speaking English). A female older adult waitress is seen serving them and speaking Korean. Another female middle-aged individual is seen walking in the market, inferred to be Korean based on location and the video's context.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man says his dish was cold raw fish, when does he describe the other dish?",
+          "temporal_relation": "after",
+          "anchor_event": "The man describes his dish as 'cold raw fish' that is served with ice.",
+          "target_event": "The man describes the other bowl as 'like bibimbap, but with raw fish' and praises the sauce.",
+          "answer": {
+            "start_s": 343.0,
+            "end_s": 346.8
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) starts at 336.0s and ends at 341.0s. E2 (target) starts at 343.0s and ends at 346.8s, including the description of the sauce. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "After the man says 'For now, we are leaving Pohang', when does he announce their arrival at Gyeongju?",
+          "temporal_relation": "after",
+          "anchor_event": "The man says 'For now, we are leaving Pohang'.",
+          "target_event": "The man says 'We have arrived at Gyeongju'.",
+          "answer": {
+            "start_s": 461.5,
+            "end_s": 464.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) starts at 433.5s and ends at 435.7s. E2 (target) starts at 461.5s and ends at 464.0s. Relation=after. The provided transcript entry for arrival at Gyeongju at 114.466 (which is 2:14) is for a later part of the video. The arrival at Dongdaegu is at 1:22.5, and the train to Gyeongju is announced at 1:31.5."
+        },
+        {
+          "question_id": "003",
+          "question": "After the man announces the train to Gyeongju, when does he explain the KTX pass limitations and their plan to hop on?",
+          "temporal_relation": "after",
+          "anchor_event": "The man says 'This is our train to Gyeongju'.",
+          "target_event": "The man explains that the KTX unlimited pass can only reserve twice a day, so they cannot reserve and must hop on.",
+          "answer": {
+            "start_s": 424.233,
+            "end_s": 436.9
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) starts at 421.0s and ends at 423.2s. E2 (target) starts at 424.233s (with 'because the KTX unlimited pass...') and completes the full explanation of not being able to reserve and having to stand by 438.90s. Relation=after."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "One Asian male (middle-aged) is speaking English to the camera. Another Asian male (older adult) is walking behind him, also visible in the segment. Both fit the provided demographic categories.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man states that the area is actually the Shilla Dynasty, when does he mention that it has tombs, temples, and historical sites?",
+          "temporal_relation": "after",
+          "anchor_event": "The man says, 'This is actually the Shilla dynasty.'",
+          "target_event": "The man explains that the capital of Shilla Dynasty has a lot of tomb, temple, and historical sites.",
+          "answer": {
+            "start_s": 533.0,
+            "end_s": 538.466
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=man states 'This is actually the Shilla dynasty' at 524.233s, ending at 526.566s. E2=man begins talking about the historical sites at 533.0s, ending at 538.466s. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the man finishes talking about the firehouse and ambulance, when does he mention they are on their way to Gyeongju Eopseong?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The man talks about the firehouse and first aid ambulance.",
+          "target_event": "The man says they are on their way to Gyeongju Eopseong.",
+          "answer": {
+            "start_s": 550.0,
+            "end_s": 556.566
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=man talks about the firehouse and ambulance at 544.066s, ending at 549.8s. E2=man starts talking about going to Gyeongju Eopseong at 550.0s, ending at 556.566s. Relation=once_finished."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the man hits his head, when does he continue explaining about the Gyeongju Eopseong Fortress?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The man hits his head on a low beam and exclaims 'Oh my, I hit my head.'",
+          "target_event": "The man resumes explaining that Gyeongju Eopseong Fortress stood as a symbol of the city for 1000 years.",
+          "answer": {
+            "start_s": 636.333,
+            "end_s": 640.733
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=man hits his head and says 'Oh my, I hit my head' at 632.33s, ending at 631.5s. E2=man resumes explaining at 636.333s, ending at 640.733s. Relation=once_finished."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The video shows two unique individuals: one Asian male (the speaker) in the Middle age category, and another Asian male (companion) in the Older adults category. Both speak English.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 690.0,
+        "end": 821.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the speaker explains the meaning of the Hancha on the gate, when does he start describing the reconstruction of the wall?",
+          "temporal_relation": "after",
+          "anchor_event": "The speaker explains that the Hancha means 'facing the sun, the door that face the sun'.",
+          "target_event": "The speaker states that the wall is a reconstruction on the original location.",
+          "answer": {
+            "start_s": 706.5,
+            "end_s": 715.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (speaker explains Hancha) from 692.8s to 699.5s. E2 (speaker describes wall reconstruction) from 706.5s to 715.0s. The target occurs after the anchor completes."
+        },
+        {
+          "question_id": "002",
+          "question": "After the speaker mentions it is 9 PM and most shops are closed, when does he first point out a cat?",
+          "temporal_relation": "after",
+          "anchor_event": "The speaker states it is 9 PM and most shops are closed.",
+          "target_event": "The speaker says 'here's a cat' and 'meow' while filming it.",
+          "answer": {
+            "start_s": 745.0,
+            "end_s": 748.7
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (speaker mentions time and closed shops) from 715.7s to 719.2s. E2 (speaker spots cat) from 745.0s to 748.7s. The target occurs after the anchor completes."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the speaker finishes stating that they have done their visit to the tomb of the Kings, when does he explain their travel plans to the KTX station?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The speaker says 'Okay, we have done our visit to the tomb of the Kings'.",
+          "target_event": "The speaker explains they are heading to the bus station to take a bus to the KTX station.",
+          "answer": {
+            "start_s": 778.0,
+            "end_s": 788.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (speaker finishes tomb visit statement) from 772.0s to 777.0s. E2 (speaker explains travel plans) from 778.0s to 788.0s. The target occurs almost immediately after the anchor finishes."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "Korean",
+          "count": 2
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "40+",
+          "language": "Korean",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 4,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "One Asian male (Middle age) is speaking English throughout the segment. Two Asian females (Middle age) are seen walking. A second Asian male (Older adult) is visible behind the main speaker at the end of the segment.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the speaker explains the cause of the container rollover, when does someone speak in a foreign language?",
+          "temporal_relation": "after",
+          "anchor_event": "The speaker explains that the landing gear caved in, causing the container to topple over.",
+          "target_event": "A person speaks loudly in a foreign language (likely Korean).",
+          "answer": {
+            "start_s": 35.6,
+            "end_s": 40.8
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=speaker explains the rollover cause at 8.6s-33.0.0s. E2=foreign language speech starts at 35.6s and ends at 40.8s. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "After the speaker remarks that someone 'sounds very angry', when does he ask about the approximate weight of the container?",
+          "temporal_relation": "after",
+          "anchor_event": "The speaker verbally states, 'Sounds very angry'.",
+          "target_event": "The speaker asks, 'Do you have the approximate weight of the container?'",
+          "answer": {
+            "start_s": 54.0,
+            "end_s": 56.6
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=speaker's remark at 41.5s-43.1.0s. E2=speaker asks about container weight at 54.0s-56.6.0s. Relation=after."
+        },
+        {
+          "question_id": "003",
+          "question": "After the tow truck starts lifting the container, when does the speaker open the left side storage compartment?",
+          "temporal_relation": "after",
+          "anchor_event": "The tow truck begins to lift the fallen container from its side.",
+          "target_event": "The speaker opens the left side storage compartment of the tow truck.",
+          "answer": {
+            "start_s": 206.5,
+            "end_s": 208.0
+          },
+          "requires_audio": false,
+          "confidence": 0.9,
+          "abstained": false,
+          "rationale_model": "E1=tow truck starts lifting at 187.0s-199.0.0s. E2=speaker opens the left compartment at 206.5s-208.0.0s. Relation=after. This is a visual event."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.933,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 5
+        }
+      ],
+      "demographics_total_individuals": 5,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The primary speaker is visible and audible, speaking English. I identified at least four other unique male individuals visible in the background at various points in the video segment (e.g., at 0:54, 1:08, 2:16, 2:59) who also appear to be within the 'Middle' age range. All individuals are counted under the provided ground truth demographics.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the person finishes screwing the pin into the shackle, when does he pick up the heavy-duty sling from the ground?",
+          "temporal_relation": "after",
+          "anchor_event": "A person finishes screwing a pin into a blue shackle while holding it at waist height.",
+          "target_event": "A person bends down to pick up a grey heavy-duty sling from the ground.",
+          "answer": {
+            "start_s": 156.0,
+            "end_s": 157.0
+          },
+          "requires_audio": false,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=Person finishes screwing the shackle pin at 153.4s. E2=Person picks up the sling from the ground at 156.0s and holds it completely by 157.0s. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "While the crane truck is lifting the container, when is the container fully upright and vertical?",
+          "temporal_relation": "during",
+          "anchor_event": "The crane truck begins to operate, starting the process of lifting the fallen red container.",
+          "target_event": "The red container reaches a completely vertical, upright position.",
+          "answer": {
+            "start_s": 199.0,
+            "end_s": 201.0
+          },
+          "requires_audio": false,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=Crane truck starts to lift the container at 170.0s. E2=Container is fully upright at 199.0s and stabilizes by 201.0s. Relation=during."
+        },
+        {
+          "question_id": "003",
+          "question": "After the person talking to the orange shirt guy and others, explains that they post wreck recoveries on YouTube, when does the person in the black shirt start listening about where to place the container?",
+          "temporal_relation": "after",
+          "anchor_event": "A person talking to a group and one of them with  orange shirt listens to the guy explains that they post videos of wrecks they recover on YouTube.",
+          "target_event": "A person in a black shirt begins listening, about the instructions on where to place the container.",
+          "answer": {
+            "start_s": 275.074,
+            "end_s": 288.776
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=Person in orange shirt finishes listening about YouTube wrecks at 260.074s. E2=Person in black shirt starts listening about the instructions at 275.074s and continues until video end at 288.776s. Relation=after."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 4
+        }
+      ],
+      "demographics_total_individuals": 4,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "Multiple male individuals are visible throughout the segment. At least four men are seen gathered together at 1:50, and two are actively speaking and operating equipment, all using English and appearing to be middle-aged. The count reflects the unique individuals observed matching the provided demographic profile.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man says 'Go ahead and boom up with it', when does the boom of the tow truck begin to lift the container segment?",
+          "temporal_relation": "after",
+          "anchor_event": "A man verbally instructs to boom up",
+          "target_event": "The tow truck's boom begins to lift the container segment",
+          "answer": {
+            "start_s": 444.0,
+            "end_s": 451.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech) occurs from 334.965s to 335.791s. E2 (visual lifting of container segment) starts at 444.0s and completes its initial lift at 451.0s."
+        },
+        {
+          "question_id": "002",
+          "question": "After the man says 'Pull him up', when does the tow truck's main boom begin to lift the container segment higher, as seen from the top of the container?",
+          "temporal_relation": "after",
+          "anchor_event": "A man verbally instructs 'Pull him up'",
+          "target_event": "The tow truck's main boom lifts the container segment higher",
+          "answer": {
+            "start_s": 367.6,
+            "end_s": 379.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech) occurs from 365.787s to 366.317s. E2 (visual lifting by boom) starts at 367.6s and continues to lift the segment higher until 379.0s."
+        },
+        {
+          "question_id": "003",
+          "question": "After the man says 'Okay, now we're going to go in with both cables, okay?', when does the container begin its main rotation (barrel roll) to an upright position?",
+          "temporal_relation": "after",
+          "anchor_event": "A man says 'Okay, now we're going to go in with both cables, okay?'",
+          "target_event": "The container starts to visibly rotate/pivot as part of the barrel roll maneuver",
+          "answer": {
+            "start_s": 499.0,
+            "end_s": 509.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech) occurs from 493.173s to 495.463s. E2 (container rotation) starts at 499.0s and continues to rotate significantly until 509.0s."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "Two distinct Hispanic males are visible throughout the segment, actively participating in the container uprighting operation and speaking English. Both appear to be in the middle age range.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the container shifts abruptly with a loud noise, when does the narrator say 'Downward Y'?",
+          "temporal_relation": "after",
+          "anchor_event": "The container on the trailer shifts abruptly with a loud sound",
+          "target_event": "The narrator says 'Downward Y'",
+          "answer": {
+            "start_s": 537.3,
+            "end_s": 541.7
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (container shifts) at 533.0s-23.513.0s. E2 (narrator says 'Downward Y') at 537.6s-541.7s. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the worker finishes hitting the trailer leg with a tool, when does the narrator say 'Don't remove all pressure, hold on'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "A worker uses a tool to hit the trailer leg, attempting to adjust it",
+          "target_event": "The narrator says 'Don't remove all pressure, hold on'",
+          "answer": {
+            "start_s": 598.705,
+            "end_s": 601.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (worker hitting leg) finishes at 584.8s. E2 (narrator says 'Don't remove all pressure, hold on') at 598.705s-601.000s. Relation=once_finished."
+        },
+        {
+          "question_id": "003",
+          "question": "After the narrator says 'Boom down a little bit', when does the narrator say 'It might be shifted'?",
+          "temporal_relation": "after",
+          "anchor_event": "The narrator says 'Boom down a little bit'",
+          "target_event": "The narrator says 'It might be shifted'",
+          "answer": {
+            "start_s": 625.0,
+            "end_s": 627.6
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (narrator says 'Boom down a little bit') at 615.0s-620.0s. E2 (narrator says 'It might be shifted') at 625.0s-627.6s. Relation=after."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 6
+        }
+      ],
+      "demographics_total_individuals": 6,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "At least six unique male individuals are visible throughout the segment, some speaking English. Given the ground truth, all are assumed to be Hispanic, Middle-aged, and English-speaking. Multiple men are operating the cranes and observing the container, and a group of men gather towards the end of the clip.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man in the black t-shirt states that the load is leaning, when does he point to the leaning container?",
+          "temporal_relation": "after",
+          "anchor_event": "The man in the black t-shirt states that the load is a grade and is leaning",
+          "target_event": "The man in the black t-shirt points to the leaning container with his right hand",
+          "answer": {
+            "start_s": 686.137,
+            "end_s": 690.141
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1, the man's statement about the leaning load, occurs from 682.137s to 686.0. E3, the man pointing to the container, occurs from 686.137s to 690.141s. Target is after anchor."
+        },
+        {
+          "question_id": "002",
+          "question": "After the supervisor asks to lift the container so they can put the landing gears down, when does the crane begin lifting the container?",
+          "temporal_relation": "after",
+          "anchor_event": "The supervisor asks for the container to be lifted to put down landing gears",
+          "target_event": "The crane initiates the lifting motion of the red container",
+          "answer": {
+            "start_s": 741.301,
+            "end_s": 750.32
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E4, the supervisor's request to lift, occurs from 703.9s to 717.8s. E6, the crane starting to lift, is visible from 741.301s to 750.32s. Target is after anchor."
+        },
+        {
+          "question_id": "003",
+          "question": "While the supervisor explains the plan to move the container to the dock, when does he make a wide hand gesture?",
+          "temporal_relation": "during",
+          "anchor_event": "The supervisor explains the process of hooking their yard and sticking it in to move the container to the dock",
+          "target_event": "The supervisor makes a distinct two-handed gesture",
+          "answer": {
+            "start_s": 792.0,
+            "end_s": 795.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E10, the supervisor's explanation, occurs from 781.985s to 799s. The target gesture happens from 792s to 795s, which is during the explanation."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 1,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "The transcript indicates a single speaker throughout the segment. I applied the provided human-reviewed demographics (Hispanic, Male, Middle, English) to this one unique individual who is audible.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man with the white helmet says to start booming in, when does someone ask about connecting the yargo?",
+          "temporal_relation": "after",
+          "anchor_event": "A man in a white helmet gives instructions to 'start booming in and then put your outriggers up and then move forward'.",
+          "target_event": "A person asks the question 'He's going to connect his yargo?'",
+          "answer": {
+            "start_s": 1008.0,
+            "end_s": 1010.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech) occurs from 937.082s to 941.288s. E2 (target speech) starts at 1008.0s and ends at 1010s. The target occurs after the anchor."
+        },
+        {
+          "question_id": "002",
+          "question": "After the first person mentions the foot 'shifted', when is the next time someone states that something is 'severely shifted'?",
+          "temporal_relation": "next",
+          "anchor_event": "A man suggests that the foot 'shifted' in a hypothetical scenario.",
+          "target_event": "A person states 'That's severely shifted.'",
+          "answer": {
+            "start_s": 1071.5,
+            "end_s": 1073.5
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech about shifting) occurs from 840s to 894.8s. E2 (target speech confirming severe shifting) starts at 1071.5s and ends at 1073.5s. This is the next instance of mentioning 'shifted' after E1."
+        },
+        {
+          "question_id": "003",
+          "question": "After someone says 'Let me lower my lines', when does a person state 'That's severely shifted'?",
+          "temporal_relation": "after",
+          "anchor_event": "A person says 'Let me lower my lines'.",
+          "target_event": "A person states 'That's severely shifted.'",
+          "answer": {
+            "start_s": 1071.5,
+            "end_s": 1072.5
+          },
+          "requires_audio": true,
+          "confidence": 0.9,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech) occurs from 1057.238s to 1058.400s. E2 (target speech) starts at 1071.5s and ends at 1072.5s. The target occurs after the anchor."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.933,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The transcript indicates at least two distinct individuals speaking in English, based on conversational exchanges (e.g., questions followed by answers). Since only one demographic combination is provided, both individuals are assumed to share these characteristics.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the speaker initially states the trailer is 'severely shifted', when does he explain that the weight inside the container shifted?",
+          "temporal_relation": "after",
+          "anchor_event": "The speaker states, 'That's severely shifted.'",
+          "target_event": "The speaker explains the cause of the shift, saying, 'The weight shifted in there.'",
+          "answer": {
+            "start_s": 1144.71,
+            "end_s": 1145.79
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) at 1065.563s, speaker identifies the shift. E2 (target) at 1144.71s, speaker explains the cause, concluding at 1145.79s. Relation is after."
+        },
+        {
+          "question_id": "002",
+          "question": "After the speaker asks 'What do you recommend?', when does he confirm the proposed solution to 'put it on the floor'?",
+          "temporal_relation": "after",
+          "anchor_event": "The speaker asks, 'What do you recommend?'",
+          "target_event": "The speaker explicitly agrees to the solution by saying, 'Yeah, put it on the floor, okay.'",
+          "answer": {
+            "start_s": 1206.028,
+            "end_s": 1212.074
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) at 1160.517s, speaker asks for a recommendation. E2 (target) at 1206.028s, speaker confirms 'put it on the floor, okay.', concluding at 1212.074s. Relation is after."
+        },
+        {
+          "question_id": "003",
+          "question": "After someone asks 'It's batteries?', when is the cargo confirmed and the realization made, 'Oh, that's why.'?",
+          "temporal_relation": "after",
+          "anchor_event": "A person asks, 'It's batteries?'",
+          "target_event": "The speaker confirms, 'They're batteries. Oh, that's why.'",
+          "answer": {
+            "start_s": 1246.67,
+            "end_s": 1253.332
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) at 1245.248s, the question 'It's batteries?' is asked. E2 (target) at 1246.67s, the cargo is confirmed and the realization made, ending at 1253.332s. Relation is after."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 1,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "The transcript indicates a single, continuous speaker throughout the segment. I have applied the human-reviewed demographic characteristics to this one audible individual, as per the instructions.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the speaker gives detailed instructions to start going in with the 'white' to get the counterweight away from the truck, when is the next time he says \"Keep going with your white\"?",
+          "temporal_relation": "next",
+          "anchor_event": "Speaker gives detailed instructions to start going in with the 'white' to get the counterweight away from the truck",
+          "target_event": "Speaker says 'Keep going with your white'",
+          "answer": {
+            "start_s": 1532.4,
+            "end_s": 1533.221
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=detailed instruction (1495.066s-114.1504.0s). E2=first specific 'Keep going with your white' (1532.4s-123.1631.0s) after E1. Relation=next."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the speaker finishes asking \"You're right there, right?\", when does the immediate response \"No\" occur?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "Speaker asks \"You're right there, right?\"",
+          "target_event": "Another speaker immediately replies \"No.\"",
+          "answer": {
+            "start_s": 1565.122,
+            "end_s": 1570.383
+          },
+          "requires_audio": true,
+          "confidence": 0.98,
+          "abstained": false,
+          "rationale_model": "E1=question asked (1558.954s-155.1512.0s). E2=immediate reply 'No' (1565.122s-1570.1793.0s). Relation=once_finished, indicating a direct conversational response."
+        },
+        {
+          "question_id": "003",
+          "question": "After the speaker states that he wants the counterweight in position correctly, when does he instruct to \"Go ahead and hook up your glad hands\"?",
+          "temporal_relation": "after",
+          "anchor_event": "Speaker says 'First I want it in position correctly.'",
+          "target_event": "Speaker instructs to 'Go ahead and hook up your glad hands.'",
+          "answer": {
+            "start_s": 1610.073,
+            "end_s": 1618.113
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=statement about correct position (1586.233s-1588.696s). E2=instruction to hook up glad hands (1610.073s-1618.113s). Relation=after, due to the time gap."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.96,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 1,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "One unique individual is audible throughout the segment, speaking English and giving instructions. The provided human-reviewed demographics were applied to this individual.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the instructor finishes connecting the green glad hand, when does he ask if the other line has pressure?",
+          "temporal_relation": "after",
+          "anchor_event": "The instructor connects the green glad hand on the truck.",
+          "target_event": "The instructor asks 'This one has pressure?'",
+          "answer": {
+            "start_s": 1637.142,
+            "end_s": 1638.3
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1 (instructor connects green glad hand) finishes at 1595.0s. E2 (instructor asks about pressure) starts at 1637.1s and ends at 1638.3s. Relation is 'after'."
+        },
+        {
+          "question_id": "002",
+          "question": "After the instructor asks the learner 'You got it, mijo?', when does the video transition to an outdoor scene of a crane truck?",
+          "temporal_relation": "after",
+          "anchor_event": "The instructor asks the learner 'You got it, mijo?'",
+          "target_event": "The scene changes to show an outdoor view of a crane truck.",
+          "answer": {
+            "start_s": 1664.5,
+            "end_s": 1665.0
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1 (instructor's question) finishes at 1661.8s. E2 (scene change to crane truck) begins at 1664.5s and is fully established by 1665.0s. Relation is 'after'."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the crane operator says 'Okay, boom up', when does the crane boom visibly begin its upward movement?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The crane operator says 'Okay, boom up.'",
+          "target_event": "The crane boom starts to move upwards.",
+          "answer": {
+            "start_s": 1748.0,
+            "end_s": 1758.0
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1 (operator's speech) finishes at 1747.5s. E2 (crane boom upward movement) starts at 1748.0s and continues significantly until 1758.0s. Relation is 'once_finished'."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 1.0,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "Two distinct voices were identified speaking English in the segment. One speaker used the Spanish term 'mijo', aligning with the Hispanic ethnicity. Both individuals were counted with the provided human-reviewed demographic profile.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1770.0,
+        "end": 1970.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the speaker first says 'Cable down', when does another speaker confirm 'he wants it down right there'?",
+          "temporal_relation": "after",
+          "anchor_event": "A speaker says 'Cable down', providing an instruction during placement.",
+          "target_event": "Another speaker confirms the placement with 'he wants it down right there'.",
+          "answer": {
+            "start_s": 1823.031,
+            "end_s": 1826.484
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=speaker says 'Cable down' from 1772.671s to 1773.194s. E2=speaker confirms placement from 1823.031s to 1826.484s. Relation=after. All times in seconds relative to the video segment start."
+        },
+        {
+          "question_id": "002",
+          "question": "After a speaker asks 'Where do you guys want it at? Here or pushed over?', when does another speaker state 'That's better that way we have space on both sides'?",
+          "temporal_relation": "after",
+          "anchor_event": "A speaker asks for preferred placement of the item.",
+          "target_event": "Another speaker provides a reason for a chosen placement, indicating a decision has been made.",
+          "answer": {
+            "start_s": 1856.007,
+            "end_s": 1870.795
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=speaker asks about placement from 1846.443s to 1848.628s. E2=speaker explains the chosen placement from 1856.007s to 1870.795s. Relation=after. All times in seconds relative to the video segment start."
+        },
+        {
+          "question_id": "003",
+          "question": "After a speaker announces 'Our job's complete', when does the speaker say 'Thanks for watching, guys'?",
+          "temporal_relation": "after",
+          "anchor_event": "A speaker announces the completion of their job.",
+          "target_event": "The speaker expresses gratitude to the viewers.",
+          "answer": {
+            "start_s": 1954.262,
+            "end_s": 1955.164
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=speaker says 'Our job's complete' from 1951.238 to 1952.238. E2=speaker says 'Thanks for watching, guys' from 1954.262s to 1955.164s. Relation=after. All times in seconds relative to the video segment start."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The transcript shows distinct conversational turns, especially between 00:30:58 and 00:31:11, indicating at least two unique individuals speaking. All audible individuals are assumed to match the provided human-reviewed demographics.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man with the hat says the container weighs '36,000 pounds', when does the man behind the camera reply 'I figured'?",
+          "temporal_relation": "next",
+          "anchor_event": "A man with a hat states the weight of the container is '36,000 pounds'.",
+          "target_event": "The man behind the camera replies 'I figured'.",
+          "answer": {
+            "start_s": 1264.1,
+            "end_s": 1264.6
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=Man with hat states weight at 1260.0s, finishes at 1262.5s. E2=Man behind camera replies 'I figured' at 1264.1s, finishes at 1264.6s. Relation=next. [Judge: absolute\u2192relative]"
+        }
+      ],
+      "num_questions": 1,
+      "confidence": 0.746,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "Two unique male individuals are audible and visible in this segment. One is visible on screen talking, and the other is holding the camera and speaking. Both fit the provided Hispanic, Male, Middle, English demographics.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1770.0,
+        "end": 1969.885
+      },
+      "questions": [
+        {
+          "question_id": "002",
+          "question": "While the red container is being lowered, when does it make the final loud clanking sound as it settles on the ground?",
+          "temporal_relation": "during",
+          "anchor_event": "The red container is actively being lowered by the crane.",
+          "target_event": "The container makes a distinct clanking sound upon fully settling.",
+          "answer": {
+            "start_s": 1889.466,
+            "end_s": 1889.7
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=container lowering begins at 1798.0s and visually completes around 1889.0s. E2=loud clanking sound from container settling occurs at 1889.466s, ending at 1889.7s. Relation=during the lowering process. [Judge: absolute\u2192relative]"
+        }
+      ],
+      "num_questions": 1,
+      "confidence": 0.76,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "Two unique Hispanic males are visible throughout the segment, engaged in moving a shipping container with a crane. Both appear to be middle-aged and speak English.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the female speaker (Rochelle) introduces herself as a French instructor, when does she introduce the owners of the cafe?",
+          "temporal_relation": "after",
+          "anchor_event": "Rochelle says 'Hi, this is Rochelle DeMeo, your native French instructor from Belter Academy.'",
+          "target_event": "Rochelle says 'And today I have the pleasure of interviewing the owners of this magnificent cafe in sunny San Diego called Cote D'Azur.'",
+          "answer": {
+            "start_s": 13.064,
+            "end_s": 21.271
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1=Rochelle finishes introducing herself at 12.522s. E2=Rochelle starts introducing the cafe owners at 13.064s and finishes at 21.271s. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "Once Natasha finishes discussing tips and service quality as differences, when does Christophe add that takeout is more democratized in the US?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "Natasha finishes discussing the importance of tips and service quality for customer returns in the US.",
+          "target_event": "Christophe starts explaining that takeout is much more democratized in the US than in Europe.",
+          "answer": {
+            "start_s": 114.933,
+            "end_s": 119.987
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1=Natasha finishes her point about service and tips at 113.974s. E2=Christophe begins speaking at 114.933s and finishes explaining about takeout at 119.987s. Relation=once_finished."
+        },
+        {
+          "question_id": "003",
+          "question": "Once Christophe finishes stating that ordering food via pickup or apps is normal for US customers, when does Natasha compare French and US idioms for dinner plans?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "Christophe concludes that ordering food for pickup or via apps is considered normal for US customers.",
+          "target_event": "Natasha illustrates the difference in culture by comparing French ('what are we going to eat tonight?') and US ('what are we ordering tonight?') idioms.",
+          "answer": {
+            "start_s": 163.274,
+            "end_s": 169.0
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1=Christophe finishes his statement about 'normal' ordering at 161.0s. E2=Natasha starts comparing dinner idioms at 163.274s and finishes at 169.0s. Relation=once_finished."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 1.0,
+      "demographics": [
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "40+",
+          "language": "French",
+          "count": 1
+        },
+        {
+          "race": "Hispanic",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "French",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "French",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 4,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "One White female (Rochelle) speaks both English and French, estimated as an Older adult. One Hispanic female (Natasha) speaks French and is estimated as Middle-aged. One White male (Christophe) speaks French and is estimated as Middle-aged. The baby is not counted as it does not fit the provided age categories. The waiter shown briefly is not considered a distinct individual for this count.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man explains that clients are used to ordering directly via apps or pickup, when does the woman state how they phrase dinner plans in France?",
+          "temporal_relation": "after",
+          "anchor_event": "The man explains that clients are really used to ordering directly via applications or even coming for pickup, considering it normal.",
+          "target_event": "The woman says that in France, people ask 'qu'est-ce qu'on commande ce soir?' (what are we ordering tonight?)",
+          "answer": {
+            "start_s": 168.0,
+            "end_s": 169.8
+          },
+          "requires_audio": true,
+          "confidence": 0.9,
+          "abstained": false,
+          "rationale_model": "E1=man explains client habits from 150.0s to 158.0s. E2=woman says 'c'est qu'est-ce qu'on commande ce soir' from 168.0s to 169.8s. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the woman finishes asking about customer service differences, when does the man explain why clients return to their restaurant?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The woman asks if they observed customer service differences compared to France.",
+          "target_event": "The man explains that clients return because the food is good and there is a friendly side.",
+          "answer": {
+            "start_s": 184.7,
+            "end_s": 194.9
+          },
+          "requires_audio": true,
+          "confidence": 0.9,
+          "abstained": false,
+          "rationale_model": "E1=woman asks her question from 177.5s to 183.3s. E2=man responds about clients returning from 184.7s to 194.9s. Relation=once_finished."
+        },
+        {
+          "question_id": "003",
+          "question": "After the woman asks for steak and fries, when does the waiter ask how she would like her steak cooked?",
+          "temporal_relation": "after",
+          "anchor_event": "The woman asks for a green salad with steak and fries.",
+          "target_event": "The waiter asks 'Comment voulez-vous votre steak?' (How do you want your steak cooked?)",
+          "answer": {
+            "start_s": 348.8,
+            "end_s": 350.2
+          },
+          "requires_audio": true,
+          "confidence": 0.9,
+          "abstained": false,
+          "rationale_model": "E1=woman requests 'salade verte avec steak frites' from 301.7s to 306.4s. E2=waiter asks 'Comment voulez-vous votre steak?' from 348.8s to 350.2s. Relation=after."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.9,
+      "demographics": [
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "French",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "French",
+          "count": 2
+        },
+        {
+          "race": "Hispanic",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "French",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "40+",
+          "language": "French",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 5,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "Five unique individuals are observed and heard speaking French in this segment. This includes a White female interviewer/customer, a White male restaurant owner, a Hispanic female restaurant owner's wife, a White male server, and a White female older adult customer (visible but not speaking, assigned French based on the video's primary language context).",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "Once the woman finishes saying that customers are unhappy because there are no pastries, when does the video show the dessert display case?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The woman explains that customers are unhappy because there are no pastries.",
+          "target_event": "The video displays the dessert display case inside the restaurant.",
+          "answer": {
+            "start_s": 347.5,
+            "end_s": 353.5
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=The woman finishes saying 'sont m\u00e9contents' at 347.5s. E2=The camera immediately starts showing the dessert display case from 347.5s and finishes at 353.5s when the shot changes. Relation=once_finished."
+        },
+        {
+          "question_id": "002",
+          "question": "After the man finishes explaining that managing during COVID was complicated, when does the video show a close-up of a salad?",
+          "temporal_relation": "after",
+          "anchor_event": "The man finishes saying that it was complicated to take into account during COVID.",
+          "target_event": "The video shows a close-up of a salad with feta cheese.",
+          "answer": {
+            "start_s": 370.0,
+            "end_s": 375.8
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=The man finishes speaking at 365.8s. E2=The close-up of the salad appears at 370.0s and lasts until 375.8s when the shot changes back to the speakers. Relation=after."
+        },
+        {
+          "question_id": "003",
+          "question": "After the man finishes giving examples of how customers customize their dishes, when does the video show a close-up of a fresh salad?",
+          "temporal_relation": "after",
+          "anchor_event": "The man gives examples of customers customizing dishes, like taking olives instead of onions, or jalapenos.",
+          "target_event": "The video shows a close-up of a vibrant green salad.",
+          "answer": {
+            "start_s": 469.0,
+            "end_s": 472.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=The man finishes giving customization examples ('jalapenos') at 445.0s. E2=The close-up of the salad appears at 469.0s  and lasts until 472.0. Relation=after. All times in seconds."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Hispanic",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "French",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "French",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "One Hispanic female (middle-aged) is visible and speaking French. One White male (middle-aged) is visible and listening. Both are clearly present in the segment.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 566.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man talks about average restaurant closing times in France, when does the woman holding the baby say, 'Il y a plus personne'?",
+          "temporal_relation": "after",
+          "anchor_event": "The man states that restaurants in France typically close around 10 or 11 o'clock.",
+          "target_event": "The woman holding the baby says, 'Il y a plus personne' (There's no one left).",
+          "answer": {
+            "start_s": 525.0,
+            "end_s": 526.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (man talks about France closing times) at 519.0s, ending 523.0s. E2 (woman says 'Il y a plus personne') starts at 525.0s and ends at 526.0s. Relation is 'after'."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the woman on the left finishes asking viewers to subscribe, when does she say, 'A bient\u00f4t les amis, au revoir!'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The woman on the left asks viewers to subscribe to the channel and expresses appreciation.",
+          "target_event": "The woman on the left says, 'A bient\u00f4t les amis, au revoir!'",
+          "answer": {
+            "start_s": 539.1,
+            "end_s": 540.1
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (woman asks to subscribe) starts at 536.0s and ends at 538.7s. E2 (woman says 'A bient\u00f4t...') starts at 539.1s and ends at 540.1s. Relation is 'once_finished' as it's the next direct utterance."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the woman on the left finishes saying, 'A bient\u00f4t les amis, au revoir!', when does the man say, 'A bient\u00f4t!'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The woman on the left says, 'A bient\u00f4t les amis, au revoir!'",
+          "target_event": "The man says, 'A bient\u00f4t!'",
+          "answer": {
+            "start_s": 540.3,
+            "end_s": 540.7
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (woman says 'A bient\u00f4t...') starts at 539.1s and ends at 540.1s. E2 (man says 'A bient\u00f4t!') starts at 540.3s and ends at 540.7s. Relation is 'once_finished' as it follows immediately."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Hispanic",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "French",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "French",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 3,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "Three unique adults are visible and audible. The blonde woman on the left is White, Older (40+), and primarily speaks English in her address, but also French at the end. The woman in the middle holding a baby appears Hispanic, Middle (25-39), and speaks French. The man on the right is White, Middle (25-39), and speaks French.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "8xW-m_bmpv4",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 47.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man in the cowboy hat states that the machine took his money, when does the customer service representative deny taking his money?",
+          "temporal_relation": "after",
+          "anchor_event": "The man on the phone, wearing a cowboy hat, says 'The machine took my money.'",
+          "target_event": "The customer service representative's voice states, 'We did not take your money.'",
+          "answer": {
+            "start_s": 5.355,
+            "end_s": 7.317
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (man's complaint) occurs at 3.694-5.35.0s. E2 (CS denial) starts at 5.355s and ends at 7.317s. The target occurs after the anchor."
+        },
+        {
+          "question_id": "002",
+          "question": "While the customer service representative is explaining to print the receipt and take it to the register, when does the man in the cowboy hat realize his mistake?",
+          "temporal_relation": "during",
+          "anchor_event": "The customer service representative gives instructions to print the receipt and take it to the register.",
+          "target_event": "The man in the cowboy hat says he sees the receipt and his facial expression changes to understanding.",
+          "answer": {
+            "start_s": 34.561,
+            "end_s": 37.088
+          },
+          "requires_audio": true,
+          "confidence": 0.9,
+          "abstained": false,
+          "rationale_model": "E1 (CS explanation) starts at 30.591s and ends at 34.502s (first part of explanation) then continues from 30.591-34.502, then continues later. E2 (man's realization) starts at 34.561s when he says 'Oh, I see the receipt' and ends at 37.088s. This occurs while the overall instruction is being conveyed."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the man says 'Thank you', when does he hang up the phone?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The man in the cowboy hat says 'Thank you' to end the call.",
+          "target_event": "The man puts the phone receiver down and smiles.",
+          "answer": {
+            "start_s": 42.542,
+            "end_s": 46.917
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (man's 'Thank you') finishes at 42.542s. E2 (man hangs up and smiles) begins immediately after at 42.542s, and the action and smile complete by 46.917s."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.933,
+      "demographics": [
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The video features one actor playing two distinct characters, with two different voices, in a phone conversation. To align with the provided ground truth for both age categories, one character is assigned to 'Older adults (40+)' and the other to 'Middle (25-39)', both being White, Male, and English speakers.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "04khRfp_tY0",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 160.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man in the suit asks the police officer to call for more car crews, when do additional police officers enter the room?",
+          "temporal_relation": "after",
+          "anchor_event": "The man in the suit asks the first police officer to call for car crews.",
+          "target_event": "Several additional police officers walk into the room.",
+          "answer": {
+            "start_s": 50.147,
+            "end_s": 51.357
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=man in suit asks for car crews at 47.412s, ending at 49.679s. E2=additional police officers enter the room starting at 50.147s, completing their entrance at 51.357s. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "After the first police officer repeatedly asks the man in the suit to leave the building, when does the man in the suit state he has asked for IDs?",
+          "temporal_relation": "next",
+          "anchor_event": "The first police officer asks the man in the suit to leave the building for the second time.",
+          "target_event": "The man in the suit states he has asked for IDs.",
+          "answer": {
+            "start_s": 41.399,
+            "end_s": 42.261
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=police officer says 'I'm asking you again to leave my building' at 39.954s, ending at 41.378s. E2=man in suit replies 'I've asked for IDs' starting at 41.399s, ending at 42.261s. Relation=next."
+        },
+        {
+          "question_id": "003",
+          "question": "After the man in the suit shouts 'Ambulance!' for the last time, when is he informed that he is under arrest?",
+          "temporal_relation": "after",
+          "anchor_event": "The man in the suit shouts 'Ambulance!' one last time before his arrest.",
+          "target_event": "A police officer informs the man in the suit that he is under arrest.",
+          "answer": {
+            "start_s": 93.222,
+            "end_s": 98.204
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=man in suit shouts 'Ambulance!' at 96.561s, ending at 97.371s. E2=police officer states 'you're under arrest now sir, you're coming down to the car' starting at 93.222s, ending at 98.204s. Relation=after."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "40+",
+          "language": "English",
+          "count": 3
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 4
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        }
+      ],
+      "demographics_total_individuals": 9,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The video shows one civilian male and several police officers (both male and female). The civilian male and one police officer appear to be Older adults. At least four male police officers appear to be Middle-aged, as do two female police officers. All visible individuals appear White and speak English.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "eJlc_GV2yx8",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 73.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "Once the man (father) tells the woman to use 'Find my iPhone', when does she claim that her 'Find my iPhone' is on?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The man (father) tells the woman, 'You better go use find, find my iPhone. Go do that.'",
+          "target_event": "The woman responds, 'Find my iPhone is on, it's on now.'",
+          "answer": {
+            "start_s": 24.916,
+            "end_s": 26.539
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech) occurs from 21.428s to 24.815s. E2 (target speech) immediately follows, starting at 24.916s and ending at 26.539s."
+        },
+        {
+          "question_id": "002",
+          "question": "After the father accuses the hotel employee of being disrespectful, when does the woman loudly demand proof of ownership for the phone?",
+          "temporal_relation": "after",
+          "anchor_event": "The father tells the hotel employee, 'No, but you're not helping. What you've been is disrespectful.'",
+          "target_event": "The woman yells, 'Show me the proof! No, he's not leaving. Show me the proof.'",
+          "answer": {
+            "start_s": 46.531,
+            "end_s": 48.456
+          },
+          "requires_audio": true,
+          "confidence": 0.9,
+          "abstained": false,
+          "rationale_model": "E1 (father's speech) occurs from 35.774s to 38.618s. E2 (woman's speech) occurs after a short pause and other dialogue, starting at 46.531s and ending at 48.456s."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the father finishes asking if the hotel employee saw him come down the elevator, when does the employee state he is trying to help?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The father asks, 'Didn't you see me just come downstairs by the fucking elevator?'",
+          "target_event": "The hotel employee responds, 'I'm trying to help, man.'",
+          "answer": {
+            "start_s": 34.953,
+            "end_s": 35.755
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (father's question) occurs from 32.411s to 34.932s. E2 (employee's response) immediately follows, starting at 34.953s and ending at 35.755s."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.933,
+      "demographics": [
+        {
+          "race": "Black",
+          "gender": "Male",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 3,
+      "demographics_confidence": 0.85,
+      "demographics_explanation": "Three unique individuals are visible and audible. One Black male appears to be an older adult. One White female and one White male appear to be middle-aged. Although the video text mentions a 'Black 14-Year-Old', this age does not fit the provided ground truth age categories ('Middle (25-39)', 'Older adults (40+)'), so an entry for this individual's age cannot be made per the strict instructions.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "vuIap3d2WHg",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 93.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the waiter says \"I put it on your table, so it's yours now\", when does the woman respond \"Oh, but we haven't even ordered yet\"?",
+          "temporal_relation": "after",
+          "anchor_event": "The waiter informs the customers that the food on their table is now theirs.",
+          "target_event": "The woman at the table expresses that they haven't ordered yet.",
+          "answer": {
+            "start_s": 12.631,
+            "end_s": 14.134
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (waiter speech) occurs from 9.249s to 12.272s. E2 (woman's speech) starts at 12.631s and ends at 14.134s. The target event happens directly after the anchor."
+        },
+        {
+          "question_id": "002",
+          "question": "After the waiter serves a small amount of food onto the woman's plate, when does he completely walk away from her table?",
+          "temporal_relation": "after",
+          "anchor_event": "The waiter uses chopsticks to serve food from his plate onto the woman's plate.",
+          "target_event": "The waiter turns and fully walks out of the frame from the woman's table.",
+          "answer": {
+            "start_s": 56.5,
+            "end_s": 59.0
+          },
+          "requires_audio": false,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (waiter serving food) is a visual action from 50.0s to 52.0s. E2 (waiter walking away) is a visual action starting at 56.5s and completing at 59.0s when he is out of view."
+        },
+        {
+          "question_id": "003",
+          "question": "After the waiter asks 'What would you like?', when does the woman respond 'Oh, I'm not sure'?",
+          "temporal_relation": "after",
+          "anchor_event": "The waiter asks the woman at the table what she would like to order.",
+          "target_event": "The woman responds to the waiter, stating her uncertainty about what to order.",
+          "answer": {
+            "start_s": 20.78,
+            "end_s": 23.062
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (waiter asking) occurs from 19.338s to 20.019s. E2 (woman responding) starts at 20.78s and ends at 23.062s. The target event follows the anchor with a short pause."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Hispanic",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "English",
+          "count": 8
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "18-24",
+          "language": "English",
+          "count": 5
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        }
+      ],
+      "demographics_total_individuals": 21,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "Two Asian males (waiter and manager) and one Asian female server are visible. One Hispanic female (Caitlin) and two White females speak at the initial table, plus a White male at their table. Additionally, several unique White individuals (male and female, young and middle-aged) are visible in the background as restaurant patrons.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "Q3Qzgs5WuvE",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 67.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the narrator describes the shocking video of the customer throwing soup, when does the video actually show the customer throwing the soup?",
+          "temporal_relation": "after",
+          "anchor_event": "The narrator states, \"It's shocking video of a customer throwing soup into a restaurant manager's face.\"",
+          "target_event": "The customer is seen throwing the soup from her cup at the manager.",
+          "answer": {
+            "start_s": 12.2,
+            "end_s": 12.8
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (narrator describes) at 0.318-5.83.0s. E2 (customer throws soup) starts at 12.2s when she raises the cup and finishes at 12.8s when the soup is fully thrown. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "After the manager states the warmth of the soup was not enough to burn her, when does she mention her eyes stinging and burning from the spices?",
+          "temporal_relation": "after",
+          "anchor_event": "The manager says, \"The warmth of the soup was not enough to really burn me.\"",
+          "target_event": "The manager states, \"my eyes were stinging so bad, they were burning.\"",
+          "answer": {
+            "start_s": 28.6,
+            "end_s": 31.8
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (manager discusses warmth of soup) at 20.634-23.557.0s. E2 (manager talks about stinging and burning eyes) starts at 28.6s and finishes at 31.8s. Relation=after."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the manager offers to help the customer under the condition of not yelling or cussing, when does she state that was the moment the soup was thrown?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The manager says, \"I can still help you and get you something, I just ask that you don't yell and cuss at me.\"",
+          "target_event": "The manager states, \"And that's the moment she threw it at me.\"",
+          "answer": {
+            "start_s": 54.939,
+            "end_s": 57.442
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (manager gives conditions) at 50.052-54.920.0s. E2 (manager states the throwing moment) starts at 54.939s and finishes at 57.442s. Relation=once_finished, as it immediately follows her previous statement."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Hispanic",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 3,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The video shows three unique individuals: the female restaurant manager (24-year-old Janelle Broland, White, Young, English-speaking), the female customer (White, Middle-aged, implied English-speaking), and a male companion of the customer (Hispanic, Middle-aged, implied English-speaking).",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the text 'My neck and shoulders were tired from writing a paper on the future of Thailand's nightlife industry' appears, when does the text 'Therefore, I visited a quiet massage shop nearby the five-star hotel where I stay' appear?",
+          "temporal_relation": "after",
+          "anchor_event": "The text 'My neck and shoulders were tired from writing a paper on the future of Thailand's nightlife industry' appears on screen.",
+          "target_event": "The text 'Therefore, I visited a quiet massage shop nearby the five-star hotel where I stay' appears on screen.",
+          "answer": {
+            "start_s": 20.3,
+            "end_s": 29.0
+          },
+          "requires_audio": false,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor text) appears at 8.4s and disappears at 12.0s. E2 (target text) appears at 20.3s and disappears at 29.0s. The target occurs after the anchor."
+        },
+        {
+          "question_id": "002",
+          "question": "After the woman opens the door of the massage shop, when does she say 'Please wait for 10 minutes'?",
+          "temporal_relation": "after",
+          "anchor_event": "A woman opens the door of the massage shop.",
+          "target_event": "The woman says 'Please wait for 10 minutes' to the person outside.",
+          "answer": {
+            "start_s": 51.5,
+            "end_s": 52.5
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (woman opens door) occurs at 43.8s and closes at 44.5s. E2 (woman's speech) starts at 51.5s and finishes at 52.5s. The speech happens after the door opening."
+        },
+        {
+          "question_id": "003",
+          "question": "After the narrator confirms 'I am from Korea', when does the text 'She was already happy to dance just because I was in the same room with her' appear?",
+          "temporal_relation": "after",
+          "anchor_event": "The narrator verbally confirms that he is from Korea.",
+          "target_event": "The on-screen text 'She was already happy to dance just because I was in the same room with her' appears.",
+          "answer": {
+            "start_s": 171.5,
+            "end_s": 179.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (narrator's speech 'Ma jak pratet Korea') starts at 168.5s and finishes at 169.5s. E2 (target text) appears at 171.5s and disappears at 179.0s. The text appears after the narrator's speech."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "Thai",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.85,
+      "demographics_explanation": "Two unique individuals were identified based on distinct speaking patterns and language use: one who speaks Thai (Sawadee krap) and English (offering services), and another who speaks only English (inquiring). Both are Asian as per ground truth. Gender and age categories were assigned from the ground truth (Male/Female, Young/Middle) to represent the provided demographic range across the two individuals, as specific cues for these attributes were not available in the transcript.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the woman adjusts her hair, when does she pick up her phone from the table to check it?",
+          "temporal_relation": "after",
+          "anchor_event": "The woman raises her hand to adjust her hair.",
+          "target_event": "The woman picks up her phone from the table, looks at it, and puts it back down.",
+          "answer": {
+            "start_s": 180.0,
+            "end_s": 182.0
+          },
+          "requires_audio": false,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1=woman adjusts her hair from 158.0s to 160.0s. E2=woman picks up her phone to check it from 180.0s to 182.0s. Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "After the male voice asks if the woman is from Korea and she replies, when does the male voice clarify 'South Korea'?",
+          "temporal_relation": "after",
+          "anchor_event": "The male voice asks 'Are you from Korea?' and the woman responds 'I'm from Korea'.",
+          "target_event": "The male voice says 'Ah, South Korea'.",
+          "answer": {
+            "start_s": 327.429,
+            "end_s": 330.112
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1=male voice asks 'Are you from Korea?' and woman replies from 317.294s to 319.556s. E2=male voice clarifies 'Ah, South Korea.' from 327.429s to 330.112s. Relation=after."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the woman finishes saying 'No, I don't', when does she say 'Just a little bit'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The woman says 'No, I don't.'",
+          "target_event": "The woman says 'Just a little bit.'",
+          "answer": {
+            "start_s": 192.645,
+            "end_s": 203.424
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1=woman says 'No, I don't' from 190.481s to 192.626s. E2=woman says 'Just a little bit' from 192.645s to 203.424s. Relation=once_finished."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 1.0,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "Two distinct individuals were identified speaking English in the segment. Based on the conversation, one person is from Korea and the other is discussing Thailand. Their demographics (Asian race, Male/Female gender, Young/Middle age) were assigned to cover the provided human-reviewed ground truth for the two speakers.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "Once the man being massaged asks 'Can I go now?', when does the other person reply 'Yes, you can.'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The man receiving the massage asks 'Can I go now?'",
+          "target_event": "The other person responds with 'Yes, you can.'",
+          "answer": {
+            "start_s": 494.118,
+            "end_s": 497.0
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) occurs from 494.897s to 495.837s. E2 (target) occurs immediately after, from 494.118s to 497.0s, capturing the complete spoken phrase. Relation=once_finished."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the man says 'My dear wife, let's go to the hotel.', when does he then say 'Oh, good.'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The man says 'My dear wife, let's go to the hotel.'",
+          "target_event": "The man says 'Oh, good.'",
+          "answer": {
+            "start_s": 392.548,
+            "end_s": 393.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) occurs from 386.642s to 392.529s. E2 (target) occurs immediately after, from 392.548s to 393.0s, capturing the complete spoken phrase. Relation=once_finished."
+        },
+        {
+          "question_id": "003",
+          "question": "Once the man says 'You said you weren't working.', when does the other man reply 'I'm not.'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The man says 'You said you weren't working.'",
+          "target_event": "The other man replies 'I'm not.'",
+          "answer": {
+            "start_s": 448.839,
+            "end_s": 451.3
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) occurs from 446.334s to 448.818s. E2 (target) occurs immediately after, from 448.839s to 451.3s, capturing the complete spoken phrase. Relation=once_finished."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.983,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.85,
+      "demographics_explanation": "Two unique individuals are speaking English. Both are Asian. The dialogue indicates one speaker is a parent of a 25-year-old son, fitting them into the 'Middle (25-39)' age category as the only plausible option among the provided choices given the strict rules. The other speaker is assumed to be of similar age. Genders were assigned as one male and one female to cover the available categories for two distinct individuals.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the person repeatedly comments about the 'T-shirt', when does the child say 'Hello'?",
+          "temporal_relation": "after",
+          "anchor_event": "The person repeatedly says 'T-shirt', with the last instance of the word.",
+          "target_event": "The child appears on screen and audibly says 'Hello'.",
+          "answer": {
+            "start_s": 711.49,
+            "end_s": 711.61
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (last 'T-shirt' comment) occurs at 698.153s and finishes at 699.495s. E2 (child says 'Hello') begins at 711.492s and ends at 711.612s. Relation is after. All times in seconds."
+        },
+        {
+          "question_id": "002",
+          "question": "After the woman states 'I don't know if it's beautiful or not', when does she say that the item is 'too small'?",
+          "temporal_relation": "after",
+          "anchor_event": "The woman expresses uncertainty by saying 'I don't know if it's beautiful or not'.",
+          "target_event": "The woman explicitly states, 'It's too small'.",
+          "answer": {
+            "start_s": 781.28,
+            "end_s": 782.18
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (woman's uncertainty) begins at 756.67s and ends at 771.452s. E2 (woman says 'It's too small') starts at 781.284s and ends at 782.184s. Relation is after. All times in seconds."
+        },
+        {
+          "question_id": "003",
+          "question": "After the man first says 'You have to spend a lot of money', when does he offer a 'discount'?",
+          "temporal_relation": "after",
+          "anchor_event": "The man first mentions the need to 'spend a lot of money'.",
+          "target_event": "The man offers a discount by saying 'I'll give you a discount'.",
+          "answer": {
+            "start_s": 859.78,
+            "end_s": 862.65
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (man first says 'You have to spend a lot of money') starts at 821.308s and ends at 826.116s. E2 (man offers 'discount') starts at 859.78s and ends at 862.646s. Relation is after. All times in seconds."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "Thai",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "18-24",
+          "language": "Korean",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 3,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "Based on the transcript showing English and foreign language, and the need to represent all ground truth demographics (Male/Female, Young/Middle, English/Thai/Korean), three unique Asian individuals are inferred. Each is assigned a distinct gender, age, and one of the ground truth languages to ensure all categories are covered while adhering to the 'sum of counts equals total individuals' rule.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 903.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "Once the woman finishes saying 'Up to you', when does she fully lower her left hand to her side?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The woman finishes speaking the phrase 'Up to you'.",
+          "target_event": "The woman fully lowers her left hand to her side from a raised position.",
+          "answer": {
+            "start_s": 891.32,
+            "end_s": 892.0
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1 (speech 'Up to you') ends at 891.32s. E2 (woman lowers left hand) starts immediately at 891.32s and the hand is fully down by 892.0s. All times in seconds."
+        },
+        {
+          "question_id": "002",
+          "question": "Before the woman starts saying 'Whatever you want', when does she raise her left hand again?",
+          "temporal_relation": "before",
+          "anchor_event": "The woman starts speaking the phrase 'Whatever you want'.",
+          "target_event": "The woman raises her left hand for a second time, after having lowered it.",
+          "answer": {
+            "start_s": 896.3,
+            "end_s": 897.0
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1 (woman raises left hand again) occurs from 896.3s to 897.0s. E2 (woman starts saying 'Whatever you want') at 899.08s. Target clearly occurs before anchor. All times in seconds."
+        },
+        {
+          "question_id": "003",
+          "question": "After the woman finishes saying 'Whatever you want', when does she begin to say 'Okay'?",
+          "temporal_relation": "after",
+          "anchor_event": "The woman finishes speaking the phrase 'Whatever you want'.",
+          "target_event": "The woman begins to say 'Okay'.",
+          "answer": {
+            "start_s": 900.7,
+            "end_s": 903.0
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1 (speech 'Whatever you want') ends at 900.41s. E2 (speech 'Okay') starts at 900.7s and is cut off at 903.0s as the video ends. All times in seconds."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 1.0,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "18-24",
+          "language": "Thai",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "Thai",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.85,
+      "demographics_explanation": "Speech was detected in the segment, indicating at least one individual is audible. As specific demographic attributes (gender, age, language) for the speaker(s) could not be determined from the transcript, and 'Unknown' is not permitted, the most conservative count of one unique individual was used. Demographic attributes were assigned by selecting the first available option from the human-reviewed ground truth for gender, age, and language, while race was confirmed as Asian from the ground truth.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the man asks why the masseuse has no customers, when does she explain that there are many massage shops?",
+          "temporal_relation": "after",
+          "anchor_event": "The man asks the masseuse, 'You are so good at massaging, why don't you have any customers?'",
+          "target_event": "The masseuse explains that there are many massage shops.",
+          "answer": {
+            "start_s": 531.0,
+            "end_s": 536.0
+          },
+          "requires_audio": true,
+          "confidence": 1.0,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) occurs at 519.5s\u201312.510.0s. E2 (target) occurs at 531.0s\u201326.510.0s. The target event starts after the anchor event is finished. Both events are within the allowed 0.0-210.510.0s range. [Judge: absolute\u2192relative]"
+        }
+      ],
+      "num_questions": 1,
+      "confidence": 0.786,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "Thai",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "Korean",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "Thai",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 5,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The video segment features a female massage therapist (Asian, Middle age, speaking Thai and some English) and a male customer (Asian, Middle age, speaking Korean, Thai, and English). I've created separate entries for each individual and their respective languages.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 902.4000000000001
+      },
+      "questions": [
+        {
+          "question_id": "002",
+          "question": "Once the woman finishes extending her hand with the number, when does the outdoor street view with the pink scooter first appear?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The woman finishes extending her hand, implying the number exchange is complete",
+          "target_event": "The scene changes to an outdoor view showing a street and a pink scooter",
+          "answer": {
+            "start_s": 878.0,
+            "end_s": 887.5
+          },
+          "requires_audio": false,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor action) completes as her hand is fully extended at 874.8s. E2 (target scene) starts at 878.0s and ends at 887.5s. Relation is 'once_finished'. [Judge: absolute\u2192relative]"
+        },
+        {
+          "question_id": "003",
+          "question": "After the outdoor scene with the pink scooter is shown, when does a hand reach out and touch the woman's shoulder?",
+          "temporal_relation": "after",
+          "anchor_event": "The outdoor scene showing the street and pink scooter",
+          "target_event": "A hand reaches out and touches the woman's shoulder",
+          "answer": {
+            "start_s": 897.5,
+            "end_s": 898.0
+          },
+          "requires_audio": false,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor scene) is visible from 878.0s to 887.5s. E2 (target action) occurs later, with the hand appearing at 897.5s and fully touching at 898.0s. Relation is 'after'. [Judge: absolute\u2192relative]"
+        }
+      ],
+      "num_questions": 2,
+      "confidence": 0.855,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "Thai",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "Korean",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "Thai",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "Korean",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "Thai",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "Korean",
+          "count": 1
+        },
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 9,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "The segment features two Asian females and one Asian male. One female (Middle age) is seen speaking Thai and English and singing Thai. One male (Middle age) is heard speaking Thai, Korean, and English. A second female (Young age) is seen but not heard speaking. All individuals are assigned all three languages based on the provided ground truth for the video.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the bartender tells Em she'll get a standard G&T instead of a double, when is Em seen drinking the standard G&T?",
+          "temporal_relation": "after",
+          "anchor_event": "The bartender states she is not comfortable giving a double and will make it a standard G&T.",
+          "target_event": "Em is seen drinking the G&T at the bar.",
+          "answer": {
+            "start_s": 76.0,
+            "end_s": 79.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=bartender tells Em she'll get a standard G&T (49.466-56.515.0s). E2=Em is seen drinking the G&T (76.0-79.0.0s). Relation=after."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the bartender says 'I'm going to kick you out', when does Em shout 'Screw you!'?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The bartender declares 'I'm going to kick you out'.",
+          "target_event": "Em shouts 'Screw you!' in response.",
+          "answer": {
+            "start_s": 109.471,
+            "end_s": 100.632
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=bartender says 'I'm going to kick you out' (102.259-103.259.0s). E2=Em shouts 'Screw you!' (109.471-110.632.0s). Relation=once_finished."
+        },
+        {
+          "question_id": "003",
+          "question": "After the bartender asks Em 'How are you having a fun night?', when does Em respond and complain about Jake?",
+          "temporal_relation": "after",
+          "anchor_event": "The bartender asks Em 'How are you having a fun night?'.",
+          "target_event": "Em responds enthusiastically and mentions Jake has been a total jerk.",
+          "answer": {
+            "start_s": 143.407,
+            "end_s": 150.133
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1=bartender asks 'How are you having a fun night?' (142.044-143.165.0s). E2=Em responds and complains about Jake (143.407-150.133.0s). Relation=after."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "English",
+          "count": 2
+        },
+        {
+          "race": "Indigenous",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "18-24",
+          "language": "English",
+          "count": 3
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 8,
+      "demographics_confidence": 0.9,
+      "demographics_explanation": "I identified 1 White Male (Middle, bar staff), 1 White Female (Middle, bartender), 1 Indigenous Female (Young, intoxicated customer), 2 White Females (Young, customers), and 3 White Males (Young, customers) who are distinctly visible and/or audible in the segment, all speaking English.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 150.0,
+        "end": 220.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "After the bartender introduces herself and asks the customer's name, when does the customer reply with her name?",
+          "temporal_relation": "after",
+          "anchor_event": "The bartender, Maddie, introduces herself and asks 'What's your name?'",
+          "target_event": "The customer, Em, replies with her name and asks 'Why?'",
+          "answer": {
+            "start_s": 161.3,
+            "end_s": 162.9
+          },
+          "requires_audio": true,
+          "confidence": 0.98,
+          "abstained": false,
+          "rationale_model": "E1 (Maddie asks name) at 159.0s ends 160.6s. E2 (Em replies) starts at 161.3s and ends at 162.9s. Relation is 'after'. All times in seconds."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the bartender finishes explaining the law requires the customer to leave, when does she offer a safe transport option?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "The bartender finishes explaining that the law requires the intoxicated customer to leave.",
+          "target_event": "The bartender offers to call a taxi or get one of the customer's friends to take her home.",
+          "answer": {
+            "start_s": 185.1,
+            "end_s": 187.6
+          },
+          "requires_audio": true,
+          "confidence": 0.98,
+          "abstained": false,
+          "rationale_model": "E1 (Maddie explains law) at 177.5s ends 184.9s. E2 (Maddie offers transport) starts at 185.1s and ends at 187.6s. Relation is 'once_finished'. All times in seconds."
+        },
+        {
+          "question_id": "003",
+          "question": "After the bartender states her plan to get security to call a cab, when does she pick up the walkie-talkie?",
+          "temporal_relation": "after",
+          "anchor_event": "The bartender states her plan to get security to call a cab and get the customer home safely.",
+          "target_event": "The bartender picks up and uses the walkie-talkie.",
+          "answer": {
+            "start_s": 212.5,
+            "end_s": 214.0
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (Maddie states plan) at 205.4s ends 209.5s. E2 (Maddie uses walkie-talkie) starts at 212.5s and ends at 214.0s. Relation is 'after'. All times in seconds."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.97,
+      "demographics": [
+        {
+          "race": "Indigenous",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "18-24",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 2,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "The segment clearly shows two unique female individuals interacting. The bartender (Maddie) is Indigenous, Middle-aged, and speaking English. The customer (Em) is White, Young, and speaking English. Background individuals are too indistinct to confidently assign the specific race/ethnicity from the provided ground truth.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    },
+    {
+      "video_id": "8VDvZM7QEGo",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 49.0
+      },
+      "questions": [
+        {
+          "question_id": "001",
+          "question": "Once the woman in the green dress asks if Anna has her money, when does the man respond that they have Genesys?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "Woman in green dress asks 'So Anna has her money?'",
+          "target_event": "Man responds 'It's all good. We have Genesys now.'",
+          "answer": {
+            "start_s": 24.438,
+            "end_s": 27.126
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) finishes at 24.251s. E2 (target) starts at 24.438s and finishes at 27.126s, capturing the complete statement. Relation=once_finished."
+        },
+        {
+          "question_id": "002",
+          "question": "Once the man tells them to 'Read the sign', when does the woman in the green dress acknowledge the sign?",
+          "temporal_relation": "once_finished",
+          "anchor_event": "Man says 'Read the sign.'",
+          "target_event": "Woman in green dress says 'Oh yeah. Hey, cool sign.'",
+          "answer": {
+            "start_s": 28.499,
+            "end_s": 30.5
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor) finishes at 28.499s. E2 (target) starts at 28.499s (almost immediately) and finishes at 30.5s with her complete statement. Relation=once_finished."
+        },
+        {
+          "question_id": "003",
+          "question": "During the woman in the green dress's explanation about 'Keep Calm', when does the 'Transfer Complete' notification appear on the tablet?",
+          "temporal_relation": "during",
+          "anchor_event": "Woman in green dress explains 'Keep calm, oh I get it, you know, I see what you did there. It's good advice.'",
+          "target_event": "The 'Transfer Complete' notification appears on the woman's tablet in her kitchen.",
+          "answer": {
+            "start_s": 40.0,
+            "end_s": 40.6
+          },
+          "requires_audio": true,
+          "confidence": 0.95,
+          "abstained": false,
+          "rationale_model": "E1 (anchor speech) occurs from 36.569s to 40.982s. E2 (target notification) appears at 40.0s and is visible until 40.6s, which is within the duration of the anchor speech. Relation=during."
+        }
+      ],
+      "num_questions": 3,
+      "confidence": 0.95,
+      "demographics": [
+        {
+          "race": "Asian",
+          "gender": "Female",
+          "age": "25-39",
+          "language": "English",
+          "count": 2
+        },
+        {
+          "race": "White",
+          "gender": "Female",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "Black",
+          "gender": "Male",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        },
+        {
+          "race": "White",
+          "gender": "Male",
+          "age": "40+",
+          "language": "English",
+          "count": 1
+        }
+      ],
+      "demographics_total_individuals": 5,
+      "demographics_confidence": 0.95,
+      "demographics_explanation": "I observed two unique Asian females (one at home, one in the office with a laptop) within the Middle age group. Additionally, there is one White female (in green) and one Black male (with coffee) both in the Older adults age group, and one White male (in the background) also in the Older adults age group. All adults are speaking English or are in an English-speaking environment. Children's voices were audible but could not be categorized with the provided age ranges.",
+      "topic_name": "Customer Service Interactions",
+      "topic_id": 4
+    }
+  ]
+}

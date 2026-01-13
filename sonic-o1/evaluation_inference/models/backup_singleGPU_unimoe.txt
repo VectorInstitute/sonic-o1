@@ -1,0 +1,315 @@
+"""
+models/unimoe.py
+Uni-MoE-2.0-Omni implementation with video and audio support.
+"""
+import os
+import sys
+import logging
+from typing import Optional, Dict, Any, Union
+from pathlib import Path
+
+try:
+    import torch
+    import deepspeed
+    import torch.distributed as dist
+except ImportError as e:
+    raise ImportError(
+        f"Please install required packages: {e}\n"
+        "pip install torch deepspeed"
+    )
+
+from .base_model import BaseModel
+
+logger = logging.getLogger(__name__)
+
+
+class UniMoe(BaseModel):
+    """
+    Uni-MoE-2.0-Omni wrapper with native video and audio support.
+    Requires DeepSpeed for initialization (single-GPU mode).
+    """
+    
+    def __init__(self, model_name: str, config: Dict[str, Any]):
+        super().__init__(model_name, config)
+        
+        # Model configuration
+        self.model_path = config.get('model_path', 'HIT-TMG/Uni-MoE-2.0-Omni')
+        
+        # Handle Uni-MoE package path
+        self.unimoe_package_path = config.get('unimoe_package_path', None)
+        if self.unimoe_package_path:
+            unimoe_path = str(Path(self.unimoe_package_path).resolve())
+            if unimoe_path not in sys.path:
+                sys.path.insert(0, unimoe_path)
+                logger.info(f"Added Uni-MoE package path: {unimoe_path}")
+        
+        # Import Uni-MoE components after path is set
+        try:
+            from uni_moe.model.processing_qwen2_vl import Qwen2VLProcessor
+            from uni_moe.model.modeling_out import GrinQwen2VLOutForConditionalGeneration
+            from uni_moe.qwen_vl_utils import process_mm_info
+            
+            self.Qwen2VLProcessor = Qwen2VLProcessor
+            self.GrinQwen2VLOutForConditionalGeneration = GrinQwen2VLOutForConditionalGeneration
+            self.process_mm_info = process_mm_info
+        except ImportError as e:
+            raise ImportError(
+                f"Failed to import Uni-MoE components: {e}\n"
+                "Please ensure 'unimoe_package_path' is set in config or Uni-MoE is in PYTHONPATH"
+            )
+        
+        # Device configuration
+        self.device = config.get('device', 'cuda:0')
+        self.dtype = config.get('dtype', 'bfloat16')
+        
+        # Parse dtype
+        if self.dtype == 'bfloat16':
+            self.torch_dtype = torch.bfloat16
+        elif self.dtype == 'float16':
+            self.torch_dtype = torch.float16
+        elif self.dtype == 'float32':
+            self.torch_dtype = torch.float32
+        else:
+            self.torch_dtype = torch.bfloat16
+        
+        # Generation config
+        gen_config = config.get('generation_config', {})
+        self.temperature = gen_config.get('temperature', 0.7)
+        self.top_p = gen_config.get('top_p', 0.95)
+        self.max_new_tokens = gen_config.get('max_new_tokens', 2048)
+        
+        # Video processing config (similar to Qwen3)
+        self.max_frames = config.get('max_frames', 768)
+        self.min_frames = config.get('min_frames', 28)
+        
+        # DeepSpeed initialization flag
+        self._deepspeed_initialized = False
+        
+        self.model = None
+        self.processor = None
+    
+    def _init_deepspeed_single_gpu(self):
+        """Initialize DeepSpeed for single-GPU mode"""
+        if self._deepspeed_initialized or dist.is_initialized():
+            logger.info("DeepSpeed already initialized, skipping...")
+            return
+        
+        try:
+            logger.info("Initializing DeepSpeed for single-GPU mode...")
+            
+            # Set environment variables for single-GPU distributed setup
+            os.environ["RANK"] = "0"
+            os.environ["WORLD_SIZE"] = "1"
+            os.environ["MASTER_ADDR"] = "127.0.0.1"
+            os.environ["MASTER_PORT"] = "29500"
+            os.environ["LOCAL_RANK"] = "0"
+            
+            # Initialize DeepSpeed distributed backend
+            deepspeed.init_distributed(dist_backend="nccl")
+            
+            self._deepspeed_initialized = True
+            logger.info("DeepSpeed initialized successfully")
+            
+        except Exception as e:
+            logger.warning(f"DeepSpeed initialization warning: {e}")
+            # Continue anyway - might still work
+    
+    def load(self):
+        """Load the Uni-MoE model and processor"""
+        try:
+            # Initialize DeepSpeed first
+            self._init_deepspeed_single_gpu()
+            
+            logger.info(f"Loading Uni-MoE model from {self.model_path}")
+            
+            # Load processor
+            self.processor = self.Qwen2VLProcessor.from_pretrained(self.model_path)
+            
+            # Load model
+            self.model = self.GrinQwen2VLOutForConditionalGeneration.from_pretrained(
+                self.model_path,
+                torch_dtype=self.torch_dtype,
+                low_cpu_mem_usage=True,
+            )
+            self.model.to(self.device)
+            
+            # Set processor data args from model config
+            self.processor.data_args = self.model.config
+            
+            logger.info(f"Successfully loaded Uni-MoE on {self.device}")
+            
+        except Exception as e:
+            raise RuntimeError(f"Failed to load Uni-MoE model: {e}")
+    
+    def generate(
+        self,
+        frames: str,  # Video file path
+        audio: Optional[str],  # Audio file path
+        prompt: str,
+        fps: Optional[float] = None,  # Ignored - Uni-MoE uses max_frames sampling
+        video_category: Optional[str] = None,  # Unused but for API consistency
+        **kwargs
+    ) -> str:
+        """
+        Generate response from video and audio.
+        
+        Args:
+            frames: Path to video file
+            audio: Path to audio file
+            prompt: Text prompt for generation
+            fps: Ignored - Uni-MoE samples based on max_frames limit
+            video_category: Video length category (unused, for API consistency)
+            **kwargs: Additional generation parameters
+            
+        Returns:
+            Generated text response
+        """
+        if self.model is None or self.processor is None:
+            raise RuntimeError("Model not loaded. Call load() first.")
+        
+        if not isinstance(frames, str):
+            raise ValueError(
+                f"Uni-MoE requires video file path (str), got {type(frames)}"
+            )
+        
+        try:
+            video_path = Path(frames)
+            if not video_path.exists():
+                raise FileNotFoundError(f"Video file not found: {video_path}")
+            
+            # Build conversation with multimodal content (similar to Qwen3)
+            content = [
+                {"type": "text", "text": f"<video>\n<audio>\n{prompt}"},
+                {
+                    "type": "video",
+                    "video": str(video_path),
+                    "max_frames": self.max_frames,
+                    "min_frames": self.min_frames
+                }
+            ]
+            
+            # Add audio if provided
+            if audio is not None and isinstance(audio, str) and os.path.exists(audio):
+                audio_path = Path(audio)
+                content.append({
+                    "type": "audio",
+                    "audio": str(audio_path)
+                })
+                logger.info(f"Audio file added: {audio_path.name}")
+            
+            messages = [{"role": "user", "content": content}]
+            
+            logger.info(f"Processing video: {video_path.name}")
+            logger.info(f"Using max_frames: {self.max_frames}, min_frames: {self.min_frames}")
+            
+            # Apply chat template
+            texts = self.processor.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+            
+            # Token replacements (required for Uni-MoE)
+            texts = texts.replace("<image>", "<|vision_start|><|image_pad|><|vision_end|>")
+            texts = texts.replace("<audio>", "<|audio_start|><|audio_pad|><|audio_end|>")
+            texts = texts.replace("<video>", "<|vision_start|><|video_pad|><|vision_end|>")
+            
+            # Process multimodal inputs
+            image_inputs, video_inputs, audio_inputs = self.process_mm_info(messages)
+            
+            # Prepare inputs
+            inputs = self.processor(
+                text=texts,
+                images=image_inputs,
+                videos=video_inputs,
+                audios=audio_inputs,
+                padding=True,
+                return_tensors="pt",
+            )
+            
+            # Apply Uni-MoE specific fixes
+            # Fix 1: Rename second_grid_ts to second_per_grid_ts (required)
+            if "second_grid_ts" in inputs:
+                inputs["second_per_grid_ts"] = inputs["second_grid_ts"]
+                del inputs["second_grid_ts"]
+            
+            # Fix 2: Ensure input_ids is 2D
+            if inputs["input_ids"].dim() == 1:
+                inputs["input_ids"] = inputs["input_ids"].unsqueeze(0)
+            
+            # Move to device
+            inputs = inputs.to(self.device)
+            
+            # Convert visual/audio features to model dtype
+            for k, v in inputs.items():
+                if k in ["pixel_values", "pixel_values_videos", "audio_features"]:
+                    inputs[k] = v.to(dtype=self.torch_dtype)
+            
+            logger.info(f"Input shape: {inputs['input_ids'].shape}")
+            
+            # Get generation parameters
+            temperature = kwargs.get('temperature', self.temperature)
+            top_p = kwargs.get('top_p', self.top_p)
+            max_new_tokens = kwargs.get('max_new_tokens', self.max_new_tokens)
+            
+            logger.info(f"Generating response (temp={temperature}, top_p={top_p}, max_tokens={max_new_tokens})...")
+            
+            # Generate
+            with torch.no_grad():
+                output_ids = self.model.generate(
+                    **inputs,
+                    use_cache=True,
+                    pad_token_id=self.processor.tokenizer.eos_token_id,
+                    max_new_tokens=max_new_tokens,
+                    temperature=temperature,
+                    top_p=top_p,
+                    do_sample=temperature > 0
+                )
+            
+            # Decode (skip input tokens)
+            input_token_len = inputs["input_ids"].shape[-1]
+            generated_tokens = output_ids[:, input_token_len:]
+            response_text = self.processor.batch_decode(
+                generated_tokens,
+                skip_special_tokens=True
+            )[0]
+            
+            logger.info(f"Generated response ({len(response_text)} chars)")
+            
+            return self.postprocess_output(response_text)
+            
+        except Exception as e:
+            logger.error(f"Generation failed: {e}", exc_info=True)
+            raise RuntimeError(f"Generation failed: {e}")
+    
+    def unload(self):
+        """Clean up model resources"""
+        if self.model is not None:
+            del self.model
+            self.model = None
+        
+        if self.processor is not None:
+            del self.processor
+            self.processor = None
+        
+        # Clear CUDA cache
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        
+        logger.info("Model unloaded and memory cleared")
+    
+    def get_model_info(self) -> Dict[str, Any]:
+        """Get model information"""
+        info = super().get_model_info()
+        info.update({
+            'model_path': self.model_path,
+            'model_type': 'Uni-MoE Omni',
+            'native_video': True,
+            'native_audio': True,
+            'device': str(self.device),
+            'dtype': str(self.dtype),
+            'max_frames': self.max_frames,
+            'min_frames': self.min_frames,
+            'deepspeed_enabled': self._deepspeed_initialized,
+        })
+        return info

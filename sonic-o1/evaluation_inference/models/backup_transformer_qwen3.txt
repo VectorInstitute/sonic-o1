@@ -1,0 +1,260 @@
+"""
+models/qwen3_omni.py
+Qwen3-Omni implementation with native video and audio support.
+"""
+import os
+import logging
+from typing import Optional, Dict, Any, Union
+from pathlib import Path
+import torch
+
+try:
+    import soundfile as sf
+    from transformers import Qwen3OmniMoeForConditionalGeneration, Qwen3OmniMoeProcessor
+    from qwen_omni_utils import process_mm_info
+except ImportError as e:
+    raise ImportError(
+        f"Please install required packages: {e}\n"
+        "pip install transformers soundfile qwen-omni-utils"
+    )
+
+from .base_model import BaseModel
+
+logger = logging.getLogger(__name__)
+
+
+class Qwen3Omni(BaseModel):
+    """
+    Qwen3-Omni wrapper with native video and audio support.
+    Supports both Instruct and Thinking variants.
+    """
+    
+    def __init__(self, model_name: str, config: Dict[str, Any]):
+        super().__init__(model_name, config)
+        
+        # Model configuration
+        self.model_path = config.get('model_path', 'Qwen/Qwen3-Omni-30B-A3B-Instruct')
+        self.use_thinking = config.get('use_thinking', False)
+        
+        # Device configuration
+        self.device_map = config.get('device_map', 'auto')
+        self.dtype = config.get('dtype', 'bfloat16')
+        self.attn_implementation = config.get('attn_implementation', 'sdpa') 
+        
+        # Generation config
+        gen_config = config.get('generation_config', {})
+        self.temperature = gen_config.get('temperature', 0.7)
+        self.top_p = gen_config.get('top_p', 0.95)
+        self.max_new_tokens = gen_config.get('max_new_tokens', 16384)
+        
+        # Video processing config
+        self.max_frames = config.get('max_frames', 36)  
+        self.min_frames = config.get('min_frames', 28)  
+        
+        self.model = None
+        self.processor = None
+    
+    def load(self):
+        """Load the Qwen3-Omni model and processor"""
+        try:
+            logger.info(f"Loading Qwen3-Omni model from {self.model_path}")
+            
+            # Load model - match working example parameters
+            self.model = Qwen3OmniMoeForConditionalGeneration.from_pretrained(
+                self.model_path,
+                torch_dtype=None if self.dtype == 'auto' else self.dtype,
+                device_map=self.device_map,
+                attn_implementation=self.attn_implementation,
+            )
+            
+            # Load processor
+            self.processor = Qwen3OmniMoeProcessor.from_pretrained(self.model_path)
+            
+            logger.info(f"Successfully loaded Qwen3-Omni ({'Thinking' if self.use_thinking else 'Instruct'} mode)")
+            
+        except Exception as e:
+            raise RuntimeError(f"Failed to load Qwen3-Omni model: {e}")
+    
+    def generate(
+        self,
+        frames: str,  # Video file path
+        audio: Optional[str],  # Audio file path
+        prompt: str,
+        fps: Optional[float] = None,  # Target FPS for frame sampling
+        video_category: Optional[str] = None,  # Unused but for API consistency
+        **kwargs
+    ) -> str:
+        """
+        Generate response from video and audio.
+        
+        Args:
+            frames: Path to video file
+            audio: Path to audio file
+            prompt: Text prompt for generation
+            fps: Target FPS for video frame sampling (default: auto)
+            video_category: Video length category (unused, for API consistency)
+            **kwargs: Additional generation parameters
+            
+        Returns:
+            Generated text response
+        """
+        if self.model is None or self.processor is None:
+            raise RuntimeError("Model not loaded. Call load() first.")
+        
+        if not isinstance(frames, str):
+            raise ValueError(
+                f"Qwen3-Omni requires video file path (str), got {type(frames)}"
+            )
+        
+        try:
+            video_path = Path(frames)
+            if not video_path.exists():
+                raise FileNotFoundError(f"Video file not found: {video_path}")
+            
+            # Build conversation with multimodal content
+            content = []
+            
+            # Add video with FPS control
+            video_content = {
+                "type": "video",
+                "video": str(video_path),
+                "max_frames": self.max_frames,
+                "min_frames": self.min_frames,
+            }
+            
+            # Add FPS if specified
+            if fps is not None:
+                video_content["fps"] = fps
+                logger.info(f"Using target FPS: {fps}, max_frames: {self.max_frames}")
+            else:
+                logger.info(f"Using auto FPS, max_frames: {self.max_frames}")
+            
+            content.append(video_content)
+            
+            # Add audio if provided
+            if audio is not None and isinstance(audio, str) and os.path.exists(audio):
+                content.append({
+                    "type": "audio",
+                    "audio": str(audio)
+                })
+                logger.info(f"Audio file added: {Path(audio).name}")
+            
+            # Add text prompt
+            content.append({
+                "type": "text",
+                "text": prompt
+            })
+            
+            conversation = [
+                {
+                    "role": "user",
+                    "content": content
+                }
+            ]
+            
+            logger.info(f"Processing video: {video_path.name}")
+            
+            # Prepare inputs - matching working example exactly
+            text = self.processor.apply_chat_template(
+                conversation, 
+                add_generation_prompt=True, 
+                tokenize=False
+            )
+            
+            audios, images, videos = process_mm_info(
+                conversation, 
+                use_audio_in_video=False
+            )
+            
+            inputs = self.processor(
+                text=text,
+                audio=audios,
+                images=images,
+                videos=videos,
+                return_tensors="pt",
+                padding=True,
+                use_audio_in_video=False
+            )
+            
+            inputs = inputs.to(self.model.device)
+            if self.dtype != 'auto':
+                inputs = inputs.to(self.model.dtype)
+            
+            logger.info(f"Input shape: {inputs['input_ids'].shape}")
+            
+            # Get generation parameters
+            temperature = kwargs.get('temperature', self.temperature)
+            top_p = kwargs.get('top_p', self.top_p)
+            max_new_tokens = kwargs.get('max_new_tokens', self.max_new_tokens)
+            
+            # Generate - matching working example exactly
+            logger.info(f"Generating response (temp={temperature}, top_p={top_p}, max_tokens={max_new_tokens})...")
+            
+            generation_kwargs = {
+                **inputs,
+                'use_audio_in_video': False,
+                'temperature': temperature,
+                'top_p': top_p,
+                'max_new_tokens': max_new_tokens,
+                'do_sample': temperature > 0,
+            }
+            
+            if self.use_thinking:
+                generation_kwargs['thinker_return_dict_in_generate'] = True
+            
+            output = self.model.generate(**generation_kwargs)
+            
+            # Handle output based on model type 
+            if self.use_thinking and hasattr(output, 'sequences'):
+                text_ids = output.sequences
+            elif isinstance(output, tuple):
+                text_ids = output[0]
+            else:
+                text_ids = output
+            
+            logger.debug(f"Output type: {type(output)}, has sequences: {hasattr(output, 'sequences')}")
+            
+            # Decode text
+            response_text = self.processor.batch_decode(
+                text_ids[:, inputs["input_ids"].shape[1]:],
+                skip_special_tokens=True,
+                clean_up_tokenization_spaces=True
+            )[0]
+            
+            logger.info(f"Generated response ({len(response_text)} chars)")
+            
+            return self.postprocess_output(response_text)
+            
+        except Exception as e:
+            logger.error(f"Generation failed: {e}", exc_info=True)
+            raise RuntimeError(f"Generation failed: {e}")
+    
+    def unload(self):
+        """Clean up model resources"""
+        if self.model is not None:
+            del self.model
+            self.model = None
+        
+        if self.processor is not None:
+            del self.processor
+            self.processor = None
+        
+        # Clear CUDA cache
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        
+        logger.info("Model unloaded and memory cleared")
+    
+    def get_model_info(self) -> Dict[str, Any]:
+        info = super().get_model_info()
+        info.update({
+            'model_path': self.model_path,
+            'model_type': 'Thinking' if self.use_thinking else 'Instruct',
+            'native_video': True,
+            'native_audio': True,
+            'device_map': self.device_map,
+            'dtype': str(self.dtype),
+            'max_frames': self.max_frames,
+            'min_frames': self.min_frames,
+        })
+        return info

@@ -1,0 +1,98 @@
+# Demographics Annotation Configuration
+
+model:
+  name: "gemini-2.5-flash"  
+  api_key: ${GEMINI_API_KEY}  # Will read from environment variable
+  temperature: 0.3
+  max_output_tokens: 1024
+  timeout: 60
+  retry_attempts: 3
+  retry_delay: 5
+
+dataset:
+  base_path: "dataset"
+  topics:
+    - "01_Patient-Doctor_Consultations"
+    - "02_Job_Interviews"
+    - "03_Parent-Teacher_Conferences"
+    - "04_Customer_Service_Interactions"
+    - "05_Courtroom_Proceedings"
+    - "06_Emergency_Response_Scenarios"
+    - "07_Public_Transportation_Conflicts"
+    - "08_Workplace_Team_Meetings"
+    - "09_HousingApartment_Tours"
+    - "10_Restaurant_Service_Encounters"
+    - "11_Mental_Health_Counseling"
+    - "12_Community_Town_Halls"
+    - "13_Olympics"
+
+demographics:
+  races:
+    - "White"
+    - "Black"
+    - "Asian"
+    - "Indigenous"
+    - "Arab"
+    - "Hispanic"
+  
+  genders:
+    - "Male"
+    - "Female"
+  
+  age_groups:
+    - "Young (18-24)"
+    - "Middle (25-39)"
+    - "Older adults (40+)"
+  
+  languages:
+    - "English"
+    - "Hindi"
+    - "Arabic"
+    - "Spanish"
+    - "Chinese"
+
+processing:
+  batch_size: 5
+  save_interval: 10
+  use_cache: true
+  
+  # Video processing limits
+  file_processing_timeout: 7200  # Max time (seconds) to wait for Google File API processing (2 hours)
+  max_video_duration: 1500       # Max video duration (seconds) before auto-segmentation (55 minutes)
+  max_transcript_length: 25000   # Max transcript characters (to avoid token overflow)
+  
+  # Segmentation settings (for videos longer than max_video_duration)
+  segment_overlap: 60            # Overlap between segments in seconds (1 minute)
+  enable_segmentation: true      # Enable automatic segmentation for long videos
+  
+  log_level: "INFO"
+  output_format: "metadata_enhanced.json"
+  
+  # File patterns
+  video_pattern: "video_{number}.mp4"
+  audio_pattern: "audio_{number}.m4a"
+  caption_pattern: "caption_{number}.srt"
+  
+  # Multimodal processing
+  prefer_video_with_audio: false  # Send both video AND separate audio (all files together)
+  
+  # Output settings
+  save_raw_responses: true
+  create_backup: true
+
+logging:
+  log_file: "demographics_annotation.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  console_output: true
+  file_output: true
+
+# Quality control thresholds
+quality:
+  min_confidence: 0.5
+  require_explanation: true
+  validate_json: true
+
+rate_limit:
+  delay_between_videos: 15       # seconds to wait between processing videos
+  delay_after_long_video: 60     # extra seconds to wait after videos > 30 minutes
+  long_video_threshold: 1800     # seconds (30 minutes)
