@@ -1,0 +1,221 @@
+{
+  "topic_id": 8,
+  "topic_name": "Workplace Team Meetings",
+  "num_evaluated": 12,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.11014988877519172,
+      "rouge_l_std": 0.03671527141089731,
+      "text_similarity_mean": 0.30627944972366095,
+      "text_similarity_std": 0.178206502692461,
+      "llm_judge_score_mean": 1.1666666666666667,
+      "llm_judge_score_std": 1.0671873729054748
+    },
+    "short": {
+      "rouge_l_mean": 0.10093750269418739,
+      "rouge_l_std": 0.0354520022414609,
+      "text_similarity_mean": 0.2785364529117942,
+      "text_similarity_std": 0.1826491010207303,
+      "llm_judge_score_mean": 0.8333333333333334,
+      "llm_judge_score_std": 1.0671873729054746
+    },
+    "cider": {
+      "cider_detailed": 1.0506049757099236e-19,
+      "cider_short": 0.0003033597236375514
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.09589041095890412,
+        "text_similarity": 0.38610875606536865,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary \u2014 it describes a prototyping tool tutorial rather than Jonathan Courtney's workshop design, exercises (4Cs, Sailboat, 10 for 10, Action Board), timelines, remote adaptations, or budget, and thus omits and contradicts all key details."
+      },
+      "short": {
+        "rouge_l": 0.11538461538461539,
+        "text_similarity": 0.4217875897884369,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is semantically unrelated and omits virtually all key elements of the correct summary (workshop design, 4Cs, exercises, outcomes, remote adaptations, and fee), instead describing a generic tool tutorial."
+      }
+    },
+    {
+      "video_id": "XSNTh2FcHKc",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.18518518518518517,
+        "text_similarity": 0.42615848779678345,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer only notes visual details and the broad topic of human rights, but it omits virtually all substantive content from the correct answer\u2014no mention of the historical tipping point, listed threats, the Ukraine attack casualty figures and displacement, or the call for peace grounded in international human rights law."
+      },
+      "short": {
+        "rouge_l": 0.14545454545454548,
+        "text_similarity": 0.3461708724498749,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only gives superficial visual details and a generic human-rights topic, but omits the substantive points in the correct answer\u2014Bachelet's warning about a historical tipping point, the Ukraine casualty/displacement figures, and her call for peace grounded in international human rights law."
+      }
+    },
+    {
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.058536585365853655,
+        "text_similarity": 0.10554984211921692,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction only describes the video's visual setup and omits all substantive content about the DevOps discussion, definitions, culture of safety, and recommendations, so it fails to match the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.09790209790209792,
+        "text_similarity": 0.14656084775924683,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only describes the visual setup (two people on stools, lanyards, microphone) and omits all substantive content about DevOps, daily stand-ups, culture of safety, and automation described in the correct answer."
+      }
+    },
+    {
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.12167300380228135,
+        "text_similarity": 0.019314249977469444,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer describes a visual music scene and participants' appearances, whereas the correct answer summarizes a technical meeting about IPLD/IPFS documentation, serialization, and Go reflection; it omits all key factual elements and contradicts the content."
+      },
+      "short": {
+        "rouge_l": 0.10434782608695652,
+        "text_similarity": -0.044660404324531555,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction describes unrelated visual scenes (men singing) and omits all key technical points from the correct summary about IPLD/IPFS updates, serialization, and Golang reflection; it fails to capture the video's content."
+      }
+    },
+    {
+      "video_id": "l6VB8TEzjEU",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.10289389067524116,
+        "text_similarity": 0.5231012105941772,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general idea of students collaboratively building a robot and enjoying the process, but it omits most key specifics (four students, wiring/testing, phone as controller, robot movements, wheel detachment, event/school) and incorrectly states there are three boys."
+      },
+      "short": {
+        "rouge_l": 0.17204301075268816,
+        "text_similarity": 0.48042604327201843,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the general idea of people building a small robot together, but it misstates the number/gender, omits almost all specific details (wiring, phone as remote, movement tests, wheel detachment), and lacks the key events from the correct answer."
+      }
+    },
+    {
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.07171314741035857,
+        "text_similarity": 0.022779343649744987,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer only describes general meeting behavior and gestures and omits all specific technical updates, participants' contributions, and key topics from the correct answer, so it fails to match the referenced content."
+      },
+      "short": {
+        "rouge_l": 0.07954545454545456,
+        "text_similarity": 0.021020952612161636,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is unrelated to the correct summary: it describes participants' physical setup on a call rather than any of the technical releases, project updates, or discussion topics listed in the correct answer, omitting all key facts."
+      }
+    },
+    {
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.08579088471849866,
+        "text_similarity": 0.37447884678840637,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer is largely incorrect and omits nearly all key content from the reference (Argo CD, Crossplane, speakers, AWS details, best practices, and challenges), offering only a vague Kubernetes-related description and unrelated visual details."
+      },
+      "short": {
+        "rouge_l": 0.09523809523809525,
+        "text_similarity": 0.4846586287021637,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is unrelated and incorrect: it describes event logistics (download, QR code, sponsors) and a generic Kubernetes talk, while omitting all key technical points about Argo CD, Crossplane, speakers, Acuity's usage, hybrid strategy, challenges, and future plans; it therefore hallucinates and fails to match the reference."
+      }
+    },
+    {
+      "video_id": "SYUQhswjLZI",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.11991434689507495,
+        "text_similarity": 0.20222461223602295,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only describes superficial scene details (people posing, wall, masks) and misses the video's core content about InsightShare's empowerment, community-led media, workshops, global impact, and advocacy for localization; it only partially matches one museum-related scene but omits the main themes and outcomes."
+      },
+      "short": {
+        "rouge_l": 0.0625,
+        "text_similarity": 0.1897103190422058,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer lists unrelated visual snapshots (people taking selfies, a man by masks, a smiling woman) and omits all key points about InsightShare's workshops, community-led media, global work, participant praise, and colonization impacts, so it fails to match the correct summary."
+      }
+    },
+    {
+      "video_id": "WKc8XsxwNQU",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.14328358208955225,
+        "text_similarity": 0.5770553350448608,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures basic visual elements (conference footage, networking, and the Agile India 2023 logo) but omits nearly all key content from the correct answer such as the promotional framing, speaker endorsements, specific topics, practical takeaways, and value-for-money claims."
+      },
+      "short": {
+        "rouge_l": 0.0784313725490196,
+        "text_similarity": 0.5494396686553955,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only lists superficial visual/audio elements and a mention of networking, missing most key facts about the conference (premier status, vendor-neutral/tech-agnostic stance, speaker/topics, actionable takeaways, and value). It therefore is largely incomplete and includes irrelevant details."
+      }
+    },
+    {
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.07058823529411765,
+        "text_similarity": 0.30150145292282104,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is unrelated and extremely vague, describing someone editing a presentation, while the correct answer summarizes a detailed Sailboat Retrospective discussion and participant reflections\u2014none of which are present in the prediction."
+      },
+      "short": {
+        "rouge_l": 0.055045871559633024,
+        "text_similarity": 0.18052999675273895,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is unrelated and omits all key elements of the correct summary (the Sailboat Retrospective and its Wind/Sun/Anchor/Reef details), instead introducing a hallucinated scene about a woman working on a presentation."
+      }
+    },
+    {
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.10483870967741936,
+        "text_similarity": 0.45144936442375183,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes a developer giving generic advice and another commentator, which is extremely vague and omits almost all key specifics from the correct answer (Kotlin joke, deep technical topics like data structures, memory, concurrency, networking and databases, interview example, continuous learning, and personal sustainability), so it is largely incomplete."
+      },
+      "short": {
+        "rouge_l": 0.0625,
+        "text_similarity": 0.36360907554626465,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction only notes two people and their appearance, completely omitting all key themes from the correct answer (fundamentals, curiosity, learning, work-life balance, career advice), so it does not match the reference."
+      }
+    },
+    {
+      "video_id": "nnqJ4-nUsvc",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.16149068322981366,
+        "text_similarity": 0.2856318950653076,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only loosely echoes the video\u2019s message about working in one place and productivity but omits nearly all key factual elements (the Craigslist origin, fraud problem, the founders' pivot, and the creation of ClickUp) and adds unrelated details about a speaker and design systems."
+      },
+      "short": {
+        "rouge_l": 0.14285714285714285,
+        "text_similarity": 0.2031838446855545,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the themes of productivity and working in one place, but it omits major factual elements about the Craigslist competitor, fraud, the internal-tool-before-product decision, and founders' frustration, and it adds an unsupported mention of 'design systems.'"
+      }
+    }
+  ]
+}

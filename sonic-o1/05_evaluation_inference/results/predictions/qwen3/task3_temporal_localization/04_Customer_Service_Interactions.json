@@ -1,0 +1,1602 @@
+{
+  "model": "qwen3",
+  "topic_name": "04_Customer_Service_Interactions",
+  "task": "task3_temporal_localization",
+  "generated_at": "2025-12-28T15:16:53.198049",
+  "num_entries": 41,
+  "num_successful": 41,
+  "num_failed": 0,
+  "entries": [
+    {
+      "video_id": "PRzkzJuo6mI",
+      "video_number": "001",
+      "segment": {
+        "start": 0,
+        "end": 142
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 86.97395753860474
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 23.0,
+            "end_s": 27.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 23.0s when the receptionist begins to list the features of the hotel next door. E2 (target) occurs immediately after, from 23.0s to 27.1s, as he says, 'So that's for the hotel next door.' The relationship is 'after'. The subtitle clearly states his words."
+          },
+          {
+            "question_id": "002",
+            "start_s": 64.9,
+            "end_s": 68.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 64.9s when the customer questions the lack of a wake-up call. E2 (target) occurs from 64.9s to 68.2s, as the receptionist leans forward and says, 'Ah, yes. I forgot.' The relationship is 'after' and 'once_finished'. The subtitle 'Ah, yes. I forgot.' confirms the admission."
+          },
+          {
+            "question_id": "003",
+            "start_s": 72.4,
+            "end_s": 75.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 72.4s to 75.0s, as the receptionist completes the first transaction and says, 'And that's it. All done, thank you.' E2 (target) occurs from 75.0s to 77.2s, as the receptionist immediately asks the customer, 'Would you like to pay by credit card as well?'. The relationship is 'once_finished'. The subtitle 'Would you like to pay by credit card as well?' confirms the question."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JJOTu9IkiUo",
+      "video_number": "002",
+      "segment": {
+        "start": 0,
+        "end": 32
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 24.381540060043335
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 0.0,
+            "end_s": 32.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 00:02s when the customer says, 'I'm still hungry, man.' E2 (target) starts at 00:11s when the chef says, 'Kaedama: add-on Noodle.' The relationship is 'after'. The customer's statement is an explicit request, and the chef's action of preparing the kaedama is the direct response to that request."
+          },
+          {
+            "question_id": "002",
+            "start_s": 0.0,
+            "end_s": 32.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the chef finishing adding the noodles to the bowl at 00:25s. E2 (target) starts at 00:26s when the chef says 'Enjoy.' The relationship is 'once_finished'. The chef's action of placing the final noodles is complete, and he then turns to the camera to deliver the closing phrase for that course."
+          },
+          {
+            "question_id": "003",
+            "start_s": 0.0,
+            "end_s": 32.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 00:31s when the customer says, 'Gochisousama.' E2 (target) starts at 00:33s when the chef presents the rice and says 'Next, rice.' The relationship is 'after'. The customer's statement indicates they are finished, and the chef immediately follows up with the next step in the meal, which is to serve the rice."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "4PyTLRh7k5w",
+      "video_number": "003",
+      "segment": {
+        "start": 0,
+        "end": 40
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 23.66044855117798
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 32.4,
+            "end_s": 33.9,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 27.8s when the man says, 'you fucking with mob over here.' E2 (target) starts at 32.4s when the streamer says, 'I apologize,' and ends at 33.9s. The relationship is 'after'. The streamer's apology is a direct verbal response to the threat."
+          },
+          {
+            "question_id": "002",
+            "start_s": 36.5,
+            "end_s": 37.5,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 18.4s when the man says, 'before there is trouble of yourself, you understand that?'. E2 (target) occurs at 36.5s when the man says, 'You're not gone yet.' The relationship is 'after'. This is a direct follow-up threat after the initial one."
+          },
+          {
+            "question_id": "003",
+            "start_s": 39.9,
+            "end_s": 41.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 34.0s when the man says, 'The sooner you leave, the better.' E2 (target) starts at 39.9s when the streamer stands up and begins to walk away, and ends at 41.0s as he is fully standing. The relationship is 'after'. The streamer's action is a direct response to the man's ultimatum."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 85.31933212280273
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 25.2,
+            "end_s": 27.2,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 25.2s when the driver asks, 'Do you guys speak English?'. E2 (target) occurs from 26.0s to 27.2s when the McDonald's employee responds with 'Como se llama?'. The employee's response is a direct reply to the driver's question, confirming the temporal relationship of 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 54.7,
+            "end_s": 56.7,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 54.7s when the McDonald's employee asks, '\u00bfCombo o solo?'. E2 (target) occurs from 55.4s to 56.7s when the driver responds with 'Combo, s\u00ed'. The target event directly follows the anchor event, showing a 'direct response' relationship."
+          },
+          {
+            "question_id": "003",
+            "start_s": 131.8,
+            "end_s": 133.7,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 131.8s when the driver requests an extra McDouble as 'solito'. E2 (target) occurs from 132.1s to 133.7s when the McDonald's employee confirms, 'Solo, s\u00ed'. The employee's response is an immediate confirmation of the driver's specific request, establishing a 'direct confirmation' relationship."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 150,
+        "end": 240
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 39.09546422958374
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 277.4,
+            "end_s": 279.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 277.4s to 279.4s when the speaker says 'So, all three McDoubles.' This is the exact moment the confirmation is made. The speaker's statement is a direct summary of the order just placed."
+          },
+          {
+            "question_id": "002",
+            "start_s": 280.3,
+            "end_s": 281.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 280.3s when the speaker says 'Gracias' and the transaction concludes. E2 (target) starts immediately after, from 280.3s to 281.8s, when the speaker says 'I went to McDonald's in Puerto Rico.' The relationship is 'immediately after'. The speaker's tone shifts to a more conversational one right after the transaction."
+          },
+          {
+            "question_id": "003",
+            "start_s": 284.0,
+            "end_s": 285.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 284.0s to 285.4s when the speaker asks '1 hour?'. This is a question about the wait time. E2 (target) is the follow-up question, 'Can you call someone who knows English?', which is a direct consequence of the first question. The speaker asks the second question immediately after the first one is posed."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 89.32172322273254
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 132.8,
+            "end_s": 135.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 131.8s when the speaker says, 'we are going to our next train, which will depart in 20 minutes.' E2 (target) starts at 132.8s with the sound of the train arriving and the visual of the train at the station. The relationship is 'after' the announcement."
+          },
+          {
+            "question_id": "002",
+            "start_s": 158.5,
+            "end_s": 162.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 152.0s when the speaker mentions the weather is 'super hot.' E2 (target) starts at 158.5s when he says, 'Pohang has the largest steel manufacturing company.' The relationship is 'after' the weather comment."
+          },
+          {
+            "question_id": "003",
+            "start_s": 197.5,
+            "end_s": 202.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 196.0s with the speaker saying, 'The whole place is seafood fish market.' E2 (target) starts at 197.5s with the line, 'The town landscape is beautiful.' The relationship is 'after' the anchor statement."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 90.9036705493927
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 300.7,
+            "end_s": 302.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 300.0s when the speaker says, 'The whole place is seafood fish market.' E2 (target) is the description of the town landscape being beautiful, which occurs immediately after, from 300.7s to 302.0s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 306.7,
+            "end_s": 307.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the phrase 'I think we just go ahead with this' at 306.0s. E2 (target) is the first visual of the shop's interior, which starts at 306.7s when the camera pushes in on the door. The relationship is 'after' or 'once_finished'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 345.5,
+            "end_s": 346.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the Korean woman starting to serve food at the table at 344.0s. E2 (target) is her adding rice to the bowl, which is shown clearly from 345.5s to 346.5s. The relationship is 'during' her serving action."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 91.68426442146301
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 386.3,
+            "end_s": 393.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 386.3s when the man finishes describing his 'cold raw fish' dish. E2 (target) begins at 386.3s and ends at 393.0s, during which he describes the other dish as 'like bibimbap but with raw fish and the sauce is really nice'. The relationship is 'after', as he transitions from discussing one dish to the next."
+          },
+          {
+            "question_id": "002",
+            "start_s": 427.2,
+            "end_s": 428.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 427.2s when the man says, 'For now, we are leaving Pohang.' E2 (target) occurs at 427.2s and ends at 428.0s, when he announces, 'We have arrived at Gyeongju.' The relationship is 'immediately after', as the second statement is a direct consequence of the first."
+          },
+          {
+            "question_id": "003",
+            "start_s": 431.1,
+            "end_s": 457.3,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 431.1s when the man says, 'Our train to Gyeongju.' E2 (target) begins at 431.1s and ends at 457.3s, during which he explains the KTX pass limitations and their plan to hop on. The relationship is 'after', as he provides the explanation immediately following the announcement."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 91.35328698158264
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 676.3,
+            "end_s": 683.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 669.1s to 675.2s, where the speaker says, 'So it has a lot of tomb, temple and historical site here.' E2 (target) occurs from 676.3s to 683.7s, where the speaker says, 'We came up from this small alley.' The relationship is 'after', as the mention of historical sites directly follows the initial statement about the Shilla Dynasty."
+          },
+          {
+            "question_id": "002",
+            "start_s": 717.0,
+            "end_s": 720.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 711.8s to 717.0s, where the speaker says, 'And never actually brought us to this very quiet neighborhood.' E2 (target) occurs from 717.0s to 720.0s, where the speaker says, 'We came up from this small alley.' The relationship is 'after', as the speaker finishes talking about the firehouse and ambulance before mentioning their arrival at the historical site."
+          },
+          {
+            "question_id": "003",
+            "start_s": 692.2,
+            "end_s": 702.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 688.9s to 692.2s, where the speaker says, 'Wow.' E2 (target) occurs from 692.2s to 702.4s, where the speaker says, 'So the Shilla Dynasty has a lot of uh Islamic influence including in their in their outfit.' The relationship is 'once_finished', as the speaker begins talking about the Gyeongju Eopseong Fortress after recovering from hitting his head."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 690,
+        "end": 821
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 57.52969551086426
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 163.0,
+            "end_s": 172.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 162.8s to 163.0s when the speaker finishes saying 'the door that face the sun.' E2 (target) begins at 163.0s with the speaker saying 'So this is actually a reconstruction of the wall on the original location of the fortress.' and continues until 172.0s. The relationship is 'after' the anchor."
+          },
+          {
+            "question_id": "002",
+            "start_s": 194.8,
+            "end_s": 198.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 194.4s to 194.8s when the speaker finishes saying 'most of the shops already closed.' E2 (target) begins at 194.8s with the speaker saying 'I see a few cats here.' and ends at 198.4s. The relationship is 'after' the anchor."
+          },
+          {
+            "question_id": "003",
+            "start_s": 225.6,
+            "end_s": 235.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 225.6s to 229.0s when the speaker says 'Okay, we have done our visit to the tomb of the Kings.' E2 (target) begins at 229.0s with the speaker saying 'So now we are heading towards the nearest bus station.' and continues until 235.0s. The relationship is 'once_finished' the anchor."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 89.87065744400024
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 42.0,
+            "end_s": 45.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 42.0s when the speaker finishes his English explanation of the rollover. E2 (target) starts at 42.0s and ends at 45.0s, as a man speaks in a foreign language. The relationship is 'after'. The speaker's voice is heard, then the foreign language begins."
+          },
+          {
+            "question_id": "002",
+            "start_s": 54.0,
+            "end_s": 56.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 54.0s when the speaker says, 'He sounds very angry.' E2 (target) starts at 54.0s and ends at 56.0s, as the speaker asks, 'Do you have the approximate weight of the container?'. The relationship is 'after'. The speaker's statement is immediately followed by the question."
+          },
+          {
+            "question_id": "003",
+            "start_s": 208.0,
+            "end_s": 210.0,
+            "confidence": 0.97,
+            "rationale_model": "E1 (anchor) occurs at 208.0s when the tow truck begins lifting the container. E2 (target) starts at 208.0s and ends at 210.0s, as the speaker opens the left side storage compartment. The relationship is 'after'. The action of opening the compartment follows the start of the lift."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 91.63014483451843
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 157.0,
+            "end_s": 158.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor event) occurs at 157.0s when the speaker finishes his sentence about posting recoveries on YouTube. E2 (target event) is the action of picking up the heavy-duty sling. This action begins at 157.0s and is completed by 158.0s, as the person is seen reaching down and grabbing the sling."
+          },
+          {
+            "question_id": "002",
+            "start_s": 191.0,
+            "end_s": 193.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor event) is the crane truck lifting the container, which begins around 186.0s. E2 (target event) is when the container is fully upright and vertical. This occurs after the crane has lifted it completely, which is visually evident between 191.0s and 193.0s."
+          },
+          {
+            "question_id": "003",
+            "start_s": 183.0,
+            "end_s": 185.0,
+            "confidence": 0.85,
+            "rationale_model": "E1 (anchor event) is the speaker's dialogue explaining their YouTube channel, which occurs from 179.0s to 188.0s. E2 (target event) is the person in the black shirt listening and responding. He begins to engage with the conversation around 183.0s, indicated by his body language and the start of his verbal response at 184.0s, continuing until 185.0s."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 92.20547986030579
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 330.0,
+            "end_s": 332.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 330.0s when the speaker says 'Go ahead and boom up with it'. E2 (target) starts at 330.0s as the tow truck's boom immediately begins to lift the container segment. The target ends at 332.0s when the segment is fully detached from the ground and is being raised into the air. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 473.0,
+            "end_s": 475.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 473.0s when the speaker says 'Pull him up'. E2 (target) starts at 473.0s with a loud clanking sound, indicating the main boom is engaging. The segment visibly begins to rise from the ground at 473.0s and is fully lifted by 475.0s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 475.0,
+            "end_s": 480.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 475.0s when the speaker says 'Okay, now we're going to go in with both cables, okay?'. E2 (target) starts at 475.0s as the segment begins to rotate. The container's main body clearly moves from a horizontal to a vertical position between 475.0s and 480.0s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 89.67686152458191
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 685.4,
+            "end_s": 686.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the abrupt movement and loud noise of the container shifting, which occurs at 685.0s. E2 (target) is the narrator saying 'Downward Y', which is heard from 685.4s to 686.4s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 719.4,
+            "end_s": 721.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the worker hitting the trailer leg with a tool, which is heard from 718.0s to 719.2s. E2 (target) is the narrator saying 'Don't remove all pressure, hold on', which is heard from 719.4s to 721.4s. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 750.0,
+            "end_s": 751.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the narrator saying 'Boom down a little bit', which occurs from 748.8s to 749.4s. E2 (target) is the narrator saying 'It might be shifted', which is heard from 750.0s to 751.8s. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 89.75804305076599
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 737.5,
+            "end_s": 739.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 736.7s when the man in the black t-shirt verbally identifies the leaning load. E2 (target) starts at 737.5s as he physically points his finger toward the red container and continues until 739.1s as he maintains the pointing gesture. The relationship is 'after' the verbal identification."
+          },
+          {
+            "question_id": "002",
+            "start_s": 749.5,
+            "end_s": 750.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 749.1s when the supervisor in the pink shirt verbally instructs to lift the container. E2 (target) starts at 749.5s as the crane's boom begins to elevate the container and the crane's hydraulic systems engage, continuing until 750.1s as the container starts to rise. The relationship is 'immediately after' the verbal command."
+          },
+          {
+            "question_id": "003",
+            "start_s": 770.2,
+            "end_s": 772.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 769.6s when the supervisor in the pink shirt begins explaining the plan to move the container to the dock. E2 (target) starts at 770.2s as he makes a sweeping, wide gesture with his right hand and continues until 772.3s as he completes the gesture. The relationship is 'during' the explanation."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 91.60759258270264
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 972.0,
+            "end_s": 973.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 968.0s with the speaker saying, 'Alright, I'm going to start booming in.' E2 (target) starts at 972.0s when another person asks, 'He's going to connect this yargo?' and ends at 973.5s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 987.0,
+            "end_s": 989.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 961.0s when the first speaker says, 'I think it shifted and that foot was like this.' E2 (target) starts at 987.0s when a person says, 'That's severely shifted,' and ends at 989.0s. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1002.0,
+            "end_s": 1003.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1000.0s with the speaker saying, 'Let me lower my lines.' E2 (target) starts at 1002.0s when a person states, 'That's severely shifted,' and ends at 1003.5s. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1050,
+        "end": 1260
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 90.88320326805115
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1121.0,
+            "end_s": 1131.5,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 1121.0s when the speaker states, 'That's severely shifted.' E2 (target) starts at 1122.0s as he begins to explain the cause, 'The weight shifted in there,' and continues until 1131.5s, where he concludes, 'It's the weight.' The relationship is 'after' E1, with E2 being the direct explanation for the observed condition."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1209.0,
+            "end_s": 1214.5,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 1209.0s when the speaker asks, 'What do you recommend?'. E2 (target) starts at 1210.0s when another person suggests a solution, and the speaker confirms it at 1214.5s by saying, 'Yeah, put it on the floor. Okay.' The relationship is 'after' E1, with E2 being the response to the question."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1228.0,
+            "end_s": 1231.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 1228.0s when someone asks, 'It's batteries?'. E2 (target) starts at 1228.5s with the speaker's confirmation, 'Oh, that's why. Yeah.', and ends at 1231.0s with a follow-up, 'So they're like right in the middle.' The relationship is 'after' E1, with E2 being the immediate realization and confirmation of the cargo's identity."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1410,
+        "end": 1620
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 89.9955108165741
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1517.0,
+            "end_s": 1521.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 1477.0s to 1508.0s, where the speaker gives the instruction 'start going in with your white'. E2 (target) starts at 1517.0s when he says 'Keep going with the white' and ends at 1521.0s. The relationship is 'after' the initial instruction was given."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1615.0,
+            "end_s": 1616.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1614.0s when the speaker asks, 'You're right there, right?'. E2 (target) is the immediate response 'No', which starts and ends at 1615.0s. The relationship is 'immediate response' to the anchor question."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1641.0,
+            "end_s": 1643.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1632.0s when the speaker says, 'First I want it in a position correctly.' E2 (target) is the instruction 'Go ahead and hook up your glad hands', which occurs from 1641.0s to 1643.0s. The relationship is 'after' the speaker expresses his desire for the position to be correct."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1590,
+        "end": 1800
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 90.21401047706604
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1631.5,
+            "end_s": 1632.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1631.5s when the instructor finishes connecting the green glad hand, as indicated by his dialogue 'Okay, boom up, boom up a little bit.' E2 (target) starts at 1631.5s and ends at 1632.3s, during which he asks, 'This one has pressure?'. The relationship is 'after', as the question is asked immediately following the completion of the physical task."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1657.7,
+            "end_s": 1658.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1657.7s when the instructor says, 'You got it, mijo?'. The video transitions to an outdoor scene of a crane truck at 1658.0s. E2 (target) is this transition, which starts at 1658.0s and is complete by 1658.1s. The relationship is 'immediately after', as the transition to the outdoor scene happens in the very next frame."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1710.5,
+            "end_s": 1711.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1710.5s when the crane operator says, 'Okay, boom up.' E2 (target) starts at 1710.5s and ends at 1711.5s, during which the crane boom is visibly raised. The relationship is 'immediately after', as the crane's upward movement begins in the same frame the command is given."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1770,
+        "end": 1970
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 85.23027849197388
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1781.0,
+            "end_s": 1782.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1775.4s when the first speaker says 'cable down'. E2 (target) is the second speaker's response, which starts at 1781.0s with 'he wants it down right there' and ends at 1782.3s. The relationship is 'after', as the second speaker immediately confirms the first speaker's command. The audio is clear, and the visual context of the speakers standing near the container supports this interaction."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1785.0,
+            "end_s": 1787.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1783.3s when the first speaker asks, 'Where do you guys want it at? Here or pushed over?'. E2 (target) starts at 1785.0s with a second speaker saying 'Yeah, that's better that way we have space on both sides' and ends at 1787.7s. The relationship is 'after', as the second speaker provides a suggestion in response to the first speaker's question. The audio is clear and the visual context shows the speakers discussing the placement of the container."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1813.8,
+            "end_s": 1815.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1813.8s when the speaker says 'Our job's complete'. E2 (target) is the immediate follow-up, starting at 1813.8s and ending at 1815.4s, where the speaker says 'Thanks for watching, guys'. The relationship is 'immediately after', as E2 is a direct consequence of E1 in the speaker's closing remarks. The audio is clear, and the visual context of the speaker concluding the video supports this sequence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1230,
+        "end": 1440
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 87.18973803520203
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1437.1,
+            "end_s": 1438.5,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 1436.8s when the man with the hat says, 'Well, it's uh, I guess 36,000 pounds of of batteries.' E2 (target) is the speaker's reply, 'I figured,' which starts at 1437.1s and ends at 1438.5s. The temporal relationship is 'after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1770,
+        "end": 1969.885
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 77.08929133415222
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "002",
+            "start_s": 1928.0,
+            "end_s": 1929.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the red container being lowered, which is visually confirmed as it is suspended by the crane and moving downwards throughout the segment. E2 (target) is the final loud clanking sound as it settles. This sound occurs at 1928.0s, immediately after the container has been lowered to the ground and the crane's cables go slack, causing the entire structure to settle. The sound is a single, definitive impact, marking the end of the lowering process, and lasts for approximately 1.5 seconds."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 87.6300630569458
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 25.8,
+            "end_s": 35.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 25.8s when Rochelle introduces herself as 'a native French instructor from Belle Terre Academy.' E2 (target) starts at 30.0s when she says, 'And today, I have the pleasure of interviewing the owners of this magnificent cafe...'. The relationship is 'after' the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 149.8,
+            "end_s": 164.7,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) is Natasha's statement about tips and service quality ending at 149.8s. E2 (target) starts at 154.8s with Christophe saying, 'L'emporter est beaucoup plus d\u00e9mocratis\u00e9 qu'en Europe' and ends at 164.7s with him explaining that customers order takeout even when restaurants are closed. The relationship is 'after' the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 175.6,
+            "end_s": 187.0,
+            "confidence": 0.92,
+            "rationale_model": "E1 (anchor) is Christophe's statement about normalizing food ordering ending at 175.6s. E2 (target) starts at 178.6s with Natasha saying, 'D'ailleurs, chez eux, ils disent qu'est-ce qu'on mange ce soir? C'est qu'est-ce qu'on commande ce soir.' This ends at 187.0s. The relationship is 'after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 88.252450466156
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 161.0,
+            "end_s": 166.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 150.0s when the man finishes explaining that clients are used to ordering directly via apps or pickup. E2 (target event) starts at 161.0s when the woman says 'Chez eux ils disent qu'est-ce qu'on va manger ce soir' and ends at 166.0s when she says 'qu'est-ce qu'on commande ce soir'. The relationship is 'after' because she begins her statement immediately following his explanation."
+          },
+          {
+            "question_id": "002",
+            "start_s": 177.0,
+            "end_s": 185.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the woman finishing her question about service differences at 176.0s. E2 (target event) is the man's response, which starts at 177.0s with 'Les gens, les clients reviennent majoritairement parce que d\u00e9j\u00e0 la nourriture est bonne' and ends at 185.0s with 'et aussi parce qu'il y a le c\u00f4t\u00e9 friendly'. The relationship is 'immediately after' as his response begins right as she finishes speaking."
+          },
+          {
+            "question_id": "003",
+            "start_s": 200.0,
+            "end_s": 202.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the woman asking for a steak and fries, which starts at 196.0s and ends at 199.0s. E2 (target event) is the waiter's question, which starts at 200.0s with 'A point?' and ends at 202.0s with 'Oui, avec du steak'. The relationship is 'after' as the waiter's question follows her request."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 87.26788115501404
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 345.7,
+            "end_s": 347.1,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) ends at 345.7s when the speaker says 'pas de p\u00e2tisseries'. Immediately after, at 345.8s, the video cuts to a close-up shot of the dessert display case, which remains on screen until 347.1s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 464.0,
+            "end_s": 467.2,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) ends at 464.0s when the speaker finishes his example about customers customizing their dishes. The video then cuts to a close-up shot of a salad at 464.1s, which stays on screen until 467.2s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 504.6,
+            "end_s": 505.9,
+            "confidence": 0.97,
+            "rationale_model": "E1 (anchor) ends at 504.6s when the speaker concludes his example of customizing dishes. Immediately following, at 504.7s, the video shows a close-up of a fresh salad, which is visible until 505.9s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 510,
+        "end": 566
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 29.48613476753235
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 542.3,
+            "end_s": 544.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs between 539.0s and 542.2s as the man discusses the average closing time of restaurants in France. E2 (target) is the woman holding the baby saying 'Il y a plus personne' in French. This event starts at 542.3s and ends at 544.1s. The relationship is 'after'. The visual cue is the woman speaking, and the audio cue is her distinct French accent."
+          },
+          {
+            "question_id": "002",
+            "start_s": 549.2,
+            "end_s": 550.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the woman on the left finishing her sentence 'Please subscribe to the channel, I appreciate it' at 548.5s. E2 (target) is her saying 'A bient\u00f4t les amis, au revoir!' in French. This event starts at 549.2s and ends at 550.4s. The relationship is 'once_finished'. The visual cue is her speaking, and the audio cue is her clear pronunciation of the farewell phrase."
+          },
+          {
+            "question_id": "003",
+            "start_s": 552.0,
+            "end_s": 552.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the woman on the left finishing her sentence 'A bient\u00f4t les amis, au revoir!' at 550.4s. E2 (target) is the man saying 'A bient\u00f4t!' in French. This event starts at 552.0s and ends at 552.8s. The relationship is 'after'. The visual cue is the man speaking, and the audio cue is his distinct French accent."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "8xW-m_bmpv4",
+      "video_number": "008",
+      "segment": {
+        "start": 0,
+        "end": 47
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 23.6146240234375
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 16.0,
+            "end_s": 17.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 15.8s when the man in the cowboy hat says, 'The machine took my money.' E2 (target) starts at 16.0s when the representative says, 'We did not take your money,' and ends at 17.8s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 35.6,
+            "end_s": 37.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 35.6s when the representative says, 'You have to print the receipt.' E2 (target) starts at 35.6s when the man in the cowboy hat says, 'I've got the receipt here,' and ends at 37.0s. The relationship is 'after' as he immediately responds to the instruction."
+          },
+          {
+            "question_id": "003",
+            "start_s": 41.2,
+            "end_s": 41.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 41.2s when the man in the cowboy hat says, 'Thank you.' E2 (target) starts at 41.2s as he says the word and ends at 41.9s when he hangs up the phone. The relationship is 'after' as he hangs up immediately following his statement."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "04khRfp_tY0",
+      "video_number": "009",
+      "segment": {
+        "start": 0,
+        "end": 160
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 64.07571244239807
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 48.7,
+            "end_s": 50.6,
+            "confidence": 0.95,
+            "rationale_model": "The man in the suit asks the officer to 'call for some more car crews' at 48.69 seconds. Immediately after this request, at 48.7 seconds, a group of additional police officers enters the room from the background, marking the start of the event. The event concludes at 50.6 seconds as the officers are fully visible in the room."
+          },
+          {
+            "question_id": "002",
+            "start_s": 122.5,
+            "end_s": 123.6,
+            "confidence": 0.98,
+            "rationale_model": "The first police officer repeatedly asks the man in the suit to leave the building from 50.6 seconds to 77.6 seconds. The man in the suit then states, 'I've asked for IDs,' at 122.5 seconds. The audio of his statement ends at 123.6 seconds. The target event occurs after the officer's initial request."
+          },
+          {
+            "question_id": "003",
+            "start_s": 152.7,
+            "end_s": 153.9,
+            "confidence": 0.98,
+            "rationale_model": "The man in the suit shouts 'Ambulance!' for the final time at 152.6 seconds. Immediately following this, at 152.7 seconds, a police officer informs him, 'You're under arrest.' The officer's statement ends at 153.9 seconds. The target event is a direct response to the man's shouting."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "eJlc_GV2yx8",
+      "video_number": "010",
+      "segment": {
+        "start": 0,
+        "end": 73
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 30.790388345718384
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 28.5,
+            "end_s": 29.2,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 28.5s when the father says, 'You better go use Find my iPhone.' E2 (target) occurs immediately after, starting at 29.1s when the woman, with an agitated tone, responds, 'Find my iPhone is on.' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 47.2,
+            "end_s": 47.9,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 46.2s when the father says, 'You're not helping.' E2 (target) starts at 47.2s when the woman, loudly and aggressively, demands, 'Show me the proof!' The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 58.5,
+            "end_s": 59.3,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 57.9s when the father finishes his sentence, 'I'm trying to help.' E2 (target) starts at 58.5s when the hotel employee, with a calm but firm voice, says, 'No, but you're not helping.' The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "vuIap3d2WHg",
+      "video_number": "011",
+      "segment": {
+        "start": 0,
+        "end": 93
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 39.35594296455383
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 21.0,
+            "end_s": 22.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 17.6s to 20.2s when the waiter says, 'Well, good news. I put it on your table, so it's yours now.' E2 (target) starts at 21.0s when the woman begins to speak and ends at 22.4s. The relationship is 'immediately after'. The woman's speech is clearly audible right after the waiter's statement."
+          },
+          {
+            "question_id": "002",
+            "start_s": 52.8,
+            "end_s": 54.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the waiter placing a small amount of food onto the woman's plate, which occurs from 47.8s to 52.8s. E2 (target) is the waiter completely walking away from her table. This starts at 52.8s as he turns his body and walks away, and ends at 54.2s when he has moved a significant distance. The relationship is 'immediately after'. The waiter's physical movement away from the table is the visual cue."
+          },
+          {
+            "question_id": "003",
+            "start_s": 26.7,
+            "end_s": 28.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 25.3s to 26.7s when the waiter asks, 'Okay. What would you like?' E2 (target) starts at 26.7s when the woman begins to speak and ends at 28.4s. The relationship is 'immediately after'. The woman's speech is a direct response to the waiter's question, which is audible right after."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Q3Qzgs5WuvE",
+      "video_number": "012",
+      "segment": {
+        "start": 0,
+        "end": 67
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 30.151044845581055
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 50.5,
+            "end_s": 52.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 0.0s to 50.0s, where the narrator describes the incident. E2 (target) occurs from 50.5s to 52.5s, when the woman in the white shirt throws the yellow cup at the cashier. The relationship is 'after' the narrator's introduction."
+          },
+          {
+            "question_id": "002",
+            "start_s": 34.0,
+            "end_s": 40.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 31.0s to 33.0s, when the manager says, 'The warmth of the soup was not enough to really burn me.' E2 (target) starts at 34.0s when she says, 'But the spices from the soup are what my eyes were stinging so bad they were burning...' and continues until 40.0s. The relationship is 'after' the initial statement."
+          },
+          {
+            "question_id": "003",
+            "start_s": 62.0,
+            "end_s": 64.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 58.0s to 61.0s, when the manager offers help with the condition of no yelling or cussing. E2 (target) starts at 62.0s when she says, 'And that's the moment she threw it at me.' The relationship is 'once_finished' the condition was stated."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 100.22442817687988
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 21.0,
+            "end_s": 34.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs from 8.0s to 19.0s with the text 'My neck and shoulders were tired from writing a paper on the future of Thailand's nightlife industry'. E2 (target) starts at 21.0s and ends at 34.0s with the new text 'Therefore, I visited a quiet massage shop nearby the five-star hotel where I stay'. The relationship is 'after' the first text has finished."
+          },
+          {
+            "question_id": "002",
+            "start_s": 46.0,
+            "end_s": 53.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 46.0s when the woman opens the door. E2 (target) starts at 46.0s and ends at 53.0s when she verbally says 'Please wait for 10 minutes'. The relationship is 'immediately after' the door opens."
+          },
+          {
+            "question_id": "003",
+            "start_s": 188.0,
+            "end_s": 195.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs from 188.0s to 189.0s with the text 'I am from Korea'. E2 (target) starts at 188.0s and ends at 195.0s with the text 'She was already happy to dance just because I was in the same room with her'. The relationship is 'immediately after' the narrator's statement."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 95.2642605304718
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 340.7,
+            "end_s": 342.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the woman adjusting her hair, which occurs at 340.7s. E2 (target) is her picking up the phone, which starts at 340.7s and ends at 342.2s. The relationship is 'at the same time as' or 'immediately after', as the action is a continuous gesture."
+          },
+          {
+            "question_id": "002",
+            "start_s": 344.9,
+            "end_s": 346.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the male voice asking 'Are you from Korea?' which occurs at 344.9s. E2 (target) is the male voice clarifying 'South Korea', which starts at 344.9s and ends at 346.7s. The relationship is 'immediately after', as the clarification is a direct response to the question."
+          },
+          {
+            "question_id": "003",
+            "start_s": 348.7,
+            "end_s": 350.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the woman saying 'No, I don't' at 348.7s. E2 (target) is her saying 'Just a little bit', which starts at 348.7s and ends at 350.5s. The relationship is 'at the same time as', as she is saying both phrases in a single utterance."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 92.12387895584106
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 530.3,
+            "end_s": 531.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 529.9s when the man being massaged asks, 'Can I go now?'. E2 (target) starts at 530.3s when the woman replies, 'Yes, you can.' The target ends at 531.5s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 514.1,
+            "end_s": 514.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 513.4s when the man says, 'My dear wife, let's go to the hotel.' E2 (target) starts at 514.1s when he says, 'Oh, good.' The target ends at 514.9s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 469.3,
+            "end_s": 470.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 468.6s when the man says, 'You said you weren't working.' E2 (target) starts at 469.3s when the other man replies, 'I'm not.' The target ends at 470.2s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 93.58624172210693
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 770.0,
+            "end_s": 775.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs from 690.0s to 769.0s with the man's repeated comment 'T-shirt'. E2 (target) starts at 770.0s and ends at 775.0s, where a child's voice clearly says 'Hello'. The relationship is 'after' the anchor event has concluded."
+          },
+          {
+            "question_id": "002",
+            "start_s": 815.0,
+            "end_s": 820.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 810.0s with the woman saying 'I don't know if it's beautiful or not'. E2 (target) starts at 815.0s and ends at 820.0s, where she says 'it's too small'. The relationship is 'after' the anchor event, as she is commenting on the same item."
+          },
+          {
+            "question_id": "003",
+            "start_s": 880.0,
+            "end_s": 885.0,
+            "confidence": 0.92,
+            "rationale_model": "E1 (anchor) occurs from 855.0s to 879.0s with the man stating 'You have to spend a lot of money'. E2 (target) starts at 880.0s and ends at 885.0s, where he offers a 'discount'. The relationship is 'after' the anchor event, as he is responding to the initial price."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 870,
+        "end": 903
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 29.567732334136963
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 888.0,
+            "end_s": 890.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) is the completion of the phrase 'Up to you' and the subsequent pause, which occurs at 886.2s. E2 (target) begins at 888.0s when the woman lowers her left hand and is fully completed by 890.0s. The relationship is 'after' the anchor event concludes."
+          },
+          {
+            "question_id": "002",
+            "start_s": 885.0,
+            "end_s": 886.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) is the beginning of the phrase 'Up to you', which occurs at 885.0s. E2 (target) starts at 885.0s as she raises her left hand to her chin, and the action is complete by 886.0s. The relationship is 'before' the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 896.0,
+            "end_s": 897.0,
+            "confidence": 0.85,
+            "rationale_model": "E1 (anchor) is the completion of the phrase 'Whatever you want', which ends at 895.0s. E2 (target) begins at 896.0s when she starts saying 'Okay'. The relationship is 'after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 90.36512684822083
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 696.8,
+            "end_s": 701.8,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 696.8s when the man asks, 'Why don't you have any customers?'. E2 (target) starts at 696.8s and ends at 701.8s when the masseuse replies, 'Ah...becouse there are so many massage shops...'. The relationship is 'after', as she directly responds to his question."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 870,
+        "end": 902.4000000000001
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 28.077667474746704
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "002",
+            "start_s": 11.0,
+            "end_s": 12.2,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor), the woman's hand extending the card, is visible from 8.8s to 10.8s. E2 (target), the outdoor view with the pink scooter, first appears at 11.0s. The relationship is 'after' E1."
+          },
+          {
+            "question_id": "003",
+            "start_s": 882.2,
+            "end_s": 882.5,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor), the outdoor scene with the pink scooter, is visible from 11.0s to 21.0s. E2 (target), a hand touching the woman's shoulder, first occurs at 882.2s. The relationship is 'after' E1."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 85.38329672813416
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 142.0,
+            "end_s": 144.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 141.1s when the bartender says, 'So we'll just have to make it a standard one, okay?'. E2 (target) starts at 142.0s when Em takes the drink. The target ends at 144.7s as Em is shown drinking. The relationship is 'after' because Em begins drinking immediately after the bartender makes the decision."
+          },
+          {
+            "question_id": "002",
+            "start_s": 169.3,
+            "end_s": 170.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 168.1s when the bartender says, 'I'm going to kick you out.' E2 (target) starts at 169.3s when Em shouts 'Screw you!' and ends at 170.1s. The relationship is 'immediately after' because the shout is a direct reaction to the threat of being kicked out."
+          },
+          {
+            "question_id": "003",
+            "start_s": 197.0,
+            "end_s": 201.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 195.6s when the bartender asks, 'Hey, you having a fun night?'. E2 (target) starts at 197.0s when Em replies, 'It's so much fun. I mean, Jake has been a total joke, but...'. The target ends at 201.0s. The relationship is 'immediately after' as Em's response is a direct and sequential reply to the bartender's question."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 150,
+        "end": 220
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 31.439255475997925
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 185.4,
+            "end_s": 187.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 183.8s to 185.4s when the bartender, Mattie, says, 'I'm Mattie. What's your name?'. E2 (target) starts at 185.4s when the customer replies, 'It's Em. Why?' and ends at 187.4s. The relationship is 'immediately after'. The audio cues are the direct back-and-forth dialogue."
+          },
+          {
+            "question_id": "002",
+            "start_s": 199.7,
+            "end_s": 202.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) finishes at 199.7s when the bartender says, 'I don't want to see you get burned.' E2 (target) starts at 199.7s when she says, 'So what I'm going to do is get security to call you a cab and get you home safely.' The relationship is 'after E1 finishes'. The bartender's offer is a direct consequence of her explanation about the law and her concern for the customer."
+          },
+          {
+            "question_id": "003",
+            "start_s": 214.5,
+            "end_s": 217.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 211.7s to 214.5s when the bartender says, 'get security to call you a cab and get you home safely.' E2 (target) starts at 214.5s when she picks up the walkie-talkie and ends at 217.0s. The relationship is 'immediately after', as she picks up the device to execute the plan she just described."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "8VDvZM7QEGo",
+      "video_number": "015",
+      "segment": {
+        "start": 0,
+        "end": 49
+      },
+      "preprocessing": {
+        "max_frames": 256,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 27.889952659606934
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 29.0,
+            "end_s": 30.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 29.0s when the woman in the green dress asks, 'So Anna has her money?'. E2 (target) is the man's response, which starts at 30.0s when he says, 'It's all good. We have Genesis now.' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 32.0,
+            "end_s": 33.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man saying, 'Read the sign' at 32.0s. E2 (target) is the woman in the green dress's response, which starts at 33.0s with her saying, 'Oh yeah! Hey! Cool sign!' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 47.0,
+            "end_s": 48.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the woman in the green dress pointing and saying, 'Read the sign' at 47.0s. E2 (target) is the notification appearing on the tablet, which happens at 48.0s. The relationship is 'at the same time as'."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,723 @@
+{
+  "topic_id": 4,
+  "topic_name": "Customer Service Interactions",
+  "num_evaluated": 39,
+  "aggregated_metrics": {
+    "accuracy": 0.5897435897435898,
+    "correct": 23,
+    "total": 39,
+    "rationale": {
+      "rouge_l_mean": 0.1861287859909223,
+      "rouge_l_std": 0.07286896993775571,
+      "text_similarity_mean": 0.6009887479818784,
+      "text_similarity_std": 0.15709660559705368,
+      "llm_judge_score_mean": 5.538461538461538,
+      "llm_judge_score_std": 3.7950450410904644
+    },
+    "rationale_cider": 0.0028743824422677246
+  },
+  "per_entry_results": [
+    {
+      "video_id": "PRzkzJuo6mI",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 142.0
+      },
+      "question": "What inconsistency first reveals the receptionist's misleading professional approach to the customer regarding the hotel's services?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16326530612244897,
+        "text_similarity": 0.6937105655670166,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction vaguely captures that the receptionist misleads about services being elsewhere, but it misstates key details\u2014it omits the luxury-amenities claim being attributed to the next-door hotel and falsely invents a clause about reservations\u2014so it is largely inaccurate."
+      }
+    },
+    {
+      "video_id": "JJOTu9IkiUo",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 32.0
+      },
+      "question": "Despite the customer's claims of being full after finishing a second serving of noodles, the chef insists on preparing a final rice dish, emphasizing it's part of 'Japanese culture.' This interaction implies the rice course is primarily designed to:",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.075,
+        "text_similarity": 0.34271425008773804,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction vaguely matches the idea of repurposing leftovers but misses the core: the rice is a customary, essential way to finish and enjoy the ramen broth as part of Japanese culture, not merely the chef showcasing creative skills."
+      }
+    },
+    {
+      "video_id": "4PyTLRh7k5w",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 40.0
+      },
+      "question": "Considering the restaurant owner's aggressive tone and self-proclaimed 'gangster' affiliation, what specific concern is he primarily expressing to the streamer?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.7662308812141418,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the primary concern: the owner is threatening mob-related harm if the streamer doesn't leave, which matches the quoted statements and conclusion in the correct answer."
+      }
+    },
+    {
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Overcoming a language barrier, what was the final specific food and drink order confirmed by the drive-thru employee?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.0202020202020202,
+        "text_similarity": 0.08596223592758179,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a placeholder phrase and provides no specifics from the video; it fails to state the confirmed food and drink order and omits all key details given in the correct answer."
+      }
+    },
+    {
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 240.0
+      },
+      "question": "Based on the customer's verbal order and the itemized receipt, what discrepancy exists regarding the McDouble items?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.28571428571428575,
+        "text_similarity": 0.8577077388763428,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately states that the receipt lists one McDouble combo and one standalone McDouble, which is fewer than the customer's verbal request (three McDoubles), matching the correct answer's core discrepancy."
+      }
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the speaker's commentary and visual evidence from Pohang, what is the most prominent characteristic distinguishing the town's economic activity?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1843971631205674,
+        "text_similarity": 0.5697348713874817,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies both steel production (POSCO) and a vibrant seafood industry as the town's key economic characteristics, but it includes unrelated visual details not present in the reference, so it is slightly penalized."
+      }
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering the price paid for their meal and the vlogger's commentary, what key aspect contributed most to their overall satisfaction regarding the value received at the restaurant?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18918918918918917,
+        "text_similarity": 0.3924283981323242,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is incorrect and introduces a detail (generous rice portion) not present in the correct answer, while omitting the key points: the low price vs ~$50 perceived value and the free, expensive sea urchin that drove satisfaction."
+      }
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the KTX Unlimited Pass rules mentioned and the subsequent action of the traveler on the train, what problem did they most likely encounter regarding seating?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.19512195121951217,
+        "text_similarity": 0.7345328330993652,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies that he exceeded the allowed daily reservations and thus couldn't reserve a seat, matching the core idea; however it adds irrelevant visual detail and slightly contradicts itself by implying he sat in a different section 'than the one he reserved,' whereas the correct answer indicates he had no reservation and had to hop on and find an available seat."
+      }
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "What accurate characteristic of the Gyeongju Eupseong gate and its surrounding fortress does the speaker convey, supported by both his narration and visual details?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16149068322981366,
+        "text_similarity": 0.5297287702560425,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction asserts an incorrect characteristic (that the Hancha directly means 'door that faces the sun') and omits the key accurate points\u2014restored status, open to the public, and its 1,000-year symbolic role\u2014so it fails to match the correct answer."
+      }
+    },
+    {
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 690.0,
+        "end": 821.0
+      },
+      "question": "Given the gate's name translates to 'facing the sun' and the wall is a reconstruction, what aspect of its original design is implicitly highlighted by the speaker during this nighttime visit?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18518518518518517,
+        "text_similarity": 0.659899890422821,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the main point that the gate was originally oriented eastward for symbolic/morning-light reasons, but it omits the nighttime viewing context and the comment about the wall being a reconstruction that ties the current structure to the original design intent."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Given the visible orientation of the overturned container and the operator's explanation regarding the two-wrecker setup, what is the primary purpose of using 'two wreckers... just for control?'",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2411347517730497,
+        "text_similarity": 0.7638728022575378,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly identifies that the two wreckers are used to provide control/stability during the recovery and contains no incorrect or extraneous details, matching the primary point of the ground truth."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "After initially uprighting the container, what is the primary reason for attaching it to both the overhead crane and the tow truck's underreach using chains, as demonstrated?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.11627906976744186,
+        "text_similarity": 0.503554105758667,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction cites load distribution and preventing damage, which is not the primary reason given; the correct answer emphasizes dual attachment to control both top and bottom for precise orientation, movement, and stable placement\u2014key elements the prediction omits and instead introduces an unfounded motive."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the 'barrel roll' procedure explained and demonstrated, what winch control strategy is critical for rotating the container to an upright position?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21052631578947367,
+        "text_similarity": 0.582901656627655,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the key strategy: lift initially with both winches to clear obstacles, then differentially adjust each winch to rotate the container upright, matching the reference's steps and intent."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "After observing the container's lean, why did the operators discuss 'counter-leaning' and advise against immediately removing all pressure?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.10526315789473684,
+        "text_similarity": 0.5035704970359802,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and concisely captures the operators' intent to check for a shift and adjust the container's alignment prior to final placement, matching the correct answer's meaning."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "What is the immediate purpose of the tow truck's crane holding the container in its elevated and slightly tilted position, following the discussion about its shifted load and the ground's grade?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.13157894736842105,
+        "text_similarity": 0.5790992379188538,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies the immediate action of removing the lifting straps safely, but it omits the key emphasis on stabilizing the container while it is unfastened (and the related allowance for placing landing gear) described in the correct answer."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "What evidence suggests the operation to right the shifted shipping container is a complex and challenging task?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17543859649122806,
+        "text_similarity": 0.5873509645462036,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures one valid cue (careful/instructional crane operation suggesting difficulty) but omits key evidence cited in the reference\u2014visible damage/severe tilt and the operator's statements that the container \"shifted a lot\" and shifted \"over time\"\u2014and includes an irrelevant detail about a man standing next to the container."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Based on the observed container tilt and the operator's explanation, what primary factor complicates stabilizing the container using only the trailer?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.15757575757575756,
+        "text_similarity": 0.8007952570915222,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the primary reason: heavy cargo shifted off the trailer's central/single pivot causes imbalance, making stabilization with only the trailer difficult, which is semantically equivalent to the reference."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Considering the container's heavy battery cargo and observed ground degradation, what primary safety concern impacts the complex lifting and chassis removal operation?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.07207207207207207,
+        "text_similarity": 0.14117637276649475,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is unrelated to the correct answer: it mentions limited maneuvering space rather than the critical, actively eroding ground under the load (battery weight/leak) that threatens lift stability, so it fails to capture the primary safety concern."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "What technique does the crane operator use to ensure the tilted container is correctly aligned for coupling with the chassis after initial lifting?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.23684210526315785,
+        "text_similarity": 0.6760833263397217,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction contradicts the correct answer by claiming the boom physically pushes the container, whereas the ground truth describes the operator instructing the truck driver to move the chassis while the crane supports the load; the predicted response omits the collaborative maneuver and adds ahallucinated action."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "question": "Considering the sequence of events involving trailer movements by the yard hostler and the crane's operation, what specific task is most likely being performed with the red shipping container?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20437956204379562,
+        "text_similarity": 0.7182649374008179,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies the primary task\u2014transferring the container between trailers or placing it in a yard slot\u2014matching the reference conclusion. It omits mention of the yard hostler and crane/heavy truck details and slightly implies manual handling, but does not contradict the main operation."
+      }
+    },
+    {
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1770.0,
+        "end": 1970.0
+      },
+      "question": "Based on the team's discussion and the container's final placement, what is the primary reason for ensuring space on both sides of the container?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1176470588235294,
+        "text_similarity": 0.6115134358406067,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer contradicts the correct answer: the team cited space for forklift access and unloading, whereas the prediction claims prevention of tipping during storage, which is unrelated and incorrect."
+      }
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What core aspect of customer behavior did the restaurant owners identify as crucial for repeat business in their San Diego establishment, contrasting with typical French dining experiences?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1414141414141414,
+        "text_similarity": 0.5371226668357849,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly identifies the importance of personable, friendly service versus typical French dining, but it omits the key point that customers primarily return because the food is good and arguably overstates the idea as 'deeply personal relationships' rather than a general 'friendly side.'"
+      }
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "According to the speakers, how do the demanding expectations of US clientele impact inventory management and online reviews for a French restaurant operating in the United States?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.11111111111111109,
+        "text_similarity": 0.765745997428894,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes higher US expectations and risk of negative reviews, but it omits the key detail that the restaurant uses a 'flux tendu' just-in-time system (leading to running out of items, especially pastries) and even suggests maintaining diverse inventories, which contradicts the stated just-in-time approach; it also omits that reviews may be on Yelp/Google and sometimes 'unjustified.'"
+      }
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "According to the owners, what two significant customer preferences distinguish American restaurant dining from French dining practices?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.15254237288135594,
+        "text_similarity": 0.5558915734291077,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction largely misstates the owners' points: it omits the key preference for breakfast items served all day and wrongly attributes dish customization to French diners instead of American customers, while adding unsupported claims about quicker service and early closing hours."
+      }
+    },
+    {
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 566.0
+      },
+      "question": "Based on the described differences in typical restaurant closing times, what specific challenge might a French restaurant like C\u00f4te d'Azur encounter in its current location?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.124031007751938,
+        "text_similarity": 0.5760730504989624,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer is incorrect and off-topic: it describes unrelated video details, falsely claims closing time isn't mentioned, and assumes the restaurant operates on French hours instead of identifying the real challenge\u2014adapting authentic late-night French dining to local earlier closing customs."
+      }
+    },
+    {
+      "video_id": "8xW-m_bmpv4",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 47.0
+      },
+      "question": "At various points in the video, the character shown speaking on the phone does not vocally match the voiceover provided. What does this technique primarily suggest about the nature of the conversation being depicted?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2982456140350877,
+        "text_similarity": 0.6655819416046143,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies that a single actor is mimicking both sides of the conversation, but it introduces an unexplained alternative (internal monologue) and omits mention of the dual-persona visual cues and the comedic/illustrative intent emphasized in the correct answer."
+      }
+    },
+    {
+      "video_id": "04khRfp_tY0",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 160.0
+      },
+      "question": "Given the man's physical confrontation with an officer and repeated refusal to leave the premises despite police directives, what is the most likely offense leading to his arrest?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.19642857142857145,
+        "text_similarity": 0.7864212393760681,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies an obstruction-type charge as the likely offense, but it uses the broader/imprecise term 'obstruction of justice' and unnecessarily adds 'public safety' (a vague/non-specific charge), failing to explicitly name obstruction of a police officer as the most direct and encompassing offense described in the reference."
+      }
+    },
+    {
+      "video_id": "eJlc_GV2yx8",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 73.0
+      },
+      "question": "Considering the father's prior suggestion, why does he immediately dismiss the woman's claim that 'Find My iPhone' is currently active on the device she alleges was stolen?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.339622641509434,
+        "text_similarity": 0.6055232286453247,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the father's reasoning\u2014that if Find My iPhone were active she would be using it to locate the phone rather than confronting his son\u2014preserving the full meaning of the correct answer."
+      }
+    },
+    {
+      "video_id": "vuIap3d2WHg",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 93.0
+      },
+      "question": "Considering the waiter's confrontational interactions and the manager's later questions, what is the most likely underlying reason for the waiter's unusual behavior?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16666666666666666,
+        "text_similarity": 0.5167520046234131,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly identifies busyness and staff overwhelm as a cause of the waiter's shortness, but it omits the manager's key clues about an unexpected influx of unfamiliar ('white') customers and the staffing issue (reference to 'Willis'), which are central to the correct explanation."
+      }
+    },
+    {
+      "video_id": "Q3Qzgs5WuvE",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 67.0
+      },
+      "question": "Despite the customer's continued aggressive behavior and cursing, what was the restaurant manager's final attempt to resolve the conflict before the assault, according to her statement?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17073170731707316,
+        "text_similarity": 0.5200127363204956,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer directly contradicts the reference: the manager said she would continue to help if the customer stopped yelling and cursing, not that she threatened to call the police; the prediction hallucinates and omits the correct condition."
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the masseuse's initial preparation, her reaction to the chosen massage type, and her subsequent excitement about the customer's nationality, what can be inferred about her preference for massage services?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.29850746268656714,
+        "text_similarity": 0.7509190440177917,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly notes her disappointment and later happiness about the customer's nationality, but it misidentifies the massage type (head and shoulder vs. oil/Thai), omits the shower/anticipation detail, and misses the key inference that she preferred the more lucrative oil massage (and likely higher tips) from a foreign customer."
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the narrator's internal commentary and their interaction, how does he interpret the massage therapist's increasing interest, and what is his final suggestive inquiry?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.29411764705882354,
+        "text_similarity": 0.5750247240066528,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the narrator's belief that she wants to work in Korea and his final question asking if she would be his 'secret wife', but it omits the key detail about her possibly visiting his hotel to obtain a visa and introduces an extra specific detail (interest in his legs) not present in the correct answer."
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on her verbal responses and body language during the customer's jokes, what does the masseuse's behavior reveal about her approach to customer interaction?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2888888888888889,
+        "text_similarity": 0.686236560344696,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer contradicts the reference: the correct answer describes the masseuse as playful yet professional (laughing and playing along while continuing the massage), whereas the prediction claims she is uncomfortable and redirects to strictly business, which is factually opposite and omits the praise of her massage quality."
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "According to the masseuse, what is the primary reason for her massage shop's low daily customer count, despite the customer's high praise for her skill?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.14102564102564102,
+        "text_similarity": 0.6742550730705261,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies the two main reasons (many competing massage shops and frequent holidays) but includes extraneous, likely hallucinated visual/details and an irrelevant 'option C' statement, so it is largely correct but not perfectly faithful."
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "What is the primary motive behind the massage therapist initially presenting herself as the customer's 'secret wife' after he praises her daughter?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.3181818181818182,
+        "text_similarity": 0.6151636838912964,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the primary motive\u2014a playful, lighthearted test of the customer's interest (and commitment) prior to giving her daughter's contact\u2014matching the correct answer's intent and detail."
+      }
+    },
+    {
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 903.0
+      },
+      "question": "Considering the mother's instructions and the initial exchange between the filmer and her daughter, what is the most immediate logical next step for the filmer and daughter?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2580645161290323,
+        "text_similarity": 0.5453765392303467,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer correctly identifies that the next step is to decide on an activity or destination for the date, matching the core implication of the correct answer; it omits explicit mention of the mother's instruction and the daughter's granted agency and adds an irrelevant visual detail."
+      }
+    },
+    {
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What key difference in the bartender's verbal refusal strategy in the third interaction (2:44-3:04) helped de-escalate the situation compared to the second (1:31-1:40)?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.18357487922705312,
+        "text_similarity": 0.7187123894691467,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the key difference\u2014the third refusal attributes denial to legal requirements (depersonalizing and less confrontational) versus the second's personal/aggressive refusal\u2014and preserves the original meaning without adding or omitting important facts."
+      }
+    },
+    {
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 150.0,
+        "end": 220.0
+      },
+      "question": "Considering Maddie's verbal explanations and on-screen procedural advice, what is the primary reason for reiterating 'the law' and offering safe transport to the intoxicated customer?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.25287356321839083,
+        "text_similarity": 0.6391131281852722,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction notes offering safe transport but omits the crucial detail that Maddie frames the refusal as 'the law' to avoid the customer feeling personally targeted and to deflect blame; thus it misses the primary rationale for reiterating the law."
+      }
+    },
+    {
+      "video_id": "8VDvZM7QEGo",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 49.0
+      },
+      "question": "Based on the call center's response and the sign, what critical capability does Genesys introduce to improve customer issue resolution?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1408450704225352,
+        "text_similarity": 0.6038025617599487,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the core point that Genesys provides real-time visibility into customer transactions, enabling agents to immediately resolve issues, which matches the correct answer's implication of proactive, instant insight."
+      }
+    }
+  ]
+}

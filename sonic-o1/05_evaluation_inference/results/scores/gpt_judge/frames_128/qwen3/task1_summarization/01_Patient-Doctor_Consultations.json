@@ -1,0 +1,285 @@
+{
+  "topic_id": 1,
+  "topic_name": "Patient-Doctor Consultations",
+  "num_evaluated": 16,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.24810079147226405,
+      "rouge_l_std": 0.0633950347455336,
+      "text_similarity_mean": 0.7757610492408276,
+      "text_similarity_std": 0.05723739721777735,
+      "llm_judge_score_mean": 7.375,
+      "llm_judge_score_std": 1.3169567191065923
+    },
+    "short": {
+      "rouge_l_mean": 0.23864162339783926,
+      "rouge_l_std": 0.062436060007890475,
+      "text_similarity_mean": 0.7442481704056263,
+      "text_similarity_std": 0.1109145964680579,
+      "llm_judge_score_mean": 6.625,
+      "llm_judge_score_std": 1.6909686573085854
+    },
+    "cider": {
+      "cider_detailed": 0.014172862553765384,
+      "cider_short": 0.01882904370168776
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.20824295010845986,
+        "text_similarity": 0.7623683214187622,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the overall structure, main components (presenting complaint, systems/past/drug/family/social history), and key elements like ICE and SOCRATES, plus communication tips, but it omits several specific mnemonics/details from the reference (DOPT, JAMTHREADS, HEADSSS, ADLs), the full WIPER steps and consent/summarization points, and misnames the presenter."
+      },
+      "short": {
+        "rouge_l": 0.2573099415204679,
+        "text_similarity": 0.659889817237854,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly lists the main history components and the emphasis on open-ended, patient-tailored questioning, but it omits many key details and specific frameworks/mnemonics (ICE, WIPER, SOCRATES, DOPT, JAMTHREADS, HEADSSS, etc.) and other important tips mentioned in the correct answer."
+      }
+    },
+    {
+      "video_id": "6PAwe6jndns",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.23708206686930092,
+        "text_similarity": 0.7274380922317505,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies the interactive 'duet' practice, doctor's-office scenario, and closing thank-you, but it misstates key facts\u2014notably portraying the creator as the receptionist rather than the patient named Lucas\u2014and omits specific dialogue details while adding minor inferred elements (e.g., 'I SAY/YOU SAY' overlays)."
+      },
+      "short": {
+        "rouge_l": 0.1834862385321101,
+        "text_similarity": 0.5557036399841309,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies an interactive English-practice video and the 'you say/I say' duet-style format and mentions appointment practice, but it omits key specifics from the reference (doctor's office setting, the creator as patient Lucas with a 10am appointment, and specific interactions like checking in, wait-time inquiries, and requesting water) and adds an unverified detail about a closing thank-you."
+      }
+    },
+    {
+      "video_id": "WR5dACe-spg",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.1712707182320442,
+        "text_similarity": 0.7390507459640503,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the video's central message\u2014that empathetic, team-based communication matters more than raw intellect\u2014and notes key elements like listening, educating, and trust; it omits some specific quoted examples from the reference and adds minor presentational details (hoodie, overlays, CTA) that don't affect correctness."
+      },
+      "short": {
+        "rouge_l": 0.2898550724637681,
+        "text_similarity": 0.8657135963439941,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the core points\u2014communication over intelligence, teamwork with the patient, and trust via listening and education. It omits an explicit mention of creating a calming presence/empathic understanding and adds a minor audience framing not present in the reference."
+      }
+    },
+    {
+      "video_id": "5KcshgQ45XU",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.2531017369727047,
+        "text_similarity": 0.7428544163703918,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the overall purpose and main topics of the video (Kim's role, background in nursing/pharmacy/theology, and thorough consultation content) but introduces factual errors (e.g., 'a decade at the clinic', misnaming the doctor), adds an unmentioned call-to-action, and omits key specifics such as her six years nursing, five years shadowing Dr. Jugenberg, the surgeon's review of every case, mention of natural body asymmetry, and recovery expectations."
+      },
+      "short": {
+        "rouge_l": 0.33986928104575165,
+        "text_similarity": 0.888603925704956,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures Kim's role, diverse background, and that consultations are comprehensive and make patients 'experts,' but it omits the key fact that she trained five years with Dr. Jugenberg to align with a surgeon's perspective and her RN title, and it introduces an unsupported '10 years of experience' detail."
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.3410138248847926,
+        "text_similarity": 0.8749042749404907,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately captures the main points\u2014definition and medical importance of communication, verbal vs non-verbal cues, questioning strategies, active listening elements, and patient-encounter checklist\u2014but it misspells the presenter's name and omits specific details like the 'golden minute' emphasis, examples of poor communication, and the explicit 85% non-verbal statistic."
+      },
+      "short": {
+        "rouge_l": 0.2138364779874214,
+        "text_similarity": 0.7350289821624756,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the main points (communication is learnable, verbal/non-verbal cues, active listening, open-ended questions, and practical steps like introduction/consent/privacy), but it omits specific details from the reference such as the \"golden minute,\" the 85% non-verbal statistic and its specific components, and the emphasis on improved patient satisfaction/reduced malpractice."
+      }
+    },
+    {
+      "video_id": "afTFvR7pRqg",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.22110552763819097,
+        "text_similarity": 0.7247354984283447,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the video's purpose, speakers, and core themes (growth, teamwork, pride, patient care) and even notes the Magnet recognition, but it introduces minor, nonessential details (exact length, visual setting, and a slightly different institution name) that are not in the reference."
+      },
+      "short": {
+        "rouge_l": 0.18803418803418806,
+        "text_similarity": 0.5309920907020569,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately captures the main themes\u2014pride, teamwork, patient care, lifelong learning, and Magnet recognition\u2014but is briefer and omits explicit mention of training new generations and the emphasis on professional growth aligning with personal values."
+      }
+    },
+    {
+      "video_id": "NiGj1YBR4Y4",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.2918149466192171,
+        "text_similarity": 0.7141735553741455,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main topics (hospitals, pharmacies, insurance), mentions key hospitals including Neak Tep, and notes low drug prices, but it omits the speaker's personal clinic anecdote and $20 dental cleanings, substitutes a different medication example, and adds specific insurer comparisons and other details not present in the reference."
+      },
+      "short": {
+        "rouge_l": 0.24,
+        "text_similarity": 0.6610087752342224,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main topics (healthcare options, medication cost comparisons, and insurance) but omits specific details from the reference such as top hospitals, positive local clinic experiences with example prices ($50 chest visit, $20 dental), and mention of widely available generics like Viagra and thyroid medication."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.15656565656565657,
+        "text_similarity": 0.705086350440979,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main theme of patient self-advocacy and the interview format, but it omits numerous specific strategies from the reference (e.g., repeat-back/mirroring, asking 'what else could it be?', concrete symptom examples, legal right to records, calming techniques) and introduces unverified details (consumer reviewer/volunteer director) not present in the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.13793103448275862,
+        "text_similarity": 0.7103759050369263,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the core theme of patient self-advocacy and key actions (prepare notes, bring support, seek second opinions, be proactive), but it omits many specific tactics and details from the reference (Sarah Powlison's personal story, communication techniques like mirroring/repeating back, documenting/recording, accessing records, avoiding jargon, eye contact, follow-up planning, and emphasizing concrete symptom impact)."
+      }
+    },
+    {
+      "video_id": "Lu_yCNjFZmU",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.19047619047619047,
+        "text_similarity": 0.7199749946594238,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the video's main content, goals, and topics (communication skills, cross-cultural and personality-specific approaches, and call to join PhysioPlus) and adds plausible visual details; it contains only a minor factual issue (name spelled 'Fourie' vs 'Furie')."
+      },
+      "short": {
+        "rouge_l": 0.26785714285714285,
+        "text_similarity": 0.7526280879974365,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main points\u2014presenter, platform, focus on patient-centered communication, and covered topics\u2014but omits key details about transforming patient contacts into great medical interviews and the expected benefits (greater satisfaction, adherence, and improved outcomes), and it slightly misnames the presenter."
+      }
+    },
+    {
+      "video_id": "KjUhUHfcT_w",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.30730478589420657,
+        "text_similarity": 0.767305850982666,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly reports the main treatment areas and most dosages (glabella 15, brow lift 5+5, lip flip 5, chin 10) and captures the consultation setting, but it mislabels the DAO as 'nasolabial folds' and adds unsupported details (dimpling/'double chin') while omitting the note that the practitioner begins injections, reducing factual accuracy."
+      },
+      "short": {
+        "rouge_l": 0.34848484848484845,
+        "text_similarity": 0.9324109554290771,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly captures the main procedures and dosages for the glabella, brows, and lip flip, but it omits the specific chin dosing (10 units, 2.5 per DAO side) and introduces an unfounded mention of nasolabial folds, reducing factual accuracy."
+      }
+    },
+    {
+      "video_id": "Xu67ngXWLXI",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.36363636363636365,
+        "text_similarity": 0.8097537755966187,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the main themes, speakers, and the technology-as-relationship-tool example, but it omits the ABIM Trust Initiative (2018) detail and the explicit point that scientific facts alone are insufficient to sustain trust."
+      },
+      "short": {
+        "rouge_l": 0.2916666666666667,
+        "text_similarity": 0.7776066660881042,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures core themes\u2014that trust in healthcare is in crisis and technology should support patient relationships\u2014but it omits the ABIM Trust Initiative detail and some nuance about medicine becoming more distant/institutional and using technology to make patients feel safe and cared for."
+      }
+    },
+    {
+      "video_id": "6vqzBk6z6U4",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.2864450127877238,
+        "text_similarity": 0.8133894205093384,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately captures the main themes\u2014learning beyond textbooks, interpersonal and practical skills, treating each patient as a unique learning opportunity, and the importance of self-care\u2014but omits some specific practical examples (e.g., IV insertion/IV pumps) and administrative details like ensuring medication affordability."
+      },
+      "short": {
+        "rouge_l": 0.23529411764705885,
+        "text_similarity": 0.8042564392089844,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the main themes\u2014learning clinical and interpersonal skills from patient encounters and team members, plus the importance of self-care and burnout\u2014but omits the explicit recommendation that physicians treat patients' problems as their own to drive continuous professional growth."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.23466666666666666,
+        "text_similarity": 0.8746757507324219,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer accurately captures the main themes\u2014appointment changes, tips for receptionist communication, photography, face-to-face prep, referrals, escalation routes, and patient empowerment\u2014but omits points about Legs Matter advocacy and nurse practitioners as assessors, doesn't explicitly stress informing clinicians about diabetes for referral pathways, and adds a minor unsupported detail (calling her a Lecturer)."
+      },
+      "short": {
+        "rouge_l": 0.19491525423728814,
+        "text_similarity": 0.7937086820602417,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main recommendations (shift to phone triage/face-to-face, clear communication, photos, and escalation), but omits several specific details from the reference\u2014diabetic/red-flag symptoms, face-to-face prep (focus on one problem, dress, notes/companion), self-care/leg-health tips, and advocacy/structured referral points."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.1806981519507187,
+        "text_similarity": 0.7525988817214966,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly conveys the hub-and-spokes model, national access disparities, and SOFA racial-bias concerns, but it omits many key specifics (evidence of consultation benefits, consolidation of services, initiatives like the fellowship and ICU Ethics Walk Rounds, legal protection details, outcome data such as the 26 cases, and LOS reductions) and slightly narrows the described scope of the Escalation of Care Protocol."
+      },
+      "short": {
+        "rouge_l": 0.17167381974248924,
+        "text_similarity": 0.7194898128509521,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures high-level themes (national access disparity, Yale's hub-and-spokes model, and the Escalation of Care Protocol) but omits most key details and nuances from the reference (purpose for clinician moral distress, education initiatives, ICU walk rounds, COVID triage history, legal protection and usage details, and equity monitoring)."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "detailed": {
+        "rouge_l": 0.19169329073482427,
+        "text_similarity": 0.8152980804443359,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the webinar's main themes (use of 'Near Me', Callum's virtual consultation experience, TeleSwallow, hybrid care and tech limitations) but omits key speakers and specifics (e.g., Stephanie Fraser and the neurological care plan, neuropsychologists' empathy concerns and 89% satisfaction, Maggie's points, and the guidance discussion), and includes minor inaccuracies (host name/committee)."
+      },
+      "short": {
+        "rouge_l": 0.15668202764976957,
+        "text_similarity": 0.6573852300643921,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the webinar's main themes (use of 'Near Me', positive clinician/patient experiences, remote swallowing case, and key considerations), but it omits many specific details from the reference (speaker names, platform functionality, MyAko training, neuropsychologists' data including the 89% satisfaction, conclusion actions, and participant/resource details) and slightly alters the location detail."
+      }
+    },
+    {
+      "video_id": "YJFNgX2pmAw",
+      "video_number": "016",
+      "detailed": {
+        "rouge_l": 0.3344947735191638,
+        "text_similarity": 0.8685687780380249,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the main points\u2014participants, use of NHS Near Me as a stepping stone to real patient consultations, authenticity versus scripted scenarios, teaching-capacity benefits, and transformational student feedback\u2014while adding harmless presentation details; it slightly omits the specific mention of Year 3 students and the explicit phrasing that students lead the consultations."
+      },
+      "short": {
+        "rouge_l": 0.3013698630136986,
+        "text_similarity": 0.8631681203842163,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the main points\u2014use of NHS Near Me at Aberdeen for authentic student video consultations, its role as a stepping stone to practice, increased teaching capacity, and students calling it 'transformational'\u2014but adds an unmentioned claim about ease of use for clinicians and students. This extra detail is a minor unsupported addition."
+      }
+    }
+  ]
+}

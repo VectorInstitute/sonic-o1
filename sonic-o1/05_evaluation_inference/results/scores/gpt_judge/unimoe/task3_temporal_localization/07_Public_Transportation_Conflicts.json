@@ -1,0 +1,3681 @@
+{
+  "topic_id": 7,
+  "topic_name": "Public Transportation Conflicts",
+  "num_evaluated": 104,
+  "aggregated_metrics": {
+    "mean_iou": 0.01595950015576815,
+    "std_iou": 0.08049579132882523,
+    "median_iou": 0.0,
+    "R@0.3": {
+      "recall": 0.028846153846153848,
+      "count": 3,
+      "total": 104
+    },
+    "R@0.5": {
+      "recall": 0.009615384615384616,
+      "count": 1,
+      "total": 104
+    },
+    "R@0.7": {
+      "recall": 0.0,
+      "count": 0,
+      "total": 104
+    },
+    "mae": {
+      "start_mean": 550.317590710423,
+      "end_mean": 550.3454439424772,
+      "average_mean": 550.3315173264501
+    },
+    "rationale": {
+      "rouge_l_mean": 0.23316199023680376,
+      "rouge_l_std": 0.06778979005322135,
+      "text_similarity_mean": 0.588800042294539,
+      "text_similarity_std": 0.13294041958593905,
+      "llm_judge_score_mean": 2.4134615384615383,
+      "llm_judge_score_std": 2.0550621220400584
+    },
+    "rationale_cider": 0.11499366697048187
+  },
+  "per_question_results": [
+    {
+      "question_id": "001",
+      "question": "After the man yells 'So relax!', when does the on-screen text appear, providing context about the incident?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 22.97,
+        "end": 40.0
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 34.0
+      },
+      "iou": 0.3169540229885058,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 17.77,
+        "end": 6.0,
+        "average": 11.885
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1875,
+        "text_similarity": 0.5691251754760742,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While the temporal relation 'after' is correct, the prediction misidentifies both events and their timings (E1 is wrong event/time and E2 timing and description conflict with the on-screen text start/fully-display times), omitting key factual details from the ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the officer confirms to the man that he is being detained, when does the man say 'Well, thank you for letting me know.'?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 86.9,
+        "end": 89.0
+      },
+      "pred_interval": {
+        "start": 37.6,
+        "end": 39.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 49.300000000000004,
+        "end": 49.8,
+        "average": 49.55
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.40625000000000006,
+        "text_similarity": 0.5541485548019409,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the target phrase and the 'after' relation, but the timestamps and the anchor event are largely incorrect (officer's confirmation is mislocated and E2 timing does not match the reference), so it fails to align with the ground truth."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man asks the officer for his name, when does the man state he doesn't answer questions?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 150.28,
+        "end": 150.29
+      },
+      "pred_interval": {
+        "start": 22.9375,
+        "end": 25.0625
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 127.3425,
+        "end": 125.22749999999999,
+        "average": 126.285
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.0923076923076923,
+        "text_similarity": 0.3683779239654541,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer preserves the event order (ask then immediate 'doesn't answer' reply) but the timestamps are drastically different from the reference (predicted ~23s/25s vs. reference ~150.25\u2013150.29s), so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the officer states they are conducting an investigation, when does he explain why they were called down to address the situation?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 202.094,
+        "end": 208.094
+      },
+      "pred_interval": {
+        "start": 43.375,
+        "end": 50.625
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 158.719,
+        "end": 157.469,
+        "average": 158.094
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1851851851851852,
+        "text_similarity": 0.33063358068466187,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps are completely different from the reference (predicted ~43\u201349s vs correct ~198.45\u2013208.094s), so the answer is factually incorrect despite matching the event duration."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man states he has been there for \"20 minutes\", when does he ask the officer to check his watch on camera?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 446.276,
+        "end": 454.908
+      },
+      "pred_interval": {
+        "start": 43.75473351557052,
+        "end": 54.69387333475022
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 402.5212664844295,
+        "end": 400.2141266652498,
+        "average": 401.36769657483967
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2469135802469136,
+        "text_similarity": 0.693151593208313,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly labels the relation as 'after' but misidentifies E1 (uses the officer's statement instead of the man's '20 minutes'), gives completely different timestamps for both events, and thus largely fails to match the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the officer finishes saying \"Just relax\", when does the man tell the officer to \"shut your mouth\"?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 441.629,
+        "end": 442.61
+      },
+      "pred_interval": {
+        "start": 56.4117790415795,
+        "end": 57.588235294117794
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 385.2172209584205,
+        "end": 385.0217647058822,
+        "average": 385.11949283215137
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3023255813953489,
+        "text_similarity": 0.6841129064559937,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies both utterances and the 'once_finished' relation with consistent (relative) timestamps matching the ground truth after an offset; it omits end times and uses relative rather than absolute times, hence a minor deduction."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the officer asks if the man understands he is under investigation, when does the man respond with a defiant statement?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 572.99,
+        "end": 576.815
+      },
+      "pred_interval": {
+        "start": 560.3420228909779,
+        "end": 566.3621809794842
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 12.647977109022122,
+        "end": 10.452819020515904,
+        "average": 11.550398064769013
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16129032258064516,
+        "text_similarity": 0.6380401253700256,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction identifies the same two events and correctly labels the relation as 'after', but the provided start times deviate substantially from the ground-truth timestamps and end times are omitted, reducing temporal accuracy and completeness."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the officer states the man is detained for the tenth time, when does the officer state the man is under investigation?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 702.427,
+        "end": 703.528
+      },
+      "pred_interval": {
+        "start": 58.611111111111114,
+        "end": 61.83333333333333
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 643.8158888888889,
+        "end": 641.6946666666666,
+        "average": 642.7552777777778
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28571428571428564,
+        "text_similarity": 0.7304151058197021,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer correctly identifies the 'after' relation between the two statements, but the timestamps are completely incorrect and do not match the reference anchor/target times, indicating factual inaccuracy and misalignment with the transcript."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man asks how much longer he needs to hang out for, when does an officer instruct him to hand something over?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 732.052,
+        "end": 733.633
+      },
+      "pred_interval": {
+        "start": 81.16666666666667,
+        "end": 84.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 650.8853333333334,
+        "end": 649.133,
+        "average": 650.0091666666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.26190476190476186,
+        "text_similarity": 0.6801068782806396,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer correctly identifies the temporal relation ('after') but the event timings and utterance/content descriptions do not match the reference (vastly different timestamps and incorrect event captions), so it is largely inaccurate."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the man asks what is going on, when does he start listing the things he needs to do, including rebooking his flight?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 770.356,
+        "end": 779.7
+      },
+      "pred_interval": {
+        "start": 86.38888888888889,
+        "end": 89.75
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 683.9671111111111,
+        "end": 689.95,
+        "average": 686.9585555555556
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.31325301204819284,
+        "text_similarity": 0.718643307685852,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly identifies the two events, their verbal content, and that the listing follows the initial complaint, but it gives different/partial timestamps (only start times, with inconsistent scaling) and omits precise end times and the full temporal boundaries stated in the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man asks if he is still detained, when does the officer confirm this and mention 'number 11'?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 878.9,
+        "end": 881.6
+      },
+      "pred_interval": {
+        "start": 45.62727332033519,
+        "end": 46.6999993218316
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 833.2727266796647,
+        "end": 834.9000006781685,
+        "average": 834.0863636789165
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2278481012658228,
+        "text_similarity": 0.6471236348152161,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction gives entirely different timestamps and misidentifies the anchor utterance (different line), supplies incorrect target timing, and the relation ('after') does not match the correct 'once_finished' alignment\u2014overall semantically and factually incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the officer first tells the man to relax, when does the man retort 'No, you relax'?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 913.0,
+        "end": 914.0
+      },
+      "pred_interval": {
+        "start": 74.93333332422306,
+        "end": 75.93333332422306
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 838.0666666757769,
+        "end": 838.0666666757769,
+        "average": 838.0666666757769
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23529411764705882,
+        "text_similarity": 0.6975038647651672,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures that the man responds after the officer says 'relax', but it gives entirely different absolute timestamps, omits the officer's end time, and uses a vague 'after' relation instead of the specified 'once_finished', so key timing details and relation are incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the officer asks the man if he's ever been shot at, when does the man confirm that he has?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 997.1,
+        "end": 997.3
+      },
+      "pred_interval": {
+        "start": 85.16666666666666,
+        "end": 87.16666666666666
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 911.9333333333334,
+        "end": 910.1333333333333,
+        "average": 911.0333333333333
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2432432432432432,
+        "text_similarity": 0.7314147353172302,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly identifies the two events and that the confirmation follows the question, but it gives incorrect/ inconsistent timestamps, omits the officer utterance end time, and uses a looser 'after' relation instead of the specified 'once_finished', so it is only partially correct."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the officer states 'You're being arrested', when does the man immediately ask 'For?'",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1084.34,
+        "end": 1086.35
+      },
+      "pred_interval": {
+        "start": 50.9,
+        "end": 54.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1033.4399999999998,
+        "end": 1031.9499999999998,
+        "average": 1032.6949999999997
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19444444444444445,
+        "text_similarity": 0.6134351491928101,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the reference on all key points: both event times and described utterances differ (officer's line and man's question are misidentified), and the temporal relation ('after' vs 'once_finished') is incorrect, indicating a complete mismatch."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man asks the officer for his name and badge number, when does the officer respond?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1339.3,
+        "end": 1341.1
+      },
+      "pred_interval": {
+        "start": 259.6,
+        "end": 262.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1079.6999999999998,
+        "end": 1078.6,
+        "average": 1079.1499999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1791044776119403,
+        "text_similarity": 0.45902544260025024,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely misidentifies both events and timestamps (claims both start at 259.6s and uses the same utterance), omitting the correct timings and event separation; only the temporal relation ('after') coincidentally matches."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the officer finishes explaining where to request his name and badge number, when does the man comment that this makes the officer look like a 'dumbass'?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1348.116,
+        "end": 1350.3
+      },
+      "pred_interval": {
+        "start": 298.8,
+        "end": 301.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1049.316,
+        "end": 1048.6999999999998,
+        "average": 1049.0079999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17500000000000002,
+        "text_similarity": 0.535811722278595,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps, quoted utterances, and relation do not match the reference events (completely different times and dialogue), so it fails to identify the correct event or relation."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the man says 'I didn't do nothing', when is the next time he makes a statement about hating the officers?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1279.3,
+        "end": 1281.3
+      },
+      "pred_interval": {
+        "start": 334.2,
+        "end": 336.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 945.0999999999999,
+        "end": 944.9,
+        "average": 945.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24444444444444444,
+        "text_similarity": 0.477397620677948,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction cites different timestamps and different utterances (no 'hate' statement) than the reference, so it fails to identify the next instance where the man says he hates the officers."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the text overlay \"GUILTY\" appears on screen, when does the text overlay stating \"30 days in jail, with 2 days credited for time served\" appear?",
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 1410.0,
+        "end": 1497.0
+      },
+      "gt_interval": {
+        "start": 1468.7,
+        "end": 1470.7
+      },
+      "pred_interval": {
+        "start": 71.77460687746068,
+        "end": 74.1554054054054
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1396.9253931225394,
+        "end": 1396.5445945945946,
+        "average": 1396.7349938585671
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2765957446808511,
+        "text_similarity": 0.7285177111625671,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction misidentifies both timestamps and the target overlay content (mentions a different sentence) and anchors on a person entering an SUV rather than the 'GUILTY' anchor; only the 'after' relation matches, so it fails to align with the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the officer asks the driver how much he had to drink, when does the driver first ask the officer to turn off his camera?",
+      "video_id": "qqxS7qmVq1k",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 43.0
+      },
+      "gt_interval": {
+        "start": 4.0,
+        "end": 10.9
+      },
+      "pred_interval": {
+        "start": 7.5,
+        "end": 11.0
+      },
+      "iou": 0.48571428571428577,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.5,
+        "end": 0.09999999999999964,
+        "average": 1.7999999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.26229508196721313,
+        "text_similarity": 0.5089273452758789,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly identifies the driver asking to turn off the camera and references the visible overlay, but it gives an incorrect first-occurrence timestamp (7.5s) versus the ground-truth start at 4.0s, so it's only partially correct."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the captain states he is a police captain, when does the sergeant respond by stating his rank and commitment to the law?",
+      "video_id": "qqxS7qmVq1k",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 43.0
+      },
+      "gt_interval": {
+        "start": 31.5,
+        "end": 36.5
+      },
+      "pred_interval": {
+        "start": 20.7,
+        "end": 28.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 10.8,
+        "end": 8.3,
+        "average": 9.55
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12345679012345678,
+        "text_similarity": 0.3881446421146393,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the ground truth timing and content\u2014placing the response at 20.7s with a different quoted overlay\u2014whereas the correct answer specifies events at 28.8\u201330.8s and 31.5\u201336.5s; it thus hallucinates details and is incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the officer states 'I cannot, sir' in response to turning off the camera, when does he explain the bodycam policy?",
+      "video_id": "qqxS7qmVq1k",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 43.0
+      },
+      "gt_interval": {
+        "start": 24.3,
+        "end": 28.6
+      },
+      "pred_interval": {
+        "start": 31.7,
+        "end": 39.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.399999999999999,
+        "end": 11.0,
+        "average": 9.2
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1509433962264151,
+        "text_similarity": 0.4269919991493225,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is incorrect: the officer's policy explanation occurs at 24.3\u201328.6s per the reference, not at 31.7s, and the claimed text overlay ('I am a bodycam policy') is unsupported/hallucinated."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the narrator states the date and reason for the officer's response, when does the man holding the dog first say they lost a dog?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 34.338,
+        "end": 35.14
+      },
+      "pred_interval": {
+        "start": 46.1,
+        "end": 50.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 11.762,
+        "end": 14.86,
+        "average": 13.311
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.40579710144927533,
+        "text_similarity": 0.6961914300918579,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the temporal relation ('after') right but fundamentally misidentifies and mis-timestamps the events (wrong start/end times and swapped/mislabeled anchor/target), so it fails to match the correct answer's key details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the man in the police vehicle asks if he is being arrested, when does the officer confirm he is being detained?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 100.947,
+        "end": 103.352
+      },
+      "pred_interval": {
+        "start": 243.2,
+        "end": 253.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 142.253,
+        "end": 150.448,
+        "average": 146.3505
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.7087198495864868,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer is largely incorrect: it gives completely different timestamps and labels the relation as 'after' rather than the immediate 'once_finished' reply; only the content of confirmation is similar."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the officer warns the woman in the green top about handcuffs, when does the bartender explain that she is losing her mind because her dog was missing?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 124.436,
+        "end": 126.117
+      },
+      "pred_interval": {
+        "start": 197.5,
+        "end": 206.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 73.064,
+        "end": 80.183,
+        "average": 76.6235
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24324324324324328,
+        "text_similarity": 0.7109154462814331,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the temporal relation ('after') right but misidentifies both events, speakers, and all timestamps (they differ substantially from the reference), so it fails to match the key factual details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the officer states that an altercation turned into violence, when does she request to stop the white truck?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 164.1,
+        "end": 167.0
+      },
+      "pred_interval": {
+        "start": 51.84444444444444,
+        "end": 53.211111111111116
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 112.25555555555556,
+        "end": 113.78888888888889,
+        "average": 113.02222222222223
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.32,
+        "text_similarity": 0.6999337673187256,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer largely misidentifies both events and provides timestamps ~100s earlier than the ground truth; although it labels the relation as 'after' correctly, the event labels and times are incorrect, so the prediction is almost wholly wrong."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "During the officer explaining her reasoning for stopping the vehicle, when does she mention that the female smells like alcohol?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 199.5,
+        "end": 201.6
+      },
+      "pred_interval": {
+        "start": 53.54444444444444,
+        "end": 59.67777777777778
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 145.95555555555558,
+        "end": 141.92222222222222,
+        "average": 143.9388888888889
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2105263157894737,
+        "text_similarity": 0.6782741546630859,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction misidentifies both event timestamps and the temporal relation: it places the explanation and alcohol mention at different times and labels the relation as 'after' rather than the correct 'during'. While it notes an alcohol smell, the timing and relation contradict the reference, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the officer tells the girl to \"Sit in the car\", when does the girl explicitly ask why she can't use the bathroom?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 304.0,
+        "end": 305.4
+      },
+      "pred_interval": {
+        "start": 154.24444444444444,
+        "end": 158.14444444444445
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 149.75555555555556,
+        "end": 147.25555555555553,
+        "average": 148.50555555555553
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3,
+        "text_similarity": 0.6563873291015625,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction misidentifies the anchor event (uses the girl's line at 154.2s instead of the officer's instruction at ~278.5s) and gives incorrect times for the bathroom question; only the temporal relation ('after') matches, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the officer explicitly instructs to 'Detain green shirt' and then 'Put him in cuffs', when does the officer begin physically putting handcuffs on the green-shirted man?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 447.0,
+        "end": 451.0
+      },
+      "pred_interval": {
+        "start": 507.1,
+        "end": 510.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 60.10000000000002,
+        "end": 59.19999999999999,
+        "average": 59.650000000000006
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17391304347826086,
+        "text_similarity": 0.6213117837905884,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer correctly states the relation ('after') but misidentifies E1 (officer arrival vs. the verbal commands) and gives completely incorrect timestamps for both E1 and E2 compared to the reference, so it fails on factual timing and event alignment."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the officer asks the man in the white shirt 'Who did he hit?' (referring to the green shirt man), when does the man in the white shirt respond?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 408.512,
+        "end": 409.0
+      },
+      "pred_interval": {
+        "start": 438.1,
+        "end": 443.1
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 29.588000000000022,
+        "end": 34.10000000000002,
+        "average": 31.844000000000023
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2077922077922078,
+        "text_similarity": 0.6872187256813049,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction mislocates both events (times differ substantially and it swaps the question/response), and labels the relation 'after' instead of the immediate 'once_finished'\u2014thus it fails to match the reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the officer states 'I can't be everywhere. I'm asking you to separate yourselves,' when does she ask if the shirtless man was involved?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 376.5,
+        "end": 377.0
+      },
+      "pred_interval": {
+        "start": 408.1,
+        "end": 414.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 31.600000000000023,
+        "end": 37.19999999999999,
+        "average": 34.400000000000006
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1951219512195122,
+        "text_similarity": 0.6127121448516846,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely misstates key temporal facts: E1's anchor time and content are wrong, E2's times are far off from the reference, and the relation 'after' is less precise than the correct 'once_finished'; only the fact that the officer asks about the shirtless man is preserved."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the officer finishes asking Anna her name, when does Anna state her name?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 536.5,
+        "end": 536.9
+      },
+      "pred_interval": {
+        "start": 567.2,
+        "end": 571.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 30.700000000000045,
+        "end": 34.30000000000007,
+        "average": 32.50000000000006
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2666666666666667,
+        "text_similarity": 0.723055899143219,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the two events and that Anna speaks after the officer, but the provided timestamps are substantially incorrect (different by ~31\u201336s), the anchor end time is omitted, and the target end time does not match the reference, so it is only partially correct."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the officer finishes asking Anna if she has an ID, when does Anna reply 'Yes'?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 607.0,
+        "end": 607.4
+      },
+      "pred_interval": {
+        "start": 601.6,
+        "end": 603.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 5.399999999999977,
+        "end": 4.199999999999932,
+        "average": 4.7999999999999545
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2777777777777778,
+        "text_similarity": 0.7159225940704346,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the temporal relation ('after') right but the event timestamps are substantially incorrect (off by several seconds for both anchor and reply, and the reply end time contradicts the ground truth), so it fails to accurately locate when Anna says 'Yes'."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the young woman finishes asking 'Where's my dad?', when does the officer respond that he has been detained?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 629.0,
+        "end": 633.0
+      },
+      "pred_interval": {
+        "start": 680.4,
+        "end": 681.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 51.39999999999998,
+        "end": 48.200000000000045,
+        "average": 49.80000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27848101265822783,
+        "text_similarity": 0.6883500814437866,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly identifies the two utterances and their temporal order ('after'), but the absolute timestamps and event durations are substantially incorrect (off by ~56s and wrong end times), so it does not align with the ground truth."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the woman asks about a time limit to pee, when does the officer respond with 'Not right now'?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 720.6,
+        "end": 721.679
+      },
+      "pred_interval": {
+        "start": 44.611111111111114,
+        "end": 53.27777777777778
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 675.9888888888889,
+        "end": 668.4012222222221,
+        "average": 672.1950555555555
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23529411764705882,
+        "text_similarity": 0.5913650989532471,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly identifies both events and that the officer's reply occurs after the woman's question, but the provided timestamps (42.3s \u2192 44.6s) do not match the reference times (713.41s \u2192 720.6\u2013721.679s), so the timing is inaccurate."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the officer asks the woman who she is riding with, when does the woman reply with her cousin's name?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 740.186,
+        "end": 741.646
+      },
+      "pred_interval": {
+        "start": 57.55555555555556,
+        "end": 58.55555555555556
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 682.6304444444445,
+        "end": 683.0904444444444,
+        "average": 682.8604444444445
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1818181818181818,
+        "text_similarity": 0.6751924753189087,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly identifies the exchange and the woman's name ('Andre') and preserves the order (officer then reply), but the provided timestamps do not match the ground-truth intervals and the temporal relation/detailing from the reference is missing, so it is only partially correct."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Millie asks 'Why does that matter?', when does the officer begin explaining the investigation?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 820.232,
+        "end": 823.897
+      },
+      "pred_interval": {
+        "start": 74.22222222222223,
+        "end": 77.55555555555556
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 746.0097777777778,
+        "end": 746.3414444444445,
+        "average": 746.1756111111112
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.26666666666666666,
+        "text_similarity": 0.6593412160873413,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states the officer speaks after Millie's question, but the provided timestamps are inaccurate and inconsistent with the reference (wrong relative offsets) and it omits the precise event end times and correct timing relation details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the officer asks the woman if she has her ID, when does she reply that she lost her purse?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 901.0,
+        "end": 902.8
+      },
+      "pred_interval": {
+        "start": 82.3,
+        "end": 83.7
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 818.7,
+        "end": 819.0999999999999,
+        "average": 818.9
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27692307692307694,
+        "text_similarity": 0.7486429214477539,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction preserves the relative order (reply occurs shortly after the question) but gives completely incorrect timestamps (\u224882\u201384s vs. 900.4s and 901.0\u2013902.8s in the ground truth) and omits the reply end time, so it is largely inaccurate."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man in the white shirt states that the gentleman and the bartender were arguing, when does he explain when the altercation became physical?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 935.91,
+        "end": 941.798
+      },
+      "pred_interval": {
+        "start": 97.0,
+        "end": 99.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 838.91,
+        "end": 841.898,
+        "average": 840.404
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2058823529411765,
+        "text_similarity": 0.4248710870742798,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction gives completely different timestamps (97.0s/99.9s) and an extra detail about the left eye, which contradicts the correct timing (E2: 935.910\u2013941.798s) and thus is incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the officer asks how the gentleman in the green shirt got involved, when does the man in the white shirt explain that he started swinging?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 1027.976,
+        "end": 1030.7
+      },
+      "pred_interval": {
+        "start": 118.9,
+        "end": 120.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 909.0760000000001,
+        "end": 910.4000000000001,
+        "average": 909.738
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20000000000000004,
+        "text_similarity": 0.6015322804450989,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is largely incorrect: it gives a wrong timestamp (118.9s vs ~1028s/1027.976\u20131030.7s) and adds an unfounded claim that the swinging occurred 'after the fight was already over,' contradicting the reference. Only the general notion that the man explained when he started swinging is preserved."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man in the green shirt (bar owner) is asked if he wants to press charges, when does he confirm he wants to press charges?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1120.5,
+        "end": 1122.894
+      },
+      "pred_interval": {
+        "start": 98.02100075203326,
+        "end": 109.48848611705148
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1022.4789992479667,
+        "end": 1013.4055138829485,
+        "average": 1017.9422565654577
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2608695652173913,
+        "text_similarity": 0.6672973036766052,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the officer asking and the man confirming, but the timestamps are massively shifted from the ground truth and the relation is labeled as generic 'after' rather than the correct immediate 'once_finished', so key temporal details are incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the male officer asks the man in the green shirt if he's all good, when does the man ask the officer to put the window down?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1183.5,
+        "end": 1185.019
+      },
+      "pred_interval": {
+        "start": 116.96007297046405,
+        "end": 120.69071447635756
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1066.5399270295359,
+        "end": 1064.3282855236425,
+        "average": 1065.4341062765893
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.32608695652173914,
+        "text_similarity": 0.7282910346984863,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies the two events and the 'after' relation, but the timestamps differ substantially from the reference and the prediction omits the end time for E1, so it is only partially aligned with the ground truth."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the female officer tells the woman she needs to take a seat, when does the woman state that she understands?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1218.978,
+        "end": 1219.96
+      },
+      "pred_interval": {
+        "start": 135.4443981572809,
+        "end": 140.39441983197526
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1083.5336018427192,
+        "end": 1079.5655801680248,
+        "average": 1081.549591005372
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.29885057471264365,
+        "text_similarity": 0.68097984790802,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies the anchor/target events and the 'after' relation, but the provided timestamps differ substantially from the reference and the anchor's end time is omitted, so it is only partially aligned with the ground truth."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the police officer finishes asking the man if he wants to press charges, when does the man reply \"That's it. No.\"",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1244.8,
+        "end": 1245.6
+      },
+      "pred_interval": {
+        "start": 11.5,
+        "end": 14.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1233.3,
+        "end": 1231.0,
+        "average": 1232.15
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2391304347826087,
+        "text_similarity": 0.5123490691184998,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states that the man replies 'That's it. No.' after the officer asks about pressing charges, but it omits the key factual elements of the exact timestamps (1243.8\u20131244.7 and 1244.8\u20131245.6) and adds an unnecessary detail about the man's clothing."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the officer finishes telling the women they are being trespassed, when does the woman in the white top ask \"Me?\"",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1300.5,
+        "end": 1300.8
+      },
+      "pred_interval": {
+        "start": 55.6,
+        "end": 57.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1244.9,
+        "end": 1243.8,
+        "average": 1244.35
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12121212121212122,
+        "text_similarity": 0.39415985345840454,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states the woman asks 'Me?' after the officer finishes, but it omits the required precise timing (E1 1297.4\u20131300.0s; E2 1300.5\u20131300.8s) and is therefore incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the officer finishes stating \"I'm not a kindergartner teacher and I don't work at a school,\" when does one of the women ask him \"How old are you? You're 30?\"",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1418.7,
+        "end": 1419.5
+      },
+      "pred_interval": {
+        "start": 124.3,
+        "end": 125.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1294.4,
+        "end": 1294.1,
+        "average": 1294.25
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23255813953488372,
+        "text_similarity": 0.4737022817134857,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states the question follows the officer's remark, but it omits the required precise timestamps and adds unverified contextual detail (asked to leave), so it is incomplete and partially hallucinated."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the officer tells the girls they are yelling and screaming, when does he state that he is not a kindergarten teacher?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1414.375,
+        "end": 1416.84
+      },
+      "pred_interval": {
+        "start": 14.347992571765898,
+        "end": 15.338807096680986
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1400.0270074282341,
+        "end": 1401.501192903319,
+        "average": 1400.7641001657767
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14457831325301204,
+        "text_similarity": 0.273141086101532,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is largely incorrect: timestamps differ dramatically from the ground truth, the order of utterances is reversed, and it introduces a hallucinated phrase ('final year medical student'); only the phrase 'I am not a kindergarten teacher' overlaps with the reference but event boundaries and timing do not match."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the first girl says the other officer was acting like a 'little dick', when is she physically put into the police car?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1518.0,
+        "end": 1529.0
+      },
+      "pred_interval": {
+        "start": 42.01547130095037,
+        "end": 55.26897064033317
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1475.9845286990496,
+        "end": 1473.7310293596668,
+        "average": 1474.8577790293582
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.13333333333333333,
+        "text_similarity": 0.33730560541152954,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is completely incorrect: it gives wrong timestamps (seconds vs. ~1423\u20131529s), misidentifies dialogue lines and their order, and fails to mark the officer-grab/entry event described in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man asks if his brother is in jail, when does the officer confirm that he is?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1718.9,
+        "end": 1721.1
+      },
+      "pred_interval": {
+        "start": 1590.625,
+        "end": 1592.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 128.2750000000001,
+        "end": 128.5999999999999,
+        "average": 128.4375
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.253968253968254,
+        "text_similarity": 0.38761764764785767,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction reverses the roles (saying the officer asks and the man confirms) which directly contradicts the correct answer that the man asks and the officer confirms, and it omits the timing details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the officer tells the man she doesn't like when people lie to her, when does the man claim he is not a liar and mention specific officers?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1628.82,
+        "end": 1632.1
+      },
+      "pred_interval": {
+        "start": 1594.375,
+        "end": 1603.375
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 34.444999999999936,
+        "end": 28.72499999999991,
+        "average": 31.584999999999923
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3055555555555555,
+        "text_similarity": 0.4876477122306824,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly captures the sequence (the man's reply follows the officer's statement) and content, but it omits the precise timestamps and timing details provided in the correct answer, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the officer asks another officer to get the man's name and date of birth, when does the man bring up a past incident involving 'Hager' and a stolen cop car?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1730.0,
+        "end": 1732.9
+      },
+      "pred_interval": {
+        "start": 1643.5,
+        "end": 1645.875
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 86.5,
+        "end": 87.02500000000009,
+        "average": 86.76250000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.271604938271605,
+        "text_similarity": 0.4319061040878296,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes the man brings up the incident after the officer's request, but it swaps the event labels, omits the precise timing given in the reference, and misattributes who does what, so it fails to match the detailed ground truth."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the officer finishes telling everyone to leave the property, when does she clarify that nobody is going to jail?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "gt_interval": {
+        "start": 1785.6,
+        "end": 1786.7
+      },
+      "pred_interval": {
+        "start": 20.1,
+        "end": 28.1
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1765.5,
+        "end": 1758.6000000000001,
+        "average": 1762.0500000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11594202898550723,
+        "text_similarity": 0.3297474682331085,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly places the clarification after the initial interaction but wrongly attributes its timing to the man mentioning his brother; the ground truth states the officer clarifies immediately after instructing everyone to leave, so the predicted temporal anchor is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the officer tells the man in the car he's going to jail, when does the man ask for the reason?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "gt_interval": {
+        "start": 1803.2,
+        "end": 1804.0
+      },
+      "pred_interval": {
+        "start": 31.1,
+        "end": 40.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1772.1000000000001,
+        "end": 1763.5,
+        "average": 1767.8000000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22222222222222224,
+        "text_similarity": 0.4457339644432068,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly conveys that the man asks why immediately after the officer tells him he'll be arrested, matching the reference's timing and relation; omitting timestamps does not change the meaning."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "While the officer is performing a pat-down search on the woman, when does she ask if the woman has anything sharp on her?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "gt_interval": {
+        "start": 1963.4,
+        "end": 1966.4
+      },
+      "pred_interval": {
+        "start": 1775.0,
+        "end": 1783.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 188.4000000000001,
+        "end": 182.5,
+        "average": 185.45000000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23333333333333334,
+        "text_similarity": 0.5451451539993286,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states the question is asked during a pat-down, but it then contradicts this by claiming it occurs 'after the initial pat-down' and before release, which conflicts with the ground truth that the question is asked while the physical search is ongoing; it also omits the timing detail provided in the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the officer tells the woman to stand up, when does he ask her if she has anything sharp on her?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "gt_interval": {
+        "start": 1971.2,
+        "end": 1971.8
+      },
+      "pred_interval": {
+        "start": 2.9583333333333335,
+        "end": 3.9583333333333335
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1968.2416666666668,
+        "end": 1967.8416666666667,
+        "average": 1968.0416666666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1818181818181818,
+        "text_similarity": 0.44414499402046204,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction misidentifies both events and timestamps, provides incorrect event content, and gives the wrong temporal relation ('start' versus the correct 'after'), so it fails to match the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the woman asks for shoes, when does an officer begin counting cash from her wallet?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "gt_interval": {
+        "start": 2010.0,
+        "end": 2017.0
+      },
+      "pred_interval": {
+        "start": 41.083333333333336,
+        "end": 48.083333333333336
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1968.9166666666667,
+        "end": 1968.9166666666667,
+        "average": 1968.9166666666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2191780821917808,
+        "text_similarity": 0.6255725026130676,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the ground truth on event identities, timestamps, and temporal relation (claims simultaneous start and quotes a line), whereas the reference states the officer begins counting several seconds after the woman asks for shoes; the answer is thus incorrect and contains hallucinated details."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the officer finishes asking the man why he is taking it out on them, when does the man respond 'Because you're a piece of shit'?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "gt_interval": {
+        "start": 2079.815,
+        "end": 2081.076
+      },
+      "pred_interval": {
+        "start": 354.625,
+        "end": 359.125
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1725.19,
+        "end": 1721.951,
+        "average": 1723.5705
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3157894736842105,
+        "text_similarity": 0.6654172539710999,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction misstates both event timestamps, gives a different officer utterance, and labels the relation as 'start' instead of 'once_finished'; while it includes the target phrase, it fails to match the ground-truth timing and relation."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the male says \"You did this wrong, bro. You did it wrong.\", when does the female ask \"Say that again?\"",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 2130.0,
+        "end": 2178.0
+      },
+      "gt_interval": {
+        "start": 2136.4,
+        "end": 2136.9
+      },
+      "pred_interval": {
+        "start": 34.92310344827587,
+        "end": 36.184946937852416
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2101.476896551724,
+        "end": 2100.7150530621475,
+        "average": 2101.095974806936
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23076923076923075,
+        "text_similarity": 0.6016875505447388,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the 'after' relation and reasonably locates the female's utterance, but it misidentifies and describes E1 (the male speaker) as the female exiting the patrol car and gives inconsistent timing/role information, omitting the key fact that E1 is the male saying the quoted line."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the female fully exits the patrol car, when does she start walking towards the door?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 2130.0,
+        "end": 2178.0
+      },
+      "gt_interval": {
+        "start": 2148.8,
+        "end": 2151.0
+      },
+      "pred_interval": {
+        "start": 23.061800877611052,
+        "end": 24.420870655410287
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2125.7381991223892,
+        "end": 2126.5791293445895,
+        "average": 2126.1586642334896
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22988505747126436,
+        "text_similarity": 0.6749643087387085,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies that walking begins after the exit and gives a start time for the walking event, but it omits the explicit E1 completion time, uses a looser 'after' relation instead of 'once_finished', and the timestamps/anchors do not directly match the reference's timing details."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the officer finishes asking the female about any head injuries, mental illness, diabetes, or seizures, when does the narrator begin to speak about Melissa being charged?",
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 2130.0,
+        "end": 2178.0
+      },
+      "gt_interval": {
+        "start": 2159.3,
+        "end": 2163.7
+      },
+      "pred_interval": {
+        "start": 37.10931216149328,
+        "end": 41.80700561685915
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2122.190687838507,
+        "end": 2121.892994383141,
+        "average": 2122.041841110824
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24175824175824176,
+        "text_similarity": 0.5684119462966919,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the temporal relation ('after') and locates the narrator speaking, but it misidentifies the anchor event (female exiting vs officer asking questions) and gives entirely different timestamps, omitting the key factual alignment from the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the camera person asks the man 'You don't wear a mask?', when does the man put on his mask?",
+      "video_id": "kawE4sHVzyY",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 86.327,
+        "end": 87.818
+      },
+      "pred_interval": {
+        "start": 93.8,
+        "end": 107.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.472999999999999,
+        "end": 19.482,
+        "average": 13.4775
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1643835616438356,
+        "text_similarity": 0.3751382827758789,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction describes a different utterance, timestamps, and an arm-shrug action, not the man putting on a mask after the 'You don't wear a mask?' prompt; it fails to match the correct event or timing."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man in the plaid shirt states that the person hit him and he recorded it, when does he ask what would happen if he reported them?",
+      "video_id": "kawE4sHVzyY",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 245.67
+      },
+      "gt_interval": {
+        "start": 162.0,
+        "end": 163.9
+      },
+      "pred_interval": {
+        "start": 58.333333333333336,
+        "end": 65.55555555555556
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 103.66666666666666,
+        "end": 98.34444444444445,
+        "average": 101.00555555555556
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20202020202020202,
+        "text_similarity": 0.661543607711792,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While the predicted answer correctly labels the temporal relation as 'after', it misidentifies the anchor utterance and gives completely incorrect timestamps (58\u201370s vs. the ground-truth 158\u2013164s), so it fails on key factual details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man in the plaid shirt declares that he is not there to practice, when does he state that he is doing it for the other person's own good?",
+      "video_id": "kawE4sHVzyY",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 245.67
+      },
+      "gt_interval": {
+        "start": 169.5,
+        "end": 171.0
+      },
+      "pred_interval": {
+        "start": 104.44444444444444,
+        "end": 111.8888888888889
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 65.05555555555556,
+        "end": 59.1111111111111,
+        "average": 62.08333333333333
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2075471698113208,
+        "text_similarity": 0.6226861476898193,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation ('after') and the quoted utterances, but the provided timestamps differ substantially from the ground truth (predicted ~104\u2013116s vs ground truth ~166.5\u2013171s), making the answer factually incorrect on key timing details."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the man in the plaid shirt tells the other person to sit down and wear a mask, when does he say he cannot breathe or wear a mask?",
+      "video_id": "kawE4sHVzyY",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 245.67
+      },
+      "gt_interval": {
+        "start": 202.4,
+        "end": 206.4
+      },
+      "pred_interval": {
+        "start": 143.11111111111111,
+        "end": 155.88888888888889
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 59.28888888888889,
+        "end": 50.51111111111112,
+        "average": 54.900000000000006
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19298245614035087,
+        "text_similarity": 0.6012279391288757,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer contains the correct utterance text but the timestamps are completely wrong and the relationship explanation is confused, so it fails to match the reference events and timing."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the cameraman finishes stating he will report the incident to the police, when does the rider first apologize by saying he earns a living?",
+      "video_id": "GDa0K7KdRxc",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 133.0
+      },
+      "gt_interval": {
+        "start": 22.358,
+        "end": 23.64
+      },
+      "pred_interval": {
+        "start": 13.1,
+        "end": 13.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 9.258000000000001,
+        "end": 9.84,
+        "average": 9.549
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1388888888888889,
+        "text_similarity": 0.7331832051277161,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes an apology occurs but gives a highly incorrect start time (13.1s vs 22.358s) and omits the immediate-response relation; thus it fails on key factual timing and alignment."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the cameraman says he is going to the police station again, when does the rider plead 'Sorry, uncle. I earn a living'?",
+      "video_id": "GDa0K7KdRxc",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 133.0
+      },
+      "gt_interval": {
+        "start": 35.854,
+        "end": 38.438
+      },
+      "pred_interval": {
+        "start": 70.2,
+        "end": 71.1
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 34.346000000000004,
+        "end": 32.66199999999999,
+        "average": 33.504
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.07692307692307693,
+        "text_similarity": 0.443045973777771,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (plea occurs after the cameraman's statement) but provides an incorrect timestamp (70.2s) instead of the actual 35.854\u201338.438s, a significant factual error."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the customer says \"He said he wants his money back\", when does the employee respond with \"What\"?",
+      "video_id": "0nbHeJCBE8I",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 74.0
+      },
+      "gt_interval": {
+        "start": 21.559,
+        "end": 21.8
+      },
+      "pred_interval": {
+        "start": 65.32539440336681,
+        "end": 72.11640130905877
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 43.76639440336682,
+        "end": 50.316401309058776,
+        "average": 47.0413978562128
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3529411764705882,
+        "text_similarity": 0.5253328680992126,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (the employee responds after the customer), but it omits the key required details\u2014specific timestamps and target duration (employee: 21.559s\u201321.8s)\u2014so it is incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the employee asks \"What?\", when does the customer repeat \"He said he wants his money back\"?",
+      "video_id": "0nbHeJCBE8I",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 74.0
+      },
+      "gt_interval": {
+        "start": 22.3,
+        "end": 23.742
+      },
+      "pred_interval": {
+        "start": 73.07518737208733,
+        "end": 76.55026400092322
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 50.77518737208733,
+        "end": 52.80826400092322,
+        "average": 51.79172568650527
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3508771929824562,
+        "text_similarity": 0.5366436839103699,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly states that the customer repeats the line after the employee asks 'What', preserving the core sequence, but it omits the precise timestamps, the 'once_finished' immediate-follow-up relation, and the target duration details present in the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the customer says \"Don't piss me the fuck off. Move.\", when does the employee at the counter ask about a refund for one box?",
+      "video_id": "0nbHeJCBE8I",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 74.0
+      },
+      "gt_interval": {
+        "start": 45.484,
+        "end": 52.61
+      },
+      "pred_interval": {
+        "start": 77.64705882352942,
+        "end": 81.37650602409639
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 32.16305882352942,
+        "end": 28.766506024096387,
+        "average": 30.464782423812903
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25396825396825395,
+        "text_similarity": 0.4555729925632477,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation ('after') but omits the essential temporal annotations and duration details (the specific timestamps and that the employee's full question spans 45.484s\u201352.61s), so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the white BMW swerves sharply towards the blue car, when does the commentator say, 'This one will get into accident, you know.'?",
+      "video_id": "N5ozLOqBFmU",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 212.0
+      },
+      "gt_interval": {
+        "start": 156.8,
+        "end": 159.6
+      },
+      "pred_interval": {
+        "start": 11.2,
+        "end": 13.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 145.60000000000002,
+        "end": 146.29999999999998,
+        "average": 145.95
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16666666666666666,
+        "text_similarity": 0.7171047329902649,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states the temporal relation ('after') but provides a hallucinated/incorrect swerve timestamp (11.2s vs 154.5\u2013155.0s) and omits the commentator's actual timing (156.8\u2013159.6s), so key factual details are wrong or missing."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the white BMW cuts across multiple lanes and causes other cars to brake, when does the commentator say, 'I've never seen like that.'?",
+      "video_id": "N5ozLOqBFmU",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 212.0
+      },
+      "gt_interval": {
+        "start": 172.0,
+        "end": 173.3
+      },
+      "pred_interval": {
+        "start": 22.2,
+        "end": 27.7
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 149.8,
+        "end": 145.60000000000002,
+        "average": 147.70000000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1647058823529412,
+        "text_similarity": 0.4116194248199463,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction identifies the swerve but gives the wrong temporal relation (says the comment is 'after' rather than occurring during/overlapping the erratic driving) and omits the commentator's timestamp while providing mismatched timing, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After an officer makes physical contact with the passenger to detain her, when does he place handcuffs on her?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 120.73,
+        "end": 122.04
+      },
+      "pred_interval": {
+        "start": 103.1764705882353,
+        "end": 125.58823529411765
+      },
+      "iou": 0.058451443569553924,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 17.5535294117647,
+        "end": 3.548235294117646,
+        "average": 10.550882352941173
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24719101123595505,
+        "text_similarity": 0.7666793465614319,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While the predicted answer correctly states the relation 'after', it gives substantially incorrect timestamps for both events, misidentifies the detaining officers (says two officers) and the timing of handcuffing, and thus omits/contradicts key factual details from the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the woman states her arm is about to pop out of place, when does the officer suggest checking with Southwest for rebooking?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 321.988,
+        "end": 327.916
+      },
+      "pred_interval": {
+        "start": 253.36925371954356,
+        "end": 255.1954356261023
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 68.61874628045643,
+        "end": 72.7205643738977,
+        "average": 70.66965532717707
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25531914893617014,
+        "text_similarity": 0.559327244758606,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted events, timestamps, and quoted dialogue do not match the reference (wrong times and content); it fails to identify the officer's suggestion to check with Southwest, so the answer is incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the officer says, \"I told you twice to leave,\" when does the woman on the floor say, \"Y'all are grabbing my arms\"?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 335.9,
+        "end": 337.5
+      },
+      "pred_interval": {
+        "start": 49.8,
+        "end": 51.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 286.09999999999997,
+        "end": 286.2,
+        "average": 286.15
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2531645569620253,
+        "text_similarity": 0.7264153957366943,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the target utterance and the temporal relation ('after'), but the provided absolute timestamps (anchor and target) are drastically different from the correct ones, so the temporal alignment is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the woman on the phone is passionately explaining the situation, when does she mention not having Uber on her phone?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 422.225,
+        "end": 430.581
+      },
+      "pred_interval": {
+        "start": 34.4,
+        "end": 37.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 387.82500000000005,
+        "end": 393.38100000000003,
+        "average": 390.60300000000007
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3125,
+        "text_similarity": 0.787510335445404,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely incorrect: the timestamps for both anchor and target differ dramatically from the ground truth, and the relationship 'after' contradicts the ground truth which indicates the target occurs within/during the anchor's speech."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Southwest staff confirms they will not be traveling, when does the police officer thank them?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 403.918,
+        "end": 411.548
+      },
+      "pred_interval": {
+        "start": 52.5,
+        "end": 53.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 351.418,
+        "end": 358.548,
+        "average": 354.983
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.6577028036117554,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is incorrect: it gives entirely different timestamps, swaps/mislabels the anchor and target events (placing the officer's thanks in the anchor and a question as the target), and contradicts the correct temporal ordering and content."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the woman being arrested asks an officer to loosen her restraints, when does an officer state that she will not be allowed to scream and throw things around?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 634.0,
+        "end": 639.0
+      },
+      "pred_interval": {
+        "start": 54.43333333333334,
+        "end": 57.06666666666666
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 579.5666666666666,
+        "end": 581.9333333333334,
+        "average": 580.75
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.273972602739726,
+        "text_similarity": 0.33393824100494385,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction identifies the correct utterance but gives a wholly incorrect timestamp (56.6s) instead of the correct 634.0\u2013639.0s interval and thus contradicts the temporal relation; key temporal details are missing/incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the woman at the airport asks the officer where her sister is going, when does the officer tell her the name of the jail?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 522.7,
+        "end": 526.5
+      },
+      "pred_interval": {
+        "start": 22.533333333333335,
+        "end": 25.333333333333336
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 500.1666666666667,
+        "end": 501.1666666666667,
+        "average": 500.6666666666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.3923763930797577,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamp (23.5s) is completely inconsistent with the correct timing (522.7\u2013526.5s); it fails to match the anchor/target interval or the immediate follow-up described."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the officer tells the arrested woman in the police SUV that she needs to be searched, when does she respond that she understands and has no problem with it?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 574.0,
+        "end": 576.0
+      },
+      "pred_interval": {
+        "start": 65.63333333333333,
+        "end": 67.93333333333332
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 508.3666666666667,
+        "end": 508.06666666666666,
+        "average": 508.2166666666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14705882352941174,
+        "text_similarity": 0.374796986579895,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted timestamp (67.6s) is far from the correct interval (woman's response at 574.0\u2013576.0s) and does not reflect the immediate response after the officer's statement, so it is essentially incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the woman asks who else flies to Midway, when does the airport staff member confirm Southwest as an option while laughing?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 897.629,
+        "end": 916.206
+      },
+      "pred_interval": {
+        "start": 11.8,
+        "end": 13.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 885.8290000000001,
+        "end": 902.9060000000001,
+        "average": 894.3675000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2318840579710145,
+        "text_similarity": 0.6331507563591003,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly references the staff confirming 'Southwest' while laughing but gives completely incorrect and inconsistent timestamps (11.8s/13.3s vs. the reference ~897.6s), failing to match the precise temporal evidence required."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the officer states the flight will be tomorrow morning, when does the woman in the police car exclaim that the situation is 'bogus'?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 947.308,
+        "end": 951.352
+      },
+      "pred_interval": {
+        "start": 944.7,
+        "end": 951.7
+      },
+      "iou": 0.5777142857142833,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 1,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.6079999999999472,
+        "end": 0.34800000000007003,
+        "average": 1.4780000000000086
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2531645569620253,
+        "text_similarity": 0.786395251750946,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gives incorrect/ambiguous timestamps (E1 start 944.7s vs reference 946.0\u2013946.8s) and mislabels the woman's exclamation as an end time (predicts E2 ends 951.7s instead of starting at ~947.308s), and it omits the relation; overall it fails to match key temporal details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the woman finishes stating that the officers are not letting her explain her part of the statement, when does she mention that they instantly arrested and manhandled her?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1074.56,
+        "end": 1079.5
+      },
+      "pred_interval": {
+        "start": 19.5,
+        "end": 33.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1055.06,
+        "end": 1046.0,
+        "average": 1050.53
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2162162162162162,
+        "text_similarity": 0.5112102031707764,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes that the arrest/manhandling remark comes after an earlier complaint, but it gives completely different timestamps and fails to identify the immediate 'once_finished' relationship (using the weaker 'after'), so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the woman asks, \"How many phone calls can I make?\", when does the officer respond by stating she has to speak to people in jail about rules?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1129.615,
+        "end": 1133.663
+      },
+      "pred_interval": {
+        "start": 125.5,
+        "end": 136.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1004.115,
+        "end": 997.163,
+        "average": 1000.639
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18918918918918917,
+        "text_similarity": 0.5866419076919556,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly captures the turn-taking and gist of the officer's reply (that it comes after and involves speaking to people in jail), but the timestamps are vastly incorrect compared to the reference, so it fails to match the required temporal evidence."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the woman says she understands she's going to jail and asks how to get out, when does she start crying loudly and pleading for help?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1195.507,
+        "end": 1223.556
+      },
+      "pred_interval": {
+        "start": 1062.0,
+        "end": 1100.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 133.50700000000006,
+        "end": 123.55600000000004,
+        "average": 128.53150000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18461538461538463,
+        "text_similarity": 0.6230418682098389,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the events (question about jail followed by loud crying) and their temporal relation ('after'), but the timestamps are substantially incorrect (off by ~90\u2013130s) and do not match the provided anchor/target intervals, so it fails on precise temporal alignment."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the woman first mentions having 'medical history,' when does she state that she is 'having a heart attack'?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1296.5,
+        "end": 1297.8
+      },
+      "pred_interval": {
+        "start": 20.4,
+        "end": 29.7
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1276.1,
+        "end": 1268.1,
+        "average": 1272.1
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2777777777777778,
+        "text_similarity": 0.6743892431259155,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the two events and their temporal relation ('after'), but the provided timestamps are substantially different from the reference (and the prediction omits the E2 end time), so it fails to match the accurate timing in the ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "When does the woman start making distressed crying sounds after she first pleads with 'Please, Jesus Christ, Lord'?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1366.0,
+        "end": 1368.8
+      },
+      "pred_interval": {
+        "start": 32.0,
+        "end": 38.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1334.0,
+        "end": 1330.5,
+        "average": 1332.25
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24324324324324323,
+        "text_similarity": 0.7321310639381409,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer mostly disagrees with the reference: timestamps are completely different and it incorrectly states the crying coincides with the plea, whereas the ground truth places crying much later; only the 'after' relation matches."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the woman asks 'Can you at least tell me how far it is?', when does she next mention feeling 'lightheaded'?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1390.0,
+        "end": 1397.5
+      },
+      "pred_interval": {
+        "start": 37.1,
+        "end": 43.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1352.9,
+        "end": 1354.2,
+        "average": 1353.5500000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22784810126582278,
+        "text_similarity": 0.7602859735488892,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the relation ('after') correct but the timestamps are entirely different from the ground truth, failing to locate the events accurately; key factual timing details are incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the woman says, 'I cannot believe this is happening right now,' when does she say, 'This is ridiculous'?",
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 1410.0,
+        "end": 1605.0
+      },
+      "gt_interval": {
+        "start": 1426.41,
+        "end": 1428.37
+      },
+      "pred_interval": {
+        "start": 51.9,
+        "end": 55.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1374.51,
+        "end": 1373.07,
+        "average": 1373.79
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27848101265822783,
+        "text_similarity": 0.8216869831085205,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the relative order and that the same woman speaks, but the reported timestamps for both anchor and target are completely different from the ground truth, so the answer is factually incorrect on the key timing details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the woman finishes asking \"Are you nuts, huh?\", when does she continue her rant with \"Because you're not even listening to your music, you're looking at me!\"?",
+      "video_id": "QPj9DLtfr0Y",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 66.0
+      },
+      "gt_interval": {
+        "start": 31.6,
+        "end": 34.3
+      },
+      "pred_interval": {
+        "start": 38.0,
+        "end": 46.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 6.399999999999999,
+        "end": 11.700000000000003,
+        "average": 9.05
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3551401869158879,
+        "text_similarity": 0.5603635907173157,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction incorrectly timestamps the continuation (38.0s vs correct 31.6\u201334.3s), adds unrelated dialogue and an incorrect end time, and thus contradicts key factual details despite identifying a subsequent line."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the rider says, \"Bro, I don't think you should be on the road,\" when does he advise the cyclist to use the first lane on the left?",
+      "video_id": "5SK-v2Plt-s",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 58.0
+      },
+      "gt_interval": {
+        "start": 30.306,
+        "end": 31.687
+      },
+      "pred_interval": {
+        "start": 47.77777777777778,
+        "end": 52.55555555555556
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 17.471777777777778,
+        "end": 20.868555555555556,
+        "average": 19.170166666666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.33766233766233766,
+        "text_similarity": 0.7634148597717285,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction identifies the two utterances but gives incorrect and inconsistent timestamps (both at 47.7s) and misstates the temporal relation; it fails to match the correct event times and sequencing."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the rider finishes saying, \"I caught everything on camera,\" when does the cyclist ask, \"You want me to try the car through ah?\"",
+      "video_id": "5SK-v2Plt-s",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 58.0
+      },
+      "gt_interval": {
+        "start": 37.716,
+        "end": 38.496
+      },
+      "pred_interval": {
+        "start": 48.888888888888886,
+        "end": 50.11111111111111
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 11.172888888888885,
+        "end": 11.615111111111105,
+        "average": 11.393999999999995
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.26666666666666666,
+        "text_similarity": 0.7144910097122192,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction identifies the same two utterances but gives substantially incorrect timestamps and an incorrect relation (simultaneous vs once_finished), and even lists an impossible zero-length end time for E2, so it largely disagrees with the reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the cyclist says, \"If he goes there, I go there,\" when does the rider warn him, \"You're gonna get yourself killed, no?\"",
+      "video_id": "5SK-v2Plt-s",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 58.0
+      },
+      "gt_interval": {
+        "start": 47.588,
+        "end": 48.768
+      },
+      "pred_interval": {
+        "start": 52.666666666666664,
+        "end": 53.05555555555556
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 5.078666666666663,
+        "end": 4.2875555555555565,
+        "average": 4.68311111111111
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2777777777777778,
+        "text_similarity": 0.7179570198059082,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer gets the temporal relation direction right (E2 after E1) but misstates both event timestamps by a large margin and thus fails to correctly localize the moments; key factual timing details from the correct answer are omitted/incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the woman first asks the man to give her money, when does the man hand over the money?",
+      "video_id": "Z0kkGJ9ajBU",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 69.0
+      },
+      "gt_interval": {
+        "start": 44.0,
+        "end": 47.0
+      },
+      "pred_interval": {
+        "start": 46.38468927212172,
+        "end": 52.11833891899694
+      },
+      "iou": 0.07579268789067824,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.3846892721217188,
+        "end": 5.11833891899694,
+        "average": 3.7515140955593296
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.10169491525423728,
+        "text_similarity": 0.29490184783935547,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer does not provide the requested timing information, misidentifies roles and invents details (e.g., $20), and thus contradicts and fails to match the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the exterior view of the bus stop with people is no longer shown, when does the camera display the interior of the bus aisle?",
+      "video_id": "EIJJ8-ve2M0",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 95.0
+      },
+      "gt_interval": {
+        "start": 36.0,
+        "end": 37.0
+      },
+      "pred_interval": {
+        "start": 32.55555555555556,
+        "end": 39.44444444444444
+      },
+      "iou": 0.1451612903225807,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.444444444444443,
+        "end": 2.444444444444443,
+        "average": 2.944444444444443
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2285714285714286,
+        "text_similarity": 0.5933629870414734,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction preserves the ordering (interior occurs after exterior) and roughly matches the exterior end time, but the interior timestamp is significantly later than the reference (39.44s vs 36.0\u201337.0s) and it omits the 'stable by 37.0s' detail, making it factually inaccurate."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "While the bus is visibly moving, when does the man in the wheelchair state, 'We are paying customers. We are your boss.'?",
+      "video_id": "EIJJ8-ve2M0",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 95.0
+      },
+      "gt_interval": {
+        "start": 81.0,
+        "end": 83.5
+      },
+      "pred_interval": {
+        "start": 73.66666666666667,
+        "end": 74.66666666666667
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.333333333333329,
+        "end": 8.833333333333329,
+        "average": 8.083333333333329
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.08333333333333333,
+        "text_similarity": 0.39696991443634033,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly identifies the speaker and quote and still places it during the bus-moving interval, but the timestamp (73.67s) is significantly off from the ground-truth speech span (81.0\u201383.5s), and it adds an unsupported visual detail."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the Delta staff member says the woman is by the bar, when does the officer (in first-person view) encounter the erratic woman?",
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 88.847,
+        "end": 89.748
+      },
+      "pred_interval": {
+        "start": 119.16666666666666,
+        "end": 131.75
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 30.319666666666663,
+        "end": 42.001999999999995,
+        "average": 36.16083333333333
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25316455696202533,
+        "text_similarity": 0.725875198841095,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly states the encounter occurs after the staff remark and describes the interaction, but it omits the precise timestamps (66.315s, 88.847s, 89.748s) and the specific audio confirmation; it also adds an unconfirmed detail about the woman walking over."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the officer asks if the woman is on any type of medication, when does she state that she is on marijuana and anxiety pills?",
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 167.51,
+        "end": 170.85
+      },
+      "pred_interval": {
+        "start": 15.955555555555557,
+        "end": 23.583333333333332
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 151.55444444444444,
+        "end": 147.26666666666665,
+        "average": 149.41055555555556
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4,
+        "text_similarity": 0.7215679883956909,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (the woman responds after the officer's question) but omits the specific timestamps and interval details given in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the officer states that the woman was behaving erratically, when does the woman interject saying she didn't sleep?",
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 234.209,
+        "end": 235.289
+      },
+      "pred_interval": {
+        "start": 131.45555555555555,
+        "end": 135.83333333333334
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 102.75344444444445,
+        "end": 99.45566666666664,
+        "average": 101.10455555555555
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18604651162790697,
+        "text_similarity": 0.6402194499969482,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly conveys the temporal relation (the woman speaks after the officer), but it omits the requested timing details and exact timestamps provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the officer says they need to get the woman out of the Delta Sky Club, when does she agree to leave?",
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 266.0,
+        "end": 267.641
+      },
+      "pred_interval": {
+        "start": 295.9555555555556,
+        "end": 298.4555555555556
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 29.955555555555577,
+        "end": 30.814555555555557,
+        "average": 30.385055555555567
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3076923076923077,
+        "text_similarity": 0.5476308465003967,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes she agrees to leave, but it wrongly implies immediate agreement when the officer speaks; the ground truth indicates her agreement occurs much later (after the officer's statement), so the key temporal relation and timing are omitted/incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the woman finishes asking about paying ten dollars, when does the officer reply that he doesn't have ten dollars?",
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 334.95,
+        "end": 335.85
+      },
+      "pred_interval": {
+        "start": 16.3,
+        "end": 17.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 318.65,
+        "end": 318.65000000000003,
+        "average": 318.65
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24489795918367346,
+        "text_similarity": 0.7097517848014832,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies both events and the temporal relation (officer replies after the woman finishes), but the provided timestamps do not match the ground-truth timings and the target/end times are inconsistent with the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the woman finishes shouting \"Get your hands off me!\", when does the officer (with glasses) explicitly state \"We are escorting you out\"?",
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 570.5,
+        "end": 571.5
+      },
+      "pred_interval": {
+        "start": 615.4131184195787,
+        "end": 692.518275795539
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 44.91311841957872,
+        "end": 121.01827579553901,
+        "average": 82.96569710755887
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14457831325301204,
+        "text_similarity": 0.5768836736679077,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely contradicts the ground truth: it gives different times, misidentifies the woman's and officer's utterances (saying 'Help!' and 'You're under arrest' instead of 'Get your hands off me!' and 'We are escorting you out'), and labels the relation as 'after' rather than the immediate 'once_finished'."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the officer finishes saying he has the woman's stuff, when does the woman ask for an anxiety pill?",
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 1050.0,
+        "end": 1093.0
+      },
+      "gt_interval": {
+        "start": 1060.769,
+        "end": 1063.934
+      },
+      "pred_interval": {
+        "start": 11.3,
+        "end": 17.7
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1049.469,
+        "end": 1046.234,
+        "average": 1047.8515
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24657534246575344,
+        "text_similarity": 0.5686190128326416,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction correctly identifies the woman's request for an anxiety pill but gives completely incorrect event timings and mislabels E1 (it omits the officer finishing at 1060.75s) and the relation (says 'after' rather than immediately 'once_finished'), so it largely fails to match the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the officer says they will get the cuffs off, when is the next time an officer tells the woman, 'Don't do this'?",
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 1050.0,
+        "end": 1093.0
+      },
+      "gt_interval": {
+        "start": 1076.516,
+        "end": 1077.818
+      },
+      "pred_interval": {
+        "start": 40.6,
+        "end": 43.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1035.9160000000002,
+        "end": 1034.418,
+        "average": 1035.167
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3146067415730337,
+        "text_similarity": 0.6165965795516968,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the ordering (E2 after E1) but misidentifies the utterances and provides incorrect timestamps and speaker content for both events, failing to capture the correct quoted lines and precise timing."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man presses the intercom button, when does the intercom voice ask for assistance?",
+      "video_id": "sKWUL4M5V1c",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 131.0
+      },
+      "gt_interval": {
+        "start": 40.478,
+        "end": 41.259
+      },
+      "pred_interval": {
+        "start": 49.875,
+        "end": 51.042
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 9.396999999999998,
+        "end": 9.783000000000001,
+        "average": 9.59
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.13333333333333333,
+        "text_similarity": 0.4182872772216797,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction fails to provide the requested timing and misidentifies the anchor event (woman's complaint instead of the man's button press), adding unrelated details and omitting the timestamps and relation given in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the woman finishes explaining her parking issue to the man, when does the man begin to explain the situation to the intercom?",
+      "video_id": "sKWUL4M5V1c",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 131.0
+      },
+      "gt_interval": {
+        "start": 41.424,
+        "end": 50.015
+      },
+      "pred_interval": {
+        "start": 63.875,
+        "end": 64.958
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 22.451,
+        "end": 14.942999999999998,
+        "average": 18.697
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1739130434782609,
+        "text_similarity": 0.5013225078582764,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (man speaks after the woman) and identifies the anchor and target events, but it omits the precise timestamps and the man's end time provided in the correct answer."
+      }
+    }
+  ]
+}

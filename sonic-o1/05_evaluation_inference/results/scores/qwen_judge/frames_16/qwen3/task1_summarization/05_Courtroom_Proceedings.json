@@ -1,0 +1,237 @@
+{
+  "topic_id": 5,
+  "topic_name": "Courtroom Proceedings",
+  "num_evaluated": 13,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.23680995103675662,
+      "rouge_l_std": 0.07050075741526705,
+      "text_similarity_mean": 0.712341118317384,
+      "text_similarity_std": 0.13177019152849412,
+      "llm_judge_score_mean": 7.0,
+      "llm_judge_score_std": 2.1122354181147664
+    },
+    "short": {
+      "rouge_l_mean": 0.2144855222030989,
+      "rouge_l_std": 0.09055728193569666,
+      "text_similarity_mean": 0.6546258788842422,
+      "text_similarity_std": 0.17818078788490033,
+      "llm_judge_score_mean": 5.6923076923076925,
+      "llm_judge_score_std": 1.8557443202792028
+    },
+    "cider": {
+      "cider_detailed": 0.06263322826436533,
+      "cider_short": 0.08030984219196156
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "TVriGlkPexA",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.3080168776371308,
+        "text_similarity": 0.8434928059577942,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the key elements of the video, including the disclaimer about censorship, the courtroom scene, Frank's arguments, and the promotional segment. It maintains semantic alignment with the correct answer and provides a detailed summary without adding hallucinated content."
+      },
+      "short": {
+        "rouge_l": 0.24719101123595505,
+        "text_similarity": 0.7592788934707642,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer captures the main points about Frank's sentencing, the dropped charge, and the censorship context. However, it omits key details from the correct answer, such as the courtroom setting, the mention of Attorney Iworski, the reference to FreeKeene's issues with YouTube, and the promotion of the Odyssey platform."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.2513661202185792,
+        "text_similarity": 0.4839932918548584,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer captures some general elements of the video content, such as the sentencing hearing, the defendant's criminal history, and the emotional impact statements. However, it introduces significant inaccuracies, such as changing the defendant's name, altering the nature of the crime, and misrepresenting the judge's conclusion. These errors affect factual correctness and semantic alignment with the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.12578616352201258,
+        "text_similarity": 0.5776691436767578,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer captures some key elements like the defendant's lack of remorse and the emotional impact statement, but it omits critical details about the criminal history, the judge's remarks, and the specific context of the victims' families' statements. It also introduces the detail about the victim being the defendant's son, which is not mentioned in the correct answer."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.1990740740740741,
+        "text_similarity": 0.7386829853057861,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer accurately summarizes the key elements of the video, including the verdict, charges, key figures involved, and the courtroom proceedings. It omits some specific details like the two-hour deliberation, the analyst's comments, and the scheduling of the sentencing, but these are not critical to the overall summary. The answer is factually correct and semantically aligned with the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.18666666666666668,
+        "text_similarity": 0.8200149536132812,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer captures the main outcome of the trial and some key figures, but it omits important details such as the jury deliberation time, specific charges beyond homicide, the judge's comments, the DA's remarks on the trial's nature, and the evidence presented by the analyst. It also incorrectly states that the defense did not call any witnesses, which is not mentioned in the correct answer."
+      }
+    },
+    {
+      "video_id": "xwZ2K8b_pBw",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.2757009345794392,
+        "text_similarity": 0.8495597839355469,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately summarizes the key events and themes of the video, including the AI avatar incident, the judge's reaction, and the broader discussion on AI in the legal system. It omits only minor details about the specific context of the man's prior appearances and the exact quote from the judge, but these are not critical to the overall summary."
+      },
+      "short": {
+        "rouge_l": 0.40217391304347827,
+        "text_similarity": 0.8723925352096558,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the main events and key points of the video, including the use of an AI avatar, the judge's reaction, the man's intent to promote his startup, and the broader implications of AI in the legal system. It omits only the specific detail about the man's age and the location (New York courtroom), which are not critical to the overall summary."
+      }
+    },
+    {
+      "video_id": "2B_e7fvwi90",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.1262135922330097,
+        "text_similarity": 0.5480393171310425,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer provides a detailed account of the content, including specific details about the abuse and the emotional impact. However, it introduces specific elements (e.g., the use of objects, the mention of Eric) not present in the correct answer, which may be hallucinated or speculative. The correct answer focuses on the introduction of the topic and the legal/personal implications, which the predicted answer does not fully address."
+      },
+      "short": {
+        "rouge_l": 0.1348314606741573,
+        "text_similarity": 0.5213027000427246,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer provides a detailed account of the testimony but lacks the key factual elements from the correct answer, such as the specific reference to Lyle Menendez and the broader Menendez Brothers case. It also includes specific details not mentioned in the correct answer, which may be hallucinated."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.19426048565121412,
+        "text_similarity": 0.7385414242744446,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer captures the general context and some key points about the legal arguments and the anti-SLAPP statute, but it omits specific details about the parties involved (Hothi v. Musk), the attorneys (Lifrak and Sperline), and the specific legal arguments regarding nexus to public interest and constitutional malice. It also misidentifies the court as the California Supreme Court and references a non-existent Justice Marquis and a case called Nadal versus Regents, which are not present in the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.2032520325203252,
+        "text_similarity": 0.6694024801254272,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer captures the general context and some key legal points of the correct answer, such as the anti-SLAPP statute and the skepticism of the justices. However, it omits specific details about the parties involved, the nature of the alleged harassment, and the references to specific cases like *Filmon* and *Wilson* that are critical to the correct answer."
+      }
+    },
+    {
+      "video_id": "9U_cQz-7sT4",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.36683417085427134,
+        "text_similarity": 0.8383505344390869,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately summarizes the key elements of the video, including the context, the participants, the hypothetical questions posed by Senator Cruz, and Judge Jackson's response. It captures the main points and maintains semantic alignment with the correct answer, though it omits minor details about the formal setting and the specific mention of C-SPAN."
+      },
+      "short": {
+        "rouge_l": 0.3448275862068966,
+        "text_similarity": 0.8426154851913452,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer accurately captures the main points of the correct answer, including the key elements of the exchange between Senator Cruz and Judge Jackson. It omits some specific details about the hypothetical scenarios and the reference to 'Harvard's discrimination,' but the core factual elements are preserved."
+      }
+    },
+    {
+      "video_id": "gTBoJ9W8zQ8",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.32592592592592595,
+        "text_similarity": 0.6957089900970459,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer accurately summarizes the key events and characters from the video, including the courtroom setting, the testimony of Detective Pettis, her actions at the hotel, her motivation, and the identification of Detective Lankford. It omits some specific details about the case of Jesus Menendez and the judge's exact warning, but these are minor omissions that do not affect the overall factual accuracy."
+      },
+      "short": {
+        "rouge_l": 0.28148148148148144,
+        "text_similarity": 0.6457273960113525,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer captures the main elements of the correct answer, such as the identification of Detective Lankford and the court recess. However, it omits key details like the cross-examination by Mickey Haller, the specific location (Bonaventure Hotel), and the motive (belief that the accused would walk free). It also introduces the unfounded detail about career advancement."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.15512465373961218,
+        "text_similarity": 0.6977484226226807,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer captures some key points about the content, such as the emphasis on meticulous pleading and the importance of understanding legal subjects. However, it omits critical details about the specific advice on settlements, professional management skills, physical fitness, and the mention of 'Pressee writing' and 'thorough pleadings.' It also misrepresents the speaker's name as 'Udaya Holla' instead of 'Uday Holla.'"
+      },
+      "short": {
+        "rouge_l": 0.12080536912751677,
+        "text_similarity": 0.7307093739509583,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer captures some key points about Holla's advice on clear pleading and preparation, but it omits most of the detailed strategies and specific elements from the correct answer, such as the emphasis on legal research, courtroom procedures, client interaction, and the importance of settlements. It also lacks the comprehensive bullet-point structure and specific legal references present in the correct answer."
+      }
+    },
+    {
+      "video_id": "DelhQUg8eH4",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.26404494382022475,
+        "text_similarity": 0.7416919469833374,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately summarizes the key events and legal charges from the video, maintaining semantic alignment with the correct answer. It includes the main facts about Carl Miller's actions, the involvement of the undercover officer, the 911 call, the witness Dr. Reyes, and the forensic evidence. The only minor omission is the specific date (September 8, 2020) and the name of the saloon (O'Hara's), which are not critical to the overall summary."
+      },
+      "short": {
+        "rouge_l": 0.17142857142857146,
+        "text_similarity": 0.41344767808914185,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer is entirely off-topic and does not address the video content at all. It mentions legal procedures and evidence types but fails to provide any specific details about the events in the video, such as the suspect's actions, the undercover officer, or the forensic findings."
+      }
+    },
+    {
+      "video_id": "k28NMpEkuRU",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.16091954022988506,
+        "text_similarity": 0.47232183814048767,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer completely misrepresents the video content, describing it as a practice script for an interpreter exam, while the correct answer details a real incident involving a theft and police confrontation. There is no semantic alignment between the two."
+      },
+      "short": {
+        "rouge_l": 0.0923076923076923,
+        "text_similarity": 0.221405029296875,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct answer, as it describes the video's purpose and structure rather than summarizing its content. It fails to mention the key events, characters, or details about the incident and arrest."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.18037135278514588,
+        "text_similarity": 0.7146731615066528,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer captures some general themes from the correct answer, such as Cheema's discussion on appeals and communication skills. However, it omits key details like the categorization of appeals, specific case examples (e.g., Ropar case, suicide case), and the structured advice on courtroom advocacy. It also introduces elements not present in the correct answer, such as the'relaxed mind' approach and the'sense of humor' point."
+      },
+      "short": {
+        "rouge_l": 0.17968750000000003,
+        "text_similarity": 0.6549354791641235,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer captures some key themes from the correct answer, such as the importance of preparation, understanding the judge's style, and communication skills. However, it omits critical details about the categorization of appeals, vicarious liability, specific case examples, and the emphasis on technical drafting and appellate advocacy challenges discussed in the correct answer."
+      }
+    },
+    {
+      "video_id": "L_dJ23CLzTo",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.2706766917293233,
+        "text_similarity": 0.8976300358772278,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the main points of the correct answer, including the interview structure, key challenges for witnesses, the role of witness familiarisation, and the training methodology. It adds a minor detail about virtual hearings, which is not in the correct answer, but this does not detract from the overall accuracy and completeness."
+      },
+      "short": {
+        "rouge_l": 0.29787234042553196,
+        "text_similarity": 0.7812352776527405,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer captures the main points about witness nervousness, cross-examination challenges, and the role of familiarisation training. However, it introduces the concept of virtual hearings, which is not mentioned in the correct answer, and omits the key point about the negative impact of unprepared witnesses on legal cases."
+      }
+    }
+  ]
+}

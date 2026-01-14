@@ -1,0 +1,221 @@
+{
+  "topic_id": 8,
+  "topic_name": "Workplace Team Meetings",
+  "num_evaluated": 12,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.1915365045445472,
+      "rouge_l_std": 0.03220377775581154,
+      "text_similarity_mean": 0.6887648701667786,
+      "text_similarity_std": 0.07845376791104182,
+      "llm_judge_score_mean": 4.75,
+      "llm_judge_score_std": 1.6393596310755
+    },
+    "short": {
+      "rouge_l_mean": 0.1565076670435034,
+      "rouge_l_std": 0.05245600716736276,
+      "text_similarity_mean": 0.6348784640431404,
+      "text_similarity_std": 0.11811993007339687,
+      "llm_judge_score_mean": 4.75,
+      "llm_judge_score_std": 1.920286436967152
+    },
+    "cider": {
+      "cider_detailed": 0.003731881030619297,
+      "cider_short": 0.0012091533066846878
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.18617021276595744,
+        "text_similarity": 0.7442737221717834,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level premise (Jonathan designing a workshop with Ross to address poor collaboration and the need to gather requirements) but omits many key specifics (the 4Cs structure, Sailboat, Lightning Demos, 10-for-10, Action Board, Commit details, timing, budget/fee, remote adaptations) and adds unsupported details (live-streaming and a newsletter CTA)."
+      },
+      "short": {
+        "rouge_l": 0.12389380530973451,
+        "text_similarity": 0.6466981172561646,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the client's main problem (collaboration issues) and high-level workshop aims, but it omits most of the specific workshop structure and activities (the 4Cs, Sailboat, Lightning Demos, 10-for-10, Action Board, participant limits, timings, remote/Miro adaptations, and fee) and even adds an unrelated call-to-action not present in the correct answer."
+      }
+    },
+    {
+      "video_id": "XSNTh2FcHKc",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.22710622710622713,
+        "text_similarity": 0.585982084274292,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main themes (a UN human-rights speech, urgent leadership, Ukraine civilian harm, displacement, and calls for international law and human-rights action) but omits key factual details from the reference (specific casualty figures and the listed threats like pandemic, polarization, environmental harm and disinformation) and misidentifies the forum (General Assembly vs the Council)."
+      },
+      "short": {
+        "rouge_l": 0.14414414414414417,
+        "text_similarity": 0.5136522650718689,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures high-level themes (human rights, multilateralism, prevention, international law) but omits key factual details from the correct answer\u2014such as Bachelet/Council context, the reported Ukraine casualty and displacement figures, and cited threats like the pandemic and polarization\u2014and even mislabels the forum."
+      }
+    },
+    {
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.22686567164179108,
+        "text_similarity": 0.7140860557556152,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures high-level themes (DevOps definition, Ops in scrums, culture of safety and collaboration) but misattributes speakers' perspectives, reverses their roles, omits key points (automation specifics, invite for user stories) and includes a hallucinated incident, reducing factual accuracy."
+      },
+      "short": {
+        "rouge_l": 0.12121212121212119,
+        "text_similarity": 0.7401247620582581,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the video's main themes (DevOps philosophy, integrating Ops, culture of safety, collaboration/evolution) but is very high-level and omits key specifics from the reference such as the hosts, discussion of daily stand-ups, concrete examples like automation (unit tests/pull requests), and the call for viewer input."
+      }
+    },
+    {
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.1878453038674033,
+        "text_similarity": 0.6585396528244019,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the high-level topics (documentation site, IPLD-prime/IPFS integration, and serialization/reflection debate) but contains factual errors (misnaming IPLD as IPD, claiming use of 'Clink' and DNS migration), omits key clarifications about dag get/IPFS command serialization, and fails to accurately report Daniel's new Go reflection-based solution and its completion status for structs."
+      },
+      "short": {
+        "rouge_l": 0.1308411214953271,
+        "text_similarity": 0.5378667712211609,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures high-level topics (unified docs, IPFS prime integration, serialization issues) but omits key details about CLI/HTTP `dag get` behavior and Daniel's Golang reflection-based IPLD node method, and adds vague/possibly extraneous items like \"Clink static site updates\" and \"Consensus on design choices.\""
+      }
+    },
+    {
+      "video_id": "l6VB8TEzjEU",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.14730878186968838,
+        "text_similarity": 0.664100706577301,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly describes the group assembling and testing a small wired robot with smartphone control and notes the red-shirted lead, but it omits key specifics from the reference (four young Zydus students, Maker Weekend/STEMpedia context), the successful robot movements and 'turning' test, the blue/yellow shirt roles, and the wheel detachment."
+      },
+      "short": {
+        "rouge_l": 0.10416666666666666,
+        "text_similarity": 0.5280441641807556,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures collaboration, component adjustments, testing, and smartphone control, but it omits the notable ending where a wheel detaches and does not mention successful movements/turning or specific scene details, making it incomplete."
+      }
+    },
+    {
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.12607449856733524,
+        "text_similarity": 0.6717971563339233,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only captures a vague theme of IPFS/IPLD updates and gateway discussion but misattributes speakers, invents many details (e.g., Moe, Binaural, Ken Labs) and omits or contradicts nearly all key specifics from the reference (IPLD-Prime v0.17.0 features, wasm codecs/ADLs, 'amend' performance, keyed-union prototype), so it is largely incorrect and hallucinatory."
+      },
+      "short": {
+        "rouge_l": 0.1081081081081081,
+        "text_similarity": 0.5292375683784485,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is largely inaccurate and hallucinatory\u2014it introduces incorrect entities and details (e.g., Binaural, Ken Labs) and omits key specifics from the correct summary (IPLD-Prime v0.17.0 features, Maeve's JS migration, Kubo rename, Midesh's performance work, etc.), only loosely echoing generic themes like gateway/CID work."
+      }
+    },
+    {
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.20631578947368417,
+        "text_similarity": 0.8733152747154236,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the presenters and high-level Crossplane usage (compositions, managing infra/IAM) but omits major details from the reference\u2014notably the Argo CD vs Crossplane comparison, hybrid strategy, best practices (multiple Crossplane instances, Argo CD integration tips), and specific AWS topics (EKS, IRSA, RDS, Transit Gateway)\u2014while introducing minor errors (names/typos) and extra/unsubstantiated emphasis on GCP and cost tools."
+      },
+      "short": {
+        "rouge_l": 0.15300546448087432,
+        "text_similarity": 0.7270082831382751,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures only high-level themes (Crossplane use, compositions/add-ons, challenges and future) but omits many key specifics from the reference\u2014speaker names, Argo CD integration and hybrid strategy, concrete AWS details (EKS, IRSA, RDS, Transit Gateway), best practices, and planned K3S cost-saving deployment\u2014and inaccurately emphasizes GCP. "
+      }
+    },
+    {
+      "video_id": "SYUQhswjLZI",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.1991869918699187,
+        "text_similarity": 0.7303115129470825,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main themes\u2014community-led media, a three-day Kenyan workshop with Sengwe/Ogiek participants, empowerment, localization, and the poignant poem about stolen artifacts\u2014but it omits many specific details from the reference (global 2022 examples, presenters' names, MEL support, course feedback/Bread for the World, and the final 'Change in Focus' framing) and slightly misnames 'Sengwe.'"
+      },
+      "short": {
+        "rouge_l": 0.21052631578947367,
+        "text_similarity": 0.7301043272018433,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures core themes (community-led media, self-determination, workshops, activism/peacebuilding, and stolen artifacts) but omits the noted praise of the training and the 'healthy aging' context. It also introduces specific details (tribe names and a man's personal statement) that are not present in the reference and may be hallucinated."
+      }
+    },
+    {
+      "video_id": "WKc8XsxwNQU",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.20108695652173914,
+        "text_similarity": 0.7141267657279968,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the video's promotional nature, vendor-neutral/technology-agnostic stance, networking value, practical takeaways, and international speaker presence, but it omits key specifics from the reference\u2014notably the claim of being Asia's premier/largest conference, the detailed topic list (DevOps, CI/CD, etc.), the prominent named speakers, and the explicit emphasis on \"knowledge you can use\" and practical \"recipes.\""
+      },
+      "short": {
+        "rouge_l": 0.2876712328767123,
+        "text_similarity": 0.8547840118408203,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures core points (vendor-neutral, practical knowledge, networking, notable speakers) but omits the claim that it is Asia's premier thought-leadership event and some topic breadth; it also adds unsupported specifics (named speakers, track/session details and registration CTA), which appear to be hallucinated."
+      }
+    },
+    {
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.21882951653944022,
+        "text_similarity": 0.6610982418060303,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the overall Sailboat Retrospective structure and main themes (winds, suns, anchors, reefs, community-building and feedback) but contains factual errors and additions (misnamed facilitator, claim of Google Slides/post-its), misattributes some specific elements (e.g., shifting writing prompts/time constraints) and omits several participant-specific details from the reference."
+      },
+      "short": {
+        "rouge_l": 0.1929824561403509,
+        "text_similarity": 0.7352004647254944,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level Sailboat Retrospective framework and notes Dr. Zamora, community building/co-learning, and future risks, but omits most specific elements (Wind/Sun details, Anchor issues like vulnerability/perfectionism, Reef concerns about self-regulation) and the note that the exercise was helpful."
+      }
+    },
+    {
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.15068493150684933,
+        "text_similarity": 0.5459209680557251,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures major high-level themes (career advice, foundational knowledge, versatility, and work\u2013life balance) but omits many specific technical points and examples from the reference (e.g., looking under the hood at data structures, memory, concurrency, network/db architecture, learning from open-source, the interview question example, and the recurring 'learn Kotlin' joke)."
+      },
+      "short": {
+        "rouge_l": 0.11023622047244094,
+        "text_similarity": 0.45204344391822815,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures several core themes\u2014foundational knowledge, adaptability/multi-language use, and work\u2013life balance\u2014but omits important specifics from the reference such as system internals, learning from open-source, continuous exploration of trends (e.g., generative AI), and concrete career-advancement advice like experimenting, applying to ambitious jobs, and interview preparation."
+      }
+    },
+    {
+      "video_id": "nnqJ4-nUsvc",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.2209631728045326,
+        "text_similarity": 0.7016263008117676,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the high-level arc (initial Craigslist competitor idea and pivot to a custom productivity tool) but misattributes the fragmented tools to Craigslist rather than the founders' startup, introduces a hallucinated visual montage, and conflates the productivity pivot with a continued fraud-focused solution, making several factual inaccuracies and omissions."
+      },
+      "short": {
+        "rouge_l": 0.19130434782608696,
+        "text_similarity": 0.6237773895263672,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the main ideas\u2014plans for a Craigslist competitor to combat fraud, frustration with existing tools, and development of an internal productivity solution\u2014but it omits the specific claim that Craigslist was the largest source of U.S. fraud and adds an unsupported detail about 'visualization of Craigslist scams.'"
+      }
+    }
+  ]
+}

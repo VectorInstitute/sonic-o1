@@ -1,0 +1,5291 @@
+{
+  "topic_id": 11,
+  "topic_name": "Mental Health Counseling",
+  "num_evaluated": 150,
+  "aggregated_metrics": {
+    "mean_iou": 0.03213428737628332,
+    "std_iou": 0.07201322317056541,
+    "median_iou": 0.0,
+    "R@0.3": {
+      "recall": 0.013333333333333334,
+      "count": 2,
+      "total": 150
+    },
+    "R@0.5": {
+      "recall": 0.0,
+      "count": 0,
+      "total": 150
+    },
+    "R@0.7": {
+      "recall": 0.0,
+      "count": 0,
+      "total": 150
+    },
+    "mae": {
+      "start_mean": 166.3986933333333,
+      "end_mean": 170.59026666666668,
+      "average_mean": 168.49447999999995
+    },
+    "rationale": {
+      "rouge_l_mean": 0.21013949741757687,
+      "rouge_l_std": 0.08556038958690249,
+      "text_similarity_mean": 0.4999148878827691,
+      "text_similarity_std": 0.20076013045984373,
+      "llm_judge_score_mean": 1.9333333333333333,
+      "llm_judge_score_std": 2.0997354330698164
+    },
+    "rationale_cider": 0.1969251774964378
+  },
+  "per_question_results": [
+    {
+      "question_id": "001",
+      "question": "After Dr. Alex Hein finishes introducing himself and his academic background, when does the website for the free guide appear on screen?",
+      "video_id": "YmJkGCFSPKA",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 51.8,
+        "end": 57.8
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 46.599999999999994,
+        "end": 21.199999999999996,
+        "average": 33.89999999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22857142857142856,
+        "text_similarity": 0.6744918823242188,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction misidentifies both events and timestamps (anchor and target times differ greatly from the reference and the predicted target is a spoken line, not the website appearance). While it correctly states the temporal relation as 'after', the substantive details are largely incorrect or missing."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the text 'CHINESE MEDICINE IS A NATURAL SCIENCE DATING BACK THOUSANDS OF YEARS' is displayed, when is an ancient painting of people in a natural setting shown?",
+      "video_id": "YmJkGCFSPKA",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 73.0,
+        "end": 76.8
+      },
+      "pred_interval": {
+        "start": 37.4,
+        "end": 108.0
+      },
+      "iou": 0.05382436260623226,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 35.6,
+        "end": 31.200000000000003,
+        "average": 33.400000000000006
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.42857142857142855,
+        "text_similarity": 0.7205551862716675,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction contradicts the reference timestamps by claiming the text remains until 108.0s and gives no correct start/end for the painting; while both imply the painting appears after the text, the predicted timing is factually incorrect and contains hallucinated timestamps."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker concludes his comparison of ancient naturalists to Einstein and Nikola Tesla, when is the shot of a person meditating in a field shown?",
+      "video_id": "YmJkGCFSPKA",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 117.9,
+        "end": 121.2
+      },
+      "pred_interval": {
+        "start": 110.6,
+        "end": 180.0
+      },
+      "iou": 0.04755043227665701,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.300000000000011,
+        "end": 58.8,
+        "average": 33.050000000000004
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.43589743589743596,
+        "text_similarity": 0.7140017747879028,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly places the shot after the speaker but gives significantly incorrect timing (starts at 110.6s vs 117.9s and ends at 180.0s vs 121.2s), adding hallucinatory duration and contradicting the correct brief appearance after other shots."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the text 'IT NEVER \"PREDICTS A SINGLE DEFINITE RESULT FOR AN OBSERVATION\"' is displayed, when does the text '\"INSTEAD, IT PREDICTS A NUMBER OF DIFFERENT POSSIBLE OUTCOMES AND TELLS US HOW LIKELY EACH OF THESE IS\"' appear?",
+      "video_id": "YmJkGCFSPKA",
+      "video_number": "001",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 189.43,
+        "end": 193.5
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 184.23000000000002,
+        "end": 156.9,
+        "average": 170.565
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1791044776119403,
+        "text_similarity": 0.6755580902099609,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is almost entirely incorrect\u2014timestamps, durations, and content descriptions do not match the reference; only the simple ordering ('after') aligns, while the rest is contradictory or hallucinated."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker describes the relationship between climate, seasons, and various human illnesses, when does he describe how these affect the yin and yang of the body?",
+      "video_id": "YmJkGCFSPKA",
+      "video_number": "001",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 353.8,
+        "end": 359.91
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "iou": 0.02909523809523816,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 23.80000000000001,
+        "end": 180.08999999999997,
+        "average": 101.945
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2758620689655172,
+        "text_similarity": 0.7169082164764404,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly indicates the target occurs after the anchor, but the timestamps are wildly inaccurate and the prediction fails to note that the target immediately follows the anchor; it also includes inconsistent/hallucinated timing details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the text 'MEDICAL THEORIES UNIQUE TO CHINESE MEDICINE: THE CHANNELS, FIVE PHASE THEORY, ACUPUNCTURE THEORY' disappears, when is the text 'ZANG XIANG, ORGAN MANIFESTATION THEORY & THE CHANNELS' displayed?",
+      "video_id": "YmJkGCFSPKA",
+      "video_number": "001",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 391.077,
+        "end": 393.357
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "iou": 0.010857142857142997,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 61.077,
+        "end": 146.64299999999997,
+        "average": 103.85999999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23684210526315788,
+        "text_similarity": 0.7184664011001587,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly states the target appears after the anchor but gives completely incorrect timestamps that contradict the reference (major timing mismatches and added unfounded details), so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "During the speaker's explanation of the Five Phases Theory and its associations, when does the video show a woman walking in a foggy forest?",
+      "video_id": "YmJkGCFSPKA",
+      "video_number": "001",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 451.4,
+        "end": 455.7
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "iou": 0.02047619047619053,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 121.39999999999998,
+        "end": 84.30000000000001,
+        "average": 102.85
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2368421052631579,
+        "text_similarity": 0.5484762191772461,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timings and relationship are completely different from the reference: the predicted anchor and target times do not match the ground truth, the visual is placed much later and labeled 'after' despite the ground-truth visual overlapping the explanation."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes mentioning the first link below the video, when does the webpage for the free guide first appear?",
+      "video_id": "YmJkGCFSPKA",
+      "video_number": "001",
+      "segment": {
+        "start": 510.0,
+        "end": 548.206
+      },
+      "gt_interval": {
+        "start": 521.25,
+        "end": 522.0
+      },
+      "pred_interval": {
+        "start": 37.4,
+        "end": 548.2
+      },
+      "iou": 0.0014682850430696945,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 483.85,
+        "end": 26.200000000000045,
+        "average": 255.02500000000003
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.09836065573770493,
+        "text_similarity": 0.2814868688583374,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely incorrect: it gives a time (37.4s) that contradicts the ground-truth times (521.25\u2013522.0s) and adds an unfounded claim that the page stays on screen, failing to match the anchor/target relation."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker finishes directing viewers to check out related videos, when does the 'Master the Day' book cover appear on screen?",
+      "video_id": "YmJkGCFSPKA",
+      "video_number": "001",
+      "segment": {
+        "start": 510.0,
+        "end": 548.206
+      },
+      "gt_interval": {
+        "start": 535.5,
+        "end": 536.0
+      },
+      "pred_interval": {
+        "start": 510.0,
+        "end": 548.2
+      },
+      "iou": 0.013089005235602079,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 25.5,
+        "end": 12.200000000000045,
+        "average": 18.850000000000023
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18750000000000003,
+        "text_similarity": 0.3038966953754425,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction gives a timestamp of 510.0s which directly contradicts the ground truth (fade-in at ~535.5\u2013536.0s) and omits the correct fade-in timing, so it is incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker finishes introducing himself as a final year medical student, when does he conclude the disclaimer?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 53.246,
+        "end": 56.03
+      },
+      "pred_interval": {
+        "start": 36.6,
+        "end": 45.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 16.646,
+        "end": 11.030000000000001,
+        "average": 13.838000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21951219512195125,
+        "text_similarity": 0.6944980621337891,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction incorrectly identifies the disclaimer conclusion and provides wrong timestamps (36.6\u201345.0s), contradicting the ground truth which places the disclaimer ending at 56.03s after the introduction ending at 31.158s."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker defines ICE as 'Ideas, Concerns, and Expectations', when does he explain how ICE is useful for honing in and finding the patient's problem?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 158.8,
+        "end": 164.5
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 153.60000000000002,
+        "end": 127.9,
+        "average": 140.75
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.5965986251831055,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is wholly incorrect: it cites entirely different timestamps and utterances (intro and 'I am a final year medical student') rather than the ICE definition and its immediately following explanation, and it gives the wrong temporal relation and target span."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker describes the WIPER acronym, when does he start explaining what 'washing your hands' entails?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 206.5,
+        "end": 253.5
+      },
+      "pred_interval": {
+        "start": 104.7,
+        "end": 198.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 101.8,
+        "end": 54.69999999999999,
+        "average": 78.25
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21176470588235294,
+        "text_similarity": 0.47338318824768066,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer completely misidentifies both event time spans and the temporal relation: its E1/E2 timings do not match the reference (no overlap) and it gives 'before' rather than the correct 'once_finished', so it fails to capture the correct information."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker provides the example phrase for confirming a patient's name and age, when does he explain the benefit of asking for age instead of date of birth?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 242.8,
+        "end": 249.5
+      },
+      "pred_interval": {
+        "start": 150.0,
+        "end": 210.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 92.80000000000001,
+        "end": 39.5,
+        "average": 66.15
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17500000000000004,
+        "text_similarity": 0.6783255338668823,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only matches the general topic (confirming name/age) but is largely incorrect: event timestamps and durations do not match the reference, the relation is wrong ('after' vs 'once_finished'), and it includes fabricated timing/details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker says, 'So Socrates stands for', when does he list all the components of the Socrates acronym?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 382.3,
+        "end": 387.9
+      },
+      "pred_interval": {
+        "start": 335.7,
+        "end": 498.6
+      },
+      "iou": 0.03437691835481869,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 46.60000000000002,
+        "end": 110.70000000000005,
+        "average": 78.65000000000003
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16438356164383564,
+        "text_similarity": 0.5869892835617065,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction gives entirely different timestamps and identifies an unrelated utterance ('I am a final year medical student') rather than the listing of the Socrates components; only the 'after' relation matches, so the answer is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker says 'If it's a gynecological history, we use the main outline of MOSC', when does he explain what MOSC stands for?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 396.6,
+        "end": 399.3
+      },
+      "pred_interval": {
+        "start": 493.5,
+        "end": 540.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 96.89999999999998,
+        "end": 140.7,
+        "average": 118.79999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17391304347826086,
+        "text_similarity": 0.6582797765731812,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the temporal relation as 'after' but wildly misreports both event timestamps and content (events are given at ~5\u201336s vs the reference ~393\u2013399s), so it fails to match the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker finishes saying 'which is DOPT', when does he list what DOPT stands for?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 411.7,
+        "end": 414.5
+      },
+      "pred_interval": {
+        "start": 513.5,
+        "end": 540.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 101.80000000000001,
+        "end": 125.5,
+        "average": 113.65
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16438356164383564,
+        "text_similarity": 0.578585147857666,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is completely mismatched: it gives unrelated times and different events for E1/E2 (speaker introduction and 'I am a final year medical student' vs the correct 'which is DOPT' and its immediate follow-up), and it fails to capture the immediate/adjacent relationship indicated in the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker mentions he will show a picture of possible questions, when does the 'REVIEW OF SYSTEMS' checklist image appear?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 539.876,
+        "end": 547.916
+      },
+      "pred_interval": {
+        "start": 513.8,
+        "end": 720.0
+      },
+      "iou": 0.038991270611057595,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 26.076000000000022,
+        "end": 172.08399999999995,
+        "average": 99.07999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.08695652173913043,
+        "text_similarity": 0.10482999682426453,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states the temporal relation ('after') but omits key factual details from the correct answer\u2014namely the anchor and target timestamps (start 539.876s, end 547.916s) and related anchor info\u2014so it is incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes explaining what the 'JAM THREADS' mnemonic stands for, when does he transition to talking about 'drug history'?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 645.482,
+        "end": 647.104
+      },
+      "pred_interval": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "iou": 0.007723809523809862,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 135.48199999999997,
+        "end": 72.89599999999996,
+        "average": 104.18899999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.0816326530612245,
+        "text_similarity": 0.28954678773880005,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly states that the transition to 'drug history' occurs once the JAM THREADS explanation finishes, matching the 'once_finished' relation, but it omits the precise timing information (the exact timestamps and the note that the next speech starts immediately after)."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker finishes explaining why it's important to ask if patients take their medications regularly, when does he introduce the 'Sketchy Medical' resource?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 691.48,
+        "end": 698.511
+      },
+      "pred_interval": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "iou": 0.03348095238095214,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 181.48000000000002,
+        "end": 21.489000000000033,
+        "average": 101.48450000000003
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.08163265306122448,
+        "text_similarity": 0.06686777621507645,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the correct temporal relation ('once_finished') and main event, but it omits the precise timestamps and label details provided in the ground truth, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker says 'everything that I need to know regarding medication is Sketchy Medical', when does he describe Sketchy Medical as a visual learning resource?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 699.0,
+        "end": 706.0
+      },
+      "pred_interval": {
+        "start": 693.5,
+        "end": 724.8
+      },
+      "iou": 0.22364217252396199,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 5.5,
+        "end": 18.799999999999955,
+        "average": 12.149999999999977
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.041666666666666664,
+        "text_similarity": -0.08327770978212357,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly paraphrases that the speaker then describes Sketchy Medical as a visual learning resource, but it omits the required temporal details (exact start/end times and the 'after' relation), so it is incomplete relative to the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker mentions that being specific about asthma, diabetes, and hypertension is sometimes needed for family history, when does he explain how family history puts the presenting complaint into perspective?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 749.6,
+        "end": 755.788
+      },
+      "pred_interval": {
+        "start": 725.0,
+        "end": 748.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 24.600000000000023,
+        "end": 7.288000000000011,
+        "average": 15.944000000000017
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.03846153846153846,
+        "text_similarity": -0.012766340747475624,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction refers to introducing 'social history' and listing questions, which is unrelated to the correct answer about when the family-history explanation occurs (specific timestamps and an 'after' relation); it fails to match the factual timing or content."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker finishes introducing the 'social history' section, when does he list common questions to ask in this section?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 792.101,
+        "end": 800.711
+      },
+      "pred_interval": {
+        "start": 749.0,
+        "end": 770.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 43.101,
+        "end": 30.211000000000013,
+        "average": 36.656000000000006
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.09836065573770493,
+        "text_similarity": -0.010399775579571724,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer describes content about family history rather than providing the timing/relation information (timestamps and 'once_finished') requested in the correct answer, so it fails to match. "
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker mentions that going through ICE is helpful, when does he say 'And that's it'?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 870.0,
+        "end": 922.205
+      },
+      "gt_interval": {
+        "start": 883.65,
+        "end": 884.091
+      },
+      "pred_interval": {
+        "start": 870.0,
+        "end": 912.6
+      },
+      "iou": 0.010352112676057058,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 13.649999999999977,
+        "end": 28.509000000000015,
+        "average": 21.079499999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3793103448275862,
+        "text_similarity": 0.5082542300224304,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states the sequence (ICE mention then 'And that's it') and the broad interval includes the true times, but it fails to provide the precise timestamps and is overly imprecise compared to the detailed ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes describing the video as an amalgamation of his medical school teachings and personal learnings, when does he state that it is not 'the golden rulebook'?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 870.0,
+        "end": 922.205
+      },
+      "gt_interval": {
+        "start": 891.072,
+        "end": 899.989
+      },
+      "pred_interval": {
+        "start": 870.0,
+        "end": 912.6
+      },
+      "iou": 0.20931924882629166,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 21.072000000000003,
+        "end": 12.61099999999999,
+        "average": 16.841499999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1081081081081081,
+        "text_similarity": 0.20193837583065033,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly indicates the 'not golden rulebook' remark follows the amalgamation description and its broad interval includes the true timestamps, but it is overly imprecise, omits the immediate-after relation and the specific event boundaries given in the reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker says 'Thanks so much for watching', when does he say 'Peace'?",
+      "video_id": "STnLNbRHYhw",
+      "video_number": "002",
+      "segment": {
+        "start": 870.0,
+        "end": 922.205
+      },
+      "gt_interval": {
+        "start": 910.148,
+        "end": 910.609
+      },
+      "pred_interval": {
+        "start": 870.0,
+        "end": 912.6
+      },
+      "iou": 0.010821596244131749,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 40.148000000000025,
+        "end": 1.9909999999999854,
+        "average": 21.069500000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.37037037037037035,
+        "text_similarity": 0.6368607878684998,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states that 'Peace' occurs after 'Thanks so much for watching', but it fails to provide the precise timestamps given in the reference and instead gives an overly broad and imprecise interval, omitting key factual details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Dr. Ben Kuo finishes explaining the first primary purpose of the video, how long does he speak about the second primary purpose?",
+      "video_id": "IyZwM1mfDyE",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 48.984,
+        "end": 102.881
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 43.784,
+        "end": 66.281,
+        "average": 55.0325
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3098591549295775,
+        "text_similarity": 0.7707058191299438,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps and duration are completely inconsistent with the ground truth (E2 in the reference spans ~48.984\u2013102.881s), so it fails to answer how long Dr. Kuo speaks about the second purpose and contradicts the correct intervals."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "During the presenter's explanation of effective communication strategies, when does he specifically mention avoiding lengthy or technical terminologies?",
+      "video_id": "IyZwM1mfDyE",
+      "video_number": "003",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 380.61,
+        "end": 389.302
+      },
+      "pred_interval": {
+        "start": 335.7,
+        "end": 368.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 44.910000000000025,
+        "end": 21.102000000000032,
+        "average": 33.00600000000003
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18604651162790697,
+        "text_similarity": 0.4342840909957886,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the general topic (avoiding lengthy/technical terminology) but the timestamps are substantially incorrect and do not align with the referenced anchor and target intervals where the presenter explicitly lists things to avoid."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the presenter concludes his commentary contrasting communication styles in the first and second video segments, when does the therapist in the second segment ask a direct, concise question to Amina?",
+      "video_id": "IyZwM1mfDyE",
+      "video_number": "003",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 474.161,
+        "end": 476.501
+      },
+      "pred_interval": {
+        "start": 535.0,
+        "end": 540.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 60.839,
+        "end": 63.499000000000024,
+        "average": 62.16900000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11235955056179775,
+        "text_similarity": 0.5133542418479919,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted timing is substantially incorrect: the correct therapist question occurs at ~474.161\u2013476.501s, whereas the prediction claims it happens at 535.0s, a clear factual mismatch and contradiction."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the therapist uses colloquialisms like 'bottled up' and 'down in the dumps', when does the client express confusion?",
+      "video_id": "IyZwM1mfDyE",
+      "video_number": "003",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 594.9,
+        "end": 598.5
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 589.6999999999999,
+        "end": 561.9,
+        "average": 575.8
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14035087719298248,
+        "text_similarity": 0.4080403447151184,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (confusion occurs after the therapist's colloquialisms) but adds a fabricated English utterance and omits that the client's confusion was expressed in Arabic and the need for audio, thus including incorrect and missing key details."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the presenter explains that family members should not be used as interpreters for therapy, when does the interpreter inform the therapist about her absence?",
+      "video_id": "IyZwM1mfDyE",
+      "video_number": "003",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 706.5,
+        "end": 719.6
+      },
+      "pred_interval": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "iou": 0.06238095238095249,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 196.5,
+        "end": 0.39999999999997726,
+        "average": 98.44999999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17073170731707316,
+        "text_similarity": 0.47389477491378784,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly indicates the interpreter informs the therapist after the presenter's explanation, but it omits the timing/timestamp details and introduces unverified quoted dialogue and reasons (hallucinated content) not present in the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the first woman states she won't be able to attend next week, when does she translate the client's suggestion to have a cousin interpret?",
+      "video_id": "IyZwM1mfDyE",
+      "video_number": "003",
+      "segment": {
+        "start": 690.0,
+        "end": 876.96
+      },
+      "gt_interval": {
+        "start": 712.09,
+        "end": 727.89
+      },
+      "pred_interval": {
+        "start": 734.5,
+        "end": 768.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 22.409999999999968,
+        "end": 41.00999999999999,
+        "average": 31.70999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.10714285714285714,
+        "text_similarity": 0.24335867166519165,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction describes different events and participants (Amina agreeing to reschedule and a man's suggestion) rather than the first woman's translation of the client's cousin-interpret suggestion and gives no timing\u2014it fails to match the correct answer's content or temporal details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the man suggests Amina might be uncomfortable and that rescheduling when Sarah is available is an option, when does the first woman translate Amina's agreement to reschedule?",
+      "video_id": "IyZwM1mfDyE",
+      "video_number": "003",
+      "segment": {
+        "start": 690.0,
+        "end": 876.96
+      },
+      "gt_interval": {
+        "start": 741.8,
+        "end": 748.7
+      },
+      "pred_interval": {
+        "start": 734.5,
+        "end": 768.9
+      },
+      "iou": 0.20058139534883998,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.2999999999999545,
+        "end": 20.199999999999932,
+        "average": 13.749999999999943
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16129032258064516,
+        "text_similarity": 0.5436956882476807,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly captures the temporal ordering (Amina's agreement occurs after the man's suggestion) but omits key details from the ground truth such as the specific timestamps, the first woman as the translator, and the explicit 'once_finished' relation."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker introduces the 'honeymoon phase,' when does she describe it as a feeling of high satisfaction?",
+      "video_id": "48A5bZcdQcg",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 58.083000000000006
+      },
+      "gt_interval": {
+        "start": 8.521,
+        "end": 13.346
+      },
+      "pred_interval": {
+        "start": 23.5,
+        "end": 36.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 14.979,
+        "end": 23.453999999999997,
+        "average": 19.216499999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2033898305084746,
+        "text_similarity": 0.31512579321861267,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the honeymoon phase as a feeling of high satisfaction, but it omits the anchor/target timing details and wrongly ties the description to being 'once finished with the initial stage of burnout,' which contradicts the correct answer that the description immediately follows the anchor phrase (with specific timestamps)."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "During the description of the onset of stress, when does the speaker mention feeling more fatigued?",
+      "video_id": "48A5bZcdQcg",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 58.083000000000006
+      },
+      "gt_interval": {
+        "start": 20.01,
+        "end": 22.696
+      },
+      "pred_interval": {
+        "start": 40.5,
+        "end": 57.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 20.49,
+        "end": 34.804,
+        "average": 27.647
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19444444444444445,
+        "text_similarity": 0.45061972737312317,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly identifies that the speaker mentions feeling more fatigued during the onset of stress, but it omits the precise quoted phrase and timestamps and introduces an unsupported detail about 'after discussing the initial stage of burnout.'"
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker mentions losing your temper during chronic stress, when is the next time she talks about an increase in caffeine intake?",
+      "video_id": "48A5bZcdQcg",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 58.083000000000006
+      },
+      "gt_interval": {
+        "start": 32.225,
+        "end": 33.805
+      },
+      "pred_interval": {
+        "start": 53.5,
+        "end": 61.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 21.275,
+        "end": 27.994999999999997,
+        "average": 24.634999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17721518987341772,
+        "text_similarity": 0.45777368545532227,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states that caffeine intake is mentioned after losing your temper, but it omits the precise timestamp/segment details and introduces an unsupported claim about the 'initial stage of burnout,' making it incomplete and partially hallucinatory."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the therapist instructs the client to play the memory and pause at the most stressful part, when does the client begin to describe that part of the memory?",
+      "video_id": "cwcTtR5rk1g",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 64.698,
+        "end": 73.763
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 35.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 59.49799999999999,
+        "end": 38.763000000000005,
+        "average": 49.1305
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.30000000000000004,
+        "text_similarity": 0.6993105411529541,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer uses completely different timestamps and event spans than the ground truth (E1/E2 times do not match the correct 61.354s and 64.698s\u201373.763s), only the temporal relation 'after' is correct, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the client describes the wreckage of their car accident, when does the therapist ask about the emotions they are noticing?",
+      "video_id": "cwcTtR5rk1g",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 79.191,
+        "end": 82.215
+      },
+      "pred_interval": {
+        "start": 35.0,
+        "end": 47.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 44.191,
+        "end": 34.815000000000005,
+        "average": 39.503
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24324324324324326,
+        "text_similarity": 0.6137799620628357,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer identifies completely different event spans and incorrect timestamps compared to the reference (both anchor and target are wrong), only matching the coarse 'after' relation; thus it largely fails to align with the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the client finishes describing physical sensations in their body, when does the therapist begin explaining to the viewer that memory reprocessing will start?",
+      "video_id": "cwcTtR5rk1g",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 158.931,
+        "end": 165.439
+      },
+      "pred_interval": {
+        "start": 85.5,
+        "end": 106.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 73.43100000000001,
+        "end": 59.23899999999999,
+        "average": 66.33500000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24324324324324323,
+        "text_similarity": 0.5389354228973389,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted timestamps and segment boundaries contradict the reference (completely different start/end times), and the relationship is mislabeled as 'after' rather than the immediate 'once_finished' transition; key factual elements are incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man says he feels it in his arms, when does he mention feeling it across his chest?",
+      "video_id": "cwcTtR5rk1g",
+      "video_number": "005",
+      "segment": {
+        "start": 150.0,
+        "end": 260.67
+      },
+      "gt_interval": {
+        "start": 157.72,
+        "end": 158.512
+      },
+      "pred_interval": {
+        "start": 156.9,
+        "end": 207.6
+      },
+      "iou": 0.015621301775147964,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 0.8199999999999932,
+        "end": 49.087999999999994,
+        "average": 24.953999999999994
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.0,
+        "text_similarity": 0.164106547832489,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated and incorrect: it cites a different text and timestamp (110.7s) instead of the specified utterances ('in my arms' and 'across my chest') and their timings/temporal relation."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the therapist asks the client to think about the worst part of the memory, when does the text 'Memory reprocessing begins' appear on screen?",
+      "video_id": "cwcTtR5rk1g",
+      "video_number": "005",
+      "segment": {
+        "start": 150.0,
+        "end": 260.67
+      },
+      "gt_interval": {
+        "start": 197.5,
+        "end": 198.5
+      },
+      "pred_interval": {
+        "start": 150.0,
+        "end": 260.7
+      },
+      "iou": 0.00903342366757001,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 47.5,
+        "end": 62.19999999999999,
+        "average": 54.849999999999994
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15384615384615383,
+        "text_similarity": 0.19389644265174866,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives an incorrect timestamp (110.7s vs. the correct ~197.5s) and fails to relate the text appearance to the therapist's question; it thus contradicts key factual elements of the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Niall finishes introducing Jerry, when does Niall explain that Jerry will be pausing the video periodically?",
+      "video_id": "wRP-F1hyEPA",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 54.009,
+        "end": 58.856
+      },
+      "pred_interval": {
+        "start": 28.5,
+        "end": 36.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 25.509,
+        "end": 21.956000000000003,
+        "average": 23.7325
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25396825396825395,
+        "text_similarity": 0.6002918481826782,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer largely contradicts the ground truth: the timestamps for E1/E2 are far off and the predicted E2 describes a different utterance ('I am a final year medical student') rather than Niall explaining pausing; only the temporal relation 'after' matches."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Niall states he has a particular area to focus on, when does he begin describing his long-standing experience of anxiety when making requests?",
+      "video_id": "wRP-F1hyEPA",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 138.644,
+        "end": 199.328
+      },
+      "pred_interval": {
+        "start": 48.5,
+        "end": 108.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 90.144,
+        "end": 91.328,
+        "average": 90.736
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.5461764335632324,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is fundamentally incorrect: it gives completely different timestamps and identifies different utterances (introduction and 'final year medical student') rather than Niall's anxiety description, and the temporal relation and event boundaries do not match the ground truth."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the client states that the anxiety of asking for things always happens, when does he explain the two main assumptions he has about the person he's asking?",
+      "video_id": "wRP-F1hyEPA",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 185.0,
+        "end": 196.0
+      },
+      "pred_interval": {
+        "start": 153.7,
+        "end": 208.9
+      },
+      "iou": 0.19927536231884052,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 31.30000000000001,
+        "end": 12.900000000000006,
+        "average": 22.10000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25925925925925924,
+        "text_similarity": 0.4835880696773529,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly indicates the explanation occurs after the stated anxiety (captures the relation), but it omits the required timing details (185.0\u2013196.0s) and other specific factual elements from the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the interviewer is explaining the AEDP approach and its importance, when does he mention making the implicit explicit?",
+      "video_id": "wRP-F1hyEPA",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 270.036,
+        "end": 274.603
+      },
+      "pred_interval": {
+        "start": 154.5,
+        "end": 210.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 115.536,
+        "end": 64.60300000000001,
+        "average": 90.0695
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19607843137254902,
+        "text_similarity": 0.4994502663612366,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer gives a timestamp (\u2248154.5s) that contradicts the correct timing (~270.0\u2013274.6s) and thus fails to identify when the phrase occurs; it does not match the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the therapist asks the client to notice the feeling in his body, when does the client describe where he feels it?",
+      "video_id": "wRP-F1hyEPA",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 470.8,
+        "end": 476.7
+      },
+      "pred_interval": {
+        "start": 335.7,
+        "end": 428.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 135.10000000000002,
+        "end": 47.80000000000001,
+        "average": 91.45000000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2857142857142857,
+        "text_similarity": 0.42916029691696167,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction incorrectly provides a single time window (335.7\u2013428.9s) that does not match the reference timestamps (462.0\u2013476.7s), omits the two-event boundaries and relation, and adds irrelevant visual detail."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the client expresses his initial reluctance to make the phone call, when does he admit to avoiding it for several days?",
+      "video_id": "wRP-F1hyEPA",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 448.9,
+        "end": 453.0
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 430.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 118.89999999999998,
+        "end": 23.0,
+        "average": 70.94999999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20512820512820512,
+        "text_similarity": 0.30145350098609924,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly restates that the client admits to avoiding the call after expressing reluctance, but it gives entirely incorrect timestamps (330.0\u2013430.0s vs. 438.5\u2013453.0s) and adds unrelated visual description, so it is mostly inaccurate."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the client finishes saying he was not aware of the gasp until mentioned, when does the video switch to a single screen view of the therapist?",
+      "video_id": "wRP-F1hyEPA",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 486.8,
+        "end": 489.3
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "iou": 0.011904761904761904,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 156.8,
+        "end": 50.69999999999999,
+        "average": 103.75
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20253164556962022,
+        "text_similarity": 0.4945640563964844,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states the relation (the switch happens once the client finishes) but fails to provide the precise timestamps (486.0s and 486.8\u2013489.3s), instead giving an overly broad interval (330\u2013540s) and adding an unsupported visual detail about the man, so it is incomplete and partly hallucinatory."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker mentions 'moment-to-moment tracking of his felt experience', when does he describe 'core affect'?",
+      "video_id": "wRP-F1hyEPA",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 631.9100000000001
+      },
+      "gt_interval": {
+        "start": 517.199,
+        "end": 522.389
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 511.99899999999997,
+        "end": 485.789,
+        "average": 498.894
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.35135135135135137,
+        "text_similarity": 0.7728201150894165,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gives entirely incorrect timestamps and quoted content for both anchor and target; only the temporal relation ('after') matches the correct answer, so it largely fails to align with the ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes describing 'anxiety or various forms of defense' that block affect, when does he state that processing core affect is important in AEDP?",
+      "video_id": "wRP-F1hyEPA",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 631.9100000000001
+      },
+      "gt_interval": {
+        "start": 534.85,
+        "end": 538.528
+      },
+      "pred_interval": {
+        "start": 35.0,
+        "end": 47.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 499.85,
+        "end": 491.12800000000004,
+        "average": 495.48900000000003
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25316455696202533,
+        "text_similarity": 0.6320687532424927,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly states the target follows the anchor, but the timestamps are entirely incorrect and the anchor timing is mischaracterized, so it fails on factual accuracy."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Niall Gagan finishes introducing himself, when does he introduce his collaborator Simon Dorsogne?",
+      "video_id": "3syqXb5pkdM",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 24.925,
+        "end": 29.629
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.14980891719745223,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 19.725,
+        "end": 6.971,
+        "average": 13.348
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12121212121212122,
+        "text_similarity": 0.5702114105224609,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer's event timestamps and described content do not match the reference (E1/E2 times and E2 content are incorrect); only the temporal relation ('after') coincides with the ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "When does the music play while the text 'Excerpts from the 60 minute session:' is displayed?",
+      "video_id": "3syqXb5pkdM",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 82.341,
+        "end": 84.171
+      },
+      "pred_interval": {
+        "start": 37.4,
+        "end": 108.4
+      },
+      "iou": 0.025774647887324118,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 44.940999999999995,
+        "end": 24.229,
+        "average": 34.584999999999994
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27450980392156865,
+        "text_similarity": 0.5718095302581787,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction contradicts the reference: the correct answer states music plays throughout the 82.341\u201384.171s text display, whereas the prediction says music starts only after the text/session ends, misrepresenting the timing."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the client says she gets 'incredibly anxious in groups', when does she next specify the context of her anxiety?",
+      "video_id": "3syqXb5pkdM",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 101.98,
+        "end": 103.444
+      },
+      "pred_interval": {
+        "start": 109.2,
+        "end": 178.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.219999999999999,
+        "end": 75.35600000000001,
+        "average": 41.288000000000004
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3283582089552239,
+        "text_similarity": 0.7192013263702393,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives a different timestamp (110.5s) and a different quoted utterance than the reference (101.98\u2013103.444s), so it contradicts the correct timing and content and appears to hallucinate details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the interviewer asks about when the anxiety starts to enter the woman's experience, when does the woman describe talking really fast?",
+      "video_id": "3syqXb5pkdM",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 189.5,
+        "end": 198.0
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 184.3,
+        "end": 161.4,
+        "average": 172.85000000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3055555555555555,
+        "text_similarity": 0.7121932506561279,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely incorrect\u2014timestamps, speakers, and content do not match the reference (it cites a different utterance and times instead of the woman's description of talking fast), and it hallucinates unrelated details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the interviewer describes the imagined calm and relaxed state, when does he ask the woman what she is noticing?",
+      "video_id": "3syqXb5pkdM",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 260.8,
+        "end": 269.0
+      },
+      "pred_interval": {
+        "start": 74.5,
+        "end": 180.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 186.3,
+        "end": 89.0,
+        "average": 137.65
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3384615384615384,
+        "text_similarity": 0.826899528503418,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer's timestamps and descriptions of the anchor and target are largely incorrect and contradict the ground truth, and it introduces unfounded dialogue; only the vague temporal relation ('after') aligns. Therefore it fails to match the correct answer's key factual elements."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the woman states that she felt enormous relief, when does the man ask her to elaborate on that feeling?",
+      "video_id": "3syqXb5pkdM",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 506.489
+      },
+      "gt_interval": {
+        "start": 333.84,
+        "end": 338.0
+      },
+      "pred_interval": {
+        "start": 335.7,
+        "end": 412.2
+      },
+      "iou": 0.029351710056151236,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1.8600000000000136,
+        "end": 74.19999999999999,
+        "average": 38.03
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.10344827586206896,
+        "text_similarity": 0.03501155972480774,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly indicates the man asks after she says she felt relief, but it omits the key timing details (timestamps and that the request occurs shortly after the anchor) and is therefore incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the woman states she felt confident about her presentation at the staff meeting, when does she mention not being nervous?",
+      "video_id": "3syqXb5pkdM",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 506.489
+      },
+      "gt_interval": {
+        "start": 375.11,
+        "end": 376.73
+      },
+      "pred_interval": {
+        "start": 418.5,
+        "end": 495.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 43.389999999999986,
+        "end": 118.26999999999998,
+        "average": 80.82999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.10714285714285712,
+        "text_similarity": -0.005416542291641235,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly conveys the relative timing (she says she wasn't nervous after finishing the presentation), but it omits the precise timestamps and temporal detail provided in the reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the woman mentions that some of Niall's questions were incredibly effective, when does she describe the experience as redemptive?",
+      "video_id": "3syqXb5pkdM",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 506.489
+      },
+      "gt_interval": {
+        "start": 476.83,
+        "end": 479.63
+      },
+      "pred_interval": {
+        "start": 500.7,
+        "end": 577.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 23.870000000000005,
+        "end": 97.57000000000005,
+        "average": 60.72000000000003
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12244897959183672,
+        "text_similarity": -0.004126971587538719,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only restates that the remark comes after the mention, but it fails to provide the required timing details (timestamps/anchor-target information) and thus is incomplete for the asked 'when'."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Dr. Imad Yassin says 'Listen to your patient, he's telling you the diagnosis', when does he say 'And especially mothers'?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 97.376,
+        "end": 98.597
+      },
+      "pred_interval": {
+        "start": 135.6,
+        "end": 147.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 38.22399999999999,
+        "end": 49.20300000000002,
+        "average": 43.7135
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24137931034482757,
+        "text_similarity": 0.6061901450157166,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction misidentifies both events and timestamps and gives unrelated dialogue content; only the temporal relation ('after') matches, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker transitions to the slide titled 'Clinical scenario 1', when does he mention the patient being readmitted to Tawam Hospital?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 174.7,
+        "end": 177.6
+      },
+      "pred_interval": {
+        "start": 153.9,
+        "end": 204.6
+      },
+      "iou": 0.05719921104536502,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 20.799999999999983,
+        "end": 27.0,
+        "average": 23.89999999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3636363636363636,
+        "text_similarity": 0.636080265045166,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer correctly identifies the slide transition timing (within the reference range) but gives a substantially incorrect time for the readmission (204.6s vs. the correct 174.7\u2013177.6s), so it fails on the key factual element."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the speaker describes the clinical scenario of the patient, when does he state that the Apgar score was normal?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 168.7,
+        "end": 170.4
+      },
+      "pred_interval": {
+        "start": 153.9,
+        "end": 204.6
+      },
+      "iou": 0.0335305719921108,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 14.799999999999983,
+        "end": 34.19999999999999,
+        "average": 24.499999999999986
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2692307692307692,
+        "text_similarity": 0.6903128027915955,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures that the speaker described the scenario and mentioned a normal Apgar but gives incorrect timestamps (153.9s and 204.6s) that do not match the correct interval 168.7\u2013170.4s and misrepresents the temporal relation to the scenario (155.5\u2013174.7s)."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker details the 'fourth attack' observed by the nurse, when does a video of a similar patient with clonic movements begin playing?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 207.5,
+        "end": 277.0
+      },
+      "pred_interval": {
+        "start": 153.9,
+        "end": 204.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 53.599999999999994,
+        "end": 72.4,
+        "average": 63.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3548387096774193,
+        "text_similarity": 0.4718923568725586,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted timestamps (153.9s and 204.6s) do not match the correct video interval (starts 207.5s, ends 277.0s) and thus contradict the correct timing and temporal relation; it includes incorrect/ambiguous timestamps."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "While the infant's video is displayed on the screen, when does the speaker state, 'there is paucity of movements'?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 527.5,
+        "end": 528.7
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 522.3,
+        "end": 492.1,
+        "average": 507.2
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11428571428571428,
+        "text_similarity": 0.4960853159427643,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is entirely incorrect: it misidentifies the target utterance (quotes a different sentence), gives wrong timings, and states the relationship as 'after' whereas the correct answer indicates the target occurs during the infant video."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes explaining the family history of seizures, when does he ask about further investigations?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 610.3,
+        "end": 611.7
+      },
+      "pred_interval": {
+        "start": 347.5,
+        "end": 510.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 262.79999999999995,
+        "end": 101.70000000000005,
+        "average": 182.25
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3050847457627119,
+        "text_similarity": 0.472883939743042,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is vague and omits the precise timestamps and relation given in the ground truth, and it introduces an unsupported detail ('once the slide is displayed'), so it does not accurately match the reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker says 'Genetics, very good', when is the 'Genetic tests' slide displayed?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 618.0,
+        "end": 628.0
+      },
+      "pred_interval": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "iou": 0.047619047619047616,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 108.0,
+        "end": 92.0,
+        "average": 100.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28571428571428575,
+        "text_similarity": 0.5878939628601074,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation that the 'Genetic tests' slide appears after the speaker's remark, but it omits the precise timestamps and the detail about the next-slide timing, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker describes the 10-month-old girl's symptoms including generalized tonic seizures and mild gastroenteritis, when does he state that Rotavirus was isolated?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 722.7,
+        "end": 725.0
+      },
+      "pred_interval": {
+        "start": 693.5,
+        "end": 724.8
+      },
+      "iou": 0.06666666666666378,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 29.200000000000045,
+        "end": 0.20000000000004547,
+        "average": 14.700000000000045
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.07017543859649122,
+        "text_similarity": -0.10978159308433533,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly conveys the temporal relation (Rotavirus isolated after the symptom description) but omits the required absolute timestamps and explicit anchor/target event labels provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the speaker describes the characteristics of benign infantile seizures with mild gastroenteritis, when does he specifically mention the association with mild GE?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 800.3,
+        "end": 802.0
+      },
+      "pred_interval": {
+        "start": 437.5,
+        "end": 463.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 362.79999999999995,
+        "end": 338.2,
+        "average": 350.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2580645161290323,
+        "text_similarity": 0.30842021107673645,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction restates that the speaker mentions the association but omits the crucial timing details (E1 at 781.7s and the specific E2 mention from 800.3s\u2013802.0s) required by the correct answer, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker mentions the patient has 'lacy reticular pigmentation', when does he mention 'oral leukoplakia'?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 891.8,
+        "end": 892.624
+      },
+      "pred_interval": {
+        "start": 875.0,
+        "end": 903.6
+      },
+      "iou": 0.028811188811191206,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 16.799999999999955,
+        "end": 10.975999999999999,
+        "average": 13.887999999999977
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.09230769230769231,
+        "text_similarity": 0.2699708640575409,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer does not address the timing of 'oral leukoplakia' and instead gives unrelated statements about bone marrow findings and pancytopenia, contradicting and omitting the correct temporal information."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes stating that the bone marrow aspirate showed 'aplastic anemia', when does he say the patient 'developed pancytopenia'?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 906.267,
+        "end": 908.65
+      },
+      "pred_interval": {
+        "start": 875.0,
+        "end": 903.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 31.267000000000053,
+        "end": 5.0499999999999545,
+        "average": 18.158500000000004
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.33333333333333337,
+        "text_similarity": 0.7507869005203247,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly states the event occurs after 'aplastic anemia' but provides no timestamps or the precise time window (906.267s\u2013908.65s) noted in the reference, making it incomplete and uninformative."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker identifies the case as 'Dyskeratosis congenita', when does he list 'cutaneous reticulated hyperpigmentation' as a characteristic?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 999.848,
+        "end": 1001.547
+      },
+      "pred_interval": {
+        "start": 875.0,
+        "end": 903.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 124.84799999999996,
+        "end": 97.947,
+        "average": 111.39749999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.0909090909090909,
+        "text_similarity": 0.3010024130344391,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is irrelevant and incorrect: it discusses aplastic anemia/pancytopenia instead of stating when 'cutaneous reticulated hyperpigmentation' is listed (around 999.848\u20131001.547s), omitting the key timing and characteristic."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker asks for 'easy questions', when does he specifically address neurologists?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1071.215,
+        "end": 1074.52
+      },
+      "pred_interval": {
+        "start": 1050.0,
+        "end": 1160.0
+      },
+      "iou": 0.030045454545455125,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 21.214999999999918,
+        "end": 85.48000000000002,
+        "average": 53.34749999999997
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.37499999999999994,
+        "text_similarity": 0.5609967708587646,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives an incorrect timestamp (1050.0s) that contradicts the correct timing (neurologists addressed at 1071.215\u20131074.52s) and omits the precise E1/E2 intervals and their ordering; it therefore fails to match the reference. "
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes asking if anyone knows what an 'ectal EEG' is, when does an audience member provide the answer 'During'?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1168.0,
+        "end": 1168.9
+      },
+      "pred_interval": {
+        "start": 1170.0,
+        "end": 1200.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.0,
+        "end": 31.09999999999991,
+        "average": 16.549999999999955
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12903225806451615,
+        "text_similarity": 0.7553648948669434,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies the audience reply occurring immediately after the question, but the timestamp (1170.0s) is about 1.1\u20132 seconds later than the referenced start (1168.0s) and omits the answer's end time, so it's a close but slightly inaccurate match."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker completes his explanation regarding investigating epilepsy in children above five or six years old, when does he ask the questioner if he answered her question?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1194.64,
+        "end": 1195.722
+      },
+      "pred_interval": {
+        "start": 1230.0,
+        "end": 1260.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 35.3599999999999,
+        "end": 64.27800000000002,
+        "average": 49.81899999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25396825396825395,
+        "text_similarity": 0.6795846819877625,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction wrongly timestamps the question at 1230.0s, whereas the correct ask occurs at 1194.64\u20131195.722s (after E1 ends at 1146.438s); this substantial temporal error and the merged event timing make the answer largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the female attendee finishes her question, when does the male speaker (doctor) start responding?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 1230.0,
+        "end": 1353.6770000000001
+      },
+      "gt_interval": {
+        "start": 1199.573,
+        "end": 1200.579
+      },
+      "pred_interval": {
+        "start": 1230.0,
+        "end": 1353.7
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 30.426999999999907,
+        "end": 153.1210000000001,
+        "average": 91.774
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.208955223880597,
+        "text_similarity": 0.5717177987098694,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer misidentifies both events and their timestamps (completely different start times and utterances) and thus fails to match the key factual elements of the correct answer; it only coincidentally matches the 'after' relation."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the male speaker (doctor) finishes explaining the diagnostic criteria for a seizure during mild gastroenteritis, when does the male moderator start speaking to conclude the session?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 1230.0,
+        "end": 1353.6770000000001
+      },
+      "gt_interval": {
+        "start": 1348.807,
+        "end": 1358.0
+      },
+      "pred_interval": {
+        "start": 1230.0,
+        "end": 1353.7
+      },
+      "iou": 0.03822656250000023,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 118.80700000000002,
+        "end": 4.2999999999999545,
+        "average": 61.553499999999985
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22222222222222224,
+        "text_similarity": 0.5562275052070618,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While both answers label the temporal relation as 'after', the predicted answer gives completely different events and timestamps (intro at 5.2s and a student statement at ~35s) that do not match the ground-truth times or described speaker roles, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the 'Genetic tests' slide is displayed, when does the speaker state that the mutation has not been previously described?",
+      "video_id": "zKxBs34vucA",
+      "video_number": "008",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 370.0,
+        "end": 371.8
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "iou": 0.008571428571428626,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 40.0,
+        "end": 168.2,
+        "average": 104.1
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.26086956521739135,
+        "text_similarity": 0.6107293367385864,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted times deviate substantially from the reference (anchor 330.0s vs 343.9s; target 493.5\u2013516.8s vs ~370.0\u2013~418s), and it states the target occurs after the slide rather than during it, directly contradicting the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Gina asks if Sandra has spent time thinking about the gardening pattern, when does the text indicating 'Clarifying' appear on screen?",
+      "video_id": "qJyB_JYhxRw",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 50.073,
+        "end": 51.115
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 44.873,
+        "end": 14.515,
+        "average": 29.694
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2318840579710145,
+        "text_similarity": 0.5407339930534363,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timings and described events do not match the reference (different speakers, timestamps, and content); it fails to identify the 'Clarifying' text at 50.1\u201351.1s and mislabels both E1 and E2, so it is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Sandra finishes stating that she's not doing the gardening she wants to, when does Gina ask about the hardest part of this pattern?",
+      "video_id": "qJyB_JYhxRw",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 85.155,
+        "end": 90.444
+      },
+      "pred_interval": {
+        "start": 74.5,
+        "end": 109.8
+      },
+      "iou": 0.14983002832861195,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 10.655000000000001,
+        "end": 19.355999999999995,
+        "average": 15.005499999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16666666666666666,
+        "text_similarity": 0.4752945899963379,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is largely incorrect: timestamps and utterance content do not match (Gina's question at ~85.2s is missing and instead a different later remark at 93.4s\u2013109.8s is given). Only the vague 'once finished' relation aligns; key facts and timing are wrong."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the text 'Questioning' is shown, when does Sandra begin to explain her interaction with a colleague regarding gardening?",
+      "video_id": "qJyB_JYhxRw",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 99.93,
+        "end": 112.0
+      },
+      "pred_interval": {
+        "start": 110.5,
+        "end": 159.9
+      },
+      "iou": 0.025012506253126565,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 10.569999999999993,
+        "end": 47.900000000000006,
+        "average": 29.235
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17777777777777776,
+        "text_similarity": 0.5791159868240356,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer is largely incorrect: both anchor and target timestamps are shifted much later than the reference (96.4\u201397.2 and 99.9\u2013112.0) and the predicted target does not capture the colleague-comment explanation. Only the coarse 'after' relationship matches."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the coach reflects the client's internal conflict regarding her faculty responsibilities and desire for gardening, when does the text 'What microskill was that?' appear on screen?",
+      "video_id": "qJyB_JYhxRw",
+      "video_number": "009",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 171.0,
+        "end": 173.0
+      },
+      "pred_interval": {
+        "start": 153.6,
+        "end": 184.2
+      },
+      "iou": 0.06535947712418302,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 17.400000000000006,
+        "end": 11.199999999999989,
+        "average": 14.299999999999997
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1568627450980392,
+        "text_similarity": 0.33592259883880615,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly states the text appears after the coach's reflection (matches the key temporal relation) but omits the precise timing and duration details (171.0s\u2013173.0s) provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the client questions whether gardening is a core value for her, when does the coach ask a clarifying question?",
+      "video_id": "qJyB_JYhxRw",
+      "video_number": "009",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 211.5,
+        "end": 218.0
+      },
+      "pred_interval": {
+        "start": 184.2,
+        "end": 208.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 27.30000000000001,
+        "end": 9.199999999999989,
+        "average": 18.25
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14545454545454545,
+        "text_similarity": 0.4604908227920532,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction is factually correct in saying the coach asks a clarifying question afterward, but it omits key factual details from the reference (the specific timestamps and that this is the next coaching intervention), making it incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the client finishes stating she's not good at doing a 'half job', when does she describe the 'battle within my mind' concerning possibilities and time commitment?",
+      "video_id": "qJyB_JYhxRw",
+      "video_number": "009",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 242.0,
+        "end": 320.0
+      },
+      "pred_interval": {
+        "start": 208.8,
+        "end": 234.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 33.19999999999999,
+        "end": 86.0,
+        "average": 59.599999999999994
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11267605633802817,
+        "text_similarity": 0.4243778884410858,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states the event occurs after the 'half job' remark (correct sequence) but fails to provide the required precise timing (E1: 226\u2013240s; E2: 242\u2013320s) and thus omits key factual details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the woman on the left finishes asking 'What micro skill was that?', when does the text 'Summarizing' appear on the screen?",
+      "video_id": "qJyB_JYhxRw",
+      "video_number": "009",
+      "segment": {
+        "start": 330.0,
+        "end": 431.756
+      },
+      "gt_interval": {
+        "start": 389.786,
+        "end": 390.706
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 382.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 59.786,
+        "end": 8.105999999999995,
+        "average": 33.946
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20833333333333331,
+        "text_similarity": 0.7113634347915649,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly conveys the temporal relation ('appears once she finishes') but omits the key factual timing details (the exact timestamps when the text appears and duration), so it is incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the woman on the left talks about exploring the core value and inviting more time and intention, when does she say 'And that sounds beautiful, you being in the earth and being in nature'?",
+      "video_id": "qJyB_JYhxRw",
+      "video_number": "009",
+      "segment": {
+        "start": 330.0,
+        "end": 431.756
+      },
+      "gt_interval": {
+        "start": 400.802,
+        "end": 404.56
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 431.8
+      },
+      "iou": 0.03691552062868351,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 70.80200000000002,
+        "end": 27.24000000000001,
+        "average": 49.021000000000015
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.29850746268656714,
+        "text_similarity": 0.4646086096763611,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction identifies the correct utterance but gives a significantly wrong timestamp (382.6s vs. the ground-truth event at 400.802\u2013404.569s) and omits the correct temporal relation; thus it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the text 'Providing transparency' disappears from the screen, when does the woman on the right say 'Yeah, yeah, I think that would be a good place to go'?",
+      "video_id": "qJyB_JYhxRw",
+      "video_number": "009",
+      "segment": {
+        "start": 330.0,
+        "end": 431.756
+      },
+      "gt_interval": {
+        "start": 412.903,
+        "end": 415.968
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 431.8
+      },
+      "iou": 0.030108055009823158,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 82.90300000000002,
+        "end": 15.831999999999994,
+        "average": 49.36750000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21874999999999997,
+        "text_similarity": 0.4528329372406006,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted time (382.6s) contradicts the ground-truth start time (412.903s) and is not 'after' the text disappearance; it is therefore incorrect and inconsistent with the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Jacci finishes introducing the episode's topic, when does Bob respond to it?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 42.875,
+        "end": 44.037
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 10.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 37.675,
+        "end": 33.236999999999995,
+        "average": 35.455999999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18461538461538463,
+        "text_similarity": 0.6247961521148682,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is completely incorrect: both event timestamps and the quoted utterance differ from the reference, and the relation 'after' mislabels the true 'once_finished' response; it therefore hallucinates key details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Bob explains that a therapeutic hour is typically 50 minutes, when does Jacci share her experience regarding this?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 79.947,
+        "end": 90.956
+      },
+      "pred_interval": {
+        "start": 34.9,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 45.047000000000004,
+        "end": 54.356,
+        "average": 49.7015
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27027027027027023,
+        "text_similarity": 0.7094489336013794,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer gives completely different timestamps and an incorrect relation ('at' vs 'once_finished') and adds an unsupported quoted utterance; it contradicts the correct timings and relation."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Bob states his premise for the first session, when does he elaborate on meeting each other in a contactful way?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 117.814,
+        "end": 134.185
+      },
+      "pred_interval": {
+        "start": 16.3,
+        "end": 21.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 101.514,
+        "end": 113.185,
+        "average": 107.3495
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14035087719298248,
+        "text_similarity": 0.5532820224761963,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps and relation are completely different from the correct ones (16.3s vs ~99\u2013134s) and it wrongly labels the relation as 'at' instead of 'once_finished', so it fails to match the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Jacci finishes saying that '50 minutes can feel so different from session to session', when does Bob start explaining his perspective on a first session?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 193.023,
+        "end": 195.923
+      },
+      "pred_interval": {
+        "start": 153.7,
+        "end": 204.8
+      },
+      "iou": 0.05675146771037191,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 39.32300000000001,
+        "end": 8.87700000000001,
+        "average": 24.10000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23529411764705882,
+        "text_similarity": 0.4790269732475281,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps, event content, and relation do not match the reference (which specifies events at ~192\u2013196s and relation 'once_finished'); the prediction gives unrelated times and speakers, so it is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Bob finishes stating that apprehension is usually the most prominent feeling for clients, when does Jacci respond with 'Yeah'?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 232.77,
+        "end": 232.971
+      },
+      "pred_interval": {
+        "start": 186.4,
+        "end": 217.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 46.370000000000005,
+        "end": 15.170999999999992,
+        "average": 30.7705
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24615384615384617,
+        "text_similarity": 0.4838188886642456,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is completely incorrect: it lists entirely different event timestamps and contents than the reference (wrong anchor/target times and utterances) and thus fails to match the correct relation and timing."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Jacci finishes letting clients know there's a toilet if they need one, when does Bob ask her a question?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 256.48,
+        "end": 257.36
+      },
+      "pred_interval": {
+        "start": 153.7,
+        "end": 204.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 102.78000000000003,
+        "end": 52.56,
+        "average": 77.67000000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23529411764705882,
+        "text_similarity": 0.4924716651439667,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction completely mismatches the annotated events and timing, identifies different utterances, and gives a different relation ('after' vs 'once_finished'), so it is factually incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Bob Cooke finishes asking if Jacci Jones has heard of Joey Essex, when does Jacci respond?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 333.853,
+        "end": 334.935
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "iou": 0.005152380952380922,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.8530000000000086,
+        "end": 205.065,
+        "average": 104.459
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2222222222222222,
+        "text_similarity": 0.42453446984291077,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (Jacci responds after Bob finishes), but it omits the key factual details given in the correct answer\u2014specific timestamps and the exact response utterance\u2014so it's incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While Jacci Jones is explaining the importance of a neutral therapy room, when does she mention clients being triggered by a ticking clock?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 429.324,
+        "end": 436.675
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "iou": 0.0350047619047619,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 99.32400000000001,
+        "end": 103.32499999999999,
+        "average": 101.3245
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12307692307692307,
+        "text_similarity": 0.5654510259628296,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general association between the ticking-clock example and her discussion of a neutral therapy room but omits the precise timestamps and incorrectly states the timing as 'after' rather than occurring during her broader explanation, so it is imprecise and partially contradictory."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the male speaker says a neutral room is almost impossible in his room, when does he describe what would be found in therapy rooms with nothing at all?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 519.134,
+        "end": 524.632
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 513.934,
+        "end": 488.0319999999999,
+        "average": 500.98299999999995
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23684210526315788,
+        "text_similarity": 0.43357276916503906,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "Error parsing LLM response: Expecting ',' delimiter: line 3 column 246 (char 261)"
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the female speaker says it is enough for patients to comment or mention something for further exploration, when does she specify that she is talking about personal items in the room?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 592.374,
+        "end": 599.829
+      },
+      "pred_interval": {
+        "start": 37.4,
+        "end": 63.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 554.974,
+        "end": 536.029,
+        "average": 545.5015000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22857142857142856,
+        "text_similarity": 0.5388213396072388,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies the two utterances and their 'after' relation and even quotes the content, but the provided timestamps differ substantially from the ground truth and the first event's end time is omitted, so it is only partially correct."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the male speaker asks to go back to the first session again, when does he describe Joey Essex's first therapy session?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 620.21,
+        "end": 623.944
+      },
+      "pred_interval": {
+        "start": 10.8,
+        "end": 51.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 609.4100000000001,
+        "end": 572.944,
+        "average": 591.177
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28571428571428564,
+        "text_similarity": 0.5854271650314331,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the anchor utterance text but gives a wildly incorrect timestamp; the target segment is misidentified (different content and times) and the relation label is incorrect, so the overall answer is largely wrong."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Bob says that the program was a 'really, really good program', when does he start explaining why it was good, mentioning Joey Essex as a role model?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 732.1,
+        "end": 745.4
+      },
+      "pred_interval": {
+        "start": 693.5,
+        "end": 724.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 38.60000000000002,
+        "end": 20.600000000000023,
+        "average": 29.600000000000023
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.126984126984127,
+        "text_similarity": 0.3559951186180115,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gives timestamps that are substantially different from the reference (predicted 693.5\u2013724.8s vs correct 732.1\u2013745.4s), placing the segment entirely earlier; although it mentions Joey Essex, the timing is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Jacci mentions that her first question to clients is 'how are you feeling?', when does she state that the therapy room is a safe space?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 825.7,
+        "end": 843.0
+      },
+      "pred_interval": {
+        "start": 725.0,
+        "end": 755.7
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 100.70000000000005,
+        "end": 87.29999999999995,
+        "average": 94.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22535211267605634,
+        "text_similarity": 0.4505169987678528,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gives timestamps (725.0\u2013755.7s) that are far from the correct interval (825.7\u2013843.0s); while it notes she says the room is a safe space, the timing is incorrect, so it fails to match the reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Jacci finishes listing the rules for therapy sessions, when does Bob start discussing his mentors, Eric Byrne and Richard Erskine?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 875.8,
+        "end": 887.6
+      },
+      "pred_interval": {
+        "start": 756.0,
+        "end": 786.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 119.79999999999995,
+        "end": 101.0,
+        "average": 110.39999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2711864406779661,
+        "text_similarity": 0.38246649503707886,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction correctly names the mentors but gives substantially incorrect timing (756.0\u2013786.6s) versus the reference (starts 875.8s, ends 887.6s), so it fails on the key factual timing detail."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man describes the woman's practice as setting the scene and structure for safety, when does the woman agree and explain why it's important?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 905.154,
+        "end": 928.479
+      },
+      "pred_interval": {
+        "start": 870.0,
+        "end": 903.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 35.153999999999996,
+        "end": 24.87900000000002,
+        "average": 30.016500000000008
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16901408450704225,
+        "text_similarity": 0.709671139717102,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer gives entirely different timestamps and event descriptions (wrong speakers and content) that contradict the reference and include hallucinated details, failing to identify the correct immediate-follow relationship."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the man asks about the woman's important considerations for checking feelings in a first session, when does the woman clarify her approach?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 965.821,
+        "end": 971.01
+      },
+      "pred_interval": {
+        "start": 903.6,
+        "end": 937.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 62.221000000000004,
+        "end": 33.809999999999945,
+        "average": 48.015499999999975
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16438356164383564,
+        "text_similarity": 0.6199876070022583,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps, event descriptions, and anchor/target positions do not match the correct timestamps or events, and the temporal relation ('after' at far later times) contradicts the ground truth that the target immediately follows the anchor."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the woman explains how she would inquire about anxiety, when does the man describe physical and verbal indicators of anxiety?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 988.81,
+        "end": 1019.095
+      },
+      "pred_interval": {
+        "start": 937.2,
+        "end": 970.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 51.6099999999999,
+        "end": 48.29500000000007,
+        "average": 49.952499999999986
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14814814814814814,
+        "text_similarity": 0.6168818473815918,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction gives completely different timestamps and content (5\u201336s) versus the correct ~974\u20131019s interval and misidentifies the described event, so it fails to match the reference in timing, content, and relation."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Bob Cooke explains that his inquiries are aimed at making contact and helping clients tell their story, when does he first mention the word 'un-understandable'?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1101.98,
+        "end": 1105.45
+      },
+      "pred_interval": {
+        "start": 1050.0,
+        "end": 1160.0
+      },
+      "iou": 0.03154545454545479,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 51.98000000000002,
+        "end": 54.549999999999955,
+        "average": 53.264999999999986
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1764705882352941,
+        "text_similarity": 0.5037638545036316,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely fails: both event timestamps and contents are incorrect (E1 and E2 do not match the reference and the 'un-understandable' utterance is not identified), only the temporal relation 'after' coincidentally matches."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Jacci Jones finishes saying she likes the word and is writing it down, when does Bob Cooke repeat the word 'un-understandable'?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1119.91,
+        "end": 1121.67
+      },
+      "pred_interval": {
+        "start": 1134.9,
+        "end": 1251.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 14.990000000000009,
+        "end": 129.82999999999993,
+        "average": 72.40999999999997
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18750000000000003,
+        "text_similarity": 0.4790171980857849,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is completely incorrect: it gives entirely different timestamps, wrong speaker/content for E1 and E2 (and an implausible long duration), and the relation 'same' contradicts the correct 'once_finished' temporal relation."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Jacci Jones finishes asking if Bob would normalize their experience, when does Bob Cooke ask her to give an example?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1145.72,
+        "end": 1146.88
+      },
+      "pred_interval": {
+        "start": 1251.5,
+        "end": 1368.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 105.77999999999997,
+        "end": 221.1199999999999,
+        "average": 163.44999999999993
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19672131147540986,
+        "text_similarity": 0.5815588235855103,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction roughly preserves the temporal order (Bob asks after), but it gets all timestamps and event boundaries wrong, misattributes the asker, and gives an implausibly long duration for E2, so it fails on factual alignment and completeness."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Bob says 'helping somebody tell their story', when does he mention how the past affects the present?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1270.0,
+        "end": 1279.0
+      },
+      "pred_interval": {
+        "start": 13.8,
+        "end": 20.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1256.2,
+        "end": 1258.6,
+        "average": 1257.4
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.38596491228070173,
+        "text_similarity": 0.5755999088287354,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly indicates the mention occurs after the quoted phrase but gives entirely different timestamps and omits the reference event time; the temporal alignment is therefore largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Bob says 'I think most people come to see you have thought about how come I'm like this?', when does Jacci first say 'Yeah' in agreement?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1343.0,
+        "end": 1345.4
+      },
+      "pred_interval": {
+        "start": 106.5,
+        "end": 117.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1236.5,
+        "end": 1227.6000000000001,
+        "average": 1232.0500000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23188405797101447,
+        "text_similarity": 0.5935678482055664,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction places Jacci's 'Yeah' at 106.5\u2013117.8s, which is grossly inconsistent with the reference timestamps (Bob ~1294.4s and Jacci ~1343.0s); although it states the correct temporal relation ('after'), the provided timing is effectively incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Jacci says her mom's view is 'if it's in the past, just leave it there', when does Bob reference Joey Essex?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1410.0,
+        "end": 1413.0
+      },
+      "pred_interval": {
+        "start": 117.8,
+        "end": 130.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1292.2,
+        "end": 1282.2,
+        "average": 1287.2
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22535211267605634,
+        "text_similarity": 0.6281090378761292,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the relative order (Bob references Joey Essex after Jacci), but the provided timestamps (117.8\u2013130.8s) are completely inconsistent with the ground-truth times (1410.0\u20131413.0s), making it factually incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Jacci Jones asks why someone would want to go back to a difficult past, when does Bob Cooke affirm her statement?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1446.4,
+        "end": 1447.0
+      },
+      "pred_interval": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "iou": 0.002857142857142424,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 36.40000000000009,
+        "end": 173.0,
+        "average": 104.70000000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.208955223880597,
+        "text_similarity": 0.5214534997940063,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction gives completely different event timestamps and content (wrong anchor and a statement about being a medical student rather than Bob Cooke's affirmation) and thus fails to match the correct affirmation timing or event; the temporal relation and offsets are incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Bob Cooke states that the first session is important for the therapist and client meeting, when does he mention that the client can see coming back may help them?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1477.0,
+        "end": 1481.4
+      },
+      "pred_interval": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "iou": 0.020952380952381385,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 67.0,
+        "end": 138.5999999999999,
+        "average": 102.79999999999995
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23076923076923075,
+        "text_similarity": 0.5096571445465088,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gets the temporal relation ('after') right but both event timestamps and described content are incorrect and do not match the reference segments, so it fails to identify the correct moments in the video."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Bob finishes emphasizing confidentiality as a core aspect of their profession, when does he begin explaining that the next podcast will focus on building the working relationship?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1615.261,
+        "end": 1634.755
+      },
+      "pred_interval": {
+        "start": 1590.0,
+        "end": 1638.7
+      },
+      "iou": 0.4002874743326514,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 25.260999999999967,
+        "end": 3.9449999999999363,
+        "average": 14.602999999999952
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1917808219178082,
+        "text_similarity": 0.5771077871322632,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction completely misidentifies both event spans and timestamps (wrong content and times), only coincidentally matching the temporal relation 'after', so it fails to correctly locate the events."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Jacci finishes asking about what Bob says to clients at the end of the first session, when does Bob provide his typical closing statement?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1683.193,
+        "end": 1697.747
+      },
+      "pred_interval": {
+        "start": 1640.0,
+        "end": 1708.0
+      },
+      "iou": 0.21402941176470716,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 43.192999999999984,
+        "end": 10.252999999999929,
+        "average": 26.722999999999956
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23529411764705882,
+        "text_similarity": 0.4232819974422455,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is completely incorrect: it cites entirely different timestamps and utterances (5.2s / 35.0\u201336.6s versus 1682.405s / 1683.193\u20131697.747s) and labels the relation 'after' instead of the correct 'once_finished'."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Bob describes his practice of summarization after 45 minutes in a session, when does Jacci speak about the client's internal process and self-care between sessions?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1741.972,
+        "end": 1755.038
+      },
+      "pred_interval": {
+        "start": 1710.0,
+        "end": 1770.0
+      },
+      "iou": 0.2177666666666672,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 31.97199999999998,
+        "end": 14.961999999999989,
+        "average": 23.466999999999985
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15,
+        "text_similarity": 0.3963651657104492,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps, speakers, and content do not match the ground truth (Bob at ~1736.545s and Jacci at 1741.972\u20131755.038); it references unrelated segments and speaker lines, so it fails to identify the correct events despite matching the 'after' relation."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Bob says 'I'll see you next week', when does Jacci explain that therapy is not just walking out the door?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1770.0,
+        "end": 1878.75
+      },
+      "gt_interval": {
+        "start": 1776.77,
+        "end": 1794.31
+      },
+      "pred_interval": {
+        "start": 1770.0,
+        "end": 1869.2
+      },
+      "iou": 0.17681451612903182,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 6.769999999999982,
+        "end": 74.8900000000001,
+        "average": 40.83000000000004
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2857142857142857,
+        "text_similarity": 0.4980032444000244,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer gives completely different timestamps and event contents that do not correspond to the reference events (only the relation 'after' matches), so it fails to identify the correct segments and is therefore incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Jacci finishes saying she's still learning and taking notes, when does Bob begin to talk about the emphasis on safety and security?",
+      "video_id": "a7y2aw5xcMI",
+      "video_number": "010",
+      "segment": {
+        "start": 1770.0,
+        "end": 1878.75
+      },
+      "gt_interval": {
+        "start": 1809.57,
+        "end": 1823.0
+      },
+      "pred_interval": {
+        "start": 1869.2,
+        "end": 1878.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 59.63000000000011,
+        "end": 55.799999999999955,
+        "average": 57.71500000000003
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21333333333333335,
+        "text_similarity": 0.38977915048599243,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer gives entirely different time segments, speaker identities, and content than the reference (wrong timestamps and utterances) and also mislabels the relation ('after' vs the correct 'once_finished'), so it does not match the ground truth."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Bob states that Wendy Dryden went on to write lots and lots of psychotherapy books, when does he mention that Wendy's passion back then was CBT?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 167.388,
+        "end": 170.258
+      },
+      "pred_interval": {
+        "start": 153.6,
+        "end": 204.0
+      },
+      "iou": 0.05694444444444453,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 13.788000000000011,
+        "end": 33.74199999999999,
+        "average": 23.765
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19047619047619047,
+        "text_similarity": 0.7175204753875732,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately preserves the events and their temporal relation, stating that Bob mentions Wendy's passion for CBT after noting she wrote many psychotherapy books, with no added or missing facts."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Bob concludes his statement about there being many more therapeutic methods than the few he listed, when does Jacqui comment that it's no wonder clients are confused?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 227.584,
+        "end": 230.594
+      },
+      "pred_interval": {
+        "start": 174.5,
+        "end": 210.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 53.084,
+        "end": 20.593999999999994,
+        "average": 36.839
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14285714285714285,
+        "text_similarity": 0.5157061815261841,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately conveys the temporal relation that Jacqui's remark occurs after Bob finishes his statement about many therapy methods, matching the correct answer's meaning."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Bob finishes listing the six sections of therapy (behavioral, cognitive, emotional, physical, spiritual, bodily), when does he begin talking about another big section, transpersonal therapy?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 423.0,
+        "end": 428.944
+      },
+      "pred_interval": {
+        "start": 335.7,
+        "end": 428.9
+      },
+      "iou": 0.0632748487838357,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 87.30000000000001,
+        "end": 0.04400000000003956,
+        "average": 43.672000000000025
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12,
+        "text_similarity": 0.5634143352508545,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly captures the key temporal relation ('after') that Bob introduces transpersonal therapy, but it omits the specific timing details (the provided start/end timestamps) given in the correct answer, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Jacci finishes saying 'Thank goodness for that', when does Bob respond with 'I will'?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 357.379,
+        "end": 358.762
+      },
+      "pred_interval": {
+        "start": 420.5,
+        "end": 513.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 63.12099999999998,
+        "end": 155.13799999999998,
+        "average": 109.12949999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21739130434782608,
+        "text_similarity": 0.5071256160736084,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly notes that Bob replies after Jacci, but it omits the crucial timing details (the start/end timestamps and that the response occurs immediately after the anchor), making it incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "During Bob's discussion about therapies that deal with the younger self and unconscious, when does he mention 'music therapy'?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 465.838,
+        "end": 478.271
+      },
+      "pred_interval": {
+        "start": 483.5,
+        "end": 540.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 17.661999999999978,
+        "end": 61.728999999999985,
+        "average": 39.69549999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.13793103448275862,
+        "text_similarity": 0.30985602736473083,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly conveys the relative ordering (that 'music therapy' is mentioned after other therapies) but omits the precise timestamps and anchor-duration detail provided in the correct answer, so it is incomplete though not contradictory."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Bob states that there are 'lots of therapies, and of course, there's lots of methods that go with those therapies,' when does he bring up 'integrative psychotherapy' as an example?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 519.0,
+        "end": 521.9
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 513.8,
+        "end": 485.29999999999995,
+        "average": 499.54999999999995
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.37037037037037035,
+        "text_similarity": 0.7354291677474976,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer misidentifies both anchor and target timestamps and their content (no mention of 'integrative psychotherapy'), only correctly labeling the temporal relation as 'after'; therefore it largely contradicts the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Jacci finishes saying that it's 'mind-blowing,' when does she muse about the origin of therapies?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 567.1,
+        "end": 618.0
+      },
+      "pred_interval": {
+        "start": 37.4,
+        "end": 63.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 529.7,
+        "end": 554.2,
+        "average": 541.95
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3142857142857143,
+        "text_similarity": 0.7917466163635254,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction correctly captures the relational cue ('once finished' / immediately follows) but the anchor and target timestamps and boundaries are completely incorrect and do not match the reference, so it fails to locate when Jacci muses about the origin of therapies."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Bob discusses psychoanalysis and Freud, when does he introduce the concept of 'religious healing'?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 611.7,
+        "end": 623.2
+      },
+      "pred_interval": {
+        "start": 64.6,
+        "end": 95.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 547.1,
+        "end": 527.4000000000001,
+        "average": 537.25
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4358974358974359,
+        "text_similarity": 0.8141497373580933,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the target phrase ('religious healing') and the temporal relation ('after'), but the timestamps are wildly incorrect and the anchor end time is omitted, so it fails to match the key factual timing details in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Jacci says that a part of her gets scared with things like that, when does she explain that she likes answers and likes to know where things end?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 704.1,
+        "end": 707.9
+      },
+      "pred_interval": {
+        "start": 690.0,
+        "end": 783.5
+      },
+      "iou": 0.04064171122994604,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 14.100000000000023,
+        "end": 75.60000000000002,
+        "average": 44.85000000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.10344827586206898,
+        "text_similarity": 0.15763415396213531,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the semantic content (she says she gets scared and then says she likes answers/knowing where things end) but omits the crucial temporal details and explicit E1/E2 timestamps provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Bob says 'let's put another frame on it', when does he describe two common problems that psychotherapists deal with?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 732.1,
+        "end": 748.7
+      },
+      "pred_interval": {
+        "start": 783.5,
+        "end": 900.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 51.39999999999998,
+        "end": 151.29999999999995,
+        "average": 101.34999999999997
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.09230769230769231,
+        "text_similarity": 0.2752178907394409,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction merely restates that he describes two problems but provides no timing information or the requested timestamps (anchor/target), omitting the key factual elements required by the question."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Jacci states that outside events are 100% out of our control the majority of the time, when does Bob begin talking about watching a reality television program?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 898.371,
+        "end": 902.371
+      },
+      "pred_interval": {
+        "start": 9.5,
+        "end": 20.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 888.871,
+        "end": 881.571,
+        "average": 885.221
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21428571428571427,
+        "text_similarity": 0.4136285185813904,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation ('after') but omits the key factual details (the exact start/end timestamps and the specified timing: E1 ends at 896.371s, E2 starts at 898.371s and ends at 902.371s), so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Bob asks 'what we mean by therapeutic', when does he ask 'and what do we mean by cure'?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1085.846,
+        "end": 1086.849
+      },
+      "pred_interval": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "iou": 0.004776190476190138,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 35.846000000000004,
+        "end": 173.15100000000007,
+        "average": 104.49850000000004
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28205128205128205,
+        "text_similarity": 0.5990799069404602,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only matches the coarse temporal relation ('after') but misreports both event timestamps (large discrepancies of ~22s and ~58\u201364s) and incorrectly attributes the target line to Jacci, so it omits/introduces factual errors despite the correct relation."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Jacci states that therapy is individual to each person, when does Bob explain why people come to therapy?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1108.471,
+        "end": 1153.259
+      },
+      "pred_interval": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "iou": 0.21327619047619054,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 58.471000000000004,
+        "end": 106.74099999999999,
+        "average": 82.606
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.26666666666666666,
+        "text_similarity": 0.7325094938278198,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction largely mismatches the reference: it misidentifies and swaps the anchor/target events and speakers and gives incorrect time spans; only the 'after' relationship (and a small temporal overlap of the predicted target with the true target's end) is roughly consistent."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Bob finishes mentioning the book 'Your Right to Choose', when does Jacci comment on his accomplishments?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1239.3,
+        "end": 1240.79
+      },
+      "pred_interval": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "iou": 0.007095238095238139,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 9.299999999999955,
+        "end": 199.21000000000004,
+        "average": 104.255
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22857142857142856,
+        "text_similarity": 0.42502719163894653,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is completely incorrect: it gives entirely different timestamps, speakers, and utterances (speaker intro and 'I am a final year medical student') that do not correspond to Bob finishing his book at 1237.7s or Jacci's comment at 1239.3\u20131240.79s; the temporal alignment is therefore wrong."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Bob states that therapy should not involve therapists telling people what to do, when does he define what therapy is truly about?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1283.49,
+        "end": 1336.89
+      },
+      "pred_interval": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "iou": 0.2542857142857147,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 53.49000000000001,
+        "end": 103.1099999999999,
+        "average": 78.29999999999995
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16279069767441862,
+        "text_similarity": 0.5303215980529785,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely incorrect: it gives wrong anchor/target segments and timestamps and does not identify Bob's explanation starting at ~1283.49s (it instead cites unrelated early timestamps and content), so it fails to match the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Bob finishes explaining how an accessible common language helps understand complex psychological processes, when does Jacci respond with 'Yeah'?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1424.5,
+        "end": 1424.7
+      },
+      "pred_interval": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "iou": 0.0009523809523811689,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 14.5,
+        "end": 195.29999999999995,
+        "average": 104.89999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.125,
+        "text_similarity": 0.4631273150444031,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes Jacci responds after Bob, but it gives the wrong delay (5.2s vs ~1.7s) and adds an unfounded 'speaker's introduction' detail, contradicting the referenced timestamps."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Jacci states that a walk in nature can be therapeutic for her, when does Bob confirm with 'Absolutely'?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1503.0,
+        "end": 1503.6
+      },
+      "pred_interval": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "iou": 0.002857142857142424,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 93.0,
+        "end": 116.40000000000009,
+        "average": 104.70000000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.09230769230769231,
+        "text_similarity": 0.13035210967063904,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is incorrect: it gives the wrong timing and attributes a different utterance ('I am a final year medical student') instead of Bob saying 'Absolutely' immediately after Jacci, contradicting the ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Bob asks about the Wim Hof method, when does Jacci respond that Carl made her try the breathing?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1661.906,
+        "end": 1665.874
+      },
+      "pred_interval": {
+        "start": 1603.4,
+        "end": 1713.4
+      },
+      "iou": 0.03607272727272795,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 58.50599999999986,
+        "end": 47.52600000000007,
+        "average": 53.01599999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3225806451612903,
+        "text_similarity": 0.7307239174842834,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly conveys that Jacci responds after Bob, but the reported timestamps are wildly inaccurate and contradictory to the reference (the predicted start precedes the question and the interval is far too long), so it fails on factual timing details."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Jacci describes standing on a beach by the sea and becoming emotional, when does she state that it is very therapeutic?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1723.856,
+        "end": 1725.439
+      },
+      "pred_interval": {
+        "start": 1715.0,
+        "end": 1800.0
+      },
+      "iou": 0.01862352941176569,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 8.855999999999995,
+        "end": 74.56099999999992,
+        "average": 41.70849999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3055555555555555,
+        "text_similarity": 0.6752948760986328,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction vaguely references the event but gives a wildly incorrect and overly broad time window (1715\u20131800s) and adds an unsupported causal detail about Carl and breathing; it fails to identify the precise timestamps for when she says \"It's very therapeutic.\""
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Bob talks about spiritual healing and religious healing, when does Jacci say it would be a \"wonderful exploration\" of what that is?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "gt_interval": {
+        "start": 1801.675,
+        "end": 1806.38
+      },
+      "pred_interval": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "iou": 0.022404761904762642,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 31.674999999999955,
+        "end": 173.6199999999999,
+        "average": 102.64749999999992
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19718309859154928,
+        "text_similarity": 0.4205282926559448,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer misidentifies both events' contents and timestamps (anchors are unrelated utterances), so it fails to match the ground-truth segments; only the temporal relation 'after' coincidentally matches."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Jacci begins explaining what the next topic will be, when does she state that the topic is \"what works in therapy\"?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1950.0,
+        "end": 2037.43
+      },
+      "gt_interval": {
+        "start": 1967.07,
+        "end": 1967.58
+      },
+      "pred_interval": {
+        "start": 25.8,
+        "end": 36.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1941.27,
+        "end": 1931.1799999999998,
+        "average": 1936.225
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.13333333333333333,
+        "text_similarity": 0.11808528751134872,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction does not match the reference: it gives a different, unsupported relation (mentions Bob and the show title) and omits the required timestamps/relative timing that the correct answer specifies. It therefore fails to answer when Jacci states the topic 'what works in therapy.'"
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Bob asks if that's the title of the next show, when does he comment that the topic is certainly wide?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1950.0,
+        "end": 2037.43
+      },
+      "gt_interval": {
+        "start": 1971.36,
+        "end": 1975.14
+      },
+      "pred_interval": {
+        "start": 36.9,
+        "end": 50.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1934.4599999999998,
+        "end": 1924.64,
+        "average": 1929.55
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.07017543859649124,
+        "text_similarity": 0.003242999315261841,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gives a different reference point and no timestamps, and it mislocates the comment as occurring after Jacci's line rather than at the specific timestamps after the anchor (1971.36\u20131975.14). It therefore fails to match the correct temporal answer and is largely incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Jacci says \"Right. Until next time, Bob.\", when does the video transition to the outro image?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 1950.0,
+        "end": 2037.43
+      },
+      "gt_interval": {
+        "start": 2014.44,
+        "end": 2015.04
+      },
+      "pred_interval": {
+        "start": 50.5,
+        "end": 87.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1963.94,
+        "end": 1927.6399999999999,
+        "average": 1945.79
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15151515151515152,
+        "text_similarity": 0.3309594690799713,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states the transition occurs after Jacci's line, but it gives an incorrect timestamp (50.5s vs. the actual ~2014.44\u20132015.04s transition) and wrongly claims the transition lasts until the end of the segment, adding unfounded timing details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Jacci states she likes the journey and exploration, when does Bob begin to explain why most people come to therapy?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 44.209,
+        "end": 51.049
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 39.009,
+        "end": 14.448999999999998,
+        "average": 26.729
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27272727272727276,
+        "text_similarity": 0.6763152480125427,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer incorrectly identifies both event timings and the content of E2 (different start/end times and quoted line), so it fails to match the ground truth details; it only correctly states the temporal relation 'after.'"
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the intro animation for 'The Therapy Show' finishes, when does Jacci welcome viewers back to the episode?",
+      "video_id": "urzJA6ERVm8",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 121.537,
+        "end": 129.203
+      },
+      "pred_interval": {
+        "start": 207.4,
+        "end": 210.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 85.863,
+        "end": 80.797,
+        "average": 83.33
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3508771929824561,
+        "text_similarity": 0.7518866062164307,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction's timestamps and segment boundaries contradict the ground truth (predicted starts at ~207.4s vs correct ~121.4s), and it incorrectly has E2 start simultaneous with E1 rather than after the intro; only the 'once_finished' relation aligns. "
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Gina finishes talking about how difficult it has been to be distant from her nephew, when does Sandra reflect that this experience is personal for Gina?",
+      "video_id": "qR6t0CH7l5w",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 32.677,
+        "end": 37.429
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.12172267212758701,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 27.477,
+        "end": 0.8290000000000006,
+        "average": 14.153
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.6553711891174316,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly labels the temporal relation as 'after' and its E2 roughly overlaps the reference, but it misidentifies and mistimes E1, gives incorrect speaker/content for E2 (hallucinated 'final year medical student'), and omits the correct timestamps and semantics."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Gina talks about feeling sadness and anger, when does she explain what triggers her anger?",
+      "video_id": "qR6t0CH7l5w",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 50.774,
+        "end": 118.0
+      },
+      "pred_interval": {
+        "start": 35.0,
+        "end": 47.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 15.774000000000001,
+        "end": 70.6,
+        "average": 43.187
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2,
+        "text_similarity": 0.45858287811279297,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer identifies different events and timestamps and does not locate Gina's explanation of what triggers her anger (the mask example at ~50.774s); it therefore contradicts the reference and is factually incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "While the text 'Starting process of deconstructing sociocultural narratives' is displayed, when does Sandra ask about Gina's beliefs concerning anger and responsibility?",
+      "video_id": "qR6t0CH7l5w",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 80.677,
+        "end": 95.0
+      },
+      "pred_interval": {
+        "start": 85.7,
+        "end": 100.8
+      },
+      "iou": 0.4621577299607415,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 5.022999999999996,
+        "end": 5.799999999999997,
+        "average": 5.411499999999997
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2571428571428572,
+        "text_similarity": 0.5546956658363342,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely contradicts the reference: anchor timing is wrong, the target utterance and timings do not match the correct question, and the stated relationship ('after') is incorrect since the question actually begins during the text display. Only minimal temporal overlap exists, so almost all key facts are incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the woman on the left finishes stating her thinking that she can't be angry, when does she explore what else she is feeling?",
+      "video_id": "qR6t0CH7l5w",
+      "video_number": "012",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 193.162,
+        "end": 196.188
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 187.96200000000002,
+        "end": 159.588,
+        "average": 173.775
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1348314606741573,
+        "text_similarity": 0.6588924527168274,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is entirely incorrect: it gives completely different event times, speakers, and content, and does not match the correct immediate-follow relation or the described utterance about exploring other feelings."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the woman on the right asks how the woman on the left would respond differently if she were not female, when does the woman on the left state she might be more willing to say things?",
+      "video_id": "qR6t0CH7l5w",
+      "video_number": "012",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 252.162,
+        "end": 256.188
+      },
+      "pred_interval": {
+        "start": 10.4,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 241.762,
+        "end": 219.588,
+        "average": 230.675
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15053763440860213,
+        "text_similarity": 0.6228700280189514,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly labels the temporal relation as 'after' but the anchor and target timestamps and quoted content are incorrect and do not match the reference events, indicating major factual errors."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the woman on the left finishes explaining that she holds back for some reason, when does she state that if she were a man, she might not hold back as much?",
+      "video_id": "qR6t0CH7l5w",
+      "video_number": "012",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 269.663,
+        "end": 281.163
+      },
+      "pred_interval": {
+        "start": 15.6,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 254.06300000000002,
+        "end": 244.56300000000002,
+        "average": 249.31300000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.5716663599014282,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer misidentifies both anchor and target timestamps and the quoted content\u2014these do not match the reference events\u2014so it is largely incorrect, though it correctly indicates an 'after' relationship in general."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the woman in blue finishes describing her feelings of worry and anger, when does the woman in the striped shirt ask about the connection to her experience as a mother?",
+      "video_id": "qR6t0CH7l5w",
+      "video_number": "012",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 348.362,
+        "end": 356.23
+      },
+      "pred_interval": {
+        "start": 332.5,
+        "end": 540.0
+      },
+      "iou": 0.037918072289156605,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 15.862000000000023,
+        "end": 183.76999999999998,
+        "average": 99.816
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14893617021276595,
+        "text_similarity": 0.5668348073959351,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction largely misidentifies both anchor and target events and gives incorrect timestamps (332.5\u2013540.0s vs. 346.362s and 348.362\u2013356.23s in the reference); it only correctly captures the temporal relation as 'after', so it is mostly incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the text 'Deconstructing mothering narratives' is displayed on screen, when does the woman in the striped shirt speak about grabbing onto 'that fire' to protect someone?",
+      "video_id": "qR6t0CH7l5w",
+      "video_number": "012",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 363.725,
+        "end": 381.725
+      },
+      "pred_interval": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "iou": 0.08571428571428572,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 33.72500000000002,
+        "end": 158.27499999999998,
+        "average": 96.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18367346938775508,
+        "text_similarity": 0.649060845375061,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the anchor and target events, but gives incorrect timestamps (330.0\u2013540.0s vs ~363.7\u2013381.7s) and the wrong temporal relation ('after' rather than occurring during/while the anchor is displayed), so it is largely inaccurate."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Gina talks about the intersections of her identity, when does the woman on the right say 'good point'?",
+      "video_id": "qR6t0CH7l5w",
+      "video_number": "012",
+      "segment": {
+        "start": 510.0,
+        "end": 603.177
+      },
+      "gt_interval": {
+        "start": 577.07,
+        "end": 583.08
+      },
+      "pred_interval": {
+        "start": 35.0,
+        "end": 47.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 542.07,
+        "end": 535.6800000000001,
+        "average": 538.875
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3076923076923077,
+        "text_similarity": 0.6900742650032043,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gets only the coarse temporal relation ('after') correct, but the event timings and described utterances are completely different from the reference, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Jayde Hein finishes saying she loves the variety of patients she sees, when does she mention starting the day off with maternity patients?",
+      "video_id": "uhEX1y3kSGE",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 125.60900000000001
+      },
+      "gt_interval": {
+        "start": 10.428,
+        "end": 15.564
+      },
+      "pred_interval": {
+        "start": 5.2,
+        "end": 36.6
+      },
+      "iou": 0.16356687898089167,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 5.228000000000001,
+        "end": 21.036,
+        "average": 13.132000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2528735632183908,
+        "text_similarity": 0.7039637565612793,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer's anchor and target timings and contents are largely incorrect (reference target ~10.4s\u201315.6s vs predicted 35.0s\u201336.6s) and it misidentifies the segments; only the vague 'after' relation matches, so it fails to align with the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Haley Tichonuk expresses her love for always learning, when does Debbiann Wilson speak about accepting challenges?",
+      "video_id": "uhEX1y3kSGE",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 125.60900000000001
+      },
+      "gt_interval": {
+        "start": 30.539,
+        "end": 35.143
+      },
+      "pred_interval": {
+        "start": 37.4,
+        "end": 63.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 6.860999999999997,
+        "end": 28.656999999999996,
+        "average": 17.758999999999997
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3235294117647059,
+        "text_similarity": 0.7732099294662476,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets only the 'after' relation right but is largely incorrect: timestamps and speaker/utterance assignments do not match the reference (predicted target is Haley's line and times differ substantially), so it fails on factual alignment."
+      }
+    }
+  ]
+}

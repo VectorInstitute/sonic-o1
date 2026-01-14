@@ -1,0 +1,5361 @@
+{
+  "topic_id": 8,
+  "topic_name": "Workplace Team Meetings",
+  "num_evaluated": 152,
+  "aggregated_metrics": {
+    "mean_iou": 0.048037910444916745,
+    "std_iou": 0.14072778673041783,
+    "median_iou": 0.0,
+    "R@0.3": {
+      "recall": 0.06578947368421052,
+      "count": 10,
+      "total": 152
+    },
+    "R@0.5": {
+      "recall": 0.03289473684210526,
+      "count": 5,
+      "total": 152
+    },
+    "R@0.7": {
+      "recall": 0.013157894736842105,
+      "count": 2,
+      "total": 152
+    },
+    "mae": {
+      "start_mean": 394.7536260324287,
+      "end_mean": 482.91824887725926,
+      "average_mean": 438.83593745484404
+    },
+    "rationale": {
+      "rouge_l_mean": 0.24841589490378008,
+      "rouge_l_std": 0.0989873654657104,
+      "text_similarity_mean": 0.5449419151991606,
+      "text_similarity_std": 0.18568845209008508,
+      "llm_judge_score_mean": 1.9605263157894737,
+      "llm_judge_score_std": 1.5427315954576377
+    },
+    "rationale_cider": 0.2923729189007497
+  },
+  "per_question_results": [
+    {
+      "question_id": "001",
+      "question": "Once Jonathan finishes stating that they are at the office shooting this video, when does an overhead shot of the office appear?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 43.518,
+        "end": 51.983
+      },
+      "pred_interval": {
+        "start": 46.375,
+        "end": 49.5
+      },
+      "iou": 0.3691671588895453,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.8569999999999993,
+        "end": 2.482999999999997,
+        "average": 2.669999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19672131147540986,
+        "text_similarity": 0.49834001064300537,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer gives an incorrect and imprecise timestamp (~45.5s vs the correct 43.518s), and it omits the key details that the overhead shot begins immediately at 43.518s and its duration until 51.983s."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Jonathan says 'Let's do it!' to building a workshop, when does Jakob start explaining that he will read out a case study?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 97.284,
+        "end": 101.305
+      },
+      "pred_interval": {
+        "start": 186.375,
+        "end": 187.75
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 89.091,
+        "end": 86.445,
+        "average": 87.768
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2153846153846154,
+        "text_similarity": 0.6299769282341003,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted start time (\u2248186.25s) directly contradicts the reference (Jakob starts at 97.284s after Jonathan's line at 94.837s), so the temporal information is incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker on the right finishes describing the public-facing marketing materials, when does the speaker on the left ask if he's running the marketing team?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 164.0,
+        "end": 165.3
+      },
+      "pred_interval": {
+        "start": 58.9,
+        "end": 60.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 105.1,
+        "end": 105.00000000000001,
+        "average": 105.05000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.10909090909090909,
+        "text_similarity": 0.12113974988460541,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is factually incorrect about timing\u2014it places the question at ~58.9s, whereas the correct event occurs at 164.0\u2013165.3s immediately after the anchor finishes; this contradiction warrants a score of 0."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker on the right explains the product team's pushback on marketing visuals, when does the speaker on the left ask about the UX team's dislike for the visuals?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 195.9,
+        "end": 198.0
+      },
+      "pred_interval": {
+        "start": 60.9,
+        "end": 62.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 135.0,
+        "end": 135.1,
+        "average": 135.05
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15584415584415584,
+        "text_similarity": 0.2737943232059479,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly conveys the 'after' relationship (right then left) but gives an incorrect absolute timestamp (60.9s vs ~195.4\u2013195.9s) and omits the precise start/end times for the question, so it is factually inaccurate and incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker on the right states that all team members are passionate and want to make it work, when does he mention the product team works in agile sprints?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 244.681,
+        "end": 265.697
+      },
+      "pred_interval": {
+        "start": 77.7,
+        "end": 79.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 166.981,
+        "end": 185.797,
+        "average": 176.389
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22222222222222224,
+        "text_similarity": 0.33831483125686646,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamp (~77.7s) is far from the correct interval (starts at ~244.681s and runs to ~265.697s); it mislocates the mention and thus is incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker on the right asks if the CEO and CMO don't like each other, when does the speaker on the left confirm there is tension?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 355.783,
+        "end": 360.06
+      },
+      "pred_interval": {
+        "start": 43.5,
+        "end": 50.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 312.283,
+        "end": 309.76,
+        "average": 311.0215
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.42857142857142855,
+        "text_similarity": 0.5105725526809692,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures that the left speaker confirms tension after the right's question, but the timestamps are significantly incorrect (43.5s/49.9s vs. ~354.6s/~360.8s), so it fails on key factual details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "During the time the speaker on the right is showing and discussing the 'Capture Canvas', when does he highlight 'CMO might be a troublemaker'?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 385.737,
+        "end": 448.002
+      },
+      "pred_interval": {
+        "start": 183.4,
+        "end": 188.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 202.33700000000002,
+        "end": 259.40200000000004,
+        "average": 230.86950000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3384615384615385,
+        "text_similarity": 0.5812298655509949,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer gives entirely different timestamps and reverses the temporal relation (highlight at 183.4s vs correct ~445.737s during 445.195\u2013445.799), and introduces inconsistent details, so it does not match the ground truth."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker on the right explains the 'Primary Expectations' on the canvas, when does he start explaining the 'Secondary Expectations'?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 517.335,
+        "end": 519.689
+      },
+      "pred_interval": {
+        "start": 227.0,
+        "end": 231.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 290.33500000000004,
+        "end": 288.68899999999996,
+        "average": 289.512
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24489795918367344,
+        "text_similarity": 0.5875707864761353,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gives a single incorrect start time (227.0s) and omits the correct start (517.335s) and finish (519.689s) timestamps, so it is factually inaccurate and incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Jakob finishes asking about the participant reaction, when does the speaker explain his 'rule of thumb' about participant numbers?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 600.393,
+        "end": 607.022
+      },
+      "pred_interval": {
+        "start": 527.360248447205,
+        "end": 611.0850072455714
+      },
+      "iou": 0.07917610149184875,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 73.03275155279505,
+        "end": 4.063007245571384,
+        "average": 38.547879399183216
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11594202898550725,
+        "text_similarity": 0.2648543119430542,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly conveys that the rule-of-thumb is given after the anchor discussion and concerns participant numbers, but it fails to provide the timestamps from the reference and introduces unsupported specifics (preferring groups of eight and mention of 12 participants) that are not in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker says, 'The first stage is collect', when is the 'Collect' block in the diagram highlighted?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 701.24,
+        "end": 703.9
+      },
+      "pred_interval": {
+        "start": 150.44444444444443,
+        "end": 154.44444444444443
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 550.7955555555556,
+        "end": 549.4555555555555,
+        "average": 550.1255555555556
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25925925925925924,
+        "text_similarity": 0.5581396818161011,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives completely different timestamps (150.44s vs 701.24s) and says the block highlights ~4s after the utterance, contradicting the ground truth that the 'Collect' block highlights immediately at 701.24s and stays highlighted until 703.9s; key timing and relation are incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker finishes saying the 'sailboat' is a great exercise for the collect phase, when is the blue 'Sailboat' sticky note placed in the 'Day 1' column?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 886.1,
+        "end": 887.0
+      },
+      "pred_interval": {
+        "start": 57.541666666666664,
+        "end": 61.302083333333336
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 828.5583333333334,
+        "end": 825.6979166666666,
+        "average": 827.128125
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.29268292682926833,
+        "text_similarity": 0.521503210067749,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly captures that the blue 'Sailboat' sticky is placed immediately after the speaker's explanation (once finished), but it omits the key precise timing details (886.1s finish and 887.0s placement) requested in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes explaining the 'sneaky notes' about the workshop, when does the camera transition to show the speaker?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 966.0,
+        "end": 969.8
+      },
+      "pred_interval": {
+        "start": 113.125,
+        "end": 115.70833333333333
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 852.875,
+        "end": 854.0916666666666,
+        "average": 853.4833333333333
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4477611940298507,
+        "text_similarity": 0.617059051990509,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer gives a completely different timestamp (113.875s) that contradicts the correct times (966.0s to 968.8s) and therefore fails to match the reference event timing."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker finishes asking to move something out of the way to reveal the sailboat, when does the camera zoom in on the whiteboard behind him?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 1039.0,
+        "end": 1049.0
+      },
+      "pred_interval": {
+        "start": 70.625,
+        "end": 73.33333333333333
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 968.375,
+        "end": 975.6666666666666,
+        "average": 972.0208333333333
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.5066666666666666,
+        "text_similarity": 0.654590368270874,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the general sequence (camera zooms after the speaker's request) but gives a substantially incorrect timestamp (70.625s vs 1039s/1049s) and adds/fuzzes details about what is focused, so it fails on key factual timing and specificity."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker introduces the 'create phase', when does he explain that they don't want to jump straight into creating solutions but rather look for inspiration?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1154.621,
+        "end": 1160.586
+      },
+      "pred_interval": {
+        "start": 38.833333333333336,
+        "end": 44.58333333333333
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1115.7876666666668,
+        "end": 1116.0026666666668,
+        "average": 1115.8951666666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23529411764705882,
+        "text_similarity": 0.21998082101345062,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer correctly identifies the content (seeking inspiration rather than immediately creating) but gives an incorrect timestamp ('1:15' vs. the correct ~1154.621s), so the temporal information is wrong."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes asking what would be a great exercise to get inspiration from, when does someone suggest 'Lightning demos'?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1178.9,
+        "end": 1181.0
+      },
+      "pred_interval": {
+        "start": 1083.611111111111,
+        "end": 1100.7222222222222
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 95.288888888889,
+        "end": 80.27777777777783,
+        "average": 87.78333333333342
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22727272727272727,
+        "text_similarity": 0.5560755729675293,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly indicates 'Lightning demos' follows the question, but it incorrectly attributes it to the speaker (it was a background voice) and gives the wrong timestamp (1:36 vs ~1178.9s / 19:38.9), omitting the correct end time."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker states that lightning demos would be the next exercise, when does he start talking about a great secret for workshoppers?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1251.717,
+        "end": 1260.0
+      },
+      "pred_interval": {
+        "start": 1247.5,
+        "end": 1259.1666666666667
+      },
+      "iou": 0.5959733333333316,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 1,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 4.217000000000098,
+        "end": 0.8333333333332575,
+        "average": 2.525166666666678
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2857142857142857,
+        "text_similarity": 0.6501334309577942,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly reports the order (lightning demos then the 'secret') but the timestamps are wildly incorrect\u2014the reference events occur around 1251\u20131260s (~20:51\u201321:00), not 1:47/1:56\u2014so it fails on key factual timing."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker says 'Oh, shit', when does he explain why Jonathan is needed?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1273.1,
+        "end": 1275.8
+      },
+      "pred_interval": {
+        "start": 12.294471447144716,
+        "end": 26.196250502079927
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1260.805528552855,
+        "end": 1249.60374949792,
+        "average": 1255.2046390253877
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3023255813953488,
+        "text_similarity": 0.8311326503753662,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely misidentifies anchor vs. target and gives unrelated timestamps (swapping 'Oh, shit' into the target and assigning different start/end times); only the 'after' relation matches, so it is almost entirely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker states that making workshops is not rocket science, when does he elaborate on what *is* rocket science?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1291.174,
+        "end": 1299.103
+      },
+      "pred_interval": {
+        "start": 55.74232423242324,
+        "end": 57.91713731713732
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1235.4316757675767,
+        "end": 1241.1858626828628,
+        "average": 1238.3087692252197
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.34782608695652173,
+        "text_similarity": 0.8466720581054688,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer correctly captures the anchor phrase, the paraphrased target content, and the 'after' relation, but the timestamps (both anchor and target start/end) are substantially incorrect and the target duration is mismatched, so it fails to accurately align temporally with the ground truth."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker states 'This is the Workshopper Master course', when does the screen fully transition to show the course interface?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1315.0,
+        "end": 1316.0
+      },
+      "pred_interval": {
+        "start": 111.19447144714472,
+        "end": 112.30515873015872
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1203.8055285528553,
+        "end": 1203.6948412698412,
+        "average": 1203.7501849113482
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4269662921348315,
+        "text_similarity": 0.8521862030029297,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the two events (speaker saying the phrase and a subsequent screen transition) and their order, but the timestamp intervals are drastically different from the ground truth and the relation label ('after' vs 'once_finished') and interval boundaries do not match, so it fails to align semantically and temporally with the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker initially says he is going to go for the 'concept' exercise, when does he change his mind and say he is going to go for '10 for 10'?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1451.7,
+        "end": 1453.6
+      },
+      "pred_interval": {
+        "start": 26.0,
+        "end": 62.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1425.7,
+        "end": 1391.6,
+        "average": 1408.65
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19607843137254902,
+        "text_similarity": 0.4752335548400879,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes the speaker switches to '10 for 10', but it fails to provide the specific timestamp (the key element in the reference) and adds unverified details about motives and a visual cue, which are not stated in the ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker talks about not wanting people to come up with 'full visual concepts' in one day, when does he reiterate his decision to go for '10 for 10'?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1486.912,
+        "end": 1488.273
+      },
+      "pred_interval": {
+        "start": 58.0,
+        "end": 69.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1428.912,
+        "end": 1419.273,
+        "average": 1424.0925
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17073170731707316,
+        "text_similarity": 0.5034000277519226,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the speaker's rationale for choosing '10 for 10' but fails to provide the required temporal markers (the anchor and target timestamps) and thus omits the key 'when' information specified in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker says 'Exactly, exactly', when does he introduce the 'Action Board' concept on the Miro board?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1597.2,
+        "end": 1599.0
+      },
+      "pred_interval": {
+        "start": 34.5,
+        "end": 36.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1562.7,
+        "end": 1562.2,
+        "average": 1562.45
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16666666666666669,
+        "text_similarity": 0.44066789746284485,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer gives a completely incorrect timestamp and context (34.5s after explaining the 'Impact' scale) that contradicts the ground truth timing (~1595\u20131599s) and sequence, so it fails to match the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker explains the 'Impact' (Y-axis) of the Action Board, when does he give an example idea for it?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1626.5,
+        "end": 1630.0
+      },
+      "pred_interval": {
+        "start": 14.9,
+        "end": 16.1
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1611.6,
+        "end": 1613.9,
+        "average": 1612.75
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18666666666666665,
+        "text_similarity": 0.4246024489402771,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction correctly identifies the example idea ('weekly standup') and its timing (14.9s), which matches the reference when converting absolute to relative time and directly follows the Y-axis explanation."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker explains that every task will have a name, when does he mention the 'Action Board' is complex?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "gt_interval": {
+        "start": 1822.2,
+        "end": 1826.5
+      },
+      "pred_interval": {
+        "start": 31.733333333333334,
+        "end": 35.233333333333334
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1790.4666666666667,
+        "end": 1791.2666666666667,
+        "average": 1790.8666666666668
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27027027027027023,
+        "text_similarity": 0.5625606775283813,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly indicates the mention occurs after the task-name explanation, but the provided timestamps (31.7s / 33.7s) are far from the reference times (1822.2\u20131826.5s) and are internally inconsistent, so the answer is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the interviewer asks if the speaker would switch out any exercises for a fully remote workshop, when does the speaker initially state that he always switches out exercises?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "gt_interval": {
+        "start": 1998.25,
+        "end": 1999.0
+      },
+      "pred_interval": {
+        "start": 159.20833333333334,
+        "end": 193.2421875
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1839.0416666666667,
+        "end": 1805.7578125,
+        "average": 1822.3997395833335
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2736842105263158,
+        "text_similarity": 0.49094027280807495,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While the predicted relation ('after') matches the reference, the predicted event timestamps are drastically different and the anchor event is mischaracterized, so it fails to identify the correct timing of the speaker's 'I always do' response."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker mentions he switches out 50% of exercises in a normal workshop, when does he reveal his personal preference for not having concept or storyboard exercises in a remote workshop?",
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "gt_interval": {
+        "start": 2046.766,
+        "end": 2056.963
+      },
+      "pred_interval": {
+        "start": 193.57142857142858,
+        "end": 223.32440476190476
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1853.1945714285714,
+        "end": 1833.6385952380954,
+        "average": 1843.4165833333334
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2558139534883721,
+        "text_similarity": 0.6050034761428833,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer correctly identifies the temporal relation ('after') but the event timestamps are largely incorrect and inconsistent (E1 and E2 start times differ greatly from the reference, and the E2 end time is implausible), so it fails to match the correct annotations."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker calls for strong, ambitious leadership, when does she mention that remarkable progress has been made?",
+      "video_id": "XSNTh2FcHKc",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 25.506,
+        "end": 29.532
+      },
+      "pred_interval": {
+        "start": 17.0,
+        "end": 17.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 8.506,
+        "end": 12.232,
+        "average": 10.369
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24615384615384614,
+        "text_similarity": 0.6424746513366699,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly gives the relationship ('after') and roughly references the 'remarkable progress' utterance, but it grossly misstates E1's time (17.0s vs ~0.10s) and places E2 later than the true start, so key timing details are incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker mentions societies being 'divided by growing polarization', when does she talk about being 'corroded by digital disinformation'?",
+      "video_id": "XSNTh2FcHKc",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 47.318,
+        "end": 49.038
+      },
+      "pred_interval": {
+        "start": 170.0,
+        "end": 171.1
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 122.682,
+        "end": 122.062,
+        "average": 122.372
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22222222222222224,
+        "text_similarity": 0.7905412316322327,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the order ('after') and the phrases, but the provided timestamps are grossly incorrect compared to the ground truth, so it fails on key factual details."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker says 'The military attack on Ukraine is putting at risk countless lives', when does she report that '422,000 people have fled the country'?",
+      "video_id": "XSNTh2FcHKc",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 113.303,
+        "end": 118.623
+      },
+      "pred_interval": {
+        "start": 197.3,
+        "end": 197.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 83.99700000000001,
+        "end": 79.277,
+        "average": 81.637
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.463768115942029,
+        "text_similarity": 0.7605959177017212,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction gets the semantic relation right ('after') and identifies the quoted content, but the timestamps are substantially incorrect (should be ~64.8\u201368.2s and ~113.3\u2013118.6s), so it is factually inaccurate."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker finishes saying that people's aspirations and rights should be at the center of deliberations, when does she start talking about investment in multilateral and human rights-based action?",
+      "video_id": "XSNTh2FcHKc",
+      "video_number": "002",
+      "segment": {
+        "start": 150.0,
+        "end": 310.0
+      },
+      "gt_interval": {
+        "start": 170.0,
+        "end": 188.39
+      },
+      "pred_interval": {
+        "start": 150.0,
+        "end": 210.0
+      },
+      "iou": 0.3064999999999998,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 20.0,
+        "end": 21.610000000000014,
+        "average": 20.805000000000007
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11267605633802817,
+        "text_similarity": 0.1799418181180954,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies that discussion of investment follows the anchor point, but it omits the required precise timestamps and the note that the target starts at 170.0s (after E1 ends at 168.99s), and it misleadingly implies it was immediate."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes talking about action to eradicate discrimination, when does she start talking about action related to digital technology?",
+      "video_id": "XSNTh2FcHKc",
+      "video_number": "002",
+      "segment": {
+        "start": 150.0,
+        "end": 310.0
+      },
+      "gt_interval": {
+        "start": 230.43,
+        "end": 236.31
+      },
+      "pred_interval": {
+        "start": 150.0,
+        "end": 296.0
+      },
+      "iou": 0.0402739726027397,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 80.43,
+        "end": 59.69,
+        "average": 70.06
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.125,
+        "text_similarity": 0.41645458340644836,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies a topic shift to digital technology but fails to provide the requested timing details (E1 ends at 229.26s; E2 starts at 230.25s and runs to 236.31s), so it is incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker mentions the challenge of climate change, when does the United Nations Human Rights logo appear?",
+      "video_id": "XSNTh2FcHKc",
+      "video_number": "002",
+      "segment": {
+        "start": 150.0,
+        "end": 310.0
+      },
+      "gt_interval": {
+        "start": 306.27,
+        "end": 309.0
+      },
+      "pred_interval": {
+        "start": 150.0,
+        "end": 310.0
+      },
+      "iou": 0.017062500000000112,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 156.26999999999998,
+        "end": 1.0,
+        "average": 78.63499999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2962962962962963,
+        "text_similarity": 0.3057301640510559,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is vague and lacks the precise timing given in the correct answer (306.27\u2013309.0s); while it correctly implies the logo appears after the discussion, it fails to provide the key timestamps and misleadingly describes it as 'the very end' rather than the specific interval."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Mel finishes introducing himself, when does Denise introduce herself?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 24.3,
+        "end": 28.62
+      },
+      "pred_interval": {
+        "start": 28.4156680678908,
+        "end": 30.548809346845477
+      },
+      "iou": 0.03269933850875974,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 4.115668067890798,
+        "end": 1.9288093468454761,
+        "average": 3.022238707368137
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2909090909090909,
+        "text_similarity": 0.63360196352005,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While the predicted answer correctly identifies the temporal relation as 'after', its timestamps and durations are largely incorrect (E1/E2 times differ substantially from the ground truth and the target is given as zero-length), so it fails to match the key factual details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Mel finishes stating he's been mostly in the operations world, when does he begin to discuss the purpose of the conversation?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 52.0,
+        "end": 59.81
+      },
+      "pred_interval": {
+        "start": 104.28828727228539,
+        "end": 108.93974407929318
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 52.28828727228539,
+        "end": 49.129744079293175,
+        "average": 50.70901567578928
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2,
+        "text_similarity": 0.6087004542350769,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction gives entirely different time spans and quoted content (starting ~104s vs correct ~51\u201359s) and assigns the relation 'after' instead of the correct 'once_finished', so it does not match the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the woman finishes stating that there is no true definition of DevOps, when does the man begin talking about the philosophy of DevOps being adopted across security, AI, and other areas?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 188.58,
+        "end": 200.778
+      },
+      "pred_interval": {
+        "start": 22.083333333333332,
+        "end": 60.9375
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 166.49666666666667,
+        "end": 139.8405,
+        "average": 153.16858333333334
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11538461538461538,
+        "text_similarity": 0.4893677234649658,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "Completely incorrect: both anchor and target event times and contents do not match the reference (wrong segments quoted), and the relationship and timing are misaligned with the ground truth."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man states that they get the viewpoint from operations, when does he mention what he has made a career out of?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 343.7,
+        "end": 344.6
+      },
+      "pred_interval": {
+        "start": 23.1,
+        "end": 27.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 320.59999999999997,
+        "end": 317.6,
+        "average": 319.1
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12121212121212123,
+        "text_similarity": 0.06879836320877075,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction identifies the 'ops side' career but gives a completely incorrect timestamp (\u224823.1s vs the correct target at 343.7\u2013344.6s) and thus contradicts the reference timing."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man explicitly says 'that's all you' referring to writing applications, when does the woman express surprise that the ops team does Agile and Scrum?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 387.6,
+        "end": 395.3
+      },
+      "pred_interval": {
+        "start": 52.6,
+        "end": 59.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 335.0,
+        "end": 336.3,
+        "average": 335.65
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1515151515151515,
+        "text_similarity": 0.09196676313877106,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is temporally incorrect\u2014placing the target at ~52.6s rather than ~387.6\u2013395.3s\u2014so it fails to match the ground truth timing despite noting the target occurs after the anchor."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the man finishes describing how a newly joined team member accidentally broke a core peer link, when does the woman remark that it was luckily a development environment?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 495.733,
+        "end": 499.963
+      },
+      "pred_interval": {
+        "start": 297.7,
+        "end": 302.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 198.03300000000002,
+        "end": 197.96300000000002,
+        "average": 197.99800000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.06896551724137931,
+        "text_similarity": 0.18450582027435303,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction names a single time (~297.7s) shortly after the anchor, but it contradicts the reference timings (target around 499\u2013531s) and omits the anchor/target interval detail and the stated immediate succession, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man finishes explaining what he didn't want to do, when does he state what they want to do instead?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 552.027,
+        "end": 562.638
+      },
+      "pred_interval": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "iou": 0.05052857142857138,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 42.027000000000044,
+        "end": 157.36199999999997,
+        "average": 99.6945
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.075,
+        "text_similarity": 0.23672889173030853,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general intended approach (focus on fixing/preventing rather than blaming) but gives grossly incorrect timestamps and an overbroad duration, adding unsupported temporal claims and thereby failing to match the reference's precise timing."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the woman asks the man to define 'culture of safety', when does the man begin to define it?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 587.0,
+        "end": 626.373
+      },
+      "pred_interval": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "iou": 0.18749047619047643,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 77.0,
+        "end": 93.62699999999995,
+        "average": 85.31349999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17543859649122806,
+        "text_similarity": 0.43936651945114136,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction is imprecise and partly incorrect: it places the man's definition start around 580s whereas the reference specifies 587s, misstates the woman's ask timing, and omits the quoted start and end timestamps, so it does not align with the ground truth."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the woman discusses the fear developers have due to 'Git blame' and their names being attached to code changes, when does she mention the typical dev environment's advantage?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 676.5,
+        "end": 684.11
+      },
+      "pred_interval": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "iou": 0.036238095238095305,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 166.5,
+        "end": 35.889999999999986,
+        "average": 101.195
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25974025974025977,
+        "text_similarity": 0.5895411968231201,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the topics discussed (Git blame and dev environment advantages) but the timestamps are substantially incorrect (off by ~18\u201332 seconds), so it fails to match the correct temporal alignment."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man asks if network configuration mistakes should be a big deal, when does he suggest focusing on the process?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 704.5,
+        "end": 707.6
+      },
+      "pred_interval": {
+        "start": 698.5714285714286,
+        "end": 715.7142857142858
+      },
+      "iou": 0.1808333333333338,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 5.928571428571445,
+        "end": 8.114285714285757,
+        "average": 7.021428571428601
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2769230769230769,
+        "text_similarity": 0.5851507186889648,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly captures the relation (the suggestion occurs after the question) and its interval encompasses the true event window, but the provided timestamps are imprecise and overly broad compared to the reference bounds."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man suggests a linter to check network configuration, when does the woman describe their colleague Adrian's CI/CD pipeline?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 736.0,
+        "end": 742.0
+      },
+      "pred_interval": {
+        "start": 723.9285714285714,
+        "end": 743.75
+      },
+      "iou": 0.30270270270270294,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 12.071428571428555,
+        "end": 1.75,
+        "average": 6.910714285714278
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.31884057971014496,
+        "text_similarity": 0.4703361988067627,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies the event and that it occurs after the man's suggestion and its interval overlaps the reference, but the reported start time (~723.93s) is ~12s earlier than the ground truth (736.0s) and the end time is slightly off, so the timing is not accurately matched."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man finishes asking if viewers would like to know more about ops, when does the woman mention the live stream and encourage comments?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 870.0,
+        "end": 928.0
+      },
+      "gt_interval": {
+        "start": 875.8,
+        "end": 880.0
+      },
+      "pred_interval": {
+        "start": 52.625,
+        "end": 55.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 823.175,
+        "end": 825.0,
+        "average": 824.0875
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23376623376623376,
+        "text_similarity": 0.6797484159469604,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is largely incorrect: the event times and quoted content do not match the reference (different start/end times and speaker utterances). While both state an 'after' relation, the core temporal annotations and content are contradicted, so the answer fails to align with the ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the man finishes saying they will do research if they don't have the experiences, when does the woman suggest bringing in guests?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 870.0,
+        "end": 928.0
+      },
+      "gt_interval": {
+        "start": 891.9,
+        "end": 892.8
+      },
+      "pred_interval": {
+        "start": 72.125,
+        "end": 76.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 819.775,
+        "end": 816.3,
+        "average": 818.0374999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19753086419753085,
+        "text_similarity": 0.618581235408783,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction mostly fails: timestamps and utterance contents are wildly incorrect and the target end time is wrong; only the vague temporal relation ('after') loosely matches 'once_finished', so it merits a very low score."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the man finishes saying 'Thanks for watching', when does the woman say 'Thank you'?",
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "segment": {
+        "start": 870.0,
+        "end": 928.0
+      },
+      "gt_interval": {
+        "start": 917.9,
+        "end": 918.4
+      },
+      "pred_interval": {
+        "start": 91.375,
+        "end": 93.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 826.525,
+        "end": 825.4,
+        "average": 825.9625
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21052631578947367,
+        "text_similarity": 0.6353161931037903,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only captures the general ordering (woman speaks after the man) but the timestamps are vastly incorrect and inconsistent with the reference (917.4/917.9\u2013918.4 vs 91.375/93.0\u201394.0), and it fails to provide the correct start/end times, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the host finishes introducing the IPLD sync meeting, when does Eric start describing the new unified site for documentation?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 30.785,
+        "end": 44.825
+      },
+      "pred_interval": {
+        "start": 31.4,
+        "end": 35.8
+      },
+      "iou": 0.3133903133903132,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 0.6149999999999984,
+        "end": 9.025000000000006,
+        "average": 4.820000000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22535211267605634,
+        "text_similarity": 0.7185308933258057,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer gets only the temporal relation ('after') right but misstates all key timestamps: E1 is placed at 31.4s instead of 9.249s, E2 start is off (~34.6s vs 30.785s) and the end time is drastically underestimated (35.8s vs 44.825s), so it is largely factually incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker (bottom) states that IPLD Prime integration is going reasonably well, when does he elaborate on running the branch on gateway machines?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 201.991,
+        "end": 224.227
+      },
+      "pred_interval": {
+        "start": 209.5,
+        "end": 215.5
+      },
+      "iou": 0.26983270372369145,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.508999999999986,
+        "end": 8.727000000000004,
+        "average": 8.117999999999995
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.33333333333333337,
+        "text_similarity": 0.46994829177856445,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction preserves the ordering (anchor then target) but the timestamps are substantially off (anchor ~8.8s late, target ~9.8s late) and it omits the correct long duration for the target event, so it does not match the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker (bottom) mentions the `IPFS DAG get` and `IPFS DAG put` subcommands, when does he describe the unresolved design question for getting data back out?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 279.209,
+        "end": 285.504
+      },
+      "pred_interval": {
+        "start": 342.8,
+        "end": 366.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 63.59100000000001,
+        "end": 80.49599999999998,
+        "average": 72.0435
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24242424242424243,
+        "text_similarity": 0.539162814617157,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gives substantially different timestamps (343.1s/354.5s) and extra details that contradict the reference event timing (279.209\u2013285.504s); it does not match the correct answer's anchor/elaboration relationship."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker (bottom) mentions that the `go-ipfs-commands` library knows how to serialize data using Go's default serializers, when does he explain how it handles IPLD nodes?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 351.773,
+        "end": 358.704
+      },
+      "pred_interval": {
+        "start": 408.0,
+        "end": 416.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 56.226999999999975,
+        "end": 57.79599999999999,
+        "average": 57.011499999999984
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.26666666666666666,
+        "text_similarity": 0.7941779494285583,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction identifies both events and their order, but the reported timestamps are far from the ground truth (off by ~67s), so it fails to match the correct temporal locations."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker (bottom) describes the process of passing an IPLD node through a codec, when does he mention asking for DAG JSON and DAG CBOR?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 360.0,
+        "end": 367.5
+      },
+      "pred_interval": {
+        "start": 33.2,
+        "end": 37.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 326.8,
+        "end": 330.1,
+        "average": 328.45000000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2105263157894737,
+        "text_similarity": 0.5270475149154663,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction incorrectly gives 33.2s instead of the correct ~360.0\u2013367.5s interval; while it notes the mention follows the codec discussion, the timestamp is wildly wrong, so the answer is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker (bottom) finishes explaining that some IPFS data won't be an IPLD node but an arbitrary struct, when does he describe the default JSON serializer using reflection?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 387.8,
+        "end": 392.0
+      },
+      "pred_interval": {
+        "start": 36.5,
+        "end": 39.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 351.3,
+        "end": 352.7,
+        "average": 352.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2083333333333333,
+        "text_similarity": 0.5428953170776367,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamp (36.5s) is far from the correct 387.8\u2013392.0s window and misstates the context; it does not match the anchor/target relation, so it is incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker on the left says he doesn't understand about serialization boundaries, when does the speaker at the bottom admit to being confused?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 530.0,
+        "end": 532.4
+      },
+      "pred_interval": {
+        "start": 42.66666666666667,
+        "end": 45.55555555555556
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 487.3333333333333,
+        "end": 486.84444444444443,
+        "average": 487.08888888888885
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.5,
+        "text_similarity": 0.5560811758041382,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the relative order ('after') but gives entirely incorrect timestamps and omits the bottom speaker's end time interval, so it fails on key factual details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker on the right explains that subcommands are accessed via command line and HTTP interface, when does the speaker on the left state he has a lot of questions?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 592.967,
+        "end": 598.215
+      },
+      "pred_interval": {
+        "start": 63.22222222222222,
+        "end": 65.33333333333333
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 529.7447777777778,
+        "end": 532.8816666666667,
+        "average": 531.3132222222223
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.6,
+        "text_similarity": 0.5470930933952332,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction gets the temporal relation ('after') right but the timestamps are wildly inaccurate compared to the reference (off by several minutes) and it fails to match the correct start/end interval, so key factual timing is incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker at the bottom asks why one would get something that is not IPLD, when does the speaker on the right state that all IPFS commands have an encoding flag?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 627.849,
+        "end": 631.972
+      },
+      "pred_interval": {
+        "start": 72.66666666666667,
+        "end": 74.55555555555556
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 555.1823333333334,
+        "end": 557.4164444444444,
+        "average": 556.2993888888889
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.5882352941176471,
+        "text_similarity": 0.7901468276977539,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly states the 'after' relationship, but the timestamps are substantially incorrect (72.6s vs 623.0s and 74.5s vs 627.849\u2013631.972s) and it omits the end time for the second event."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man in the top-right finishes speaking about the absence of a serialization design document, when does he state what step one would be?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 751.761,
+        "end": 756.03
+      },
+      "pred_interval": {
+        "start": 864.3137254901961,
+        "end": 884.41084772607
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 112.55272549019617,
+        "end": 128.38084772607,
+        "average": 120.46678660813308
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22429906542056072,
+        "text_similarity": 0.6122186183929443,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (the 'step one' remark occurs after the design-document remark) but the provided timestamps substantially mismatch the reference, so the temporal alignment is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "During the man in the top-right's explanation of Daniel working on Go interfaces for GoIPLD Prime, when does he mention that it is implemented using Golang reflection?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 800.254,
+        "end": 802.254
+      },
+      "pred_interval": {
+        "start": 804.1891873278055,
+        "end": 826.8268273542783
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.9351873278054654,
+        "end": 24.572827354278274,
+        "average": 14.25400734104187
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24242424242424238,
+        "text_similarity": 0.726528525352478,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies that the speaker mentions Golang reflection and labels the relation as 'during', but the provided anchor and target timestamps are substantially incorrect and do not match the ground truth, so the temporal alignment is largely wrong."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the man in the bottom section asks 'Do you need tags?', when does the man in the top-right reply?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 872.317,
+        "end": 874.22
+      },
+      "pred_interval": {
+        "start": 872.7193483289192,
+        "end": 874.5667627080373
+      },
+      "iou": 0.6670266449522553,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 1,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 0.4023483289191745,
+        "end": 0.3467627080373177,
+        "average": 0.3745555184782461
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21428571428571427,
+        "text_similarity": 0.5908502340316772,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies both events and the 'after' relation, but the timestamps deviate by about 2+ seconds from the reference and the end time for E1 is omitted, so it lacks temporal precision."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker expresses excitement, when does he hesitate to report on the progress bar and then talks about its current status?",
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "segment": {
+        "start": 870.0,
+        "end": 1040.0
+      },
+      "gt_interval": {
+        "start": 920.0,
+        "end": 928.4
+      },
+      "pred_interval": {
+        "start": 723.2184792363429,
+        "end": 737.7086437948155
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 196.7815207636571,
+        "end": 190.69135620518443,
+        "average": 193.73643848442077
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11363636363636363,
+        "text_similarity": 0.41134577989578247,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the temporal relation right (hesitation before the progress-bar report) but the provided timestamps are completely different from the ground-truth anchor/target times, so key factual elements are incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker mentions the ipld-prime version tag, when does he state that Go 1.16 has been dropped from the CI system?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 104.183,
+        "end": 108.248
+      },
+      "pred_interval": {
+        "start": 46.0232558139535,
+        "end": 60.04259763201308
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 58.15974418604651,
+        "end": 48.20540236798693,
+        "average": 53.182573277016715
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.32,
+        "text_similarity": 0.6977630257606506,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the temporal relation (E2 after E1) but the reported timestamps are substantially incorrect and include an unverified version tag, so it fails on factual accuracy and key timing details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker mentions Go 1.16 being dropped, when does he start talking about the amount of work done in Bynode?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 118.086,
+        "end": 123.817
+      },
+      "pred_interval": {
+        "start": 122.7572707600234,
+        "end": 139.57835315594323
+      },
+      "iou": 0.0493072690685592,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 4.671270760023404,
+        "end": 15.76135315594324,
+        "average": 10.216311957983322
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3174603174603175,
+        "text_similarity": 0.7204066514968872,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction hallucinates an incorrect timestamp for the Go 1.16 mention (122.757s) and fails to provide the correct start/end times for both events; while it asserts a temporal sequence, the reported times contradict the reference (Go at ~104\u2013108s, Bynode at ~118\u2013123s)."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker mentions that the schema specification will cover about 90%, when does he state that this 90% is the most used?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 170.6,
+        "end": 172.9
+      },
+      "pred_interval": {
+        "start": 25.841269841269842,
+        "end": 28.78306878306878
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 144.75873015873015,
+        "end": 144.11693121693122,
+        "average": 144.43783068783068
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.45556095242500305,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly preserves the order (the second remark occurs after the first) but gives completely different and incorrect timestamps and duration compared to the reference, so it fails on factual alignment."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker says that CIDs can now be obtained as emojis and that it's a valid base encoding, when does he ask Maeve to speak next?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 324.2,
+        "end": 329.5
+      },
+      "pred_interval": {
+        "start": 39.21568621568622,
+        "end": 40.84656084656085
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 284.98431378431377,
+        "end": 288.65343915343914,
+        "average": 286.81887646887645
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3508771929824561,
+        "text_similarity": 0.7735552191734314,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "While the prediction correctly identifies that the speaker asks Maeve next (the 'after' relation), the timestamp is grossly incorrect (40.85s vs the reference ~324.2\u2013329.5s), so it is factually wrong and misleading."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Maeve finishes saying she has more time in the next few weeks for IPLD stuff, when does she explain she will be helping Rod with JavaScript IPLD migration?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 337.6,
+        "end": 347.9
+      },
+      "pred_interval": {
+        "start": 394.5578231292517,
+        "end": 397.4557823129252
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 56.957823129251665,
+        "end": 49.5557823129252,
+        "average": 53.256802721088434
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2647058823529412,
+        "text_similarity": 0.7051182985305786,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted timestamps and span differ substantially from the reference (predicted ~394.56s/397.46s vs reference 336.6s/337.6\u2013347.9s), misaligning both event timing and duration, so it is not a correct match."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the woman says \"Yeah, hi\", when does she explain she'll help Rod with migrating JS IPLD stuff?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 336.95,
+        "end": 347.19
+      },
+      "pred_interval": {
+        "start": 42.958333333333336,
+        "end": 51.395833333333336
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 293.9916666666667,
+        "end": 295.7941666666667,
+        "average": 294.8929166666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.303030303030303,
+        "text_similarity": 0.7034017443656921,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives completely different timestamps and incorrect event descriptions for both anchor and target; only the temporal relation ('after') matches the reference, so it largely fails to align with the ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the woman states that \"TypeScript doesn't support JSDoc dependencies because it sucks\", when does she confirm that it doesn't work after testing?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 362.18,
+        "end": 367.4
+      },
+      "pred_interval": {
+        "start": 49.520833333333336,
+        "end": 52.27916666666666
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 312.6591666666667,
+        "end": 315.12083333333334,
+        "average": 313.89
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3125,
+        "text_similarity": 0.6723731756210327,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly indicates the confirmation follows the initial statement, but the timestamps are entirely different from the reference and the relation ('after' vs 'once_finished') is less precise, so it fails to match the correct timing and relation."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Rod suggests that the new docs should be merged now, when does the woman thank someone for formatting that stuff?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 417.255,
+        "end": 421.255
+      },
+      "pred_interval": {
+        "start": 58.020833333333336,
+        "end": 60.87500000000001
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 359.2341666666667,
+        "end": 360.38,
+        "average": 359.80708333333337
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3076923076923077,
+        "text_similarity": 0.758211612701416,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the general sequence (she thanks someone after the mention) but the timestamps are completely different from the reference and the relation label is less precise than the correct 'once_finished', so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Maeve finishes talking about how to deal with arbitrary IPLD data, when does she mention ways to download stuff as DAG, CBOR, or CAR files?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 528.5,
+        "end": 536.239
+      },
+      "pred_interval": {
+        "start": 45.4,
+        "end": 59.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 483.1,
+        "end": 476.439,
+        "average": 479.7695
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.07999999999999999,
+        "text_similarity": 0.13120876252651215,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction gives timestamps (~45\u201360s) that are completely different from the referenced interval (~528.5\u2013536.2s) and therefore contradicts the correct answer; it includes incorrect timing and context."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While Maeve explains that adopting patch for writable gateways makes modifying existing IPLD data a lot easier, when does she mention not wanting to import GoIPLDprime?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 567.149,
+        "end": 581.649
+      },
+      "pred_interval": {
+        "start": 66.4,
+        "end": 71.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 500.749,
+        "end": 510.249,
+        "average": 505.499
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.03773584905660378,
+        "text_similarity": 0.09707711637020111,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted timestamps (66.4\u201371.4s) are far from the reference (565.53\u2013581.65s), and the predicted relative timing (\u201cafter discussing patch adoption\u201d) contradicts the reference which places the remark within the longer explanation of the anchor; thus the answer is largely incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Maeve says 'I think that's about it', when does Aidin (bottom right) start talking about Go IPFS getting a new name?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 686.438,
+        "end": 691.205
+      },
+      "pred_interval": {
+        "start": 726.2,
+        "end": 747.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 39.76200000000006,
+        "end": 56.194999999999936,
+        "average": 47.9785
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11111111111111112,
+        "text_similarity": 0.22463588416576385,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gives times (~726s) that are ~40s later than the ground truth (target starts at 686.438s) and misattributes the event; it therefore contradicts the correct timing and is essentially incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker announces the new name for Go IPFS, when does he describe the Kubo PR and its functionalities?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 698.0,
+        "end": 715.0
+      },
+      "pred_interval": {
+        "start": 535.0,
+        "end": 608.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 163.0,
+        "end": 107.0,
+        "average": 135.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1408450704225352,
+        "text_similarity": 0.1586250215768814,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction preserves the relative order (description after announcement) but the provided timestamps are far off from the reference (535/608s vs. 690.01/698\u2013715s), so the answer is largely incorrect on timing and completeness."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes explaining how Go IPFS imports the Wasm IPLD library, when does he state that the repo currently contains both Rust and Go code?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 777.253,
+        "end": 782.899
+      },
+      "pred_interval": {
+        "start": 658.0,
+        "end": 727.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 119.25300000000004,
+        "end": 55.899,
+        "average": 87.57600000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16129032258064516,
+        "text_similarity": 0.22684484720230103,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps (658.0s and 727.0s) do not match the reference anchor/target times (~777\u2013783s) and thus fail to locate the described event; the prediction is factually incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Maeve finishes her statement about IPLD gateway stuff becoming a workshop, when does Adin start talking about Data Agony IPFS?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 880.4,
+        "end": 926.4
+      },
+      "pred_interval": {
+        "start": 870.0,
+        "end": 920.3333333333334
+      },
+      "iou": 0.7080378250591031,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 1,
+        "R@0.7": 1
+      },
+      "mae": {
+        "start": 10.399999999999977,
+        "end": 6.066666666666606,
+        "average": 8.233333333333292
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27692307692307694,
+        "text_similarity": 0.59131920337677,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the relative order right (Adin speaks after Maeve) but gives incorrect timestamps (Maeve 870.0s vs 878.8s; Adin 920.0s vs 880.4s) and omits Adin's actual start time and duration, so it is largely inaccurate."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Adin finishes explaining why block limits exist and what can be done about them, when does Will Scott ask if he should go next?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 948.4,
+        "end": 949.0
+      },
+      "pred_interval": {
+        "start": 875.0,
+        "end": 883.3333333333334
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 73.39999999999998,
+        "end": 65.66666666666663,
+        "average": 69.5333333333333
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3098591549295775,
+        "text_similarity": 0.6819698810577393,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps directly contradict the ground truth (places Will asking before Adin finishes and uses entirely different times), misordering the events and providing incorrect temporal boundaries."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Maeve finishes asking Will to post a link to his work in the notes, when does Will begin describing IPFS shipyard/gateway prime?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 983.9,
+        "end": 1002.7
+      },
+      "pred_interval": {
+        "start": 923.0,
+        "end": 961.6666666666667
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 60.89999999999998,
+        "end": 41.0333333333333,
+        "average": 50.96666666666664
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25974025974025977,
+        "text_similarity": 0.7614283561706543,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction preserves the event order but gives substantially incorrect timestamps (E1: predicted 923.0s vs reference 979.4s; E2 start: predicted 961.67s vs reference 983.9s), so it fails to match the correct event boundaries and timings."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Will Scott finishes describing the AMPed implementation and its support, when does he start talking about the reframe work?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1090.19,
+        "end": 1091.751
+      },
+      "pred_interval": {
+        "start": 48.4,
+        "end": 55.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1041.79,
+        "end": 1036.751,
+        "average": 1039.2705
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2028985507246377,
+        "text_similarity": 0.579908549785614,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer uses entirely different event descriptions and timestamps (IPLD intro at 48.4s vs AMPed finish at 1089.247s) and thus fails to match the reference E1/E2 timing and content; only the temporal relation 'after' coincides, so almost no alignment."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Will Scott finishes summarizing his IPLD updates, when does Reid ask Mohsin to give his update?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1157.493,
+        "end": 1160.561
+      },
+      "pred_interval": {
+        "start": 100.4,
+        "end": 107.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1057.0929999999998,
+        "end": 1053.561,
+        "average": 1055.3269999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2894736842105264,
+        "text_similarity": 0.6504741311073303,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gives substantially different timestamps (100s\u2013110s vs 1156s\u20131160s) and mislabels the relation as 'after' instead of the correct 'once_finished' direct handover, so the events and temporal relation do not match."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Mohsin finishes stating the benchmarking results for his work, when does he start discussing the next steps and missing implementations?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1186.646,
+        "end": 1198.919
+      },
+      "pred_interval": {
+        "start": 120.6,
+        "end": 129.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1066.046,
+        "end": 1069.919,
+        "average": 1067.9825
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27848101265822783,
+        "text_similarity": 0.6449146270751953,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction preserves the event order (Mohsin finishes then discusses next steps) but gives substantially different timestamps and labels the relation as 'after' instead of the ground-truth direct transition 'once_finished', and the target event end time does not match, so it only earns minimal credit."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Mahesh Zaidi finishes explaining how the 'Patch' method copies everything, when does he start describing the 'amend' implementation's approach?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1284.388,
+        "end": 1304.057
+      },
+      "pred_interval": {
+        "start": 1059.4629595823087,
+        "end": 1118.3993639904195
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 224.9250404176912,
+        "end": 185.65763600958053,
+        "average": 205.29133821363587
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21951219512195125,
+        "text_similarity": 0.7317240238189697,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is largely incorrect: it misidentifies both anchor and target events (wrong speakers and descriptions), gives an incorrect timestamp, and hallucinates content; only the temporal relation 'after' matches the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the woman (Maeve) says she sees amend and patch as similar things at opposite ends of the interface, when does she start describing patch as high-level and amend as low-level?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1488.612,
+        "end": 1505.814
+      },
+      "pred_interval": {
+        "start": 1472.9166666666667,
+        "end": 1505.5416666666667
+      },
+      "iou": 0.5146212458963237,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 1,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 15.695333333333338,
+        "end": 0.27233333333333576,
+        "average": 7.983833333333337
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22448979591836735,
+        "text_similarity": 0.6785734295845032,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly identifies that the target (patch described as high-level) occurs after the anchor and its end nearly matches the reference, and the predicted target interval lies within the ground-truth E2 window; however it omits the referenced E1 end time and places the E2 start ~11s later than the ground truth, so timing is imprecise."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man in the bottom left (Rod) finishes stating that they need to resolve two things, when does the man in the top right (Mulesh) start speaking?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1603.875,
+        "end": 1609.432
+      },
+      "pred_interval": {
+        "start": 1609.6,
+        "end": 1614.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 5.724999999999909,
+        "end": 4.968000000000075,
+        "average": 5.346499999999992
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20289855072463767,
+        "text_similarity": 0.6647278666496277,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives timings that are significantly different from the reference (Rod true end 1603.433s vs predicted 1609.6s; Mulesh true start 1603.875s vs predicted 1614.4s), so it is factually incorrect though it preserves the speaker order."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man in the top right (Mulesh) finishes explaining that the code replaces traversal package updates, when does he make a series of hand gestures?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1698.128,
+        "end": 1702.016
+      },
+      "pred_interval": {
+        "start": 1694.0,
+        "end": 1709.6
+      },
+      "iou": 0.24923076923078014,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 4.127999999999929,
+        "end": 7.583999999999833,
+        "average": 5.855999999999881
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19718309859154928,
+        "text_similarity": 0.5207962989807129,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is largely incorrect: it gives the speech end at 1694.0s (actual 1639.778s) and places the gestures at 1709.6s (actual start 1698.128s, end 1702.016s), and even mislabels the gesture time as the sequence end. It does note the gestures occur after the speech but fails on the key timestamps and sequence details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Adin states that asynchronously expressing opinions is acceptable, when does Raud introduce a new topic?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "gt_interval": {
+        "start": 1860.2,
+        "end": 1861.8
+      },
+      "pred_interval": {
+        "start": 1599.3333333333335,
+        "end": 1627.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 260.86666666666656,
+        "end": 234.29999999999995,
+        "average": 247.58333333333326
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2264150943396226,
+        "text_similarity": 0.5739129185676575,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer gets the temporal relation ('after') right but fails on key facts: the timestamps are substantially different and the anchor speaker is misidentified (predict says Raud/1599.3s instead of Adin/1841.3s), so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Raud finishes mentioning the GoApplet Prime issue number, when does he start describing the concerns around performance and memory?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "gt_interval": {
+        "start": 1876.4,
+        "end": 1883.5
+      },
+      "pred_interval": {
+        "start": 1745.3333333333333,
+        "end": 1757.6666666666667
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 131.06666666666683,
+        "end": 125.83333333333326,
+        "average": 128.45000000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19047619047619047,
+        "text_similarity": 0.5502076148986816,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction preserves the event ordering (E2 occurs after E1) but has substantially incorrect timestamps (both E1 and E2 are ~126s earlier than the reference), omits E1's end time and E2's end time, and uses a weaker relation ('after' vs 'once_finished')."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "While Raud is explaining that they are using BindNode to push forward GoApplet Prime, when does he state that the code is simplified?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "gt_interval": {
+        "start": 1919.001,
+        "end": 1930.077
+      },
+      "pred_interval": {
+        "start": 1844.8333333333333,
+        "end": 1857.1666666666667
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 74.16766666666672,
+        "end": 72.91033333333326,
+        "average": 73.53899999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14285714285714288,
+        "text_similarity": 0.5371325016021729,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gives substantially different time stamps (much earlier) and labels the relation as 'after', which contradicts the reference intervals and the specified relation ('during'); key temporal facts are incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker describes GraphSync's messaging format, when does he state that GraphSync doesn't know how to deal with its extensions?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "gt_interval": {
+        "start": 1985.419,
+        "end": 1987.848
+      },
+      "pred_interval": {
+        "start": 11.233333333333333,
+        "end": 13.233333333333333
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1974.1856666666667,
+        "end": 1974.6146666666666,
+        "average": 1974.4001666666668
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.273972602739726,
+        "text_similarity": 0.6179103851318359,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly identifies the anchor and target content and the 'after' relationship, but the provided timestamps do not match the reference intervals (the temporal offsets are incorrect), so it is only partially correct."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker says that GraphSync's extensions are 'any nodes', when does he explain that the data transfer library pulls out these extensions?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "gt_interval": {
+        "start": 2003.64,
+        "end": 2008.232
+      },
+      "pred_interval": {
+        "start": 15.233333333333333,
+        "end": 16.46666666666667
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1988.4066666666668,
+        "end": 1991.7653333333333,
+        "average": 1990.086
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24691358024691357,
+        "text_similarity": 0.5177048444747925,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer correctly identifies the anchor/target relationship ('after'), but the provided timestamps (15.2s / 16.4s) are far from the reference times (~1990s / ~2003s) and thus not accurate or within the allowed tolerance."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Rod states that the API is one of the biggest challenges, when does he explain that they can hack it together internally?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 2130.0,
+        "end": 2340.0
+      },
+      "gt_interval": {
+        "start": 2199.464,
+        "end": 2203.342
+      },
+      "pred_interval": {
+        "start": 2157.6935800841443,
+        "end": 2243.3971651776556
+      },
+      "iou": 0.04524898224232821,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 41.770419915855655,
+        "end": 40.055165177655454,
+        "average": 40.912792546755554
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2222222222222222,
+        "text_similarity": 0.7995494604110718,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the 'after' relationship, but both anchor and target timestamps are substantially misaligned with the reference (anchor ~40s earlier and target ~44s later), so the intervals do not match the transcript."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Aiden finishes asking if schema support for a union with 'any' would be easier, when does Rod respond with 'I don't think so'?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 2130.0,
+        "end": 2340.0
+      },
+      "gt_interval": {
+        "start": 2225.824,
+        "end": 2226.645
+      },
+      "pred_interval": {
+        "start": 2183.6997213753834,
+        "end": 2228.8638704527293
+      },
+      "iou": 0.018178135020188443,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 42.124278624616636,
+        "end": 2.218870452729334,
+        "average": 22.171574538672985
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23529411764705882,
+        "text_similarity": 0.8184241652488708,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction identifies the correct speakers, utterance content and relation ('after'), but the timestamps are inaccurate (anchor start is ~25s earlier than reference, target start ~3s later) and the anchor end time is omitted, so it does not match the reference precisely."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Rod explains that they want to set up with BindNode at the beginning with the full schema and types, when does he explain how GraphSync uses DAG-CBOR and other layers use assign nodes?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 2130.0,
+        "end": 2340.0
+      },
+      "gt_interval": {
+        "start": 2303.376,
+        "end": 2321.378
+      },
+      "pred_interval": {
+        "start": 2270.1647971743496,
+        "end": 2337.2901776020412
+      },
+      "iou": 0.2681846998154736,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 33.211202825650616,
+        "end": 15.912177602041083,
+        "average": 24.56169021384585
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.30985915492957744,
+        "text_similarity": 0.8647315502166748,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is largely incorrect: it misidentifies E1's content and start time (2270s vs correct ~2302s) and places E2 much later (2337s vs correct ~2303.376\u20132321.378s); although it labels the relationship 'after', the key timestamps and event descriptions contradict the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Rod says that an easier part to solve would be to have a programmatic typed prototype for union, when does he explain how the node builder handles such a union?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 2310.0,
+        "end": 2497.0
+      },
+      "gt_interval": {
+        "start": 2388.845,
+        "end": 2395.676
+      },
+      "pred_interval": {
+        "start": 1315.1927984597264,
+        "end": 1949.1928014869109
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1073.6522015402734,
+        "end": 446.48319851308906,
+        "average": 760.0677000266812
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.5649209022521973,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the 'after' relation, but the provided timestamps for both anchor and target differ substantially from the ground-truth intervals, so the key factual timing information is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Will Scott (top middle) suggests making an extension to the basic node, when does Rod (bottom left) reply about how it would look like a node builder?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 2310.0,
+        "end": 2497.0
+      },
+      "gt_interval": {
+        "start": 2422.259,
+        "end": 2430.852
+      },
+      "pred_interval": {
+        "start": 2099.6056514550773,
+        "end": 2282.128205128213
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 322.65334854492266,
+        "end": 148.72379487178705,
+        "average": 235.68857170835486
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22916666666666666,
+        "text_similarity": 0.4845482110977173,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the two events and their 'after' relation, but the provided timestamps are substantially different from the reference (hundreds of seconds off), so the timing information is factually incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Rod announces that they might end the meeting, when does Maeve (top left) make a heart shape with her hands?",
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "segment": {
+        "start": 2310.0,
+        "end": 2497.0
+      },
+      "gt_interval": {
+        "start": 2491.0,
+        "end": 2493.5
+      },
+      "pred_interval": {
+        "start": 2447.104939072647,
+        "end": 2457.8489409876825
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 43.895060927352915,
+        "end": 35.651059012317546,
+        "average": 39.77305996983523
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2558139534883721,
+        "text_similarity": 0.7163704633712769,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the relation as 'after', but the reported timestamps are substantially incorrect (\u224840s earlier than the ground truth) and it omits the full-formation time for the gesture, so it fails to match key factual details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Jesse finishes introducing Victor, when does Victor introduce himself and the company Upbound?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 23.658,
+        "end": 27.646
+      },
+      "pred_interval": {
+        "start": 20.833333333333336,
+        "end": 24.166666666666668
+      },
+      "iou": 0.07466484000391428,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.8246666666666655,
+        "end": 3.479333333333333,
+        "average": 3.1519999999999992
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.38095238095238093,
+        "text_similarity": 0.878828763961792,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly indicates Victor's introduction occurs after Jesse and gives a similar start time, but it fails to provide the correct E1 end, substantially underestimates E2's end time (24.6s vs 27.646s), and omits the precise \"immediately follows\" relationship, so it is incomplete and partially inaccurate."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Victor describes the first generation of infrastructure as code as based on mutable principles, when does he introduce the second generation of infrastructure as code tools?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 94.757,
+        "end": 107.862
+      },
+      "pred_interval": {
+        "start": 45.166666666666664,
+        "end": 46.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 49.59033333333334,
+        "end": 61.361999999999995,
+        "average": 55.47616666666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.36363636363636365,
+        "text_similarity": 0.7113127708435059,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps and event boundaries contradict the correct timestamps (E1 ends at 83.397s; E2 starts at 94.757s) and introduce incorrect/unsupported details, so it is incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Victor states that containers are just one implementation of Kubernetes, when does he introduce Crossplane as another implementation?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 153.292,
+        "end": 155.655
+      },
+      "pred_interval": {
+        "start": 56.916666666666664,
+        "end": 58.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 96.37533333333334,
+        "end": 97.655,
+        "average": 97.01516666666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.273972602739726,
+        "text_similarity": 0.7004106044769287,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly indicates E2 occurs after E1, but the timestamps and durations are completely different from the reference and do not show the immediate succession indicated in the correct answer, so key temporal details are incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the first speaker defines compositions, when does he start listing examples like 'a cluster' and 'an application'?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 205.7,
+        "end": 252.8
+      },
+      "pred_interval": {
+        "start": 151.4,
+        "end": 155.1
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 54.29999999999998,
+        "end": 97.70000000000002,
+        "average": 76.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.30434782608695654,
+        "text_similarity": 0.6503255367279053,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps are entirely inconsistent with the reference (predicts ~151\u2013155s vs the correct ~197.3\u2013212.8s) and thus fails to locate when the examples are listed."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker finishes explaining that Crossplane allows treating infrastructure like cattle, when does he start explaining the types of resources deployed today using Crossplane?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 364.843,
+        "end": 375.117
+      },
+      "pred_interval": {
+        "start": 332.25,
+        "end": 351.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 32.59300000000002,
+        "end": 24.11700000000002,
+        "average": 28.355000000000018
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23728813559322035,
+        "text_similarity": 0.5506060123443604,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly identifies the 'after' relation and that the speaker moves from the cattle analogy to resource types, but the provided timestamps are substantially inaccurate compared to the ground truth, so it fails on factual timing details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes listing the three Crossplane providers, when does he start mentioning their presence on GCP?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 386.127,
+        "end": 406.009
+      },
+      "pred_interval": {
+        "start": 363.0,
+        "end": 371.75
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 23.12700000000001,
+        "end": 34.259000000000015,
+        "average": 28.693000000000012
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2033898305084746,
+        "text_similarity": 0.5665870904922485,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction substantially mislocates both anchor and target timestamps and states a different relation ('after' vs. 'once_finished' with immediate succession), so it does not match the correct temporal alignment or relation."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker finishes mentioning that they created their own add-ons, when does he advise using reference implementations as a good starting point?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 452.797,
+        "end": 462.137
+      },
+      "pred_interval": {
+        "start": 393.0,
+        "end": 420.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 59.797000000000025,
+        "end": 42.137,
+        "average": 50.96700000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18918918918918923,
+        "text_similarity": 0.7532100081443787,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction misassigns anchor/target roles and gives incorrect timestamps (393s/420s vs 449.7s/452.8s) and wrong relation ('after' vs immediate 'once_finished'), though it does reference the suggestion text; overall the alignment is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "While the speaker is introducing the Karapenter addon, when does he mention it is a better version of Cluster Autoscaler for AWS?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 538.303,
+        "end": 546.801
+      },
+      "pred_interval": {
+        "start": 31.75,
+        "end": 51.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 506.553,
+        "end": 495.80100000000004,
+        "average": 501.177
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12698412698412698,
+        "text_similarity": 0.26101452112197876,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the quoted content but gives a timestamp (00:31) and relative placement that are far off from the correct intervals (530.24\u2013548.27s with target 538.303\u2013546.801s), so the timing/positioning is largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes explaining the IRSA composition nested within the Karapenter Addon, when does the next slide about EKS-IRSA appear?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 629.0,
+        "end": 632.0
+      },
+      "pred_interval": {
+        "start": 188.25,
+        "end": 210.75
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 440.75,
+        "end": 421.25,
+        "average": 431.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2641509433962264,
+        "text_similarity": 0.3898964822292328,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is incorrect: it gives wrong timestamps (188\u2013210s vs the correct 629\u2013632s), misnames the addon (Carapenter vs Karapenter/IRSA context), and does not match the immediate follow timing described in the reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker explains the ServiceAccount annotation referencing the ARN of the IAM role, when does he state that the IAM role should then reference back to the service account?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 704.495,
+        "end": 713.509
+      },
+      "pred_interval": {
+        "start": 634.5,
+        "end": 662.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 69.995,
+        "end": 51.509000000000015,
+        "average": 60.75200000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20338983050847456,
+        "text_similarity": 0.3391943573951721,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures that the statement occurs 'right after' the ServiceAccount annotation discussion, but gives an incorrect and malformed timestamp (00:634.5) that conflicts with the correct interval starting at 704.495s; therefore it is largely inaccurate. "
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker starts discussing the advantages of using Crossplane for add-ons, when does he mention that Crossplane add-on versions are cumbersome to manage?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 909.5,
+        "end": 913.6
+      },
+      "pred_interval": {
+        "start": 44.45323909036764,
+        "end": 52.27777777777778
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 865.0467609096323,
+        "end": 861.3222222222222,
+        "average": 863.1844915659273
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.044444444444444446,
+        "text_similarity": 0.10659179091453552,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamp (\u224844.45\u201352.28s) does not match the correct target interval (909.5\u2013913.6s) and omits the required relation to the anchor, so it is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes explaining that all clusters get the same add-on version with Crossplane compositions, when does he begin explaining the best benefit of Argo CD?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 958.9,
+        "end": 964.8
+      },
+      "pred_interval": {
+        "start": 69.56349206349206,
+        "end": 76.19047619047619
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 889.3365079365079,
+        "end": 888.6095238095238,
+        "average": 888.9730158730158
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.09523809523809523,
+        "text_similarity": 0.20541948080062866,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction gives an unrelated time range (~69\u201376s) and incorrect content, whereas the reference specifies the target starts at 958.9s after the anchor finishes; the predicted answer is factually and semantically incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker introduces the solution to use both Crossplane and Argo CD, when does he start describing the 'Critical' type of add-ons?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 1046.8,
+        "end": 1054.8
+      },
+      "pred_interval": {
+        "start": 87.6984126984127,
+        "end": 95.71428571428572
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 959.1015873015873,
+        "end": 959.0857142857142,
+        "average": 959.0936507936508
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1791044776119403,
+        "text_similarity": 0.4101908802986145,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps (~87.7\u201395.7s) do not match the correct times (1036.3\u20131054.8s) and thus fail to identify when the 'Critical' add-ons description begins, so the answer is incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker introduces the 'IAM-only add-ons', when does he explain how Crossplane installs just the IAM portions for them?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1111.502,
+        "end": 1118.25
+      },
+      "pred_interval": {
+        "start": 59.4,
+        "end": 69.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1052.1019999999999,
+        "end": 1049.05,
+        "average": 1050.576
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2391304347826087,
+        "text_similarity": 0.5924724340438843,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly captures that the target follows the introduction, but the anchor/target timestamps are completely incorrect (off by ~1000s) and it adds an extra Argo CD detail not present in the reference, so it fails factual alignment."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker finishes explaining the solution for controlling blast radius, when is the 'Best Practice: Crossplane per Env' slide displayed?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1256.0,
+        "end": 1286.0
+      },
+      "pred_interval": {
+        "start": 14.792726741548792,
+        "end": 19.02696681691054
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1241.207273258451,
+        "end": 1266.9730331830895,
+        "average": 1254.0901532207704
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3023255813953488,
+        "text_similarity": 0.688273549079895,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction has entirely different timestamps and misidentifies the anchor event (intro vs finish), omits the slide duration, and labels the relation merely as 'after' instead of the correct 'once_finished'; only the temporal ordering is preserved."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes introducing the 'Tips & Tricks' section for Argo CD and Crossplane, when is the 'Argo CD: Pruning' slide displayed?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1300.0,
+        "end": 1407.0
+      },
+      "pred_interval": {
+        "start": 73.29446359967397,
+        "end": 80.84007088698185
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1226.705536400326,
+        "end": 1326.159929113018,
+        "average": 1276.432732756672
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21686746987951808,
+        "text_similarity": 0.7105575799942017,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is incorrect: it gives entirely different timestamps (73.29s vs 1297\u20131300s), collapses start/end times to a single instant, and states the relation as 'at' rather than the correct 'once_finished' interval from 1300.0s\u20131407.0s."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker responds to a comment by saying 'next week', when is the 'Argo CD: Resource Exclusions' slide displayed?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1407.0,
+        "end": 1411.5
+      },
+      "pred_interval": {
+        "start": 99.75726838137858,
+        "end": 104.72402038088303
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1307.2427316186215,
+        "end": 1306.775979619117,
+        "average": 1307.0093556188692
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2857142857142857,
+        "text_similarity": 0.7194168567657471,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures a temporal ordering (speaker before slide) but gives substantially different timestamps, uses the anchor start rather than the speaker's finish, omits the slide transition/end time, and labels the relation as 'after' instead of the correct 'once_finished', so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker introduces the 'Resource Exclusions' feature, when does he describe the core idea behind it?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1454.6,
+        "end": 1459.0
+      },
+      "pred_interval": {
+        "start": 17.92857142857143,
+        "end": 50.476190476190474
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1436.6714285714286,
+        "end": 1408.5238095238096,
+        "average": 1422.597619047619
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.30769230769230765,
+        "text_similarity": 0.24006155133247375,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamps are completely inconsistent with the reference (predicted 17.9s/40.4s vs. reference ~1449\u20131459s), so the answer is incorrect and does not match the ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker describes the 'API Discovery' problem, when does he suggest increasing the Kubernetes QPS limit as a temporary workaround?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1554.845,
+        "end": 1567.0
+      },
+      "pred_interval": {
+        "start": 45.595238095238095,
+        "end": 52.595238095238095
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1509.249761904762,
+        "end": 1514.404761904762,
+        "average": 1511.827261904762
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.44067796610169496,
+        "text_similarity": 0.6371574401855469,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted timestamps are far from the correct times (1530.7\u20131549.0s and 1554.845\u20131567s), so it mislocates both the problem description and the suggested QPS workaround; only the order is preserved."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker finishes explaining what the Lua script does, when does he start describing the simple resource health check?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1600.17,
+        "end": 16010.25
+      },
+      "pred_interval": {
+        "start": 1498.175,
+        "end": 1518.568
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 101.99500000000012,
+        "end": 14491.682,
+        "average": 7296.838500000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.32727272727272727,
+        "text_similarity": 0.5745983719825745,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives timestamps that are substantially different from the reference (1498.175s and 1518.568s vs. 1590.16s and 1600.17s) and omits the end time; although the order is similar, the absolute times are incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the speaker is discussing Crossplane challenges related to adopting existing cloud resources, when does he specifically mention AWS generating random IDs?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1653.256,
+        "end": 1664.667
+      },
+      "pred_interval": {
+        "start": 1588.675,
+        "end": 1620.675
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 64.58100000000013,
+        "end": 43.99199999999996,
+        "average": 54.286500000000046
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23529411764705885,
+        "text_similarity": 0.5337997674942017,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted timestamps are substantially different and reversed relative to the reference (random IDs reported much earlier and adoption later), failing to match the correct temporal interval or the 'during' relation."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker finishes explaining the current workaround for conditional resources, when does he start discussing the limitation of Cross-Resource Referencing?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1779.5,
+        "end": 1792.338
+      },
+      "pred_interval": {
+        "start": 1696.675,
+        "end": 1747.342
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 82.82500000000005,
+        "end": 44.99599999999987,
+        "average": 63.910499999999956
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.30188679245283023,
+        "text_similarity": 0.48964542150497437,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted timestamps significantly diverge from the reference (both events are placed much earlier) and do not match the correct start/end times or relation; therefore the prediction is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker finishes describing the current workaround of copy-pasting VPC IDs, when does he suggest directly referencing resources as an improvement?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1770.0,
+        "end": 1968.0
+      },
+      "gt_interval": {
+        "start": 1824.0,
+        "end": 1871.3
+      },
+      "pred_interval": {
+        "start": 139.87132728177377,
+        "end": 144.270422271065
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1684.1286727182262,
+        "end": 1727.029577728935,
+        "average": 1705.5791252235806
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.10909090909090909,
+        "text_similarity": 0.25407522916793823,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer gives unrelated timestamps and content (mentions 'it's great' and Crossplane) that do not match the correct event times or the described transition from workaround to suggestion; it fails to identify when the suggestion follows the workaround."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker states that running dedicated EKS clusters for Crossplane is expensive, when does he explain the alternative of using K3S clusters within EKS?",
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "segment": {
+        "start": 1770.0,
+        "end": 1968.0
+      },
+      "gt_interval": {
+        "start": 1865.123,
+        "end": 1873.338
+      },
+      "pred_interval": {
+        "start": 165.1758182139186,
+        "end": 184.50921421571937
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1699.9471817860815,
+        "end": 1688.8287857842806,
+        "average": 1694.387983785181
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28125,
+        "text_similarity": 0.6608505249023438,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies that the speaker explains a K3S alternative, but the provided timestamps are far from the reference intervals (off by many seconds/minutes) and thus do not match the correct timing; significant temporal mismatch warrants a very low score."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Nick Lunch starts speaking about relying on foreigners, when is a group of people shown sitting in a circle outdoors?",
+      "video_id": "SYUQhswjLZI",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 166.0
+      },
+      "gt_interval": {
+        "start": 29.35,
+        "end": 33.07
+      },
+      "pred_interval": {
+        "start": 40.6,
+        "end": 44.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 11.25,
+        "end": 10.93,
+        "average": 11.09
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4,
+        "text_similarity": 0.8250905275344849,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the events and their temporal relation ('after'), but the timestamps are substantially incorrect (anchor and target times are shifted much later than the reference), amounting to factual contradictions and fabricated timing details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Soledad Mu\u00f1iz finishes mentioning 'community-led solutions', when is a close-up of colorful circular notes on the floor shown?",
+      "video_id": "SYUQhswjLZI",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 166.0
+      },
+      "gt_interval": {
+        "start": 43.61,
+        "end": 45.45
+      },
+      "pred_interval": {
+        "start": 67.6,
+        "end": 69.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 23.989999999999995,
+        "end": 23.549999999999997,
+        "average": 23.769999999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3636363636363636,
+        "text_similarity": 0.5413805246353149,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the target visual (close-up of colorful circular notes) but gives completely incorrect timestamps for both anchor and target and misstates the temporal relationship, contradicting the ground truth."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the woman in the black blazer finishes describing the conference as one of the best international conferences, when does a grid of numerous speakers appear on screen?",
+      "video_id": "WKc8XsxwNQU",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 104.0
+      },
+      "gt_interval": {
+        "start": 37.05,
+        "end": 48.09
+      },
+      "pred_interval": {
+        "start": 48.11252069447218,
+        "end": 50.03286043913939
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 11.062520694472184,
+        "end": 1.9428604391393876,
+        "average": 6.502690566805786
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25531914893617014,
+        "text_similarity": 0.2964937686920166,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction loosely links the grid's appearance to the anchor's remarks but is vague and omits the precise timing details given in the correct answer; it also references a different phrase ('who's-who of Agile world') rather than stating that the grid appears at 37.05s after the woman's speech ends at 16.1s."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the grid showcasing many speakers like Linda Rising and Dave Thomas is displayed, when does a man with a mustache and headset mention the 'who's-who of Agile world'?",
+      "video_id": "WKc8XsxwNQU",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 104.0
+      },
+      "gt_interval": {
+        "start": 37.73,
+        "end": 41.18
+      },
+      "pred_interval": {
+        "start": 36.74815917754454,
+        "end": 38.90710245895708
+      },
+      "iou": 0.2656012492580692,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 0.9818408224554602,
+        "end": 2.272897541042923,
+        "average": 1.6273691817491915
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1702127659574468,
+        "text_similarity": 0.35526788234710693,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction contradicts the reference timing: it claims the man appears after the grid, whereas the correct answer states his speech (37.73\u201341.18s) occurs entirely during the grid display (37.05\u201348.09s), and it omits the precise timestamps."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once Maha Bali asks to move to the next slide, when does the video display the Sailboat Retrospective graphic?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 42.0,
+        "end": 43.0
+      },
+      "pred_interval": {
+        "start": 39.84444341069543,
+        "end": 41.64444341069544
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.1555565893045667,
+        "end": 1.3555565893045625,
+        "average": 1.7555565893045646
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.35714285714285715,
+        "text_similarity": 0.6101780533790588,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the reference timeline: it claims the graphic appears at ~39.84s (before Maha Bali's request at 40.7\u201341.7s), whereas the correct answer states the slide begins appearing at 42.0s and is fully visible by 43.0s."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Tyler Clark explains how having a specific space and time helps him focus on writing, when does Mia Zamora mention the power of community even for independent work?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 221.23,
+        "end": 227.65
+      },
+      "pred_interval": {
+        "start": 228.3,
+        "end": 247.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.070000000000022,
+        "end": 19.650000000000006,
+        "average": 13.360000000000014
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15873015873015872,
+        "text_similarity": 0.43496155738830566,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gives incorrect timestamps that do not match the reference intervals for Tyler (184.69\u2013218.79s) or Mia (221.23\u2013227.65s); it only correctly captures the relative ordering ('after') but fails on the key factual times."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Theodora Adjangba finishes stating that group feedback helps her get out of her own head, when does Mia Zamora clarify that these are 'smaller groups' for feedback?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 249.27,
+        "end": 252.6
+      },
+      "pred_interval": {
+        "start": 278.4,
+        "end": 296.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 29.129999999999967,
+        "end": 43.70000000000002,
+        "average": 36.41499999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14705882352941177,
+        "text_similarity": 0.5140751600265503,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gives entirely incorrect timestamps and omits Mia Zamora's clarification interval, only vaguely stating the relation is 'after'; it fails to match the precise timing in the reference and includes an irrelevant introduction time."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Mia Zamora asks the group if they want to move on to the next element, when does the screen switch to a Google Slides presentation?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 310.73,
+        "end": 311.0
+      },
+      "pred_interval": {
+        "start": 299.7,
+        "end": 314.2
+      },
+      "iou": 0.01862068965517116,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 11.03000000000003,
+        "end": 3.1999999999999886,
+        "average": 7.115000000000009
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18421052631578946,
+        "text_similarity": 0.3217529058456421,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction incorrectly timestamps Mia's question (314.2s vs the reference 308.53\u2013310.44s) and hallucinates an unrelated intro at 299.7s; it only correctly captures the coarse 'after' relationship to the screen switch."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Mia Zamora asks about moments that felt good during the retreat, when does Tyler Clark begin describing sitting in the writer's chair and sharing work?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 393.84,
+        "end": 331.13
+      },
+      "pred_interval": {
+        "start": 400.0,
+        "end": 490.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 6.160000000000025,
+        "end": 158.87,
+        "average": 82.51500000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25806451612903225,
+        "text_similarity": 0.5699781179428101,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the loose temporal relation ('after') but the anchor/event times are substantially off (predicted ~10\u201318s later) and the anchor is misidentified; thus it fails to accurately align the segments or content."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Tyler Clark says 'And we all went in knowing that', when does he state that everyone's feedback was really helpful?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 427.11,
+        "end": 436.2
+      },
+      "pred_interval": {
+        "start": 480.0,
+        "end": 514.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 52.889999999999986,
+        "end": 77.80000000000001,
+        "average": 65.345
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2650602409638554,
+        "text_similarity": 0.5960766673088074,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the two events and their ordering, but the provided timestamps are substantially off from the ground truth (mismatched by ~50+ seconds), so the timing is incorrect and incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Tyler Clark finishes explaining how everyone received a different perspective, when does Tara Bogota start talking about the garden and nature inspiration?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 454.53,
+        "end": 460.95
+      },
+      "pred_interval": {
+        "start": 508.7,
+        "end": 531.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 54.170000000000016,
+        "end": 70.34999999999997,
+        "average": 62.25999999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.29213483146067415,
+        "text_similarity": 0.5206530094146729,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies Tara speaking about the garden and that it follows Tyler, but the reported start/end times for both events (and the anchor timing) are substantially different from the reference, so it fails precise factual alignment."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Theodora states that most of her 'sun stuff' has probably already been said, when does she mention enjoying the time at the garden?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 528.67,
+        "end": 529.92
+      },
+      "pred_interval": {
+        "start": 559.7584840280127,
+        "end": 618.5280989828838
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 31.088484028012772,
+        "end": 88.6080989828838,
+        "average": 59.84829150544829
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27586206896551724,
+        "text_similarity": 0.5876867771148682,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the temporal relation as 'after', but the provided timestamps are significantly different from the ground truth and the anchor timing is misreported (start vs correct end), so it is factually inaccurate despite the correct relative label."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Theodora finishes saying she enjoyed making progress, when does Mia follow up by talking about the slow march towards progress?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 542.73,
+        "end": 546.84
+      },
+      "pred_interval": {
+        "start": 618.5280989828838,
+        "end": 668.4127583578492
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 75.79809898288374,
+        "end": 121.57275835784912,
+        "average": 98.68542867036643
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2162162162162162,
+        "text_similarity": 0.5196580290794373,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only captures a generic 'after' relationship but the timestamps are drastically different and incorrect, and the quoted utterance does not match the reference; therefore it fails to provide the accurate, direct follow-up timing described in the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Mia finishes asking 'What held us back from deeper engaging dialogue?', when does 'Self - Life' appear typed on the slide?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 632.0,
+        "end": 636.0
+      },
+      "pred_interval": {
+        "start": 668.4127583578492,
+        "end": 691.2516235212072
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 36.41275835784916,
+        "end": 55.25162352120719,
+        "average": 45.832190939528175
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3,
+        "text_similarity": 0.644787073135376,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly captures the relative relation ('after') but the timestamps are significantly incorrect (much later than the reference), it mislabels E1 as starting instead of reporting its finish time, and it omits E2's completion time."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Tyler Clark finishes mentioning sharing personal stuff, when does he talk about check-ins helping them get to know each other?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 698.7,
+        "end": 703.0
+      },
+      "pred_interval": {
+        "start": 178.0,
+        "end": 206.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 520.7,
+        "end": 497.0,
+        "average": 508.85
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28205128205128205,
+        "text_similarity": 0.573651909828186,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer gets the relation ('after') right but the timecodes and event boundaries are incorrect and misaligned with the reference (E1/E2 times differ substantially and E1 is given as a start rather than the correct finish time), so key factual elements are wrong."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Mia Zamora asks 'Other anchors?', when does Theodora Adjangba begin speaking?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 801.7,
+        "end": 814.7
+      },
+      "pred_interval": {
+        "start": 472.0,
+        "end": 502.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 329.70000000000005,
+        "end": 312.70000000000005,
+        "average": 321.20000000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2857142857142857,
+        "text_similarity": 0.7522540092468262,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While both answers agree the relation is 'after', the predicted timestamps for E1 and E2 are wildly different from the reference (off by hundreds of seconds) and the predicted end time for E2 conflicts with the reference, so it fails to provide the correct timing details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Mia Zamora acknowledges having 'anchors in life', when does she ask the group 'What do you guys think?'",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 912.4,
+        "end": 913.6
+      },
+      "pred_interval": {
+        "start": 971.6111111111111,
+        "end": 995.0555555555557
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 59.21111111111111,
+        "end": 81.45555555555563,
+        "average": 70.33333333333337
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4358974358974359,
+        "text_similarity": 0.7147877216339111,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly preserves the 'after' relationship but both event timestamps are substantially incorrect (E1 \u224898s late, E2 \u224883s late) and the E2 end time is wrongly identical to its start, so the answer is largely factually wrong."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Mia Zamora finishes explaining what 'REEF: Future risks' represents, when does Theodora Adjangba begin her response?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 928.5,
+        "end": 979.5
+      },
+      "pred_interval": {
+        "start": 971.6111111111111,
+        "end": 1018.6111111111111
+      },
+      "iou": 0.08754623921085111,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 43.111111111111086,
+        "end": 39.111111111111086,
+        "average": 41.111111111111086
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.41025641025641024,
+        "text_similarity": 0.7489430904388428,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While the prediction correctly labels the temporal relation as 'after', the timestamps for E1, E2, and the target end are significantly later than the ground truth and therefore factually incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Tyler says he has a 'lack of motivation', when does he describe getting distracted at Starbucks?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 1050.0,
+        "end": 1181.0
+      },
+      "gt_interval": {
+        "start": 1082.7,
+        "end": 1087.8
+      },
+      "pred_interval": {
+        "start": 1070.8138716904227,
+        "end": 1102.3817092911063
+      },
+      "iou": 0.16155683719969072,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 11.886128309577316,
+        "end": 14.581709291106336,
+        "average": 13.233918800341826
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21428571428571427,
+        "text_similarity": 0.5325385332107544,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly identifies the events and the 'after' relationship, but the provided timestamps are significantly wrong and incomplete (missing end times) and misplace the target much earlier and nearly simultaneous with the anchor versus the ~28s separation in the ground truth."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Maha finishes asking for a one-minute reflection, when does Tyler start his reflection on the exercise?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 1050.0,
+        "end": 1181.0
+      },
+      "gt_interval": {
+        "start": 1126.4,
+        "end": 1127.3
+      },
+      "pred_interval": {
+        "start": 1118.587079938106,
+        "end": 1127.2998143765374
+      },
+      "iou": 0.10327357190761115,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.812920061894147,
+        "end": 0.00018562346258477191,
+        "average": 3.9065528426783658
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16494845360824742,
+        "text_similarity": 0.5599172115325928,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction partly matches by giving a time for Tyler starting his reflection, but the start time differs from the reference and the prediction introduces incorrect/contradictory details (mislabels E2 as Theodora, gives wrong end time and relationship). These hallucinations and timing inaccuracies reduce correctness and alignment."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Tyler finishes his reflection, when does Theodora start her reflection on the exercise?",
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "segment": {
+        "start": 1050.0,
+        "end": 1181.0
+      },
+      "gt_interval": {
+        "start": 1148.5,
+        "end": 1149.1
+      },
+      "pred_interval": {
+        "start": 1129.7259316759912,
+        "end": 1145.3721484806583
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 18.774068324008795,
+        "end": 3.727851519341584,
+        "average": 11.25095992167519
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1702127659574468,
+        "text_similarity": 0.6289193630218506,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the coarse temporal relation ('after') right, but the timestamps are substantially incorrect and it mislabels event boundaries (saying E1 'starts' at when Tyler concludes), so it contradicts key factual details in the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the text 'WE ASKED TOP-NOTCH SOFTWARE DEVELOPERS' appears, when does the text 'WHO HAVE YEARS AND YEARS OF EXPERIENCE' appear?",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 4.5,
+        "end": 7.0
+      },
+      "pred_interval": {
+        "start": 10.233332655164935,
+        "end": 11.733333575536074
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 5.733332655164935,
+        "end": 4.733333575536074,
+        "average": 5.233333115350504
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4666666666666666,
+        "text_similarity": 0.7304366230964661,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the second text occurs after the first, but the timestamps are substantially different from the ground truth and it omits the 'fully shown' timing; thus it fails on factual timing and completeness."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Egor Tolstoy starts speaking to the camera, when does he advise to 'Learn Kotlin'?",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 25.888,
+        "end": 27.269
+      },
+      "pred_interval": {
+        "start": 37.73333265516493,
+        "end": 40.46666666666667
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 11.845332655164928,
+        "end": 13.19766666666667,
+        "average": 12.521499660915799
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2727272727272727,
+        "text_similarity": 0.6781121492385864,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the temporal relation ('after') correct but is largely incorrect: it mislabels the event as on-screen text rather than spoken words and gives a wrong timestamp (40.467s vs the correct ~25.888\u201327.269s after the 24.0s anchor). These are major factual errors."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Pavel Veller states that being a good developer is 'a very loaded question', when does he explain that 'greatness' doesn't necessarily equate with years of experience?",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 122.903,
+        "end": 132.597
+      },
+      "pred_interval": {
+        "start": 50.83333265516493,
+        "end": 54.33333357553608
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 72.06966734483507,
+        "end": 78.26366642446393,
+        "average": 75.1666668846495
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3392857142857143,
+        "text_similarity": 0.7700138092041016,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies the 'after' relation and the anchor/target events, but it gives an incorrect timestamp for the 'greatness' statement (54.33s vs the correct 122.903\u2013132.597s) and omits the precise time ranges, making it factually inaccurate."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Andrey Breslav asks, \"Do you know how that's working?\", when does he ask \"Why is it fast?\"",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 154.19,
+        "end": 154.58
+      },
+      "pred_interval": {
+        "start": 30.0,
+        "end": 34.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 124.19,
+        "end": 120.28000000000002,
+        "average": 122.23500000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1643835616438356,
+        "text_similarity": 0.5358894467353821,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly indicates that 'Why is it fast?' comes after the initial question, but it gives incorrect timestamps and misidentifies the anchor utterance (content and times don't match the reference), so it is factually inaccurate and incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker says he was interviewed by a startup CTO, when does he state the question he was asked, \"What happened between the button click and the next page?\"",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 204.81,
+        "end": 209.0
+      },
+      "pred_interval": {
+        "start": 80.0,
+        "end": 84.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 124.81,
+        "end": 124.4,
+        "average": 124.605
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20289855072463767,
+        "text_similarity": 0.39105838537216187,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction gives completely different timestamps (around 77\u201385s) and does not identify the target question asked at ~204.81\u2013209.0s, so it fails to match the ground-truth anchor and target intervals or content."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Dmitry Jemerov finishes saying that one should read books and watch presentations about how software works, when does he explain the main benefit of doing so?",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 264.141,
+        "end": 274.795
+      },
+      "pred_interval": {
+        "start": 137.0,
+        "end": 143.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 127.14100000000002,
+        "end": 131.19500000000002,
+        "average": 129.168
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1917808219178082,
+        "text_similarity": 0.49192070960998535,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is completely incorrect: it gives different timestamps and a different topic (benefits of learning multiple languages at ~137\u2013144s) whereas the ground truth locates the main benefit immediately after 262.8s (264.141\u2013274.795s)."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the second speaker mentions learning Objective-C, when does he mention touching Swift?",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 364.5,
+        "end": 367.5
+      },
+      "pred_interval": {
+        "start": 37.166666666666664,
+        "end": 38.583333333333336
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 327.3333333333333,
+        "end": 328.9166666666667,
+        "average": 328.125
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3050847457627119,
+        "text_similarity": 0.7227522730827332,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies that Swift occurs after Objective-C, but it gives completely incorrect timestamps (37s vs ~364s) and mislabels anchor timing (start vs correct finish), so it fails on precise temporal details and alignment."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the third speaker says, \"You'll be reading their requirements, their stories, their comments,\" when does he say, \"You'll be writing the same thing\"?",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 437.375,
+        "end": 439.0
+      },
+      "pred_interval": {
+        "start": 46.416666666666664,
+        "end": 48.16666666666667
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 390.9583333333333,
+        "end": 390.8333333333333,
+        "average": 390.8958333333333
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24324324324324326,
+        "text_similarity": 0.7425114512443542,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the coarse ordering (target occurs after the anchor) but all timing details are substantially incorrect (wrong timestamps, wrong anchor boundary reported) and the relation label is imprecise compared to 'next'. These major factual errors warrant very low credit."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the first speaker discusses how to plan your time and the time of other people, when does he discuss how to make decisions in uncertainty?",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 671.0
+      },
+      "gt_interval": {
+        "start": 529.8,
+        "end": 533.9
+      },
+      "pred_interval": {
+        "start": 44.0,
+        "end": 46.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 485.79999999999995,
+        "end": 487.5,
+        "average": 486.65
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23076923076923075,
+        "text_similarity": 0.37048041820526123,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives a wrong timestamp (44.0s vs ~529.8\u2013533.9s), misquotes the phrase, and omits the correct start/end times and relation, so it does not match the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the second speaker finishes advising not to close your eyes to other fun ways to spend time and care for your well-being, when does he suggest specific activities like reading, walking, and physical activities?",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 671.0
+      },
+      "gt_interval": {
+        "start": 633.4,
+        "end": 636.7
+      },
+      "pred_interval": {
+        "start": 57.2,
+        "end": 59.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 576.1999999999999,
+        "end": 577.1,
+        "average": 576.65
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.08695652173913043,
+        "text_similarity": 0.2714597284793854,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction provides an incorrect timestamp (57.2s) and a different paraphrase instead of the specific start/end times (633.4s\u2013636.7s) and listed activities; it fails to answer the question about when those specific activities are suggested."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the third speaker advises looking into new big trends like generative AI, when does he advise to aim higher in general?",
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 671.0
+      },
+      "gt_interval": {
+        "start": 624.215,
+        "end": 626.3
+      },
+      "pred_interval": {
+        "start": 67.0,
+        "end": 69.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 557.215,
+        "end": 556.9,
+        "average": 557.0575
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1694915254237288,
+        "text_similarity": 0.24663439393043518,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies that the advice to 'aim higher in general' follows the discussion of trends, but it gives an incorrect timestamp (67.0s vs ~623.3\u2013626.3s) and omits the precise start/end times and anchor reference provided in the ground truth."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "While the speaker talks about building a Craigslist competitor, when do various headlines and text about Craigslist scams appear on screen?",
+      "video_id": "nnqJ4-nUsvc",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 57.0
+      },
+      "gt_interval": {
+        "start": 7.8,
+        "end": 15.9
+      },
+      "pred_interval": {
+        "start": 7.75,
+        "end": 16.75
+      },
+      "iou": 0.9000000000000001,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 1,
+        "R@0.7": 1
+      },
+      "mae": {
+        "start": 0.04999999999999982,
+        "end": 0.8499999999999996,
+        "average": 0.44999999999999973
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14814814814814814,
+        "text_similarity": 0.6121441125869751,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states that the scam visuals appear while the speaker discusses the Craigslist competitor, but it omits the key factual details of the exact start/end times (7.8s\u201315.9s) and the anchor timestamp (3.676s), making it incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes saying that solving Craigslist fraud was the problem they set out to solve, when does he start talking about wanting to build their own productivity tool?",
+      "video_id": "nnqJ4-nUsvc",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 57.0
+      },
+      "gt_interval": {
+        "start": 16.7,
+        "end": 22.359
+      },
+      "pred_interval": {
+        "start": 19.375,
+        "end": 24.375
+      },
+      "iou": 0.38879478827361585,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.6750000000000007,
+        "end": 2.0159999999999982,
+        "average": 2.3454999999999995
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3384615384615385,
+        "text_similarity": 0.5492151975631714,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly captures the sequence (the topic follows the Craigslist fraud remark) but omits all specific timestamps and completion details given in the correct answer, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker lists various productivity tools they used, when does he say he 'snapped' and decided to create their own tool?",
+      "video_id": "nnqJ4-nUsvc",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 57.0
+      },
+      "gt_interval": {
+        "start": 47.0,
+        "end": 56.548
+      },
+      "pred_interval": {
+        "start": 36.25,
+        "end": 39.75
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 10.75,
+        "end": 16.798000000000002,
+        "average": 13.774000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.163265306122449,
+        "text_similarity": 0.49981117248535156,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states that he 'snapped' after listing tools (ordering only) but omits the required precise timestamps (47.0s and end at 56.548s) and related timing details, so it is incomplete."
+      }
+    }
+  ]
+}

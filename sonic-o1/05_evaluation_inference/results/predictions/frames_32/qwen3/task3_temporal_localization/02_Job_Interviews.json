@@ -1,0 +1,3715 @@
+{
+  "model": "qwen3",
+  "topic_name": "02_Job_Interviews",
+  "task": "task3_temporal_localization",
+  "generated_at": "2025-12-25T17:34:06.278676",
+  "num_entries": 101,
+  "num_successful": 101,
+  "num_failed": 0,
+  "entries": [
+    {
+      "video_id": "xliS9BijbOs",
+      "video_number": "001",
+      "segment": {
+        "start": 0,
+        "end": 60
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 16.545949697494507
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1.0,
+            "end_s": 4.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) starts at 0.0s with the man saying 'Sell me this pen'. E2 (target event) starts at 1.0s when the woman says 'This pen' and ends at 4.0s when she finishes her sentence 'it's a super pen sir'. The relationship is 'after' the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 23.0,
+            "end_s": 29.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) starts at 21.0s with the woman asking 'So why do you need this pen?'. E2 (target event) starts at 23.0s with the man saying 'Ah, exactly. Now, this is the point...' and ends at 29.0s. The relationship is 'after E1 finishes'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 29.0,
+            "end_s": 32.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) starts at 28.0s with the man saying 'You are not there just to carry the product to the customer'. E2 (target event) starts at 29.0s with the man listing the reasons 'whether it is for the color, whether it is for thick writing, or it is for to go along with a costly dress'. The relationship is 'after E1' and E2 ends at 32.0s."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "2Ba98C_Zess",
+      "video_number": "002",
+      "segment": {
+        "start": 0,
+        "end": 200
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 22.421175956726074
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 27.9,
+            "end_s": 30.2,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 27.9s when the speaker says, 'Now, when you go to the visa interview...'. E2 (target) starts at 30.2s with the audio, 'they're expecting you to be confident, positive, open, tell the truth...'. The relationship is 'after' the speaker begins explaining the expectations."
+          },
+          {
+            "question_id": "002",
+            "start_s": 47.8,
+            "end_s": 49.5,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 47.8s when the speaker says, 'Like it or not, the visa officer is judging you.' E2 (target) is a text overlay that appears on screen at 49.5s. The relationship is 'after' the anchor phrase is spoken."
+          },
+          {
+            "question_id": "003",
+            "start_s": 86.9,
+            "end_s": 89.3,
+            "confidence": 0.97,
+            "rationale_model": "E1 (anchor) occurs at 86.9s when the speaker finishes her advice, '...help the visa officer have a more positive impression of your case.' E2 (target) starts at 89.3s with the audio, 'The other thing is, you know, a slight smile.' The relationship is 'once_finished'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "2Ba98C_Zess",
+      "video_number": "002",
+      "segment": {
+        "start": 150,
+        "end": 200
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 16.60615038871765
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 158.0,
+            "end_s": 161.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) is the woman finishing the sentence 'unfavorable impression of your case' at 158.0s. E2 (target) is her stating 'this could really influence a refusal' which starts at 158.1s and ends at 161.0s. The relationship is 'after', as the target phrase immediately follows the anchor event. The audio is clear and the speaker's mouth movements confirm the timing."
+          },
+          {
+            "question_id": "002",
+            "start_s": 168.0,
+            "end_s": 170.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) is the woman asking 'Now what you do to gain this confidence?' which ends at 168.0s. E2 (target) is her stating 'First and foremost is to practice' which starts at 168.1s and ends at 170.0s. The relationship is 'after', as the target phrase is the direct answer to the preceding question. The audio is clear and the speech is continuous."
+          },
+          {
+            "question_id": "003",
+            "start_s": 198.0,
+            "end_s": 199.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) is the woman finishing her sentence 'great chance of visa issuance' at 198.0s. E2 (target) is the screen transition to the 'Follow us:' graphic, which occurs at 198.1s. The relationship is 'after', as the transition happens immediately following the completion of her speech. The visual change from the speaker to the graphic is instantaneous upon her finishing the sentence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "IwGQoK9v5AA",
+      "video_number": "003",
+      "segment": {
+        "start": 0,
+        "end": 97
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 16.19376301765442
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 35.4,
+            "end_s": 39.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's statement about the video requirement, which starts at 34.2s. E2 (target) is the statement 'because without video, I will not conduct your interview,' which starts at 35.4s and ends at 39.4s. The temporal relationship is 'after,' as the consequence is stated immediately following the rule."
+          },
+          {
+            "question_id": "002",
+            "start_s": 53.0,
+            "end_s": 54.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the explanation for the chat icon, which concludes at 52.6s. E2 (target) is the start of the explanation for the raise hand icon, which begins at 53.0s with the phrase 'Fourth is you may use the raise hand icon.' The temporal relationship is 'once_finished,' as the new topic is introduced immediately after the previous one concludes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 85.4,
+            "end_s": 87.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the list of continents, which concludes at 85.0s. E2 (target) is the statement 'In India currently TTEC is located at only one location, that is Ahmedabad, Gujarat,' which starts at 85.4s and ends at 87.8s. The temporal relationship is 'after,' as the speaker transitions directly from the global locations to the specific location in India."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "2dgx53kiOBQ",
+      "video_number": "004",
+      "segment": {
+        "start": 0,
+        "end": 46
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 11.926183462142944
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "002",
+            "start_s": 11.9,
+            "end_s": 12.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the completion of the first reason, which is summarized by the speaker at 11.9s. E2 (target event) is the start of the second reason, which begins immediately after with the text 'is because the job boils you to' and the speaker saying 'Number two'. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 25.9,
+            "end_s": 26.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker asking 'So what can you say?'. E2 (target event) is the provision of the suggested response, which starts immediately with the text 'I want a job with better career growth opportunities'. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "qKctM_6Ymbw",
+      "video_number": "005",
+      "segment": {
+        "start": 0,
+        "end": 42
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 13.432430744171143
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2.4,
+            "end_s": 3.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) 'you're on the hunt' occurs at 0.0s-1.0s. E2 (target) '\u6211\u5728\u627e\u5de5\u4f5c' is spoken from 2.4s to 3.3s. The relationship is 'after'. The Mandarin phrase appears as on-screen text synchronized with the speaker's voice."
+          },
+          {
+            "question_id": "002",
+            "start_s": 7.9,
+            "end_s": 8.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) '\u5c65\u5386\u8868' (CV) is spoken from 7.5s to 8.5s. E2 (target) '\u5e94\u5f81\u5de5\u4f5c' is spoken from 8.9s to 9.7s. The relationship is 'after'. The speaker clearly finishes saying '\u5c65\u5386\u8868' before moving to the next phrase."
+          },
+          {
+            "question_id": "003",
+            "start_s": 17.0,
+            "end_s": 18.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) 'when's the interview?' is asked from 14.7s to 17.0s. E2 (target) '\u8bf7\u95ee\u8fd9\u4e2a\u804c\u4f4d\u7684\u85aa\u6c34\u5927\u6982\u591a\u5c11\uff1f' is spoken from 17.0s to 18.5s. The relationship is 'after'. The speaker asks the interview time question and immediately follows up with the salary question."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "VV9MlsraXmA",
+      "video_number": "006",
+      "segment": {
+        "start": 0,
+        "end": 32
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 13.574545860290527
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 13.0,
+            "end_s": 13.5,
+            "confidence": 1.0,
+            "rationale_model": "The anchor event, 'she finishes explaining the first tip about dressing to impress', occurs at 12.5s when the subtitle 'you get from wearing that outfit you feel confident in will definitely stand out' concludes. The target event, 'she start giving the second tip', begins at 13.0s with the subtitle 'Number two, do your research on the companies.' The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 13.0,
+            "end_s": 20.5,
+            "confidence": 1.0,
+            "rationale_model": "The anchor event, 'the speaker introduces the three quick tips for a job fair', occurs from 1.0s to 2.0s with the subtitle 'Here are three quick tips to prepare for a job fair.' The target event, 'she explain the second tip about doing research', starts at 13.0s with the subtitle 'Number two, do your research on the companies.' and continues until 20.5s. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 26.6,
+            "end_s": 27.8,
+            "confidence": 1.0,
+            "rationale_model": "The anchor event, 'she says Nothing else will make you stand out more than your personality', occurs from 25.8s to 26.6s. The target event, 'she say Be sure to use that', starts at 26.6s and ends at 27.8s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9u2lc73bWzI",
+      "video_number": "007",
+      "segment": {
+        "start": 0,
+        "end": 165
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 15.648382902145386
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 21.7,
+            "end_s": 23.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 21.7s when the speaker finishes asking 'Tell me about yourself'. E2 (target) starts at 21.7s and ends at 23.2s, with the green text box appearing and displaying the answer 'I'm a dedicated professional with a passion for learning and growth.' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 37.9,
+            "end_s": 39.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 37.9s when the speaker finishes asking 'Why should we hire you?'. E2 (target) starts at 37.9s and ends at 39.2s, with the green text box appearing and displaying the answer 'I bring a strong work ethic, adaptability, and the ability to contribute to your team's success.' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 91.9,
+            "end_s": 93.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 91.9s when the speaker finishes announcing 'Let's check your pronunciation. Listen and repeat.' E2 (target) starts at 91.9s and ends at 93.5s, with the speaker beginning to repeat the first smart answer, 'I'm a dedicated professional with a passion for learning and growth.' The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "WOx3B-LSI3o",
+      "video_number": "008",
+      "segment": {
+        "start": 0,
+        "end": 100
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 18.172858953475952
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 27.0,
+            "end_s": 30.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's introduction of the topic, which concludes around 27.0s. E2 (target) starts at 27.0s when she asks, 'So, what are those three things?' and continues until 30.4s when she begins to list them. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 69.0,
+            "end_s": 70.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the completion of the advice to use a virtual or blurred background, which finishes at 69.0s. E2 (target) starts immediately at 69.0s with her words, 'Now, your sound and your internet connection.' The relationship is 'immediately after' the anchor event concludes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 75.0,
+            "end_s": 77.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the advice to connect to an ethernet cable, which is spoken from 70.8s to 74.8s. E2 (target) starts at 75.0s with the suggestion to 'put your phone on Do Not Disturb' and ends at 77.0s. The relationship is 'after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "N6M3gm6A4lw",
+      "video_number": "009",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 25.008214950561523
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1.5,
+            "end_s": 2.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 0.0s when the speaker says, 'Hey guys, what's up?' The animated logo for 'The Elliott Group' appears as a visual transition starting at 1.5s and is fully visible by 2.5s."
+          },
+          {
+            "question_id": "002",
+            "start_s": 19.2,
+            "end_s": 22.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 16.0s when the speaker says, 'if you don't know who I am, I made $700 grand my last year selling cars.' The text overlay 'COME PREPARED' appears as a visual element starting at 19.2s and remains on screen until 22.3s."
+          },
+          {
+            "question_id": "003",
+            "start_s": 151.8,
+            "end_s": 153.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 149.0s when the speaker begins his list of interview 'look unmanicured' items. The specific hand gesture, where he spreads both hands outwards with palms up, occurs between 151.8s and 153.5s to emphasize the point about not looking presentable."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "N6M3gm6A4lw",
+      "video_number": "009",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 26.30396866798401
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 156.1,
+            "end_s": 158.5,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 153.9s when the speaker says, 'Resumes aren't needed.' E2 (target) starts at 156.1s when the speaker asks, 'You know what they want to do?' and ends at 158.5s when he states, 'They want to look at you.' The target event occurs immediately after the anchor event, as a direct follow-up question."
+          },
+          {
+            "question_id": "002",
+            "start_s": 205.3,
+            "end_s": 206.4,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 199.7s when the speaker says, 'What's the machine? The machine is the showroom floor. They like energy.' E2 (target) starts at 205.3s when a visual of a man and a woman in a showroom appears, and ends at 206.4s when the visual changes. The target event occurs during the speaker's explanation of 'the machine,' providing a visual example of his point."
+          },
+          {
+            "question_id": "003",
+            "start_s": 252.5,
+            "end_s": 254.4,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 247.0s when the speaker explains that a poorly dressed person will be seen as 'somebody who works at the mall.' E2 (target) starts at 252.5s when the speaker directly advises, 'So, number one, dress nice, right?' and ends at 254.4s. The target event is a direct conclusion and piece of advice that follows the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "N6M3gm6A4lw",
+      "video_number": "009",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 26.478382349014282
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 51.0,
+            "end_s": 53.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 49.2s when the speaker finishes saying, 'who is settling, who's hoping to make just enough money to pay their bills?'. Immediately following this, E2 (target) occurs from 51.0s to 53.0s as the speaker states, 'or do you think they're trying to hire the next guy that's going to come in and be the difference maker in the company?'. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 96.4,
+            "end_s": 98.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 95.3s when the speaker says, 'I'm very coachable'. E2 (target) is the text overlay 'I'M VERY COACHABLE' which appears on screen at 96.4s and remains visible until 98.0s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 213.0,
+            "end_s": 214.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 212.4s when the speaker says, 'eye contact'. E2 (target) is the speaker's direct action of looking at the camera and saying, 'just like I'm looking at you in the camera', which happens from 213.0s to 214.2s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "N6M3gm6A4lw",
+      "video_number": "009",
+      "segment": {
+        "start": 510,
+        "end": 710
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 25.142294883728027
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 610.0,
+            "end_s": 615.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 600.0s when the speaker says, 'eye contact, write that down.' E2 (target) occurs from 610.0s to 615.0s when the speaker demonstrates eye contact by pointing his right index finger forward and then bringing it down to his left hand, as if making a point. The target event starts immediately after the anchor event and is a direct physical demonstration of the concept he just introduced."
+          },
+          {
+            "question_id": "002",
+            "start_s": 632.0,
+            "end_s": 633.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 630.0s when the speaker asks, 'How stupid would that be?' E2 (target) occurs from 632.0s to 633.0s when he clearly says the words 'Eye contact, look.' The target event is a direct, immediate verbal repetition of the key phrase."
+          },
+          {
+            "question_id": "003",
+            "start_s": 661.0,
+            "end_s": 665.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 658.0s when the speaker finishes saying 'I'll self-educate' for the second time. E2 (target) occurs from 661.0s to 665.0s when the text overlay 'I'LL SELF EDUCATE' appears on the screen. The overlay appears immediately after the speaker has finished his statement, serving as a visual reinforcement of the phrase."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Yl4s9AIrijU",
+      "video_number": "010",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 27.21419858932495
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 27.3,
+            "end_s": 32.7,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) starts at 27.3s when the speaker says, 'land your dream job.' E2 (target) starts at 27.3s as the text 'TRAGIC ENDINGS' appears on screen and ends at 32.7s when the text fades out. The relationship is 'simultaneous with', as the text appears at the exact moment the speaker finishes the phrase."
+          },
+          {
+            "question_id": "003",
+            "start_s": 59.5,
+            "end_s": 62.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) is the 'My Practice Interview' logo and text animation finishing, which occurs at 59.5s. E2 (target) is the speaker returning and saying 'So, we're talking about casual interviews,' which starts at 59.5s and ends at 62.0s. The relationship is 'immediately after' the animation concludes."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Yl4s9AIrijU",
+      "video_number": "010",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 29.354183673858643
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 320.5,
+            "end_s": 323.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) is the speaker finishing the sentence 'Sorry, we're going with somebody else' at 319.8s. E2 (target) is the speaker saying 'And he was devastated' from 320.5s to 323.0s. The relationship is 'after' because the speaker finishes the previous sentence before uttering the word 'devastated'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 160.0,
+            "end_s": 162.5,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) is the speaker saying the phrase 'you come across as sounding actually inexperienced' which occurs from 159.5s to 162.5s. E2 (target) is the appearance of the word 'INEXPERIENCED' as on-screen text, which starts at 160.0s and ends at 162.5s. The relationship is 'during' because the on-screen text appears simultaneously with the speaker's utterance of the word."
+          },
+          {
+            "question_id": "003",
+            "start_s": 185.0,
+            "end_s": 189.5,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) is the speaker finishing his introduction of the three tips, which concludes at 185.0s. E2 (target) is the appearance of the text 'KEY TIP #1 NEVER TREAT AN INTERVIEW AS A CASUAL AFFAIR' on screen, which starts at 185.0s and ends at 189.5s. The relationship is 'immediately after' because the text appears as soon as the speaker finishes his introductory sentence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Yl4s9AIrijU",
+      "video_number": "010",
+      "segment": {
+        "start": 330,
+        "end": 483
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 24.531097173690796
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 362.2,
+            "end_s": 365.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 357.8s when the speaker says, 'So, those are my three tips'. E2 (target) starts at 362.2s when the text 'YOU NEED TO PREPARE THE SAME WAY' appears on screen and ends at 365.7s. The relationship is 'after'. The on-screen text is a direct visual representation of the phrase being spoken."
+          },
+          {
+            "question_id": "002",
+            "start_s": 418.8,
+            "end_s": 420.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 418.0s when the speaker finishes explaining about the videos he sets aside. E2 (target) starts at 418.8s when he begins to say, 'There's a link to my free ebook, My Practice Interview...'. The relationship is 'once_finished' as the mention of the ebook begins immediately after the explanation of the other videos concludes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 449.4,
+            "end_s": 453.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 446.6s when the speaker finishes describing his free ebook. E2 (target) starts at 449.4s when he says, 'Also in the links is my Interview Accelerator Workshop...'. The relationship is 'after', as the speaker introduces the workshop as a separate item following the ebook."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "FMWQ0jSOX8I",
+      "video_number": "011",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 22.56599259376526
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 185.0,
+            "end_s": 192.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor), the speaker identifying as a licensed hairdresser, occurs from 21.0s to 24.0s. E2 (target), the explanation for her break, starts at 185.0s when she says 'but I decided when I moved here that I wanted to take a little bit of a break' and continues until 192.0s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 193.0,
+            "end_s": 195.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor), the speaker stating 'I need to get ready,' occurs at 193.0s. E2 (target), the announcement that hair and makeup are done, starts at 193.0s with 'Hair is done, makeup is done' and ends at 195.0s. The relationship is 'at the same time as' (simultaneous)."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "FMWQ0jSOX8I",
+      "video_number": "011",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 22.47744846343994
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 211.2,
+            "end_s": 213.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 211.2s when the woman says, 'So I'm gonna try both these outfits on and just kind of play around until I find something that feels right.' E2 (target) starts at 211.2s when she turns and walks towards the mirror, and ends at 213.5s when she is fully visible in the mirror wearing her final outfit. The relationship is 'immediately after' E1."
+          },
+          {
+            "question_id": "002",
+            "start_s": 216.3,
+            "end_s": 227.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 216.3s when the woman says, 'I think I finally got the outfit down.' E2 (target) starts at 216.3s when she begins listing her clothes ('So I have this square neck bodysuit from Zara...') and ends at 227.8s when she finishes the sentence about the Aldo mules. The relationship is 'immediately after' E1."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "FMWQ0jSOX8I",
+      "video_number": "011",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 23.408207416534424
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 180.0,
+            "end_s": 195.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 179.6s when the speaker finishes saying her discount code 'SAM10'. E2 (target) starts at 180.0s with the word 'Dossier' and ends at 195.0s with 'accumulating your points'. The relationship is 'after'. The speaker immediately transitions to the reward system right after mentioning the code."
+          },
+          {
+            "question_id": "002",
+            "start_s": 138.0,
+            "end_s": 140.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 138.0s when the speaker finishes spraying the perfume onto her neck and hair. E2 (target) starts at 138.0s when she moves the bottle to her wrist and ends at 140.0s when she sprays it. The relationship is 'immediately after'. The visual cue is the clear, continuous motion from her neck to her wrist."
+          },
+          {
+            "question_id": "003",
+            "start_s": 225.0,
+            "end_s": 235.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 225.0s when the speaker suggests bringing a resume. E2 (target) starts at 225.0s with 'I think it's always good...' and ends at 235.0s with '...to have something in front of them'. The relationship is 'immediately after'. The speaker immediately begins her explanation right after making the suggestion."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "FMWQ0jSOX8I",
+      "video_number": "011",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 23.592538833618164
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 510.0,
+            "end_s": 516.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs between 510.0s and 518.0s, where the speaker gives the advice, 'write down a list of some questions that you have.' E2 (target) is the specific question about work hours, which starts at 510.0s when she says, 'like what hours are they looking for you to work?' and ends at 516.0s. The relationship is 'immediately after' the general advice is given."
+          },
+          {
+            "question_id": "002",
+            "start_s": 628.0,
+            "end_s": 634.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs between 628.0s and 632.0s, where the speaker suggests researching the salon's social media and website. E2 (target) is her explanation of why this research is important, which starts at 628.0s when she says, 'Because if you go in and you're asking a question that is right there on their website...' and ends at 634.0s. The relationship is 'immediately after' the suggestion is made."
+          },
+          {
+            "question_id": "003",
+            "start_s": 670.0,
+            "end_s": 676.0,
+            "confidence": 0.97,
+            "rationale_model": "E1 (anchor) occurs between 670.0s and 675.0s, where the speaker recommends having a portfolio ready to show. E2 (target) is her emphasis on the importance of social media in the salon world, which starts at 670.0s when she says, 'But I do think like social media is such a big thing nowadays...' and ends at 676.0s. The relationship is 'immediately after' the portfolio advice is given."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "FMWQ0jSOX8I",
+      "video_number": "011",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 24.52424192428589
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 66.3,
+            "end_s": 69.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 0:00 to 0:10 where the speaker discusses the importance of social media in the salon world. E2 (target) starts at 0:66.3s when she says, 'they're gonna be able to bring more clients into the salon' and ends at 0:69.0s when she adds, 'and help grow our salon's presence online on social media.' The relationship is 'after' E1, as she is elaborating on the benefits of social media that she just introduced."
+          },
+          {
+            "question_id": "002",
+            "start_s": 83.0,
+            "end_s": 85.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's statement from 0:74.0s to 0:83.0s that 'confidence and the way that you present yourself goes such a long way.' E2 (target) starts at 0:83.0s with the phrase 'I think that it's better to have somebody that's more personable' and ends at 0:85.5s. The relationship is 'once_finished' because she is immediately giving an example to support her previous point about confidence."
+          },
+          {
+            "question_id": "003",
+            "start_s": 142.0,
+            "end_s": 145.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's statement from 0:139.0s to 0:142.0s about waiting for the car's air conditioning to cool down. E2 (target) starts at 0:142.0s with her advice 'make sure you are giving yourself enough time so that you are arriving to your interview early' and ends at 0:145.0s. The relationship is 'after' E1, as she transitions from a personal anecdote to the next piece of general advice."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "FMWQ0jSOX8I",
+      "video_number": "011",
+      "segment": {
+        "start": 870,
+        "end": 1004
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 18.22163462638855
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 873.1,
+            "end_s": 874.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 870.0s when the speaker says 'wish me luck'. E2 (target) occurs at 873.1s when she says 'I'm back from the interview'. The target event occurs after the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 887.7,
+            "end_s": 893.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 885.2s when the speaker says 'it was just super easy'. E2 (target) occurs at 887.7s when she says 'there was none of that typical like so what are your strengths and weaknesses'. The target event occurs after the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "jW__kov1qZs",
+      "video_number": "012",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 18.926535844802856
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 50.9,
+            "end_s": 51.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 50.9s when the speaker audibly says 'Morning everyone'. E2 (target event) is the spoken phrase 'Morning everyone'. The start and end times of the phrase are identical to the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 57.6,
+            "end_s": 59.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 56.2s when the speaker says 'First, context'. E2 (target event) is the text 'Design exercise \u2260 white boarding' appearing on screen. The text appears at 57.6s and disappears at 59.8s. The relationship is 'after', as the text appears after the speaker finishes the phrase 'First, context'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "jW__kov1qZs",
+      "video_number": "012",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 19.134737968444824
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 150.0,
+            "end_s": 157.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 150.0s when the speaker says, 'the next thing you have to get right is the deliverables.' E2 (target event) starts at 154.0s with the text 'Action item #2 Spend time on visual execution' and ends at 157.0s. The relationship is 'after'. The visual cue is the immediate appearance of the text slide following the speaker's statement."
+          },
+          {
+            "question_id": "002",
+            "start_s": 178.0,
+            "end_s": 184.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 178.0s when the speaker says, 'So this is clearly the biggest thing that I've missed.' E2 (target event) starts at 182.0s when the text 'The final deliverable for a take-home exercise is a very, very, very polished UI visual design in a PDF' appears and ends at 184.0s. The relationship is 'after'. The visual cue is the appearance of the text slide immediately after the speaker's key insight."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "jW__kov1qZs",
+      "video_number": "012",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 20.001610040664673
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 343.0,
+            "end_s": 344.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 342.0s when the speaker finishes saying 'Action item number three'. E2 (target) starts at 343.0s with the appearance of the white text 'Use standard patterns' on a black screen and ends at 344.0s. The relationship is 'immediately after' the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 357.0,
+            "end_s": 358.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 355.0s when the speaker says 'looking at how other apps do it'. E2 (target) starts at 357.0s with the appearance of the white text 'By looking at Google MD, Apple HIG' on a black screen and ends at 358.0s. The relationship is 'during' the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 368.0,
+            "end_s": 369.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 367.0s when the speaker finishes saying 'Action item number four'. E2 (target) starts at 368.0s with the appearance of the white text 'Pick the right prompt' on a black screen and ends at 369.0s. The relationship is 'immediately after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "jW__kov1qZs",
+      "video_number": "012",
+      "segment": {
+        "start": 510,
+        "end": 639
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 18.168529987335205
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 537.0,
+            "end_s": 541.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 536.0s when the speaker says, 'Now is the fun one, fun time.' E2 (target) starts at 537.0s when the text 'Hot Take' appears on screen and ends at 541.0s. The relationship is 'after' as the text appears immediately following the spoken phrase."
+          },
+          {
+            "question_id": "002",
+            "start_s": 555.0,
+            "end_s": 561.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 555.0s when the speaker says, 'as my cover letter video.' E2 (target) starts at 555.0s with the appearance of the YouTube thumbnail and ends at 561.0s. The relationship is 'immediately after' as the thumbnail appears in the same frame as the speaker references the video."
+          },
+          {
+            "question_id": "003",
+            "start_s": 621.0,
+            "end_s": 623.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 620.0s when the speaker says, 'smash the like button for the YouTube algorithm.' E2 (target) starts at 621.0s when he performs the smashing gesture with his arms and ends at 623.0s. The relationship is 'simultaneous' as the gesture is a direct visual representation of the verb 'smash' in the phrase."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "W6NUlYvx-C0",
+      "video_number": "013",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 22.293532133102417
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 26.0,
+            "end_s": 28.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the host finishing his introduction of Mr. Syed Hassan at 25.6s. E2 (target) is Syed Hassan's greeting, which occurs from 26.0s to 28.0s when he says, 'Hello, thank you so much, Alhamdulillah, I am fine.' The relationship is 'after', as Syed greets the host immediately following his introduction."
+          },
+          {
+            "question_id": "002",
+            "start_s": 74.0,
+            "end_s": 76.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the host finishing his question at 73.6s with the phrase 'before applying a jobs.' E2 (target) is Syed Hassan's response, which starts at 74.0s and ends at 76.0s when he says, 'Well, that's a very good question actually.' The relationship is 'after', as Syed begins speaking immediately after the host's question concludes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 91.0,
+            "end_s": 92.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is Syed Hassan stating the problem of people applying for irrelevant jobs, which finishes at 90.6s. E2 (target) is Syed explaining that companies use ATS systems, starting at 91.0s and ending at 92.0s with the phrase 'in Dubai mostly most of the companies they are using the ATS systems now.' The relationship is 'after', as he immediately introduces the ATS system as the reason for the issue."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "W6NUlYvx-C0",
+      "video_number": "013",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 21.076576232910156
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 205.0,
+            "end_s": 206.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) ends at 204.4s when the first speaker finishes his sentence 'automatically send you the rejection.' E2 (target) starts at 205.0s with the second speaker saying 'Yeah, great.' The target ends at 206.0s. The relationship is 'immediately after'. The speaker's nod and verbal agreement are clear visual and auditory cues."
+          },
+          {
+            "question_id": "002",
+            "start_s": 212.0,
+            "end_s": 213.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 211.7s when the first speaker says, 'What mostly in demand in the UAE is, uh, developers.' E2 (target) starts at 212.0s with the speaker saying, 'For example, I'll talk about front-end developers.' The target ends at 213.0s. The relationship is 'immediately after'. The speaker's use of 'For example' signals the start of a list, which is both a visual (head movement) and auditory cue."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "W6NUlYvx-C0",
+      "video_number": "013",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 22.39655566215515
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 365.42,
+            "end_s": 372.76,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 330.0s when Hassan begins his explanation of the screening process. E2 (target) starts at 365.42s when he says, 'how many years of experience the person has.' The target ends at 372.76s when he finishes the example, 'for example if I am looking for a senior resource, I need to make sure that the resume depicts the same years of experience.' The relationship is 'after' the general process is introduced."
+          },
+          {
+            "question_id": "002",
+            "start_s": 414.33,
+            "end_s": 423.08,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 401.81s when Hassan says, 'somebody from my team ask please if you can give a screening call.' E2 (target) starts at 414.33s with the phrase 'if you have a red flag for somebody,' and ends at 423.08s with the sentence 'check if your red flags are true.' The relationship is 'after' the screening call is proposed."
+          },
+          {
+            "question_id": "003",
+            "start_s": 434.46,
+            "end_s": 439.91,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 432.45s when Hassan states, 'if all those things are good, then we shortlist the candidate.' E2 (target) starts at 434.46s with the phrase 'then we call them to assess them in person.' The relationship is 'immediately after' the shortlisting."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "W6NUlYvx-C0",
+      "video_number": "013",
+      "segment": {
+        "start": 510,
+        "end": 555
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 15.791750192642212
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 522.0,
+            "end_s": 526.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man on the right finishing his sentence about content being helpful for professionals at 521.0s. E2 (target) starts at 522.0s when he says, 'I will share Mr. Hassan profile in the LinkedIn profile...', and ends at 526.8s when he finishes the sentence. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 532.0,
+            "end_s": 534.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man on the right asking the audience to write their questions at 531.6s. E2 (target) starts at 532.0s when he says, 'Then write in the comments,' and ends at 534.0s. The relationship is 'after' the anchor question is asked."
+          },
+          {
+            "question_id": "003",
+            "start_s": 539.5,
+            "end_s": 540.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man on the right finishing his sentence about reviewing and answering questions at 539.3s. E2 (target) starts at 539.5s when the man on the left says, 'Definitely, definitely,' and ends at 540.3s. The relationship is 'once_finished', as the response is immediate."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "VLxZYcza_Cg",
+      "video_number": "014",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 22.5241219997406
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 57.0,
+            "end_s": 58.5,
+            "confidence": 1.0,
+            "rationale_model": "The speaker says, 'So we are going to discuss about LinkedIn in detail' at 56.8s, which is the anchor event (E1). Immediately after this, at 57.0s, she begins to describe the specific feature by saying, 'there is this job tab already available on LinkedIn'. This statement (E2) lasts until 58.5s. The target event occurs directly after the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 146.0,
+            "end_s": 150.5,
+            "confidence": 1.0,
+            "rationale_model": "The anchor event (E1) is the speaker's verbal instruction to search on LinkedIn. At 146.0s, she explicitly says, 'you have to go to your home page and look for a search tab.' The target event (E2) is her instruction to type the job keywords, which she does immediately after at 147.8s by saying, 'and there you have to write architect or interior designer jobs.' This spoken instruction lasts until 150.5s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 187.0,
+            "end_s": 190.0,
+            "confidence": 1.0,
+            "rationale_model": "The anchor event (E1) is the speaker finishing her sentence, 'keywords plays a very important role,' which ends at 186.8s. The target event (E2) is the visual action of her finger scrolling down the phone screen. This scrolling action is clearly visible and occurs from 187.0s to 190.0s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "VLxZYcza_Cg",
+      "video_number": "014",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 20.475183486938477
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 158.8,
+            "end_s": 160.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 157.5s when the speaker says, 'you will find multiple tabs here'. E2 (target) occurs from 158.8s to 160.4s when the speaker says, 'So here you have to go to posts'. The relationship is 'after', as the instruction to go to the 'posts' tab immediately follows the mention of the tabs."
+          },
+          {
+            "question_id": "002",
+            "start_s": 248.3,
+            "end_s": 253.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 236.8s to 247.4s when the speaker says, 'Before you shoot your CV to that email'. E2 (target) starts at 248.3s when she suggests, 'you can give a call to that number which is mentioned on the website'. The relationship is 'after', as she gives the phone call suggestion immediately after advising on the CV check."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "VLxZYcza_Cg",
+      "video_number": "014",
+      "segment": {
+        "start": 330,
+        "end": 435.803
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 18.279325008392334
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 350.5,
+            "end_s": 353.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 349.0s when the speaker says, 'I went to the company's profile.' E2 (target) occurs from 350.5s to 353.0s when she says, 'I found the number there as well.' The relationship is 'after' the speaker mentions going to the profile."
+          },
+          {
+            "question_id": "002",
+            "start_s": 377.5,
+            "end_s": 379.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 374.5s when the speaker says, 'they asked me to share an email with my CV.' E2 (target) occurs from 377.5s to 379.2s when she says, 'That's how I shared my CV with them through email.' The relationship is 'after' the company made the request."
+          },
+          {
+            "question_id": "003",
+            "start_s": 382.4,
+            "end_s": 387.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 382.0s when the speaker says, 'I did check, I did call the company and ask them whether they are looking for a candidate for this position.' E2 (target) occurs from 382.4s to 387.8s when she states, 'And they said yes. They told me yes, they are looking for a job and they asked me to share an email with my CV.' The relationship is 'after' the speaker confirms she made the call."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "TLIoOLOjqwg",
+      "video_number": "015",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 21.23164176940918
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 196.5,
+            "end_s": 200.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 196.5s when the speaker finishes saying 'I promise you one thousand percent that that is not the case.' E2 (target) starts at 200.0s when she says, 'So now that we've talked about this, I'm going to give you strategies...' and continues until 200.0s. The relationship is 'immediately after' because her next sentence begins the transition to the new topic."
+          },
+          {
+            "question_id": "002",
+            "start_s": 222.8,
+            "end_s": 225.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 222.8s when the 'BEFORE INTERVIEW' text and its first bullet point are displayed on screen. E2 (target) starts at 225.0s when the 'DURING INTERVIEW (ONSITE & OFFSITE)' text appears, replacing the previous screen. The relationship is 'after' as the new text appears sequentially after the old one."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "TLIoOLOjqwg",
+      "video_number": "015",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 22.975989818572998
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 348.4,
+            "end_s": 351.5,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) is the speaker finishing the sentence 'you should get ready technically' at 348.4s. E2 (target) is the speaker starting the list of examples, saying 'like reading code, writing code, learning data structures, system design...', which begins at 351.5s. The relationship is 'after' because she must finish the general instruction before giving the specific examples."
+          },
+          {
+            "question_id": "002",
+            "start_s": 381.4,
+            "end_s": 382.8,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) is the speaker introducing the new topic with the phrase 'The first thing you should do during the interview is that you should get to know the interviewer' at 381.4s. E2 (target) is the specific instruction 'get to know the interviewer' which she states from 382.8s to 383.6s. The relationship is 'after' as the specific instruction follows the introductory phrase."
+          },
+          {
+            "question_id": "003",
+            "start_s": 452.2,
+            "end_s": 454.6,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) is the speaker's advice to 'ask them questions about themselves during that chit chat stage' which concludes at 452.2s. E2 (target) is the start of the specific example, beginning with 'For example, let's say there's like a bunch of stuff around cloud native development, containerization, Kubernetes, Docker, infrastructure as code...', which starts at 454.6s. The relationship is 'after' as the example follows the general advice."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "TLIoOLOjqwg",
+      "video_number": "015",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 23.111456632614136
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 567.0,
+            "end_s": 575.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 567.0s when the speaker finishes saying, 'you leave an impression on that person when you do that.' E2 (target) occurs from 571.0s to 575.0s when the speaker transitions to the next point, 'Next thing I want to say is be yourself, right?'. The relationship is 'after' the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 603.0,
+            "end_s": 609.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 603.0s when the speaker begins, 'Because I promise you if you are not trying to be yourself and if you are trying to be fake...'. E2 (target) occurs from 605.0s to 609.0s when she states, 'Anybody that pays attention will notice it...'. The relationship is 'after' the anchor event, as she is explaining the consequence of being fake immediately after introducing the idea."
+          },
+          {
+            "question_id": "003",
+            "start_s": 654.0,
+            "end_s": 661.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 654.0s when the speaker says, 'And I proposed a solution that reduced it from 100 milliseconds to 8 milliseconds...'. E2 (target) occurs from 656.0s to 661.0s when she finishes the sentence. The relationship is 'after' the anchor event, as the example is the direct content of the sentence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "TLIoOLOjqwg",
+      "video_number": "015",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 22.67974615097046
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 160.6,
+            "end_s": 164.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 157.1s when the speaker finishes saying, 'if there are numbers to add.' E2 (target event) starts at 160.6s when she says, 'There are some times that there won't be numbers,' and ends at 164.9s. The relationship is 'after', as the speaker explicitly begins her new sentence following the completion of the previous one."
+          },
+          {
+            "question_id": "002",
+            "start_s": 295.3,
+            "end_s": 300.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 288.7s when the speaker says, '10 million users or 10 million customers.' E2 (target event) is the specific phrase '10 million users or 10 million customers,' which is spoken from 295.3s to 300.9s. The relationship is 'after' because the anchor phrase is spoken immediately before the target phrase."
+          },
+          {
+            "question_id": "003",
+            "start_s": 172.1,
+            "end_s": 175.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the text overlay '6. Mention past achievements you can comfortably talk about.' which is visible from 161.0s to 171.8s. E2 (target event) is the next numbered text overlay, '7. Be organized when problem solving,' which appears at 172.1s and remains on screen until 175.4s. The relationship is 'immediately after', as the second overlay appears directly following the disappearance of the first."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "TLIoOLOjqwg",
+      "video_number": "015",
+      "segment": {
+        "start": 870,
+        "end": 1020
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 19.69393229484558
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 870.0,
+            "end_s": 871.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 868.1s when the speaker says 'after the interview'. E2 (target) is the appearance of the text overlay 'Sit back and focus on yourself.' at 870.0s and it remains until 871.0s. The relationship is 'after' as the text appears immediately following her statement."
+          },
+          {
+            "question_id": "002",
+            "start_s": 892.0,
+            "end_s": 895.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 891.3s when the speaker says 'It's either you get an offer or you get a rejection'. E2 (target) is the speaker saying 'If you get an offer, congratulations to you' from 892.0s to 895.0s. The relationship is 'after' as the congratulatory statement directly follows the mention of the two possible outcomes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 939.0,
+            "end_s": 940.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 938.0s when the speaker says 'Please reach out to me on social media'. E2 (target) is the appearance of the social media handles on screen from 939.0s to 940.0s. The relationship is 'after' as the handles appear immediately after she makes the invitation."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "TLIoOLOjqwg",
+      "video_number": "015",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 21.307755708694458
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 36.4,
+            "end_s": 43.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 36.4s when the on-screen text '3 Things to know when INTERVIEWING' is fully displayed. E2 (target) starts at 36.4s as the speaker says 'So, the first thing is that people are chosen in relative...'. The target continues until 43.6s, concluding with '...relative to other candidates.' The relationship is 'immediately after' the anchor text appears and the speaker begins her explanation."
+          },
+          {
+            "question_id": "002",
+            "start_s": 116.0,
+            "end_s": 128.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 116.0s when the speaker begins talking about 'false positives, false negatives, true positives, true negatives'. E2 (target) starts at 116.0s as she says 'Companies actually care more...'. The target continues until 128.6s, ending with '...they care more about not hiring bad talents.' The relationship is 'during', as the explanation of companies' priorities is a direct continuation of her discussion on hiring accuracy."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "TLIoOLOjqwg",
+      "video_number": "015",
+      "segment": {
+        "start": 870,
+        "end": 1019.1500000000001
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 15.229020833969116
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 900.3,
+            "end_s": 906.1,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) is the speaker finishing her advice on post-interview actions, which concludes around 896.0s. E2 (target) is her statement, 'this video is about getting your dream job,' which starts at 900.3s and ends at 906.1s. The relationship is 'after' the completion of the prior advice. The visual cue is her continuous speaking, and the audio cue is the distinct phrasing of the target event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "btNqPT6-P0U",
+      "video_number": "016",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 23.447454690933228
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 215.0,
+            "end_s": 218.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 210.0s when the woman says, 'the STAR method, that's your absolute secret weapon.' E2 (target) starts at 215.0s with the line 'situation, task, action, result.' The target ends at 218.0s. The relationship is 'immediately after' the anchor event is mentioned."
+          },
+          {
+            "question_id": "002",
+            "start_s": 276.0,
+            "end_s": 279.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 270.0s when the man says, 'there's the flip side when we need to talk about what not to say.' E2 (target) starts at 276.0s when the woman says, 'definitely, definitely avoid bad-mouthing former employers.' The target ends at 279.0s. The relationship is 'after' the man introduces the topic."
+          },
+          {
+            "question_id": "003",
+            "start_s": 290.0,
+            "end_s": 300.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 285.0s when the man says, 'and zooming out a bit, all of this, the words, the body language, it ties back to preparation, really doing your homework.' E2 (target) starts at 290.0s with the line 'our deep dive shows it's about going way beyond just glancing at the company's about us page.' The target ends at 300.0s. The relationship is 'after' the anchor event, as he is providing a detailed explanation of what the preparation entails."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "btNqPT6-P0U",
+      "video_number": "016",
+      "segment": {
+        "start": 330,
+        "end": 366
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 13.955578088760376
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 347.1,
+            "end_s": 348.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 347.1s when the man takes a sip of coffee. E2 (target) is the phrase 'it builds skills,' which is spoken by the man from 347.1s to 348.5s. The target event begins immediately after the anchor event of him drinking the coffee."
+          },
+          {
+            "question_id": "002",
+            "start_s": 357.0,
+            "end_s": 357.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the phrase 'every single time,' which ends at 357.0s. E2 (target) is the phrase 'You show up differently,' which starts immediately after at 357.0s and lasts until 357.7s. The relationship is 'immediately after' the anchor phrase concludes."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "btNqPT6-P0U",
+      "video_number": "016",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 20.50834083557129
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 34.0,
+            "end_s": 41.0,
+            "confidence": 0.99,
+            "rationale_model": "The speaker, a woman, introduces the 'deep dive' into interview preparation at 0:33. The target event, her mentioning 'surprising insights and steps', occurs immediately after, from 0:34 to 0:41. The relationship is 'after' the introduction."
+          },
+          {
+            "question_id": "002",
+            "start_s": 92.0,
+            "end_s": 103.0,
+            "confidence": 0.99,
+            "rationale_model": "The anchor event, the man's explanation of how dressing applies to online interviews, occurs from 0:77 to 0:91. The target event, him mentioning 'enclothed cognition', is a direct part of this explanation, starting at 0:92 and ending at 0:103. The relationship is 'during' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "btNqPT6-P0U",
+      "video_number": "016",
+      "segment": {
+        "start": 330,
+        "end": 365.616992
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 12.033479452133179
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 337.5,
+            "end_s": 338.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the phrase 'makes you stand out' at 337.2s. E2 (target) is the man saying 'absolutely' at 337.5s. The temporal relationship is 'after' (he finishes the phrase and then says 'absolutely')."
+          },
+          {
+            "question_id": "002",
+            "start_s": 350.0,
+            "end_s": 351.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man finishing sipping from his white cup at 348.6s. E2 (target) is the man saying 'it builds skills' starting at 350.0s and ending at 351.5s. The temporal relationship is 'after' (he finishes drinking before speaking)."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JEBRZq1hbY0",
+      "video_number": "017",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.35192584991455
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 42.0,
+            "end_s": 42.6,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs from 36.1s to 41.7s when the speaker says, 'my philosophy uh the way I was taught uh by my mom and dad actually my parents told me that always go on an interview...'. E2 (target) starts at 42.0s when he says, 'It's practice.' The target ends at 42.6s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 67.2,
+            "end_s": 67.8,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs from 66.0s to 67.0s when the speaker finishes saying, 'never uh never overstate your qualifications.' E2 (target) starts at 67.2s when he says, 'But know what your value, know your worth.' The target ends at 67.8s. The relationship is 'once_finished'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JEBRZq1hbY0",
+      "video_number": "017",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 22.614216327667236
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 193.4,
+            "end_s": 197.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the mention of 'your strengths and maybe even your weaknesses' which concludes at approximately 193.4s. E2 (target) is the speaker saying 'why you want to want this particular job' which starts at 193.4s and ends at 197.4s. The temporal relationship is 'immediately after'. The speaker's words transition directly from discussing weaknesses to discussing the job itself."
+          },
+          {
+            "question_id": "002",
+            "start_s": 225.2,
+            "end_s": 226.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker discussing the importance of having a coach for self-improvement, which occurs from 222.0s to 225.2s. E2 (target) is the speaker mentioning Roger Wakefield, which starts at 225.2s and ends at 226.6s. The temporal relationship is 'after'. The speaker explicitly cites Roger Wakefield as an authority on the subject he is discussing."
+          },
+          {
+            "question_id": "003",
+            "start_s": 255.0,
+            "end_s": 256.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing his advice about researching a company and asking about their projects, concluding at approximately 255.0s. E2 (target) is the speaker transitioning to a new topic by asking, 'what about like the things I would I find important would be like okay so what about training and education', which starts at 255.0s and ends at 256.2s. The temporal relationship is 'immediately after'. The speaker uses the conjunction 'so' to signal a shift in his train of thought."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JEBRZq1hbY0",
+      "video_number": "017",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 21.08796238899231
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 480.0,
+            "end_s": 485.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 478.0s to 480.0s, where the speaker asks, 'what goals do I need to achieve to get more money?'. E2 (target) starts at 480.0s when he says 'and then you're going to pay me that money' and ends at 485.0s. The relationship is 'after', as the speaker poses a question and then immediately provides the answer."
+          },
+          {
+            "question_id": "002",
+            "start_s": 410.0,
+            "end_s": 425.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 405.0s to 410.0s when the speaker says, 'especially if you're going for a union job, okay?'. E2 (target) starts at 410.0s with the phrase 'you have to let them know I understand that the process of safety' and continues through 'how we have to do our hazard assessments' until 425.0s. The relationship is 'after', as the speaker first mentions the union context and then immediately begins to describe the safety process."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JEBRZq1hbY0",
+      "video_number": "017",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 22.18269419670105
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 705.2,
+            "end_s": 715.2,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 660.0s when the speaker says, 'you're always going to be a student of construction'. E2 (target) starts at 705.2s when he begins to list his three responsibilities for a construction worker. The temporal relationship is 'after'. The speaker's transition from discussing being a student to listing the responsibilities is clearly audible."
+          },
+          {
+            "question_id": "002",
+            "start_s": 720.2,
+            "end_s": 728.6,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 720.0s when the speaker asks, 'What do you think are the key responsibilities of a construction worker?'. E2 (target) starts at 720.2s with the answer, 'So the key responsibilities of a construction worker are to be safe, right?'. The list concludes at 728.6s. The relationship is 'once_finished'. The speaker immediately begins his answer after posing the question."
+          },
+          {
+            "question_id": "003",
+            "start_s": 739.8,
+            "end_s": 743.4,
+            "confidence": 0.97,
+            "rationale_model": "E1 (anchor) occurs at 739.2s when the speaker asks, 'Have you ever been in a situation where the supervisor was unhappy with your work?'. E2 (target) starts at 739.8s with the advice, 'you always own up to your mistakes'. The advice continues until 743.4s. The relationship is 'once_finished'. The speaker begins giving the advice immediately after posing the question."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JEBRZq1hbY0",
+      "video_number": "017",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.100468397140503
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 695.75,
+            "end_s": 698.38,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor event) starts at 692.41s with the speaker saying 'explain to this general contractor or whatever,' and ends at 695.75s. E2 (target event) starts at 695.75s when the speaker says 'and that's the same thing' and ends at 698.38s. The relationship is 'after' because the speaker uses the conjunction 'and' to link the two ideas."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JEBRZq1hbY0",
+      "video_number": "017",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.929485321044922
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 912.0,
+            "end_s": 915.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor), the reading of the question 'What steps have you taken in terms of further developing your skill set?', concludes at 912.0s. Immediately after, at 912.0s, E2 (target), the speaker's explanation beginning with 'So there you go, right. So right away you can say um yeah I I study', starts and continues until 915.0s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 985.0,
+            "end_s": 989.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor), the speaker's explanation of due diligence for unsafe acts, concludes at 985.0s with the final sentence. Immediately after, at 985.0s, E2 (target), the speaker's transition to discussing interview preparation begins with 'So yeah, so look at your skills, your strengths and and maybe even your weaknesses'. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JEBRZq1hbY0",
+      "video_number": "017",
+      "segment": {
+        "start": 1050,
+        "end": 1260
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.915659427642822
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "002",
+            "start_s": 1123.4,
+            "end_s": 1133.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 1118.2s to 1123.4s as the speaker reads the 'Practice Makes Perfect' section. E2 (target) starts at 1123.4s when the speaker says, 'You want to be cool, collected and confident when you sit for your upcoming interview.' E2 ends at 1133.9s. The relationship is 'after' as the speaker continues the same thought process."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1153.7,
+            "end_s": 1161.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 1143.2s to 1153.7s as the speaker reads the 'What is your main weakness?' question. E2 (target) starts at 1153.7s when the speaker says, 'The key to this question is to turn a weakness into a positive.' E2 ends at 1161.8s. The relationship is 'after' as the speaker immediately follows the question with the advice."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JEBRZq1hbY0",
+      "video_number": "017",
+      "segment": {
+        "start": 1230,
+        "end": 1303
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 16.696885585784912
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1285.5,
+            "end_s": 1289.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 1281.3s when the speaker says 'dress to impress'. E2 (target) starts at 1285.5s and ends at 1289.0s. The relationship is 'after' because the speaker says the anchor phrase and then reads the specific sentence as a direct explanation."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1293.0,
+            "end_s": 1296.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 1291.4s when the speaker reads 'dress professionally, not casually'. E2 (target) starts at 1293.0s and ends at 1296.0s. The relationship is 'after' because the speaker finishes the anchor sentence and then begins the new sentence for women's attire."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1299.4,
+            "end_s": 1302.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 1297.2s when the speaker finishes the dressing advice for women. E2 (target) starts at 1299.4s and ends at 1302.0s. The relationship is 'once_finished' because the speaker completes the previous topic and then begins the advice for men."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 18.37628197669983
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 14.5,
+            "end_s": 15.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 14.5s with the speaker saying 'Welcome to the Job Search Preparation Resume Writing Workshop.' E2 (target) starts at 14.5s and ends at 15.3s, where the speaker states 'I'm Cynthia White.' The relationship is 'immediately after' the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 72.8,
+            "end_s": 73.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 72.8s with the speaker stating 'On average, employers spend about 60 to 90 seconds reviewing a resume...'. E2 (target) starts at 72.8s and ends at 73.8s, where the speaker begins to explain the purpose of the cover letter with 'Now, a cover letter sets the stage for the resume.' The relationship is 'immediately after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.916284799575806
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 236.2,
+            "end_s": 240.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs between 234.0s and 242.0s, as the speaker says, 'and how to format an electronic resume.' E2 (target event) is the mention of the same phrase, which occurs at 236.2s and ends at 240.2s. The relationship is that the target event is a direct repetition of the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 272.8,
+            "end_s": 278.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker finishing the sentence 'Design a resume that is simple and clean,' which happens at 272.2s. E2 (target event) is the next checklist item, 'Limit the resume to two pages maximum,' which the speaker begins to say at 272.8s and finishes at 278.4s. The relationship is 'immediately after' the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 304.8,
+            "end_s": 310.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker finishing the tip 'Review the job announcement,' which occurs at 304.4s. E2 (target event) is the beginning of the next tip, 'Consider the employer's perspective,' which the speaker says starts at 304.8s and continues until 310.4s. The relationship is 'immediately after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 18.35697841644287
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 506.0,
+            "end_s": 509.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker saying 'one size does not fit all' at 506.0s. E2 (target event) is the speaker finishing her explanation about editing a basic resume for each job, which occurs at 509.0s. The relationship is 'after' because the target event (finishing the explanation) occurs after the anchor event (saying 'one size does not fit all')."
+          },
+          {
+            "question_id": "003",
+            "start_s": 456.0,
+            "end_s": 457.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker finishing her description of the chronological resume at 456.0s. E2 (target event) is the speaker starting to describe the skills-based resume, which begins at 457.0s. The relationship is 'once_finished', meaning the target event starts immediately after the anchor event concludes."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.804162979125977
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 518.0,
+            "end_s": 521.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs from 517.8s to 518.8s when the speaker says, 'we're careful about that as well.' Immediately after this, at 518.8s, the title 'Style: Combination Resume - Sample #1' appears on screen and remains visible until 521.0s. The visual cue is the appearance of the title on the slide, and the audio cue is the conclusion of the previous sentence."
+          },
+          {
+            "question_id": "002",
+            "start_s": 524.0,
+            "end_s": 526.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs from 521.8s to 523.2s when the title 'Style: Combination Resume - Sample #2' appears on screen. Immediately after this, at 523.2s, the speaker begins to describe the benefits for job seekers. The target event (002) starts at 523.2s and ends at 526.0s. The relationship is 'immediately after'. The visual cue is the title slide, and the audio cue is the start of the new sentence describing the benefits."
+          },
+          {
+            "question_id": "003",
+            "start_s": 651.0,
+            "end_s": 652.0,
+            "confidence": 0.97,
+            "rationale_model": "E1 (anchor) occurs from 647.2s to 650.0s when the speaker finishes summarizing James's scenario. Immediately after, at 650.0s, the speaker states the recommended resume type. The target event (003) starts at 650.0s and ends at 652.0s. The relationship is 'immediately after'. The visual cue is the slide with James's scenario, and the audio cue is the start of the new sentence with 'chronological or combination resume'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.257250785827637
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 870.0,
+            "end_s": 875.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 870.0s to 873.5s, where the speaker concludes her thoughts on choosing a resume style. E2 (target) starts at 875.0s, when she begins her next sentence, 'And now we'll look a little more at the actual resume and the contents that will need to be included in the resume.' The relationship is 'once_finished', meaning the target event starts immediately after the anchor event concludes."
+          },
+          {
+            "question_id": "002",
+            "start_s": 916.0,
+            "end_s": 921.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 882.0s to 915.5s, where the speaker lists the first category, 'name and contact information'. E2 (target) starts at 916.0s, when she says, 'you're going to look at four basic categories of information...'. The relationship is 'after', as she explicitly lists the categories in sequence."
+          },
+          {
+            "question_id": "003",
+            "start_s": 984.0,
+            "end_s": 989.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 973.0s to 983.5s, where the speaker states, 'many employers are beginning to make communication... through emails.' E2 (target) starts at 984.0s, when she advises, 'It's kind of a good idea to sometimes open a new email address.' The relationship is 'after', as the advice follows directly from the observation about employer communication practices."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 1050,
+        "end": 1260
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.934006929397583
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1126.3,
+            "end_s": 1131.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker introducing the 'Skills & Accomplishments' section at 1050.0s. E2 (target event) starts at 1126.3s and ends at 1131.0s. During this time, the speaker explicitly says, 'there's a tool online that's on the website, um, mynextmove.org or even onetonline.org.' The relationship is 'after', as the website suggestion comes after the initial section introduction."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1134.5,
+            "end_s": 1137.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker finishing her mention of 'onetonline.org' at 1134.0s. E2 (target event) starts at 1134.5s when the text 'New Graduate' appears on the right side of the screen and ends at 1137.8s when the text 'Formerly Incarcerated' appears. The relationship is 'immediately after', as the text 'New Graduate' is displayed right after the speaker finishes the sentence."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1145.0,
+            "end_s": 1148.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the appearance of the 'New Graduate' text at 1134.5s. E2 (target event) starts at 1145.0s when the text 'Formerly Incarcerated' appears on the screen and ends at 1148.5s. The relationship is 'after', as the 'Formerly Incarcerated' category is introduced later on the slide following the 'New Graduate' category."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 1230,
+        "end": 1440
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 18.046352863311768
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1230.0,
+            "end_s": 1235.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs from 1230.0s to 1233.0s as the speaker finishes her sentence with '...in your work history.' E2 (target event) starts at 1233.0s when she begins to speak about 'another thing is we're going to talk about those summary statements.' The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1275.0,
+            "end_s": 1290.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs from 1265.0s to 1274.0s as the speaker states, 'we always want to make sure that we include our summary statements as well.' E2 (target event) starts at 1275.0s when she says, 'That's going to be a common way to to make the skills and accomplishments stand out on that resume.' The relationship is 'once_finished'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 1410,
+        "end": 1620
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 18.024118423461914
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1434.1,
+            "end_s": 1434.1,
+            "confidence": 1.0,
+            "rationale_model": "The speaker's explanation of using bullets for skills, concluding with 'this one highlights those relevant skills,' finishes around 1434.1s. Immediately after, at 1434.1s, the 'Skills/Summary of Skills' section appears on screen. The transition is direct and happens right after the verbal cue."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1478.7,
+            "end_s": 1478.7,
+            "confidence": 1.0,
+            "rationale_model": "The speaker says, 'This is an accomplishment statement' at 1478.7s. At the same moment, the 'Example 4: Accomplishment Statement' text box appears on the screen. The appearance of the text box is synchronized with the verbal cue."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 1590,
+        "end": 1800
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.13965129852295
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1655.0,
+            "end_s": 1660.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor event) occurs from 1622.0s to 1647.0s, during which the speaker explains using action words to describe job duties and contributions. E2 (target event) starts at 1655.0s when she says, 'You want to list the most recent jobs first...' and continues until 1660.0s. The temporal relationship is 'after' the description of job duties is finished."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1676.0,
+            "end_s": 1680.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor event) occurs from 1675.0s to 1677.0s when the yellow hexagonal graphics for 'Education/Training' fully appear on screen. E2 (target event) starts at 1676.0s when the speaker begins to list the types of earned qualifications, saying, 'you want to make sure that you're listing any diplomas, certificate or any degree that you've earned...'. E2 continues until 1680.0s. The temporal relationship is 'after' the graphics appear, and the speaker's speech begins simultaneously with their full appearance."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 1770,
+        "end": 1980
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.983776807785034
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1770.0,
+            "end_s": 1782.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1770.0s when the speaker says, 'The body is going to have, you're going to start with the introduction.' E2 (target) starts at 1778.4s when she gives the example, 'I'm writing to apply for a position posted on your company website.' E2 ends at 1782.5s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1787.0,
+            "end_s": 1791.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1787.0s when the slide changes to 'Sample Cover Letter'. E2 (target) starts at 1787.0s and ends at 1791.0s when the speaker begins describing its components: 'Here is an example of a cover letter...'. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1894.0,
+            "end_s": 1897.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1894.0s when the speaker finishes the tip about checking for errors. E2 (target) starts at 1894.0s when the slide changes to 'Electronic Resume'. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 1950,
+        "end": 2160
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.204243183135986
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1954.4,
+            "end_s": 1957.9,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 1950.0s with the speaker's statement, 'applications and resumes submitted online.' E2 (target) starts at 1954.4s when she says, 'the electronic resume is going to contain the same information as that standard resume.' E2 ends at 1957.9s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1961.3,
+            "end_s": 1966.3,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 1960.3s when she begins, 'the electronic information is going to need to be in plain text.' E2 (target) starts at 1961.3s with the phrase, 'anything that's been bolded or underlined.' E2 ends at 1966.3s. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1971.3,
+            "end_s": 1976.1,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 1967.0s with the 'Electronic Resume Tips' slide appearing on screen. E2 (target) starts at 1971.3s when the speaker says, 'you want to limit each line to 65 characters.' E2 ends at 1976.1s. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 2130,
+        "end": 2161
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.121319055557251
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "002",
+            "start_s": 2145.2,
+            "end_s": 2147.8,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs from 2130.0s to 2145.2s, during which the speaker says 'www.aces.edu'. E2 (target) is the phrase 'and my contact information again is right here, Cynthia White', which is spoken from 2145.2s to 2147.8s. The relationship is 'after' the website address is finished. The transition is clear in the audio."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2158.0,
+            "end_s": 2161.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs from 2158.0s to 2159.7s, during which the speaker says 'for taking a look at this resume writing workshop.' E2 (target) is the screen transition to the logo, which starts at 2159.7s and is fully visible by 2161.0s. The relationship is 'immediately after' the speaker finishes the sentence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.369882822036743
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 690.0,
+            "end_s": 698.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker introducing the 'Britney' scenario, which occurs at 690.0s. E2 (target) is the explanation that Britney should highlight her skills from volunteering, sports, clubs, and other activities. This explanation starts at 690.0s when the speaker says, 'she's going to go with the skills-based resume... highlight her skills and accomplishments... that she didn't necessarily obtain from employment, but from other activities, other life experiences, which include volunteering, sports, clubs, and other activities.' E2 continues until 698.0s. The relationship is 'after' the introduction."
+          },
+          {
+            "question_id": "002",
+            "start_s": 747.0,
+            "end_s": 752.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker describing Martha's background, including her 'three years of experience' as a teacher's assistant. This part of the description finishes at 746.0s. E2 (target) is the statement that Martha should use a skills-based resume. This occurs at 747.0s when the speaker explicitly says, 'So, we're going to go with the skills-based resume because she's changing industry.' E2 continues until 752.0s. The relationship is 'after' the description of her experience."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "JQlpVKkKC_M",
+      "video_number": "018",
+      "segment": {
+        "start": 2130,
+        "end": 2160.75
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 12.567186832427979
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2134.3,
+            "end_s": 2135.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the phrase 'interactive session on resume writing or any of the other topics' at approximately 2134.2s. E2 (target) is her saying 'you can take a look and find that out on our website' which begins at 2134.3s and concludes at 2135.9s. The relationship is 'after', as she begins discussing the website immediately following the mention of 'interactive sessions'. The audio cues are the clear transition from one sentence to the next without any pause."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2153.3,
+            "end_s": 2156.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker stating her name, 'Cynthia White', which occurs from 2151.6s to 2153.3s. E2 (target) is her saying 'Thanks so much for taking a look at this resume writing workshop' which starts at 2153.3s and ends at 2156.0s. The relationship is 'after', as she thanks the audience immediately after introducing herself. The audio cues are the sequential nature of her speech, with the thank you directly following her name."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZgVeEGCJ9s4",
+      "video_number": "019",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 21.019362688064575
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 38.0,
+            "end_s": 41.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 37.2s when the speaker finishes saying, 'I'm here to talk about how to prepare for a competency-based interview.' Immediately after, at 38.0s, the speaker begins to elaborate on the topic by saying, 'These are sometimes referred to as behavioral interviews or situational interviews,' which is E2 (target). E2 ends at 41.6s."
+          },
+          {
+            "question_id": "002",
+            "start_s": 89.3,
+            "end_s": 97.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 88.5s when the speaker asks, 'Now, why do we use competency-based interviews?' E2 (target) starts at 89.3s with the speaker saying, 'It's because as a predictor of future performance...' and concludes at 97.3s by stating, 'It's estimated that a competency-based interview has a 0.51 predictor of success...'. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZgVeEGCJ9s4",
+      "video_number": "019",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.466214418411255
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 150.0,
+            "end_s": 152.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 150.0s when the speaker finishes his advice about preparing for the interview. E2 (target) starts at 151.1s when he says, 'The second piece of advice I'd give you is...'. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 164.2,
+            "end_s": 167.1,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 164.2s when the speaker finishes his sentence about the vacancy notice being 'gone off the web'. E2 (target) starts at 165.8s when he says, 'Now, in terms of the structure of an interview...'. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZgVeEGCJ9s4",
+      "video_number": "019",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 22.58111882209778
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 330.0,
+            "end_s": 334.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 330.0s when the speaker says, 'Now, there's a fourth letter though I often introduce as well, which is L.' E2 (target) starts at 330.4s when he says, 'And that stands for learning.' The target ends at 334.0s when he says, 'Often a panel will ask you about...' The relationship is 'after' the anchor."
+          },
+          {
+            "question_id": "002",
+            "start_s": 379.0,
+            "end_s": 382.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 379.0s when the speaker asks, 'How long should a response be?' E2 (target) starts at 379.4s when he says, 'And certainly you can be marked down if you're waffling or you're just saying a lot of nothing.' The target ends at 382.0s. The relationship is 'after' the anchor."
+          },
+          {
+            "question_id": "003",
+            "start_s": 440.0,
+            "end_s": 442.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 440.0s when the speaker says, 'And don't go on for a long period of time.' E2 (target) starts at 440.4s when he says, 'Just sort of reiterate your motivation for the position.' The target ends at 442.0s. The relationship is 'after' the anchor."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZgVeEGCJ9s4",
+      "video_number": "019",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 21.07400918006897
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 577.3,
+            "end_s": 581.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 577.3s when the speaker says, 'Now, when the panel is assessing your answers.' E2 (target) occurs at 579.9s when he says, 'Now I often equate this to diving in the Olympics.' The relationship is 'after' as E2 is a direct continuation of the thought from E1."
+          },
+          {
+            "question_id": "002",
+            "start_s": 635.0,
+            "end_s": 642.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 635.0s when the speaker says, 'And I'll give you an example of that.' E2 (target) occurs at 638.0s when he says, 'One candidate gave me an example of when she was in high school and her teacher accused her of cheating in a test.' The relationship is 'after' as E2 is the example given in response to the statement in E1."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZgVeEGCJ9s4",
+      "video_number": "019",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 22.03780221939087
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 90.0,
+            "end_s": 100.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the description of the three interview formats, which concludes around 90.0s. E2 (target), the appearance of the '3 types of interviews' graphic, is a visual event that begins at 90.0s and is fully visible by 91.0s. The relationship is 'after', as the graphic appears immediately following the verbal summary."
+          },
+          {
+            "question_id": "002",
+            "start_s": 115.0,
+            "end_s": 125.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker saying 'There's telephone interviews' at 115.0s. E2 (target), the visual text '1. Stand up', appears on the left side of the screen at 115.0s. The relationship is 'after', as the visual text appears at the same time the speaker introduces the first point of advice for this interview type."
+          },
+          {
+            "question_id": "003",
+            "start_s": 145.0,
+            "end_s": 155.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker saying 'Make sure your background is tidy' at 145.0s. E2 (target), the visual text '3. Appropriate clothing', appears on the left side of the screen at 145.0s. The relationship is 'after', as the visual cue for the next point follows immediately after the speaker finishes the previous point."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZgVeEGCJ9s4",
+      "video_number": "019",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 21.26716160774231
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 898.0,
+            "end_s": 913.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker explaining the importance of eye contact in a face-to-face interview, which occurs between 870.0s and 895.0s. E2 (target) starts at 898.0s when the speaker says, 'you might address that particular panel member' and continues until 913.2s, explaining how to 'bring in the rest of the panel'. The relationship is 'after' E1."
+          },
+          {
+            "question_id": "002",
+            "start_s": 948.0,
+            "end_s": 957.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing his story about the young man's inappropriate attire (chewing gum, t-shirt, coffee) and his actions during the interview, which concludes at 948.0s. E2 (target) is the speaker's advice to wear appropriate clothing, which starts at 948.0s and ends at 957.8s. The relationship is 'once_finished', as the advice is given immediately after the story concludes."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZgVeEGCJ9s4",
+      "video_number": "019",
+      "segment": {
+        "start": 1050,
+        "end": 1260
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.77968668937683
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1110.0,
+            "end_s": 1125.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 1110.0s to 1124.0s as the speaker states, 'And that's considered a little bit of a no-no.' E2 (target) begins immediately after at 1124.0s with the speaker asking, 'What is appropriate?' and concludes at 1125.0s when he says, 'is to send some form of thank you.' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1200.0,
+            "end_s": 1230.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 1200.0s to 1229.0s as the speaker presents the 'dysfunctional team' example. E2 (target) begins immediately after at 1229.0s with the speaker asking, 'What are the three values that are most important to you?' and ends at 1230.0s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "ZgVeEGCJ9s4",
+      "video_number": "019",
+      "segment": {
+        "start": 1230,
+        "end": 1302
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 17.54563856124878
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1238.0,
+            "end_s": 1239.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the phrase 'contrary evidence questions' at 1237.6s. E2 (target) is the appearance of the text '5. Contrary-evidence questions' on the blue panel. This text appears as a visual transition immediately after the speaker finishes the phrase, starting at 1238.0s and ending at 1239.5s."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1247.8,
+            "end_s": 1248.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing his explanation of 'contrary evidence questions' at 1247.6s. E2 (target) is the appearance of the 'Closing words' slide. The slide appears as a visual transition immediately after the speaker finishes, starting at 1247.8s and ending at 1248.9s."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1272.0,
+            "end_s": 1274.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing his statement 'I hope you've found this little simple tutorial useful' at 1269.4s. E2 (target) is the speaker recommending the IOM website. This recommendation begins at 1272.0s with the phrase 'I would really recommend that you go to our website' and ends at 1274.5s with the phrase 'WWW.IOM.INT'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 18.221318244934082
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 56.8,
+            "end_s": 61.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 52.4s when the speaker says 'interviewing prep 101'. E2 (target) starts at 56.8s with the phrase 'and this session is going to build on' and ends at 61.2s with the phrase 'all of the other career presentations'. The relationship is 'after', as the speaker explicitly states what the session will do immediately following its introduction."
+          },
+          {
+            "question_id": "002",
+            "start_s": 83.7,
+            "end_s": 87.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 81.6s when the speaker says 'My name is Daniel Moglen'. E2 (target) starts at 83.7s with the phrase 'I work at UC Davis Health' and ends at 87.9s. The relationship is 'after', as the speaker states his affiliation immediately after introducing himself."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.12778091430664
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 155.8,
+            "end_s": 159.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 150.0s to 155.8s, where the speaker says 'the whole conference and workshops that we've been attending is really just the beginning.' E2 (target) starts at 155.8s when he says 'I really want to encourage everyone to stay in touch with with people' and ends at 159.1s. The relationship is 'after' the anchor event concludes."
+          },
+          {
+            "question_id": "002",
+            "start_s": 162.1,
+            "end_s": 164.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 160.8s to 162.1s, where the speaker says 'All right, cool.' E2 (target) starts at 162.1s when he says 'Welcome everyone' and ends at 164.2s. The relationship is 'after' the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 180.3,
+            "end_s": 181.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 178.0s when the speaker says 'With that, I'm going to share my screen and we'll go ahead and get started.' E2 (target) starts at 180.3s when he says 'I'll make sure you all have my email address. Feel free to add me on LinkedIn too. I'm totally happy to continue the conversation.' The relationship is 'after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 17.553136348724365
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 333.2,
+            "end_s": 343.5,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 332.0s when the speaker asks, 'Which interview questions are you most concerned about?'. Immediately after, from 333.2s to 343.5s, the speaker instructs the audience to type their concerns into the chat box. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 378.3,
+            "end_s": 380.1,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 378.3s when the speaker says, 'Let's keep all of these in in our in our minds.' E2 (target) starts at 380.1s when he begins to describe his definition of a successful interview with the phrase 'When I think of a successful interview...'. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.42767357826233
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 522.2,
+            "end_s": 526.1,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) is the question 'Is there anything that I would have wanted to do differently?' which occurs from 520.8s to 527.0s. E2 (target) is the question 'Did I say everything that I wanted to say?' which is spoken from 522.2s to 526.1s. The target event occurs after the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 537.2,
+            "end_s": 537.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker saying 'All right, so let's dive in here' at 537.2s. E2 (target) is the appearance of the text 'DO NOT JUDGE YOUR PERFORMANCE - OR SELF WORTH - ON A JOB OFFER' on the screen. The text appears at the exact same moment the speaker says the sentence, at 537.2s."
+          },
+          {
+            "question_id": "003",
+            "start_s": 581.8,
+            "end_s": 593.4,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) is the speaker's discussion about applying for jobs that ask for too much experience, which occurs from 578.1s to 584.6s. E2 (target) is the speaker's statement 'But if you are getting interviews, then that shows me that your resume and cover letter are conveying what they need to convey,' which is spoken from 581.8s to 593.4s. The target event occurs after the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.536912441253662
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 829.0,
+            "end_s": 837.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing his description of the initial application at 829.0s. E2 (target) starts at 829.0s when he says 'And I was a finalist' and continues until 837.5s when he says 'But they chose someone else.' The relationship is 'after', as the speaker directly states he was a finalist right after explaining he applied."
+          },
+          {
+            "question_id": "002",
+            "start_s": 886.5,
+            "end_s": 892.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing his explanation about not applying for the second position at 886.5s. E2 (target) starts at 886.5s with the phrase 'anyways, the point is,' and ends at 892.7s with 'is that...'. The relationship is 'after', as he uses 'anyways' to transition to his main point."
+          },
+          {
+            "question_id": "003",
+            "start_s": 900.0,
+            "end_s": 900.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing his question about what hiring managers look for, which ends at 899.5s. E2 (target) starts at 900.0s with the speaker's statement, 'So her response was...'. The relationship is 'immediately after', as there is no significant pause between the question and the answer."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.21488094329834
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 288.4,
+            "end_s": 293.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 288.4s when the speaker finishes saying, 'So, yeah, open, I'm open to hearing your thoughts.' E2 (target) starts at 289.5s when he says, 'Doesn't sound fair. I've heard this too.' The target ends at 293.6s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 301.6,
+            "end_s": 304.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 301.6s when the speaker finishes reading the comment, 'I'm disheartened by that.' E2 (target) starts at 301.6s with the word 'Yeah.' and ends at 304.2s with the phrase 'that's why my jaw was agape.' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 383.0,
+            "end_s": 385.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 383.0s when the speaker finishes stating, 'Interviewing is an inexact science.' E2 (target) starts at 383.0s with the rhetorical question, 'How can you talk to...someone for an hour and then decide...?' The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 1050,
+        "end": 1260
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.137107849121094
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1135.0,
+            "end_s": 1139.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 1131.5s to 1135.0s with the speaker saying, 'So, um, I'm just bringing this up just to kind of like help you think about your audience, right?'. E2 (target) starts at 1135.0s when the speaker says 'Part of interviewing is um you know you're interviewing for a particular person or group of people.' The relationship is 'after', as the speaker immediately explains the concept he just introduced."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1176.2,
+            "end_s": 1179.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 1167.0s to 1176.2s when the speaker finishes his description of the HR interview. E2 (target) starts at 1176.2s when the speaker says, 'And this is a gatekeeper, right?' The relationship is 'after', as the speaker immediately uses this term to describe the role of the HR interview he just described."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1218.3,
+            "end_s": 1222.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 1212.0s to 1218.3s when the speaker introduces the 'site visit' concept. E2 (target) starts at 1218.3s when the speaker clarifies, 'So now it's more like, uh, you know, still you're still at home, um, just uh on Zoom all day.' The relationship is 'after', as the speaker uses the term 'site visit' to set up the description of its modern, remote form."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 1230,
+        "end": 1440
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.218172073364258
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1360.6,
+            "end_s": 1372.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1359.6s when the speaker states, 'they do that to try to maintain, you know, fairness.' Immediately following this, at 1360.6s, the speaker begins the target event by saying, 'And oftentimes in these kinds of interviews, there's no there's no feedback or response.' This target event continues until 1372.3s, which is the end of the provided audio segment. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1396.8,
+            "end_s": 1407.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1395.2s when the speaker says, 'I had this opportunity when I was a grad student.' This is immediately followed by the target event, which starts at 1396.8s with the phrase, 'We were hiring um a couple of faculty members in my department.' This event concludes at 1407.3s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1425.4,
+            "end_s": 1439.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1423.2s when the speaker mentions, 'the community is invited to sit on the on the interview.' Following this, at 1425.4s, the speaker gives the advice, 'Just any time you can kind of like see how other people interview, just get more familiar with the types of questions that are asked.' This advice continues until 1439.1s. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 1410,
+        "end": 1620
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.02797818183899
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "002",
+            "start_s": 1555.5,
+            "end_s": 1563.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 1548.1s when the speaker finishes saying 'save the job description as a PDF'. E2 (target event) starts at 1555.5s with the phrase 'after the job posting expires' and ends at 1563.6s with the sentence 'it's oftentimes removed'. The relationship is 'after', as the speaker provides the reason for the advice immediately following it. The visual cue is the continuous speaker on the right side of the screen, and the audio is a clear, direct explanation."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1505.8,
+            "end_s": 1517.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 1504.2s when the speaker finishes saying 'turn that into a question'. E2 (target event) starts at 1505.8s with the phrase 'must be familiar with discourse analysis' and ends at 1517.5s with the sentence 'turn it into a question'. The relationship is 'after', as the speaker gives a direct example of a qualification that should be turned into a question. The visual cue is the speaker's mouth and the accompanying slide on the left side of the screen."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 1770,
+        "end": 1980
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 18.545154094696045
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1852.0,
+            "end_s": 1865.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1850.0s when the speaker explicitly says, 'And then I'll give you an example of a bad response.' E2 (target) begins at 1852.0s when he says, 'He said when they asked him his this question, he said his weakness is that he has a quick temper.' E2 concludes at 1865.5s. The relationship is 'after', as E2 is a direct example provided following E1."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1914.0,
+            "end_s": 1925.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) happens at 1912.0s when the speaker says, 'One of my go-to responses, which is quite true for me, is that one of my weaknesses...' E2 (target) starts at 1914.0s with the phrase 'I'm generally conflict avoidant' and ends at 1925.0s. The relationship is 'after', as E2 is the content of the 'go-to response' introduced in E1."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 2130,
+        "end": 2340
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 18.300763368606567
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2133.12,
+            "end_s": 2145.48,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 2133.12s when the speaker says, 'So I just dug in. I said,' in the audio. E2 (target) is the speaker's verbal list of actions with a brick, which begins immediately after the anchor at 2133.12s and continues until 2145.48s when he says, 'It doesn't matter what the responses were.' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2151.8,
+            "end_s": 2152.0,
+            "confidence": 0.97,
+            "rationale_model": "E1 (anchor) occurs from 2151.8s to 2152.0s with the speaker's audio question, 'Is everyone still with me? Are we good?'. E2 (target) is the visual transition of the slide, which happens instantaneously after the audio question, at 2152.0s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 2310,
+        "end": 2520
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.171034336090088
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2426.4,
+            "end_s": 2435.6,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) is the completion of the speaker's description of the 'Action'. This occurs at 2426.4s when he finishes saying, 'which placed students into writing groups.' E2 (target) is the speaker describing the 'Result'. This starts at 2426.4s and ends at 2435.6s, with the audio clearly stating the result: 'In the first year, over 100 graduate students signed up for the program, and the program still exists today.' The temporal relationship is 'after', as the speaker begins describing the result immediately following the action."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2454.7,
+            "end_s": 2460.4,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) is the speaker finishing his statement about the program becoming institutionalized and continuing on, which concludes around 2454.7s. E2 (target) is the speaker mentioning the 'tags' at the bottom of the slide. This occurs from 2454.7s to 2460.4s, as he says, 'And notice that I then at the bottom, I kind of put some tags.' The temporal relationship is 'once_finished', meaning he says the word 'tags' right after finishing the previous sentence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 2490,
+        "end": 2700
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.1059992313385
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2524.9,
+            "end_s": 2532.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 2524.9s when the speaker says, 'So what we're going to do is we're going to be moving into our mock interview here.' E2 (target) starts at 2524.9s with the speaker saying, 'Try to think about three SAR examples,' and ends at 2532.0s when he finishes the sentence, 'So what are these seminal experiences that you have that if you go into a job interview, you absolutely know you want to talk about?' The relationship is 'immediately after'. The speaker's verbal cue 'So what we're going to do...' directly precedes and introduces the concept of 'seminal experiences.'"
+          },
+          {
+            "question_id": "002",
+            "start_s": 2540.2,
+            "end_s": 2548.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 2540.2s when the speaker says, 'So think of the SAR example first.' E2 (target) starts at 2540.2s with the speaker saying, 'And then add some tags, right?' and ends at 2548.0s with the phrase, 'So add some themes or tags.' The relationship is 'immediately after'. The speaker's verbal cue 'So think of...' introduces the first bullet point, and the very next sentence, 'And then add...', introduces the second bullet point, establishing a direct sequence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 2670,
+        "end": 2880
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.622754335403442
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2802.0,
+            "end_s": 2806.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 2801.0s when the speaker finishes the phrase 'So five minutes on the clock'. E2 (target) starts at 2802.0s when he says 'Have a look at that Muse article' and ends at 2806.0s. The temporal relationship is 'after'. The speaker's mouth is seen forming the words at the start of the range, and the audio is clear."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2957.0,
+            "end_s": 2968.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 2956.0s when the speaker finishes stating his two criteria. E2 (target) starts at 2957.0s when he says 'So for folks who are grad students' and ends at 2968.0s. The relationship is 'after'. The speaker's mouth is seen forming the words at the start of the range, and the audio is clear."
+          },
+          {
+            "question_id": "003",
+            "start_s": 3188.0,
+            "end_s": 3216.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 3187.0s when the speaker finishes the phrase 'I'm gonna speak the question for folks who are watching the recording here, so 'cause I think it's a really good question'. E2 (target) starts at 3188.0s when he says 'Is it ever useful to give a STAR story that's from a non-work context?' and ends at 3216.0s. The relationship is 'after'. The speaker's mouth is seen forming the words at the start of the range, and the audio is clear."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 2850,
+        "end": 3060
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 18.84969162940979
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2940.0,
+            "end_s": 2950.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 2938.8s when the speaker finishes asking the question about non-work STAR stories. E2 (target) starts at 2940.0s when he begins to answer, saying 'I would keep it probably giving a STAR example about, you know, your family might be a little too personal'. The target ends at 2950.0s. The relationship is 'after', as the speaker immediately addresses the topic of personal examples following the audience's question."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3000.0,
+            "end_s": 3010.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 2997.8s when the speaker says, 'But basically, we are going to do a mock interview.' E2 (target) starts at 3000.0s when the slide changes to 'Create a formal interview space'. The target ends at 3010.0s. The relationship is 'after', as the screen content changes to the instructions immediately following the speaker's verbal cue to begin the mock interview."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 3030,
+        "end": 3240
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.16266965866089
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3140.6,
+            "end_s": 3143.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the completion of the sentence 'Why are you interested in this position?' at 3140.6s. E2 (target) is the speaker saying 'or tell me about yourself' as an alternative, which occurs from 3140.6s to 3143.1s. The temporal relationship is 'immediately after' the completion of the first question."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3171.7,
+            "end_s": 3176.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker stating his intention to share the article at 3171.7s. E2 (target) is the display of the 'Interview Questions' slide on screen, which happens from 3171.7s to 3176.9s. The temporal relationship is 'after' the speaker's verbal cue to share it."
+          },
+          {
+            "question_id": "003",
+            "start_s": 3217.7,
+            "end_s": 3221.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker asking 'Any questions before we open up the breakout rooms?' at 3217.7s. E2 (target) is the description of group sizes, 'It's either going to be groups of two or three,' which occurs from 3217.7s to 3221.7s. The temporal relationship is 'immediately after' the question is asked."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 3210,
+        "end": 3258
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.938630819320679
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3217.0,
+            "end_s": 3222.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker saying 'So, just plan your time accordingly,' which occurs from 3215.0s to 3217.0s. E2 (target) is the speaker saying 'And you'll have about 25 minutes and we'll call you back at the end,' which occurs from 3217.0s to 3222.0s. The relationship is 'after'. The speaker's voice is continuous, and the words are spoken immediately following the anchor phrase."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3225.0,
+            "end_s": 3228.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker saying 'If we're ready to go, we'll stop the recording and we'll send you off,' which occurs from 3223.0s to 3225.0s. E2 (target) is the appearance of the black screen with the text 'For the remainder of the session...'. The screen changes from the Google Slides presentation to the black text screen at 3225.0s, immediately after the anchor phrase is finished. The relationship is 'immediately after' the audio ends."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 1590,
+        "end": 1800
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 18.459396600723267
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1730.5,
+            "end_s": 1731.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1730.5s when the speaker says, 'And do a mock interview, which we will be doing today.' E2 (target) starts immediately after at 1731.5s when the speaker begins to define the term by saying, 'So mock interview is basically you phone a friend.' E2 ends at 1731.5s as the sentence is cut off. The relationship is 'immediately after' the anchor event is completed."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1762.0,
+            "end_s": 1763.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1762.0s when the speaker introduces the 'Tell me about yourself (TMAY)' question. E2 (target) starts at 1763.5s when the speaker says, 'Behavioral questions will be focusing on today.' E2 ends at 1763.5s as the sentence is cut off. The relationship is 'after' the anchor event is completed."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 1950,
+        "end": 2160
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.613303184509277
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1954.4,
+            "end_s": 1955.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 1954.4s when the speaker finishes saying 'And that's the whole point.' E2 (target) starts at 1954.4s and ends at 1955.4s with the speaker saying 'I'm going to give you an example of this on the next slide.' The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1961.2,
+            "end_s": 1962.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 1961.2s when the speaker says 'And here's the question.' E2 (target) starts at 1961.2s when the slide with the pile of bricks and the text 'THE BRICK QUESTION' appears on screen. The relationship is 'once_finished'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1993.0,
+            "end_s": 1995.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 1993.0s when the speaker asks, 'What is the point of this question?' E2 (target) starts at 1993.0s and ends at 1995.7s with the speaker stating, 'The whole point of the question is that you can't prepare for it.' The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "k7uk0udlw2U",
+      "video_number": "020",
+      "segment": {
+        "start": 3210,
+        "end": 3257.0699999999997
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.578014135360718
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3217.3,
+            "end_s": 3218.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 3217.3s when the speaker finishes saying, 'we'll send you off.' Immediately following this, at 3217.3s, E2 (target) starts, which is the black screen with the text 'For the remainder of the session, attendees practiced interviews using the questions provided here. We encourage you to do the same!'. The transition is direct and happens at the moment the speech ends."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3218.3,
+            "end_s": 3220.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the first screen that appears, showing text about attendees practicing interviews. This screen is visible from 3217.3s to 3218.3s. E2 (target) starts at 3218.3s when the screen changes to the next message: 'Please see other LCL videos about interviewing for more information.' The relationship is 'immediately after', as the new text replaces the previous one as soon as the first one finishes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 3220.3,
+            "end_s": 3221.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the screen displaying the message 'Please see other LCL videos about interviewing for more information.' This screen is visible from 3218.3s to 3220.3s. E2 (target) starts at 3220.3s when the screen changes to the credits, which include 'Linguistics Career Launch 2021 was organized by Nancy Frishberg, Alexandra Johnston, Emily Pace, Susan Steele, Laurel Sutton.' The relationship is 'immediately after', as the credits appear right after the previous screen disappears."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Dwj3JwVroJU",
+      "video_number": "021",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 21.238731622695923
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 19.4,
+            "end_s": 20.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the first woman finishing her sentence at 19.4s, concluding with '...for what does it say?'. E2 (target) is Bartolo's introduction, which starts at 20.6s when he says 'Hello everyone, I am Bartolo for Gallery Teachers...'. The relationship is 'immediately after' or 'once_finished'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 4.1,
+            "end_s": 5.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the display of the 'English with Gallery Teachers' title card, which is visible from 4.1s to 5.4s. E2 (target) is the background music, which plays during the entire duration of the title card, from 4.1s to 5.4s. The relationship is 'during' the display."
+          },
+          {
+            "question_id": "003",
+            "start_s": 117.8,
+            "end_s": 118.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is Rita clarifying that their company is not a pyramid system, which she says from 115.7s to 120.4s. E2 (target) is her clarification that she never uses the word 'employees', which she says starting at 117.8s and finishing at 118.6s. The relationship is 'after' the clarification about the company structure."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Dwj3JwVroJU",
+      "video_number": "021",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 18.072035551071167
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 329.0,
+            "end_s": 331.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 329.0s when the female speaker states, 'But I never read CVs.' E2 (target) starts at 330.0s when she says, 'But there is the HR director who reads them.' The target event continues until 331.5s. The relationship is 'after' because the speaker first states her own action (not reading CVs) before introducing the action of the HR director."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Dwj3JwVroJU",
+      "video_number": "021",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 21.46167254447937
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 333.6,
+            "end_s": 336.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 333.6s when the woman says, 'But I'm not gonna hire a teacher who has the TEFL just because he has TEFL.' E2 (target) starts at 335.4s when she begins listing the qualities, 'I have to make sure he has integrity, energy and passion.' E2 ends at 336.7s. The relationship is 'after' E1 concludes."
+          },
+          {
+            "question_id": "002",
+            "start_s": 351.4,
+            "end_s": 353.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 348.9s when the man says, 'For example, I consider people that had experience as scouts, so chief scouts, because this means that they can manage people, that they are passionate.' E2 (target) starts at 351.4s when the woman responds, 'That shows that people like them.' E2 ends at 353.6s. The relationship is 'after' E1 concludes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 370.8,
+            "end_s": 376.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 368.0s when the woman says, 'I have trick questions, such as what makes you happiest in teaching?' E2 (target) starts at 370.8s when she describes the ideal answer, 'When a person tells me, you know what, you're not gonna like what I say, but I like it when they, at the end of the lesson, they come and they hug me...' E2 ends at 376.8s. The relationship is 'after' E1 concludes."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Dwj3JwVroJU",
+      "video_number": "021",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 19.141925573349
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 64.0,
+            "end_s": 69.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 510.0s when the man asks the question about crossing arms. E2 (target) starts at 64.0s when the woman begins her response, stating, 'But I can safely say that I haven't hired people who didn't smile...'. E2 ends at 69.0s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 147.0,
+            "end_s": 153.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 141.0s when the woman states, 'You have to read their body language because it's very important.' E2 (target) starts at 147.0s when she gives the example, 'For example, if they say that, oh, I love children and they don't move...'. E2 ends at 153.0s. The relationship is 'after' the anchor statement."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Dwj3JwVroJU",
+      "video_number": "021",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 21.343419551849365
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 755.3,
+            "end_s": 770.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 755.3s with the speaker saying, 'we started being able to offer that for other people.' E2 (target) starts at 755.3s and ends at 770.0s with the speaker saying, 'people outside of Chisinau, and I mean to say Moldovans who live, for example, up north or in the south of Moldova who always wanted to have that alternative.' The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 797.4,
+            "end_s": 812.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 797.4s with the speaker saying, 'the pandemic simply forced us with the reality.' E2 (target) starts at 797.4s and ends at 812.0s with the speaker saying, 'And that's the reason we were partly stressed by what was happening in March and partly happy because...'. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 861.8,
+            "end_s": 870.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 861.8s with the speaker saying, 'It's not exactly like in class. I'm not gonna lie, it is not.' E2 (target) starts at 861.8s and ends at 870.0s with the speaker giving examples: 'You don't get a hug. You don't get a student bringing you a surprise coffee because it happens.' The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Dwj3JwVroJU",
+      "video_number": "021",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.55118465423584
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 146.39,
+            "end_s": 147.29,
+            "confidence": 0.99,
+            "rationale_model": "The anchor event, the female speaker finishing her sentence 'So why not see that?', occurs at 146.39s. Immediately after, at 147.29s, the male speaker begins to speak, saying 'Every time you speak I say yes you're right'. The transition is instantaneous."
+          },
+          {
+            "question_id": "002",
+            "start_s": 133.64,
+            "end_s": 138.45,
+            "confidence": 0.98,
+            "rationale_model": "The anchor event is the female speaker finishing the phrase 'huge number of emigrants who left the country' at 133.64s. Immediately following this, from 133.64s to 138.45s, she lists the countries where the emigrants live: 'UK, Ireland, Italy, France, all over the world for many years.' The speech is continuous and sequential."
+          },
+          {
+            "question_id": "003",
+            "start_s": 157.42,
+            "end_s": 158.93,
+            "confidence": 0.99,
+            "rationale_model": "The anchor event, the male speaker finishing the phrase 'I agree with you completely', occurs at 157.42s. The target event, him starting to talk about writing an article, begins immediately after at 158.93s when he says, 'I just wrote an article about the future of TEFL'. The transition is direct and continuous."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Dwj3JwVroJU",
+      "video_number": "021",
+      "segment": {
+        "start": 1050,
+        "end": 1237
+      },
+      "preprocessing": {
+        "max_frames": 32,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 20.214990377426147
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1143.0,
+            "end_s": 1146.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1139.0s when the woman says, 'So you have to be adaptable.' E2 (target) starts at 1143.0s with the woman saying 'only the strongest survive' and ends at 1146.5s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1182.0,
+            "end_s": 1184.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1181.0s when the woman says, 'You cannot come at a lesson in a hoodie.' E2 (target) starts at 1182.0s when the man appears on screen wearing a red hoodie and ends at 1184.0s. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1201.0,
+            "end_s": 1203.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1199.0s when the man finishes saying, 'It's been really nice to have you again on this channel.' E2 (target) starts at 1201.0s with the Facebook page overlay appearing on screen and ends at 1203.0s. The relationship is 'once_finished'."
+          }
+        ]
+      }
+    }
+  ]
+}

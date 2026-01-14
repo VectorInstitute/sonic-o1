@@ -1,0 +1,221 @@
+{
+  "topic_id": 8,
+  "topic_name": "Workplace Team Meetings",
+  "num_evaluated": 12,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.14228255657751956,
+      "rouge_l_std": 0.03295182611742299,
+      "text_similarity_mean": 0.4311644467525184,
+      "text_similarity_std": 0.18878293980908345,
+      "llm_judge_score_mean": 2.5,
+      "llm_judge_score_std": 2.179449471770337
+    },
+    "short": {
+      "rouge_l_mean": 0.09770685122794527,
+      "rouge_l_std": 0.0414819810211011,
+      "text_similarity_mean": 0.39609092846512794,
+      "text_similarity_std": 0.18640869175023914,
+      "llm_judge_score_mean": 2.4166666666666665,
+      "llm_judge_score_std": 1.4409680388158819
+    },
+    "cider": {
+      "cider_detailed": 0.0003948299396740116,
+      "cider_short": 2.7960343953389366e-08
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "tX-HCNfaTdQ",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.08832807570977917,
+        "text_similarity": 0.30047547817230225,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is largely unrelated to the reference: it describes a presenter on visual culture and slides with a live chat, omitting the entire workshop scenario, roles, the 4Cs framework, specific exercises (Sailboat, Lightning Demos, 10 for 10, Action Board, Commit), timings, budget, and remote adaptation\u2014thus contradicting and hallucinating details."
+      },
+      "short": {
+        "rouge_l": 0.0425531914893617,
+        "text_similarity": 0.3451441824436188,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is unrelated and omits all key elements of the correct summary (Jonathan's workshop experiment, the 4Cs, specific exercises, commitments, timings, remote adaptations, and fee), instead offering generic, incorrect points."
+      }
+    },
+    {
+      "video_id": "XSNTh2FcHKc",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.13793103448275862,
+        "text_similarity": 0.36883822083473206,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only describes the visual setting and infers a UN human-rights context, but it omits nearly all key factual content from the correct answer (Bachelet's warnings, threats listed, detailed Ukraine casualty figures and displacement, and her call for rights-based peace)."
+      },
+      "short": {
+        "rouge_l": 0.10309278350515463,
+        "text_similarity": 0.30792680382728577,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes a woman speaking at a UN meeting and general themes of peace/justice, but it omits nearly all substantive content from the correct answer (Ukraine casualty numbers, displacement, causes, and the call for peace grounded in international human rights law), so it is largely incomplete."
+      }
+    },
+    {
+      "video_id": "TCuY5oyoS0g",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.11805555555555555,
+        "text_similarity": 0.5029230117797852,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only captures superficial visual details and a vague DevOps theme but omits virtually all key content from the correct answer (definitions, Denise and Mel\u2019s distinct viewpoints, discussion of Ops participation, 'culture of safety', automation suggestions, and the viewer invitation) and adds speculative details (e.g., note-taking)."
+      },
+      "short": {
+        "rouge_l": 0.06015037593984962,
+        "text_similarity": 0.5491180419921875,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes that two people discuss DevOps and the apparent speaker/listener dynamic, which is a tiny fraction of the summary; it omits nearly all key points (ops inclusion in scrums, breaking silos, culture of safety, Git blame, automation, and invite to share experiences) and includes an unverified detail about who speaks."
+      }
+    },
+    {
+      "video_id": "0nYVZP6tILk",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.3679236173629761,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely misrepresents the video, focusing on visuals and interpersonal dynamics rather than the detailed technical topics (IPLD docs, IPLD prime/IPFS integration, serialization design, and Go reflection-based node creation); it also hallucinates items like 'go-ethereum' and a viewer call-to-action."
+      },
+      "short": {
+        "rouge_l": 0.10344827586206896,
+        "text_similarity": 0.3351905047893524,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is overly generic and misses almost all specific points (IPLD docs/spec site, IPLD prime integration, dag get/serialization discussion, and the new Go reflection-based node creation); it also hallucinates 'go-ethereum', so only a minimal overlap (general IPFS/dev theme) exists."
+      }
+    },
+    {
+      "video_id": "l6VB8TEzjEU",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.16470588235294117,
+        "text_similarity": 0.6693271398544312,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the basic gist\u2014a group collaboratively testing/adjusting a small robot and using a smartphone as a controller\u2014but it omits many specific facts from the correct answer (four young male students from Zydus School, event context, role details by shirt color, explicit robot movements like turning/racing, and the wheel detachment)."
+      },
+      "short": {
+        "rouge_l": 0.17204301075268816,
+        "text_similarity": 0.4421144425868988,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly notes group collaboration and smartphone control, but it omits many key details from the reference (four students, wheeled robot on a white table, wiring/adjustments, successful movement tests including turning, and the wheel detachment ending) and adds an unmentioned detail about natural light."
+      }
+    },
+    {
+      "video_id": "LVPEcMKp4mI",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.10526315789473682,
+        "text_similarity": 0.0012104306370019913,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction only describes superficial video visuals of a Zoom meeting and omits all substantive technical updates, announcements, and discussions detailed in the correct answer, thus failing to match the content."
+      },
+      "short": {
+        "rouge_l": 0.051948051948051945,
+        "text_similarity": 0.06277257204055786,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer only describes generic meeting visuals and omits all substantive technical points from the correct answer, failing to capture any of the specific updates or topics mentioned."
+      }
+    },
+    {
+      "video_id": "QO_-PG9snvI",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.2051282051282051,
+        "text_similarity": 0.6094323396682739,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level topic (Crossplane vs Argo CD and related best practices) but omits many key specifics from the reference (presenter names, Acuity use-cases like EKS/IRSA/RDS/Transit Gateway, one-to-one mappings and XRs, the detailed hybrid strategy, multi-instance blast-radius advice) and even hallucinates composition names (Akita/Akuton), so it is only a weak, incomplete match."
+      },
+      "short": {
+        "rouge_l": 0.16374269005847952,
+        "text_similarity": 0.6205734014511108,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction lists high-level topics covered (intro, control planes, Crossplane vs Argo CD, best practices, future work) but is overly generic and omits key specifics, examples (Acuity, AWS services), concrete best practices, challenges, and proposed deployment details present in the correct answer."
+      }
+    },
+    {
+      "video_id": "SYUQhswjLZI",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.12970711297071127,
+        "text_similarity": 0.3425292670726776,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction describes generic visuals (people, locations, museum artifacts) but omits the video's core message about InsightShare's mission to empower indigenous communities through community-led media, training, localization, and social-justice outcomes; it therefore misses the key themes and specific examples presented in the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.09195402298850575,
+        "text_similarity": 0.3594762086868286,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer lists visual scenes (group photo, diverse locations/interviews, museum artifacts) that loosely correspond to parts of the video, but it omits key substantive points about InsightShare's community-led workshops, goals (self-determination/localized solutions), broad thematic contexts, participant praise, and explicit discussion of colonization's impacts."
+      }
+    },
+    {
+      "video_id": "WKc8XsxwNQU",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.16184971098265896,
+        "text_similarity": 0.6867475509643555,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the high-level conference format and general themes (speakers, agile/leadership/product topics, interactive sessions, call to action) but omits many key specifics from the reference\u2014promotional positioning as Asia's premier/largest event, vendor-neutral/technology-agnostic claims, the detailed topic list, named keynote speakers, and the emphasized practical outcomes, networking benefits, and value-for-money endorsement."
+      },
+      "short": {
+        "rouge_l": 0.1272727272727273,
+        "text_similarity": 0.7090404629707336,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level idea (intro, speakers, sessions) but omits most key elements (vendor-neutral/tech-agnostic positioning, breadth of topics, actionable takeaways, networking/value). It also adds a call-to-action not present in the reference."
+      }
+    },
+    {
+      "video_id": "UQrHyWKlQ3g",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.12258064516129033,
+        "text_similarity": 0.2759225368499756,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely mismatched: it describes a generic Google Meet discussion about virtual vs in-person meetings, while the correct answer details a Sailboat Retrospective with Wind/Sun/Anchor/Reef elements and specific participant reflections; it omits all key factual elements and adds hallucinated content."
+      },
+      "short": {
+        "rouge_l": 0.05263157894736842,
+        "text_similarity": 0.12291054427623749,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is largely unrelated: it discusses virtual vs. in-person meetings and engagement, whereas the correct answer summarizes the Sailboat Retrospective's Wind/Sun/Anchor/Reef elements and specific factors; key elements are omitted and content is mismatched."
+      }
+    },
+    {
+      "video_id": "suATPK45sjk",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.12837837837837837,
+        "text_similarity": 0.5934528112411499,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level theme (developers discussing careers and continuous learning) but omits most key specifics from the correct answer\u2014no mention of the named speakers, concrete technical topics (data structures, memory, concurrency, network protocols, databases), the illustrative interview question, personal sustainability advice, generative AI, or the recurring 'learn Kotlin' joke\u2014making it largely incomplete."
+      },
+      "short": {
+        "rouge_l": 0.07751937984496124,
+        "text_similarity": 0.5840972661972046,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures high-level themes (career paths, adaptability, continuous learning, and developer interviews) but omits many key specifics from the reference such as emphasis on system fundamentals, open-source learning, work-life balance and well-being, experimentation/applying for ambitious jobs, and interview preparation."
+      }
+    },
+    {
+      "video_id": "nnqJ4-nUsvc",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.19161676646706588,
+        "text_similarity": 0.4551909565925598,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main arc\u2014initial Craigslist plan, fraud issues, and the pivot to build an integrated productivity tool to improve efficiency\u2014but it omits key specifics from the correct answer (e.g., in-app payments goal, Craigslist being the largest source of internal fraud, and the detailed list of fragmented apps) and thus lacks completeness."
+      },
+      "short": {
+        "rouge_l": 0.12612612612612611,
+        "text_similarity": 0.31472671031951904,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the general founding story and the creation of a productivity/project-management tool, but it omits key specifics\u2014most notably the Craigslist fraud motivation and the founders' prior-startup frustration that led them to build an internal tool\u2014thus lacking important factual details."
+      }
+    }
+  ]
+}

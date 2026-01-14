@@ -1,0 +1,3051 @@
+{
+  "topic_id": 13,
+  "topic_name": "Olympics",
+  "num_evaluated": 86,
+  "aggregated_metrics": {
+    "mean_iou": 0.01295280908725486,
+    "std_iou": 0.08493444691031046,
+    "median_iou": 0.0,
+    "R@0.3": {
+      "recall": 0.011627906976744186,
+      "count": 1,
+      "total": 86
+    },
+    "R@0.5": {
+      "recall": 0.011627906976744186,
+      "count": 1,
+      "total": 86
+    },
+    "R@0.7": {
+      "recall": 0.011627906976744186,
+      "count": 1,
+      "total": 86
+    },
+    "mae": {
+      "start_mean": 185.27734249649995,
+      "end_mean": 183.80959203857208,
+      "average_mean": 184.543467267536
+    },
+    "rationale": {
+      "rouge_l_mean": 0.23674836695554174,
+      "rouge_l_std": 0.09620951673354798,
+      "text_similarity_mean": 0.5769761629229369,
+      "text_similarity_std": 0.1751788626176434,
+      "llm_judge_score_mean": 3.953488372093023,
+      "llm_judge_score_std": 1.5544906946110144
+    },
+    "rationale_cider": 0.24870007529312235
+  },
+  "per_question_results": [
+    {
+      "question_id": "001",
+      "question": "After the narrator says \"not her\", when does the narrator state that she is going to \"take off early\"?",
+      "video_id": "y_-6TIA4JBk",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 59.57696
+      },
+      "gt_interval": {
+        "start": 9.16,
+        "end": 11.102
+      },
+      "pred_interval": {
+        "start": 20.7,
+        "end": 21.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 11.54,
+        "end": 10.198,
+        "average": 10.869
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.33333333333333337,
+        "text_similarity": 0.6759961843490601,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer misinterprets the events, suggesting the skater takes off early and catches up, which is not mentioned in the correct answer. It also incorrectly identifies the anchor and target events, leading to a factual mismatch."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the skater in red and black crosses the finish line, when does the narrator announce \"final lap\"?",
+      "video_id": "y_-6TIA4JBk",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 59.57696
+      },
+      "gt_interval": {
+        "start": 29.056,
+        "end": 30.318
+      },
+      "pred_interval": {
+        "start": 32.1,
+        "end": 33.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.0440000000000005,
+        "end": 2.9819999999999958,
+        "average": 3.012999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.761289119720459,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer incorrectly states the time of the 'final lap' announcement as 2:25, while the correct answer specifies it starts at 29.056s. It also inaccurately links the announcement to the skater crossing the finish line, whereas the correct answer indicates the announcement follows directly after the skater's action."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the narrator explains that the \"other two skaters think this is the finish and they stop skating\", when does the second Chinese skater cross the finish line?",
+      "video_id": "y_-6TIA4JBk",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 59.57696
+      },
+      "gt_interval": {
+        "start": 52.0,
+        "end": 52.5
+      },
+      "pred_interval": {
+        "start": 52.6,
+        "end": 54.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 0.6000000000000014,
+        "end": 1.5,
+        "average": 1.0500000000000007
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2077922077922078,
+        "text_similarity": 0.5977798700332642,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the relationship between the narrator's explanation and the skater crossing the finish line, but it lacks specific timing information present in the correct answer. It also does not mention the exact time frame for the skater crossing the finish line."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Ryan Sessegnon scores Fulham's goal, when does Antoine Semenyo score Bournemouth's first goal?",
+      "video_id": "nJcoHfx6q34",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 144.03
+      },
+      "gt_interval": {
+        "start": 42.9,
+        "end": 49.0
+      },
+      "pred_interval": {
+        "start": 18.595238095238095,
+        "end": 23.452380952380953
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 24.304761904761904,
+        "end": 25.547619047619047,
+        "average": 24.926190476190477
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.32499999999999996,
+        "text_similarity": 0.8955154418945312,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the relationship as 'after' but provides incorrect timings for both goals. It also includes a crowd's reaction and a scoreboard detail not present in the correct answer, which are not relevant to the question."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the commentator says \"Henry!\", when does the ball hit the side netting?",
+      "video_id": "ZBDVZt_opds",
+      "video_number": "003",
+      "segment": {
+        "start": 150.0,
+        "end": 304.02
+      },
+      "gt_interval": {
+        "start": 164.0,
+        "end": 165.1
+      },
+      "pred_interval": {
+        "start": 68.4,
+        "end": 72.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 95.6,
+        "end": 93.1,
+        "average": 94.35
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4000000000000001,
+        "text_similarity": 0.7555941343307495,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer provides incorrect timing information and incorrectly states that the ball hits the side netting at the same time as the commentator says 'Henry!', which contradicts the correct answer that specifies the ball hits the netting after the commentator's exclamation."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the referee signals a penalty try for Australia, when does Fijiana score their first try?",
+      "video_id": "t5Y3aSUri_k",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 44.0,
+        "end": 49.715
+      },
+      "pred_interval": {
+        "start": 39.375,
+        "end": 42.75
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 4.625,
+        "end": 6.965000000000003,
+        "average": 5.795000000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4642857142857143,
+        "text_similarity": 0.7660715579986572,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies the sequence of events and provides approximate timings, but it inaccurately states the time when the referee signals the penalty try and when Fijiana scores their first try, which affects the factual correctness."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Mahalia Murphy scores her try, when does Piliaye Rasabale score the next try for the Wallaroos?",
+      "video_id": "t5Y3aSUri_k",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 93.2,
+        "end": 95.0
+      },
+      "pred_interval": {
+        "start": 167.25,
+        "end": 175.25
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 74.05,
+        "end": 80.25,
+        "average": 77.15
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.32835820895522394,
+        "text_similarity": 0.5287866592407227,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states that Mahalia Murphy scores her seventh try at 167.25 seconds and that Piliaye Rasabale scores the next try at 175.25 seconds, which contradicts the correct answer's timings and sequence of events."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Liz Patu scores a try for the Wallaroos, when does Randini Yavuni break away with the ball for Fijiana?",
+      "video_id": "t5Y3aSUri_k",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 177.0,
+        "end": 179.693
+      },
+      "pred_interval": {
+        "start": 214.0,
+        "end": 222.75
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 37.0,
+        "end": 43.05699999999999,
+        "average": 40.028499999999994
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2456140350877193,
+        "text_similarity": 0.5054271221160889,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the sequence of events but provides incorrect timestamps. The correct answer specifies that Liz Patu's try ends at 155.5s and Randini Yavuni's breakaway starts at 177.0s, while the predicted answer uses different timestamps, leading to a factual discrepancy."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Randini Yavuni breaks away from a tackle, when does Wilson dive over the line to score a try for Fiji?",
+      "video_id": "t5Y3aSUri_k",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 291.87
+      },
+      "gt_interval": {
+        "start": 199.0,
+        "end": 200.0
+      },
+      "pred_interval": {
+        "start": 265.0,
+        "end": 272.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 66.0,
+        "end": 72.30000000000001,
+        "average": 69.15
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2564102564102564,
+        "text_similarity": 0.5508172512054443,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is completely incorrect as it refers to Ashley Masters and the Wallabies, which are unrelated to the correct answer involving Randini Yavuni and Wilson for Fiji. It also provides incorrect timestamps and events."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After Ryo Hisatsune's ball misses the hole at the 18th, when does the leaderboard appear?",
+      "video_id": "Lsyn8G6DOO8",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 132.016992
+      },
+      "gt_interval": {
+        "start": 120.0,
+        "end": 129.9
+      },
+      "pred_interval": {
+        "start": 120.66666666666667,
+        "end": 132.0
+      },
+      "iou": 0.7694444444444445,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 1,
+        "R@0.7": 1
+      },
+      "mae": {
+        "start": 0.6666666666666714,
+        "end": 2.0999999999999943,
+        "average": 1.3833333333333329
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3142857142857143,
+        "text_similarity": 0.6642097234725952,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer provides the correct time for the leaderboard appearing (129.5 seconds) and correctly identifies the relationship as 'after'. However, it incorrectly states the time when Ryo Hisatsune's ball misses the hole (120.67 seconds) and includes an inaccurate end time for the target event (131.99 seconds)."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the Wallaroos player scores a try, when does the commentator announce Adiana Talakai as the scorer?",
+      "video_id": "dIZiOwboF_I",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 210.51
+      },
+      "gt_interval": {
+        "start": 159.0,
+        "end": 161.0
+      },
+      "pred_interval": {
+        "start": 51.66666666666667,
+        "end": 53.916666666666664
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 107.33333333333333,
+        "end": 107.08333333333334,
+        "average": 107.20833333333334
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22580645161290322,
+        "text_similarity": 0.46199703216552734,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer correctly identifies that the commentator announces Adiana Talakai after the try is scored, but it lacks the specific time references and event sequence details provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the commentator says 'Try number one for Adiana Talakai', when does he describe her recovery from injuries?",
+      "video_id": "dIZiOwboF_I",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 210.51
+      },
+      "gt_interval": {
+        "start": 168.8,
+        "end": 173.5
+      },
+      "pred_interval": {
+        "start": 57.833333333333336,
+        "end": 59.75
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 110.96666666666667,
+        "end": 113.75,
+        "average": 112.35833333333333
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28571428571428575,
+        "text_similarity": 0.5731167793273926,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer correctly identifies that the recovery description occurs after the try announcement, but it omits the specific time references from the correct answer. It also provides a paraphrased version of the injury details, which is acceptable but less precise than the exact quote from the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man on the left talks about the emotional exit of Neil Danaher, when does the man on the right start talking about the standing ovation for Neil Danaher?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 14.172,
+        "end": 23.466
+      },
+      "pred_interval": {
+        "start": 32.83333333333333,
+        "end": 42.16666666666667
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 18.661333333333328,
+        "end": 18.70066666666667,
+        "average": 18.680999999999997
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2941176470588235,
+        "text_similarity": 0.3966391086578369,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies the temporal relationship between the two events and the participants involved, though it omits the specific timestamps provided in the correct answer. The core factual relationship is accurately captured."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man on the left says 'they've kicked the first two goals of the game', when does he say 'gotta kick the next one here'?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 124.331,
+        "end": 125.453
+      },
+      "pred_interval": {
+        "start": 119.5,
+        "end": 127.66666666666667
+      },
+      "iou": 0.1373877551020407,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 4.831000000000003,
+        "end": 2.2136666666666684,
+        "average": 3.5223333333333358
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2295081967213115,
+        "text_similarity": 0.30741235613822937,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer correctly identifies the relative timing of the two statements but lacks specific timestamps and incorrectly attributes the first statement to a commentator rather than the man on the left. It also omits key factual details about the speakers and their exact time intervals."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man states that the D's trail by 9 points, when does he mention calling the game off earlier?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 161.84,
+        "end": 165.35
+      },
+      "pred_interval": {
+        "start": 26.444444444444446,
+        "end": 29.444444444444446
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 135.39555555555555,
+        "end": 135.90555555555554,
+        "average": 135.65055555555554
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16901408450704225,
+        "text_similarity": 0.31681644916534424,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states the timestamp for calling the game off and does not mention the relative timing between events as specified in the correct answer. It also introduces details not present in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the man says 'Frita Marks kicks the goal', when does he describe Cozzi's great work off the footy?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 233.55,
+        "end": 238.52
+      },
+      "pred_interval": {
+        "start": 29.444444444444446,
+        "end": 30.88888888888889
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 204.10555555555555,
+        "end": 207.63111111111112,
+        "average": 205.86833333333334
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.08,
+        "text_similarity": 0.28425535559654236,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer provides incorrect timing and sequence, contradicting the correct answer which specifies the event occurs much later. It also misattributes the timing to an unrelated part of the video."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the main man states that the Pies are 'edging us out just at the minute', when does the other man start talking about hot chocolates?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 307.08,
+        "end": 309.23
+      },
+      "pred_interval": {
+        "start": 31.88888888888889,
+        "end": 33.111111111111114
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 275.19111111111107,
+        "end": 276.11888888888893,
+        "average": 275.655
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1875,
+        "text_similarity": 0.2871195673942566,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides a timestamp for the hot chocolate mention but incorrectly places it at 31.89 seconds, which is far earlier than the correct answer's 307.08s. It also introduces an unfounded claim about discussing 'the other man's response,' which is not present in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the man says \"That's a momentum shifter\", when does he mention that the D's have kicked the last two or three goals?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 346.17,
+        "end": 348.19
+      },
+      "pred_interval": {
+        "start": 467.07188291610504,
+        "end": 470.93447081207677
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 120.90188291610502,
+        "end": 122.74447081207677,
+        "average": 121.8231768640909
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1791044776119403,
+        "text_similarity": 0.6038902997970581,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and mentions the Dades team, which is not referenced in the correct answer. It also misidentifies the event as a goal rather than a momentum shifter, contradicting the question's context."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man finishes saying they are 'one away from really getting their noses in front of the contest', when does he say 'I just feel like one more will just get the nose really out there'?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 513.5,
+        "end": 517.0
+      },
+      "pred_interval": {
+        "start": 34.15277777777778,
+        "end": 37.96875
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 479.34722222222223,
+        "end": 479.03125,
+        "average": 479.1892361111111
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21978021978021978,
+        "text_similarity": 0.7878067493438721,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and misidentifies the events, completely contradicting the correct answer. The timestamps and event relationships in the prediction are not aligned with the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the man finishes saying 'Unbelievable', when does he state 'Out to 16 points'?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 547.2,
+        "end": 548.6
+      },
+      "pred_interval": {
+        "start": 49.859375,
+        "end": 52.484375
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 497.34062500000005,
+        "end": 496.115625,
+        "average": 496.72812500000003
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2571428571428572,
+        "text_similarity": 0.8145068883895874,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timing information and misattributes the events to the wrong parts of the video. It also incorrectly states that the target event occurs after the anchor event, which contradicts the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the man finishes talking about knocking off the 'Pies', when does he say it's 'the best Melbourne game' he's seen?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 567.1,
+        "end": 570.6
+      },
+      "pred_interval": {
+        "start": 68.984375,
+        "end": 72.484375
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 498.115625,
+        "end": 498.115625,
+        "average": 498.115625
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21978021978021978,
+        "text_similarity": 0.7644444108009338,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and misidentifies the event where the man says it's 'the best Melbourne game' he's seen. The correct answer specifies the target event occurs shortly after the anchor event, but the predicted answer incorrectly places the target event much earlier and attributes the statement to a different part of the video."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker says it was one of the best victories he has seen, when does he mention the 'shaky first half of the season for the D's'?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 690.0,
+        "end": 766.0300000000001
+      },
+      "gt_interval": {
+        "start": 697.73,
+        "end": 699.93
+      },
+      "pred_interval": {
+        "start": 36.6,
+        "end": 42.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 661.13,
+        "end": 657.53,
+        "average": 659.3299999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16666666666666669,
+        "text_similarity": 0.20629706978797913,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states the time span and duration, providing values that do not align with the correct answer's timestamps. It also fails to mention the relative timing of the events as specified in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker mentions that their bye is only a 10-day break, when does he say they will 'take on the Cats'?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 690.0,
+        "end": 766.0300000000001
+      },
+      "gt_interval": {
+        "start": 720.09,
+        "end": 721.06
+      },
+      "pred_interval": {
+        "start": 54.9,
+        "end": 61.7
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 665.19,
+        "end": 659.3599999999999,
+        "average": 662.275
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11940298507462686,
+        "text_similarity": 0.12753362953662872,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states the time span and duration, which contradicts the correct answer. It also fails to provide the specific time references and the relative timing relationship between the events."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker concludes his game day vlog, when does he describe the match as 'intense'?",
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 690.0,
+        "end": 766.0300000000001
+      },
+      "gt_interval": {
+        "start": 732.13,
+        "end": 733.17
+      },
+      "pred_interval": {
+        "start": 62.1,
+        "end": 67.1
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 670.03,
+        "end": 666.0699999999999,
+        "average": 668.05
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12307692307692308,
+        "text_similarity": 0.2949702739715576,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states the time span and duration of the 'intense' description, which contradicts the correct answer. It also fails to mention the specific time intervals and the relative timing of the events."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the narrator finishes saying 'European Nations Cup', when does the lineup graphic for France appear on screen?",
+      "video_id": "8ObB4PUAk9M",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 17.5,
+        "end": 21.0
+      },
+      "pred_interval": {
+        "start": 13.6,
+        "end": 15.1
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.9000000000000004,
+        "end": 5.9,
+        "average": 4.9
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25531914893617025,
+        "text_similarity": 0.5908353328704834,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies that the France lineup graphic appears after the narrator finishes, but it provides an incorrect time (13.6 seconds) compared to the correct answer (16.114s for the narrator finishing and 17.5s for the graphic appearing)."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the France lineup graphic disappears from the screen, when is the player Griezmann (jersey #7) first shown on screen?",
+      "video_id": "8ObB4PUAk9M",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 22.0,
+        "end": 22.8
+      },
+      "pred_interval": {
+        "start": 14.6,
+        "end": 15.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.4,
+        "end": 7.4,
+        "average": 7.4
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25531914893617025,
+        "text_similarity": 0.7028874754905701,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies that Griezmann is shown after the France lineup graphic disappears, but it provides an incorrect time (14.6 seconds) instead of the correct time (22.0 seconds)."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the narrator says 'So, 15 minutes each way to go', when does the player Eder take a shot at goal?",
+      "video_id": "8ObB4PUAk9M",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 208.0,
+        "end": 209.0
+      },
+      "pred_interval": {
+        "start": 180.1,
+        "end": 181.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 27.900000000000006,
+        "end": 27.5,
+        "average": 27.700000000000003
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1818181818181818,
+        "text_similarity": 0.504201352596283,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies that Eder takes a shot after the narrator's statement, but it incorrectly states the time as 180.1 seconds instead of the correct time range of 208.0s to 209.0s."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the commentator says 'First of the day for Hampus-Wanner', when is the half-time score displayed?",
+      "video_id": "_oQqwlCdzjA",
+      "video_number": "009",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 272.3,
+        "end": 277.0
+      },
+      "pred_interval": {
+        "start": 241.30789662349244,
+        "end": 250.44992202655084
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 30.992103376507572,
+        "end": 26.550077973449163,
+        "average": 28.771090674978367
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23188405797101447,
+        "text_similarity": 0.5419995784759521,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly identifies the timing of the commentator's statement and the slow-motion replay, which are unrelated to the question about the half-time score display. It fails to address the key elements of the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the narrator says 'and that is it', when do the players in blue and red jerseys start clapping?",
+      "video_id": "_oQqwlCdzjA",
+      "video_number": "009",
+      "segment": {
+        "start": 510.0,
+        "end": 556.874
+      },
+      "gt_interval": {
+        "start": 536.0,
+        "end": 543.0
+      },
+      "pred_interval": {
+        "start": 30.8,
+        "end": 34.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 505.2,
+        "end": 508.8,
+        "average": 507.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.541837215423584,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the question and contains no relevant information about when the players start clapping. It introduces a new detail (retiring a jersey) not mentioned in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the commentator finishes saying 'And Herrera's delivery and Joao Felix, so unlucky', when does Joao Felix fall to his knees?",
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 85.992,
+        "end": 86.959
+      },
+      "pred_interval": {
+        "start": 180.375,
+        "end": 180.70833333333334
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 94.383,
+        "end": 93.74933333333334,
+        "average": 94.06616666666667
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28070175438596495,
+        "text_similarity": 0.6281892657279968,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and describes a different event (clattering by Christensen) that is not mentioned in the correct answer. It also incorrectly states the relationship as 'after' instead of 'once_finished'."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Jo\u00e3o F\u00e9lix is tackled by Kristiansen, when do the match statistics appear on screen?",
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 191.5,
+        "end": 192.5
+      },
+      "pred_interval": {
+        "start": 151.58987041398012,
+        "end": 161.0075976486109
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 39.91012958601988,
+        "end": 31.492402351389103,
+        "average": 35.70126596870449
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22448979591836735,
+        "text_similarity": 0.7923406362533569,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the sequence of events and the relationship between them, but it provides incorrect time values and omits the specific time range for the stats overlay. It also includes additional details not present in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Joao Felix shoots the ball towards the goal, when does he put his hands on his head in frustration?",
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 343.0,
+        "end": 345.0
+      },
+      "pred_interval": {
+        "start": 49.81840481840482,
+        "end": 55.5938745938746
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 293.1815951815952,
+        "end": 289.4061254061254,
+        "average": 291.2938602938603
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.509090909090909,
+        "text_similarity": 0.8442386984825134,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and does not align with the correct answer's timeline. It also fails to mention the relative timing relationship as specified in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the English commentator says, 'But Joao Felix strikes again', when does the Spanish interviewer start speaking to Joao Felix?",
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 440.2,
+        "end": 450.9
+      },
+      "pred_interval": {
+        "start": 55.10416666666667,
+        "end": 61.259300595238095
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 385.0958333333333,
+        "end": 389.6406994047619,
+        "average": 387.3682663690476
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2962962962962963,
+        "text_similarity": 0.5834987163543701,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and misattributes the events. It incorrectly states the timestamps for E1 and E2 and fails to align them with the correct relative timing described in the reference answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker mentions that they were a little distracted at the start of the second half, when does he state that they returned to the game and concentrated again?",
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 543.293
+      },
+      "gt_interval": {
+        "start": 474.27,
+        "end": 476.64
+      },
+      "pred_interval": {
+        "start": 44.1,
+        "end": 49.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 430.16999999999996,
+        "end": 427.24,
+        "average": 428.705
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2777777777777778,
+        "text_similarity": 0.5380786061286926,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer provides the correct relative temporal relationship but incorrectly states the timestamps for both events. The correct answer specifies the timestamps in the context of the video, which the prediction fails to align with."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes explaining that he doesn't pay attention to what the newspapers say, when does he state that he just tries to enjoy himself?",
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 543.293
+      },
+      "gt_interval": {
+        "start": 529.953,
+        "end": 534.343
+      },
+      "pred_interval": {
+        "start": 52.5,
+        "end": 55.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 477.453,
+        "end": 478.74299999999994,
+        "average": 478.09799999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2162162162162162,
+        "text_similarity": 0.37123629450798035,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer provides approximate timestamps and the correct temporal relationship, but it significantly misrepresents the actual timestamps from the correct answer. The correct answer specifies the event occurs around 529.343s, while the predicted answer uses 52.5s and 55.6s, which are vastly different."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the female voice asks how the speaker will celebrate his double, when does the speaker reply?",
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 543.293
+      },
+      "gt_interval": {
+        "start": 536.963,
+        "end": 538.523
+      },
+      "pred_interval": {
+        "start": 57.6,
+        "end": 59.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 479.36299999999994,
+        "end": 478.723,
+        "average": 479.043
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17857142857142858,
+        "text_similarity": 0.4302864074707031,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides a completely incorrect time (57.6s) and misrepresents the temporal relationship, which is not 'directly after' but rather 'immediately after' the female voice's question. The correct answer specifies precise time markers and the relationship between events, which the prediction fails to capture."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the announcer says \"Zae Flowers with a video game move\", when does Zay Flowers go out of bounds?",
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 32.5,
+        "end": 33.847
+      },
+      "pred_interval": {
+        "start": 28.375,
+        "end": 32.875
+      },
+      "iou": 0.06853070175438594,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 4.125,
+        "end": 0.9720000000000013,
+        "average": 2.5485000000000007
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21621621621621623,
+        "text_similarity": 0.5964193344116211,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the 'after' relationship but misrepresents the timing and nature of the events. It incorrectly states the start time of the announcer's description and the event of going out of bounds, which are critical for factual accuracy."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Wilson makes his first move, when is he tackled very close to a first down?",
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 50.0,
+        "end": 52.835
+      },
+      "pred_interval": {
+        "start": 53.25,
+        "end": 56.125
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.25,
+        "end": 3.289999999999999,
+        "average": 3.2699999999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20512820512820512,
+        "text_similarity": 0.7294109463691711,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer incorrectly identifies the timestamps for both events and misattributes the sequence of events. It fails to capture the correct timing and sequence described in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "While the commentator says 'Oh, what a great run by Russell Cage', when does player #10 make a juke move, causing the defender to stumble?",
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 168.0,
+        "end": 170.9
+      },
+      "pred_interval": {
+        "start": 35.0,
+        "end": 36.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 133.0,
+        "end": 134.3,
+        "average": 133.65
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21875,
+        "text_similarity": 0.5755119323730469,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer incorrectly identifies the timing of both events and misattributes the commentary to an earlier time. It also fails to specify the relative timing relationship as 'after the commentary' as required."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the commentator says 'What a move by Sutton', when does player #14 (Pat Surtain II) perform a juke move, making defender #43 miss?",
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 245.0,
+        "end": 246.5
+      },
+      "pred_interval": {
+        "start": 185.9,
+        "end": 187.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 59.099999999999994,
+        "end": 58.900000000000006,
+        "average": 59.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16129032258064518,
+        "text_similarity": 0.6208798885345459,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer identifies the commentator's comment and the juke move but provides incorrect timestamps and misrepresents the relationship as 'after' instead of during the commentary. It also omits key details about the timing alignment between the commentary and the action."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "While the commentator says 'Good hesitation to make a man whiff', when does player #10 (Laviska Shenault Jr.) perform a hesitation juke move?",
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 347.5,
+        "end": 349.5
+      },
+      "pred_interval": {
+        "start": 205.1,
+        "end": 210.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 142.4,
+        "end": 139.5,
+        "average": 140.95
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.5666441917419434,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and misattributes the hesitation juke move to a different time frame than the correct answer. It also incorrectly identifies the relationship as 'after' instead of aligning with the commentary."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the commentator says 'zigzag move by Walker', when does he say 'Look out, Kenneth Walker!'?",
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 340.103,
+        "end": 342.124
+      },
+      "pred_interval": {
+        "start": 20.333333333333332,
+        "end": 23.166666666666664
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 319.7696666666667,
+        "end": 318.95733333333334,
+        "average": 319.36350000000004
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2058823529411765,
+        "text_similarity": 0.6583173274993896,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect time stamps and does not align with the correct answer's timeline. It also fails to mention the relationship between the events as described in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the commentator describes 'a run for Devontae Freeman up the middle', when does he mention 'Breakin' tackles for another first down'?",
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 439.379,
+        "end": 441.523
+      },
+      "pred_interval": {
+        "start": 44.166666666666664,
+        "end": 47.66666666666667
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 395.21233333333333,
+        "end": 393.85633333333334,
+        "average": 394.53433333333334
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16901408450704225,
+        "text_similarity": 0.5800900459289551,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect time stamps and misrepresents the event sequence. The correct answer specifies events occurring at 436.464s-438.485s and 439.379s-441.523s, while the predicted answer uses entirely different timestamps and incorrectly attributes the 'Breakin' tackles' event to a much earlier time."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the commentator says 'Luck avoids a sidestep to the defender', when does he say 'and gets it to Brazil'?",
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 457.0,
+        "end": 459.574
+      },
+      "pred_interval": {
+        "start": 49.0,
+        "end": 52.666666666666664
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 408.0,
+        "end": 406.9073333333333,
+        "average": 407.45366666666666
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16216216216216214,
+        "text_similarity": 0.6167260408401489,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect time stamps and misrepresents the relationship between the events. It does not align with the correct answer's timing or the sequence described."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the commentator says \"Here's Lamb with a catch!\", when does C.D. Lamb make a spin move?",
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 510.0,
+        "end": 553.666992
+      },
+      "gt_interval": {
+        "start": 519.5,
+        "end": 519.9
+      },
+      "pred_interval": {
+        "start": 542.2,
+        "end": 544.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 22.700000000000045,
+        "end": 25.0,
+        "average": 23.850000000000023
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.10169491525423728,
+        "text_similarity": 0.34873491525650024,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides timings but refers to a different player (player #19) and event (a catch) that are not mentioned in the correct answer. It also does not address the specific question about C.D. Lamb's spin move after the commentator's statement."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the announcer finishes introducing James Kirkland, when does he begin introducing Canelo Alvarez?",
+      "video_id": "cjl592TFVhE",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 52.326,
+        "end": 59.973
+      },
+      "pred_interval": {
+        "start": 27.555555555555554,
+        "end": 30.11111111111111
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 24.770444444444447,
+        "end": 29.86188888888889,
+        "average": 27.316166666666668
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17777777777777778,
+        "text_similarity": 0.5664224624633789,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies that the announcer finishes Kirkland's introduction and starts Canelo's, but it omits the specific timestamps and the detail about the announcer finishing the initial details of Canelo's introduction."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the referee finishes giving instructions in English, when does he begin giving instructions in Spanish?",
+      "video_id": "cjl592TFVhE",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 107.201,
+        "end": 111.0
+      },
+      "pred_interval": {
+        "start": 27.555555555555554,
+        "end": 27.77777777777778
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 79.64544444444444,
+        "end": 83.22222222222223,
+        "average": 81.43383333333333
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20833333333333334,
+        "text_similarity": 0.6585537195205688,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer correctly identifies the sequence of events and the timing of the referee finishing English instructions. However, it omits the specific timestamp for when the Spanish instructions start and end, which are critical details in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the narrator says \"Hard right hand\", when does Kirkland get knocked down?",
+      "video_id": "cjl592TFVhE",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 191.5,
+        "end": 193.0
+      },
+      "pred_interval": {
+        "start": 251.25,
+        "end": 253.875
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 59.75,
+        "end": 60.875,
+        "average": 60.3125
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24719101123595508,
+        "text_similarity": 0.7110864520072937,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timing information and misattributes the event descriptions. It incorrectly states the 'Hard right hand' occurs at 251.25s and the knockdown at 253.875s, whereas the correct answer specifies the events occur around 191.0s. The relationship is also mischaracterized."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the commentator states that Kirkland was 'prone to getting knocked down', when is Kirkland shown getting knocked down by an overhead right?",
+      "video_id": "cjl592TFVhE",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 636.216992
+      },
+      "gt_interval": {
+        "start": 547.0,
+        "end": 554.0
+      },
+      "pred_interval": {
+        "start": 510.9692859670377,
+        "end": 533.4144637319554
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 36.030714032962294,
+        "end": 20.58553626804462,
+        "average": 28.308125150503457
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1875,
+        "text_similarity": 0.6117124557495117,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies the relationship as 'after' and provides approximate timestamps, but it misaligns the commentator's statement and the actual event. The correct answer specifies the exact time range for both the commentator's statement and the event, which the predicted answer does not match."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the commentator finishes describing aiming low and firing upstairs, when does Kirkland get knocked down by a body shot then an uppercut?",
+      "video_id": "cjl592TFVhE",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 636.216992
+      },
+      "gt_interval": {
+        "start": 564.0,
+        "end": 568.0
+      },
+      "pred_interval": {
+        "start": 533.3975931022875,
+        "end": 541.7508141670766
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 30.602406897712513,
+        "end": 26.249185832923445,
+        "average": 28.42579636531798
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24242424242424246,
+        "text_similarity": 0.7269718647003174,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer provides the correct relationship ('after') and approximate timestamps, but the timestamps do not align with the correct answer's specified time ranges. The predicted answer also omits the 'once_finished' relation and the commentator's description time frame."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Rodrigo scores a goal for Leeds, when is Jesse Marsch, the Leeds coach, shown celebrating on the sideline?",
+      "video_id": "nBnkRgkSFSg",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 23.336,
+        "end": 25.711
+      },
+      "pred_interval": {
+        "start": 5.714285714285714,
+        "end": 7.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 17.621714285714283,
+        "end": 18.711,
+        "average": 18.16635714285714
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3076923076923077,
+        "text_similarity": 0.596534013748169,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies that Jesse Marsch's celebration occurs after Rodrigo's goal, but it lacks specific timing details and does not mention the exact frame range provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the announcer says \"Feldman with the ball in\", when does Undav score the first goal?",
+      "video_id": "KEw_Fzbk1Mw",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 17.7,
+        "end": 19.0
+      },
+      "pred_interval": {
+        "start": 37.75,
+        "end": 43.25
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 20.05,
+        "end": 24.25,
+        "average": 22.15
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.5063291139240506,
+        "text_similarity": 0.7883211374282837,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timing for when Undav scores the first goal, stating 38.5s instead of the correct 17.7s. It also mentions a celebration starting at 41.0s, which is not present in the correct answer. These inaccuracies significantly deviate from the factual details provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the announcer describes Mateus Nunes' error, when do the Brighton players celebrate their second goal?",
+      "video_id": "KEw_Fzbk1Mw",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 121.0,
+        "end": 129.0
+      },
+      "pred_interval": {
+        "start": 53.75,
+        "end": 57.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 67.25,
+        "end": 72.0,
+        "average": 69.625
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3076923076923077,
+        "text_similarity": 0.6684660315513611,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and misattributes the celebration to the wrong event. It incorrectly states that Undav scores the second goal and that the celebration occurs after the goal, whereas the correct answer specifies the celebration starts at 121.0s following the announcer's description of the error."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the announcer says \"he doesn't, he's Gross\", when does Pascal Gross score the third goal?",
+      "video_id": "KEw_Fzbk1Mw",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 118.5,
+        "end": 120.0
+      },
+      "pred_interval": {
+        "start": 87.0,
+        "end": 91.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 31.5,
+        "end": 28.5,
+        "average": 30.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.46666666666666673,
+        "text_similarity": 0.7609878778457642,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer provides a timeline for the announcer's comment and the goal, but the timings do not align with the correct answer. The correct answer specifies the announcer's comment ends at 117.9s and the goal starts at 118.5s, while the predicted answer gives different timestamps, leading to a mismatch in the sequence and timing."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the commentator finishes explaining Evan Ferguson Enciso's goal technique, when does Danny Welbeck score his first goal of the match?",
+      "video_id": "KEw_Fzbk1Mw",
+      "video_number": "015",
+      "segment": {
+        "start": 150.0,
+        "end": 300.384
+      },
+      "gt_interval": {
+        "start": 179.7,
+        "end": 183.0
+      },
+      "pred_interval": {
+        "start": 51.3,
+        "end": 55.1
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 128.39999999999998,
+        "end": 127.9,
+        "average": 128.14999999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.25287356321839083,
+        "text_similarity": 0.7380767464637756,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states that Welbeck scores his goal at 51.3s and 53.3s, which contradicts the correct answer's timing of 179.7s. It also misattributes the goal to Welbeck when the correct answer refers to Evan Ferguson Enciso's goal. The predicted answer includes hallucinated details about the timing and events."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Fulham scores their first goal, when does Fabianski fist away a shot from Fulham?",
+      "video_id": "sVXsLrOUIYs",
+      "video_number": "016",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 50.89,
+        "end": 51.641
+      },
+      "pred_interval": {
+        "start": 26.0246913580247,
+        "end": 27.798359453992173
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 24.8653086419753,
+        "end": 23.842640546007825,
+        "average": 24.353974593991563
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17073170731707318,
+        "text_similarity": 0.7840501070022583,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly identifies the timing and sequence of events, claiming Fabianski fisted a shot before the Fulham goal, which contradicts the correct answer. It also introduces unfounded details about Dan James and the relationship between events."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After Dan James' left-footed shot hits the crossbar, when does Leno make a save from Scamacca's shot?",
+      "video_id": "sVXsLrOUIYs",
+      "video_number": "016",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 89.78,
+        "end": 91.956
+      },
+      "pred_interval": {
+        "start": 54.68370956574159,
+        "end": 55.52438363951308
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 35.096290434258414,
+        "end": 36.43161636048692,
+        "average": 35.76395339737267
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3,
+        "text_similarity": 0.8134365081787109,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states that Leno makes a save from Scamacca's shot (E2) immediately after Dan James' shot hits the crossbar (E1), which contradicts the correct answer that these events are distinct and occur at different times. The predicted answer also provides incorrect timeframes for both events."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once West Ham scores their first goal from the penalty kick, when does Coach David Moyes start clapping?",
+      "video_id": "sVXsLrOUIYs",
+      "video_number": "016",
+      "segment": {
+        "start": 150.0,
+        "end": 322.906
+      },
+      "gt_interval": {
+        "start": 159.24,
+        "end": 162.06
+      },
+      "pred_interval": {
+        "start": 3.375,
+        "end": 4.25
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 155.865,
+        "end": 157.81,
+        "average": 156.8375
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21428571428571427,
+        "text_similarity": 0.7100536823272705,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the clapping event occurring after the penalty kick, but it misrepresents the timing and context. It incorrectly attributes the penalty kick to 'Boeing' and provides inaccurate timestamps, which contradict the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the commentator says \"Fijiana on the board first\", when does the captain win the lineout?",
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 69.0,
+        "end": 70.7
+      },
+      "pred_interval": {
+        "start": 109.4412331406551,
+        "end": 113.61607409347427
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 40.4412331406551,
+        "end": 42.916074093474265,
+        "average": 41.67865361706468
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27027027027027023,
+        "text_similarity": 0.6342679858207703,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer incorrectly associates the commentator's statement with the anchor event's start time, which is not aligned with the correct answer. It also provides a different time for the target event and misattributes the 'win the lineout' action to the target event, which is not accurate based on the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the commentator mentions Fijiana's seven-point advantage, when does a Manusina player make a high kick that results in a 50-22?",
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 197.3,
+        "end": 208.0
+      },
+      "pred_interval": {
+        "start": 16.866666666666667,
+        "end": 31.433333333333334
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 180.43333333333334,
+        "end": 176.56666666666666,
+        "average": 178.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1492537313432836,
+        "text_similarity": 0.44767293334007263,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states the time of the event as 30.43 seconds, which contradicts the correct answer's time frame of 172.691s-176s and 208s. It also fails to mention the specific roles (E1 and E2) and the sequence of events as described in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the referee awards a penalty for not releasing, when does a Manusina player successfully kick for posts?",
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 248.0,
+        "end": 258.2
+      },
+      "pred_interval": {
+        "start": 143.16666666666666,
+        "end": 214.43333333333334
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 104.83333333333334,
+        "end": 43.76666666666665,
+        "average": 74.3
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.09523809523809525,
+        "text_similarity": 0.5763345956802368,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer mentions the timing of the penalty kick but does not correctly identify the specific player or the exact time frame for the successful kick for posts. It also misrepresents the sequence of events compared to the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the commentator says 'the referee takes a close look, and it's been awarded', when do the Fiji players celebrate?",
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 472.2,
+        "end": 472.7
+      },
+      "pred_interval": {
+        "start": 61.533332848917745,
+        "end": 62.333332751827534
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 410.66666715108227,
+        "end": 410.36666724817246,
+        "average": 410.51666719962736
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.186046511627907,
+        "text_similarity": 0.4747328758239746,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer correctly identifies the sequence of events and the timing of the celebration relative to the referee's decision. It accurately captures the key elements of the correct answer, though it omits the specific reference to 'E1' and 'E2' labels used in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "During the commentator saying 'And they win the penalty. Massive penalty for Samoa.', when does a Samoan player smile and pump her fist?",
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 564.5,
+        "end": 567.0
+      },
+      "pred_interval": {
+        "start": 63.03333284891774,
+        "end": 64.03333284891774
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 501.4666671510823,
+        "end": 502.9666671510823,
+        "average": 502.2166671510823
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2391304347826087,
+        "text_similarity": 0.4009733498096466,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies that the Samoan player celebrates after the penalty, but it includes hallucinated details like the player's name and incorrect event descriptions. It also misrepresents the timing and context of the events."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once player number 20 receives the ball and runs towards the try line, when does she dive and score the try?",
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 690.0,
+        "end": 787.9100000000001
+      },
+      "gt_interval": {
+        "start": 715.86,
+        "end": 716.66
+      },
+      "pred_interval": {
+        "start": 23.8,
+        "end": 45.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 692.0600000000001,
+        "end": 671.06,
+        "average": 681.56
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15533980582524273,
+        "text_similarity": 0.5033519864082336,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer contains no relevant information about the timing or actions of player number 20 or the try scoring event. It references commentator statements and replays, which are unrelated to the question and the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the commentator says 'They're going to win it themselves', when do the players pile on top of the try scorer in celebration?",
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 690.0,
+        "end": 787.9100000000001
+      },
+      "gt_interval": {
+        "start": 718.7,
+        "end": 722.7
+      },
+      "pred_interval": {
+        "start": 29.1,
+        "end": 45.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 689.6,
+        "end": 677.1,
+        "average": 683.35
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21153846153846156,
+        "text_similarity": 0.7263225317001343,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and misattributes the start of E2 to the commentator's statement, whereas the correct answer specifies that the celebration begins right after the commentary. It also introduces unrelated details like a replay and crowd reaction not present in the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the scoreboard updates to show 'TRY' and the new score, when does the close-up replay of the try scorer begin?",
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 690.0,
+        "end": 787.9100000000001
+      },
+      "gt_interval": {
+        "start": 745.4,
+        "end": 750.1
+      },
+      "pred_interval": {
+        "start": 68.4,
+        "end": 78.7
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 677.0,
+        "end": 671.4,
+        "average": 674.2
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22857142857142854,
+        "text_similarity": 0.7533703446388245,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer contains significant factual errors, including incorrect timing and event sequence. It contradicts the correct answer by misrepresenting the start times of E1 and E2 and the relationship between the scoreboard update and the replay."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker (man with mustache) says 'We're here in Hamilton', when does he state that the road trip has been 'pretty good'?",
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 4.735,
+        "end": 7.145
+      },
+      "pred_interval": {
+        "start": 10.0,
+        "end": 12.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 5.265,
+        "end": 5.355,
+        "average": 5.3100000000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4,
+        "text_similarity": 0.764378547668457,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and misrepresents the sequence of events. The correct answer specifies that the road trip comment occurs after the location mention, while the predicted answer gives entirely different timings and suggests a natural pause, which is not supported by the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes mispronouncing the town name, when does the other man (driver) look back at the camera and take a bite of the bakery roll?",
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 28.228,
+        "end": 30.972
+      },
+      "pred_interval": {
+        "start": 31.8,
+        "end": 33.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.571999999999999,
+        "end": 2.0279999999999987,
+        "average": 2.799999999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.48,
+        "text_similarity": 0.6627870202064514,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies the driver's action and its approximate timing, but it inaccurately states the time range as 31.8s to 33.0s, which contradicts the correct answer's 28.228s to 30.972s. It also mentions the driver's action being directly preceded by the speaker's finishing his sentence, which is not explicitly stated in the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Eddie Bentz kicks the football through the posts, when does a person shout 'Yeah!' in celebration?",
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 81.369,
+        "end": 81.65
+      },
+      "pred_interval": {
+        "start": 142.8,
+        "end": 146.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 61.43100000000001,
+        "end": 64.35,
+        "average": 62.8905
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3384615384615385,
+        "text_similarity": 0.6496877074241638,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer incorrectly states the time of the kick and the shout, which are critical factual elements. While it correctly notes the temporal relationship between the kick and the shout, the specific timings are wrong, leading to a significant factual discrepancy."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man in the black t-shirt finishes signing the yellow football, when does he start signing a red football?",
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 112.5,
+        "end": 115.0
+      },
+      "pred_interval": {
+        "start": 141.46249817425385,
+        "end": 144.74158627972943
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 28.962498174253852,
+        "end": 29.741586279729432,
+        "average": 29.352042226991642
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.32,
+        "text_similarity": 0.8374951481819153,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the 'after' relationship but provides incorrect timestamps for both events. The correct answer specifies E1 ends at 110.6s and E2 starts at 112.5s, while the predicted answer gives different timestamps, leading to a mismatch in the actual timing relationship."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man with the mustache finishes saying \"They need an extractor\", when does he start talking about going in \"barefoot mode\"?",
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 176.3,
+        "end": 181.0
+      },
+      "pred_interval": {
+        "start": 211.19775481780673,
+        "end": 213.82427191951112
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 34.897754817806714,
+        "end": 32.82427191951112,
+        "average": 33.86101336865892
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2857142857142857,
+        "text_similarity": 0.6859004497528076,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer incorrectly states the start time of E1, which affects the accuracy of the temporal relationship. While it correctly identifies the start time of E2 and the 'after' relationship, the factual error in E1's timing reduces the overall accuracy."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man in the blue jacket asks about a favorite goal, when does the man in the CGR jersey respond about six goals three?",
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 358.6,
+        "end": 359.5
+      },
+      "pred_interval": {
+        "start": 39.0,
+        "end": 49.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 319.6,
+        "end": 310.1,
+        "average": 314.85
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.13333333333333333,
+        "text_similarity": 0.3724994659423828,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer incorrectly states the timing of the events and the relationship between them. The correct answer specifies precise timestamps and a 'once_finished' relation, which the predicted answer fails to match."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the man with the mustache (Bailey) explains his outfit choices, when does he gesture with both hands spread outwards?",
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 419.0,
+        "end": 420.0
+      },
+      "pred_interval": {
+        "start": 43.6,
+        "end": 57.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 375.4,
+        "end": 363.0,
+        "average": 369.2
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12195121951219512,
+        "text_similarity": 0.411329984664917,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer provides a relative time reference but incorrectly states the timing of the gesture. The correct answer specifies the gesture occurs at 419.0s-420.0s, while the predicted answer gives a time that is inconsistent with the correct timeline and lacks the absolute time reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the man in the white t-shirt asks what it's called when a big company makes cuts, when does he next ask 'Make some cuts?'",
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 446.5,
+        "end": 447.3
+      },
+      "pred_interval": {
+        "start": 53.5,
+        "end": 60.8
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 393.0,
+        "end": 386.5,
+        "average": 389.75
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.07317073170731708,
+        "text_similarity": 0.29032424092292786,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and misattributes the events to a different part of the video. It also incorrectly describes the content of the questions, which significantly deviates from the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man on the left asks if Bailey Smith is coming in this week, when does the man on the right respond by saying 'No, no'?",
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 510.0,
+        "end": 548.9100000000001
+      },
+      "gt_interval": {
+        "start": 513.301,
+        "end": 514.142
+      },
+      "pred_interval": {
+        "start": 46.25,
+        "end": 48.125
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 467.05100000000004,
+        "end": 466.01700000000005,
+        "average": 466.53400000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21875,
+        "text_similarity": 0.4211764335632324,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the event but provides an incorrect time reference. The correct answer specifies the time range and the relationship between events, which the prediction omits."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After Demari Gray's shot is saved by the goalkeeper, when does Pickford make his first save against Willian?",
+      "video_id": "__LhyCcUvhQ",
+      "video_number": "019",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 35.384,
+        "end": 39.95
+      },
+      "pred_interval": {
+        "start": 1.9285714285714284,
+        "end": 5.714285714285714
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 33.45542857142857,
+        "end": 34.23571428571429,
+        "average": 33.84557142857143
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17307692307692307,
+        "text_similarity": 0.6377273797988892,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly identifies the timestamps and the relationship between events. It states E1 starts at 1.928s and E2 at 5.714s, which contradicts the correct answer's timestamps. Additionally, it misinterprets the relationship as a transition between a purple screen and a match, rather than a chronological sequence of events in the actual match."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the Manchester United team walks out of the tunnel, when is Cristiano Ronaldo's 178th Champions League appearance mentioned?",
+      "video_id": "Dc-aD5F7hiM",
+      "video_number": "020",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 43.1,
+        "end": 44.4
+      },
+      "pred_interval": {
+        "start": 10.7,
+        "end": 15.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 32.400000000000006,
+        "end": 29.2,
+        "average": 30.800000000000004
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28125,
+        "text_similarity": 0.549133837223053,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer mentions the correct event (Cristiano Ronaldo's 178th appearance) and the general timing, but it incorrectly states the timecode as 10.7s to 15.2s, which contradicts the correct answer's timecode of 43.1s to 44.4s. The predicted answer also omits the key detail about the commentator's speech being the target event."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Mason Greenwood finishes taking a knee, when does the match kick off?",
+      "video_id": "Dc-aD5F7hiM",
+      "video_number": "020",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 66.0,
+        "end": 66.5
+      },
+      "pred_interval": {
+        "start": 84.0,
+        "end": 84.9
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 18.0,
+        "end": 18.400000000000006,
+        "average": 18.200000000000003
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.125,
+        "text_similarity": 0.38500505685806274,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the question about Mason Greenwood and the match kick-off time. It mentions Cristiano Ronaldo and a different timecode, which contradicts the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the commentator says 'Gets his cross in!', when does De Gea make a save?",
+      "video_id": "Dc-aD5F7hiM",
+      "video_number": "020",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 158.8,
+        "end": 159.3
+      },
+      "pred_interval": {
+        "start": 32.55555555555556,
+        "end": 34.666666666666664
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 126.24444444444445,
+        "end": 124.63333333333335,
+        "average": 125.4388888888889
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15533980582524273,
+        "text_similarity": 0.6510874032974243,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timings and misidentifies the events. It incorrectly associates the commentator's mention of De Gea's save with a different part of the video and fails to align with the correct answer's timing and event sequence."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the commentator states that Alcacer makes no mistake, when does he say that Ronaldo calls for more?",
+      "video_id": "Dc-aD5F7hiM",
+      "video_number": "020",
+      "segment": {
+        "start": 330.0,
+        "end": 451.31699199999997
+      },
+      "gt_interval": {
+        "start": 371.3,
+        "end": 372.7
+      },
+      "pred_interval": {
+        "start": 26.0,
+        "end": 29.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 345.3,
+        "end": 343.5,
+        "average": 344.4
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12658227848101267,
+        "text_similarity": 0.1505202054977417,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer does not address the question about when Ronaldo calls for more after Alcacer makes no mistake. It provides unrelated details about a foul and a free kick, which are not relevant to the correct answer involving specific timestamps and the relative timing of the anchor and target speeches."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the commentator says \"No foul\" for the second time, when does Manchester United score their first goal from a free kick?",
+      "video_id": "Dc-aD5F7hiM",
+      "video_number": "020",
+      "segment": {
+        "start": 330.0,
+        "end": 451.31699199999997
+      },
+      "gt_interval": {
+        "start": 401.9,
+        "end": 402.5
+      },
+      "pred_interval": {
+        "start": 58.3,
+        "end": 59.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 343.59999999999997,
+        "end": 343.0,
+        "average": 343.29999999999995
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.15624999999999997,
+        "text_similarity": 0.17046645283699036,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer addresses the commentator's 'No foul' call but fails to mention the timing of Manchester United's goal or the free kick context, which are critical to the question."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the announcer says 'Lost it', when do the Bears recover the fumbled ball?",
+      "video_id": "X52JPDIfJYk",
+      "video_number": "021",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 42.9,
+        "end": 44.0
+      },
+      "pred_interval": {
+        "start": 40.87301587301587,
+        "end": 43.333333333333336
+      },
+      "iou": 0.13857868020304692,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.026984126984125,
+        "end": 0.6666666666666643,
+        "average": 1.3468253968253947
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1875,
+        "text_similarity": 0.5420796275138855,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and unrelated context, failing to accurately identify when the Bears recover the fumbled ball after the announcer says 'Lost it'. It also misrepresents the relationship as 'after' instead of 'once_finished'."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the announcer asks 'What are some of the new things fans can expect?', when does Snoop Huntley get hit hard and fall to the ground?",
+      "video_id": "X52JPDIfJYk",
+      "video_number": "021",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 87.0,
+        "end": 88.0
+      },
+      "pred_interval": {
+        "start": 166.78571428571428,
+        "end": 176.03174603174602
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 79.78571428571428,
+        "end": 88.03174603174602,
+        "average": 83.90873015873015
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1875,
+        "text_similarity": 0.6382753252983093,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer provides incorrect timestamps and events that do not align with the correct answer. It mentions entirely different events and timestamps, which are unrelated to the question about Snoop Huntley being hit."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the commentator finishes saying, 'and that has been coming', when does Granit Xhaka celebrate his goal?",
+      "video_id": "ZsECVscljqY",
+      "video_number": "022",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 65.867,
+        "end": 75.5
+      },
+      "pred_interval": {
+        "start": 29.9375,
+        "end": 31.109375
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 35.929500000000004,
+        "end": 44.390625,
+        "average": 40.1600625
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4912280701754386,
+        "text_similarity": 0.7517396211624146,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states the time when the commentator finishes the phrase, providing 29.9375s instead of the correct 64.970s. It also misplaces the celebration time, claiming it occurs at 30.625s instead of 65.867s. These factual errors significantly reduce the accuracy of the response."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the keeper makes the initial save from Jesus' shot, when does the commentator exclaim 'good save for Zounaou!'?",
+      "video_id": "ZsECVscljqY",
+      "video_number": "022",
+      "segment": {
+        "start": 150.0,
+        "end": 323.474
+      },
+      "gt_interval": {
+        "start": 153.73,
+        "end": 154.6
+      },
+      "pred_interval": {
+        "start": 150.0,
+        "end": 153.625
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.7299999999999898,
+        "end": 0.9749999999999943,
+        "average": 2.352499999999992
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.29629629629629634,
+        "text_similarity": 0.7410643100738525,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies the relative timing of the events but provides incorrect start times for E1 and E2. It also uses 'after' instead of 'once_finished' for the relationship, which slightly deviates from the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the player in purple jersey number 14 scores a penalty shot, when does the player in white jersey number 5 next score a goal with a jump shot?",
+      "video_id": "Y4hkgiCIgmc",
+      "video_number": "023",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 250.0,
+        "end": 256.0
+      },
+      "pred_interval": {
+        "start": 62.22442775540255,
+        "end": 66.9033106951164
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 187.77557224459744,
+        "end": 189.0966893048836,
+        "average": 188.43613077474052
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14705882352941177,
+        "text_similarity": 0.3649148941040039,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer contradicts the correct answer by reversing the sequence of events and providing incorrect timestamps. It also introduces a scenario (jump shot saved by goalkeeper) not mentioned in the correct answer."
+      }
+    }
+  ]
+}

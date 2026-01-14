@@ -1,0 +1,1641 @@
+{
+  "topic_id": 10,
+  "topic_name": "Restaurant Service Encounters",
+  "num_evaluated": 90,
+  "aggregated_metrics": {
+    "accuracy": 0.45555555555555555,
+    "correct": 41,
+    "total": 90,
+    "rationale": {
+      "rouge_l_mean": 0.17755084385362158,
+      "rouge_l_std": 0.08164358932731805,
+      "text_similarity_mean": 0.5544552304678493,
+      "text_similarity_std": 0.2193261860452853,
+      "llm_judge_score_mean": 4.5,
+      "llm_judge_score_std": 3.8822959987901777
+    },
+    "rationale_cider": 0.041420920298342614
+  },
+  "per_entry_results": [
+    {
+      "video_id": "WQ_GdqOAyJM",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 156.0
+      },
+      "question": "The chef demonstrates frying shallots and warns about removing them early. What is the primary reason for this specific timing, integrating the visual process with the verbal instruction?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.23853211009174313,
+        "text_similarity": 0.5222504138946533,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately restates the chef's reason: residual heat continues to brown the shallots after removal, so they must be taken out early to avoid over-browning/burning and reach the desired color."
+      }
+    },
+    {
+      "video_id": "k69HiX5I4as",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 60.0
+      },
+      "question": "What structural feature of the burger most likely inspired its name 'CN Tower Burger Challenge'?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.30952380952380953,
+        "text_similarity": 0.9129226803779602,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the correct answer's main point that the burger's exceptionally tall, vertically stacked construction inspired the 'CN Tower' name; the omitted numeric height detail does not change the meaning."
+      }
+    },
+    {
+      "video_id": "GLDd5u1dizo",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 112.0
+      },
+      "question": "Considering the speaker's early restaurant experience and observations about culinary school graduates, what is the primary reason for his advice to work in a restaurant before attending?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20634920634920634,
+        "text_similarity": 0.7330632209777832,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction notes expense and recommends restaurant work for practical experience, but it omits key points that much school training had to be discarded for different restaurant techniques and that the advice is to test whether one enjoys the demanding realities (long hours, heat, low pay) before spending money on culinary school."
+      }
+    },
+    {
+      "video_id": "rPx6VIjkYco",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 91.0
+      },
+      "question": "According to the narration, what characteristic of Van Stapele's operation makes an early morning visit essential?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1595744680851064,
+        "text_similarity": 0.6336222887039185,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly states that Van Stapele's items sell out later in the day, matching the core of the reference, but it includes irrelevant and likely hallucinated details (Manneken Pis sign, waffles, fries) and omits specific mention of the single-item cookie, reducing precision."
+      }
+    },
+    {
+      "video_id": "JJOTu9IkiUo",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 51.0
+      },
+      "question": "What cultural practice is the chef demonstrating by insisting the customer eat rice with the remaining ramen broth, even after the customer states he is full?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16666666666666666,
+        "text_similarity": 0.5295577049255371,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the chef's playful prompting but omits the key cultural point: deliberately finishing the ramen by turning leftover broth into rice (Kaedama/Ramen Risotto) and the chef's explicit framing as Japanese culture, so it is only a partial match."
+      }
+    },
+    {
+      "video_id": "4PyTLRh7k5w",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 32.0
+      },
+      "question": "Considering the restaurant owner's statements and the text overlay, what primarily prompted the owner's aggressive demand for the streamer to leave?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.14492753623188406,
+        "text_similarity": 0.4324827790260315,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction posits an unsupported specific cause (filming customers) and omits the key evidence that the owner was receiving about 30 complaints and used an aggressive, 'gangster' posture; thus it partially overlaps but adds hallucinated detail and misses the stated reason."
+      }
+    },
+    {
+      "video_id": "Yx4K6CuraOs",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 40.0
+      },
+      "question": "Which elements from the introduction best establish the 'Namuna Gang's' playful dynamic and the thematic nature of their content series?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.4243922531604767,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures a general playful tone (funny faces, gestures, effects) but omits the key factual elements: the explicit introduction of the 'Gold Plated Eating Series' and the specific humorous nicknames/banter that establish their dynamic."
+      }
+    },
+    {
+      "video_id": "WurBSP0mOmY",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the challenge rules and Joel's comments, why did the restaurant likely stop allowing rarer cooked burger patties for the Whammy Burger Challenge?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.08791208791208792,
+        "text_similarity": 0.4719744920730591,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer cites health/safety concerns, which contradicts Joel's stated reason that rarer patties were disallowed because they made the challenge 'easier.' It omits the key point about rarer meat being softer/easier to eat quickly and introduces an unsupported motive."
+      }
+    },
+    {
+      "video_id": "WurBSP0mOmY",
+      "video_number": "008",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the displayed signage and the speaker's comments, what is the most accurate inference about the Whammy Challenge's cash prize structure?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.08888888888888889,
+        "text_similarity": 0.521102786064148,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction incorrectly states $100 is the maximum prize; the reference indicates $100 is the current amount and the speaker cites larger amounts and a growing/jackpot structure, so the prediction contradicts key facts and omits variability."
+      }
+    },
+    {
+      "video_id": "WurBSP0mOmY",
+      "video_number": "008",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the narrator's commentary, what major change occurred to the challenge's prize structure between his initial plans and the time of this recording?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17241379310344826,
+        "text_similarity": 0.1497676968574524,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely incorrect and unrelated to the correct answer: it invents a change in milkshake flavors instead of reporting the factual decrease in the jackpot from about $1400\u2013$1500 to $100."
+      }
+    },
+    {
+      "video_id": "WurBSP0mOmY",
+      "video_number": "008",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Considering the challenge's specified success rate and the visible food portions, what conclusion can be drawn about its general difficulty?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.11594202898550725,
+        "text_similarity": 0.470578670501709,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly concludes the challenge is highly difficult, but it omits key evidence from the reference\u2014namely the stated 8\u20139% success rate and the notable large portions (burger, fries, milkshake) that support that conclusion."
+      }
+    },
+    {
+      "video_id": "WurBSP0mOmY",
+      "video_number": "008",
+      "segment": {
+        "start": 690.0,
+        "end": 780.0
+      },
+      "question": "Based on the man's declaration of being 'finished' at different points, his direct query about elapsed time, and his subsequent reference to remaining time 'for us,' what is the most accurate description of the challenge?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.09523809523809525,
+        "text_similarity": 0.42063868045806885,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction contradicts and omits the key details: the correct answer emphasizes a shared, time-limited challenge and the man's timeline of 'finished' statements, whereas the prediction hallucinates a rule that he only had to finish the burger and ignores the mutual time constraint and the woman's ongoing eating."
+      }
+    },
+    {
+      "video_id": "B4BVNSrUJf8",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the restaurant's name, stated culinary style, and interior design, what is the unifying concept behind Botanico Tacos and Tequila?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.22988505747126436,
+        "text_similarity": 0.9022583365440369,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly identifies the unifying concept as a contemporary Mexican restaurant with a botanical emphasis; its added phrasing about fresh/natural elements aligns with the botanical theme and does not contradict the reference."
+      }
+    },
+    {
+      "video_id": "B4BVNSrUJf8",
+      "video_number": "009",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the speaker's personal experience with the three salsa sampler, which taste observation contradicted the menu's implied heat hierarchy?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.023809523809523808,
+        "text_similarity": 0.09325844049453735,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a placeholder and provides no substantive content from the video; it fails to mention the specific salsas or the speaker's quoted observations that the avocado was hotter than the mango habanero, so it does not match the correct answer."
+      }
+    },
+    {
+      "video_id": "B4BVNSrUJf8",
+      "video_number": "009",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the speaker's initial skepticism and final review, what best explains their positive experience with Botanico Tacos and Tequila?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1460674157303371,
+        "text_similarity": 0.3659651279449463,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is factually wrong and unrelated: it describes irrelevant video visuals, hallucinates that cheese dip and expansive drink options are available, and contradicts the correct answer's point about a smaller menu and lack of cheese dip."
+      }
+    },
+    {
+      "video_id": "B4BVNSrUJf8",
+      "video_number": "009",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Given the reviewers' emphasis on homemade dishes, specific dessert choices, and comments about *not* being a 'normal Mexican restaurant', what is Botanico's most appealing differentiating factor?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.043010752688172046,
+        "text_similarity": 0.044472962617874146,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is just a placeholder statement and provides no substantive explanation or content matching the correct answer about homemade, fresh, authentic food being Botanico's key differentiator."
+      }
+    },
+    {
+      "video_id": "B4BVNSrUJf8",
+      "video_number": "009",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Based on the couple's comments about the current weather and potential future visits, what is the most likely reason they plan to return for another review in the summer?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.06666666666666668,
+        "text_similarity": 0.4935716688632965,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the core implication\u2014that the outdoor experience will be better in warmer months\u2014matching the reference's emphasis on waiting for more suitable weather for outdoor enjoyment."
+      }
+    },
+    {
+      "video_id": "B4BVNSrUJf8",
+      "video_number": "009",
+      "segment": {
+        "start": 870.0,
+        "end": 1079.0
+      },
+      "question": "Based on the attire worn by staff interacting with patrons in the restaurant setting, what primary role is most consistently conveyed by their uniforms?",
+      "answer_correct": 0,
+      "gt_answer": "E",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2903225806451613,
+        "text_similarity": 0.6892924308776855,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "Both responses state that the role cannot be determined from the video content; the predicted answer's note about a black background does not contradict the correct answer and conveys the same inability to assess uniforms."
+      }
+    },
+    {
+      "video_id": "1iIOXO9k73E",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering Tim's self-proclaimed condition during his introduction and his subsequent reaction to the additional chili garlic sauce, what best explains his refusal of the offered water?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17073170731707318,
+        "text_similarity": 0.7074414491653442,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the outcome (water unnecessary) but attributes it to the sauce being mild rather than Tim's reduced sense of taste from having 'the Rona,' omitting the key causal detail and thus giving an incorrect explanation."
+      }
+    },
+    {
+      "video_id": "1iIOXO9k73E",
+      "video_number": "010",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Despite the host's declared role as \"ref\" and his stated intention for no one to win, what contradiction is evident in his actions during the spice challenge?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2063492063492064,
+        "text_similarity": 0.5713322758674622,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies the core contradiction that the host, despite claiming to be an impartial 'ref' and saying no one should win, actively joins the contestants and eats the spicy food; it omits the verbatim quotes and some specific actions (big bite, asking for more spice) but preserves the meaning."
+      }
+    },
+    {
+      "video_id": "1iIOXO9k73E",
+      "video_number": "010",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "What combined auditory and visual evidence best illustrates the participants' transition from underwhelmed by spiciness to overwhelmed by it?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.06896551724137932,
+        "text_similarity": 0.23381105065345764,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is entirely unrelated: the correct answer describes specific auditory reactions and visual cues showing escalation of spiciness, whereas the predicted answer only mentions an unpleasant appearance of Markian's creation and does not address the spiciness transition at all."
+      }
+    },
+    {
+      "video_id": "1iIOXO9k73E",
+      "video_number": "010",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "After clearing main course plates, what is the most probable purpose when a server promptly places distinct, small folded cards in front of each guest?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.31578947368421045,
+        "text_similarity": 0.8301939964294434,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer fully matches the correct answer's reasoning and conclusion, identifying dessert menus as the most contextually probable purpose given the timing after the main course, with no added errors or omissions."
+      }
+    },
+    {
+      "video_id": "1iIOXO9k73E",
+      "video_number": "010",
+      "segment": {
+        "start": 690.0,
+        "end": 729.0
+      },
+      "question": "Considering the server's attentive posture and proximity to the customer, what specific action is most likely being communicated or performed?",
+      "answer_correct": 0,
+      "gt_answer": "E",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1794871794871795,
+        "text_similarity": 0.21249772608280182,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction asserts a specific action (taking an order/refill) and invents visual detail, contradicting the reference which states the action cannot be determined without further cues; while the guess is plausible, it is unsupported and thus largely incorrect."
+      }
+    },
+    {
+      "video_id": "1e0zfq8zksk",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the observed reaction to the Iced Kerkede Shai and its menu description, what characteristic of the tea prompted the suggestion for sweetener?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.22580645161290322,
+        "text_similarity": 0.7068811655044556,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and concisely identifies the hibiscus tea's natural tartness/bitterness\u2014the exact characteristic that prompted the suggestion for a sweetener, matching the reference meaning."
+      }
+    },
+    {
+      "video_id": "1e0zfq8zksk",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the eating demonstration and description of the 'Taste of Mesob' platter, what is the primary functional role of Injera?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.16901408450704225,
+        "text_similarity": 0.6913716793060303,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies injera's main role as a scoop/edible utensil, but it introduces an unsupported extra claim about preventing dishes from mixing on the plate."
+      }
+    },
+    {
+      "video_id": "1e0zfq8zksk",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 481.0
+      },
+      "question": "Based on the initial demonstration and subsequent diner interactions, what is the primary function of the injera in this Ethiopian meal?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17500000000000002,
+        "text_similarity": 0.7535437345504761,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and concisely matches the correct answer by stating injera's primary role as an edible utensil used to scoop and wrap food, preserving the original meaning and details."
+      }
+    },
+    {
+      "video_id": "S_QduJQCof0",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the description, what is the key distinction between 'porras' and traditional 'churros' offered at Santa Faz Churrer\u00eda-Cafeter\u00eda?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.0,
+        "text_similarity": 0.03603604435920715,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a placeholder and provides no substantive content; it fails to state that 'porras' are slightly longer and thicker than 'churros' or mention the serving options, so it does not match the correct answer."
+      }
+    },
+    {
+      "video_id": "S_QduJQCof0",
+      "video_number": "012",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering the common description of vermouth, why was the couple surprised by their white drink's taste relative to the red?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20689655172413796,
+        "text_similarity": 0.7722166776657104,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly states they expected a dry white vermouth but found it sweet, which explains their surprise relative to the red; it omits the red being described as more bitter yet still sweet, a minor detail."
+      }
+    },
+    {
+      "video_id": "S_QduJQCof0",
+      "video_number": "012",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the hosts' descriptions and visual demonstrations, what combination of factors makes bocadillos a standout, accessible food choice while exploring Spain?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1732283464566929,
+        "text_similarity": 0.6999205350875854,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely contradicts and omits the correct answer\u2019s key points\u2014affordability (under \u20ac2), small \u2018mini sandwich\u2019 snack size, and widespread chain availability\u2014while introducing unfounded details (elaborate prep, large portions, breakfast focus) that are not supported by the reference."
+      }
+    },
+    {
+      "video_id": "S_QduJQCof0",
+      "video_number": "012",
+      "segment": {
+        "start": 510.0,
+        "end": 625.0
+      },
+      "question": "Based on the price descriptions, what is the approximate cost comparison between one portion of Iberian ham and a typical croquette?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17073170731707318,
+        "text_similarity": 0.8562622666358948,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly states ham is more expensive but significantly underestimates the ratio: the reference gives ~11.25\u00d7 (18/1.6) or 10\u201312\u00d7, while the prediction's 5\u20137\u00d7 is materially inaccurate."
+      }
+    },
+    {
+      "video_id": "eByLJB78i74",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "How does the challenge's prize structure, as presented in the on-screen text, elaborate on the initial verbal explanation regarding completion time and rewards?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3076923076923077,
+        "text_similarity": 0.5715891122817993,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes the free meal for under 30 minutes but incorrectly states the T-shirt is for all finishers (vs. under 1 hour) and omits the 'Wall of Fame' and the verbal time-limit clarification, adding irrelevant visual detail."
+      }
+    },
+    {
+      "video_id": "eByLJB78i74",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "How does the woman adapt her consumption strategy for the unusually tall burger, and what visual changes are evident compared to the man's approach with his portion?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1739130434782609,
+        "text_similarity": 0.4363877475261688,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction mentions utensil use (knife and fork vs hands), which is not stated in the reference and omits the key behaviors: the woman deconstructing the tall burger into smaller portions and the man assembling his components. It therefore contradicts and fails to capture the correct actions and details."
+      }
+    },
+    {
+      "video_id": "eByLJB78i74",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "What visible object on the table, combined with the woman's comment 'I'm not afraid to eat slow,' primarily suggests the competitive nature of their meal?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2608695652173913,
+        "text_similarity": 0.5256345272064209,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly identifies the blue digital timer as the visible object that, together with the woman's comment, indicates a timed eating competition; it matches the key element of the correct answer."
+      }
+    },
+    {
+      "video_id": "eByLJB78i74",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 620.0
+      },
+      "question": "Based on the visible timer and the participants' verbal references to specific numbers like '7-11' and '12-20', what is the most probable nature of their meal?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.31460674157303375,
+        "text_similarity": 0.7539224624633789,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately identifies a timed food-eating challenge/competition based on the timer and numeric references; it omits mention of supporting details (the 'free burger' and 'big beefy tower') but preserves the core meaning."
+      }
+    },
+    {
+      "video_id": "W4adUBGfbmM",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "How does Felicia's demonstration of using an old phone card illustrate its functionality and cost tracking?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16393442622950818,
+        "text_similarity": 0.46094802021980286,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly mentions inserting the card but omits the key demonstration that each call punched a hole (tracking 10\u00a2 per call) and wrongly claims she showed a balance display, introducing an incorrect detail."
+      }
+    },
+    {
+      "video_id": "W4adUBGfbmM",
+      "video_number": "014",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Beyond their functional purpose, what specific historical element did the reviewer associate with the design of the restaurant's ordering booths?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1983471074380165,
+        "text_similarity": 0.6627424955368042,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly links the ordering booths to old-fashioned telephone/phone-card booths and infers a vintage theme, but it omits the reviewer\u2019s explicit mention of phone-card history/nostalgia and includes unrelated, likely hallucinatory details about people and signs in the video."
+      }
+    },
+    {
+      "video_id": "W4adUBGfbmM",
+      "video_number": "014",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the speaker's descriptions, what is the main difference in sauce/gravy base between the Wanton Mee and the Chicken Chop Hor Fun?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3088235294117647,
+        "text_similarity": 0.7928547859191895,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the key distinction: Wanton Mee uses a light, dark sauce while the Chicken Chop Hor Fun has a thicker, starchy gravy; no factual elements from the correct answer are omitted or contradicted."
+      }
+    },
+    {
+      "video_id": "W4adUBGfbmM",
+      "video_number": "014",
+      "segment": {
+        "start": 510.0,
+        "end": 648.0
+      },
+      "question": "Considering the reviewer's 4.5/5 rating for the Lu Rou Fan, what aspect of the meal is most emphasized as a contributing factor, despite the 'downstairs kopitiam' concept?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.22608695652173913,
+        "text_similarity": 0.3653632402420044,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction partially matches by highlighting the dish's rich flavor, but it omits the reviewer's key points about the wholesome, hearty balance of sour, salty and eggy flavours and adds an unsupported claim of authenticity plus irrelevant visual detail."
+      }
+    },
+    {
+      "video_id": "qoKJoUb4o9g",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on Chef Sho's demonstration and explanation of preparing binchotan charcoal, what is the strategic reason for combining leftover and fresh charcoal in the grill?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.07476635514018691,
+        "text_similarity": 0.091954305768013,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is just a placeholder meta-statement and provides no substantive response; it fails to state the strategic reason (using leftover coals to help ignite fresh binchotan and ensure efficient sustained burn) described in the correct answer."
+      }
+    },
+    {
+      "video_id": "qoKJoUb4o9g",
+      "video_number": "015",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering Chef Hide's culinary philosophy for Torasho Ramen and Charcoal Bar, what does the visible 'Japanese Food Supporter' sticker primarily imply about his approach?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2686567164179105,
+        "text_similarity": 0.7933989763259888,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction captures the main point that the sticker signifies promoting Japanese food for diverse palates and moving beyond strict authenticity; it omits specific details about making the food 'fun' for local groups and the emphasis on comfortability and affordability."
+      }
+    },
+    {
+      "video_id": "qoKJoUb4o9g",
+      "video_number": "015",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the demonstrated preparation and the chef's comments, what attribute of the Mikawa Mirin and Tomei Shoyu primarily influences their use for marinating the Botanebi?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.13684210526315788,
+        "text_similarity": 0.3702201843261719,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction mostly describes irrelevant visual details and even hallucinates content, only vaguely acknowledging 'high quality and unique characteristics' at the end; it fails to clearly state that the special attributes and quality of Mikawa Mirin and Tomei Shoyu are the primary reasons for their use, so it only partially matches the correct answer."
+      }
+    },
+    {
+      "video_id": "qoKJoUb4o9g",
+      "video_number": "015",
+      "segment": {
+        "start": 510.0,
+        "end": 698.0
+      },
+      "question": "Why does the chef emphasize tasting the sauce mixed with soup, rather than the sauce alone, for judging the ramen's overall flavor profile?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.23157894736842105,
+        "text_similarity": 0.8596916198730469,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately conveys the core idea that the soup and sauce must be tasted together to judge the ramen's true flavor, matching the reference's meaning and implications without adding or omitting key points."
+      }
+    },
+    {
+      "video_id": "St8rysYXm9w",
+      "video_number": "016",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the kayak design described and Stacia's attire, what specific discomfort was anticipated for her during the kayaking activity?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12987012987012989,
+        "text_similarity": 0.6972932815551758,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer discusses inexperience and handling difficulties, which does not match the correct answer that anticipates discomfort from getting wet due to holes in the kayak and wearing jeans; it omits the key wet-clothing detail and adds unfounded issues."
+      }
+    },
+    {
+      "video_id": "St8rysYXm9w",
+      "video_number": "016",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "During their visit to the park's restaurant, what unique aspect of the menu did the friends discuss, based on their order?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12371134020618559,
+        "text_similarity": 0.3488556742668152,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction fails to mention the key menu discussion about the unusual 'barbecue and toffee' pairing for the toffee shrimp and instead gives irrelevant scene descriptions and incorrectly states there is insufficient evidence, omitting the main factual point."
+      }
+    },
+    {
+      "video_id": "St8rysYXm9w",
+      "video_number": "016",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "What traditional dining practice, demonstrated by the host, was used to consume the main course?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.0,
+        "text_similarity": 0.11587056517601013,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a placeholder and does not state the described traditional practice (scooping food with the hand and using the thumb to push); it fails to answer the question or match the reference."
+      }
+    },
+    {
+      "video_id": "St8rysYXm9w",
+      "video_number": "016",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Considering the man's Instagram messages dating back years, his statement 'where there's a will there's a way,' and his significant travel distance, what best describes his relationship with the woman?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.30656934306569344,
+        "text_similarity": 0.7792114615440369,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately and succinctly captures the core conclusion\u2014that he is a long-time, dedicated fan who traveled a long distance to meet her\u2014matching the reference without adding or contradicting details."
+      }
+    },
+    {
+      "video_id": "St8rysYXm9w",
+      "video_number": "016",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Considering the visual channel branding and the repetitive vocal melody, what is the most likely function of this segment within a larger video?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.24489795918367344,
+        "text_similarity": 0.7280603051185608,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly infers the segment is channel branding serving as an intro/outro for 'Jen Smith,' but it omits the key audio detail of the short repetitive vocal jingle and slightly mischaracterizes the visual branding (white light vs. YouTube logo/channel name), so it is incomplete."
+      }
+    },
+    {
+      "video_id": "St8rysYXm9w",
+      "video_number": "016",
+      "segment": {
+        "start": 870.0,
+        "end": 932.0
+      },
+      "question": "Based on the visual content of this segment, what is the primary function of the displayed imagery in relation to the video's broader content?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.14035087719298245,
+        "text_similarity": 0.493336021900177,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction notes some visual elements (black background and channel name) but misses the key interpretation that this is channel branding/an intro/outro or transition; instead it incorrectly claims insufficient information and thus omits the main functional conclusion."
+      }
+    },
+    {
+      "video_id": "iOm5Uj7EQUE",
+      "video_number": "017",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Despite his critical assessment of the food and packaging, what positive aspect of Bambus Grill & Oriental did Pierre consistently highlight?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16216216216216217,
+        "text_similarity": 0.4590439796447754,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is incorrect and hallucinatory: the reference praises the staff (they're 'super nice' and gave a complimentary Pepsi), whereas the prediction wrongly claims generous portions and omits the cited positive gestures."
+      }
+    },
+    {
+      "video_id": "iOm5Uj7EQUE",
+      "video_number": "017",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "According to the reviewer's critique of Asian cuisine in Poland, how did adding the provided chili significantly enhance the Pad Thai?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.23157894736842105,
+        "text_similarity": 0.6873584985733032,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly mentions that adding chili improved the dish but incorrectly attributes the problem to Poles disliking sweet flavors rather than the reviewer's stated point that restaurants tone down spice; it thus misrepresents the key critique."
+      }
+    },
+    {
+      "video_id": "iOm5Uj7EQUE",
+      "video_number": "017",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the reviewer's commentary and explicit scoring, what aspect of the meal was most detrimental to its overall appeal?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.07207207207207207,
+        "text_similarity": 0.3471861481666565,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction focuses on poor visual presentation, which contradicts the reviewer who praised presentation (4.5/5) and explicitly identified taste\u2014not appearance\u2014as the main detractor; it omits the key issue of poor, soy-forward, undifferentiated taste."
+      }
+    },
+    {
+      "video_id": "iOm5Uj7EQUE",
+      "video_number": "017",
+      "segment": {
+        "start": 510.0,
+        "end": 687.0
+      },
+      "question": "Considering the explicit calls to action and the textual overlays, what is the main objective of the speaker's segment from 0:08 to 0:29?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.13999999999999999,
+        "text_similarity": 0.48738911747932434,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the main objective: soliciting future-segment suggestions/feedback and directing viewers to follow specific social media channels for general local content, matching the reference meaning despite omitting the exact handles."
+      }
+    },
+    {
+      "video_id": "zW9qFTtYpus",
+      "video_number": "018",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Following the acknowledgment of a guest's allergy (1:36), what does the chef's initial sequence of cooking rice, noodles, and eggs reveal about his approach to handling dietary restrictions?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21052631578947367,
+        "text_similarity": 0.6046159267425537,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction vaguely implies a precautionary action but is incorrect and incomplete: the correct answer highlights prioritizing common, non-protein items to avoid cross-contamination, whereas the prediction invents a grill-cleaning step and omits the key mitigation strategy."
+      }
+    },
+    {
+      "video_id": "zW9qFTtYpus",
+      "video_number": "018",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "During the preparation, what is the primary purpose of the chef repeatedly exclaiming 'Yummy!' while adding sauces and cooking?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3235294117647059,
+        "text_similarity": 0.905083417892456,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction treats 'Yummy!' as a literal endorsement of taste that entices customers, which contradicts the ground truth that it is a theatrical, entertaining gesture; it omits the primary intent to engage diners and adds an unfounded claim about confirming food quality."
+      }
+    },
+    {
+      "video_id": "zW9qFTtYpus",
+      "video_number": "018",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the chef's playful interaction and the items cooked, why did he initially state there was 'no more steak' for the guest?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2105263157894737,
+        "text_similarity": 0.7563204765319824,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer correctly captures the core reason\u2014that the chef's 'no more steak' remark was a joke to build anticipation\u2014but it omits the follow-up clarification and actions (asking about orders, assuring steak later, and then cooking) present in the correct answer."
+      }
+    },
+    {
+      "video_id": "zW9qFTtYpus",
+      "video_number": "018",
+      "segment": {
+        "start": 510.0,
+        "end": 543.0
+      },
+      "question": "What two distinct qualities are the customers most likely praising about the chef's knife, based on the repeated comments 'clean' and 'smooth'?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.8103255033493042,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction largely misinterprets the adjectives: it wrongly equates 'clean' with sharpness and invents 'speed' for 'smooth', while the reference indicates 'clean' = hygienic and 'smooth' = efficient, effortless handling; thus it contains incorrect/hallucinated details and omits key meanings."
+      }
+    },
+    {
+      "video_id": "efBgaDGpM70",
+      "video_number": "019",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Given the visual preparation and the presenter's specific praise, which meat is shown being chopped and later highlighted as 'amazing' in the food challenge?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.6178156137466431,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly identifies the meat as pork, but it omits the specific identification as 'carnitas', the timestamps and connection to the torta, and it inconsistently labels the meat as 'tasty' while giving an irrelevant 'answer is B'\u2014missing key details from the reference."
+      }
+    },
+    {
+      "video_id": "efBgaDGpM70",
+      "video_number": "019",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "According to the speaker, what attribute of this specific Mexican food challenge makes it preferable to typical challenges like 20 tacos or an oversized burrito?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1142857142857143,
+        "text_similarity": 0.48406776785850525,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer contradicts the correct answer: the speaker praised the diversity/variety of dishes as the preferred attribute, not a massive quantity of food, so the prediction is incorrect and omits the key reason."
+      }
+    },
+    {
+      "video_id": "efBgaDGpM70",
+      "video_number": "019",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the description, what specific ingredient or preparation method for the quesadilla distinguished it most from the speaker's past experiences?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.044444444444444446,
+        "text_similarity": 0.19786208868026733,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer cites a smoky pepper flavor, but the correct answer specifies the use of corn/masa tortillas (not flour) as the distinguishing element; the prediction omits and contradicts the key fact."
+      }
+    },
+    {
+      "video_id": "efBgaDGpM70",
+      "video_number": "019",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "According to the speaker, what attribute of the 'giant quesadilla' is highlighted by its comparison to food prepared 'like they do at home'?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.24299065420560748,
+        "text_similarity": 0.7557880878448486,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly identifies that 'like they do at home' conveys authenticity/traditional, matching the reference; the additional note about the man enjoying a large portion is extraneous but not contradictory."
+      }
+    },
+    {
+      "video_id": "efBgaDGpM70",
+      "video_number": "019",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "By comparing the speaker's detailed description of the torta's components with the immediate reaction to the gordita, what distinct aspect of flavor perception is highlighted?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2786885245901639,
+        "text_similarity": 0.7990368008613586,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the main contrast\u2014torta as layered/component-wise appreciation versus the gordita as a concentrated sensory impact\u2014but includes an unnecessary visual detail and mischaracterizes the gordita as a 'unique texture' rather than the correct emphasis on its 'rich' and 'succulent' flavor."
+      }
+    },
+    {
+      "video_id": "efBgaDGpM70",
+      "video_number": "019",
+      "segment": {
+        "start": 870.0,
+        "end": 970.0
+      },
+      "question": "What is the most likely reason for the speaker's comment 'I'm trying to go at a good pace but that's the end it's so good', considering the described characteristics and implied visual attributes of the gordita?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.23008849557522124,
+        "text_similarity": 0.4867558479309082,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes the gordita was delicious but then incorrectly attributes the pacing issue to its size, contradicting the reference which emphasizes overwhelming positive sensory experience as the cause; it thus misunderstands the key causal explanation."
+      }
+    },
+    {
+      "video_id": "7uJW0U7SGXc",
+      "video_number": "020",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the diverse food displayed in the cafeteria and the hosts' comments, what primarily contributes to Shenzhen's street food offering a blend of regional Chinese cuisines?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2619047619047619,
+        "text_similarity": 0.7797967195510864,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the core explanation\u2014that migrants from across China create the mix of regional cuisines\u2014and preserves the original meaning; the omitted mention of brands/young tech workers are supportive details, not contradictions."
+      }
+    },
+    {
+      "video_id": "7uJW0U7SGXc",
+      "video_number": "020",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the dishes chosen from the buffet and the narrator's commentary, what culinary trend is said to characterize the diverse food offerings in Shenzhen?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1568627450980392,
+        "text_similarity": 0.6783168315887451,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the correct answer by claiming a preference for Americanized Chinese dishes instead of the narrator's stated 'more southern' unifying trend; it also adds irrelevant visual details and hallucinates an Americanized influence."
+      }
+    },
+    {
+      "video_id": "7uJW0U7SGXc",
+      "video_number": "020",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the restaurant's name and the specific side dish offered, what regional culinary style does the first restaurant primarily represent?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16326530612244897,
+        "text_similarity": 0.7254548668861389,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction incorrectly identifies the regional origin as Chongqing rather than the explicitly stated Chengdu (Sichuan) and thus contradicts the key factual element; while both cuisines are spicy, this misattribution makes the answer essentially incorrect."
+      }
+    },
+    {
+      "video_id": "7uJW0U7SGXc",
+      "video_number": "020",
+      "segment": {
+        "start": 510.0,
+        "end": 605.0
+      },
+      "question": "Based on the critics' assessments, what qualitative and quantitative differences distinguish the liangpi from the Boluo mian?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3119266055045872,
+        "text_similarity": 0.8223367929458618,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly reports liangpi as 'pasta-ish' with a 4.25/5 and Boluo mian as the 'ultimate garlic noodle' rated 5/5, accurately reflecting the qualitative praise and higher score; it omits the 'chewy' descriptor for liangpi and the note that Boluo mian is a spinach noodle. "
+      }
+    },
+    {
+      "video_id": "mfveFCjol8E",
+      "video_number": "021",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the manager's remarks about enjoyment without alcohol and the speaker's subsequent observation, what accurately characterizes Mizaj restaurant's operational approach to beverages and atmosphere?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16774193548387095,
+        "text_similarity": 0.4760667085647583,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly conveys the core point that Mizaj is a vibrant, alcohol-free venue where people can enjoy themselves, but it omits key specifics from the reference (the speaker's mention of 'great milkshakes', the manager's joking 'their beer' line, and the luxurious/beautiful d\u00e9cor) and adds minor irrelevant visual detail."
+      }
+    },
+    {
+      "video_id": "mfveFCjol8E",
+      "video_number": "021",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering the restaurant's aesthetic, the meticulous handling of dietary needs, and the presentation elements, what overall message is conveyed about the establishment's dining experience?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2545454545454545,
+        "text_similarity": 0.7073596715927124,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the core message\u2014high-end, customer-centric dining with attention to detail and presentation\u2014but omits key specifics mentioned in the correct answer (the manager's personal handling of allergy-related separate preparation, the no-chili detail, the dramatic smoky presentation, and the speaker's explicit praise)."
+      }
+    },
+    {
+      "video_id": "mfveFCjol8E",
+      "video_number": "021",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the restaurant's busy weekend status, what specific actions demonstrated their commitment to customer satisfaction for the reviewer?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.08888888888888888,
+        "text_similarity": 0.5558395385742188,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction conveys general customer satisfaction but omits the key factual element that staff exactly accommodated the reviewer's allergy-related special requirements and their noted respect/kindness; it also adds specifics (quiet private table, detailed menu explanations) not present in the reference."
+      }
+    },
+    {
+      "video_id": "mfveFCjol8E",
+      "video_number": "021",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Based on the speaker's description and the visual elements of the 'Amazon floor,' what was the primary design intent for this restaurant section?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.10309278350515465,
+        "text_similarity": 0.3069267272949219,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction directly contradicts the reference: the correct answer describes a nature-inspired, greenery-filled Amazon-themed space with animal and floral decor, whereas the prediction wrongly claims an opulent gold-themed luxury design and adds irrelevant visual details."
+      }
+    },
+    {
+      "video_id": "mfveFCjol8E",
+      "video_number": "021",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Based on the restaurant's success and the manager's description of seating areas, what cultural preference is mentioned for male guests' choice of the Balcony section?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2268041237113402,
+        "text_similarity": 0.8005639314651489,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main idea that male guests prefer the Balcony because they smoke, but it omits the specific 90% statistic and the vlogger's contrast with Western dining, and it adds a mildly speculative claim about a designated/outdoor smoking area not stated in the reference."
+      }
+    },
+    {
+      "video_id": "mfveFCjol8E",
+      "video_number": "021",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Based on the initial explanation for the balcony's popularity among male guests and its visually presented ambiance, what primary activity is this outdoor space intended to facilitate?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.14634146341463417,
+        "text_similarity": 0.23332907259464264,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer vaguely captures socializing but omits the key fact that the balcony is primarily used for smoking and adds incorrect/hallucinated details (selfie, Christmas tree, live entertainment), so it is largely inaccurate."
+      }
+    },
+    {
+      "video_id": "mfveFCjol8E",
+      "video_number": "021",
+      "segment": {
+        "start": 1050.0,
+        "end": 1247.0
+      },
+      "question": "Considering the diners' young age, their profession as commission-based artists for streamers, and their patronage of this upscale restaurant, what can be inferred about their early career in freelancing?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.10666666666666669,
+        "text_similarity": 0.3590465784072876,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes youth and enjoyment but omits that they are 18 commission-based artists and fails to infer steady, significant freelance income enabling upscale dining; it also adds unsupported claims (business networking, one-time commission) that contradict the correct answer."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What characteristic, mentioned by the speaker, makes Wilderness Lodge particularly appealing during the holiday season beyond general decorations?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.15151515151515152,
+        "text_similarity": 0.5486935377120972,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only vaguely aligns by mentioning a Christmas tree but omits the core cozy details (fireplaces, hot chocolate, gingerbread, rocking chairs) and introduces hallucinated elements (Storybook Dining, PhotoPass) not cited by the speaker, so it largely fails to match the reference."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Why does the restaurant's design, as observed from outside, prevent large crowds from gathering to see characters?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1038961038961039,
+        "text_similarity": 0.3670440912246704,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the reference by claiming there is no character dining and focuses on exterior glass/lighting, omitting the key point that the design hides characters to prevent outside crowds and thus is factually incorrect."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the menu pricing, the unique character lineup mentioned, and the restaurant's immersive storytelling, what primarily justifies Artist Point's higher cost compared to other Disney character dining experiences?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.041237113402061855,
+        "text_similarity": 0.3513052463531494,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer attributes the price to the restaurant's narrative, but the presenter explicitly links the higher cost to the unique character lineup (including a villain); the prediction omits this key reason and therefore is incorrect as the primary justification."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "What specific advice does the vlogger offer regarding character interaction at the new dining experience, given the visual layout?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.06666666666666667,
+        "text_similarity": 0.1770695149898529,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a generic placeholder and does not state the specific advice from the video (sit on the outer rim because characters follow a parade route), so it fails to match the correct answer's content."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Why was the speaker advised against directly sipping the mushroom bisque from its serving vessel?",
+      "answer_correct": 0,
+      "gt_answer": "B",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.40026336908340454,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction notes a spoon was required but incorrectly attributes it to presentation style and omits the key factual reason that the cauldron was heavy; it introduces an unfounded rationale and thus fails to match the correct answer."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "How does the character interaction with the Evil Queen influence the dining experience at the restaurant?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1839080459770115,
+        "text_similarity": 0.7491341829299927,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction diverges from the reference by omitting that dining stops and attention is demanded during the Queen's entrance and by adding an unsupported claim of direct table-side conversation; it therefore fails to capture key details and includes likely hallucination."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Based on the server's explanation and the subsequent action, what distinctive interactive element was offered with the \"from the garden\" appetizer?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.0,
+        "text_similarity": 0.4606817960739136,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction vaguely notes an interactive mixing element but is incorrect and incomplete: it invents blending from various jars and omits the specific heavy cream+honey shaking to make honey butter (demonstrated by Beth)."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Why did the vlogger describe the chicken dish as a 'sleeper' and recommend trying it?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.37142857142857144,
+        "text_similarity": 0.6006120443344116,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the main point\u2014that he was surprised it tasted great despite being dairy- and gluten-free and using cauliflower puree\u2014but it omits the specific detail about rice flour breading and the remark about it being a bit sweeter, which are in the correct answer."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "What common restaurant service expectation was contradicted by the dessert portion of the meal at the restaurant?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12244897959183673,
+        "text_similarity": 0.431111603975296,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer only describes visual details of desserts and asserts there is evidence, but it fails to state the key fact that the restaurant served all desserts (contradicting the expectation of choosing a single dessert), so it does not match the correct answer."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "segment": {
+        "start": 1590.0,
+        "end": 1788.0
+      },
+      "question": "Based on the server's description and the items presented in the 'Huntsman's Gift,' what aspect of Snow White's tale is being visually and thematically referenced?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2359550561797753,
+        "text_similarity": 0.7151328325271606,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly identifies the referenced element\u2014the evil queen's command that the huntsman bring Snow White's heart\u2014and while it adds unrelated visual details, it preserves the original meaning without contradiction."
+      }
+    },
+    {
+      "video_id": "EUaYNOGjjr4",
+      "video_number": "023",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the man's commentary and actions, what characteristic of the Adheni Tea was adjusted to his preference after the initial taste?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2553191489361702,
+        "text_similarity": 0.7614615559577942,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction contradicts and hallucinates key facts: the man personally added sugar to increase sweetness, not that staff increased creaminess to balance spiciness. It omits the correct element (sweetness) and introduces unfounded details."
+      }
+    },
+    {
+      "video_id": "EUaYNOGjjr4",
+      "video_number": "023",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "What distinct taste characteristic did the reviewer explicitly attribute to the grilled lamb preparation?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1553398058252427,
+        "text_similarity": 0.3949129581451416,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction incorrectly claims there is no distinct taste mentioned, contradicting the reviewer\u2019s explicit remark that the grilled lamb had a 'spicy, barbecue taste'; it omits this key factual element."
+      }
+    },
+    {
+      "video_id": "EUaYNOGjjr4",
+      "video_number": "023",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the speaker's comparative analysis, what primary culinary attribute distinguishes the Yemeni food he is consuming from Saudi and Lebanese cuisines?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1558441558441558,
+        "text_similarity": 0.5262458920478821,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and succinctly captures the core distinction from the correct answer: Yemeni food is described as spicier with more kick, with no missing or incorrect details."
+      }
+    },
+    {
+      "video_id": "EUaYNOGjjr4",
+      "video_number": "023",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Based on the walk-through of Hadramout, what specific additional business function, beyond a typical dining experience, does the establishment appear to integrate?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.21311475409836064,
+        "text_similarity": 0.6562957763671875,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly identifies the integrated retail/grocery/perfume function alongside the restaurant, matching the correct answer; its extra scene descriptions do not contradict or omit the key point."
+      }
+    },
+    {
+      "video_id": "EUaYNOGjjr4",
+      "video_number": "023",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Considering the specific decor, amenities, dining arrangement, and the size of the food portions relative to their stated prices, what is the most probable characterization of this restaurant?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1946902654867257,
+        "text_similarity": 0.6065361499786377,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the main conclusion\u2014that the restaurant is traditional, family-oriented and affordable\u2014but it omits specific supporting details (low cushioned seating, the grocery/perfume section, and explicit examples of large portions and prices) that strengthen the correct answer."
+      }
+    },
+    {
+      "video_id": "EUaYNOGjjr4",
+      "video_number": "023",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Based on the speaker's verbal descriptions, how do the characteristics of the grilled lamb and the lamb in the 'Idam' stew compare?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.24242424242424243,
+        "text_similarity": 0.7074961066246033,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the reference and adds unfounded details: the grilled lamb was described as tasting 'like liver' and 'very very rich', not 'tender and smoky', and the stew lamb was described as a 'chewy fatty piece', not noted for strong spice."
+      }
+    },
+    {
+      "video_id": "EUaYNOGjjr4",
+      "video_number": "023",
+      "segment": {
+        "start": 1050.0,
+        "end": 1211.0
+      },
+      "question": "How does the described flavor profile of the lamb dish differ from the soup, specifically concerning its cooking method and seasoning?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.23809523809523805,
+        "text_similarity": 0.8732713460922241,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the contrast: lamb is smoky and tender from charcoal grilling, while the soup is mild and savory (not salty); it preserves the key cooking-method and seasoning differences despite omitting minor ingredient details."
+      }
+    }
+  ]
+}

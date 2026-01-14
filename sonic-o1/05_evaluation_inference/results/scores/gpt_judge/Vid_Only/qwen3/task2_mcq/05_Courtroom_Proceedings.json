@@ -1,0 +1,2091 @@
+{
+  "topic_id": 5,
+  "topic_name": "Courtroom Proceedings",
+  "num_evaluated": 115,
+  "aggregated_metrics": {
+    "accuracy": 0.8521739130434782,
+    "correct": 98,
+    "total": 115,
+    "rationale": {
+      "rouge_l_mean": 0.25793927562312824,
+      "rouge_l_std": 0.08610459301342353,
+      "text_similarity_mean": 0.7009347804943504,
+      "text_similarity_std": 0.13362485671273291,
+      "llm_judge_score_mean": 7.591304347826087,
+      "llm_judge_score_std": 3.251476326021266
+    },
+    "rationale_cider": 0.12718520881642065
+  },
+  "per_entry_results": [
+    {
+      "video_id": "TVriGlkPexA",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Footloose attributes his previous conviction for disorderly conduct, which he considers 'persecution,' to what personal characteristic mentioned during his current hearing?",
+      "answer_correct": 0,
+      "gt_answer": "B",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.17647058823529413,
+        "text_similarity": 0.645293116569519,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction notes his 'persecution' claim and visible activism shirt but misses the key fact that he attributes the conviction to having a disability causing loud, hyper\u2011aggressive behavior; instead it hallucinates an activism/First Amendment cause."
+      }
+    },
+    {
+      "video_id": "TVriGlkPexA",
+      "video_number": "001",
+      "segment": {
+        "start": 150.0,
+        "end": 251.0
+      },
+      "question": "By featuring the defendant's defiant speech in court and immediately following with a censorship warning, what broader concern is the video producer emphasizing about expression?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2167487684729064,
+        "text_similarity": 0.7091485261917114,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly captures the video's central theme\u2014concern about suppression of dissenting expression and promotion of alternative, uncensored platforms\u2014but it omits specific courtroom details (the defendant's cited minor acts and 'medical misinformation' framing) and adds particulars (Free Keene, LBRY) not mentioned in the reference."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the prosecutor's argument and the defendant's history, what aspect of Mr. Scholman's behavior is highlighted as a significant aggravating factor for the current charges?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.2752293577981651,
+        "text_similarity": 0.6752452850341797,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the prosecutor's point that Scholman showed no remorse and instead expressed pride and a sense of accomplishment, matching the correct answer's key aggravating factors."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "What primary factor led the judge to intervene and ultimately exit the bench during the victim's impact statement?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.22222222222222218,
+        "text_similarity": 0.666164219379425,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies the victim's visible agitation and refusal to comply with the judge's instruction as the primary reason the judge left the bench, but it adds an unconfirmed detail about the victim standing and shouting and omits mention of deputies intervening."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the judge's stern warning about courtroom decorum and the father's subsequent emotional statement about his son's assault and 'the coward' who 'picked on two 25-year-old kids,' what is the most likely purpose of this court proceeding?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2590673575129534,
+        "text_similarity": 0.7216262817382812,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer faithfully matches the reference by identifying the man's remarks as a victim impact statement at a sentencing hearing and preserves the key elements and context without introducing contradictions or unsupported facts."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Considering the father's aggressive statements and assertive body language, what is he implicitly communicating about his feelings towards the legal process?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.24719101123595508,
+        "text_similarity": 0.7737178802490234,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer preserves the core meaning: the father's aggressive words and body language express a desire for personal retribution and a belief that the legal process is insufficient. It neither contradicts nor omits key elements from the correct answer."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Based on the defense attorney's statement, what prompted the legal team to pursue a Not Guilty by Reason of Insanity (NGI) defense?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2111111111111111,
+        "text_similarity": 0.764541745185852,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures that the attorneys initiated the NGI defense after reviewing the defendant's communications and noticing mental health issues, matching the core reason given in the correct answer; the extra descriptive video details do not contradict or alter the substance."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Given the attorney's statements about Mr. Skolman's mental illness and the NGI defense, how does Mr. Skolman's subsequent address to the court fundamentally contradict this narrative?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.225,
+        "text_similarity": 0.7284356355667114,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes a contradiction with the NGI defense, but it misstates key facts\u2014hallucinating that Skolman begged for mercy and implicitly accepted responsibility\u2014while omitting his explicit denials of mental illness, lack of remorse, and criticism of his lawyers that are central to the correct answer."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Based on the judge's deliberation, how does he categorize the defendant's extreme belief that those who differ must be 'exterminated,' and what does this imply about its nature?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2777777777777778,
+        "text_similarity": 0.6536446809768677,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately paraphrases the judge's language and intent, preserving the key points that the belief is a deliberate, dangerous ideology rather than a mental illness, with no substantive omissions or inaccuracies."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Based on the judge's address, what core aspect of the defendant's actions and expressed worldview most strongly influenced the judge's decision to impose the maximum sentence?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.3592814371257485,
+        "text_similarity": 0.6049017906188965,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the judge's core reasoning that the defendant's worldview (self as a 'weapon'/'purifying the world') showed deliberate, premeditated intent and justified the maximum sentence; it omits the judge's exact line rejecting mental illness ('not a mental illness') but preserves the same substantive conclusion."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "Why did the judge state that extended supervision conditions for Count 2 would \"never come to that,\" despite mentioning a \"Compass evaluation\"?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21164021164021163,
+        "text_similarity": 0.7650684118270874,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures that a life sentence on Count 1 makes extended supervision on Count 2 irrelevant, correctly notes the Compass evaluation was moot, and aligns fully with the reference answer."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "segment": {
+        "start": 1590.0,
+        "end": 1644.0
+      },
+      "question": "Considering the individual's attire and restraints, along with the courtroom setting, what is the most probable reason for his appearance?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.47904191616766467,
+        "text_similarity": 0.8641804456710815,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the key visual cues (orange jail uniform, handcuffs, escort by officers, courtroom setting) and correctly concludes he is an inmate/defendant appearing for a formal legal proceeding, matching the correct answer without adding contradictions."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the trial summary, which statement accurately characterizes the defense's strategy regarding witness testimony and argument length in the Chandler Halderson murder trial?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.15267175572519084,
+        "text_similarity": 0.7435865998268127,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly states the defense called no witnesses (including Halderson) and kept arguments concise, matching the core of the correct answer; however it omits the specific timing details (\u224810-minute opening and \u224830-minute closing) mentioned in the reference."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Given the eight days of testimony and eight counts, what does the jury's short deliberation of just over two hours suggest about the likely verdict for Chandler Halderson?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2784810126582279,
+        "text_similarity": 0.7886513471603394,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the correct answer's meaning and implications, stating that a short deliberation after an eight-day, eight-count trial strongly indicates the jury found the evidence overwhelming and likely returned a guilty verdict."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the judge's reading of the verdict forms, how many guilty counts specifically pertain to the offenses against Bart A. Halderson?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.14723926380368096,
+        "text_similarity": 0.5619428753852844,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures that multiple guilty verdicts apply to Halderson and even concludes there are four charges, but it hedges and relies on inference rather than the correct answer's explicit statement that counts 1\u20134 specifically pertain to Bart A. Halderson and were read as guilty."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "What contrasting views did the prosecution and defense express regarding a pre-sentence investigation following the guilty verdict?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.2716049382716049,
+        "text_similarity": 0.8203054666519165,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly reflects that the prosecution requested a pre-sentence investigation and the defense opposed it, but it omits the defense's explicit conditional that if one is ordered it be without any specific recommendation, a key nuance in the correct answer."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Considering the attorneys' requests regarding the pre-sentence investigation, how did the judge's final decision address both sides?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.32394366197183094,
+        "text_similarity": 0.8794031739234924,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately reflects that the state sought a pre-sentence investigation, the defense opposed it (or preferred none) but asked that any ordered report omit recommendations, and the judge ordered the investigation while prohibiting sentencing recommendations\u2014matching the correct answer semantically."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Beyond inherent complexity, what unique challenge did the District Attorney mention impacted the execution of the trial?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2765957446808511,
+        "text_similarity": 0.47479379177093506,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately conveys the key fact that the proceedings paused for a mandatory week due to the virus, matching the correct answer's meaning; added context and visual detail do not contradict or distort the original statement."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "According to District Attorney Ozanne, what inherent limitation of the traditional criminal justice system was exemplified by the outcome of the Chandler Halderson trial?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.20134228187919465,
+        "text_similarity": 0.7780349254608154,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately conveys Ozanne's point that the system can secure convictions but often cannot uncover the underlying 'why' behind a crime, matching the correct answer's emphasis on proving factual guilt rather than motives."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "According to the Digital Content Manager, what crucial combination of forensic and digital evidence presented at trial pointed to Chandler Halderson's guilt?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.21904761904761905,
+        "text_similarity": 0.6632170081138611,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly references fingerprint/footwear and digital evidence themes but omits key forensic details (DNA from bloodstains and victims' blood on his shoes) and misstates the digital evidence by introducing an email from a sister instead of the cell\u2011phone text from his mother sent from inside the Halderson home, so it contains significant omissions and inaccuracies."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "Considering Sheriff Barrett's strong confidence in the evidence and the trial's outcome, what was the most likely underlying rationale for the defense's strategy of not calling witnesses, as explained by James Langer?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2268041237113402,
+        "text_similarity": 0.6719518899917603,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly states the defense refused to call witnesses to force the prosecution to meet its burden of proof, matching Langer's explanation, but it introduces an incorrect/inferential claim that the strategy 'relies on the strength of the evidence' and that the guilty verdict validates the tactic, which misrepresents the original rationale and omits explicit reference to Barrett's stated confidence."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "question": "According to the reporter's analysis, how did the defense's strategic decision to not \"cause a big stir\" in court correlate with Halderson's minimal reaction and the jury's rapid verdict?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.21965317919075145,
+        "text_similarity": 0.6540035605430603,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer contradicts the reference and omits key factual elements: the reporters explicitly discussed the defense's deliberate non-confrontational strategy, Halderson's lack of reaction (implying he expected the verdict), and the jury's quick decision due to strong prosecution evidence."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "segment": {
+        "start": 1770.0,
+        "end": 1851.0
+      },
+      "question": "Based on the reporter's statement and the news desk's subsequent actions, what factors indicate the quick verdict's justification and the case's ongoing public relevance?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.21463414634146338,
+        "text_similarity": 0.7411430478096008,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly identifies the dedicated continuing-coverage webpage and media interest indicating ongoing relevance, but it fails to cite the reporter's key claim that the prosecution 'had all the information and the evidence' and thus expected a quick jury verdict, omitting the primary factual justification for the quick verdict."
+      }
+    },
+    {
+      "video_id": "xwZ2K8b_pBw",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What primary reasons did the judge provide for halting the defendant's AI-generated legal argument, beyond his desire for clarity?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3,
+        "text_similarity": 0.6864739656448364,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly includes the two primary reasons (the defendant had previously testified verbally and shouldn\u2019t use the courtroom as a business launch), but it adds unfounded/hallucinated details (e.g., the AI not being a 'real person', claims about communicating with staff or not suffering an ailment) and an irrelevant reference to 'option (B)'."
+      }
+    },
+    {
+      "video_id": "xwZ2K8b_pBw",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 210.417
+      },
+      "question": "Considering the judge's reaction and specific warnings, what is the most significant concern she raises regarding the man's use of the video?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.22115384615384615,
+        "text_similarity": 0.7009296417236328,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer correctly identifies the judge's main concern\u2014that the man used an AI-generated video in place of genuine personal testimony\u2014and cites her disbelief ('That is not a real person'). It adds a minor extra inference about self-promotion and includes a garbled quote, but otherwise aligns closely with the reference regarding integrity and being misled."
+      }
+    },
+    {
+      "video_id": "2B_e7fvwi90",
+      "video_number": "005",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "How did his mother's response, when informed of the abuse, likely impact the victim's perception of his father's actions and his own agency?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.19251336898395724,
+        "text_similarity": 0.5813645720481873,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly conveys that the mother's response failed to protect the child and increased his psychological distress, but it omits the key factual detail that she explicitly dismissed and rationalized the abuse (validating the father) and includes uncertain visual inferences rather than the quoted dismissive statements."
+      }
+    },
+    {
+      "video_id": "2B_e7fvwi90",
+      "video_number": "005",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Given Erik's emotional state and testimony about his parents' reactions and his own actions towards his brother, what does this sequence primarily suggest about the impact of unaddressed childhood abuse?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2857142857142857,
+        "text_similarity": 0.7635726928710938,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately reflects that Erik was abused, his parents' responses modeled abusive behavior, he later abused his brother in the same way, and it illustrates how unaddressed childhood abuse perpetuates a cycle; the minor extra reference to 'option B' does not alter its correctness."
+      }
+    },
+    {
+      "video_id": "2B_e7fvwi90",
+      "video_number": "005",
+      "segment": {
+        "start": 510.0,
+        "end": 579.0
+      },
+      "question": "Considering Lyle's emotional demeanor and testimony, what was the primary action he took to address his brother's suspected abuse?",
+      "answer_correct": 0,
+      "gt_answer": "B",
+      "pred_answer": "E",
+      "rationale_metrics": {
+        "rouge_l": 0.1487603305785124,
+        "text_similarity": 0.7668007612228394,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction incorrectly claims there is no evidence and omits the key fact that Lyle directly confronted his father and demanded he leave Eric alone, contradicting the provided testimony."
+      }
+    },
+    {
+      "video_id": "2B_e7fvwi90",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What is happening in the video and audio?",
+      "answer_correct": 1,
+      "gt_answer": "E",
+      "pred_answer": "E",
+      "rationale_metrics": {
+        "rouge_l": 0.019607843137254898,
+        "text_similarity": -0.009861073456704617,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer describes a courtroom scene and emotional testimony, while the correct answer is simply 'Failed to generate MCQ'; they do not match and the prediction introduces unsupported specifics not present in the reference."
+      }
+    },
+    {
+      "video_id": "2B_e7fvwi90",
+      "video_number": "005",
+      "segment": {
+        "start": 510.0,
+        "end": 578.75
+      },
+      "question": "Based on Erik's emotional testimony about confronting his father over 'what was going on' and hearing 'noises' related to 'Eric,' what severe form of abuse is Erik most likely referring to?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.2727272727272727,
+        "text_similarity": 0.8004972338676453,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the correct answer's inference that Erik's testimony implies severe physical and/or sexual abuse, preserves the meaning, and reasonably dismisses less likely alternatives without adding contradictory or unfounded details."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "According to the appellant's counsel, what specific issues did Mr. Hoti's public statements address, reportedly injecting him into matters of public interest?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "E",
+      "rationale_metrics": {
+        "rouge_l": 0.11764705882352941,
+        "text_similarity": 0.37911611795425415,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction fails to state any of the three specific public-interest topics in the correct answer and instead claims the content is unknowable from the video, omitting all key factual elements and yielding no match."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "According to the attorney, what is the primary relevance of Mr. Hothi's alleged actions (harassment, assault, trespass) to the public debate about Tesla?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.30573248407643305,
+        "text_similarity": 0.7973037362098694,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately reflects the attorney's point that Hothi's alleged misconduct undermines his credibility and therefore his claims about Tesla should not be credited, matching the correct answer's meaning and quoted rationale."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "According to the attorney, what distinguishes a criticism as furthering public debate, even if it targets an individual's actions, within the context of the anti-SLAPP statute?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.18433179723502305,
+        "text_similarity": 0.5938514471054077,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the attorney's core point that criticism is protected if it has a 'sufficient nexus' to the individual's public statements or actions, preserving the legal standard; it omits the contrasting examples of unrelated personal attacks and the specific 'almost killed'/Mr. Hothi illustration from the correct answer."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Based on Justice Sanchez's questioning, what is the critical legal distinction he is attempting to draw concerning the applicability of the anti-SLAPP statute to Mr. Musk's statements?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.22085889570552147,
+        "text_similarity": 0.7823704481124878,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the key distinction Justice Sanchez drew\u2014statements tied to Hothi's investigative/public role are covered by anti-SLAPP protections, while allegations about his personal conduct are too attenuated\u2014and preserves the meaning of the correct answer."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "According to the Respondent's counsel, the critical distinction between the *Nadell v. Regents* case and the current situation, regarding allegations of violence, lies in:",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.32335329341317365,
+        "text_similarity": 0.7883423566818237,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly captures the core distinction\u2014that Nadell centered on violence while here violence is peripheral\u2014but it misidentifies counsel (wrong name) and fails to mention the current debate is about the company's alleged deceit; it also adds a confusing/unsupported First Amendment claim."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "According to the speaker, what was the legitimate public interest served by Mr. Hoti's camera installation, distinguishing it from claims of harassment?",
+      "answer_correct": 0,
+      "gt_answer": "B",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.1714285714285714,
+        "text_similarity": 0.5261672735214233,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer contradicts the reference: the speaker said the cameras counted cars coming off the production line to assess car safety and production numbers and were not to monitor or harass employees, whereas the prediction wrongly claims they documented traffic violations on public roads (hallucination and omission of key facts)."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "According to the second lawyer's interpretation, what criterion, exemplified by the Nidal case, determines whether Mr. Musk's comments qualify for anti-SLAPP protection?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2521008403361345,
+        "text_similarity": 0.7924293279647827,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the Nidal-derived criterion\u2014that protection depends on whether comments were germane/relevant to the person's participation in the public debate\u2014and correctly rejects (B) and (D) while noting (A) is mentioned but not central."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "segment": {
+        "start": 1230.0,
+        "end": 1376.0
+      },
+      "question": "According to the arguments presented, what underlying principle justifies protecting both Mr. Hothi's original statement and Mr. Musk's subsequent response?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.18099547511312214,
+        "text_similarity": 0.646016001701355,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies that both statements are protected as speech contributing to public debate, matching the core principle; it adds extraneous courtroom/multiple-choice details and downplays the speaker's prominence mentioned in the reference, but does not misstate the main point."
+      }
+    },
+    {
+      "video_id": "9U_cQz-7sT4",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 54.0
+      },
+      "question": "Why does Judge Jackson decline to directly answer Senator Cruz's hypotheticals about changing identity and standing to sue for discrimination?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.19900497512437812,
+        "text_similarity": 0.7636811137199402,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer correctly conveys that Judge Jackson refused to answer to avoid prejudging hypothetical cases and cites judicial impartiality; however, it omits mention of her follow-up about how she would evaluate standing (listening to arguments, precedents, and constitutional principles)."
+      }
+    },
+    {
+      "video_id": "gTBoJ9W8zQ8",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 89.0
+      },
+      "question": "What specific professional consequence is Detective Langford likely reacting to with his outburst, considering Detective Pettis's testimony?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.30917874396135264,
+        "text_similarity": 0.8461403250694275,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies that Langford's outburst is a reaction to being implicated in serious misconduct that threatens his professional integrity and career, but it adds specific narrative details and wording not present in the reference (introducing extraneous elements and slight inaccuracies), so it is mostly but not perfectly aligned."
+      }
+    },
+    {
+      "video_id": "gTBoJ9W8zQ8",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 89.0
+      },
+      "question": "Considering Detective Pettis's testimony and Detective Langford's immediate reactions, what is the most plausible reason for Langford's aggressive outbursts and subsequent contempt of court charge?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.23376623376623376,
+        "text_similarity": 0.7845130562782288,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the core inference that Langford angrily tried to discredit and intimidate Pettis to undermine her testimony, but it omits the specific detail that he offered a promotion in exchange for threatening Dayton and introduces an unsupported claim about contempt being for speaking to someone off-camera."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on Mr. Vikas Chatrath's introduction and Mr. Udaya Holla's subsequent remarks, how does Mr. Holla reframe the perceived primary agent of knowledge dissemination at this event?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.21978021978021975,
+        "text_similarity": 0.7140815258026123,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction contradicts the key fact that Mr. Holla credits Mr. Vikas Chatrath as the primary facilitator of knowledge-sharing; instead it incorrectly claims Holla frames knowledge as a collective effort and misstates who was introduced. This major factual error and omission of the central attribution makes the response largely incorrect."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "According to the speaker, what is the primary consequence of insufficient information gathering from a client in a civil dispute?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3088235294117647,
+        "text_similarity": 0.6900326013565063,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the correct answer's key point that inadequate client information leads to incomplete pleading, causing the court to disregard unpleaded evidence and negatively affect the case outcome."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "According to the speaker, what two primary competencies are essential for a lawyer to effectively draft a civil plaint?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2264150943396226,
+        "text_similarity": 0.7910482883453369,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and completely restates the two primary competencies\u2014thorough fact-gathering from the client and strong legal knowledge\u2014matching the correct answer without adding or contradicting information."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "According to the speaker, what is the key change introduced by the 2018 amendment to the Specific Relief Act regarding a plaintiff's 'readiness and willingness' in specific performance suits?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.28409090909090906,
+        "text_similarity": 0.6864933967590332,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately reflects that the 2018 amendment removed the formal pleading (averment) requirement for 'readiness and willingness' while retaining the substantive need to prove ability to perform as a factual matter; it matches the correct answer closely."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "How does the speaker propose balancing a judge's need for conciseness with a client's preference for a detailed plaint?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2962962962962963,
+        "text_similarity": 0.7949820756912231,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately paraphrases the correct answer, preserving the key instruction to place essential facts up front and detailed narration at the end, and notes how this satisfies both the judge's need for conciseness and the client's desire for detail."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "According to the speaker, what is the primary benefit of adopting short, direct sentences and separate paragraphs in legal documents?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.23684210526315788,
+        "text_similarity": 0.7610032558441162,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the primary benefit\u2014facilitating quick comprehension by judges and litigants\u2014matching the reference; minor stylistic additions do not change the meaning."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "According to the speaker, what primary long-term benefits can a lawyer expect by advising clients towards prompt, potentially reduced-sum settlements?",
+      "answer_correct": 0,
+      "gt_answer": "B",
+      "pred_answer": "E",
+      "rationale_metrics": {
+        "rouge_l": 0.17543859649122806,
+        "text_similarity": 0.7518404722213745,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer directly contradicts the correct answer: the speaker explicitly cites long-term benefits (satisfied clients who recommend the lawyer, boosting reputation and future referrals), which the prediction denies, omitting the key factual element."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Considering the speaker's reference to the Kannada saying and issues with obtaining decrees, what is the core disadvantage of full litigation even for the winning party?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.23863636363636365,
+        "text_similarity": 0.573758602142334,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly conveys the core drawback\u2014that winning is only the first step and enforcing/executing the decree is a long, difficult process\u2014but it misstates the exact Kannada saying cited in the correct answer, so it is not a perfect match."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "According to the speaker, what is the key difference between briefing a witness and the impermissible act of coaching them?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.291970802919708,
+        "text_similarity": 0.769447922706604,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately restates the correct answer\u2019s distinction: briefing reviews the witness\u2019s own facts without dictating testimony, whereas coaching involves telling the witness what to say. It preserves the original meaning and includes no incorrect details."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "question": "According to the speaker, what procedural oversight by lawyers frequently results in claims made by the plaintiff being automatically considered true?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2777777777777778,
+        "text_similarity": 0.8224692344665527,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately restates that general denials (failing to specifically deny each averment) cause the plaintiff's claims to be treated as admitted, matching the correct answer's meaning and implications."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "question": "According to the speaker, what is the unifying characteristic required for both effectively drafting a written statement and examining one's own witness in court?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "E",
+      "rationale_metrics": {
+        "rouge_l": 0.19108280254777069,
+        "text_similarity": 0.6380300521850586,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction fundamentally misreads the speaker, framing 'extempore' speaking as the unifying trait and claiming indeterminacy, whereas the correct answer emphasizes careful preparation and adherence to procedural rules; it omits and contradicts key points."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "question": "According to the speaker, what is the primary strategic advantage of preparing a well-drafted questionnaire before cross-examination?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2945736434108527,
+        "text_similarity": 0.752647340297699,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately restates that a well-drafted questionnaire prevents forgetting questions and avoids strategic traps, matching the correct answer's emphasis on addressing all critical points and preventing missteps."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 2130.0,
+        "end": 2340.0
+      },
+      "question": "By contrasting lawyer engagement during his youth with current practices, what implicit consequence for legal skills does the speaker suggest?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.2585034013605442,
+        "text_similarity": 0.7529734969139099,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately restates the contrast between past immersive observation and current reduced opportunities, and correctly infers the implied decline in practical courtroom skills; the incidental mention of a Zoom call does not change the substantive match."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 2310.0,
+        "end": 2520.0
+      },
+      "question": "Considering the pervasive delays in the legal system, what is the primary benefit the speaker identifies for lawyers in utilizing the AER manual and online law lexicons?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2391304347826087,
+        "text_similarity": 0.6861095428466797,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the primary benefit stated in the correct answer\u2014providing comprehensive, cited legal knowledge in an easily digestible format to enhance lawyers' efficiency and understanding\u2014and aligns semantically without adding or omitting key facts."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 2490.0,
+        "end": 2700.0
+      },
+      "question": "Considering the challenge of grasping substantive law, what approach does the speaker suggest for lawyers to effectively learn and apply it to their cases?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2528735632183908,
+        "text_similarity": 0.7237513661384583,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the speaker's core recommendation to read relevant substantive enactments in the context of the specific facts of a case, preserving the correct meaning and intent."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 2670.0,
+        "end": 2880.0
+      },
+      "question": "What is the speaker's primary purpose in comparing the legal profession to the medical profession during the COVID-19 pandemic?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1590909090909091,
+        "text_similarity": 0.5669790506362915,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the main purpose\u2014drawing a parallel to emphasize commitment and service in the legal profession\u2014but it introduces extra specific claims (e.g., lawyers serving in hospitals and certain quoted lines) that are not stated in the reference, so it is somewhat over-specific."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 2850.0,
+        "end": 3060.0
+      },
+      "question": "According to the speaker, what is the primary benefit of preparing a list of dates and synopsis for legal arguments?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "E",
+      "rationale_metrics": {
+        "rouge_l": 0.20155038759689922,
+        "text_similarity": 0.6166647672653198,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction notes the list of dates/synopsis and that it clarifies the timeline, but it omits the key factual element that this is to enable the judge to understand the facts early and even incorrectly claims the speaker didn\u2019t state the primary benefit, so it fails to capture the main point."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 3030.0,
+        "end": 3240.0
+      },
+      "question": "According to the speaker, what is the recommended sequence for presenting content in a written statement to a judge?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3130434782608696,
+        "text_similarity": 0.7675752639770508,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and succinctly restates the speaker's three-step sequence\u2014preliminary objections/maintainability first, then the defendant's true facts, and finally denials/counter-pleadings\u2014matching the correct answer and option B."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 3210.0,
+        "end": 3420.0
+      },
+      "question": "Considering the speaker's advice on structuring a written statement and the subsequent discussion on state counsel's challenges, what is the primary benefit of presenting the defendant's factual matrix early?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.22399999999999998,
+        "text_similarity": 0.6337839365005493,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the efficiency/time-saving aspect but misattributes the primary benefit to aiding state counsel rather than enabling the judge to appreciate the defendant's case; it omits the key point about judicial understanding emphasized in the correct answer."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 3390.0,
+        "end": 3600.0
+      },
+      "question": "Considering the advice provided to the Kannada medium student, what is the primary method suggested for developing strong English drafting abilities?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.32520325203252026,
+        "text_similarity": 0.7909526824951172,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer correctly identifies extensive reading of English texts (novels and judgments) as the primary method to master the language and improve drafting. It omits the speaker's anecdote about his mother and adds a specific mention of 'Supreme Court' judgments not present in the reference, a minor extra detail."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 3570.0,
+        "end": 3780.0
+      },
+      "question": "According to the speaker, what broader impact does a lawyer's ability to maintain domestic peace and apply management principles have on their professional effectiveness?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17307692307692307,
+        "text_similarity": 0.6722518801689148,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the core idea that domestic peace and home management affect a lawyer's professional effectiveness, but it introduces specific mechanisms (preventing burnout and enabling ongoing legal learning/research) that are not stated in the correct answer, so it is partially accurate but adds unsupported details."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 3750.0,
+        "end": 3960.0
+      },
+      "question": "Considering the speaker's advice on drafting and the Supreme Court judge's method, what primary multi-faceted reason necessitates multiple revisions of legal documents?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.33112582781456956,
+        "text_similarity": 0.7479453682899475,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures all key reasons from the correct answer\u2014getting facts right (client as master of facts), fixing stenographic errors, and refining legal arguments/language\u2014and correctly links them to option (B)."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 3930.0,
+        "end": 4140.0
+      },
+      "question": "How does the speaker's explanation for a judge's 'brusque manner' connect to the earlier emphasis on time management as a crucial professional habit?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.26666666666666666,
+        "text_similarity": 0.8717127442359924,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the core connection: the judge's brusqueness is attributed to time pressure and heavy caseloads, and it correctly frames this as an example reinforcing the importance of time management and efficiency in professional interactions."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 4110.0,
+        "end": 4320.0
+      },
+      "question": "Beyond pure legal argument, what key strategy does the speaker emphasize for a lawyer to effectively manage a judge perceived as difficult?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.15584415584415587,
+        "text_similarity": 0.632561981678009,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction captures both key strategies from the correct answer\u2014observe experienced lawyers in court and prepare meticulously to have answers to judges' questions\u2014and correctly aligns with option C without adding contradictions or extraneous claims."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 4290.0,
+        "end": 4500.0
+      },
+      "question": "According to the speaker, how does understanding legal statutes and relevant judgments, exemplified by the property dispute, enhance a lawyer's effectiveness in both preparation and litigation?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3023255813953488,
+        "text_similarity": 0.7349570393562317,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly links legal knowledge to drafting pleadings (preparation) and cross-examination (litigation), but it omits details from the reference about consulting manuals and the specific Supreme Court 'necessary funds' judgment that was crucial in closing the property dispute."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 4470.0,
+        "end": 4680.0
+      },
+      "question": "According to the speaker, why is practicing in a trial court essential for a lawyer's long-term success, especially if aiming for higher courts or arbitration?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3149606299212598,
+        "text_similarity": 0.765739917755127,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the main point that cross-examination is a foundational skill best learned in trial courts and is important for arbitration; it omits the specific two-year recommendation and the exceptions about certain High Courts having original jurisdiction."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 4650.0,
+        "end": 4860.0
+      },
+      "question": "What is the primary rationale behind the first speaker's \"swimming pool\" analogy for a young lawyer's initial career choice?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.3085106382978723,
+        "text_similarity": 0.671355128288269,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the main rationale: preferring a smaller practice to gain immediate, hands-on responsibility and autonomy to develop core skills rather than being overshadowed in a larger firm."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 4830.0,
+        "end": 5040.0
+      },
+      "question": "Beyond immediate case needs, what is the most significant long-term professional benefit for a junior lawyer who consistently conducts thorough legal research for their senior?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.19999999999999998,
+        "text_similarity": 0.7513103485107422,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the core point\u2014that diligent research builds a reputation for reliability which attracts senior attention and leads to more work and responsibilities\u2014matching the correct answer closely."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 5010.0,
+        "end": 5220.0
+      },
+      "question": "According to the speaker, what critical element of legal practice and judicial effectiveness is primarily developed through trial court experience, rather than direct ascension?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2891566265060241,
+        "text_similarity": 0.8448382616043091,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and fully captures the reference: it emphasizes trial court experience as giving a deep practical understanding of the people's problems and procedural/legal nuances, aligning with option (C) and omitting unrelated elements."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "segment": {
+        "start": 5190.0,
+        "end": 5236.0
+      },
+      "question": "According to the announced topic for the upcoming session, what common difficulty associated with challenging fraudulent sale deeds is explicitly being mitigated?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2518518518518519,
+        "text_similarity": 0.7744396328926086,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly captures the core point\u2014that the deed can be challenged without a civil suit, mitigating time and cost\u2014which matches the reference; it omits explicit mention of reducing complex procedural requirements and adds a minor inference about a 'new legal provision.'"
+      }
+    },
+    {
+      "video_id": "DelhQUg8eH4",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the prosecutor's statement, what specific action by the defendant immediately preceded and likely triggered the undercover officer's arrest for a narcotics offense?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2830188679245283,
+        "text_similarity": 0.6446878910064697,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately and succinctly identifies the defendant handing the bottle as the immediate action that triggered the arrest, matching the prosecutor's statement and the correct answer's key point."
+      }
+    },
+    {
+      "video_id": "DelhQUg8eH4",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "What prompted Dr. Reyes to return to the saloon after observing the defendant's hurried exit?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.19999999999999998,
+        "text_similarity": 0.7379338145256042,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures Dr. Reyes's motivation\u2014she returned because the defendant's frantic exit made her think something was wrong and someone might be hurt\u2014matching the reference without adding contradictory details."
+      }
+    },
+    {
+      "video_id": "DelhQUg8eH4",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "According to the prosecution's statement, what evidence primarily supports discrediting the defense's potential claim of mistaken identity?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "E",
+      "rationale_metrics": {
+        "rouge_l": 0.12865497076023394,
+        "text_similarity": 0.4918941855430603,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer contradicts the correct answer by claiming the prosecution's statement/evidence isn't present, whereas the correct answer identifies explicit eyewitness testimony (John, Roberta, Dr. Reyes) as primary evidence discrediting mistaken identity; the prediction therefore omits and misrepresents the key factual element."
+      }
+    },
+    {
+      "video_id": "DelhQUg8eH4",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Considering John's observation and the immediate actions of the 'client,' what was the primary reason for the undercover officer's decision to reveal their identity and make an arrest?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.45714285714285713,
+        "text_similarity": 0.830854058265686,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies the passing of the glass bottle with white powder as the immediate trigger for the arrest, but it slightly conflates who made the call/observation (John called 911) and frames it as the officer calling for backup rather than John's call."
+      }
+    },
+    {
+      "video_id": "DelhQUg8eH4",
+      "video_number": "011",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Considering Dr. Reyes's initial thoughts and subsequent actions, what inference can be made about her understanding of the unfolding events?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2288557213930348,
+        "text_similarity": 0.7737007141113281,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly captures Dr. Reyes's initial suspicion and her follow-up actions (tailing the defendant and recording the plate), supporting the inference of a developing understanding and active response; however, it omits the later detail that she returned to the bar, found the injured detective, and relayed crucial information to police."
+      }
+    },
+    {
+      "video_id": "DelhQUg8eH4",
+      "video_number": "011",
+      "segment": {
+        "start": 870.0,
+        "end": 958.0
+      },
+      "question": "Based on the forensic evidence and the stated charges, what critical role did the cocaine found in the car play in proving distribution?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.5714285714285713,
+        "text_similarity": 0.8083673119544983,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately restates the key forensic finding\u2014that the cocaine in the car matched the cocaine given to the undercover agent\u2014and correctly explains this direct match as the critical link supporting the distribution charge."
+      }
+    },
+    {
+      "video_id": "k28NMpEkuRU",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on her testimony, what reasoning led Ms. Mendoza to believe her car was safe from vandalism in the chosen parking spot?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "E",
+      "rationale_metrics": {
+        "rouge_l": 0.15841584158415842,
+        "text_similarity": 0.3802450895309448,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction denies the existence of Ms. Mendoza's testimony and fails to state her actual reasoning (parking near a bar where people are present deters vandalism), directly contradicting the correct answer and omitting key facts."
+      }
+    },
+    {
+      "video_id": "k28NMpEkuRU",
+      "video_number": "012",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the witness's testimony, what was the suspect doing inside the car when the deputy approached with his pistol drawn?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "E",
+      "rationale_metrics": {
+        "rouge_l": 0.1415929203539823,
+        "text_similarity": 0.4795405864715576,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the ground truth: the correct answer cites explicit witness testimony that the suspect was inside the car rummaging through the glove compartment as the officer approached, while the prediction incorrectly claims no such testimony exists and that there is insufficient evidence."
+      }
+    },
+    {
+      "video_id": "k28NMpEkuRU",
+      "video_number": "012",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "What can be inferred about the assailant's appearance at the time of the incident, based on the witness's statement, \"aun cuando se afeite\" (even if he shaves)?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.41818181818181815,
+        "text_similarity": 0.9189240336418152,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly infers that the phrase refers to facial hair (beard or mustache) and rules out unrelated features; it omits the explicit mention that the witness asserted she would still recognize him even if he shaved."
+      }
+    },
+    {
+      "video_id": "k28NMpEkuRU",
+      "video_number": "012",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Considering Ms. Mendoza's decision to park and the bouncers' later revelation, what can be inferred about the general safety of the parking area?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.46994535519125685,
+        "text_similarity": 0.8782341480255127,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer faithfully captures the contradiction between Ms. Mendoza's perceived safety and the bouncers' report of nearby vandalism, preserving the original meaning and conclusion that her confidence was misplaced."
+      }
+    },
+    {
+      "video_id": "k28NMpEkuRU",
+      "video_number": "012",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Considering the suspect's initial actions, his resistance during apprehension, and the items found on him, what additional criminal activity is most strongly implied?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.32954545454545453,
+        "text_similarity": 0.759870171546936,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes theft-related behavior and the folding knife (concealed weapon), but it mischaracterizes the suspect's force as merely 'resisting arrest' rather than assault, omits the syringe/drug evidence, and contains contradictory/unfounded reasoning linking the knife to drug possession."
+      }
+    },
+    {
+      "video_id": "k28NMpEkuRU",
+      "video_number": "012",
+      "segment": {
+        "start": 870.0,
+        "end": 962.0
+      },
+      "question": "What was the primary reason Ms. Mendoza approached the scene for a clearer view and remembered the events distinctly?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.27848101265822783,
+        "text_similarity": 0.8499588966369629,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and explicitly matches the correct answer by citing Ms. Mendoza's stated motive (concern that her belongings were stolen) as the primary reason for her close observation and clear recollection, without adding or contradicting details."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Given Vikas Chatrath's detailed aspirations regarding specific criminal law practices, why does R.S. Cheema characterize the overall topic as 'very generic' and 'too general'?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.30973451327433627,
+        "text_similarity": 0.7031130790710449,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately restates that Cheema finds the combined scope (criminal appeals, drafting, preparation, advocacy) too broad for a focused session and aligns with the correct answer\u2019s interpretation, without adding incorrect details."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "What underlying reason, inferred from the speaker's personal journey, explains why junior lawyers were not initially entrusted with criminal appeals?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.2233502538071066,
+        "text_similarity": 0.7799561619758606,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly captures the core reason\u2014that appellate/criminal appeals were reserved for more 'mature' lawyers because they require a developed, nuanced skill set\u2014and reflects the speaker's personal journey; it omits some supporting details about appellate hearings being 'relaxed' and judges 'wanting to unearth the truth' and the remark about the 'art of arguing appeals' disappearing."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "How do the TADA and NIA Acts redefine the scope of appealable decisions, contrasting with typical criminal appeals discussed?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.35502958579881655,
+        "text_similarity": 0.8340633511543274,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately captures the key contrast\u2014that TADA and NIA make a broader range of orders, including interlocutory ones, appealable\u2014but it omits the important detail that such appeals are directed to specified higher courts (Apex Court for TADA, High Court for NIA)."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "According to the speaker, what is the key practical implication for litigants when appealing under the NIA Act compared to previous statutes like TADA?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.30456852791878175,
+        "text_similarity": 0.6857246160507202,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the main implication\u2014that appeals under the NIA lie to the High Court and thus make higher judicial review more difficult and less accessible\u2014but it omits the explicit contrast with TADA (appeals to the apex court) and includes some extraneous quoted material."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "According to the speaker, what is the fundamental difference in the basis of accusation for a 'person in charge' versus a 'director' under the discussed company acts?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.32085561497326204,
+        "text_similarity": 0.8605091571807861,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately restates the correct distinction: the 'person in charge' faces a rebuttable presumption of guilt by virtue of office, while a 'director' is liable only if connivance, consent, or negligence is shown, and it correctly rejects the other options."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "According to the speaker, what is the primary rationale for the evolving changes in acts like the Food Safety and Environment Acts concerning corporate liability?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.537037037037037,
+        "text_similarity": 0.8338460922241211,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and concisely captures the speaker's point that liability is being narrowed from the whole board to a specific appointed individual, matching the correct answer with no substantive omissions or contradictions."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Considering the speaker's account of the mechanically recorded 313 statements in the disproportionate assets case, what procedural flaw allowed him to raise this issue in the appeal?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.4198895027624309,
+        "text_similarity": 0.8886373043060303,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately cites the speaker's quote and the key procedural flaw (the 313 was mechanically/incorrectly recorded), and correctly links this to grounds for appeal; however it slightly misstates the consequence by implying it undermined the prosecution rather than the accused's explanation and somewhat conflates who bore the burden."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "According to the speaker, what is the primary strategic benefit of submitting an appeal with a general framework rather than extensive initial details?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.23655913978494625,
+        "text_similarity": 0.5213190913200378,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is about filing to preserve the ability to introduce evidence later, which differs from the correct answer's emphasis on forcing opposing counsel to do more work and preserving the element of surprise; thus it fails to capture the key strategic point and contradicts the stated alignment."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "According to the speaker, what is the primary strategic reason for drafting an appeal by hinting at subtle points and focusing on its core?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.10695187165775401,
+        "text_similarity": 0.3478360176086426,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the advice to focus on the core and use a novel-like central theme, but it omits the key strategic reason in the reference \u2014 preserving the element of surprise and forcing the opposing side to 'do his homework' so they cannot prepare exhaustive counterarguments."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "question": "What is the ultimate purpose of adopting a neutral, 'soap opera' mindset during the initial review of an appeal, according to the speaker?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21839080459770113,
+        "text_similarity": 0.72565096616745,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the speaker's point that a relaxed, 'soap opera' reading promotes objectivity and an unbiased grasp of the case to reveal its true issues for later stages, and it neither omits nor contradicts key elements."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "question": "According to the speaker, what is the crucial transition in a lawyer's approach when moving from an objective appeal preparation to becoming a 'partisan lawyer'?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.27467811158798283,
+        "text_similarity": 0.6188819408416748,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main shift from an objective assessor to a partisan lawyer focused on achieving a particular result and mentions dissecting the evidence, but it omits the explicit need to seek expert evidence and accurately apply the law as stated in the reference and adds an unsupported detail about 'break 149 and 34.'"
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "question": "According to the speaker, what is the most critical reason for a diligent lawyer to continuously adapt their approach based on daily observation of the bench?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.19883040935672516,
+        "text_similarity": 0.5158108472824097,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly captures the main point\u2014that lawyers must flexibly adapt to a judge's preferred manner to save the court's time and be effective\u2014though it adds a minor illustrative detail (judge wanting to read evidence) not explicit in the reference but not contradictory."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 2130.0,
+        "end": 2340.0
+      },
+      "question": "When faced with a judge's prejudgment about a client's criminal history, what legal principle does the speaker suggest the lawyer artfully invoke to continue the appeal?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3142857142857143,
+        "text_similarity": 0.7238703966140747,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly identifies invoking Section 54 of the Evidence Act (prior character not relevant except in reply) as the tactic to counter the judge's prejudgment and preserves the core legal principle from the correct answer without contradiction."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 2310.0,
+        "end": 2520.0
+      },
+      "question": "What overarching principle, emphasized by the speaker, should lawyers invoke to challenge common judicial assumptions, such as the inherent truthfulness of a dying declaration, especially in a severe case?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17021276595744683,
+        "text_similarity": 0.48579853773117065,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the speaker's overarching principle\u2014that courts must take a more critical, dispassionate, and meticulous approach to evidence in heinous or emotionally charged cases\u2014and correctly aligns this with option B, preserving the original meaning without contradiction."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 2490.0,
+        "end": 2700.0
+      },
+      "question": "According to the speaker, what is the primary strategic purpose for a lawyer to reference judicial precedents on false dying declarations?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.1791044776119403,
+        "text_similarity": 0.6284697651863098,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies that citing precedents is to formally present the legal/historical basis and invite the court to consider the defense, but it omits the nuance about conceding rarity and explicitly seeking leave to 'build up a case' or 'open the door' for a hearing, and includes minor extraneous details."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 2670.0,
+        "end": 2880.0
+      },
+      "question": "Given the specific description of Disproportionate Assets (DA) cases, why is the capacity for lawyers to flexibly withdraw and re-present arguments considered particularly important?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.14414414414414417,
+        "text_similarity": 0.6443787813186646,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While the prediction mentions flexibility in argumentation, it wrongly attributes the need to counter an investigating agency's 'vested interest' and trap-case features; the correct answer stresses DA cases require a chartered-accountant, balance-sheet/probabilities approach and re-framing of complex financial arguments, which the prediction fails to capture."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 2850.0,
+        "end": 3060.0
+      },
+      "question": "According to the speaker, what is the fundamental purpose for lawyers to meticulously maintain personal registers of judgments and consistently reread foundational cases such as Sarda Bidichand?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.35294117647058826,
+        "text_similarity": 0.7165643572807312,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and completely matches the correct answer, capturing the speaker's point that registers and rereading cases teach the 'soul' and core principles/philosophy of the law and not merely commercial or procedural uses, with no added inaccuracies."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 3030.0,
+        "end": 3240.0
+      },
+      "question": "Based on the discussion of Prabhu versus the Emperor (1941), what fundamental principle governs the prosecution's burden when an accused attempts to prove a defense?",
+      "answer_correct": 0,
+      "gt_answer": "B",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.31645569620253167,
+        "text_similarity": 0.8616943359375,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction is internally contradictory\u2014it correctly notes the prosecution's burden 'never shifts' but also claims the burden 'shifts to' the accused and then concludes option C; this wrong conclusion and the added inaccurate framing reduce its correctness."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 3210.0,
+        "end": 3420.0
+      },
+      "question": "What strategic approach allowed Tanu Bedi to secure a 'surprise acquittal' in the NDPS case, despite individual procedural arguments often failing when presented separately?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.36904761904761907,
+        "text_similarity": 0.8021066188812256,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the key strategic insight\u2014that Bedi combined broader principles (international covenants, reverse burden/presumption, procedural non\u2011compliance) rather than relying on isolated procedural points\u2014though it downplays the speaker's emphasis on her personal preparation/perception/capacity in presenting the integrated case."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 3390.0,
+        "end": 3600.0
+      },
+      "question": "How did the lawyer challenge the judge's conclusion, which was based on the oval shape of the entry wound in the CRPF jawan case?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.23645320197044334,
+        "text_similarity": 0.7664053440093994,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the lawyer's key argument that abdominal folds during a struggle can distort a round entry wound into an oval appearance, directly countering the judge's inference; only a minor wording imprecision about 'when it exits' slightly deviates from the original phrasing but does not change the substance."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 3570.0,
+        "end": 3780.0
+      },
+      "question": "Based on the narrative about the French author Mopsa and the knife-throwing trickster, what likely formed the basis for the acquittal in the Kurukshetra Jamura death case?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2183406113537118,
+        "text_similarity": 0.6264967918395996,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately matches the reference: both state the acquittal was tied to the Mopsa analogy and that the performer's lapse/movement (not the trick itself) caused the death, forming the basis for acquittal."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 3750.0,
+        "end": 3960.0
+      },
+      "question": "The lawyer recounts a knife-thrower's defense that his 'artist's hands' made knives always go 'where it ought to go'. What was the central implication regarding the nature of an 'error' that persuaded the court?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.28181818181818186,
+        "text_similarity": 0.6457915306091309,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly captures the central implication that a knife's deviation would indicate deliberate intent rather than an accidental 'error' and echoes the lawyer's conclusion that the error is 'of a different nature.' It includes a garbled/irrelevant quote and an extraneous reference to multiple-choice options, so minor inaccuracies prevent a perfect score."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 3930.0,
+        "end": 4140.0
+      },
+      "question": "According to the speaker, what unique circumstance primarily necessitates raising supplementary grounds in an appeal?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.787600576877594,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly captures the core point that supplementary grounds are for adducing further evidence not on record (with an appropriate example and quote). It omits the explicit phrasing that such grounds are unnecessary in a 'normal' appeal and the clear contrast with challenging misappreciation of existing evidence, but does not contradict the reference."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 4110.0,
+        "end": 4320.0
+      },
+      "question": "How does the anecdote about Churchill's speech preparation illuminate the speaker's earlier point on a lawyer's capability to summarize a complex case effectively?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.15,
+        "text_similarity": 0.6096503734588623,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the main idea that the Churchill anecdote illustrates deep preparation enabling concise, effective summaries\u2014matching the speaker's point about lawyers\u2014but it includes unfounded/garbled details (e.g., 'bought Bodhi Vaktar', 'fiction Manasak') and omits the speaker's explicit quoted line, so it's partly inaccurate."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 4290.0,
+        "end": 4500.0
+      },
+      "question": "According to the speaker, what is the fundamental difference in the *purpose and ultimate impact* between drafting and oral advocacy in legal practice?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.33816425120772947,
+        "text_similarity": 0.7449713945388794,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer faithfully captures the speaker's distinction that drafting is preparatory and internal while oral advocacy is the direct, ultimately impactful interaction with the court; added MCQ commentary does not alter the meaning."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 4470.0,
+        "end": 4680.0
+      },
+      "question": "What core aspect of effective advocacy does the discussion of being a 'storyteller' and the 'Roko mat jane do' comma example primarily emphasize?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.24113475177304963,
+        "text_similarity": 0.7996212244033813,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the core point\u2014that nuanced, artful language and delivery (illustrated by the comma in 'Roko mat jane do') are crucial for persuasion\u2014and is a faithful paraphrase of the correct answer without introducing errors."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 4650.0,
+        "end": 4860.0
+      },
+      "question": "According to the speaker, what analytical approach should a lawyer prioritize during the initial phase of appeal preparation?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2366863905325444,
+        "text_similarity": 0.37089502811431885,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly conveys the core point\u2014examining and evaluating all evidence\u2014but omits the explicit emphasis on adopting an impartial/non\u2011partisan stance during initial appeal preparation and contains garbled transcription."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 4830.0,
+        "end": 5040.0
+      },
+      "question": "Considering the speaker's emphasis on preparation and understanding, what does the metaphorical advice 'if you remember the Prabhu, that you can be in Rishikesh plus you will get the Vijay in the session' primarily convey about legal strategy?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.37142857142857144,
+        "text_similarity": 0.7758688926696777,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the core message\u2014diligent preparation and deep understanding lead to success\u2014and correctly paraphrases 'Prabhu' and 'Vijay.' It omits an explicit mapping of 'Rishikesh' to readiness/calm expertise and adds speaker names/experience detail, but contains no contradiction or hallucination."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "segment": {
+        "start": 5010.0,
+        "end": 5060.0
+      },
+      "question": "Considering the speaker's personal reflection and observations, what combination of factors most clearly indicates the session's compelling nature and the audience's reluctance to disengage?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3534883720930232,
+        "text_similarity": 0.6494961380958557,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies the two key indicators \u2014 unexpected rise in YouTube viewership and active Zoom participation \u2014 showing sustained engagement, but it includes garbled transcription and a hallucinatory phrase ('nude') that misrepresents the original wording and reduces accuracy."
+      }
+    },
+    {
+      "video_id": "L_dJ23CLzTo",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "According to Paul Gilbert, what aspect of the cross-examination process makes it uniquely challenging for witnesses?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.303030303030303,
+        "text_similarity": 0.7766740322113037,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately restates Gilbert's point that cross-examination uses a rapid series of closed questions unlike normal conversation, matching the correct answer and supporting option C."
+      }
+    },
+    {
+      "video_id": "L_dJ23CLzTo",
+      "video_number": "014",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the described negative witness behaviors, which aspect of familiarisation directly helps witnesses avoid such pitfalls?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12738853503184713,
+        "text_similarity": 0.5295313596725464,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction directly contradicts the ground truth by denying any familiarisation or cross-examination content despite the correct answer citing specific examples and timestamps; it omits key factual elements and invents absence of relevant material."
+      }
+    },
+    {
+      "video_id": "L_dJ23CLzTo",
+      "video_number": "014",
+      "segment": {
+        "start": 330.0,
+        "end": 458.0
+      },
+      "question": "What key integrity concern, unique to virtual hearings, primarily drives the need for specific witness environmental arrangements as described by the speaker?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.29743589743589743,
+        "text_similarity": 0.7016068696975708,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the speaker's point about requiring witnesses to be alone in virtual hearings to protect testimony integrity and prevent external influence or access to prohibited materials, matching the correct answer fully."
+      }
+    }
+  ]
+}

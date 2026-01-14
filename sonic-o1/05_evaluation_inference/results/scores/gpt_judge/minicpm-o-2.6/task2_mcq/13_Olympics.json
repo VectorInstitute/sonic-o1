@@ -1,0 +1,1263 @@
+{
+  "topic_id": 13,
+  "topic_name": "Olympics",
+  "num_evaluated": 69,
+  "aggregated_metrics": {
+    "accuracy": 0.782608695652174,
+    "correct": 54,
+    "total": 69,
+    "rationale": {
+      "rouge_l_mean": 0.22297174990263366,
+      "rouge_l_std": 0.07493692451865161,
+      "text_similarity_mean": 0.7318898897240127,
+      "text_similarity_std": 0.10015861616948918,
+      "llm_judge_score_mean": 7.130434782608695,
+      "llm_judge_score_std": 3.2744644145674315
+    },
+    "rationale_cider": 0.11820325915752843
+  },
+  "per_entry_results": [
+    {
+      "video_id": "y_-6TIA4JBk",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 60.0
+      },
+      "question": "According to the narrator, what strategic misinterpretation caused some skaters to cease racing prematurely near the finish line?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3589743589743589,
+        "text_similarity": 0.8057190179824829,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the main cause\u2014that other skaters thought the race was over when the leader finished and stopped\u2014but it omits the key detail that the leader had lapped the entire field and the 'final lap' announcement applied only to her."
+      }
+    },
+    {
+      "video_id": "nJcoHfx6q34",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 145.0
+      },
+      "question": "Based on the visual sequence and commentary, what notable action directly led to Bournemouth's second goal, putting them in the lead?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.23809523809523808,
+        "text_similarity": 0.7068034410476685,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately and concisely matches the reference, preserving the key sequence\u2014dribble, stepover, and long-range shot by Kluivert\u2014that directly led to Bournemouth's second goal."
+      }
+    },
+    {
+      "video_id": "ZBDVZt_opds",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Given the commentary and demonstrated plays, what best characterizes the combined goalkeeping performance that kept the score at 0-0?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.27419354838709675,
+        "text_similarity": 0.6639594435691833,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the main points\u2014both keepers made crucial saves from close-range headers, direct shots, and long-range attempts, preventing goals\u2014and paraphrases the emphasis on the difficulty and importance of the stops; it omits specific names/timestamps but introduces only minor, plausible descriptive detail."
+      }
+    },
+    {
+      "video_id": "ZBDVZt_opds",
+      "video_number": "003",
+      "segment": {
+        "start": 150.0,
+        "end": 304.02
+      },
+      "question": "According to the post-match commentary and observed gameplay, what was the primary factor preventing goals in the Brentford vs. Chelsea match?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.18823529411764706,
+        "text_similarity": 0.7105437517166138,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies that exceptional goalkeeping\u2014both keepers making significant saves\u2014was the primary reason for no goals and even names Arrizabalaga; it slightly overstates the number of saves and does not explicitly name Raya or the two specific key saves mentioned in the reference."
+      }
+    },
+    {
+      "video_id": "t5Y3aSUri_k",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the TMO decision and commentary, what was the primary reason for the penalty try awarded to the Wallaroos?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20952380952380956,
+        "text_similarity": 0.792331337928772,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While the prediction correctly notes a TMO-awarded penalty try, it misstates the foul\u2014claiming an illegal tackle of a player without possession\u2014whereas the correct answer describes a deliberate knock-down of the ball preventing a certain try; this contradiction and omission of key detail warrants a low score."
+      }
+    },
+    {
+      "video_id": "t5Y3aSUri_k",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 292.0
+      },
+      "question": "Based on the Australian team's build-up to Ashley Masters' try and the accompanying commentary, what was a key factor in their successful scoring play?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2790697674418604,
+        "text_similarity": 0.7952148914337158,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies the maul and shift of attack emphasized in the clip and commentary, but it incorrectly stresses Masters' individual speed/tackle-breaking as the primary cause of the score rather than the structured team maul, which contradicts the reference."
+      }
+    },
+    {
+      "video_id": "Lsyn8G6DOO8",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 133.0
+      },
+      "question": "Considering the tough second-day conditions described, what specific aspect of Joaquin Niemann's Round 2 performance was highlighted as particularly impressive?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2909090909090909,
+        "text_similarity": 0.5206745862960815,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately identifies that Niemann shot two-under par and was one of only a few to do so in the described tough second-day conditions, and it correctly paraphrases the course conditions without adding extraneous details."
+      }
+    },
+    {
+      "video_id": "dIZiOwboF_I",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the two demonstrated turnovers by Japan, where passes were intercepted near their try line, and the accompanying commentary, what was a key aspect of their defensive effectiveness?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1652892561983471,
+        "text_similarity": 0.91001296043396,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the core point\u2014that Japan anticipated and applied pressure to intercept passes near their try line, citing the two turnovers\u2014matching the correct answer's meaning despite omitting timestamps and exact commentator quotes."
+      }
+    },
+    {
+      "video_id": "dIZiOwboF_I",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 211.0
+      },
+      "question": "Given the displayed score, remaining time, and the player's visible frustration, what was the crucial outcome of the Wallaroos' missed penalty kick?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1981981981981982,
+        "text_similarity": 0.7669234275817871,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer correctly states that the missed penalty let Japan keep a narrow two-point lead near full-time, matching the scoreboard; it omits the explicit detail that a successful kick would have added 3 points and given Australia a 13-12 lead (and the precise 78:22 timing)."
+      }
+    },
+    {
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Analyzing the commentator's reactions through the third and fourth quarters, what was the primary concern expressed despite Melbourne often holding a lead?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1986754966887417,
+        "text_similarity": 0.5813108682632446,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly identifies the main concern\u2014that Melbourne dominated play but failed to convert opportunities into goals and a safe lead\u2014but it includes an incorrect/detailly claim about Collingwood's goal stats and adds extraneous mentions (disposals/marks) not in the reference."
+      }
+    },
+    {
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Considering the fan's earlier confidence and the dramatic shift in the score leading to the final siren, what does his final exclamatory reaction primarily indicate?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.7299132347106934,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly conveys the primary meaning\u2014relief and emotional release after a tense, close finish as shown by the scoreboard and his body language. It omits explicit mention of the earlier 19-point lead and the opponent\u2019s strong late comeback, but still captures the essential reaction."
+      }
+    },
+    {
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 690.0,
+        "end": 767.0
+      },
+      "question": "What is the speaker's implied assessment of his team's current stability, considering the recent intense victory and upcoming schedule?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2,
+        "text_similarity": 0.5706644654273987,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes uncertainty due to the short bye and tough upcoming opponent, but it incorrectly frames the win as achieving peak form and omits the team's earlier 'shaky' period; this contradicts the reference's emphasis that the victory is a platform to build from rather than proof of peak stability."
+      }
+    },
+    {
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Given the pre-game predictions for a Melbourne Demons upset and their first-quarter performance, what was the speaker's primary sentiment regarding the team's standing at quarter time?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.16129032258064516,
+        "text_similarity": 0.5895668268203735,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the speaker's primary sentiment of frustration about missed scoring opportunities while acknowledging defensive improvements after a poor start, aligning well with the reference."
+      }
+    },
+    {
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "At halftime, despite trailing Collingwood on the scoreboard, what was the primary reason the commentator expressed optimism about Melbourne's performance?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12030075187969926,
+        "text_similarity": 0.6986067295074463,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer does not match the reference: it hallucinated that the commentator cited Collingwood's reliance on Mason Cox as the reason for optimism, whereas the correct answer states optimism arose from Melbourne's dominance in territory, forward pressure, tackling, and clearances. It omits the key factual elements that justify the commentator's view."
+      }
+    },
+    {
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "segment": {
+        "start": 690.0,
+        "end": 766.0300000000001
+      },
+      "question": "The speaker explicitly states that \"adrenaline is pumping through his veins\" after the intense game. Which visual aspect most strongly reinforces this verbal claim of high excitement?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3673469387755103,
+        "text_similarity": 0.7939358353614807,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and fully matches the reference by identifying the animated facial expressions\u2014wide eyes and open mouth\u2014as the key visual cues that reinforce the verbal claim of high excitement."
+      }
+    },
+    {
+      "video_id": "8ObB4PUAk9M",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the repeated offensive pressure from France and specific commentary, what primary role did Rui Patricio play in Portugal's strategy during the initial period?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.24444444444444444,
+        "text_similarity": 0.7614376544952393,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the primary role\u2014Patricio repeatedly thwarting French scoring attempts and being praised in commentary for key saves\u2014preserving the correct answer's meaning despite omitting specific shooter names."
+      }
+    },
+    {
+      "video_id": "8ObB4PUAk9M",
+      "video_number": "008",
+      "segment": {
+        "start": 150.0,
+        "end": 327.0
+      },
+      "question": "Considering the visual reactions of Cristiano Ronaldo and the French players at the final whistle, how does the commentary contextualize Portugal's victory as historically significant?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.1981981981981982,
+        "text_similarity": 0.7485990524291992,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main point that the commentary links Portugal ending a long losing streak to the emotional reactions, but it omits specific historical details cited in the correct answer (41 years, 10 successive defeats, 'greatest night', 'first major trophy'), making it incomplete."
+      }
+    },
+    {
+      "video_id": "_oQqwlCdzjA",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the commentary, which player repeatedly scores using a specific 'near post' shooting technique?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16666666666666666,
+        "text_similarity": 0.45820778608322144,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the reference by attributing the repeated 'near post' goals to Dika Mem, whereas the commentator specifically names Aitor Ari\u00f1o (twice) and mentions Aleix G\u00f3mez once, so the key factual element (player identity) is incorrect."
+      }
+    },
+    {
+      "video_id": "_oQqwlCdzjA",
+      "video_number": "009",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "The commentator highlights Ekberg's past winning penalty for Sweden. How does this background seem to affect his execution and confidence during penalty shots in this game?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12727272727272726,
+        "text_similarity": 0.8232251405715942,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures Ekberg's composed, confident, and precise execution attributed to prior high-pressure experience, matching the correct answer's main conclusions; it omits explicit mention of the two converted penalties and the commentator's exact wording, hence not a perfect match."
+      }
+    },
+    {
+      "video_id": "_oQqwlCdzjA",
+      "video_number": "009",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "What is the most likely tactical relationship between Kiel's '7v6 attack' and the 'suspension' creating a 'good opportunity'?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.18518518518518517,
+        "text_similarity": 0.9005590677261353,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the core tactical relationship\u2014that Kiel uses a 7v6 attack to exploit an opponent's suspension and increase their numerical advantage to press for a goal. It omits specific details from the correct answer (the ~50 seconds remaining and explicit numeric example like 7v5) but is otherwise correct and non-contradictory."
+      }
+    },
+    {
+      "video_id": "_oQqwlCdzjA",
+      "video_number": "009",
+      "segment": {
+        "start": 510.0,
+        "end": 557.0
+      },
+      "question": "Considering the immediate end of play and the commentator's subsequent remark, what can be inferred about the game's current phase and the players' condition?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18000000000000002,
+        "text_similarity": 0.5546871423721313,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the players' fatigue and that there is a break between halves, but it incorrectly states the second half has already started, contradicting the correct answer which clarifies 'that is it' refers to the end of the first half. This timeline error reduces accuracy."
+      }
+    },
+    {
+      "video_id": "ibOXvXVxbQY",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What overall observation about the game's scoring dynamic can be made by analyzing the compilation of shots and saves?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1941747572815534,
+        "text_similarity": 0.7752041816711426,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately notes strong shot-stopping by both teams and that goals also occur, but it downplays the correct answer's emphasis that a high frequency of saves (often denying clear scoring chances) is the defining characteristic of the compilation."
+      }
+    },
+    {
+      "video_id": "ibOXvXVxbQY",
+      "video_number": "010",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering Argentina's offensive actions observed throughout the segment, what was a consistent factor hindering their ability to score?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.19230769230769232,
+        "text_similarity": 0.6311527490615845,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies defensive resistance as the reason Argentina struggled, but it fails to match the reference's key point that the Brazilian goalkeeper repeatedly made crucial saves; instead it attributes the problem to the central defenders, omitting the primary factual element cited in the correct answer."
+      }
+    },
+    {
+      "video_id": "ibOXvXVxbQY",
+      "video_number": "010",
+      "segment": {
+        "start": 330.0,
+        "end": 514.0
+      },
+      "question": "What does the final scoreboard display at 2:47, coupled with the immediate enthusiastic celebration of the green-jerseyed team, most strongly indicate about the match?",
+      "answer_correct": 0,
+      "gt_answer": "B",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.27350427350427353,
+        "text_similarity": 0.7240688800811768,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly reports the final score and that the green-jerseyed team celebrated, indicating a Brazilian victory; however, it incorrectly infers they secured progression/position in the next round\u2014a claim the video does not support\u2014so it loses points for an unsupported conclusion."
+      }
+    },
+    {
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What aspect of Jo\u00e3o F\u00e9lix's shot at 1:20-1:57 best exemplified the commentator's remark about his 'superb improvisation'?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2526315789473685,
+        "text_similarity": 0.8736051321029663,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately reflects the instant adaptation and execution of a complex acrobatic/overhead strike from a difficult situation, matching the correct answer's emphasis on on-the-fly decision-making; the added note about being closely marked does not contradict the reference."
+      }
+    },
+    {
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the commentator's analysis and Jo\u00e3o F\u00e9lix's actions throughout the match, what crucial aspect of his performance is consistently highlighted?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.21153846153846154,
+        "text_similarity": 0.7638319730758667,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies F\u00e9lix's creative playmaking and scoring under pressure, but it fails to explicitly mention his pivotal equalizing goal and the commentator's emphasis on his outstanding first-half dominance and how Salzburg struggled to cope."
+      }
+    },
+    {
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering Jo\u00e3o F\u00e9lix's visible reactions during the match and his post-game interview statements, what is his primary attitude towards playing in high-stakes Champions League games?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.21739130434782605,
+        "text_similarity": 0.8437380194664001,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction captures the main points\u2014F\u00e9lix enjoys Champions League games and focuses on his own performance, and shows enthusiastic celebration\u2014but it introduces a minor extra claim about acknowledging media pressure and has a small timestamp discrepancy not present in the correct answer."
+      }
+    },
+    {
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 544.0
+      },
+      "question": "Considering the player's statement about ignoring media and enjoying the game as if at home, how does his visible demeanor during the interview reflect this approach?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3111111111111111,
+        "text_similarity": 0.8201623558998108,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately reflects the reference: it notes a relaxed, calm demeanor and connects this to enjoying the game and not being swayed by media, matching the original's meaning about happiness and lack of pressure."
+      }
+    },
+    {
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the commentators' reactions and the visual outcomes, what is the primary tactical advantage gained by the offensive players' evasive maneuvers?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.19230769230769232,
+        "text_similarity": 0.7715580463409424,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction captures the core tactical advantage\u2014creating open space and evading tackles to advance the ball\u2014and cites visual evidence of continued runs, but it omits explicit mention of commentators' exclamations and the highlighted outcomes of significant yardage leading to first downs or touchdowns."
+      }
+    },
+    {
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "The video features multiple instances of players employing deceptive movements to evade defenders. What is the primary purpose of the specific 'juke move' demonstrated at 1:35?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2702702702702703,
+        "text_similarity": 0.8646249175071716,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately paraphrases the correct answer\u2014describing the fake move that causes the defender to misjudge direction and miss the tackle\u2014preserving intent and key details about gaining extra yardage."
+      }
+    },
+    {
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Which specific evasion technique is explicitly identified and demonstrated by multiple players in the provided football highlights?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.14414414414414414,
+        "text_similarity": 0.6568741798400879,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction correctly identifies the 'juke' maneuver as the specific evasion technique shown by multiple players and accurately describes its action, matching the key point of the correct answer."
+      }
+    },
+    {
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "segment": {
+        "start": 510.0,
+        "end": 554.0
+      },
+      "question": "Given the initial video segments emphasize individual player agility and successful runs, what distinct strategic or analytical viewpoint is presented by the overhead camera perspective of the football field shown between 0:15 and 0:25?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2545454545454545,
+        "text_similarity": 0.7101280689239502,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and concisely captures the main point: a static overhead view shows the whole field, player alignments and spatial relationships before play, enabling tactical/strategic analysis; it preserves the meaning of the reference without added errors."
+      }
+    },
+    {
+      "video_id": "cjl592TFVhE",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What tactical error by Kirkland, highlighted by the commentators, most likely contributed to the powerful right-hand knockdown by Canelo?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2105263157894737,
+        "text_similarity": 0.8118787407875061,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately paraphrases the commentator's point that Kirkland squared up and was vulnerable due to a poor defensive stance, which led to Canelo's right-hand knockdown; it preserves the original meaning with no contradictions or added details."
+      }
+    },
+    {
+      "video_id": "cjl592TFVhE",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering Kirkland's repeated knockdowns and the commentators' consistent reference to him as the 'Mandingo Warrior,' what quality of Kirkland is primarily emphasized?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.4444444444444445,
+        "text_similarity": 0.9442763924598694,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and fully restates the correct answer's points\u2014Kirkland's repeated knockdowns, the 'Mandingo Warrior' nickname, and the emphasis on his endurance/resilience in continuing to fight\u2014without adding or contradicting facts."
+      }
+    },
+    {
+      "video_id": "cjl592TFVhE",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "According to the commentary and visual replays, how did Canelo strategically adapt his punching technique to achieve the final knockout against Kirkland?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1774193548387097,
+        "text_similarity": 0.7596081495285034,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies Canelo landing straight rights as counters to Kirkland committing with left punches, but it omits the key point that Canelo 'abandoned the jab' and fails to mention the initial counter uppercut (first knockdown); it also introduces unsupported details about body shots and head movement. "
+      }
+    },
+    {
+      "video_id": "cjl592TFVhE",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 637.0
+      },
+      "question": "How did Canelo Alvarez effectively utilize feints and body work to create opportunities for knockout punches against Kirkland, as explained and demonstrated?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17105263157894737,
+        "text_similarity": 0.7561174631118774,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately captures the core tactic\u2014using low feints/body shots to set up head punches for knockouts\u2014but introduces minor unsupported specifics (mention of uppercuts and a defensive posture) that are not stated in the correct answer."
+      }
+    },
+    {
+      "video_id": "nBnkRgkSFSg",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the commentary and plays for the first two goals, what distinct defensive weaknesses are evident from Liverpool's early conceded goal versus Leeds' equalizer?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.29411764705882354,
+        "text_similarity": 0.7069602012634277,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the key points: the first goal was an individual/miscommunication error leading to loss of possession, and the equalizer stemmed from a goalkeeper mistake plus defensive disorganization on the rebound, matching the reference."
+      }
+    },
+    {
+      "video_id": "nBnkRgkSFSg",
+      "video_number": "014",
+      "segment": {
+        "start": 150.0,
+        "end": 323.424
+      },
+      "question": "Considering the dramatic late goal and the final whistle sequence, what does the commentary suggest about Leeds United's victory?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.27027027027027023,
+        "text_similarity": 0.8083524703979492,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main idea that the win was a significant, unexpected and crucial victory over Liverpool, but it misattributes the exact wording (saying 'history' instead of 'a giant win') and omits the explicit reference to Jesse Marsch, introducing a minor factual inaccuracy."
+      }
+    },
+    {
+      "video_id": "KEw_Fzbk1Mw",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "According to the commentary, how did Joel Veltman's inclusion in the starting lineup specifically influence Pascal Gross's role and subsequent performance in the match?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21052631578947367,
+        "text_similarity": 0.7809138894081116,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main point that Veltman's presence allowed Gross to play higher up, but it adds specific actions (crosses into the box and directly creating goal-scoring opportunities) that are not mentioned in the correct answer and thus introduce unverified details."
+      }
+    },
+    {
+      "video_id": "KEw_Fzbk1Mw",
+      "video_number": "015",
+      "segment": {
+        "start": 150.0,
+        "end": 301.0
+      },
+      "question": "Following halftime changes, what was the immediate consequence for Wolverhampton Wanderers, as described by the commentator and observed on the field?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.27586206896551724,
+        "text_similarity": 0.5460306406021118,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly captures the immediate consequence: a substitute/new player made an error that led to a goal for Brighton, though it omits specific details like the manager 'ringing the changes', the player's name (Collins), and that it was Brighton's fifth."
+      }
+    },
+    {
+      "video_id": "sVXsLrOUIYs",
+      "video_number": "016",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the commentary and replay, which Fulham player's foul directly led to West Ham being awarded a penalty kick for the equalizing goal?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.25641025641025644,
+        "text_similarity": 0.7283802032470703,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gets the outcome (a foul leading to a penalty) but names the wrong player (Jo\u00e3o Palhinha instead of Andreas Pereira) and wrongly states it occurred outside the box, directly contradicting the commentary/replay; thus it is largely incorrect."
+      }
+    },
+    {
+      "video_id": "sVXsLrOUIYs",
+      "video_number": "016",
+      "segment": {
+        "start": 150.0,
+        "end": 323.0
+      },
+      "question": "How did David Moyes' reactions to West Ham's second and third goals distinctively reflect the team's progression and the game's finality?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.1651376146788991,
+        "text_similarity": 0.7587255239486694,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately captures the core contrast\u2014more restrained celebration after the second goal and greater jubilation after the third, reflecting progression and finality\u2014but it omits specific actions (jumping, clapping, fist-pumping, running the touchline) and exact timing details from the reference."
+      }
+    },
+    {
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering both visual evidence and commentary, who scored Fijiana's second try, and what evidence supports this?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.28070175438596495,
+        "text_similarity": 0.821854293346405,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes the commentator said 'Delai Wao' but incorrectly claims the video replay confirms her scoring; the ground truth indicates the replay shows player #11 (identified earlier as Wilson) scoring, so the prediction contradicts visual evidence and omits the correct player identification."
+      }
+    },
+    {
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Which two specific infractions by Fijiana led to Manusina Samoa's successful penalty kick, narrowing the score to 10-9?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3037974683544304,
+        "text_similarity": 0.8667582273483276,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies both infractions ('player over the ball' and 'tackler not releasing') and that they led to a successful penalty, but it omits the explicit mention that the kick narrowed the score to 10-9 (and the timestamps/scoreboard detail)."
+      }
+    },
+    {
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the on-screen graphics and commentary, what is the most accurate inference regarding the players wearing jersey number 14 for Samoa?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.08791208791208792,
+        "text_similarity": 0.6760071516036987,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction contradicts the reference: the correct answer notes two different names (Linda Fearfear and Michelle Curry) were associated with #14 implying two players wore that number, whereas the prediction incorrectly asserts Michelle Curry scored both tries and omits the conflicting naming detail."
+      }
+    },
+    {
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Given the match is tied with time almost expired, what strategic approach did Fiji adopt to score the final try?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.13333333333333333,
+        "text_similarity": 0.71623295545578,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the key strategy\u2014using wide passes to exploit defensive gaps\u2014and matches the video evidence; it omits the commentator's phrasing about 'finishing on their own terms' and the emphasis on rapid multi-player ball movement, hence a slight deduction."
+      }
+    },
+    {
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "segment": {
+        "start": 690.0,
+        "end": 789.0
+      },
+      "question": "Considering the commentator's description of the winning play as a 'pick and go' leading to 'criss-passing' and a 'big get-off-me' try, what tactical approach was crucial for Fijiana's championship victory?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.46551724137931033,
+        "text_similarity": 0.631584644317627,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer faithfully restates the commentator's description\u2014'pick and go,' 'criss-passing,' powerful forward drive and close-range ball handling\u2014and correctly concludes that sustaining strong forward momentum was the crucial tactic, matching the reference."
+      }
+    },
+    {
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the event signage and the hosts' commentary, what was the primary purpose of their three-hour road trip?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20202020202020202,
+        "text_similarity": 0.7139190435409546,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures that the trip was to attend 'Saint Eddie Day' and a football-related event/clinic, supported by signage and attendees; it omits explicitly naming Eddie Bentz and the hosts' stated intent to see him put on a local footy clinic."
+      }
+    },
+    {
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the combination of electoral references, the mention of a 'sausage sizzle,' and the explicit club signage, what is the most likely nature of this event?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.1785714285714286,
+        "text_similarity": 0.5718627572059631,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the general idea of a local community/social event tied to electoral activity, but it misidentifies the club signage and omits the key detail that the sausage sizzle functions as a polling/fundraising activity at a local sporting club, making it partially incorrect and incomplete."
+      }
+    },
+    {
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 510.0,
+        "end": 550.0
+      },
+      "question": "Considering the specific praise for 'Bailey Dale' and the conversational context, what can be inferred about his primary activity or skill?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.17977528089887643,
+        "text_similarity": 0.6575153470039368,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly infers Bailey Dale is an athlete whose sport relies on left-foot ability and captures the main idea; it omits the explicit phrasing that the left foot is 'lethal' (i.e., exceptionally powerful/skillful), a minor detail."
+      }
+    },
+    {
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the office discussions and podcast segment, what is the most accurate conclusion about the 'Bailey' who missed work and the earlier football match?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20437956204379562,
+        "text_similarity": 0.6940901279449463,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes someone slept in, but it incorrectly conflates the absent cameraman with footballer Bailey Dale; the reference clearly distinguishes the cameraman who overslept from the footballer, so the prediction largely contradicts the key fact."
+      }
+    },
+    {
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "segment": {
+        "start": 510.0,
+        "end": 548.9100000000001
+      },
+      "question": "Considering the specific descriptive phrase used for Bailey Dale and the visual theme presented at the segment's conclusion, what is the most probable type of activity he excels in?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.3787878787878788,
+        "text_similarity": 0.7178722620010376,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction reaches the same core conclusion\u2014a team-based kicking sport\u2014based on mention of Dale's left foot, but it misstates the end-screen visuals (hallucinating social media icons/movement rather than the stadium/spotlights) and includes irrelevant details, so it deserves partial credit."
+      }
+    },
+    {
+      "video_id": "__LhyCcUvhQ",
+      "video_number": "019",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the various goal attempts by Fulham and the commentator's analysis, what common characteristic defines Jordan Pickford's goalkeeping performance against these shots?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.15217391304347824,
+        "text_similarity": 0.8373363614082336,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the commentator's point that Pickford tactically parries shots away from danger (over the bar or into safe areas); it slightly overgeneralizes by implying he routinely deflects balls out of play rather than sometimes into safe parts of the penalty area."
+      }
+    },
+    {
+      "video_id": "__LhyCcUvhQ",
+      "video_number": "019",
+      "segment": {
+        "start": 150.0,
+        "end": 321.0
+      },
+      "question": "Considering Fulham's offensive actions and the commentator's remarks, what best describes the team's primary struggle in converting chances against Everton?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.14705882352941174,
+        "text_similarity": 0.7775886058807373,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies Fulham's primary struggle\u2014creating chances but failing in final execution\u2014but omits several specific examples cited in the reference and introduces an offside detail not mentioned in the correct answer, reducing completeness."
+      }
+    },
+    {
+      "video_id": "Dc-aD5F7hiM",
+      "video_number": "020",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the Manchester United player's action at 1:00 and the match context, what is the most probable reason for 'taking a knee' before kickoff, even without explicit commentary about its purpose?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.21359223300970873,
+        "text_similarity": 0.7397134900093079,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer conveys the same meaning as the correct answer\u2014that taking a knee is a protest against racial injustice and in support of social justice movements\u2014so it is a faithful paraphrase with no factual errors or omissions."
+      }
+    },
+    {
+      "video_id": "Dc-aD5F7hiM",
+      "video_number": "020",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Despite early saves from De Gea and several missed opportunities, Villarreal eventually scored. What does this sequence primarily indicate about Villarreal's offensive approach?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12676056338028172,
+        "text_similarity": 0.6998251676559448,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction faithfully captures the main point\u2014that Villarreal applied sustained, persistent pressure, repeatedly created quality chances and tested De Gea with key saves, ultimately converting after continued pressure\u2014accurately paraphrasing the correct answer without adding contradictions."
+      }
+    },
+    {
+      "video_id": "Dc-aD5F7hiM",
+      "video_number": "020",
+      "segment": {
+        "start": 330.0,
+        "end": 452.0
+      },
+      "question": "Based on the visual evidence and commentator's description, what was Bruno Fernandes's precise contribution to Alex Telles's equalizing goal?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.20689655172413793,
+        "text_similarity": 0.8231642246246338,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies Fernandes's short preparatory touch that set up Telles's strike, but it omits the commentator's explicit confirmation and the detail that this was a deliberate free-kick routine."
+      }
+    },
+    {
+      "video_id": "X52JPDIfJYk",
+      "video_number": "021",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Following Williams' hit on Kmet, what immediate discrepancy arises from the combined visual, auditory, and on-screen text information?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.33333333333333337,
+        "text_similarity": 0.6293988823890686,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes the on-screen '(NOT A FLAG)' and that a discrepancy exists, but it misrepresents the commentator's line (hallucinating 'BRANCH WAS EJECTED' instead of 'a flag comes in'), so it fails to match the key factual element."
+      }
+    },
+    {
+      "video_id": "X52JPDIfJYk",
+      "video_number": "021",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the play involving Pickett and the subsequent flag, what specific action by the defender was likely penalized according to typical NFL rules?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17721518987341772,
+        "text_similarity": 0.6174046397209167,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer contradicts the correct answer: the clip shows a late hit on the quarterback after release (roughing the passer), whereas the prediction claims illegal contact on a receiver beyond five yards, which is a different action and penalty."
+      }
+    },
+    {
+      "video_id": "X52JPDIfJYk",
+      "video_number": "021",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the numerous instances of forceful tackles and the descriptive commentary, what immediate outcome do these defensive actions frequently achieve on the ball carrier?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2365591397849462,
+        "text_similarity": 0.7662763595581055,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the correct answer's main point that forceful tackles frequently cause fumbles or incomplete passes, without adding incorrect details or omitting key outcomes."
+      }
+    },
+    {
+      "video_id": "X52JPDIfJYk",
+      "video_number": "021",
+      "segment": {
+        "start": 510.0,
+        "end": 637.0
+      },
+      "question": "Based on the repeated descriptions of impactful collisions, what challenge consistently confronts offensive players throughout this sequence?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.21621621621621623,
+        "text_similarity": 0.8073528409004211,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and succinctly conveys the same central idea\u2014that offensive players consistently endure severe physical contact\u2014matching the reference without introducing contradictions or missing key points."
+      }
+    },
+    {
+      "video_id": "ZsECVscljqY",
+      "video_number": "022",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "According to the commentator following Southampton's equalizer, what was Arsenal's overarching issue that led to them being \"punished\" by the goal?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.29885057471264365,
+        "text_similarity": 0.8175688982009888,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately paraphrases the commentator's point that Arsenal failed to convert dominance and chances into a bigger lead, which led to them being punished by Southampton's goal."
+      }
+    },
+    {
+      "video_id": "ZsECVscljqY",
+      "video_number": "022",
+      "segment": {
+        "start": 150.0,
+        "end": 324.0
+      },
+      "question": "Based on the replay and commentary, why was Martin Odegaard's goal in the 79th minute ultimately disallowed?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17142857142857143,
+        "text_similarity": 0.6456120014190674,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer contradicts the correct answer: the commentary and replay indicate the goal was disallowed for offside ('flag has gone up' and decision confirmed), whereas the prediction incorrectly claims the ball went out of play before the cross."
+      }
+    },
+    {
+      "video_id": "Y4hkgiCIgmc",
+      "video_number": "023",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the various goal-scoring instances by both teams, what common characteristic describes a significant portion of the successful shots observed?",
+      "answer_correct": 0,
+      "gt_answer": "B",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.14583333333333334,
+        "text_similarity": 0.7041599154472351,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction emphasizes goals from quick counter-attacks, which are mentioned in the correct answer only as a secondary cause; it omits the primary and repeatedly observed characteristic that many successful shots came from the backcourt/outside the 9\u2011meter line taken over defenders, so it is incomplete and misleading."
+      }
+    },
+    {
+      "video_id": "Y4hkgiCIgmc",
+      "video_number": "023",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering the successful scoring plays by the home team (FLE) across the second half of the first period and early second period, what best characterizes their offensive approach?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3137254901960784,
+        "text_similarity": 0.8773459196090698,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the main conclusion and lists the same varied scoring methods (back-court, pivot, and penalty/7-meter shots); the omission of specific player numbers and timestamps does not affect correctness."
+      }
+    },
+    {
+      "video_id": "Y4hkgiCIgmc",
+      "video_number": "023",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Analyzing the score progression in the last 10 minutes (20:00-30:00 elapsed) of the second half, what trend is most evident for Team FLE (white uniforms)?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.16822429906542058,
+        "text_similarity": 0.8296458125114441,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly conveys the main trend that FLE maintained offensive momentum and VES failed to close the gap, but it omits key numerical details (goal counts and that FLE actually extended the lead by one) present in the reference."
+      }
+    },
+    {
+      "video_id": "Y4hkgiCIgmc",
+      "video_number": "023",
+      "segment": {
+        "start": 690.0,
+        "end": 736.0
+      },
+      "question": "Considering the scoreboard's rapidly progressing time in the second half, the fluctuating narrow score difference, and the consistent offensive efforts from both teams, what characteristic of the game is most strongly suggested?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2706766917293233,
+        "text_similarity": 0.6203367710113525,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the core meaning\u2014that the second half clock is running, the score is narrowly fluctuating, both teams are making sustained offensive efforts, and the game is reaching its climax with a close outcome still possible\u2014but it omits the specific timing and score examples cited in the reference."
+      }
+    },
+    {
+      "video_id": "Y4hkgiCIgmc",
+      "video_number": "023",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the scoreboard updates and the progression of scored goals throughout the highlights, what major shift in the game's momentum is evident by the end of the segment?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.09090909090909091,
+        "text_similarity": 0.6010786294937134,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction directly contradicts the correct answer: instead of Veszpr\u00e9m rallying from a 15-12 deficit to lead 25-23, the prediction incorrectly claims Flensburg maintained a decisive lead throughout, omitting the comeback."
+      }
+    },
+    {
+      "video_id": "Y4hkgiCIgmc",
+      "video_number": "023",
+      "segment": {
+        "start": 690.0,
+        "end": 735.19
+      },
+      "question": "Considering the score (white team trailing 26-30) and the rapid counter-attack leading to an empty net, what tactical decision by the white team most likely facilitated this scoring opportunity for the blue team?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.1774193548387097,
+        "text_similarity": 0.7198082208633423,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While the prediction notes the empty-net score, it contradicts the correct answer by attributing it to a goalkeeper lapse rather than the key tactical decision\u2014substituting the goalkeeper for an extra field player\u2014thus omitting the main causal detail."
+      }
+    }
+  ]
+}

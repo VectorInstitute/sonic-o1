@@ -1,0 +1,413 @@
+{
+  "topic_id": 9,
+  "topic_name": "HousingApartment Tours",
+  "num_evaluated": 24,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.23003935068781592,
+      "rouge_l_std": 0.048711761253101914,
+      "text_similarity_mean": 0.6705864084263643,
+      "text_similarity_std": 0.10020906479021284,
+      "llm_judge_score_mean": 4.583333333333333,
+      "llm_judge_score_std": 1.2219065248845982
+    },
+    "short": {
+      "rouge_l_mean": 0.23526326076800488,
+      "rouge_l_std": 0.07319964788963433,
+      "text_similarity_mean": 0.6309349648654461,
+      "text_similarity_std": 0.1416898162575893,
+      "llm_judge_score_mean": 4.166666666666667,
+      "llm_judge_score_std": 1.3123346456686351
+    },
+    "cider": {
+      "cider_detailed": 0.01970285258842953,
+      "cider_short": 0.03503909375073718
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "xv36C3nxyT8",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.21243523316062177,
+        "text_similarity": 0.7331147193908691,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures some interior features (five en-suite bedrooms, modern kitchen, children's room, terraces, infinity pool) but gets major facts wrong\u2014wrong location (Portals Nous, Ibiza vs Port de S\u00f3ller, Mallorca), misnames the property and presenter/company\u2014and adds several hallucinated details (architecture, garden, production credits)."
+      },
+      "short": {
+        "rouge_l": 0.265625,
+        "text_similarity": 0.4942041039466858,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction retains a few correct details (five en-suite bedrooms, infinity pool, panoramic sea views) but it misstates key facts\u2014wrong location (Portals Nous, Ibiza vs Port de S\u00f3ller, Mallorca), incorrect presenter/name, and omits the property's name, seafront access, multiple terraces, agency (Charles Marlowe) and rental-family emphasis."
+      }
+    },
+    {
+      "video_id": "Z6TNgwMM2b0",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.25298329355608595,
+        "text_similarity": 0.7807511687278748,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the main points\u2014floor-through, very spacious open plan, chef's kitchen with large island, built-in speakers, LG washer/dryer, ample/hidden storage, multiple bedrooms including a primary with walk-in, two baths, high ceilings, and entertaining-focused layout. It omits mention of the dual independent HVAC systems and the decorative hidden-storage wall/size-comparison of the second bedroom, and introduces several unsupported finish details (cabinet/appliance/material/wallpaper/flooring) that are not in the reference."
+      },
+      "short": {
+        "rouge_l": 0.26666666666666666,
+        "text_similarity": 0.8413293361663818,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures several main features (chef's kitchen, high ceilings, in-ceiling speakers, long white oak flooring, multiple bedrooms), but it omits key details like two HVAC zones, a full-time doorman, and specific notes about a large island and walk-in closets, and it adds/contradicts information (saying 'newly renovated' and 'two bathrooms') not present in the reference."
+      }
+    },
+    {
+      "video_id": "WNLowC-wESc",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.41012658227848103,
+        "text_similarity": 0.863282322883606,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main points\u20142-bed, 1,012 sqft, open-concept living, master with sea view, location and many amenities\u2014but omits key details from the reference (AC in every room, yard access, swimming pools/tennis courts, full furnishings/high-floor) and adds unsupported specifics (red cabinets, bay window/city skyline), so it is partially accurate but incomplete with some hallucinations."
+      },
+      "short": {
+        "rouge_l": 0.5352112676056338,
+        "text_similarity": 0.8407412767410278,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the main points (2-bedroom Bayshore condo, modern kitchen, open-plan living, East Coast location/sea view), but omits several key specifics from the reference such as unit size, air conditioning, the versatile second bedroom, master bedroom details (king bed, storage, ensuite), and the listed resort-style facilities."
+      }
+    },
+    {
+      "video_id": "SEBhQrOd7UM",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.2574850299401198,
+        "text_similarity": 0.6926146745681763,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the main idea (vlog about furnishing a Toronto apartment, IKEA assembly with the child, coffee table from Leon's, a lighting demo, and a subscription prompt) but includes several incorrect or hallucinated specifics\u2014it calls the tour \"complete\" instead of a semi-final, misidentifies the couches and smart-bulb/app details, and adds unmentioned screenshots/prices and material descriptions."
+      },
+      "short": {
+        "rouge_l": 0.27814569536423844,
+        "text_similarity": 0.4453073740005493,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the overall home-furnishing theme and mentions IKEA furniture and smart lighting, but it omits several key specifics (Toronto, semi-final/COVID delay tour, bedroom tour, specific assembled items, and app demonstration) and adds an unsupported claim about Amazon furniture."
+      }
+    },
+    {
+      "video_id": "I4t298bfqaE",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.30724637681159417,
+        "text_similarity": 0.7587913274765015,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the overall two-bedroom Brooklyn tour, room sequence, and sponsor, but it contains several inaccuracies and hallucinations (e.g., 'Panos' appliances, Manhattan/Williamsburg Bridge view, washer/dryer in the walk-in closet) and omits specific ad/unboxing details and named furnishings present in the reference."
+      },
+      "short": {
+        "rouge_l": 0.27272727272727276,
+        "text_similarity": 0.6917130947113037,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the overall tour, location, open-concept layout, sponsor, and city views, but it omits many specific details from the reference such as the 800 sqft/2-bedroom detail, paneled appliances, IKEA pieces, the detailed Castlery unboxing/ad (Dawson sofa), home office and artwork by his wife, walk-in closet, and in-unit washer/dryer."
+      }
+    },
+    {
+      "video_id": "8hc2sX9kJDo",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.25888324873096447,
+        "text_similarity": 0.6330644488334656,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the high-level studio tour structure (entryway, living area, kitchen, bedroom, workspace) and some items (shoes, stuffed animals, dishwasher, microphone), but it omits key specifics from the reference (the corgi Ahsoka, skateboards, convertible coffee table, Kanye/Chicago art, rent and amenities, herb garden, no in-unit washer/dryer) and includes likely hallucinations (host name misspelled, claimed YouTube persona, Skillshare sponsorship, walk-in closet, softbox/camera) that reduce accuracy."
+      },
+      "short": {
+        "rouge_l": 0.17679558011049726,
+        "text_similarity": 0.566824197769165,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the broad idea of a Brooklyn studio tour and mentions some personal items (shoes, plants, content setup), but it omits many key specifics from the reference (pet, furniture details, kitchen features, rent, amenities) and adds a hallucinated Skillshare promotion not present in the correct answer."
+      }
+    },
+    {
+      "video_id": "xfiPNInStRc",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.19704433497536944,
+        "text_similarity": 0.697518527507782,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction conveys the broad premise (tour of a recently acquired 10-unit property, demolition of the 3-unit building, renovations and long-term investment intent) but omits many key facts (buyer name, $1.1M purchase and $1.25M total investment, $130K renovation budget, plan to rebuild a 7-unit structure, specific unit/finish and basement plans, and Adrian overseeing work) and introduces inaccuracies about rebuild size and timeline/financing."
+      },
+      "short": {
+        "rouge_l": 0.19130434782608696,
+        "text_similarity": 0.5947592258453369,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level idea (a ten-unit building, demolition and renovations, December target), but omits many key facts (purchase price, $1.25M project investment, planned rebuild into a 7-unit structure, $130K renovation budget, owner oversight, Riverside location) and adds hallucinated financing details (low down payment, reinvestment from a Vancouver condo) and an incorrect claim about the new building size."
+      }
+    },
+    {
+      "video_id": "iD0bx9-UtnI",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.25217391304347825,
+        "text_similarity": 0.5514361262321472,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the general vlog-style apartment tour and several correct appliance and living-room elements, but it omits multiple specific details from the reference (entryway decor, AC, pantry/no microwave, grocery-haul mention, storage closet) and introduces unsupported/hallucinated details (named people, IKEA, bathroom/bedroom) that reduce fidelity."
+      },
+      "short": {
+        "rouge_l": 0.19047619047619047,
+        "text_similarity": 0.6978645324707031,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the overall idea of a newly moved-in Madrid apartment tour by two people, but it omits key details from the reference (entryway, convertible couch, good light, AC, essential appliances, and small storage closet) and adds unsupported specifics (names and IKEA furniture)."
+      }
+    },
+    {
+      "video_id": "ikZpZxNqssE",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.19689119170984457,
+        "text_similarity": 0.6493148803710938,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general idea of a duplex tour, rental income, and water-seepage/due-diligence themes, but it contains major factual errors (claims a $25,000 purchase and purchase from a friend) and omits or misstates key financial details and figures (actual $400,000 price, $1650 rent, $25,000 negotiated discount, mortgage/tax numbers, inspection and down-payment advice)."
+      },
+      "short": {
+        "rouge_l": 0.15,
+        "text_similarity": 0.4749981164932251,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures high-level themes (house hacking, renting a unit, due diligence, renovating) but falsely states the purchase price as $25,000 and omits many key facts (actual $400k price, $25k discount reason, down payment, rental/mortgage figures, location and context), so it is largely incorrect and incomplete."
+      }
+    },
+    {
+      "video_id": "u7wND0nHJhk",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.22604422604422605,
+        "text_similarity": 0.7858490943908691,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the overall tour, builder, realtor, and basic layout/kitchen and laundry highlights, but it omits many key specifics (exact square footage, listed starting price, detailed interior and exterior features like wood-like tile, can lights/Cat6, brushed-nickel fixtures, drip tie-in, retaining walls, etc.) and introduces unsupported details (2-car garage, explicit walk-in closet/ensuite, and claim that the model is a smaller version), so it's incomplete and partly hallucinated."
+      },
+      "short": {
+        "rouge_l": 0.17801047120418848,
+        "text_similarity": 0.7685576677322388,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the basic gist (Tifton Walk single-story in Las Vegas with 3 beds and 2.5 baths) but omits many key specifics (sq ft, price, detailed kitchen and exterior features, drainage/utility details, and contact info) and adds an unsupported detail about an unfinished garage."
+      }
+    },
+    {
+      "video_id": "kLmftz_593g",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.26714801444043323,
+        "text_similarity": 0.6239895820617676,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main idea (arrival, tired hosts, Airbnb tour covering kitchen, living room, bedroom, and price) but omits several specific bedroom details from the reference (big sliding windows, air-conditioning, ceiling fan, solid wood doors), misnames Laurie, and adds unverified/hallucinated elements (beach/channel name, bathroom walk-in shower, booking strategy, call-to-action) not present in the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.2522522522522523,
+        "text_similarity": 0.8333308696746826,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the arrival, Airbnb tour, and the $348/10-day cost, but omits key specifics (full kitchen with new appliances, living room, bedroom with AC and new windows), includes a minor name discrepancy, and adds extra details not present in the reference."
+      }
+    },
+    {
+      "video_id": "dAlc58wzp-w",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.19825072886297374,
+        "text_similarity": 0.736830472946167,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the high-level arc (arrival at Harbor Crossings, interior walkthrough of a 2\u2011bed home, community shots and promotional close), but it omits many key facts (builder, arrival date, size, price, interior materials like white cabinets/vinyl flooring vs carpet, one-piece fiberglass tub), and includes several likely hallucinations/contradictions (white vinyl siding vs blue, granite countertops, central air/furnace, porch, parent company), reducing accuracy and completeness."
+      },
+      "short": {
+        "rouge_l": 0.2608695652173913,
+        "text_similarity": 0.6863827705383301,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the overall gist (arrival, walkthrough, community/location, promotional ending) but omits many specific factual details from the correct answer\u2014such as Maria Dolan, the 2-bedroom and $96,000 price, concrete foundation work, the 'Four Generations' family portrait and named crew members, and the nearby beaches/amenities."
+      }
+    },
+    {
+      "video_id": "kzlYP9QrIfU",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.2088607594936709,
+        "text_similarity": 0.6640801429748535,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the general moving-vlog theme and mentions items and future move-in content, but it omits several specific details (e.g., the wrapped couch, Google Home Mini, exact donation bags) and wrongly asserts a successful closing and paperwork while hallucinating a Target shopping trip and other unfounded details."
+      },
+      "short": {
+        "rouge_l": 0.27199999999999996,
+        "text_similarity": 0.6105753183364868,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main storyline (moving, showing items, walkthrough/closing, and future videos) but omits several key specifics from the correct answer\u2014such as the 10-month wait, the couch and new fish tank, the non-working oven issue, and the planned 4\u20135 episode series with decor/haul content and a subscribe prompt."
+      }
+    },
+    {
+      "video_id": "TDBm47RbRzc",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.21666666666666665,
+        "text_similarity": 0.6011009216308594,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the general theme (budget-friendly apartment makeover, DIY window sills, entertaining dining table, living area seating, balcony relaxation, and kitchen customization) but omits many specific details (plants 'Tina' and 'Bonnie', pedal bin, Aosom cabinet, DC Fix matte-green cabinet transformation, BM Bargains egg chair, Homesense sofa) and introduces unsupported elements (resident moved from South Wales, fireplace, wicker seating, skyline) that reduce accuracy."
+      },
+      "short": {
+        "rouge_l": 0.18571428571428572,
+        "text_similarity": 0.5178303122520447,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the general themes (London apartment tour, DIY projects, budget-friendly decor, and key areas like dining/living/balcony) but omits many specific details from the reference (renter-friendly DIY specifics, exact furniture and interior elements) and adds an unsupported claim about 'stunning views of the London skyline.'"
+      }
+    },
+    {
+      "video_id": "4rq35TpoAC0",
+      "video_number": "015",
+      "detailed": {
+        "rouge_l": 0.23188405797101447,
+        "text_similarity": 0.7091348171234131,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the general arc (driving, apartment walkthrough, mover cancellation and subsequent setup/organizing) but omits several key facts (Napa Valley trip, parents' significant help, the exact cancellation timing/reason, and explicit advice about staggering leases) and introduces hallucinated specifics (naming 'Sterling Vineyards' and appliance/feature details) or slightly misstating the rebooking situation."
+      },
+      "short": {
+        "rouge_l": 0.1917808219178082,
+        "text_similarity": 0.4279076159000397,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the movers' stress and the office-organizing element, but it hallucinates the apartment being at 'Sterling Vineyards' and omits several key points (Napa Valley trip as an intermission, parents' help, bedroom/closet tour, initial cleaning and detailed lease/contingency advice), so it only partially matches the reference."
+      }
+    },
+    {
+      "video_id": "cH0dn_duqJw",
+      "video_number": "016",
+      "detailed": {
+        "rouge_l": 0.18644067796610173,
+        "text_similarity": 0.7813604474067688,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the main premise (Sonali using Smart City to tour Riverside-area apartments and amenities) but omits key specifics from the reference (exact unit sizes and the three detailed units including the 2-bed/2-bath 1070 sq ft, 1-bed 912 sq ft, and 1-bed 794 sq ft) and adds unsupported details (boyfriend, studio unit, Oracle mention, personal preferences), so it is partially accurate but contains hallucinations and missing facts."
+      },
+      "short": {
+        "rouge_l": 0.25806451612903225,
+        "text_similarity": 0.7691429853439331,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main idea\u2014Sonali searching in Riverside with Smart City and showcasing apartment layouts\u2014but it omits the specific detail that she toured three properties and introduces unverified details (mentions of Oracle/Lady Bird Lake and explicit endorsement/advice) not present in the reference."
+      }
+    },
+    {
+      "video_id": "A1CYprote1k",
+      "video_number": "017",
+      "detailed": {
+        "rouge_l": 0.22272727272727275,
+        "text_similarity": 0.6309431791305542,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level structure (car intro and luxury penthouse tour) but omits many specific facts (sale price, exact car specs, number of beds/bathrooms, sauna, Akrapovic exhaust, Bang & Olufsen audio) and introduces several hallucinations (lane-keeping assist, heated/cooled seats, rooftop terrace with hot tub) that contradict the reference."
+      },
+      "short": {
+        "rouge_l": 0.22439024390243903,
+        "text_similarity": 0.6803485751152039,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the presenter, opening car, and that it's a high-end Sunset Towers apartment with a pool, but it omits many key features (R17m two-story penthouse, specific rooms, Miele kitchen, master suite details) and adds unsupported claims (wrap-around rooftop terrace, 'most expensive ever'), so it is only partially correct."
+      }
+    },
+    {
+      "video_id": "YQIHSLxbzAE",
+      "video_number": "018",
+      "detailed": {
+        "rouge_l": 0.2300884955752212,
+        "text_similarity": 0.7044243812561035,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general idea (a Malindi property tour showing multiple apartments and nearby amenities) but contains several factual errors and fabrications\u2014incorrect prices, contradictory unit descriptions (e.g., a 'one-bedroom' with two bedrooms), invented details like a hospital and subscribe end screen, and misses key specifics from the reference."
+      },
+      "short": {
+        "rouge_l": 0.20238095238095236,
+        "text_similarity": 0.7640146017074585,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the general apartment tour, unit types, and nearby amenities, but omits many key specifics (exact prices, Astra Heights House, Sunpark unit details, water/availability notes, Airbnb mention) and adds an unsupported claim about an ocean view."
+      }
+    },
+    {
+      "video_id": "i06timZiLEI",
+      "video_number": "019",
+      "detailed": {
+        "rouge_l": 0.19642857142857145,
+        "text_similarity": 0.6540646553039551,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction matches the general structure (vlog-style tour of living room, kitchen, bedroom, bathroom, mentions security and lack of amenities, windows, and personalization plans) but it incorrectly states the apartment is newly furnished and adds unverifiable details (herringbone flooring, integrated lighting). It also omits many specific facts from the reference (Cape Town, month-long Property24 search, disc entry per floor and numerous cameras, marble-like countertops, backlit mirror, large mirrored wardrobe with built-in drawers, and the specific viewer prompts)."
+      },
+      "short": {
+        "rouge_l": 0.21374045801526717,
+        "text_similarity": 0.38757604360580444,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level idea (a vlogger apartment tour and mentions security and lack of amenities) but omits most key specifics from the reference (location, unfurnished/month-long search, living room details, kitchen features like marble counters and wine rack, bedroom/bathroom and call to action) and adds unverified details (large windows, herringbone flooring)."
+      }
+    },
+    {
+      "video_id": "0BkEej0H1VU",
+      "video_number": "020",
+      "detailed": {
+        "rouge_l": 0.17848970251716245,
+        "text_similarity": 0.5337721705436707,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main arc \u2014 a surprise apartment makeover with an Art Deco-style painted fireplace, green tile backsplash, a pressed-botanical gallery wall, furniture setup, and a positive reveal \u2014 but it omits many specific elements (brand furniture, DIY conversions, numbered gallery framing, child/single-mother context) and introduces at least one unfounded detail (that the resident worked in the building for over a decade and a name mismatch), reducing accuracy."
+      },
+      "short": {
+        "rouge_l": 0.23036649214659682,
+        "text_similarity": 0.5460147857666016,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main makeover elements (fireplace, green backsplash, pressed-botanical gallery, mixed new/vintage styling, emotional reveal) but misidentifies the resident (Ali vs. Ale/Drew\u2019s friend and single mother), omits key specifics (e.g., the son Levi, the surprise reveal context, the 21 framed botanicals and many installation/details), and thus is incomplete and partially inaccurate."
+      }
+    },
+    {
+      "video_id": "GAyVoc4ok_0",
+      "video_number": "021",
+      "detailed": {
+        "rouge_l": 0.23703703703703702,
+        "text_similarity": 0.7194041013717651,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the overall property tour, condition issues, renovation plans, location and investment thesis, but omits specific facts (unit mix, number of vacancies, common-area details) and contradicts the utilities handling (prediction says utilities included in rent vs correct answer describing splitting the hydrometer to pass costs to tenants)."
+      },
+      "short": {
+        "rouge_l": 0.21301775147928995,
+        "text_similarity": 0.5714775323867798,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures a few high-level points (17-unit building, need for renovation, location as a selling point) but omits many key details about unit mix, common areas, specific unit conditions, and future financing/partnership plans; it also contradicts the reference by saying owners will manage utilities (the correct answer states plans to split meters to pass costs) and adds an unsupported \"university town/student\" emphasis."
+      }
+    },
+    {
+      "video_id": "mWEnFt1FmwE",
+      "video_number": "022",
+      "detailed": {
+        "rouge_l": 0.20302375809935203,
+        "text_similarity": 0.632213830947876,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the overall vlog theme (Kemunto apartment hunting in Pangani, one-bedroom units with balconies, 33\u201338K rents, CBD proximity, and a political billboard at the end) but omits key details from the reference (initial bedsitter tour and 20\u201322K bedsitter pricing, neighborhood walk/self-sufficiency, agent contacts, specific unit features including the 2-bed ensuite and Unit 1501\u2019s large kitchen and water-pressure demo) and adds an unfounded poll detail."
+      },
+      "short": {
+        "rouge_l": 0.25396825396825395,
+        "text_similarity": 0.7169792652130127,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the overall theme (Kemunto touring Pangani apartments, discussing rent, liking the views, and ending with 2022 election billboards) but omits many key specifics from the reference (bedsitters and two-bedroom units, price ranges, the 15-floor building and Unit 1501 details like large kitchen, wardrobes and water pressure) and introduces minor unverified details (\"modern finishes\")."
+      }
+    },
+    {
+      "video_id": "Y7v6b-2SP84",
+      "video_number": "023",
+      "detailed": {
+        "rouge_l": 0.19240506329113927,
+        "text_similarity": 0.5902130007743835,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the main themes (Aaron and Laurie touring Puerto Escondido rentals, on-site negotiation yielding lower prices, and advice to verify properties), but omits many key specifics from the reference (named properties, exact price ranges and negotiated amounts, details about the hostel-style Property #5, kitchen and laundry observations) and adds a minor extraneous CTA."
+      },
+      "short": {
+        "rouge_l": 0.22330097087378642,
+        "text_similarity": 0.7907543182373047,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main themes\u2014reviewing rental options, Airbnb vs. negotiated on-site prices, property types, and practical tips for long-term stays\u2014but it omits many specific factual details from the correct answer (exact price ranges and savings, reasons for rejecting specific properties, surf-hostel drawbacks, and notes about laundry services and the one-bedroom market gap)."
+      }
+    },
+    {
+      "video_id": "BjVA_LbOJMI",
+      "video_number": "024",
+      "detailed": {
+        "rouge_l": 0.18018018018018014,
+        "text_similarity": 0.3668048083782196,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the basic apartment tour layout and furnishings but omits many key factual details from the reference (Elena's identity, Odessa location, apartment size and ceiling height, non-potable water/info about utilities, rental/contract costs and advice, and move details), so it is incomplete despite no outright contradictions."
+      },
+      "short": {
+        "rouge_l": 0.1595092024539877,
+        "text_similarity": 0.42380523681640625,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level idea of an apartment tour covering main rooms, but omits most key specifics (92 sq m, Odessa, L-shaped balcony, second room details, kitchen appliances/non-potable water, rental negotiation, payment and contract/move-in steps) and adds an unsupported claim about being furnished."
+      }
+    }
+  ]
+}

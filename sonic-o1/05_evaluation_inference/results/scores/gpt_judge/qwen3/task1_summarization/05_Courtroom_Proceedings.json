@@ -1,0 +1,237 @@
+{
+  "topic_id": 5,
+  "topic_name": "Courtroom Proceedings",
+  "num_evaluated": 13,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.22769203220449327,
+      "rouge_l_std": 0.06725175490182297,
+      "text_similarity_mean": 0.703391934816654,
+      "text_similarity_std": 0.1369829152572223,
+      "llm_judge_score_mean": 5.923076923076923,
+      "llm_judge_score_std": 2.0176733920929233
+    },
+    "short": {
+      "rouge_l_mean": 0.1762975608269051,
+      "rouge_l_std": 0.06931536510323989,
+      "text_similarity_mean": 0.6202043615854703,
+      "text_similarity_std": 0.1958283193762138,
+      "llm_judge_score_mean": 4.846153846153846,
+      "llm_judge_score_std": 1.9153691689213435
+    },
+    "cider": {
+      "cider_detailed": 0.05115336721216622,
+      "cider_short": 1.808439287059384e-05
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "TVriGlkPexA",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.30188679245283023,
+        "text_similarity": 0.848072350025177,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately captures the video's main events (YouTube disclaimer, Exeter courtroom sentencing for Frank, dropped breach charge, Frank's agitated First Amendment/disability claims, and promotion of LBRY/Odyssey). Minor inaccuracies include mislabeling the speaker as a prosecutor versus the attorney, omitting some specifics (trooper support, initial thank, date), and adding details (shirt, 2011 strike) not present in the reference."
+      },
+      "short": {
+        "rouge_l": 0.26881720430107525,
+        "text_similarity": 0.803522527217865,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main courtroom outcome, dropped bail charge, and promotion of Odyssey/LBRY due to YouTube censorship, but it omits Frank's escalating protests and exact quoted line and incorrectly adds that he claimed persecution for a disability (hallucinated detail)."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.17045454545454544,
+        "text_similarity": 0.48803427815437317,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general tone (sentencing hearing, prosecutor and victim statements) but omits critical specifics (defendant's name, counts, prior 51-year sentence, victim names, heated exchanges, Skolman's explicit lack of remorse and \u2018weapon/parasites\u2019 remarks) and incorrectly introduces a defense-led mental health mitigation and a definitive life-without-parole outcome not supported by the reference."
+      },
+      "short": {
+        "rouge_l": 0.18749999999999997,
+        "text_similarity": 0.46928882598876953,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures generic courtroom elements (statements from prosecutor/family, emotional tone) but omits key specifics (Skolman's admissions, his calling himself a \"weapon\" and lack of remorse, the heated exchange and judge's stern warning, and the prosecutor's details of prior homicides/51-year sentence) and inaccurately asserts a life-without-parole sentencing outcome."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.2183406113537118,
+        "text_similarity": 0.841404378414154,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction accurately conveys the guilty verdict, courtroom announcement, statements from the DA and sheriff, and the sentencing date, but it omits key evidence details (DNA, bloody tarp fingerprint, cell data), the unusually quick deliberation and judge's thanks to the jury, misidentifies the analyst's role, and skips post-verdict motions and pre-sentence actions noted in the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.18779342723004694,
+        "text_similarity": 0.7895609140396118,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states the guilty verdict and that key officials expressed relief, but it omits many central details (quick two-hour deliberation, specific evidence, motions and sentencing timeline, DA's comments on resources/motive, reporter observations) and includes an unsupported claim about the defense not calling witnesses."
+      }
+    },
+    {
+      "video_id": "xwZ2K8b_pBw",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.23798627002288333,
+        "text_similarity": 0.7932368516921997,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the central courtroom incident\u2014an attempt to use an AI-generated avatar and the judge's skepticism/refusal\u2014but omits key facts (the man admitting he 'generated that,' promoting an AI startup, direct judge quotes, age) and the broader factual discussion about AI adoption, rules, and risks, while adding an unsubstantiated split-screen/comedic skit framing."
+      },
+      "short": {
+        "rouge_l": 0.26744186046511625,
+        "text_similarity": 0.8461006879806519,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer captures the core incident (judge confronting a defendant over an AI-generated lawyer and denying courtroom use for his AI business) but omits several key facts (the 74-year-old NY defendant, his admission he generated the AI, his stated motives) and introduces unverified details (past in-person appearances, split-screen comedic skit)."
+      }
+    },
+    {
+      "video_id": "2B_e7fvwi90",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.13114754098360656,
+        "text_similarity": 0.5262206792831421,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the central topic\u2014Lyle Menendez's testimony about sexual abuse by his father\u2014and conveys the emotional tone, but it introduces many specific allegations (methods, ages, objects, and abuse of his brother) that are not present in the reference and may be unverified, so it is over-specific and partially hallucinated."
+      },
+      "short": {
+        "rouge_l": 0.11764705882352941,
+        "text_similarity": 0.447212815284729,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the core testimony about sexual abuse and the emotional reaction, but it fails to identify Lyle Menendez by name or situate the testimony within the broader Menendez brothers case, and contains an ambiguous phrasing about who abused Eric while adding extra specific details not mentioned in the reference."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.15865384615384615,
+        "text_similarity": 0.7145100831985474,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the overall setting and opposing positions in the oral argument, but contains factual errors (misnamed case and lawyers) and omits key specifics\u2014especially the two central legal issues (nexus to public interest and constitutional malice) and several cited authorities\u2014making it incomplete."
+      },
+      "short": {
+        "rouge_l": 0.12903225806451613,
+        "text_similarity": 0.6638145446777344,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the high-level dispute (anti-SLAPP, whether Musk's statements are public concern) and that justices question both sides, but it omits many key specifics from the correct answer\u2014counsel names, alleged harassment details, timeline and factual rebuttals, and cited precedents (Wilson, Nadel, Filmon)\u2014and even slightly misnames the plaintiff."
+      }
+    },
+    {
+      "video_id": "9U_cQz-7sT4",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.33497536945812806,
+        "text_similarity": 0.8095282316207886,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and fully captures the key elements and intent of the correct answer, including the hypotheticals about identity and standing, Judge Jackson's refusal to answer hypotheticals, and her described approach to assessing standing; added visual/broadcast details do not contradict the reference."
+      },
+      "short": {
+        "rouge_l": 0.28402366863905326,
+        "text_similarity": 0.8475238084793091,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the main points\u2014Cruz's hypotheticals about gender/race, questions about legal standing, and Jackson declining to answer while citing law and precedent\u2014but it omits the specific Harvard example and the precise Hispanic/Asian hypothetical and adds minor extra details (Equal Protection/C-SPAN) not present in the reference."
+      }
+    },
+    {
+      "video_id": "gTBoJ9W8zQ8",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.3116883116883117,
+        "text_similarity": 0.6676406860351562,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the core narrative (threat at the Bonaventure, detective acted on orders for a promotion, the accused is identified in court, an outburst and judicial intervention), but it misattributes key details and roles (defense vs prosecution, Pettis renamed Perez), fails to name Lankford, and omits the explicit contempt finding\u2014thus partially correct but materially inaccurate."
+      },
+      "short": {
+        "rouge_l": 0.23622047244094488,
+        "text_similarity": 0.542494535446167,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the basic gist (a female detective admits to threatening a witness and a courtroom disruption occurs) but gets the detective's name wrong, omits that Mickey Haller is cross-examining and that Pettis specifically identifies Lee Lankford, and introduces a fabricated motive (a promised promotion)."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.14778325123152708,
+        "text_similarity": 0.6360259056091309,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general theme\u2014importance of drafting, preparation, cross\u2011examination, time management and fitness\u2014but omits many key specifics from the reference (settlement advice, witness questionnaires, preliminary objections, bilingualism, two\u2011year trial\u2011court recommendation, management skills/books) and includes unsupported/hallucinated details (the 'horses' segment, specific CPC/judgment citations)."
+      },
+      "short": {
+        "rouge_l": 0.08333333333333334,
+        "text_similarity": 0.5913501381874084,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly captures core themes (importance of plaint drafting, legal/procedural knowledge, and preparation/time management) but omits many specific, substantive points from the reference (pleading details, witness prep, settlement strategy, language/judgment study, trial-court advice, and physical fitness)."
+      }
+    },
+    {
+      "video_id": "DelhQUg8eH4",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.209366391184573,
+        "text_similarity": 0.6756015419960022,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately captures the main narrative, witnesses, forensic evidence, and charged offenses, but it omits several specific factual details from the correct answer (e.g., Roberta Jones, the gun/undercover revelation, the license plate and car description, and the 606 Glendale location)."
+      },
+      "short": {
+        "rouge_l": 0.14893617021276598,
+        "text_similarity": 0.48664405941963196,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the main thrust (prosecutor opening, cocaine distribution to an undercover officer, assault, witnesses and forensic evidence) but omits many key specifics (names, O'Hara's saloon, the bottle, license-plate/car location, and forensic match) and adds an unsupported claim about court interpreter exam use."
+      }
+    },
+    {
+      "video_id": "k28NMpEkuRU",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.20817843866171004,
+        "text_similarity": 0.4691089987754822,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures basic facts (date, vandalism, stolen items, seeing a man and identifying the suspect) but omits key details (broken window, bouncer reports, the suspect assaulting the officer, items found on him, continued resistance, and court ID) and adds unsupported meta-information that it is a practice exam, which contradicts the factual incident report."
+      },
+      "short": {
+        "rouge_l": 0.07246376811594203,
+        "text_similarity": 0.17222407460212708,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes a witness testifying about a vandalized car and frames the video as an interpretation practice, but it omits most key facts (date, Merchant's identity, 911 call, his resistance and arrest, items found, and Mendoza's court ID) and mischaracterizes the video's content and purpose."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.2042755344418052,
+        "text_similarity": 0.7689544558525085,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the overall format, main theme (advice on preparing and arguing appeals), categories of appeals, and that Cheema shares anecdotes, but it omits several key specifics from the reference (Section 313/Ropar error, emphasis on oral advocacy and the 'art of communication' including judge psychology, guidance on eyewitness/dying declarations and precedents) and adds dubious visual/hallucinated details (poisoning/physical descriptions) not central to the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.11353711790393015,
+        "text_similarity": 0.5594412088394165,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures only high-level elements (a senior lawyer, practical wisdom, and three categories) and mentions a case anecdote, but it omits most key specifics\u2014technical distinctions, drafting and oral advocacy emphasis, Section 313/Ropar example, vicarious liability, judge-reading strategy, and other case details\u2014so it is an incomplete match."
+      }
+    },
+    {
+      "video_id": "L_dJ23CLzTo",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.32525951557093424,
+        "text_similarity": 0.9057567119598389,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately captures the main points\u2014participants, courtroom nerviness, difficulty of cross-examination, definition and goals of witness familiarisation, and the theory-plus-mock training method\u2014but it omits the anecdote about unprepared witnesses jeopardising cases and adds extra detail about virtual hearings not mentioned in the reference."
+      },
+      "short": {
+        "rouge_l": 0.19512195121951217,
+        "text_similarity": 0.8434785604476929,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction captures the main points\u2014purpose of witness familiarisation, courtroom/cross\u2011examination stress, and increased confidence/effectiveness of evidence. It omits explicit mention of mock cross\u2011examinations and the lawyer's objectives, and adds extra details about solicitors' insight and virtual hearings that are not in the reference."
+      }
+    }
+  ]
+}

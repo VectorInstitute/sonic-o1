@@ -1,0 +1,1857 @@
+{
+  "topic_id": 1,
+  "topic_name": "Patient-Doctor Consultations",
+  "num_evaluated": 102,
+  "aggregated_metrics": {
+    "accuracy": 0.5686274509803921,
+    "correct": 58,
+    "total": 102,
+    "rationale": {
+      "rouge_l_mean": 0.21528322834265565,
+      "rouge_l_std": 0.08009458286147637,
+      "text_similarity_mean": 0.6092753988124576,
+      "text_similarity_std": 0.17055462249312253,
+      "llm_judge_score_mean": 5.686274509803922,
+      "llm_judge_score_std": 2.604597715190909
+    },
+    "rationale_cider": 0.05251277621592781
+  },
+  "per_entry_results": [
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "How does the 'ICE' framework, despite the general history structure, enhance understanding of a patient's primary complaint?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2831858407079646,
+        "text_similarity": 0.6298312544822693,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer mentions the ICE framework and its focus on subjective understanding, concerns, and desired outcomes, which aligns with the correct answer. However, it completely omits the key explanation about how ICE 'hones in and finds out exactly what the problem is' and the emotional aspects of patient expression, which are central to the correct answer."
+      }
+    },
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "What is the speaker's primary rationale for confirming a patient's age instead of their date of birth, and what immediate communication strategy is recommended for eliciting the presenting complaint?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18823529411764708,
+        "text_similarity": 0.40705353021621704,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the primary rationale for asking for age (avoiding mental math) and the recommended communication strategy (open-ended question with uninterrupted patient response). It is slightly more concise than the correct answer but maintains all key factual elements without any hallucinations or contradictions."
+      }
+    },
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "According to the speaker's explanation and the displayed 'Review of Systems' checklist, what is his current strategy for conducting a systems review?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1935483870967742,
+        "text_similarity": 0.6540454626083374,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer contradicts the correct answer by stating the speaker reviews only relevant systems and uses an extensive checklist, whereas the correct answer indicates a general approach across all systems without focusing on specific ones or using the full checklist."
+      }
+    },
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "What integrated strategy does the speaker advocate for during both the systems review and past medical history to uncover potentially overlooked but relevant patient information?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.14857142857142858,
+        "text_similarity": 0.5744128823280334,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer mentions a checklist approach, which is not explicitly stated in the correct answer. It also lacks specific details about the systems review and past medical history strategies described in the correct answer, such as asking about each body system and specifically screening for chronic conditions."
+      }
+    },
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "According to the speaker's detailed explanation of family history, what is the primary clinical reason for specifically inquiring about the age a family member died from a genetic condition?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3368421052631579,
+        "text_similarity": 0.7501658201217651,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly captures the main idea of the correct answer, which is that inquiring about the age of death from a genetic condition helps assess genetic risk. It omits the specific mention of putting the patient's presenting complaint into perspective, but this is a minor detail and does not affect the overall factual correctness."
+      }
+    },
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 870.0,
+        "end": 923.0
+      },
+      "question": "Considering the speaker's advice on patient history taking and his specific example, what is the core purpose of asking about 'anything that's concerning you in particular'?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.27118644067796616,
+        "text_similarity": 0.7765913009643555,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer misinterprets the core purpose of the question. It suggests the goal is to confirm the patient's understanding of their diagnosis, whereas the correct answer explains that the question addresses the 'Concerns' part of the ICE framework to understand the patient's individual worries, which is central to patient-centered care."
+      }
+    },
+    {
+      "video_id": "6PAwe6jndns",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 37.0
+      },
+      "question": "Considering the alternating dialogue and on-screen text cues, what is the primary educational objective of this video?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17142857142857143,
+        "text_similarity": 0.4976802468299866,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer captures the general educational objective of practicing conversational English in a medical context but omits the key detail about the interactive format ('DUET THIS VIDEO') and the specific labeling of dialogue lines. It also lacks mention of the simulated patient-check-in scenario."
+      }
+    },
+    {
+      "video_id": "WR5dACe-spg",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 59.0
+      },
+      "question": "What key shift in the doctor's communication style does the speaker advocate for when interacting with patients, particularly those appearing distressed, as exemplified by the visuals?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.1843971631205674,
+        "text_similarity": 0.6748723983764648,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer correctly identifies the advocacy for a collaborative partnership and mentions key elements like listening and ensuring understanding. However, it omits specific phrases from the correct answer, such as 'calming presence,' 'team approach,' and the explicit quotes about 'figuring this out together' and 'I understand why you feel bad.' These details are crucial for a full semantic match."
+      }
+    },
+    {
+      "video_id": "5KcshgQ45XU",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on Nurse Kim's comprehensive description of her background and role, which primary combination of experiences uniquely equips her to excel as a *consultation specialist* for surgical patients?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17699115044247787,
+        "text_similarity": 0.701034426689148,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer incorrectly attributes Nurse Kim's qualifications to her Allergan sales experience and medical device technology, which are not mentioned in the correct answer. The correct answer emphasizes her nursing background and seminary study in pastoral care, which the predicted answer omits."
+      }
+    },
+    {
+      "video_id": "5KcshgQ45XU",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 269.0
+      },
+      "question": "Based on Nurse Kim's physical examination, including palpation and measurements, and her explanation about discussing natural anatomy, what critical patient-specific information is primarily being gathered?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.1076923076923077,
+        "text_similarity": 0.6927351951599121,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer correctly identifies the main purpose of gathering patient-specific information related to natural anatomy and its impact on surgery. However, it omits specific details about the physical examination actions (palpation and measurements) and the direct audio explanation provided in the correct answer."
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the definition provided, what crucial element of effective communication did the speaker deliberately neglect during his rapid-fire verbal demonstration?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21052631578947367,
+        "text_similarity": 0.5179661512374878,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly identifies'reflective listening' as the neglected element, while the correct answer specifies that the speaker neglected the'successful passage of a message' due to speaking too quickly and indistinctly. The prediction introduces a concept not mentioned in the correct answer."
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "How do the two images exemplify the speaker's claim that communication skills can be learned and improved for better patient outcomes?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18556701030927836,
+        "text_similarity": 0.7328605055809021,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer captures the general idea that one image shows poor communication and the other shows improvement, but it lacks specific details about the patient's emotional state and the speaker's explicit claims about communication skills being learnable. It is concise but less comprehensive than the correct answer."
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the positive patient-doctor interaction depicted in the second image and the lecture's advice, which type of questioning is most conducive to establishing initial rapport?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.358974358974359,
+        "text_similarity": 0.8448506593704224,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies open-ended questions as essential for establishing rapport, aligning with the correct answer. It omits the specific context of the lecture's advice and the positive patient-doctor interaction from the second image, but the core factual element about open-ended questions is preserved."
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Based on the presented information, what is the main purpose of utilizing a 'golden minute' after an open-ended question in a patient consultation?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.25925925925925924,
+        "text_similarity": 0.7032210230827332,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the main purpose of the 'golden minute' as described in the correct answer, emphasizing the patient's ability to express their initial complaint. It omits the specific reference to the timing and the context of open-ended questions but maintains the core intent."
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "A patient says they are 'constantly overwhelmed' and skipping meals. Based on reflective listening, which response best shows empathy for their underlying emotional state?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.06976744186046512,
+        "text_similarity": 0.26850426197052,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer acknowledges the patient's feeling of being overwhelmed and its impact on eating habits, which shows empathy. However, it does not explicitly infer or name the deeper emotional state (such as stress or anxiety) as emphasized in the correct answer, which is a key element of reflective listening."
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "According to the speaker, what is the primary reason to avoid folded arms during patient consultations, despite varying cultural interpretations?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.13793103448275865,
+        "text_similarity": 0.3255757689476013,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies the primary reason for avoiding folded arms as creating a psychological barrier, which aligns with the correct answer. However, it omits the cultural variation aspect and the explicit mention of the on-screen text advice, which are key elements in the correct answer."
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 1050.0,
+        "end": 1121.0
+      },
+      "question": "Based on the presented guidelines and the speaker's explanation, what is the primary benefit of giving a patient a 'golden minute' of uninterrupted speech?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2247191011235955,
+        "text_similarity": 0.8100032806396484,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the primary benefit of the 'golden minute' as described in the correct answer, focusing on allowing full expression of concerns and building rapport. It slightly omits the detail about the patient 'not having a lot on their mind,' but this is a minor omission that does not affect the core meaning."
+      }
+    },
+    {
+      "video_id": "afTFvR7pRqg",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 53.0
+      },
+      "question": "Based on the nurses' collective testimonies regarding continuous learning, strong teamwork, and 'magnet level' practices, what core characteristic of Hackensack Meridian Hackensack University Medical Center is highlighted?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.16296296296296298,
+        "text_similarity": 0.5335525870323181,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the core characteristic of the medical center as a commitment to professional growth and high nursing standards, aligning with the correct answer. It succinctly summarizes the key elements from the nurses' testimonies without adding or omitting critical information."
+      }
+    },
+    {
+      "video_id": "NiGj1YBR4Y4",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the speaker's commentary and the information presented on the webpage, for which medical need is the Neak Tep Hospital particularly recommended?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2807017543859649,
+        "text_similarity": 0.596055269241333,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states that Neak Tep Hospital is recommended for pediatric emergencies, which contradicts the correct answer stating it is preferred for simple, affordable care. The prediction includes irrelevant details about the video's visuals and fabricates a specific medical need not mentioned in the correct answer."
+      }
+    },
+    {
+      "video_id": "NiGj1YBR4Y4",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the presented information, if an individual purchases a box of 30 Atorvastatin tablets in Cambodia instead of the US, what is the approximate percentage cost reduction?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.5,
+        "text_similarity": 0.9499826431274414,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer contains hallucinated content by incorrectly stating the US price as $527.00 and the Cambodia price as $134.00, which contradicts the correct answer's figures of $134 and $5.00. This leads to a completely incorrect percentage calculation."
+      }
+    },
+    {
+      "video_id": "NiGj1YBR4Y4",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 456.0
+      },
+      "question": "Considering the speaker's implied preference for Global Rescue's evacuation service despite Cigna's own add-on, what is the approximate *annual combined cost* for a 70-year-old retiree seeking both comprehensive Cigna medical insurance and Global Rescue evacuation, and why might this specific combination be chosen?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1443298969072165,
+        "text_similarity": 0.1515662670135498,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the question and provides no relevant information about the costs or reasons for choosing the combination of Cigna medical insurance and Global Rescue evacuation service."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on Sarah's personal narrative, what primary motivation drives her extensive involvement in medical research and patient advocacy?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.26506024096385544,
+        "text_similarity": 0.636599063873291,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures Sarah's primary motivation, which is her personal experience with medical issues and the resulting advocacy. It aligns closely with the correct answer, though it slightly simplifies the reference by not explicitly mentioning neurofibromatosis."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Sarah provides a specific example of miscommunication that could lead to significant harm. Which type of miscommunication is she illustrating?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1772151898734177,
+        "text_similarity": 0.6969142556190491,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the key example of miscommunication from the correct answer, specifically the documentation error between 'hyperthyroid' and 'hypothyroid'. It also correctly notes the potential harm, though it slightly simplifies the context provided in the correct answer."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "The male speaker's negative experience with a new eye doctor, described as being 'treated like cattle' and ignored, primarily highlights the importance of which aspect of patient-doctor consultations?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20800000000000002,
+        "text_similarity": 0.5767303705215454,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer misinterprets the video content by focusing on medical bills and continuity of care, which are not mentioned in the correct answer. It also fails to address the core issue of respect and engagement in patient-doctor interactions."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Based on the discussion about hand tingling and a doctor's likely response, what neurological reason would prompt the doctor to examine the patient's neck for a hand symptom?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.1797752808988764,
+        "text_similarity": 0.7354357242584229,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies the neurological reason (cervical spine nerve root compression) but omits key details about the specific nerve roots (C5, C6) and the connection to hand tingling mentioned in the correct answer."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "According to the female speaker, while initially assuming benevolence from one's doctor is helpful, what situation warrants seeking alternative medical advice or another opinion?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3300970873786408,
+        "text_similarity": 0.7484017610549927,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the key points from the correct answer, including the conditions under which seeking alternative medical advice is warranted. It slightly rephrases the correct answer but maintains semantic alignment and factual correctness."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "According to the speakers, what is a crucial role of a trusted person accompanying a patient to a medical consultation for a serious condition?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.14285714285714285,
+        "text_similarity": 0.5281897187232971,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is largely unrelated to the correct answer. It mentions a trusted person but focuses on legal rights and medical advice, which are not discussed in the correct answer. The correct answer emphasizes advocacy and symptom validation, which are entirely absent in the prediction."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Beyond accessing medical records, what method does the speaker specifically suggest to overcome intimidation when discussing sensitive health issues with a medical professional?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16470588235294117,
+        "text_similarity": 0.48259663581848145,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer introduces a suggestion (bringing a trusted person) not mentioned in the correct answer. While it addresses overcoming intimidation, it diverges from the correct method of writing down symptoms. The answer is partially relevant but lacks alignment with the correct answer."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "According to the speakers, what is the best strategy for a patient to ensure their medical concerns are addressed, especially if the doctor is dismissive or overly specialized?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1869158878504673,
+        "text_similarity": 0.6556987762451172,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the key strategy of verbally reviewing prepared notes and aligns with the correct answer. It omits the specific example of the woman reading off the notes herself but retains the core recommendation and context, making it semantically equivalent."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "question": "Based on the speaker's advice, what is the strategic benefit for patients with rare conditions to use specialized, vetted organizations for health information?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.24390243902439024,
+        "text_similarity": 0.6042520999908447,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer correctly identifies the recommendation to use specialized, vetted organizations for health information. However, it omits key details from the correct answer, such as the specific examples of NORD or NIH, the role of primary care physicians, and the advocacy aspect for specific care needs like earlier breast cancer screening."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "question": "When faced with a visibly rushed doctor, what communication strategy is recommended to regain engagement and ensure thoroughness?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2,
+        "text_similarity": 0.7694727182388306,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the key strategies from the correct answer: slowing down, eye contact, and requesting digital follow-up. It maintains semantic alignment and omits no critical elements, though it slightly rephrases the advice without altering the core message."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "question": "Based on the woman's initial advice, what is the underlying goal of pausing and establishing eye contact when a doctor seems rushed?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.26470588235294124,
+        "text_similarity": 0.49794381856918335,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the core intent of the correct answer, which is to ensure the doctor is present and attentive. It omits the mention of 'capturing their attention' and the connection to empathy and communication, but these are supplementary details rather than essential facts."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2310.0,
+        "end": 2520.0
+      },
+      "question": "Sarah's examples of feeling at the 'end of my rope' and a knee that 'hurts whenever I run a marathon' collectively illustrate which crucial patient advocacy tip?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.021505376344086023,
+        "text_similarity": 0.10453268140554428,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer is overly vague and does not address the specific content or context of Sarah's examples as described in the correct answer. It fails to mention the key points about functional impact, emotional state, and the importance of contextual details in patient advocacy."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2490.0,
+        "end": 2700.0
+      },
+      "question": "According to the speaker, why is it crucial for a patient on blood thinners to proactively remind their doctor about medication interactions, even if the doctor prescribes a common pain reliever?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21935483870967745,
+        "text_similarity": 0.6825374364852905,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer mentions the importance of reminding the doctor about medication interactions but fails to include the key example from the video or the specific context of blood thinners and ibuprofen. It also incorrectly states 'the answer is B' which is not part of the correct answer."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2670.0,
+        "end": 2880.0
+      },
+      "question": "According to the speakers, what combination of behaviors allows patients to effectively communicate and assert their needs during stressful medical consultations?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2476190476190476,
+        "text_similarity": 0.6055992245674133,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies emotional intelligence and breathing control as key components, aligning with the correct answer. However, it omits important details about staying calm, being assertive while maintaining respect, and the overall emphasis on communication techniques during stressful consultations."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2850.0,
+        "end": 2992.0
+      },
+      "question": "Beyond simply being heard, what fundamental outcome do the speakers suggest patients gain by actively engaging in their healthcare interactions?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.13333333333333336,
+        "text_similarity": 0.32552647590637207,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is factually incorrect and completely off-topic. It mentions a video call and 'next' on the screen, which are not relevant to the question. It also incorrectly claims that patients gain stronger personal friendships with their doctors, which is not supported by the correct answer."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Given Sarah's direct involvement in neurofibromatosis advocacy and Steve's point about brief doctor visits, what underlying systemic challenge does her call for patient confidence in communication primarily seek to mitigate?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.1208053691275168,
+        "text_similarity": 0.5246418118476868,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer mentions communication challenges between doctors and patients, which is relevant, but it lacks specific details about neurofibromatosis, Sarah's advocacy role, and the systemic issue of brief doctor visits. It also includes unrelated imagery (man in front of a bookcase) not present in the correct answer."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2130.0,
+        "end": 2340.0
+      },
+      "question": "Beyond simply recalling information, what integrated benefit do concise language, written questions, and visual aids offer for self-advocacy during a doctor's appointment?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16129032258064516,
+        "text_similarity": 0.6173858046531677,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the main benefit of using concise language, written questions, and visual aids for self-advocacy. However, it lacks specific details about the role of these tools in streamlining communication and aiding doctors, which are key elements in the correct answer."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2850.0,
+        "end": 2991.35
+      },
+      "question": "How does the speaker's analogy of being 'the boss of your body' support the core message of self-advocacy in patient-doctor communication?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.24161073825503354,
+        "text_similarity": 0.7628828883171082,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer correctly identifies the core message of self-advocacy and connects it to the 'boss of your body' analogy. However, it omits the key detail about the speaker emphasizing respectful and kind communication as part of being an effective 'boss,' which is central to the correct answer."
+      }
+    },
+    {
+      "video_id": "Lu_yCNjFZmU",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 72.0
+      },
+      "question": "According to Marissa Fourie, what is the primary reason for a clinician to upskill their communication within a patient-centered medicine framework?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.13422818791946306,
+        "text_similarity": 0.40949100255966187,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies the main benefit of improved communication as leading to better patient satisfaction and clinical outcomes, which aligns with the correct answer. However, it omits the specific mention of 'better you as clinician' and the reference to Marissa Fourie's explicit statement, which are key elements in the correct answer."
+      }
+    },
+    {
+      "video_id": "KjUhUHfcT_w",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 21.0
+      },
+      "question": "Based on the planned dosages mentioned, what is the combined total of Botox units allocated for the patient's lip flip, DAO, and chin treatments?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.30303030303030304,
+        "text_similarity": 0.6115601658821106,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer correctly identifies the total Botox units as 20, which matches the correct answer. However, it omits the specific allocation for the DAO treatment (5 units) and does not mention the breakdown of the DAO dosage (two and a half per side), which are key details in the correct answer."
+      }
+    },
+    {
+      "video_id": "Xu67ngXWLXI",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "According to the expert, what is the primary factor contributing to the decline in trust within the medical field despite technological advancements?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.05555555555555556,
+        "text_similarity": 0.34682297706604004,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is factually incorrect and does not align with the correct answer. The correct answer identifies the deterioration of patient relationships as the primary factor, while the predicted answer introduces an unrelated and unsupported claim about scientific facts protecting medical relationships."
+      }
+    },
+    {
+      "video_id": "Xu67ngXWLXI",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 228.0
+      },
+      "question": "Considering the described hospital innovation and the patient's interaction with the screen, what is the primary benefit of this technology for fostering trust?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16091954022988506,
+        "text_similarity": 0.48901069164276123,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer focuses on internal communication efficiency, which is not the primary benefit highlighted in the correct answer. It misses the key point about involving families and remote doctors to build trust through direct patient interaction."
+      }
+    },
+    {
+      "video_id": "6vqzBk6z6U4",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 60.0
+      },
+      "question": "Beyond mastering technical skills like IVs and monitors, what deeper understanding of patient care does the speaker emphasize as crucial for becoming a truly great doctor?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.11538461538461539,
+        "text_similarity": 0.5820210576057434,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer captures the core emphasis on rapport and pattern recognition, which aligns with the correct answer. It omits specific examples like ensuring patients can afford medication and the phrase'make their problem your problem,' but these are supplementary details rather than central points. The answer is factually correct and semantically aligned with the reference."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the speaker's explanation, what is the recommended action for patients to understand the current process for securing a GP appointment?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.12403100775193798,
+        "text_similarity": 0.2688339948654175,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer provides no relevant information about the recommended action for patients to secure a GP appointment. It focuses on irrelevant details about the video's visual elements and context, completely missing the key advice from the correct answer."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the provided advice for phone calls, which wound characteristic makes an appointment significantly more urgent for reception staff to prioritize?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.2588235294117647,
+        "text_similarity": 0.5568334460258484,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer incorrectly identifies the urgent wound characteristic as a new leg wound that has not improved in two weeks, while the correct answer specifies a foot wound with diabetes or loss of feeling as the urgent condition. The prediction contradicts the correct answer."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "According to the speaker, which symptom related to new leg swelling necessitates mentioning a potential need for same-day consultation with a GP or nurse practitioner?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17391304347826086,
+        "text_similarity": 0.6411427855491638,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer incorrectly identifies 'pain improving with leg elevation' as the symptom requiring same-day consultation, while the correct answer specifies 'feeling more short of breath than usual.' The predicted answer also lacks the specific time frame (same day) and the direct linkage to the symptom mentioned in the correct answer."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "According to the speaker, what acute signs with any leg swelling indicate a need for immediate GP or nurse practitioner consultation?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12162162162162163,
+        "text_similarity": 0.37420570850372314,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the question and contains no relevant information about the acute signs of leg swelling. It mentions a video consultation app and selects option 'B', which is not discussed in the correct answer."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "According to the photography tips and visual examples, what primary benefit do clinicians gain from receiving both a close-up and a further-away photo of a leg wound?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1925925925925926,
+        "text_similarity": 0.5226062536239624,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer partially aligns with the correct answer by mentioning the benefit of comparing close-up and further-away views. However, it introduces incorrect information about the skin condition being 'likely a form of skin cancer,' which is not mentioned in the correct answer. It also lacks specific details about anatomical location and tissue assessment."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "According to the speaker, why is it crucial to provide a comprehensive list of all medications, including over-the-counter, during a leg-related appointment?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.4197530864197531,
+        "text_similarity": 0.8633327484130859,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the main point of the correct answer, emphasizing the impact of medications on the lower limb condition. It omits the specific quote from the speaker but retains the core reasoning, making it semantically aligned and factually correct."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Considering the advice on explicitly reminding clinicians about diabetes when a foot wound is present, and the potential variability in primary care expertise, what is the primary reason for this emphasis?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2678571428571429,
+        "text_similarity": 0.791797399520874,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the primary reason for emphasizing the reminder about diabetes in the context of a foot wound, which is to ensure referral to a specialist clinic. It omits the specific mention of the 'Referrals' slide and the exact quote from the speaker, but these are supplementary details rather than the core reason."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "According to the presenter, what is the primary distinction in referral for diabetic versus non-diabetic foot ulcers?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.33333333333333337,
+        "text_similarity": 0.9047037363052368,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The predicted answer captures the main distinction between referrals for diabetic and non-diabetic foot ulcers but omits specific details about the mandatory and conditional nature of the referrals as outlined in the correct answer."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "Based on the viewer's mother's symptoms and the speaker's advice, why are water tablets unlikely to resolve her leg swelling?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3008849557522124,
+        "text_similarity": 0.6615713834762573,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies the cause of the swelling and the recommended treatment, but it includes irrelevant details about the visual context of the video that are not part of the correct answer. These extra details do not affect factual accuracy but reduce semantic alignment with the reference."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "question": "Based on the advice given for swollen legs unresponsive to water tablets, and aligning with the initiative displayed, what is the initial recommended action for the patient's mother?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2647058823529411,
+        "text_similarity": 0.7929196357727051,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the main recommendation (seeking an assessment for compression hosiery) and aligns with the correct answer. It omits the specific mention of 'chronic oedema or lymphoedema' and the 'LEGS MATTER!' sign, but these are supplementary details rather than essential factual elements."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "question": "Considering the speaker's explanation of GP training, what is their primary role regarding leg health conditions, particularly in contrast to chronic issues like leg ulcers?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.22641509433962267,
+        "text_similarity": 0.7200292348861694,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the primary role of GPs in assessing acute leg conditions and contrasts it with chronic issues like leg ulcers, which are referred to nurses. It aligns closely with the correct answer and omits no key factual elements."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "question": "Based on the speaker's advice and the organization she represents, why is seeing a nurse practitioner appropriate for acute leg problems?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.15873015873015875,
+        "text_similarity": 0.7332589626312256,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer mentions the specialized focus on lower limb conditions, which aligns with the correct answer. However, it omits key details about the advanced training of nurse practitioners and their ability to assess and prescribe for conditions like venous and arterial disease, which are central to the correct answer."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 2130.0,
+        "end": 2320.0
+      },
+      "question": "According to the speaker, what specific action does the \"Legs Matter\" initiative plan to take to directly address patient communication difficulties with GP practices?",
+      "answer_correct": 0,
+      "gt_answer": "E",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.2831858407079646,
+        "text_similarity": 0.7591568231582642,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately reflects the correct answer by noting that the 'Legs Matter' initiative is mentioned but no specific actions are outlined to address patient communication difficulties. It correctly identifies that the speaker does not provide such details, aligning with the correct answer's emphasis on the lack of specific plans."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the presentation's title and learning objectives, what problem is the 'hub and spokes model' primarily designed to address within a healthcare system?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.3495145631067961,
+        "text_similarity": 0.8749228715896606,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the core purpose of the 'hub and spokes model' as described in the correct answer, including improving access and standardizing ethics consultations across a large healthcare system, particularly in smaller hospitals. It aligns semantically with the correct answer without adding or omitting key factual elements."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Given the identified challenges of moral dilemmas in acute care, and the mandate for ethics consultations, which outcome most effectively demonstrates their role in resolving complex clinical issues?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1878453038674033,
+        "text_similarity": 0.5483101606369019,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer mentions clinical ethics consultations and their role in resolving complex issues, which aligns with the correct answer. However, it lacks specific details about the meta-analysis findings, odds ratio, and the distinction between consensus achievement and other outcomes like burnout reduction. It also references a multiple-choice context not present in the correct answer."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the provided data, what explains the non-uniform distribution of the 98% increase in clinical ethics consultations between 2000 and 2018?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3764705882352941,
+        "text_similarity": 0.801469087600708,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the main cause of the non-uniform distribution\u2014growth in large academic teaching hospitals with 400 or more beds. It also references the graph, aligning with the correct answer. The only minor omission is the specific mention of the 400-499 and 500+ bed categories from the bar chart, but this does not detract significantly from the overall correctness."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Based on both charts and the speaker's explanation, what internal system factor contributed most significantly to the escalating ethics consultation volume at Yale New Haven Hospital compared to its smaller affiliate hospitals?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.24444444444444446,
+        "text_similarity": 0.7606425285339355,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer fails to address the internal system factor mentioned in the question and instead only describes the trend shown in the graph. It omits the key detail about financial support and protected time for the ethics consultation service at Yale New Haven Hospital."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Considering the disparity in ethics consultation growth, how does the proposed Center for Clinical Ethics intend to bridge the resource gap for smaller hospitals?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2773722627737227,
+        "text_similarity": 0.8285270929336548,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer accurately captures the main intent of the Center for Clinical Ethics to bridge the resource gap through centralized programs and system-level support. It omits specific program names mentioned in the correct answer but retains the core idea of resource centralization and support for smaller hospitals."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Considering the identified \"primary gap and obstacle\" in effective ethics consultations and the functions of the Systemwide Ethics Forum, what specific systemic issue does the forum aim to primarily resolve?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.26143790849673204,
+        "text_similarity": 0.7379939556121826,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies the Systemwide Ethics Forum as aiming to improve communication and standardization of ethics practices. However, it introduces the concept of 'community representation' which is not mentioned in the correct answer. The correct answer emphasizes ethics education as the primary gap and focuses on sharing cases and best practices to improve consistency across hospitals, which the predicted answer only partially addresses."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Based on the program details presented, what is the intended credentialing outcome for participants of the new 1-year Yale Clinical Ethics Fellowship?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12280701754385966,
+        "text_similarity": 0.3865264058113098,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states that the credentialing outcome is a master's degree, which is not mentioned in the correct answer. The correct answer specifies that the outcome is HEC-C certification via an exam, while the predicted answer provides an unrelated detail about a master's degree."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Based on the presented survey data, what is the most significant finding regarding the Ethics Consultation Service's impact on clinician moral distress?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2469135802469136,
+        "text_similarity": 0.6296917796134949,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer accurately reflects the key finding that all clinicians who experienced moral distress found the consultation helpful, which aligns with the correct answer. It omits the specific percentage (45.2%) but retains the core message about the effectiveness of the Ethics Consultation Service."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "Based on the speaker's description of their 'newest piece' of work and the initial 2020-2021 consultations, what was the primary ethical challenge the center began addressing?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.18487394957983191,
+        "text_similarity": 0.5647692680358887,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies the primary ethical challenge as fair allocation of scarce healthcare resources during a pandemic, which aligns with the correct answer. It omits specific examples like the 'COVID triage policy' and 'Blood products scarcity protocol' but captures the core issue and context accurately."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "question": "Based on the Yale COVID Triage Policy's stated goals and the discussion of SOFA's characteristics and implementation, what unaddressed issue of the SOFA score could fundamentally undermine equitable healthcare delivery in community hospitals lacking specific resources?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17674418604651165,
+        "text_similarity": 0.7237043380737305,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer introduces a new issue (lack of specialized training) not mentioned in the correct answer. It also misrepresents the video content by claiming the video shows a map of the US with hospital beds, which is not stated in the correct answer. The correct answer focuses on resource limitations and validation processes, which the predicted answer fails to address."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "question": "Given the SOFA score disparities and its predictive accuracy for mortality, what is the critical ethical concern of using SOFA for crisis triage?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21311475409836064,
+        "text_similarity": 0.7096525430679321,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer mentions the disproportionate denial of resources to non-Hispanic Black patients, which aligns with the correct answer. However, it omits the key detail about SOFA scores being disproportionately elevated for this group and the lack of correlation with actual mortality or ICU transfer risk, which are central to the ethical concern."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "question": "Based on the presented data for COVID-19 patients in larger US cohorts, what was the SOFA score's mortality prediction performance relative to age alone?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17475728155339804,
+        "text_similarity": 0.6818462610244751,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer contradicts the correct answer by stating that SOFA showed higher predictive accuracy than age, whereas the correct answer clearly states that SOFA's performance was lower than age. This is a significant factual error."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 2130.0,
+        "end": 2340.0
+      },
+      "question": "According to the speaker, what was the primary impact of the Escalation of Care Protocol, despite its infrequent direct implementation?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17857142857142855,
+        "text_similarity": 0.47534477710723877,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer misrepresents the primary impact of the Escalation of Care Protocol. It focuses on streamlining DNR/DNI orders, which is not mentioned in the correct answer. The correct answer emphasizes improved communication and patient-led decisions, which the predicted answer entirely omits."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 2310.0,
+        "end": 2520.0
+      },
+      "question": "Considering the identified national disparity, how does the proposed unified center for clinical ethics aim to improve access to ethics consultations?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.7390417456626892,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer introduces a new element (mandatory legal review) not present in the correct answer. It misrepresents the proposed solution, which focuses on a hub-and-spoke structure and sharing expertise, rather than legal mandates."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 2490.0,
+        "end": 2700.0
+      },
+      "question": "Based on the displayed consultation data and the speaker's subsequent explanation, what two primary factors contribute to the low utilization of ethics consultation services at smaller community hospitals?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.25423728813559326,
+        "text_similarity": 0.7432681918144226,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer introduces new factors (resources/infrastructure and personnel turnover) not mentioned in the correct answer. While it addresses the theme of low utilization, it lacks the specific factors identified in the correct answer: lack of education and awareness."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 2670.0,
+        "end": 2880.0
+      },
+      "question": "Based on the consultation trend shown and the speaker's remarks about smaller hospitals, what is a key reason for the disparity in YNHH's ethics consultation volume?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.09756097560975609,
+        "text_similarity": 0.6649386882781982,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly claims that smaller hospitals exclusively rely on YNHH for ethics consultations, which is not supported by the correct answer. The correct answer highlights that smaller hospitals have varying levels of functionality in their ethics services, not that they rely solely on YNHH."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 3030.0,
+        "end": 3240.0
+      },
+      "question": "According to the presentation, what was the primary legal driver for the \"Escalation of Care Protocol\" during the Omicron surge?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.25000000000000006,
+        "text_similarity": 0.634170413017273,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer captures the general idea of a legal driver but omits the specific mention of legal protection for clinicians and the absence of an executive order, which are key elements in the correct answer."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 3210.0,
+        "end": 3420.0
+      },
+      "question": "According to the speaker, what was the primary clinical advantage of the Escalation of Care Protocol during the Omicron surge, especially compared to prior triage scenarios?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2255639097744361,
+        "text_similarity": 0.6357578039169312,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly states that the primary clinical advantage was legal immunity for clinicians, which is not mentioned in the correct answer. It also misrepresents the protocol's purpose, as the correct answer emphasizes the ability to trial interventions before making prognostic determinations."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 3390.0,
+        "end": 3548.0
+      },
+      "question": "Given the speaker's explanation about the \"Escalation of Care Protocol\" and subsequent \"Conscientious Practice Policy\", how was equity specifically addressed for the *former*?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.19298245614035084,
+        "text_similarity": 0.4094821810722351,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer incorrectly describes the content of the video and fails to address how equity was specifically addressed for the 'Escalation of Care Protocol.' It mentions a 'hub and spoke model' and'systematic retrospective analysis,' which are not supported by the correct answer and contradict the specific details provided."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 2850.0,
+        "end": 3060.0
+      },
+      "question": "According to the speaker and the displayed data, what is the primary reason for Yale-New Haven Hospital's disproportionately high number of ethics consultations?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2597402597402597,
+        "text_similarity": 0.7711264491081238,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the main reason for Yale-New Haven Hospital's high number of ethics consultations, including the reference to complex cases. It slightly omits the mention of the graph and the specific examples like transplant and ECMO, but the core factual elements are preserved."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 3390.0,
+        "end": 3547.1899999999996
+      },
+      "question": "Regarding the 'Escalation of Care Protocol' shown, what was the speaker's stated approach to equity monitoring for the patients involved in that specific protocol?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21428571428571427,
+        "text_similarity": 0.37554192543029785,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies the case-by-case review approach and mentions the small number of patients, aligning with the correct answer. It omits the specific mention of 26 patients and the reference to a different long-term policy, but these are minor omissions that do not affect the core meaning."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Given the roles of the co-hosting bodies and the specified attendees, what core aim underpins the organization of this video consultation webinar?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.14583333333333334,
+        "text_similarity": 0.2904137372970581,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the question and correct answer, focusing on visual elements of the video rather than the stated aim of the webinar. It fails to address the core purpose or the roles of the co-hosting bodies."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on Stephanie Fraser's introduction, what is the core principle guiding the Scottish Government Advisory Committee's approach to integrating digital technology in neurological care?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.33783783783783783,
+        "text_similarity": 0.5730451941490173,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the core principle mentioned in the correct answer, which is ensuring seamless, integrated services for people with neurological conditions and their caregivers. It omits some contextual details about the committee's five-year plan and the reference to Commitment 8, but the essential message aligns perfectly."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the survey findings and the speaker's concluding remark, what is the primary consideration clinicians should make when deciding on the format for initial neurological diagnoses?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20754716981132076,
+        "text_similarity": 0.8020720481872559,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies the preference for in-person appointments for initial neurological diagnoses, aligning with the correct answer. It also touches on the reasons (comfort, technology, privacy) discussed in the correct answer, though it adds 'anxiety and stress' which is not explicitly mentioned in the correct answer. The core message is accurate and well-aligned."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "According to Calum Duncan, what characteristic defined his pre-pandemic video consultation practice compared to the later overall surge?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1550387596899225,
+        "text_similarity": 0.5175318717956543,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer provides no direct information about Calum Duncan's pre-pandemic video consultation practice or how it differed from the pandemic surge. It focuses on irrelevant visual details and mentions a presentation on tele-neurology without addressing the specific question."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Based on the speaker's comparison, what was the primary reason the 'video conferencing with far-end control' method was unsuitable for widespread use during the Covid-19 pandemic, unlike the 'Near Me' platform?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20618556701030927,
+        "text_similarity": 0.7106128931045532,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies the need for specialized equipment and a dedicated space as the main issues, aligning with the correct answer. It slightly omits the mention of 'clinic space' from the correct answer but captures the core reason for unsuitability. The answer is factually accurate and semantically aligned."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Despite a nationwide trend favoring telephone consultations, what was the primary reason Aberdeen neurologists preferred video consultations using NearMe?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2524271844660194,
+        "text_similarity": 0.7242260575294495,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the primary reasons given in the correct answer, including the ability to observe non-verbal cues and conduct limited examinations. It omits the mention of 'better experience' and the broader context of visual communication, but these are not essential to the core reason stated."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Beyond enabling close-up views of specific physical signs, what broader practical application does the speaker suggest for a smartphone's rear camera during a remote 'home visit'?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2777777777777778,
+        "text_similarity": 0.8227531909942627,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the broader purpose of assessing the living environment for care planning, aligning closely with the correct answer. It omits the specific mention of a relative taking the clinician around the home but retains the core idea of informing care decisions through visual assessment."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Considering the troubleshooting advice for poor picture quality, what underlying factor does the speaker highlight as critical for successful video consultations?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18604651162790695,
+        "text_similarity": 0.49071836471557617,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer incorrectly identifies the key factor as the use of multiple screens, while the correct answer emphasizes patient selection based on internet connectivity. The prediction is factually contradictory and omits the critical element from the correct answer."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "Based on the background, what primary challenge did infrequent Speech and Language Therapy visits create for effective *swallowing assessments* on the Isle of Arran prior to 'Near Me'?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2142857142857143,
+        "text_similarity": 0.6023060083389282,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies the primary challenge of managing patients over the telephone and the difficulty in obtaining reliable information for clinical decisions. It captures the key points from the correct answer but omits the specific mention of monthly visits and potential delays, which are important contextual details."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "question": "Considering the prior 'Near Me' pilot for communication referrals, why was developing a protocol with robust governance and training for *remote swallowing assessments* prioritized and deemed necessary?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2117647058823529,
+        "text_similarity": 0.6833094954490662,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer accurately captures the key points about the higher risks and need for robust protocols, aligning with the correct answer. It omits the specific reference to the 'Near Me' pilot and the comparison with communication assessments, but this does not detract from the factual correctness or semantic alignment."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "question": "Given the potential for choking or aspiration during a remote dysphagia assessment, what is the core role of the Level 4 trained tele-swallowing practitioner during the session?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1739130434782609,
+        "text_similarity": 0.7157208919525146,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is largely off-topic and does not address the core role of the Level 4 trained tele-swallowing practitioner as described in the correct answer. It focuses on technical competency with a platform, whereas the correct answer emphasizes the practitioner's role in observation, feedback, and risk management during the assessment."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "question": "Based on the presentation, what specific methods are used to mitigate 'natural variation' in teleswallow assessments despite having a standard proforma?",
+      "answer_correct": 0,
+      "gt_answer": "E",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.15841584158415842,
+        "text_similarity": 0.4491393566131592,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer introduces new information about 'technology and equipment' and 'continuous retraining' not mentioned in the correct answer. It also misrepresents the content by suggesting these are methods to mitigate natural variation, which the correct answer explicitly states are not detailed in the presentation."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 2130.0,
+        "end": 2340.0
+      },
+      "question": "Considering the speaker's remarks about early 2020, what factor initially hindered the widespread adoption of Near Me in the Neuropsychology department?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.13333333333333333,
+        "text_similarity": 0.26853516697883606,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer introduces a new factor (lack of clear guidelines) not mentioned in the correct answer. While it addresses the theme of hindrance, it diverges from the explicitly stated reason of staff resistance."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 2310.0,
+        "end": 2520.0
+      },
+      "question": "According to the speaker, what primary aspect of neuropsychological practice initially led to skepticism about effectively delivering cognitive assessments via virtual platforms?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.17777777777777778,
+        "text_similarity": 0.40058499574661255,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The predicted answer correctly identifies the skepticism around virtual platforms but fails to mention the specific concern about non-verbal cues and the role of observation in neuropsychological practice, which are central to the correct answer."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 2490.0,
+        "end": 2700.0
+      },
+      "question": "What two distinct challenges, highlighted by the speaker, pose unique risks to patient safety and confidentiality in virtual appointments?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16568047337278108,
+        "text_similarity": 0.6661620736122131,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted answer correctly identifies the two main challenges related to patient safety and confidentiality in virtual appointments. However, it introduces the concept of 'non-verbal cues' and 'therapeutic relationship' which are not explicitly mentioned in the correct answer. The correct answer focuses on the lack of physical intervention and the risk of overheard disclosures, which are more directly aligned with the speaker's statements."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 2670.0,
+        "end": 2880.0
+      },
+      "question": "According to the speaker, what primary factor makes visual and timed cognitive assessment tasks more challenging in remote delivery compared to verbal tasks?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3023255813953488,
+        "text_similarity": 0.5922387838363647,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer incorrectly identifies patient anxiety as the primary factor, whereas the correct answer attributes the challenge to Wi-Fi delays. This is a significant factual contradiction."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 2850.0,
+        "end": 3060.0
+      },
+      "question": "Beyond general connectivity, what unique challenge is highlighted for remotely administering visual cognitive assessment tasks?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.25581395348837205,
+        "text_similarity": 0.48139387369155884,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer introduces a new challenge (lack of hardware) not mentioned in the correct answer. It misses the key point about copyright restrictions, which is the unique challenge highlighted in the correct answer."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 3030.0,
+        "end": 3240.0
+      },
+      "question": "According to the 'Discussion' slide and the speaker's initial remarks, what is the primary interactive mechanism for attendees to provide immediate input regarding guidance for neurological practice?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2637362637362637,
+        "text_similarity": 0.7120367884635925,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies the chat function as the primary interactive mechanism, aligning with the correct answer. It omits the detail about the speaker clarifying that attendees cannot join in to speak, but this does not affect the factual correctness of the main point."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 3210.0,
+        "end": 3420.0
+      },
+      "question": "Based on the shared experiences, what primary factor was identified as influencing the initial ease of implementing virtual consultation platforms across different healthcare settings?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.15714285714285714,
+        "text_similarity": 0.4255601167678833,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct answer, focusing on visual elements and chat functions rather than the key factors discussed in the correct answer, such as pre-existing setups and availability of technology."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 3390.0,
+        "end": 3600.0
+      },
+      "question": "Based on the shared experiences, what specific administrative challenge was mentioned regarding virtual neuropsychology consultations?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1473684210526316,
+        "text_similarity": 0.32944345474243164,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the question and correct answer, focusing on visual descriptions and an answer choice 'B' not mentioned in the correct answer. It fails to address the specific administrative challenge regarding virtual neuropsychology consultations."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 3570.0,
+        "end": 3618.0
+      },
+      "question": "Based on the speaker's closing remarks, what is the primary purpose of inviting attendees to engage with the advisory committee?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.48571428571428565,
+        "text_similarity": 0.8527657985687256,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the primary purpose stated in the correct answer, using equivalent phrasing and maintaining all key factual elements without any omissions or hallucinations."
+      }
+    },
+    {
+      "video_id": "YJFNgX2pmAw",
+      "video_number": "016",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "How does the 'Near Me' initiative address both student learning progression and teaching capacity challenges in medical education?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.23140495867768598,
+        "text_similarity": 0.7931244969367981,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer accurately captures the core aspects of how 'Near Me' addresses both student learning progression and teaching capacity, aligning with the correct answer. It omits specific details about the NHS workforce crisis and the'stepping stone' metaphor but maintains the essential meaning and intent."
+      }
+    },
+    {
+      "video_id": "YJFNgX2pmAw",
+      "video_number": "016",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "According to the speakers, what is a key advantage of using the Near Me model for teaching over traditional simulated or pre-recorded consultation methods?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.16374269005847952,
+        "text_similarity": 0.5600270628929138,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The predicted answer incorrectly describes the video content, mentioning a man, a painting, and a van, which are not present in the correct answer. It also fails to capture the key points about the'real patients and real consultations' and the transformational learning experience emphasized in the correct answer."
+      }
+    },
+    {
+      "video_id": "YJFNgX2pmAw",
+      "video_number": "016",
+      "segment": {
+        "start": 330.0,
+        "end": 361.0
+      },
+      "question": "Based on the initial speaker's evaluation and the subsequent presenter's instructions, what is the primary purpose of the 'Near Me' platform discussed in this video?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.208,
+        "text_similarity": 0.6084402799606323,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The predicted answer is largely irrelevant to the question, focusing on visual elements and an incorrect context (NHS staff) not mentioned in the correct answer. It fails to address the primary purpose of 'Near Me' as a platform for medical students' remote clinical encounters."
+      }
+    }
+  ]
+}

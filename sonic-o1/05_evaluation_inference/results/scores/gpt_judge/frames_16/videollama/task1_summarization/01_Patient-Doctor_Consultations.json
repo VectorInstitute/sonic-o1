@@ -1,0 +1,269 @@
+{
+  "topic_id": 1,
+  "topic_name": "Patient-Doctor Consultations",
+  "num_evaluated": 15,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.1351348023379909,
+      "rouge_l_std": 0.017334141132866968,
+      "text_similarity_mean": 0.475522385040919,
+      "text_similarity_std": 0.11625295613458445,
+      "llm_judge_score_mean": 1.5333333333333334,
+      "llm_judge_score_std": 0.8844332774281066
+    },
+    "short": {
+      "rouge_l_mean": 0.12884549801795128,
+      "rouge_l_std": 0.038111760909933755,
+      "text_similarity_mean": 0.46777819395065307,
+      "text_similarity_std": 0.1274319092565728,
+      "llm_judge_score_mean": 1.4,
+      "llm_judge_score_std": 0.8
+    },
+    "cider": {
+      "cider_detailed": 2.869735129895899e-05,
+      "cider_short": 0.002332076949579247
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.13648293963254593,
+        "text_similarity": 0.4276425242424011,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures a small fragment (presenting complaint, mental health and social history) but omits nearly all major content from the reference (disclaimer, pre-engagement steps, ICE, WIPER, SOCRATES/DOPT, systems review, PMH/drug/family histories, mnemonics) and includes irrelevant visual details."
+      },
+      "short": {
+        "rouge_l": 0.14634146341463414,
+        "text_similarity": 0.5461341142654419,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes presenting complaints and social history, which are minor parts of the correct answer, but it omits nearly all key elements (ICE, WIPER, SOCRATES/DOPT, systems review, JAMTHREADS, drug/family history) and adds an unsupported claim about mental health presenting as physical, so it is largely incomplete and partially inaccurate."
+      }
+    },
+    {
+      "video_id": "6PAwe6jndns",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.18518518518518517,
+        "text_similarity": 0.6558802127838135,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only minor elements (mentions water and gratitude) but largely misrepresents and garbles the video's core content and interactive 'you say green / I say blue' format, omits key details (appointment, 'Lucas', wait time) and includes incorrect/contradictory lines."
+      },
+      "short": {
+        "rouge_l": 0.20408163265306123,
+        "text_similarity": 0.5923290252685547,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is largely garbled and omits most key facts (interactive practice format, green/blue speaking roles, patient Lucas with a 10am appointment, checking in/wait-time topic), only correctly reflecting the water request and a vague reference to 'blue' parts; it also includes unclear or unfounded phrases."
+      }
+    },
+    {
+      "video_id": "WR5dACe-spg",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.1488673139158576,
+        "text_similarity": 0.49481433629989624,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction largely fails to capture the video's main message about a doctor's calming presence and team-based communication, instead giving irrelevant visual details and a likely hallucination (person with a knife); it only vaguely mentions communication, so it is mostly incorrect and incomplete."
+      },
+      "short": {
+        "rouge_l": 0.15602836879432622,
+        "text_similarity": 0.42609918117523193,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction mostly gives irrelevant visual details and hallucinates elements (e.g., a knife, 'no communication' policy) while failing to capture the core points about empathy, calming presence, listening, patient trust, and collaborative communication; it only vaguely hints at communication importance."
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.12949640287769784,
+        "text_similarity": 0.6974164247512817,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general theme (communication importance and practical tips) but is overly vague and omits many key specifics from the reference\u2014definitions, examples of poor communication, the 'golden minute', listening techniques, non\u2011verbal details (85%), empathy, and concrete patient-encounter practices."
+      },
+      "short": {
+        "rouge_l": 0.11111111111111109,
+        "text_similarity": 0.6495143175125122,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only lists three broad questions and fails to provide the requested bullet-point summary or any of the key details (objectives, techniques, non-verbal cues, 'golden minute', consent, etc.), so it captures the vague topic but not the content."
+      }
+    },
+    {
+      "video_id": "afTFvR7pRqg",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.13213213213213212,
+        "text_similarity": 0.5204411745071411,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction lists a few superficial visual details and one brief line about new nurses, but it misses the video's main purpose and themes (testimonials/recruitment, professional growth, teamwork, pride) and includes unrelated or possibly hallucinated specifics."
+      },
+      "short": {
+        "rouge_l": 0.10852713178294573,
+        "text_similarity": 0.3589171767234802,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction mainly lists visual details and omits most key themes (professional growth, teamwork, pride, Magnet-level care, values alignment); only the mention of training new nurses partially matches the reference."
+      }
+    },
+    {
+      "video_id": "NiGj1YBR4Y4",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.12799999999999997,
+        "text_similarity": 0.34231555461883545,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only describes visual scenes (man, websites, street, pharmacy) and fails to convey the video's substantive content about healthcare costs, named hospitals, specific personal experiences, and low medication prices\u2014adding unrelated details (hospital in Thailand) that contradict the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.125,
+        "text_similarity": 0.3366849422454834,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only describes visual scenes (people, websites, pharmacy) and fails to convey the video's core content about healthcare costs, affordable clinic experiences, specific prices, medication availability, and insurance; it has minimal overlap in mentioning hospitals/pharmacies but omits key facts."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.12234042553191489,
+        "text_similarity": 0.34561440348625183,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary: it describes a domestic argument about an attorney and phone call, while the correct answer details patient advocacy, medical appointment strategies, and communication techniques. Key factual elements from the correct answer are entirely missing and contradicted."
+      },
+      "short": {
+        "rouge_l": 0.09691629955947137,
+        "text_similarity": 0.271433562040329,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated\u2014it describes a domestic/attorney argument scene\u2014while the correct answer summarizes patient self-advocacy, communication tactics, and Sarah Powlison's experience; it omits all key elements and contradicts the topic."
+      }
+    },
+    {
+      "video_id": "Lu_yCNjFZmU",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.13669064748201437,
+        "text_similarity": 0.48426759243011475,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only superficial visual elements and the existence of a PhysioPlus communication program, but it omits nearly all substantive content from the reference (speaker identity/profession/location, patient-centered stance, specific topics like cross-cultural and personality-focused communication, objectives, and stated benefits) and adds an unwarranted inference about the woman's role."
+      },
+      "short": {
+        "rouge_l": 0.11650485436893203,
+        "text_similarity": 0.6332985162734985,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only provides a superficial visual description and mentions the PhysioPlus communication program, but it omits nearly all key factual elements about the program's content, aims (e.g., cross-cultural/personality communication), and expected benefits for patient care and outcomes."
+      }
+    },
+    {
+      "video_id": "KjUhUHfcT_w",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.12413793103448276,
+        "text_similarity": 0.488949716091156,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only mentions a brow lift and lip flip and thus captures a tiny part of the video, but it omits the detailed unit-by-unit dosing, the glabella and chin treatments, and mischaracterizes Botox as a \"liquid filler\" while adding unverified satisfaction\u2014major factual omissions and inaccuracies."
+      },
+      "short": {
+        "rouge_l": 0.205607476635514,
+        "text_similarity": 0.4639521539211273,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only mentions a brow lift and lip flip by a doctor, but it omits nearly all specific procedures and dosages (glabella, chin/DAO units) and incorrectly implies a filler-like \"liquid\" treatment and an unverified satisfied outcome, making it largely incomplete and partly incorrect."
+      }
+    },
+    {
+      "video_id": "Xu67ngXWLXI",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.14942528735632185,
+        "text_similarity": 0.43314290046691895,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer largely describes unrelated visual scenes and hallucinated elements and fails to capture the video's central topic\u2014an interview about declining trust in medicine, the ABIM Trust Initiative, causes, and proposed technology-enabled solutions\u2014omitting key facts and themes."
+      },
+      "short": {
+        "rouge_l": 0.16969696969696968,
+        "text_similarity": 0.46440213918685913,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only describes superficial visuals and scenes and fails to capture any of the video's core points about declining trust in medicine, the ABIM Trust Initiative, or the role of technology in rebuilding patient-doctor relationships."
+      }
+    },
+    {
+      "video_id": "6vqzBk6z6U4",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.12979351032448377,
+        "text_similarity": 0.2937881350517273,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely contradicts the reference: it focuses on visual details and claims the video is about mental health, while the correct answer emphasizes medical training, clinical and interpersonal skills, and professional self-care; it omits nearly all key points and only tangentially relates via general self-care."
+      },
+      "short": {
+        "rouge_l": 0.10218978102189781,
+        "text_similarity": 0.3199625015258789,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer only describes visual elements and people, failing to capture any of the substantive points about medical training, skills, patient relationships, ownership of patient problems, or burnout present in the correct summary."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.1281138790035587,
+        "text_similarity": 0.5844428539276123,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general purpose (how to get the most from GP consultations and focus on leg health) but omits many key specifics from the reference (telephone triage, receptionist communication, diabetes/foot-wound referral pathways, photography guidance, face-to-face tips, self-care measures, advocacy/MP advice) and adds unmentioned medication-related advice, reflecting incompleteness and slight hallucination."
+      },
+      "short": {
+        "rouge_l": 0.08421052631578947,
+        "text_similarity": 0.6921480894088745,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only captures a very general encouragement to be proactive and seek care, but omits most specific, important details from the correct answer (triage/face-to-face procedures, wound/swelling reporting, photo triage, preparation for appointments, self-care/exercise, advocacy). It also adds an unrelated point about taking medications that isn't in the reference."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.12106537530266342,
+        "text_similarity": 0.529075562953949,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely misrepresents the video's content\u2014it emphasizes clinical trials and informed consent not covered in the reference\u2014and omits key details about the hub-and-spokes model, ethics consultation outcomes, COVID triage/escalation protocols, and program initiatives; only a vague overlap exists regarding ethics committees and consultation statistics."
+      },
+      "short": {
+        "rouge_l": 0.11486486486486486,
+        "text_similarity": 0.48381900787353516,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction largely misrepresents the video's focus (portraying it as clinical trials/informed consent) and omits key elements like the hub-and-spokes model, Center for Clinical Ethics, ICU Walk Rounds, and COVID triage/escalation protocol; it also includes likely hallucinated details despite minor overlap about ethics consultations and Yale New Haven."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "detailed": {
+        "rouge_l": 0.14814814814814814,
+        "text_similarity": 0.5295780897140503,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely contradicts and hallucinates content (e.g., 'telepathic communication', a lone woman speaker) and omits virtually all key details from the correct summary (presenters, 'Near Me', teleswallow program, patient satisfaction, and survey call), with only a vague, insufficient overlap on empathy/technology."
+      },
+      "short": {
+        "rouge_l": 0.07960199004975124,
+        "text_similarity": 0.44936782121658325,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is largely incorrect and hallucinatory (mentions 'telepathic communication' and a new app) and omits virtually all key webinar details; it only vaguely matches the correct answer on general themes of technology and empathy."
+      }
+    },
+    {
+      "video_id": "YJFNgX2pmAw",
+      "video_number": "016",
+      "detailed": {
+        "rouge_l": 0.10714285714285715,
+        "text_similarity": 0.30546629428863525,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is largely incorrect and hallucinatory: it names the wrong university, misidentifies speakers and topics, and omits all key factual elements about NHS Near Me, Year 3 medical student consultations, teaching capacity, and student feedback described in the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.112,
+        "text_similarity": 0.328610360622406,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is wholly unrelated and incorrect: it references the University of Edinburgh and personal anecdotes about courses and extracurriculars, while the correct answer discusses NHS Near Me, Year 3 medical student consultations at the University of Aberdeen and their educational impact."
+      }
+    }
+  ]
+}

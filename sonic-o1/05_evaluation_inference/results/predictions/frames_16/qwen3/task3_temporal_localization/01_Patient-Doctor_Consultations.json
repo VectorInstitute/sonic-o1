@@ -1,0 +1,3832 @@
+{
+  "model": "qwen3",
+  "topic_name": "01_Patient-Doctor_Consultations",
+  "task": "task3_temporal_localization",
+  "generated_at": "2025-12-24T10:45:55.040179",
+  "num_entries": 102,
+  "num_successful": 102,
+  "num_failed": 0,
+  "entries": [
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 17.845166444778442
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 33.6,
+            "end_s": 35.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's introduction, which occurs between 0.0s and 33.6s. E2 (target) starts at 33.6s when the speaker says 'I am now a final year medical student' and ends at 35.8s. The relationship is 'after', as the target event occurs after the anchor event concludes."
+          },
+          {
+            "question_id": "002",
+            "start_s": 55.0,
+            "end_s": 56.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the sentence 'Now with that lovely disclaimer out of the way, let's get right into it,' which occurs at 54.9s. E2 (target) is the appearance of the text 'before the history' on screen, which starts at 55.0s and remains visible. The relationship is 'immediately after', as the text appears right as the sentence finishes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 66.4,
+            "end_s": 67.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker saying 'So before starting the history, there's generally two things that I try and keep in mind,' which concludes at 66.4s. E2 (target) is the speaker beginning to describe 'washing your hands,' which starts at 66.4s and ends at 67.7s. The relationship is 'immediately after', as the speaker begins the topic right after the introductory sentence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 16.637728929519653
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 210.0,
+            "end_s": 215.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs from 207.0s to 210.0s, where the speaker says 'ICE'. E2 (target), the explanation of what ICE stands for, starts at 210.0s with the word 'IDEAS' and ends at 215.0s. The relationship is 'after' E1."
+          },
+          {
+            "question_id": "002",
+            "start_s": 235.0,
+            "end_s": 240.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs from 228.0s to 235.0s, where the speaker finishes saying the WIPER acronym and its components. E2 (target), the elaboration on 'washing your hands', starts at 235.0s with the phrase 'So washing your hands' and continues until 240.0s. The relationship is 'once_finished' E1."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 15.403051853179932
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 330.0,
+            "end_s": 332.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs from 330.0s to 332.1s, where the speaker asks, 'So, what brought you in today?' E2 (target event) starts immediately after E1, at 332.1s, and continues to 334.8s, during which the speaker begins to explain, 'So the history of presenting complaint or the history of presenting illness is about further exploring whatever the presenting complaint was.' The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 18.5698184967041
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 520.0,
+            "end_s": 522.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 520.0s when the speaker says, 'I'll put a picture of all the possible questions you could ask somewhere up over here.' E2 (target) starts at 520.0s with the appearance of the 'REVIEW OF SYSTEMS' checklist on screen and continues until the speaker finishes his sentence at 522.0s. The relationship is 'simultaneous' as the checklist appears immediately after the speaker finishes the phrase 'somewhere up over here'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 555.0,
+            "end_s": 556.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker asking 'tummy pain'. This occurs at 555.0s. The audio clearly captures the phrase 'any tummy pain?' starting at 555.0s and ending at 556.0s. E2 (target) is the appearance of the 'REVIEW OF SYSTEMS' checklist, which is already on screen from 520.0s. The relationship is 'during', as the speaker is asking this question while the checklist is visible."
+          },
+          {
+            "question_id": "003",
+            "start_s": 619.0,
+            "end_s": 620.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker introducing the mnemonic 'JAM THREADS' at 619.0s. The audio clearly captures him saying the name at 619.0s. E2 (target) is the appearance of the 'Sketchy Medical' text on screen, which happens at 620.0s. The relationship is 'after', as the speaker mentions the mnemonic before the text appears."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 17.96216607093811
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 690.0,
+            "end_s": 690.0,
+            "confidence": 1.0,
+            "rationale_model": "The speaker introduces Sketchy Medical as a resource that helps remember drugs. E1 (anchor) is the introduction of the resource, which starts at 690.0s. E2 (target) is the mention of 'drugs, their mechanism of action, their side effects', which occurs in the same sentence. The relationship is 'during', as the details are part of the initial description."
+          },
+          {
+            "question_id": "002",
+            "start_s": 740.0,
+            "end_s": 740.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker asking a general question about family health, which occurs from 738.0s to 740.0s. E2 (target) is the suggestion to be specific about asthma, diabetes, and hypertension, which begins immediately after the general question, at 740.0s. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 760.0,
+            "end_s": 760.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's advice to signpost the question, which occurs from 750.0s to 760.0s. E2 (target) is the question itself, 'Do you use any recreational drugs?', which is asked right after the signpost is given, starting at 760.0s. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "segment": {
+        "start": 870,
+        "end": 923
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 11.262769937515259
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 877.0,
+            "end_s": 878.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker saying 'concerns from ICE' which ends at 876.6s. E2 (target) is the speaker starting to say 'Just generally, if you're feeling stuck' at 877.0s, as heard in the audio. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 892.0,
+            "end_s": 894.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker saying 'golden rulebook' which ends at 891.2s. E2 (target) is the speaker opening both hands outwards, which is observed visually from 892.0s to 894.0s. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 914.0,
+            "end_s": 915.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the sentence 'I hope you find this video useful' at 913.8s. E2 (target) is the speaker saying 'Peace' at 914.0s, as heard in the audio. The relationship is 'once_finished'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "6PAwe6jndns",
+      "video_number": "002",
+      "segment": {
+        "start": 0,
+        "end": 37
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 9.195760011672974
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2.4,
+            "end_s": 3.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man finishing his line 'Hi, I have an appointment at 10 am.' This occurs between 1.8s and 2.4s. The subtitle 'Sure, what's your name?' appears as green text from 2.4s to 3.0s. The relationship is 'after' E1 finishes."
+          },
+          {
+            "question_id": "002",
+            "start_s": 4.0,
+            "end_s": 4.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man finishing his line 'My name is Lucas.' This occurs between 3.4s and 4.0s. The subtitle 'Thank you, Lucas. Please take a seat...' appears as green text from 4.0s to 4.6s. The relationship is 'after' E1 finishes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 10.0,
+            "end_s": 10.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man finishing his question 'How long is the wait?'. This occurs between 9.6s and 10.0s. The subtitle 'About 10 minutes. Would you like some water while you wait?' appears as green text from 10.0s to 10.6s. The relationship is 'after' E1 finishes."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "WR5dACe-spg",
+      "video_number": "003",
+      "segment": {
+        "start": 0,
+        "end": 59
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 8.736406326293945
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "002",
+            "start_s": 13.3,
+            "end_s": 15.2,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) is the 'we're a team' approach, which is explained with animated graphics from 00:11 to 00:12. E2 (target) is the speaker at his desk looking at a computer, which is visually confirmed to start at 00:13.3 and end at 00:15.2. The temporal relationship is 'after', as the speaker's new scene immediately follows the animated explanation."
+          },
+          {
+            "question_id": "003",
+            "start_s": 39.1,
+            "end_s": 41.5,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) is the speaker saying 'take that extra bit of time to listen', which occurs in the audio from 00:39.1 to 00:40.5. E2 (target) is the 'OK' hand gesture emoji, which appears on screen at 00:40.5 and disappears at 00:41.5. The temporal relationship is 'at the same time as', as the emoji appears precisely when the speaker is making the related statement."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "5KcshgQ45XU",
+      "video_number": "004",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 15.76224970817566
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 42.2,
+            "end_s": 45.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 39.8s when the speaker says, 'I graduated actually as a registered nurse.' E2 (target) starts at 51.6s when she says, 'I went from nursing to pharmaceutical sales actually and worked for many different companies,' and ends at 61.0s when she lists the companies, 'Draxxas Pharmaceutica, calling on neurologists, Blackson Smith Klein, Blue Laboratories, and Allergan.' The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 97.8,
+            "end_s": 100.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 95.8s when the speaker says, 'So it has been an incredible, incredible journey.' E2 (target) starts at 101.2s when she says, 'I've worked actually side by side with Dr. Ebenburg for five years,' and ends at 103.8s. The relationship is 'once_finished', as E2 is a direct continuation of the thought expressed in E1."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "5KcshgQ45XU",
+      "video_number": "004",
+      "segment": {
+        "start": 150,
+        "end": 269
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 13.976945400238037
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 151.0,
+            "end_s": 152.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 150.0s when Nurse Kim begins explaining options and possible outcomes. E2 (target) starts at 151.0s, visually shown when she places her hands on the patient's stomach for examination, and ends at 152.5s when she starts talking. The relationship is 'during', as the examination is part of the discussion."
+          },
+          {
+            "question_id": "002",
+            "start_s": 159.5,
+            "end_s": 160.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the audio of Nurse Kim finishing her discussion about benefits, risks, and complications, which concludes around 159.0s. E2 (target) is her verbal transition to the next topic, 'symmetry,' starting at 159.5s and ending at 160.5s. The relationship is 'immediately after', as she smoothly moves to the new topic without a pause."
+          },
+          {
+            "question_id": "003",
+            "start_s": 171.0,
+            "end_s": 171.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the audio of Nurse Kim stating that the one-hour consultation cannot provide everything, which ends around 170.5s. E2 (target) is her verbal transition to saying they are always available, starting at 171.0s and ending at 171.5s. The relationship is 'immediately after', as she directly follows up with this reassurance."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 11.56391954421997
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 25.0,
+            "end_s": 28.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's introduction, which occurs from 0.0s to 24.9s. The speaker finishes listing the objectives for the lesson at 25.0s. E2 (target) is the slide change to 'Objectives for today's lesson', which occurs at 25.0s and is visible until 28.0s. The temporal relationship is 'after' the speaker finishes his introductory sentence and before he begins the next sentence."
+          },
+          {
+            "question_id": "002",
+            "start_s": 56.0,
+            "end_s": 59.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the list of objectives. This occurs at 56.0s when he says, '...and what basically is empathy.' E2 (target) is the slide change to 'Brain storming time', which happens at 56.0s and is visible until 59.0s. The temporal relationship is 'immediately after' the speaker finishes the list of objectives, as indicated by the audio and visual cues changing synchronously."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 13.116212129592896
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 162.0,
+            "end_s": 172.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 150.0s with the speaker's definition of communication. E2 (target) starts at 162.0s when the speaker begins to explain its application in medical practice, saying, 'So in medical practice, good communication would be you being able to inform your patient of basically their diagnosis and how to manage it.' The relationship is 'after' the anchor definition is provided."
+          },
+          {
+            "question_id": "002",
+            "start_s": 177.0,
+            "end_s": 182.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker introducing the slide titled 'Importance of communication' at 172.0s. E2 (target) starts at 177.0s with the speaker saying, 'In recent years, good doctor-patient communication has been linked to improved patient satisfaction, better patient care and a decrease of malpractice lawsuits.' The relationship is 'after' the slide introduction."
+          },
+          {
+            "question_id": "003",
+            "start_s": 207.0,
+            "end_s": 210.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 202.0s when the speaker starts discussing that many malpractice lawsuits occur due to improper communication. E2 (target) starts at 207.0s with the speaker advising, 'So be aware of of how important it is for you to be a good communicator because regardless of what you really know as a doctor...' The relationship is 'after' the discussion of lawsuits."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 12.81123685836792
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 353.5,
+            "end_s": 368.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) is the initial slide 'Communication is not just talking' being displayed. E2 (target) starts at 353.5s when the speaker says 'Now physicians can improve health outcomes...' and ends at 368.0s. The relationship is 'after' the anchor event has been established."
+          },
+          {
+            "question_id": "002",
+            "start_s": 300.8,
+            "end_s": 308.5,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) is the display of the slide with the two contrasting images. E2 (target) starts at 300.8s when the speaker says 'lady who looks horribly bored' and ends at 308.5s. The relationship is 'during the display of' the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 337.6,
+            "end_s": 348.4,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) is the speaker's definition of verbal communication, which ends at 337.6s. E2 (target) is the definition of non-verbal communication, which starts at 337.6s with the phrase 'non-verbal communication would be communication without or in addition to spoken words' and ends at 348.4s. The relationship is 'immediately after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 12.842318058013916
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 599.4,
+            "end_s": 615.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 593.1s when the speaker introduces the 'golden minute'. E2 (target) starts at 599.4s with the patient's hypothetical response, 'hello doctor, I've been having some chest pain...', and ends at 615.3s when the patient finishes describing their issue. The relationship is 'after' the concept is introduced, as the speaker uses the patient's response to illustrate the concept."
+          },
+          {
+            "question_id": "002",
+            "start_s": 635.1,
+            "end_s": 643.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 635.1s when the speaker says 'we have to check facts'. E2 (target) starts at 641.8s with the speaker saying 'Checking feelings', which is the next item in his list. The relationship is 'immediately after', as he lists the four elements of listening in sequence."
+          },
+          {
+            "question_id": "003",
+            "start_s": 701.0,
+            "end_s": 718.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 692.1s when the speaker asks, 'What is reflective listening?'. E2 (target) is the subsequent explanation that starts at 701.0s with 'This involves active listening...' and ends at 718.6s when he finishes the sentence. The relationship is 'after', as the explanation directly follows the question."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 13.317150354385376
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 723.2,
+            "end_s": 723.7,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs at 722.4s when the speaker says, 'So we have repeating, rephrasing and paraphrasing...'. E2 (target) starts at 723.2s when he says, 'So repeating, for example patient would say...', and ends at 723.7s when he begins the doctor's response. The relationship is 'after', as the speaker introduces the example immediately following his mention of the technique."
+          },
+          {
+            "question_id": "002",
+            "start_s": 736.3,
+            "end_s": 736.7,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) is the completion of the 'Repeating' example at 736.3s, marked by the end of the doctor's line, 'I understand you are suffering from chest pain.' E2 (target) is the introduction of 'Rephrasing' and starts at 736.7s with the speaker saying, 'Rephrasing will be as follows...'. The relationship is 'once_finished', as the speaker clearly concludes the first example before beginning the next."
+          },
+          {
+            "question_id": "003",
+            "start_s": 792.6,
+            "end_s": 792.9,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) is the completion of the 'Reflection of feeling by showing empathy' example at 792.6s, when the speaker says, 'So this is how we can be showing reflection of feeling by showing empathy.' E2 (target) is the appearance of the 'Non-verbal' slide, which occurs at 792.9s. The relationship is 'once_finished', as the speaker concludes his point before the slide changes."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 12.968820810317993
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 870.0,
+            "end_s": 873.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the instruction to 'show a smile' at 870.0s. E2 (target) is the phrase 'check if patient has facial expression of pain', which starts at 870.0s and ends at 873.0s. The target is a direct continuation of the anchor, so the relationship is 'after' the anchor instruction."
+          },
+          {
+            "question_id": "002",
+            "start_s": 914.0,
+            "end_s": 919.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's explanation of cultural interpretations of folding arms, which concludes around 914.0s. E2 (target) is the advice to 'avoid folding arms', which starts at 914.0s and ends at 919.0s. The relationship is 'after' the anchor explanation, as the advice follows directly from the discussion."
+          },
+          {
+            "question_id": "003",
+            "start_s": 956.0,
+            "end_s": 959.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the instruction to 'Introduce yourself to the patient', which is spoken at 956.0s. E2 (target) is the advice to 'explain your role as student/intern and gain consent from patient', which starts at 956.0s and ends at 959.0s. The relationship is 'after' the anchor, as the second instruction follows immediately."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "segment": {
+        "start": 1050,
+        "end": 1121
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 10.974196434020996
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1055.5,
+            "end_s": 1057.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the phrase 'if you're in the hospital' which occurs from 1054.2s to 1055.5s. E2 (target) is the phrase 'inpatient patients' which occurs from 1055.5s to 1057.1s. The relationship is 'immediately after', as the speaker says the words in quick succession."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1064.1,
+            "end_s": 1066.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker introducing the concept of open-ended questions, which occurs from 1061.7s to 1062.3s. E2 (target) is the specific example 'how can I help you today', which is spoken from 1064.1s to 1066.6s. The relationship is 'after', as the speaker first introduces the category before providing an example."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1092.0,
+            "end_s": 1095.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing the explanation of the 'golden minute' at 1090.6s. E2 (target) is the announcement 'that brings us to the end of our lecture', which occurs from 1092.0s to 1095.2s. The relationship is 'after', as the speaker clearly finishes one topic before moving to the conclusion."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "afTFvR7pRqg",
+      "video_number": "006",
+      "segment": {
+        "start": 0,
+        "end": 53
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 10.664898872375488
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 28.96,
+            "end_s": 29.79,
+            "confidence": 1.0,
+            "rationale_model": "Raquel's statement, 'the opportunity that the hospital provides for the nurses,' occurs from 0.0s to 5.4s. The visual of her smiling and opening a package is shown at 28.96s and concludes at 29.79s, which is after her statement."
+          },
+          {
+            "question_id": "002",
+            "start_s": 37.27,
+            "end_s": 38.53,
+            "confidence": 1.0,
+            "rationale_model": "Maria finishes her statement, 'to become a lifelong learner,' at 37.27s. The target event, 'Precious stating that the teamwork is strong,' begins immediately after, at 37.27s and ends at 38.53s. The relationship is 'immediately after' her statement."
+          },
+          {
+            "question_id": "003",
+            "start_s": 50.07,
+            "end_s": 52.03,
+            "confidence": 1.0,
+            "rationale_model": "Reny's statement, 'up to a magnet level,' is completed at 49.88s. The target event, 'Raquel saying her values align with the hospital's values,' starts immediately after, at 50.07s, and ends at 52.03s. The relationship is 'immediately after' Reny's statement."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "NiGj1YBR4Y4",
+      "video_number": "007",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 15.441826343536377
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 87.5,
+            "end_s": 90.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker stating that healthcare in Siem Reap is not the best, which occurs between 75.5s and 79.2s. E2 (target) is the first on-screen appearance of the Royal Angkor International Hospital, which happens at 87.5s when the webpage scrolls to that hospital's listing. The target begins at 87.5s and ends at 90.1s when the speaker begins talking about it. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 161.6,
+            "end_s": 164.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing his description of the Neak Tep Hospital, which concludes around 161.6s. E2 (target) is the speaker beginning to describe the Ly Sreyvyna II Clinic, which starts at 161.6s when he says 'The one that listed here, Sok Bong'. The target ends at 164.2s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "NiGj1YBR4Y4",
+      "video_number": "007",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 15.667021751403809
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 298.5,
+            "end_s": 300.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 260.0s to 279.8s, where the speaker recounts visiting a clinic for chest congestion. E2 (target) occurs from 298.5s to 300.8s when the speaker says, 'And also they do have a couple of dental clinics for those of you with dental emergencies or problems.' The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 130.7,
+            "end_s": 132.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 101.4s to 127.2s, during which the speaker describes the Neak Tep Hospital. E2 (target) occurs from 130.7s to 132.3s when the speaker introduces the 'Ly Sreyvyna II Clinic'. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 337.5,
+            "end_s": 357.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 310.7s to 327.2s, where the speaker introduces the 'Cigna International Health Policy'. E2 (target) occurs from 337.5s to 357.2s, when the Cigna website's insurance quote form is displayed on screen. The relationship is 'once_finished', as the speaker's introduction is complete before the form is shown."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "NiGj1YBR4Y4",
+      "video_number": "007",
+      "segment": {
+        "start": 330,
+        "end": 456
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 12.13852047920227
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "002",
+            "start_s": 330.0,
+            "end_s": 348.0,
+            "confidence": 1.0,
+            "rationale_model": "The anchor event (E1) is the speaker's statement, 'This is Cigna international health policy, fairly typical of policies of this type,' which occurs between 330.0s and 336.0s. The target event (E2) is the display of the Cigna quote form. This form is visible on screen starting at 336.0s and remains until 348.0s. The relationship is 'after' because the form is shown immediately following the speaker's comment."
+          },
+          {
+            "question_id": "003",
+            "start_s": 348.0,
+            "end_s": 360.0,
+            "confidence": 1.0,
+            "rationale_model": "The anchor event (E1) is the speaker's statement, 'evacuation service, also part of Cigna plan,' which occurs between 348.0s and 354.0s. The target event (E2) is the display of the Global Rescue website. This website is visible on screen starting at 354.0s and remains until 360.0s. The relationship is 'after' because the website is shown immediately after the speaker mentions the service."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 16.37441086769104
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 45.4,
+            "end_s": 48.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the host's conclusion of his introduction, which occurs around 45.4s. E2 (target event) is the host introducing Sarah, which he does by saying 'Now, I have a special guest today, you can see her on screen here. Sarah.' This phrase occurs from 45.4s to 48.5s. The relationship is 'immediately after', as the host finishes his sentence and transitions directly to introducing her."
+          },
+          {
+            "question_id": "002",
+            "start_s": 101.5,
+            "end_s": 107.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is Sarah introducing herself, which occurs from 91.8s to 101.5s. E2 (target event) is her mentioning her first surgery, which she states from 101.5s to 107.5s: 'I had my very first surgery when I was five days old...'. The relationship is 'after', as she first introduces herself before providing this specific detail about her medical history."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 17.7138991355896
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 210.0,
+            "end_s": 210.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) concludes at 210.0s when Sarah finishes her sentence '...and just bring support and kindness and love to people like myself living with this disorder.' E2 (target) starts at 210.0s as the video immediately cuts to a static image of Sarah standing behind a blue table with the 'CHILDREN'S TUMOR FOUNDATION' logo. The relationship is 'immediately after' as the scene change is instantaneous following her statement."
+          },
+          {
+            "question_id": "002",
+            "start_s": 270.0,
+            "end_s": 280.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) concludes at 270.0s when Sarah finishes her sentence '...for my condition is.' E2 (target) starts at 270.0s and ends at 280.0s with a video clip of children running in a park during the 'Cuban Zombie Run.' The relationship is 'immediately after' as the clip begins right after her speech."
+          },
+          {
+            "question_id": "003",
+            "start_s": 280.0,
+            "end_s": 280.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 280.0s when Steve asks, 'This goes throughout the world?'. E2 (target) starts at 280.0s as Sarah immediately begins to answer, 'It doesn't go throughout the world though, the walks don't go throughout the world...'. The relationship is 'immediately after' as her response begins at the same moment he finishes asking the question."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 16.38984441757202
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 329.53,
+            "end_s": 330.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the end of the man's question, which concludes at 329.53s. E2 (target) is the woman's response, which begins at 330.0s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 57.24,
+            "end_s": 57.52,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the woman's example, which ends at 57.24s. E2 (target) is the man's response, starting at 57.52s. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 133.18,
+            "end_s": 134.15,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man's statement 'But here's the thing' at 133.18s. E2 (target) is his finding, 'thousands of preventable deaths', which he states starting at 134.15s. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 17.228567123413086
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 526.0,
+            "end_s": 529.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 525.5s when the woman finishes asking 'What's in my budget to fix it?'. E2 (target) starts at 526.0s when she says 'How important is it to me...'. The relationship is 'immediately after'. The speaker's intonation shifts from a practical financial question to a more personal, value-based one."
+          },
+          {
+            "question_id": "002",
+            "start_s": 585.0,
+            "end_s": 586.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man's statement 'not continuing medical bills,' which ends at 584.5s. E2 (target) starts at 585.0s when he begins the new sentence 'So, what does successful self-advocacy look like?'. The relationship is 'after', indicated by the man's clear shift in topic and the start of a new sentence."
+          },
+          {
+            "question_id": "003",
+            "start_s": 689.0,
+            "end_s": 692.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man's explanation of follow-up procedures, which concludes around 687.5s. E2 (target) starts at 689.0s when the woman interjects with 'Or will I actually be able to get into your office in two weeks?'. The relationship is 'after', as she directly builds upon his point to ask a more specific question."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 17.248331308364868
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 88.9,
+            "end_s": 91.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the woman asking about follow-up, which concludes around 88.9s. E2 (target event) is the man asking 'what if the symptoms go away?', which starts at 88.9s and ends at 91.2s. The relationship is 'immediately after' because the man begins his response without any gap."
+          },
+          {
+            "question_id": "002",
+            "start_s": 111.8,
+            "end_s": 115.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the man's statement 'Alright, so you voice your symptoms and concerns clearly, even if they seem minor.', which ends at 111.8s. E2 (target event) is the man giving the shoulder pain example, which starts at 111.8s and ends at 115.2s. The relationship is 'once_finished' because he starts the example immediately after completing his preceding sentence."
+          },
+          {
+            "question_id": "003",
+            "start_s": 133.1,
+            "end_s": 134.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the man's warning 'And if you've never done that, don't try it,' which ends at 133.1s. E2 (target event) is the woman's agreement 'Yeah, don't don't try that,' which starts at 133.1s and ends at 134.5s. The relationship is 'immediately after' as she responds in real-time to his statement."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 17.53308629989624
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 916.8,
+            "end_s": 918.2,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs when the woman finishes her sentence 'assume benevolence of your doctor' at 916.8s. E2 (target) is the man's speech beginning at 916.8s and ending at 918.2s. The relationship is 'immediately after' the anchor event. The visual cue is the immediate transition from the woman's mouth closing to the man's opening his mouth to speak."
+          },
+          {
+            "question_id": "002",
+            "start_s": 931.0,
+            "end_s": 932.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) occurs when the man finishes his sentence 'my first thing' at 930.8s. E2 (target) is the woman's affirmative response 'Yes' which starts at 931.0s and ends at 932.0s. The relationship is 'immediately after' the anchor event. The visual cue is the woman's head nodding and her mouth opening to say 'Yes' as soon as the man stops talking."
+          },
+          {
+            "question_id": "003",
+            "start_s": 952.5,
+            "end_s": 954.0,
+            "confidence": 0.97,
+            "rationale_model": "E1 (anchor) occurs when the man finishes his statement about how to ask for another opinion at 952.5s. E2 (target) is the woman's response 'I think that's definitely valid' which starts at 952.5s and ends at 954.0s. The relationship is 'immediately after' the anchor event. The visual cue is the woman beginning to speak as soon as the man finishes his sentence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1050,
+        "end": 1260
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 16.120728254318237
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1105.8,
+            "end_s": 1117.1,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs from 1095.7s to 1105.5s when the man suggests bringing someone along if you're not feeling safe. E2 (target) starts at 1105.8s when the woman says, 'Yeah, definitely, I think bringing someone in...' and ends at 1117.1s when she says, '...for the very first few times.' The relationship is 'after', as she agrees with his advice."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1120.4,
+            "end_s": 1124.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs from 1117.1s to 1120.4s when the woman explains that a doctor might not trust a patient's pain. E2 (target) starts at 1120.4s when she says, 'But if your your loved one comes in and says...' and ends at 1124.0s when she says, 'No, Doc, they don't believe what you see...' The relationship is 'after', as she provides the example immediately following her statement about the doctor's disbelief."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1230,
+        "end": 1440
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 17.61561417579651
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1231.2,
+            "end_s": 1232.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1230.2s when the man asks, 'Is it legal to be given your own medical records?'. E2 (target) starts at 1231.2s with the woman's affirmative response, 'For sure,' and ends at 1232.7s with 'For sure it is, yes.' The relationship is 'after' the question is asked."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1267.8,
+            "end_s": 1270.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1263.2s when the woman says, 'And you know, things have changed a lot with electronic medical records.' E2 (target) starts at 1267.8s with the man's response, 'All right, bureaucracy. That reminds me common barriers,' and ends at 1270.2s. The relationship is 'after' her statement."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1306.5,
+            "end_s": 1309.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1299.4s when the man asks, 'So let's talk about barrier number one, feeling intimidated by medical professionals.' E2 (target) starts at 1306.5s with the woman stating, 'I am definitely afraid of ants,' and ends at 1309.0s with her saying, 'And I do not...'. The relationship is 'after' the man introduces the topic of fear."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1410,
+        "end": 1620
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.768135786056519
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 123.0,
+            "end_s": 125.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man saying, 'Now, I did have somebody write a comment that they actually handed the doctor paper,' which occurs from 120.0s to 123.0s. E2 (target) is him stating the doctor's refusal, which starts at 123.0s with the phrase 'and the doctor refused to look at it' and ends at 125.0s. The relationship is 'after' the anchor event is introduced."
+          },
+          {
+            "question_id": "002",
+            "start_s": 142.0,
+            "end_s": 145.0,
+            "confidence": 1.0,
+            "rationale_model": "The woman begins discussing her friend's prioritization of cognition at 132.0s. The specific statement, 'I would rather be in pain than have my mental capacity be harmed by this,' starts at 142.0s and concludes at 145.0s. The target event occurs while she is explaining her friend's personal boundaries."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1590,
+        "end": 1800
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 16.115987062454224
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1633.0,
+            "end_s": 1638.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 1633.0s when the man asks, 'Nord, what is that?'. E2 (target) starts at 1634.3s when the woman begins to explain, 'uh, National Organization for Rare Diseases.' The target ends at 1638.0s when she finishes her explanation. The relationship is 'after' the question is asked."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1731.0,
+            "end_s": 1738.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 1731.0s when the woman says, 'I read that I need to start this at 30.' E2 (target) starts at 1731.0s and ends at 1738.0s when she explains, 'And this is why the insurance needs to approve it. So please make this happen.' The relationship is 'after' the anchor event, as the justification for the order is stated immediately following the claim about the reading."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1770,
+        "end": 1980
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 16.155268907546997
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1770.0,
+            "end_s": 1770.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 1770.0s to 1770.0s, where the woman explains the mirroring technique. E2 (target) starts at 1770.0s and ends at 1770.0s, with the phrase 'or you can ask the doctor, you know, what did you hear me say?'. The relationship is 'after', as she first suggests mirroring and then introduces the alternative question."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1770.0,
+            "end_s": 1770.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 1770.0s with the man saying 'just dig'. E2 (target) occurs from 1770.0s to 1770.0s, where he asks, 'Can you dumb that down for the rest of us that only have maybe two master's degrees?'. The relationship is 'after', as he first advises against using jargon and then poses the 'dumb down' question as a solution."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 1950,
+        "end": 2160
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.95140814781189
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 26.7,
+            "end_s": 35.2,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 25.1s when the man finishes his question, 'What do you do?'. E2 (target) is the woman's response, which starts at 26.7s with the word 'I think' and ends at 35.2s with the phrase 'and you look them in the eyes'. The relationship is 'after'. The visual cue is the man finishing his sentence and the woman beginning to speak."
+          },
+          {
+            "question_id": "002",
+            "start_s": 60.2,
+            "end_s": 61.8,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) is the woman's statement that 'Maybe your doctor is having a bad day,' which ends at 60.2s. E2 (target) is the man's response, 'Hey, doctors have bad days?', which starts at 60.2s and ends at 61.8s. The relationship is 'immediately after'. The visual cue is the man's mouth moving as he speaks right after the woman finishes her sentence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2130,
+        "end": 2340
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 16.031678199768066
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 73.9,
+            "end_s": 77.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 71.8s when the man says, 'Let's talk about five practical tips to advocate for yourself.' E2 (target event) starts at 73.9s when the woman begins to speak and says, 'we talked about writing down questions.' E2 ends at 77.9s. The relationship is 'after', as the woman's statement is a direct response to the man's introduction of the topic."
+          },
+          {
+            "question_id": "002",
+            "start_s": 135.5,
+            "end_s": 137.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 134.0s when the man begins his explanation about preparing beforehand. E2 (target event) starts at 135.5s when the man says, 'Well, my neck hurts,' and simultaneously points to his neck with his right hand. E2 ends at 137.1s. The relationship is 'during', as the gesture is a continuous action accompanying his speech."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2310,
+        "end": 2520
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.770181655883789
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2391.0,
+            "end_s": 2400.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 2384.7s when the woman says, 'I am dizzy more when I when I lean forward.' This is immediately followed by the man's advice, 'Yeah, these are important things. Examples of of how it's impacting you can really help.' The target event, the man's advice, is the answer to the question and occurs after the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2431.0,
+            "end_s": 2442.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 2424.0s when the woman says, 'I am not able to distract myself from the pain.' E2 (target), the man's advice, starts at 2431.0s with the words 'And try to be specific too.' The relationship is 'after', as the man's advice is a direct response to her statement."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2490,
+        "end": 2700
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 17.301046133041382
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 273.1,
+            "end_s": 276.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 273.1s when the man says, 'document everything.' E2 (target) starts at 273.1s when the woman immediately responds, 'Yes, absolutely,' and ends at 276.5s when she finishes her advice to 'please take notes.' The relationship is 'immediately after' the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 281.7,
+            "end_s": 283.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man finishing his question, 'Should you ask permission before you record your doctor?' This occurs at 281.7s. E2 (target) is the woman's response, 'Definitely ask permission before you're recording,' which starts at 281.7s and ends at 283.2s. The relationship is 'immediately after' the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 314.0,
+            "end_s": 325.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the woman's explanation of why she checks her online appointment notes, which begins at 314.0s. E2 (target) is her reasoning, 'because I want to be able to go back and say, you know what, this was written in there wrong, can we please correct this,' which starts at 314.0s and ends at 325.5s. The relationship is 'within the same sentence' as the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2670,
+        "end": 2880
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 16.079071521759033
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2734.4,
+            "end_s": 2735.7,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 2734.4s when the man asks, 'Should you be assertive?'. Immediately after, at 2735.7s, he introduces the topic by saying, 'Yes. Okay. And that leads us to our last topic we're going to talk about today, which is what's called emotional intelligence.' The transition is direct and sequential, with the introduction of the new topic beginning right after the question is asked."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2756.7,
+            "end_s": 2760.6,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 2756.7s when the man says, 'We want to learn some breathing control.' At 2760.6s, he begins to describe the specific technique by saying, 'Box breathing is something that that I've done where you breathe in for four seconds, hold it for four seconds, exhale for four seconds, hold it for four seconds.' The description of the technique starts immediately after the mention of breathing control."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "segment": {
+        "start": 2850,
+        "end": 2992
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.591713905334473
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "002",
+            "start_s": 2925.8,
+            "end_s": 2929.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 2924.7s to 2927.6s, when the man says 'If you want, share your story in the comments.' E2 (target) is the 'COMMENT BELOW' graphic, which appears from 2925.8s to 2929.4s. The target graphic is displayed immediately after the anchor speech, and the audio and visual events overlap for the entire duration of the graphic's appearance."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2909.8,
+            "end_s": 2912.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the thumbs up icon, which appears from 2908.2s to 2912.7s. E2 (target) is the 'COMMENT BELOW' graphic, which appears from 2909.8s to 2912.7s. The target graphic is displayed at the same time as the anchor icon, and both disappear at the same time."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Lu_yCNjFZmU",
+      "video_number": "009",
+      "segment": {
+        "start": 0,
+        "end": 72
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 11.945966005325317
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 35.2,
+            "end_s": 38.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is Marissa Fourie's self-introduction, which occurs from 20.5s to 24.2s. E2 (target) is the phrase 'cross-cultural communication,' which is spoken from 35.2s to 38.5s. The relationship is 'after'. The speaker finishes her introduction and then begins listing the topics of the series, with 'cross-cultural communication' being the first."
+          },
+          {
+            "question_id": "002",
+            "start_s": 40.7,
+            "end_s": 43.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the mention of 'cross-cultural communication' from 35.2s to 38.5s. E2 (target) is the phrase 'personality-specific communication skills,' which is spoken from 40.7s to 43.3s. The relationship is 'after'. The speaker lists various topics in sequence, and 'personality-specific communication skills' is mentioned directly after 'cross-cultural communication'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 64.9,
+            "end_s": 65.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is Marissa Fourie's invitation to 'join me on PhysioPlus,' which occurs from 61.1s to 64.5s. E2 (target) is the phrase 'See you there!', spoken from 64.9s to 65.8s. The relationship is 'after'. The invitation concludes, and the speaker immediately follows with the closing remark 'See you there!' before the outro music begins."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "KjUhUHfcT_w",
+      "video_number": "010",
+      "segment": {
+        "start": 0,
+        "end": 21
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "other",
+        "inference_time": 8.853447675704956
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3.4,
+            "end_s": 4.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 2.8s when the speaker finishes saying 'the dosage in each area'. E2 (target) starts at 3.4s when the gloved hand points to the patient's forehead and ends at 4.7s. The relationship is 'after', as the hand points immediately following the completion of that sentence."
+          },
+          {
+            "question_id": "002",
+            "start_s": 9.0,
+            "end_s": 10.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 8.8s when the speaker finishes explaining the brow lift dosage. E2 (target) starts at 9.0s when the gloved hand points to the patient's upper lip and ends at 10.1s. The relationship is 'after', as the hand movement begins immediately after the speaker concludes that segment of the explanation."
+          },
+          {
+            "question_id": "003",
+            "start_s": 12.7,
+            "end_s": 13.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 12.2s when the speaker finishes explaining the dosage for the chin. E2 (target) starts at 12.7s when the text 'TIME TO INJECT!' appears on screen and ends at 13.1s. The relationship is 'after', as the text appears immediately following the completion of the speaker's explanation."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Xu67ngXWLXI",
+      "video_number": "011",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 14.24305248260498
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 42.0,
+            "end_s": 43.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 41.2s when the host finishes saying, 'Welcome to the show.' E2 (target) starts at 42.0s when Rich begins his response with, 'It's great to be here, Dhruv.' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 81.0,
+            "end_s": 83.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 77.0s to 80.0s when Rich is explaining the deterioration of relationships. E2 (target) starts at 81.0s when he says, 'And we've assumed somehow that our scientific facts will protect us.' The relationship is 'during' his explanation."
+          },
+          {
+            "question_id": "003",
+            "start_s": 110.0,
+            "end_s": 111.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 105.5s to 108.0s when the host asks about trust with intermediaries. E2 (target) starts at 110.0s when Rich begins his answer by saying, 'Well, that's a great question, and technology and medicine have always been intimately related. After all, when the stethoscope came in in 1860...'. The relationship is 'immediately after' the question is posed."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "Xu67ngXWLXI",
+      "video_number": "011",
+      "segment": {
+        "start": 150,
+        "end": 228
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 11.250607013702393
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 158.4,
+            "end_s": 163.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker finishing his description of the hospital's TV system at 158.4s. E2 (target) is the cut to the patient using a screen in her hospital bed, which starts at 158.4s and ends at 163.2s. The relationship is 'after', as the visual of the patient is presented immediately following the verbal description."
+          },
+          {
+            "question_id": "002",
+            "start_s": 192.0,
+            "end_s": 193.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the interviewer's question, which occurs from 190.8s to 193.6s. E2 (target) is the visual of the interviewer holding the white card, which is clearly visible from 192.0s to 193.6s. The relationship is 'during', as the visual of the card is present while he is asking the question."
+          },
+          {
+            "question_id": "003",
+            "start_s": 202.4,
+            "end_s": 203.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the interviewer's statement, which occurs from 201.2s to 202.4s. E2 (target) is Rich's response, 'It's really a pleasure,' which occurs from 202.4s to 203.6s. The relationship is 'immediately after', as Rich's response directly follows the interviewer's sentence."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "6vqzBk6z6U4",
+      "video_number": "012",
+      "segment": {
+        "start": 0,
+        "end": 60
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "short",
+        "inference_time": 10.920822381973267
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 15.0,
+            "end_s": 16.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 14.0s when the speaker says 'sometimes you can learn about patient rapport'. E2 (target event) is the phrase 'charting or interacting with other physicians, interacting with other intrapersonnel, health care providers like nurses, pt staff, social work'. This phrase begins at 15.0s and ends at 16.8s. The relationship is 'after' E1."
+          },
+          {
+            "question_id": "002",
+            "start_s": 24.6,
+            "end_s": 25.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 23.4s when the speaker lists skills like 'how to put an IV'. E2 (target event) is the phrase 'how to get a patient discharged'. This phrase begins at 24.6s and ends at 25.8s. The relationship is 'after' E1."
+          },
+          {
+            "question_id": "003",
+            "start_s": 35.2,
+            "end_s": 35.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 35.2s when the speaker says 'Make their problem, your problem'. E2 (target event) is the phrase 'Next, it's important that you be aggressive with your self-care'. This phrase begins at 35.2s and ends at 35.8s. The relationship is 'immediately after' or 'at the same time as' E1, as the speaker transitions directly into the next topic."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.299336433410645
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 38.6,
+            "end_s": 42.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 36.0s to 42.3s, where the speaker introduces herself as a 'tissue viability nurse.' E2 (target) is the phrase 'specializing in wounds,' which is spoken by the speaker between 38.6s and 42.3s. The target event occurs within the duration of the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 74.2,
+            "end_s": 87.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's introduction of the topic 'how to get the most out of your GP consultation,' which concludes around 73.9s. E2 (target) is the phrase 'GP practices are gonna get a huge injection of funding,' which the speaker says between 74.2s and 87.9s. The target event occurs directly after the anchor event has concluded."
+          },
+          {
+            "question_id": "003",
+            "start_s": 137.0,
+            "end_s": 140.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the slide 'Appointments are precious' being displayed on screen from 5.0s to 15.5s. E2 (target) is the speaker's statement, 'GP practices are moving back towards face-to-face appointments,' which occurs between 137.0s and 140.7s. The target event occurs long after the anchor slide has been shown."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.952412128448486
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 189.0,
+            "end_s": 190.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 188.2s when the speaker says 'So there's a whole host of clinical staff...'. E2 (target) is the beginning of the list of roles. The speaker starts saying 'So this is just a few examples...' at 189.0s, and the first role mentioned is 'GP'. The target event is the start of this enumeration, which occurs at 189.0s and is immediately followed by the content of the list. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 198.5,
+            "end_s": 199.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the slide titled 'Does it need to be a GP?' being displayed and the speaker beginning to address the question. E2 (target) is the speaker's statement 'Paramedics, believe it or not, work in primary care'. This specific phrase is spoken at 198.5s, and the target event ends at 199.5s. The relationship is 'during the discussion of' the slide."
+          },
+          {
+            "question_id": "003",
+            "start_s": 210.5,
+            "end_s": 211.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's statement 'So there's a big shift, so paramedics are used to triage urgency and they can assess any urgent conditions as they come into the GP practice.' This statement concludes at 210.0s. E2 (target) is the beginning of the next topic, 'There's advanced clinical practitioners...'. The speaker starts this sentence at 210.5s and continues until 211.5s. The relationship is 'after' the preceding topic has finished."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.459015369415283
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 350.6,
+            "end_s": 353.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 330.0s with the speaker introducing the problem 'A wound on your foot'. E2 (target) starts at 350.6s when she says 'You must say if you are diabetic'. The target ends at 353.5s. The relationship is 'during the explanation of' the problem."
+          },
+          {
+            "question_id": "002",
+            "start_s": 434.5,
+            "end_s": 447.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 398.1s when she discusses making an appointment with a nurse for a new wound. E2 (target) starts at 434.5s with the phrase 'In the meantime your local pharmacist can help with choosing simple dressings'. The target ends at 447.4s. The relationship is 'after', as the pharmacist suggestion is given as interim advice while waiting for the nurse."
+          },
+          {
+            "question_id": "003",
+            "start_s": 482.1,
+            "end_s": 487.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 463.5s when she states, 'You will need an appointment with a nurse for a leg and wound assessment'. E2 (target) starts at 482.1s with the phrase 'Say how long it has been there'. The target ends at 487.1s. The relationship is 'immediately after', as she gives the specific instruction right after stating the need for the appointment."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.68802523612976
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 561.46,
+            "end_s": 567.12,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) is the speaker asking, 'Do you feel more short of breath?' This occurs at 561.46s. E2 (target) is her stating, 'So these can be quite serious and you might need to see a GP or a nurse practitioner the same day,' which starts at 561.46s and ends at 567.12s. The target event begins immediately after the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 612.98,
+            "end_s": 618.62,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) is the speaker's advice, '...measure your ankle and your calf...,' which is spoken from 610.0s to 615.0s. E2 (target) is her example, 'My calf is 50 centimeters,' which starts at 612.98s and ends at 618.62s. The example is given as a direct illustration of how to make the swelling 'really obvious.'"
+          },
+          {
+            "question_id": "003",
+            "start_s": 671.42,
+            "end_s": 675.46,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) is the slide changing to 'Photography' at 670.0s. E2 (target) is the speaker saying, 'Expect to be asked for a photo,' which is spoken from 671.42s to 675.46s. The advice is given immediately as the first point under the new slide."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.430979013442993
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 690.0,
+            "end_s": 705.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 690.0s when the speaker says, 'Some GPs use video consultations on mobile phones and smartphones.' E2 (target) starts at 690.0s and ends at 705.0s, during which she states, 'But a lot of practices find that a really good quality photograph is better than a video.' The relationship is 'immediately after' the anchor event, as she is directly comparing the two methods."
+          },
+          {
+            "question_id": "002",
+            "start_s": 723.0,
+            "end_s": 730.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the slide changing to 'Photography tips' at 723.0s. E2 (target) starts at 723.0s and ends at 730.0s, during which the speaker begins discussing the first tip: 'Take a close up picture, and another one further away.' The relationship is 'at the same time as' the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 755.0,
+            "end_s": 760.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the slide changing to 'General top tips- face to face appointments' at 755.0s. E2 (target) starts at 755.0s and ends at 760.0s, during which the speaker says, 'Go suitably dressed - it is likely that both your legs/feet will be looked at.' The relationship is 'at the same time as' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.924431324005127
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 877.8,
+            "end_s": 882.6,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs from 870.0s to 876.5s, where the speaker lists 'tight socks, trousers, or wellies' as things to avoid. E2 (target) starts at 877.8s when she says 'So go wearing something where you can have fairly quick access to your lower limbs'. The target event ends at 882.6s, concluding with the phrase 'just to see you're not spending half of the appointment getting dressed and undressed'. The relationship is 'after' the initial list of items to avoid."
+          },
+          {
+            "question_id": "002",
+            "start_s": 895.2,
+            "end_s": 899.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs from 891.4s to 894.3s, where the speaker finishes advising 'don't make chit chat about the weather'. E2 (target) starts immediately after at 895.2s with the phrase 'don't dodge the real problem'. The target event ends at 899.0s. The relationship is 'once_finished', as the advice directly follows the previous one in the sentence."
+          },
+          {
+            "question_id": "003",
+            "start_s": 904.1,
+            "end_s": 915.2,
+            "confidence": 0.97,
+            "rationale_model": "E1 (anchor) occurs from 899.9s to 903.5s, where the speaker advises to 'take a list of the medications that you are actually taking'. E2 (target) starts at 904.1s with the phrase 'What you shouldn't take is a bag of tablets'. The target event ends at 915.2s with the advice 'try not to talk about tablets in how they look'. The relationship is 'after', as the advice against describing tablets by their appearance directly follows the initial advice to bring a list."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1050,
+        "end": 1260
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.490982294082642
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1092.73,
+            "end_s": 1112.62,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1092.73s when the speaker says, 'you need that needs all arranging in advance.' E2 (target) starts at 1092.73s and ends at 1112.62s when she explains, 'just for purposes of confidentiality, it needs to be quite a formal process to make sure that they know that you've given permission for them to speak to other people about your health and wellbeing.' The temporal relationship is 'after', as the speaker provides the reason immediately following the initial instruction."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1117.46,
+            "end_s": 1126.19,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1117.46s when the speaker says, 'thinking about your legs when you get there with your appointment, it's probably a good idea to write these things down so that you construct your what you say.' E2 (target) starts at 1117.46s and ends at 1126.19s when she asks, 'So how did it start? Did you knock it?' The temporal relationship is 'after', as the speaker poses this specific question as a direct example of what to write down."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1230,
+        "end": 1440
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.913104057312012
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1290.0,
+            "end_s": 1295.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 1289.6s when the speaker finishes advising to ask for a specialist referral. E2 (target event) is the introduction of referral examples, which begins at 1290.0s when she says, 'These are just some examples...' and concludes at 1295.0s when she starts listing the first example, 'diabetic foot ulcers...'. The temporal relationship is 'after' the advice has been given."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1378.0,
+            "end_s": 1385.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 1375.2s when the speaker states, 'Now, lymphoedema services across the country can be patchy...'. E2 (target event) is the first mention of writing to an MP, which occurs at 1378.0s when she says, 'As an individual, you could write to your MP...'. The temporal relationship is 'after' the patchiness of services is mentioned."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1422.0,
+            "end_s": 1435.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 1421.2s when the speaker states, 'Your GP will assess if onward referral is necessary or not...'. E2 (target event) is the explanation of different causes, which starts at 1422.0s with '...because there are so many reasons for new leg swelling' and continues until 1435.0s. The temporal relationship is 'after' the initial assessment statement is made."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1410,
+        "end": 1620
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.612809181213379
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 151.5,
+            "end_s": 153.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 151.5s when the speaker says, 'what information could you take with you?'. E2 (target) starts at 152.1s with 'you could look at the National Wound Care Strategy Lower Limb Recommendations' and ends at 153.5s. The temporal relationship is 'after' the anchor question is posed."
+          },
+          {
+            "question_id": "002",
+            "start_s": 161.5,
+            "end_s": 163.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 161.5s when the speaker says, 'escalate your concerns to the practice manager'. E2 (target) starts at 162.5s with 'you should be escalating your concerns to your MP' and ends at 163.5s. The temporal relationship is 'after', as the speaker introduces the MP as a next step following the practice manager."
+          },
+          {
+            "question_id": "003",
+            "start_s": 169.0,
+            "end_s": 170.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 169.0s when the speaker says, 'I'll stop sharing'. E2 (target) starts at 169.6s with 'and then I'll have a look see if there's any questions' and ends at 170.0s. The temporal relationship is 'once_finished', as the speaker begins reading the question immediately after stopping the screen share."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1590,
+        "end": 1800
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 16.312162399291992
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 138.2,
+            "end_s": 141.6,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) is the speaker's suggestion for an assessment with the nurse. E2 (target) is the phrase 'ask for an appointment with the nurse to see if they could assess her for some compression hosiery', which occurs from 138.2s to 141.6s. The relationship is 'after', as the speaker mentions the nurse's role as a next step in the care process."
+          },
+          {
+            "question_id": "002",
+            "start_s": 184.3,
+            "end_s": 190.1,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) is the speaker's statement 'That is such a good question'. E2 (target) is the phrase 'self-diagnosis via the internet is never a good idea', which occurs from 184.3s to 190.1s. The relationship is 'after', as the speaker immediately follows her praise of the question with this piece of advice."
+          },
+          {
+            "question_id": "003",
+            "start_s": 250.4,
+            "end_s": 253.4,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) is the speaker's advice on how to frame a conversation with a GP. E2 (target) is the phrase 'No, no, no, no. Please don't worry about things like that' in direct response to a viewer's concern about being a difficult patient. The target event occurs from 250.4s to 253.4s. The relationship is 'after', as the speaker's reassurance comes in direct reply to the viewer's anxiety about their GP's perception."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1770,
+        "end": 1980
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.997085332870483
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1940.0,
+            "end_s": 1943.0,
+            "confidence": 0.9,
+            "rationale_model": "The anchor event, 'Please don't worry about things like that', occurs from 1938.0s to 1940.0s. The target event, the speaker advising not to worry about being labelled as a difficult patient, begins immediately after. She says, 'So please don't worry about being labelled as a difficult patient', and continues to elaborate on this point. The target event starts at 1940.0s and ends at 1943.0s."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1968.0,
+            "end_s": 1970.0,
+            "confidence": 0.95,
+            "rationale_model": "The anchor event, 'What can I do to maintain healthy legs or feet so I don't get any problems?', occurs from 1960.0s to 1965.0s. The target event, the speaker starting to list actions, begins immediately after. She says, 'So, walk, when you are sitting down, legs up...', and continues her list. The target event starts at 1968.0s and ends at 1970.0s."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 1950,
+        "end": 2160
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.9812593460083
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1972.5,
+            "end_s": 1974.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker asking 'how much is in their curriculum?', which occurs at 1972.0s. E2 (target) is the speaker saying 'I don't know', which occurs from 1972.5s to 1974.0s. The relationship is 'immediately after', as the speaker's response directly follows the question."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1982.0,
+            "end_s": 1988.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker saying 'I think it is something that Legs Matter can help with', which occurs from 1980.0s to 1981.5s. E2 (target) is the speaker discussing Legs Matter influencing GP curriculums, which occurs from 1982.0s to 1988.0s. The relationship is 'after', as the discussion on influencing the curriculum begins immediately after the speaker makes the initial statement."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2112.0,
+            "end_s": 2115.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker asking 'Is this appropriate?', which occurs from 2108.0s to 2108.5s. E2 (target) is the speaker stating that nurse practitioners are 'extremely experienced clinicians', which occurs from 2112.0s to 2115.0s. The relationship is 'after', as the speaker provides this detail in her affirmative response to the question."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "segment": {
+        "start": 2130,
+        "end": 2320
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.446372270584106
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2148.0,
+            "end_s": 2150.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 2130.0s to 2148.0s, with the speaker saying, 'I understand the issue of smartphones and taking pictures too.' Immediately after E1 concludes at 2148.0s, E2 (target) begins, with the speaker asking, 'is there somebody who can help you?' at 2148.0s. E2 ends at 2150.0s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2181.0,
+            "end_s": 2183.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 2171.0s to 2183.0s, during which the speaker discusses the importance of planning phone calls to the GP. Within this anchor period, E2 (target) occurs from 2181.0s to 2183.0s, with the speaker asking the specific question, 'What am I feeling?'. The relationship is 'during'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.804479598999023
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 100.7,
+            "end_s": 101.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor), Dr. Angelos's introduction of Dr. Tolchin, concludes at 100.7s. E2 (target), Dr. Tolchin speaking, begins at 100.7s and ends at 101.2s. The relationship is 'immediately after'. The audio confirms a clear transition from one speaker to the next."
+          },
+          {
+            "question_id": "002",
+            "start_s": 59.6,
+            "end_s": 61.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor), Dr. Angelos's description of Dr. Tolchin's research on crisis standards of care, occurs from 52.7s to 59.5s. E2 (target), his description of research on functional neurological disorders and epilepsy, starts at 59.6s and ends at 61.4s. The relationship is 'immediately after'. The speaker's transition from one research area to the next is clear in the audio."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.784735679626465
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 174.14,
+            "end_s": 175.14,
+            "confidence": 0.9,
+            "rationale_model": "The second learning objective ends at 174.14s with the phrase 'large academic medical centers.' Immediately after, at 174.14s, the speaker begins the third objective with 'And participants will be able to explain how a hub and spoke model can allow ethical concerns...'. The visual slide remains the same, indicating a direct continuation of the learning objectives."
+          },
+          {
+            "question_id": "002",
+            "start_s": 253.14,
+            "end_s": 272.14,
+            "confidence": 0.95,
+            "rationale_model": "The slide titled 'Why conduct clinical ethics consultations?' is displayed from 143.78s to 173.14s. The speaker discusses moral distress among clinicians and staff from 253.14s to 272.14s, a period that occurs entirely after the 'Learning Objectives' slide (143.78s-173.14s) has been shown and during the display of the 'Why conduct clinical ethics consultations?' slide."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.761975288391113
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 342.0,
+            "end_s": 354.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 342.0s when the speaker says, '...that clinical ethics consultations were helpful.' E2 (target) starts at 344.0s when he says, 'Jette and her team focused on achieving consensus in clinical decision making.' The target ends at 354.0s. The relationship is 'after' because the speaker first establishes the helpfulness of consultations before stating their role in achieving consensus."
+          },
+          {
+            "question_id": "002",
+            "start_s": 387.0,
+            "end_s": 392.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 387.0s when the speaker says, '...resource utilization and specifically length of stay in the ICU and in the hospital.' E2 (target) starts at 389.0s when he says, '...they found in five studies, their meta-analysis demonstrated that there was a reduced length of stay...' The target ends at 392.0s. The relationship is 'after' as the speaker introduces the topic of resource utilization before providing the specific finding about reduced length of stay."
+          },
+          {
+            "question_id": "003",
+            "start_s": 418.0,
+            "end_s": 423.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs at 418.0s when the speaker says, '...it becomes much more meaningful to look at disparities...' E2 (target) starts at 420.0s when he says, 'and Ellen Fox and her team in 2022 published a survey...' The target ends at 423.0s. The relationship is 'once_finished' because the speaker introduces the concept of disparities and then immediately introduces Ellen Fox's team and their work."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.264781475067139
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 634.43,
+            "end_s": 639.35,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 633.43s when the speaker says 'hospitals with less than 400 beds'. E2 (target) starts at 634.43s with the phrase 'little or no growth' and ends at 639.35s with the phrase 'over that two decade period'. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 594.94,
+            "end_s": 607.61,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 594.94s when the slide titled 'Prior Healthcare System Ethics Committees' is fully displayed. E2 (target) starts at 594.94s when the images of the six hospitals begin to appear and ends at 607.61s when the last image, 'Yale New Haven Children's Hospital Pediatric Ethics Committee', is fully visible. The relationship is 'after' (the images appear immediately following the slide's full display)."
+          },
+          {
+            "question_id": "003",
+            "start_s": 703.44,
+            "end_s": 707.32,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 702.84s when the speaker says 'from 50 to 239'. E2 (target) starts at 703.44s with the phrase 'approximately a five-fold increase' and ends at 707.32s with the phrase 'in consult volume'. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.0879487991333
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 954.2,
+            "end_s": 957.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 950.8s when the speaker says 'And there is a community bioethics forum'. E2 (target event) starts at 954.2s when he says 'includes members of the community who are not employed by the university or the healthcare system' and ends at 957.1s. The relationship is 'after' the mention of the forum."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1024.4,
+            "end_s": 1030.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 1021.0s when the speaker says 'The primary focus of the Center for Clinical Ethics has been ethics education'. E2 (target event) starts at 1024.4s when he says 'a system-wide ethics forum and newsletter' and ends at 1030.7s. The relationship is 'after' the statement of the primary focus."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1072.5,
+            "end_s": 1079.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 1070.2s when the speaker says 'ICU Ethics Walk Rounds'. E2 (target event) starts at 1072.5s when he says 'support for ethics committee members to obtain HEC-C certification' and ends at 1079.7s. The relationship is 'after' the mention of ICU Walk Rounds."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1230,
+        "end": 1440
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.309219360351562
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1255.0,
+            "end_s": 1265.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs when the speaker finishes saying 'ethics consultation services' at approximately 1255.0s. E2 (target) is the phrase 'to collect feedback via online Qualtrics surveys from clinicians' which starts at 1257.0s and ends at 1265.0s. The temporal relationship is 'after', as the speaker begins discussing the feedback collection process immediately following the conclusion of the previous sentence."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1306.0,
+            "end_s": 1313.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor) occurs when the speaker finishes stating that participant satisfaction is not the 'be-all and end-all' at approximately 1306.0s. E2 (target) is the phrase 'we have begun that process with a survey among the clinicians' which starts at 1307.0s and ends at 1313.0s. The temporal relationship is 'after', as the speaker begins this sentence directly after finishing the previous one, with a very short pause."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1313.0,
+            "end_s": 1318.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs when the speaker finishes describing the first pie chart at approximately 1313.0s. E2 (target) is the appearance of the second pie chart, which visually appears on screen starting at 1313.0s and is fully visible by 1318.0s. The temporal relationship is 'immediately after', as the speaker's description of the first chart concludes just as the second chart begins to be displayed."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1410,
+        "end": 1620
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.93761682510376
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1424.0,
+            "end_s": 1426.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor event) occurs at 1424.0s when the speaker says, 'So I want to next turn to some of the organizational ethics consultation work.' E2 (target event) starts at 1424.0s and ends at 1426.0s, which is the time the 'Organizational ethics consultations' table is fully visible on the screen. The relationship is 'at the same time' as the speaker's introduction."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1440.0,
+            "end_s": 1443.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor event) occurs at 1440.0s when the speaker finishes the sentence, '...is something that is new to us.' E2 (target event) starts at 1440.0s and ends at 1443.0s, as the speaker says, 'And it really began during the COVID pandemic.' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1471.0,
+            "end_s": 1474.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor event) occurs at 1471.0s when the speaker begins to list the consultations. E2 (target event) starts at 1471.0s and ends at 1474.0s, as the speaker says, 'With the blood bank, a blood products scarcity protocol.' The relationship is 'during'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1590,
+        "end": 1800
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 16.40487766265869
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1596.3,
+            "end_s": 1601.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1596.3s when the speaker says, 'the sequential organ failure assessment or SOFA score.' E2 (target) starts at 1596.3s and ends at 1601.2s, during which the speaker says, 'For those of you who are not familiar with the sequential organ failure assessment, is a 25-point scale predicting mortality in critically ill patients based on quantitative assessments of six organ systems.' The relationship is 'immediately after' the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1668.8,
+            "end_s": 1675.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1668.8s when the speaker says, '70% of publicly available crisis standards of care used either the SOFA score or a modified version of the SOFA score.' E2 (target) starts at 1670.0s and ends at 1675.0s, during which the speaker says, 'And we know for a fact that at least in one state, in Alaska, the SOFA score was actually used to allocate hemodialysis machines.' The relationship is 'after' the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1724.4,
+            "end_s": 1731.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1724.4s when the 'SOFA Disparities' slide appears on screen. E2 (target) starts at 1724.4s and ends at 1731.0s, during which the speaker says, 'while in parallel to our development of a triage process that used the SOFA score, we had some significant concerns about both the accuracy of the SOFA score in predicting mortality and potential contributions to disparities.' The relationship is 'immediately after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1770,
+        "end": 1980
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.615440607070923
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1773.6,
+            "end_s": 1777.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1770.0s when the speaker says, 'to test the triage protocol before it was ever used.' E2 (target) occurs from 1773.6s to 1777.8s when the speaker states, 'we were able to develop a SOFA calculation system within our electronic medical record.' The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1788.5,
+            "end_s": 1803.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1788.0s when the speaker says, 'we conducted a retrospective cohort study of 2320 patients.' E2 (target) occurs from 1788.5s to 1803.5s when the speaker details the demographics: 'approximately 46% of the patients were non-Hispanic white, 27% were non-Hispanic black, 28% were Hispanic, the median age was 65, and approximately 53% were female.' The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1828.2,
+            "end_s": 1837.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1826.8s when the speaker says, 'non-Hispanic black patients had greater odds of an elevated SOFA score.' E2 (target) occurs from 1828.2s to 1837.0s when the speaker states, 'but at the same time, when controlling for age, sex, and medical comorbidities, we found no significant difference by race in mortality.' The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1950,
+        "end": 2160
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.64089584350586
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2066.0,
+            "end_s": 2072.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor event) occurs from 2058.0s to 2066.0s as the speaker mentions the early small cohort from Wuhan, China. E2 (target event) starts at 2066.0s when he says 'subsequent larger cohorts' and ends at 2072.0s as he states they 'did not show such high accuracy rates.' The relationship is 'after' the anchor event is completed."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2105.0,
+            "end_s": 2114.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor event) occurs from 2101.0s to 2105.0s when the speaker says, 'This graph here is a calibration curve.' E2 (target event) starts at 2105.0s with the speaker explaining the diagonal line and ends at 2114.0s. The relationship is 'after' the anchor event, as the speaker immediately begins to explain the graph's features."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2136.0,
+            "end_s": 2142.0,
+            "confidence": 0.96,
+            "rationale_model": "E1 (anchor event) occurs from 2130.0s to 2136.0s as the speaker states that SOFA predicted mortality with less accuracy than age in their own COVID cohort. E2 (target event) starts at 2136.0s when he says 'In contrast, the pre-COVID eICU cohort' and ends at 2142.0s as he mentions SOFA predicted mortality with better accuracy than age. The relationship is 'after' the anchor event is stated."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 2130,
+        "end": 2340
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.110294342041016
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2169.3,
+            "end_s": 2173.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker saying 'the Omicron surge increased' at 2168.2s. E2 (target event) is the speaker talking about working with the legal team, which occurs from 2169.3s to 2173.0s. The temporal relationship is 'after'. The audio cue is the speaker immediately continuing his sentence from the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2211.0,
+            "end_s": 2212.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker finishing his statement about the policy being active until late February of 2022 at 2209.2s. E2 (target event) is the appearance of the 'Scope of protocol' slide, which happens at 2211.0s. The temporal relationship is 'once_finished'. The visual cue is the slide changing to the specified title at the given time."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2277.3,
+            "end_s": 2280.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker finishing the second bullet point on the 'Scope of protocol' slide at 2274.3s. E2 (target event) is the speaker mentioning 'renal replacement therapy' at 2277.3s. The temporal relationship is 'after'. The audio cue is the speaker reading the third bullet point on the slide."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 2310,
+        "end": 2520
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.406015634536743
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2330.0,
+            "end_s": 2340.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 2328.3s to 2329.3s when the speaker says, 'and that patients were much more likely to choose limited life-sustaining interventions of their own accord...'. E2 (target) starts at 2330.0s and ends at 2340.0s, during which the speaker says, '...choose a code status of do not resuscitate or do not resuscitate do not intubate...'. The target event occurs after the anchor event is completed."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2360.0,
+            "end_s": 2365.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 2357.9s to 2358.4s when the speaker says, 'But I want to highlight some takeaway points...'. E2 (target) starts at 2360.0s and ends at 2365.0s, during which the slide 'Takeaways' with the first bullet point ('Patients and clinicians overwhelmingly find ethics consultations to be helpful...') is displayed on the screen. The target event occurs after the anchor event is completed."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 2490,
+        "end": 2700
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.538043975830078
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2557.5,
+            "end_s": 2559.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 2557.5s when the speaker says, 'I'll stop and take questions from this group.' E2 (target) begins at 2557.5s with the audience member's first word, 'Thanks,' and ends at 2559.1s. The relationship is 'immediately after,' as the audience member starts speaking as soon as the speaker finishes his sentence."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2592.9,
+            "end_s": 2601.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the audience member's compliment, which concludes around 2592.9s. E2 (target) is the specific question, which starts at 2592.9s when he says, 'I have a specific question about your interactions with these local hospital ethics committees for the five other...' and ends at 2601.5s. The relationship is 'once_finished,' as he asks the question right after finishing his complimentary remarks."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2631.7,
+            "end_s": 2632.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the audience member finishing his statement about low numbers of consultations, which ends at 2631.7s. E2 (target) is the speaker's response, which starts at 2631.7s with the word 'So,' and ends at 2632.7s. The relationship is 'immediately after,' as the speaker begins answering as the audience member concludes his thought."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 2670,
+        "end": 2880
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.385040998458862
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "002",
+            "start_s": 2745.0,
+            "end_s": 2755.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 2744.0s to 2745.0s when the listener finishes asking about assessing the quality of care. E2 (target) starts at 2745.0s with the speaker saying 'So that's a great question' and ends at 2755.0s as he begins to explain the initiative. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2780.0,
+            "end_s": 2785.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 2775.0s to 2780.0s when the speaker mentions starting to survey clinicians. E2 (target) starts at 2780.0s with the phrase 'and we are planning' and ends at 2785.0s when he says 'within the next year'. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 2850,
+        "end": 3060
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.163722038269043
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2850.0,
+            "end_s": 2852.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 2850.0s when the speaker says, 'hospitals in the healthcare system are able to join together.' E2 (target) starts at 2850.8s with the phrase 'and we will preferentially present cases from some of the smaller hospitals.' The relationship is 'after' the anchor event, as the speaker is continuing a thought. The visual slide is a line chart, but the audio provides the necessary context."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2871.8,
+            "end_s": 2874.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 2871.2s when the speaker says, 'And then, you know, a third method of feedback is being.' E2 (target) starts at 2871.8s with the phrase 'formal needs assessments.' The relationship is 'immediately after' the anchor event, as the speaker is defining the method they just introduced. The visual slide is a line chart, but the audio provides the necessary context."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2905.2,
+            "end_s": 2908.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) starts at 2904.8s when the speaker says, 'the overwhelming response was number one.' E2 (target) starts at 2905.2s with the phrase 'a lack of ethics education.' The relationship is 'immediately after' the anchor event, as the speaker is directly stating the first response. The visual slide is a line chart, but the audio provides the necessary context."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 3030,
+        "end": 3240
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.774935960769653
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3051.3,
+            "end_s": 3053.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 3049.4s when the speaker says, 'The more medically complex cases tend to transfer.' E2 (target) is the list of examples that follows. The target begins immediately after the anchor, at 3051.3s, when he says 'So transplant cases,' and ends at 3053.8s with 'or neuro ICU.' The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3119.3,
+            "end_s": 3122.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the questioner's statement, 'I had a question about your escalation of care policy,' which occurs from 3115.3s to 3120.2s. E2 (target) is the slide titled 'Escalation of Care Protocol.' The slide appears on screen at 3119.3s and is fully visible by 3120.0s, which is after the anchor event has finished."
+          },
+          {
+            "question_id": "003",
+            "start_s": 3165.5,
+            "end_s": 3175.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's statement, 'boarding 190 patients in the emergency department,' which occurs from 3162.7s to 3164.8s. E2 (target) is the discussion of concerns about care levels. The target begins at 3165.5s with 'and there were significant concerns' and continues until 3175.5s. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 3210,
+        "end": 3420
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.363430261611938
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3213.92,
+            "end_s": 3221.92,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 3210.0s to 3213.92s, where the speaker says 'in all 26 of those cases'. E2 (target) occurs from 3213.92s to 3221.92s, where the speaker says 'there were many more cases where clinicians reported that they were able to have you know more frank discussions'. The relationship is 'after' the anchor event concludes."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3234.72,
+            "end_s": 3237.46,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 3230.5s to 3234.72, where the speaker says 'one thing that was nice about the escalation care protocol'. E2 (target) occurs from 3234.72s to 3237.46, where the speaker says 'as opposed to you know a SOFA-based protocol'. The relationship is 'after' the anchor event concludes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 3295.48,
+            "end_s": 3298.64,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 3293.5s to 3295.48, where the speaker says 'SOFA is horrendous'. E2 (target) occurs from 3295.48s to 3298.64, where the speaker says 'SOFA's AUC goes up'. The relationship is 'immediately after' the anchor event concludes."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 3390,
+        "end": 3548
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.386332511901855
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3400.2,
+            "end_s": 3402.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the question about equity monitoring, which is asked by the second speaker between 3390.8s and 3394.2s. E2 (target event) is the beginning of the speaker's answer about logging, which starts at 3400.2s with the words 'logging, so in this case...'. The temporal relationship is 'after'. The speaker immediately begins explaining the logging process for the specific case of 26 patients following the question."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3409.6,
+            "end_s": 3413.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker finishing the description of the 'Escalation of Care Protocol'. The speaker finishes this section at approximately 3409.3s. E2 (target event) is the appearance of the 'Conscientious Practice Policy' slide on screen. The slide appears at 3409.6s, immediately after the speaker concludes the previous topic. The relationship is 'once_finished'. The visual cue is the sudden transition from the previous slide content to the new slide title."
+          },
+          {
+            "question_id": "003",
+            "start_s": 3455.2,
+            "end_s": 3459.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the appearance of the 'Conscientious Practice Policy' slide on screen, which occurs at 3409.6s. E2 (target event) is the speaker's statement about tracking outcomes and looking back retrospectively, which occurs between 3455.2s and 3459.8s. The temporal relationship is 'after' the policy slide is introduced. The audio cue is the speaker's voice, and the visual cue is the on-screen slide content."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 15.308380603790283
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 705.7,
+            "end_s": 716.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor event) occurs at 705.7s when the speaker says 'and is leading to an increasing disparity over time.' E2 (target event) starts at 705.7s and ends at 716.0s when he says, 'And so, we've discussed and thought a lot about how we can provide support to all of the the hospitals within within our healthcare system...' The relationship is 'after', as the speaker immediately begins discussing the solution to the disparity that was just described."
+          },
+          {
+            "question_id": "002",
+            "start_s": 736.0,
+            "end_s": 746.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor event) occurs from 736.0s to 746.0s when the speaker is describing the Ethics Education program. The organizational chart for the Center for Clinical Ethics is displayed on screen from 690.0s to 762.0s. The speaker's description of the program occurs while this chart is visible. E2 (target event) is the act of the speaker describing the program, which is the content of the audio during this time."
+          },
+          {
+            "question_id": "003",
+            "start_s": 781.0,
+            "end_s": 787.0,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor event) occurs at 781.0s when the speaker says, 'I want to go into depth on on some of these different programs.' E2 (target event) is the first mention of the 'Yale Interdisciplinary Center for Bioethics,' which occurs at 781.0s. The relationship is 'after', as the speaker introduces the idea of discussing the programs and then proceeds to list them, starting with the Interdisciplinary Center."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 1050,
+        "end": 1260
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.020756244659424
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1130.18,
+            "end_s": 1133.55,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor), the speaker stating the title 'Systemwide Ethics Forum and Newsletter', occurs from 1125.0s to 1128.22s. E2 (target), the description of it as a hybrid meeting, starts at 1130.18s when the speaker says 'It is a hybrid, in-person and online meeting that facilitates communication...'. The target event ends at 1133.55s. The relationship is 'after', as the speaker provides the description immediately following the announcement of the forum's name."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "segment": {
+        "start": 3390,
+        "end": 3547.1899999999996
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 12.753490447998047
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3418.5,
+            "end_s": 3420.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 3418.5s when the speaker finishes the sentence 'on a patient by patient basis.' Immediately following this, at 3419.0s, the presentation transitions to the 'Scope of protocol' slide. The speaker does not say anything new on the 'Conscientious Practice Policy' slide; the transition is purely visual."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3420.8,
+            "end_s": 3423.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the 'Scope of protocol' slide being displayed, which concludes at 3420.8s. E2 (target) is the appearance of the 'Conscientious Practice Policy' slide, which begins at 3421.0s. The relationship is 'after' and 'once_finished'. There is a brief visual transition as the 'Scope of protocol' slide fades out and the new slide fades in."
+          },
+          {
+            "question_id": "003",
+            "start_s": 3515.4,
+            "end_s": 3517.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's statement '...social determinants of health,' which finishes at 3515.4s. E2 (target) is the action of minimizing the presentation window, which occurs at 3515.7s. The relationship is 'immediately after'. The speaker finishes his sentence, and the window is minimized in the same continuous action."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 12.226088047027588
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 38.8,
+            "end_s": 41.9,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 37.8s when the speaker says, 'And you can pause, it's a live event, so you can pause it...'. E2 (target) is the continuation of this sentence, ending at 41.9s. The target event is part of the same sentence as the anchor event, starting immediately after."
+          },
+          {
+            "question_id": "002",
+            "start_s": 56.9,
+            "end_s": 68.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs at 55.6s when the speaker says, 'And you have accessibility options which I'll show you in a minute.' E2 (target) starts at 56.9s when he says, 'Please get to a place where you can get good Wi-Fi...'. The relationship is 'after', as the speaker provides technical advice following the mention of accessibility options."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 12.512877941131592
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 228.0,
+            "end_s": 234.1,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the mention of Tom Gardner, which occurs from 221.1s to 225.0s. E2 (target) is the mention of Stephanie Fraser joining in place of Jane Preston, which starts at 228.0s when the speaker says, 'we're also very grateful for Stephanie Fraser joining us in place of Jane Preston today,' and ends at 234.1s. The temporal relationship is 'after' the mention of Tom Gardner."
+          },
+          {
+            "question_id": "002",
+            "start_s": 234.1,
+            "end_s": 234.8,
+            "confidence": 1.0,
+            "rationale_model": "The male presenter finishes his introduction at 234.1s. Immediately following this, at 234.8s, Stephanie Fraser begins to speak, saying, 'Good morning everybody, I hope you can hear me and see me...'. The transition from the male speaker's voice to the female speaker's voice is the direct visual and audio cue for the start of her segment."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 330,
+        "end": 540
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.717867612838745
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 126.1,
+            "end_s": 131.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's statement 'It was telephone appointments that were the most common way to access care,' which occurs from 131.2s to 137.3s. E2 (target) is the statement '57% reported that they had not been able to access a face-to-face appointment,' which occurs from 126.1s to 131.2s. The target event occurs before the anchor event."
+          },
+          {
+            "question_id": "002",
+            "start_s": 137.3,
+            "end_s": 138.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's statement 'nearly two-thirds, 65% had not had a video appointment,' which occurs from 119.5s to 125.1s. E2 (target) is the statement 'It was telephone appointments that were the most common way to access care,' which occurs from 137.3s to 138.4s. The target event occurs after the anchor event."
+          },
+          {
+            "question_id": "003",
+            "start_s": 216.0,
+            "end_s": 217.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the visual of the blue slide with the speaker's title, which disappears from the screen at 100.0s. E2 (target) is the speaker beginning to mention factors clinicians should consider, starting at 216.0s with the phrase 'So that might include what the specific condition is...'. The target event occurs after the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 510,
+        "end": 720
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.429096460342407
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 690.0,
+            "end_s": 691.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (Stephanie finishing her speech) occurs at 689.2s when she says, 'hand back to Mark.' E2 (Mark speaking) begins at 690.0s when he says, 'Thank you Stephanie for that.' The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 711.0,
+            "end_s": 712.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (Mark finishing his introduction) occurs at 710.2s when he says, 'Thank you, Calum.' E2 (Calum speaking) begins at 711.0s when he says, 'And thank you very much, Mark.' The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 720.0,
+            "end_s": 720.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (Calum saying 'Next slide please') occurs at 719.4s. E2 (the second presentation slide appearing) happens at 720.0s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 690,
+        "end": 900
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.508059978485107
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 706.9,
+            "end_s": 716.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 690.0s to 693.0s, where the speaker says, 'Near me is what we're going to focus on today.' E2 (target) occurs from 706.9s to 716.8s, where the speaker describes 'Near Me' as 'internet-based direct PC to PC.' The temporal relationship is 'after' the anchor event, as the speaker begins describing the technology immediately following his statement of focus."
+          },
+          {
+            "question_id": "002",
+            "start_s": 717.8,
+            "end_s": 722.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 713.1s to 717.8s, where the speaker states, '330 consultations per week... before the pandemic.' E2 (target) occurs from 717.8s to 722.5s, where the speaker says, 'within eight weeks that's gone up to 10,000.' The temporal relationship is 'after' the anchor event, as the speaker explicitly states the increase after mentioning the pre-pandemic number."
+          },
+          {
+            "question_id": "003",
+            "start_s": 735.8,
+            "end_s": 741.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 735.3s when the speaker says, 'Next slide, please.' E2 (target) occurs from 735.8s to 741.4s, during which the speaker turns his head and points his finger towards the map on the screen. The temporal relationship is 'immediately after', as the speaker's gesture begins right after making the request."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 870,
+        "end": 1080
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.879263162612915
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 885.76,
+            "end_s": 888.74,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 884.64s when the speaker says, 'go back to the next slide.' E2 (target event) is the appearance of the slide titled 'Video consulting using near me via attend anywhere platform.' This slide is visually present in the frame from 885.76s to 888.74s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 894.64,
+            "end_s": 898.72,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 894.64s when the speaker says, 'Back to next slide, Mark, please.' E2 (target event) is the phrase 'Stephanie Fraser has talked about' the survey, which starts at 894.64s and ends at 898.72s. The relationship is 'simultaneously with' as the phrase is spoken at the same time as the instruction."
+          },
+          {
+            "question_id": "003",
+            "start_s": 906.62,
+            "end_s": 908.12,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) occurs at 906.62s when the speaker says, 'Next slide, please.' E2 (target event) is the appearance of the slide titled 'Clinician and patient experience - Scotland.' This slide is visually present in the frame from 906.62s to 908.12s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1050,
+        "end": 1260
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.848806142807007
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1071.0,
+            "end_s": 1082.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's discussion of the benefits of video calls. E2 (target) occurs from 1071.0s to 1082.0s when the speaker audibly states, 'I certainly find it much easier to interact with groups of people on a video call than I do on the telephone.' This is a direct statement of the sentiment requested in the question."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1128.0,
+            "end_s": 1136.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker's mention of technical issues ('bandwidth and to do with the amount of internet traffic') from 1121.0s to 1127.0s. E2 (target) is the advisory statement, 'if you choose your patients correctly, you can avoid those technical difficulties,' which occurs from 1128.0s to 1136.0s. The temporal relationship is 'after', as the speaker provides a solution immediately following the problem."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1204.0,
+            "end_s": 1209.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker saying 'Next slide, please' at 1203.0s to transition to the next topic. E2 (target) is the speaker's statement, 'this is my wife's iPhone,' which occurs from 1204.0s to 1209.0s. The visual on the slide shows an iPhone, and the speaker's statement is a direct description of the device being shown."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1230,
+        "end": 1440
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.228495359420776
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1241.3,
+            "end_s": 1242.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1241.3s when the speaker says 'Next slide please'. E2 (target) is the appearance of the 'Sharing content' slide, which happens immediately after the audio cue, starting at 1241.3s and ending at 1242.4s as the new slide is fully displayed."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1258.5,
+            "end_s": 1259.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1258.5s when the speaker says 'You can share things'. E2 (target) is the action of pointing at the screen, which starts at 1258.5s and ends at 1259.8s, coinciding with the speaker's statement."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1314.9,
+            "end_s": 1316.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the discussion about poor picture quality, which is ongoing. E2 (target) is the speaker's suggestion to 'clear their browser history', which is spoken from 1314.9s to 1316.9s. The relationship is 'during'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1410,
+        "end": 1620
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 12.750683307647705
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1418.4,
+            "end_s": 1425.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the man finishing his statement 'Thank you very much for that' at 1417.6s. E2 (target) is the phrase 'I'm going to hand over now to Jane' which starts at 1418.4s and ends at 1425.8s. The relationship is 'after', as the speaker begins to hand over immediately following his expression of thanks. The visual cue is the same speaker, and the audio cue is the continuous flow of his speech."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1545.0,
+            "end_s": 1553.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the woman (Jane) finishing her sentence about managing patients over the telephone, which concludes at 1544.2s. E2 (target) is the statement 'we had already begun to pilot of Near Me use with patients presenting with communication impairments' which starts at 1545.0s and ends at 1553.5s. The relationship is 'after', as she introduces the pilot program immediately after discussing the challenges of telephone management. The visual cue is the same speaker, and the audio cue is the direct continuation of her narrative."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1590,
+        "end": 1800
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 11.971010446548462
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1626.4,
+            "end_s": 1631.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1618.2s when the speaker says, 'However, we then had COVID's'. E2 (target) is the phrase 'the use of Near Me became vital to our whole service' which starts at 1626.4s and ends at 1631.9s. The relationship is 'after' the description of the lockdown."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1673.7,
+            "end_s": 1675.2,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1673.4s when the speaker says, 'So back to the the previous slide please, Mark.' E2 (target) is the word 'Thank you' which starts at 1673.7s and ends at 1675.2s. The relationship is 'immediately after' the anchor event."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1770,
+        "end": 1980
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.742563486099243
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1775.2,
+            "end_s": 1777.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1770.0s when the 'Training and preparation' slide is displayed. E2 (target) is the phrase 'Level 1' spoken by the speaker, which starts at 1775.2s and ends at 1777.5s. The relationship is 'during' the speaker's discussion of the training modules."
+          },
+          {
+            "question_id": "002",
+            "start_s": 1810.8,
+            "end_s": 1813.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the completion of the speaker's sentence 'our eyes and our hands and our ears' at 1810.8s. E2 (target) is the phrase 'preparing the clinical room', which starts at 1810.8s and ends at 1813.3s. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 1827.1,
+            "end_s": 1832.4,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the end of the speaker's description of tele-swallowing partners preparing the clinical room at 1826.8s. E2 (target) is the phrase 'provide reassurance and really information to the patients', which starts at 1827.1s and ends at 1832.4s. The relationship is 'after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 1950,
+        "end": 2160
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.479953527450562
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 1982.1,
+            "end_s": 1986.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 1982.1s when the speaker finishes saying, '...with that be required.' E2 (target) is the slide change, which occurs at 1986.8s when the new slide titled 'Technology/equipment' appears. The relationship is 'after', as the new slide follows the completion of the previous slide's content."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2000.0,
+            "end_s": 2003.3,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the 'Technology/equipment' slide being displayed. E2 (target) is the speaker's verbal mention of 'device with webcam and mic', which occurs from 2000.0s to 2003.3s. The relationship is 'during', as the spoken words occur while the corresponding text is visible on the slide."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2042.4,
+            "end_s": 2044.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the speaker introducing the category 'certain resources for our teleswallow sessions' at 2041.3s. E2 (target) is the mention of 'appropriate diet and fluid consistencies', which occurs from 2042.4s to 2044.8s. The relationship is 'after', as the specific resources are listed after the general category is introduced."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 2130,
+        "end": 2340
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.064138412475586
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2212.0,
+            "end_s": 2217.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the statement 'remote swallowing assessments are not intended to fully replace our face-to-face assessments,' which finishes at 2212.0s. E2 (target event) is the speaker's next sentence, 'but they are a very useful addition to what we can offer,' which begins at 2212.0s and ends at 2217.0s. The relationship is 'immediately after' as the speaker starts the new sentence without a pause."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2222.0,
+            "end_s": 2228.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the speaker saying 'gathering feedback from those who have completed the training,' which concludes at 2222.0s. E2 (target event) is the speaker saying 'and we're also continuing to evaluate qualitative data such as...', which begins at 2222.0s and ends at 2228.0s. The relationship is 'immediately after' as the speaker seamlessly continues to the next point."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2233.0,
+            "end_s": 2234.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor event) is the first speaker finishing her presentation by saying 'thank you very much for listening,' which concludes at 2233.0s. E2 (target event) is the video transitioning to the male presenter, which occurs visually at 2234.0s. The relationship is 'immediately after' as the transition is instantaneous following her final words."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 2490,
+        "end": 2700
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.20605754852295
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2500.0,
+            "end_s": 2502.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 2490.0s to 2491.4s when the speaker says, '...and that's really difficult'. E2 (target) starts at 2500.0s when she begins to say, 'And when we move on to points to consider, I'll talk a little bit more about that...'. The relationship is 'after' the anchor event concludes."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2509.0,
+            "end_s": 2512.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 2497.0s to 2499.2s when the speaker says, 'So we did a sprint audit with our patients...'. E2 (target) starts at 2509.0s when she states, '...that most were very satisfied...'. The relationship is 'after' the anchor event concludes."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2691.0,
+            "end_s": 2692.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs from 2684.0s to 2689.4s when the speaker says, '...then they had found that more acceptable'. E2 (target) starts at 2691.0s when she says, 'So moving on to the next slide'. The relationship is 'after' the anchor event concludes."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 2670,
+        "end": 2880
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 11.937814712524414
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2681.3,
+            "end_s": 2682.8,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor: discussion of confidentiality) ends at 2681.3s, marked by the speaker concluding her point with '...particularly difficult.' E2 (target: beginning of 'subtlety of therapeutic relationship') starts at 2682.8s when she begins to say, 'There are considerations about the subtlety of our therapeutic relationship...'. The relationship is 'immediately after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2719.4,
+            "end_s": 2720.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor: 'It all comes down to Wi-Fi') occurs at 2719.4s, with the speaker clearly enunciating the phrase. E2 (target: 'delivery of remote therapy is very, very difficult') starts at 2720.6s and ends at 2721.8s. The relationship is 'immediately after'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 2850,
+        "end": 3060
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 11.966846942901611
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3044.0,
+            "end_s": 3047.0,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs at 3043.9s when the speaker says 'So next slide'. E2 (target) starts at 3044.0s when the slide changes to 'Practical considerations' and ends at 3047.0s as the new slide is fully visible. The relationship is 'after', as the slide change is a direct visual consequence of her verbal cue."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3064.0,
+            "end_s": 3070.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) is the slide 'Practical considerations' being displayed from 3047.0s to 3060.0s. E2 (target) starts at 3064.0s when the speaker says 'Increase reflective feedback' and ends at 3070.0s. The relationship is 'during', as the audio event occurs while the relevant slide is on screen."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 3030,
+        "end": 3240
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 12.461135387420654
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3036.2,
+            "end_s": 3038.8,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) occurs from 3035.9s to 3038.8s, with the speaker saying '...compromised for the patients.' E2 (target) starts at 3038.8s when the slide changes to 'WHERE WE ARE NOW' and ends at 3039.8s. The relationship is 'immediately after'. The visual cue is the slide transition, and the audio cue is the conclusion of the speaker's sentence."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3065.3,
+            "end_s": 3068.5,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) occurs from 3064.5s to 3067.8s, with the speaker saying 'open up for some discussion.' E2 (target) starts at 3067.8s when the 'Discussion' slide appears and ends at 3071.8s. The relationship is 'immediately after'. The visual cue is the appearance of the new slide, and the audio cue is the speaker's final word in the phrase."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 3210,
+        "end": 3420
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 12.521051168441772
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3288.4,
+            "end_s": 3292.4,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor event) is the first male speaker asking about attendees' experience with Near Me, which occurs from 3261.0s to 3267.0s. E2 (target event) is the second male speaker beginning to talk about starting to use NearMe, which starts at 3288.4s with the phrase 'back to when we started using Near Me'. The relationship is 'after', as the second speaker's comment directly follows the first speaker's question."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3309.4,
+            "end_s": 3314.4,
+            "confidence": 0.9,
+            "rationale_model": "E1 (anchor event) is the second male speaker finishing his statement about the advantages and utility of NearMe, which concludes around 3307.0s. E2 (target event) is him mentioning that NearMe has to be used to supplement normal activities, which occurs from 3309.4s to 3314.4s. The relationship is 'once_finished', as the comment about supplementing normal activities comes immediately after he finishes describing its advantages."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 3390,
+        "end": 3600
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 14.35895323753357
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3437.0,
+            "end_s": 3440.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the first man finishing the reading of Jenny's message, which concludes at 3437.0s. E2 (target) is the man asking the audience if they would find guidance helpful, which starts at 3437.0s and ends at 3440.7s. The relationship is 'immediately after'. The audio clearly transitions from the end of one sentence to the beginning of the next without any pause."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3478.0,
+            "end_s": 3481.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the first man finishing the reading of John Hogan's comment about clinical interviewing, which concludes at 3478.0s. E2 (target) is the man stating he was quite skeptical, which starts at 3478.0s and ends at 3481.5s. The relationship is 'immediately after'. The audio flows directly from one sentence to the next without interruption."
+          },
+          {
+            "question_id": "003",
+            "start_s": 3555.3,
+            "end_s": 3558.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) is the second woman mentioning that neuropsychology brought out guidance from the division of neuropsychology, which occurs from 3538.0s to 3542.0s. E2 (target) is the next time a woman speaks about professional guidance, which happens from 3555.3s to 3558.9s. The relationship is 'after' the first woman's speech has concluded. The first woman finishes speaking at 3542.0s, and the second woman begins her new point at 3555.3s, with a clear pause in between."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 3570,
+        "end": 3618
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 10.13530421257019
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3577.2,
+            "end_s": 3587.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 3570.0s when the speaker says '36 people joined the session today.' E2 (target) starts at 3577.2s when he says, 'that group will be able to um take the next steps with with Richard and the team...' and ends at 3587.0s. The relationship is 'after'."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3593.6,
+            "end_s": 3603.6,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 3591.8s when the speaker makes the plea, 'so we ask you about your experience today...'. E2 (target) starts at 3593.6s when he asks, 'if you would like to engage with the advisory committee...'. The relationship is 'after'."
+          },
+          {
+            "question_id": "003",
+            "start_s": 3608.0,
+            "end_s": 3615.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 3607.2s when the speaker finishes thanking everyone for joining. E2 (target) starts at 3608.0s when he says, 'we'll be recording the session...' and ends at 3615.0s. The relationship is 'once_finished'."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 2310,
+        "end": 2520
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 13.865587711334229
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 2387.0,
+            "end_s": 2402.5,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor) starts at 2375.4s when the speaker asks 'Where did we start?'. E2 (target) starts at 2387.0s when she says, 'We were considering moving to Near Me for many of our patient contacts'. The target ends at 2402.5s. The relationship is 'after'. The speaker's dialogue clearly connects the two events in chronological order."
+          },
+          {
+            "question_id": "002",
+            "start_s": 2431.0,
+            "end_s": 2448.0,
+            "confidence": 0.98,
+            "rationale_model": "E1 (anchor) starts at 2419.6s when the speaker says, 'And then the pandemic came along'. E2 (target) starts at 2431.0s when she says, 'Then we started to adopt Near Me as our default'. The target ends at 2448.0s. The relationship is 'after'. The speaker's narration places the adoption of Near Me as a direct consequence of the pandemic."
+          },
+          {
+            "question_id": "003",
+            "start_s": 2507.0,
+            "end_s": 2510.0,
+            "confidence": 0.99,
+            "rationale_model": "E1 (anchor) starts at 2496.7s when the speaker says, 'So the next slide here shows the results of two focus groups'. E2 (target) starts at 2507.0s when she says, 'So here's a couple of quotes from people saying'. The target ends at 2510.0s. The relationship is 'after'. The speaker's transition from discussing the study results to introducing the quotes is a direct logical and narrative progression."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "segment": {
+        "start": 3570,
+        "end": 3617.017
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "long",
+        "inference_time": 9.700724840164185
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 3584.0,
+            "end_s": 3592.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 3583.0s when the speaker says, 'we'll be asking you about your experience today'. E2 (target) starts at 3584.0s with the phrase 'but also ask you if you would like to engage with the advisory committee' and ends at 3592.0s. The relationship is 'after', as the speaker first mentions one thing and then adds the second."
+          },
+          {
+            "question_id": "002",
+            "start_s": 3595.0,
+            "end_s": 3602.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 3594.0s when the speaker says, 'And we'll be recording the session'. E2 (target) starts at 3595.0s with the phrase 'and we'll produce some resources alongside' and ends at 3602.0s. The relationship is 'after', as the speaker first mentions the recording and then adds the provision of resources."
+          },
+          {
+            "question_id": "003",
+            "start_s": 3615.0,
+            "end_s": 3617.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 3592.0s when the speaker says, 'So again, thank you very much for joining us today'. E2 (target) starts at 3615.0s with the speaker saying, 'Thank you very much' and ends at 3617.0s. The relationship is 'after', as this is a final, separate expression of thanks at the very end of the speech."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "YJFNgX2pmAw",
+      "video_number": "016",
+      "segment": {
+        "start": 0,
+        "end": 210
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 13.443902015686035
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 34.1,
+            "end_s": 36.7,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor), Mark introducing the speakers, occurs from 12.0s to 34.0s. E2 (target), Mark asking Dr. Dow the question, begins at 34.1s when he says 'Can you just briefly describe how you've been using Near Me with your students?' and ends at 36.7s. The relationship is 'after' the introduction has concluded."
+          },
+          {
+            "question_id": "002",
+            "start_s": 73.6,
+            "end_s": 74.9,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor), Dr. Naomi Dow finishing her explanation on student participation, occurs from 73.5s to 73.6s. E2 (target), Mark asking Dr. John Mckeown the question, begins at 73.6s when he says 'So yeah, so John, just tell us...' and ends at 74.9s. The relationship is 'once_finished', as the question starts immediately after she finishes speaking."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "YJFNgX2pmAw",
+      "video_number": "016",
+      "segment": {
+        "start": 150,
+        "end": 360
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 13.582887649536133
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 182.825,
+            "end_s": 184.725,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor event) occurs at 182.825s when the female speaker begins to explain the advantages of 'Near Me'. E2 (target event) starts at 182.825s with the phrase 'using Near Me's got a number of advantages' and ends at 184.725s with the phrase 'so the first is that it's using real patients'. The relationship is 'during', as the target event occurs as part of the speaker's initial sentence in the answer."
+          },
+          {
+            "question_id": "002",
+            "start_s": 188.5,
+            "end_s": 192.075,
+            "confidence": 0.95,
+            "rationale_model": "E1 (anchor event) occurs at 188.5s when the interviewer's question concludes. E2 (target event) starts at 188.5s and ends at 192.075s. The relationship is 'after', as E2 is the immediate response to the conclusion of the interviewer's question."
+          }
+        ]
+      }
+    },
+    {
+      "video_id": "YJFNgX2pmAw",
+      "video_number": "016",
+      "segment": {
+        "start": 330,
+        "end": 361
+      },
+      "preprocessing": {
+        "max_frames": 16,
+        "attempt": 1,
+        "method": "internal_sampling",
+        "video_category": "medium",
+        "inference_time": 10.22278904914856
+      },
+      "outputs": {
+        "questions": [
+          {
+            "question_id": "001",
+            "start_s": 340.0,
+            "end_s": 343.5,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 339.4s when the initial speaker finishes his sentence. E2 (target) starts at 340.0s when the man on screen begins to say 'Thanks very much John and Amy' and continues until 343.5s. The relationship is 'after' as the second speaker starts immediately following the first."
+          },
+          {
+            "question_id": "002",
+            "start_s": 348.5,
+            "end_s": 352.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 347.0s when the man on screen finishes saying 'Thank you and goodbye'. E2 (target) starts at 348.5s when the 'NHS Scotland' and 'Near Me' logos appear on screen along with the text links and ends at 352.0s. The relationship is 'once_finished' as the logos appear immediately after he finishes speaking."
+          },
+          {
+            "question_id": "003",
+            "start_s": 339.4,
+            "end_s": 340.0,
+            "confidence": 1.0,
+            "rationale_model": "E1 (anchor) occurs at 339.4s when the voiceover concludes with the phrase 'patient that day'. E2 (target) starts at 340.0s when the man on screen begins to say 'Thanks very much John and Amy' and ends at 343.5s. The relationship is 'once_finished' as the man starts speaking immediately after the voiceover ends."
+          }
+        ]
+      }
+    }
+  ]
+}

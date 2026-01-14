@@ -1,0 +1,397 @@
+{
+  "topic_id": 10,
+  "topic_name": "Restaurant Service Encounters",
+  "num_evaluated": 23,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.1377262373458953,
+      "rouge_l_std": 0.024059548945098604,
+      "text_similarity_mean": 0.4206960337317508,
+      "text_similarity_std": 0.14504084399938907,
+      "llm_judge_score_mean": 1.6956521739130435,
+      "llm_judge_score_std": 0.9971604296678012
+    },
+    "short": {
+      "rouge_l_mean": 0.1301313733145277,
+      "rouge_l_std": 0.023669903629701183,
+      "text_similarity_mean": 0.34596285418323847,
+      "text_similarity_std": 0.1230378626000777,
+      "llm_judge_score_mean": 1.9130434782608696,
+      "llm_judge_score_std": 1.212723972259248
+    },
+    "cider": {
+      "cider_detailed": 0.00035268148258487287,
+      "cider_short": 0.011282940721752567
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "WQ_GdqOAyJM",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.09315068493150684,
+        "text_similarity": 0.34687817096710205,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only gives a generic description of someone cooking and plating, which minimally matches that the video shows food preparation, but it omits nearly all key specifics, events, dishes, ingredients, and the narrative of the chef\u2019s busy day described in the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.16551724137931034,
+        "text_similarity": 0.3215405344963074,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only describes a generic person cooking (and adds an unmentioned detail about a face mask) and omits nearly all key facts from the reference\u2014no mention of the private chef, shopping, specific dishes, multi-course dinner, or cleanup\u2014so it largely fails to match the correct summary."
+      }
+    },
+    {
+      "video_id": "k69HiX5I4as",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.12203389830508475,
+        "text_similarity": 0.6973831653594971,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures basic visual elements (a man eating a tall burger with toppings and a timer) but omits nearly all key facts from the reference\u2014challenge name and location, size/weight and detailed ingredients, the implied impossibility, the eater's strategy and hydration, and the successful completion\u2014making it largely incomplete."
+      },
+      "short": {
+        "rouge_l": 0.1217391304347826,
+        "text_similarity": 0.45052194595336914,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only the basic visual (a man with a tall tower of food and a timer) but omits almost all key facts from the reference\u2014challenge name/location, size/weight (~5 ft, ~14 lbs), specific ingredients, backstory about it being 'impossible', and that the man completed the challenge."
+      }
+    },
+    {
+      "video_id": "GLDd5u1dizo",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.11917098445595854,
+        "text_similarity": 0.5000921487808228,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer describes cooking visuals and food preparation but completely omits the video's actual message about culinary school, career advice, costs, and the harsh realities and burnout of restaurant work, making it semantically unrelated to the correct summary."
+      },
+      "short": {
+        "rouge_l": 0.09022556390977443,
+        "text_similarity": 0.38471272587776184,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer only describes generic cooking visuals and omits all substantive points from the correct summary about culinary education, restaurant work, burnout, sacrifices, and physical injuries, so it fails to match the reference."
+      }
+    },
+    {
+      "video_id": "rPx6VIjkYco",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.15072463768115943,
+        "text_similarity": 0.6421166062355042,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures several visual elements and some correct locations (e.g., Rudi's sign, Van Stapele, fries, noodles), but it omits key facts and recommendations from the reference (Winkel 43 apple pie, Ramen Kingdom name/experience, Mannekenpis sauces/lines, Van Stapele cookie details and sell-out warning) and includes an extra unrelated detail (ice cream)."
+      },
+      "short": {
+        "rouge_l": 0.15706806282722513,
+        "text_similarity": 0.5848269462585449,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction identifies several key spots (Rudi's stroopwafel, Van Stapele cookies, ramen, and fries) but omits Winkel 43's apple pie, adds irrelevant/incorrect items (e.g., waffles, ice cream), and misses important details about offerings and queues."
+      }
+    },
+    {
+      "video_id": "JJOTu9IkiUo",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.19937694704049844,
+        "text_similarity": 0.7560288906097412,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general theme (ramen with noodles and rice) but misses major specifics and narrative elements: the Kaedama add-on, chef\u2013customer interaction, draining/adding fresh noodles, the chef surprising the customer with rice, torching the rice, the cultural instruction to finish broth with rice, and the 'Ramen Risotto' conclusion."
+      },
+      "short": {
+        "rouge_l": 0.15602836879432624,
+        "text_similarity": 0.6078406572341919,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction notes adding extra noodles and later rice in the ramen, but it omits key elements: the chef\u2013customer interaction and Kaedama explanation, the chef insisting despite the customer being full, the torching step, and the final 'Ramen Risotto' preparation."
+      }
+    },
+    {
+      "video_id": "4PyTLRh7k5w",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.16138328530259363,
+        "text_similarity": 0.38417869806289673,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only captures that a purple-haired man is near a restaurant but omits the central confrontation, threats, and the owner\u2019s warnings, and even contradicts the outcome (says he enters rather than leaves), adding unfounded phone-call details."
+      },
+      "short": {
+        "rouge_l": 0.13461538461538464,
+        "text_similarity": 0.2353069931268692,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only describes a person walking and talking on the phone and entering a restaurant, omitting the central confrontation, the owner\u2019s mob/gangster claim, the demand to leave, the streamer\u2019s apology, and the swift exit; it fails to capture the key events and intent of the correct summary."
+      }
+    },
+    {
+      "video_id": "Yx4K6CuraOs",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.15282392026578073,
+        "text_similarity": 0.4140823483467102,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only offers a generic scene of three people dining and omits virtually all key specifics (gold-/silver-plated biryani and gulab jamun, restaurant/name, reactions, ratings) while adding unsupported details (a dessert promotion), so it fails to match the correct summary."
+      },
+      "short": {
+        "rouge_l": 0.12,
+        "text_similarity": 0.31680527329444885,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction mostly describes generic visual scenery and fabricates details (e.g., promotion) while omitting all key factual elements of the reference\u2014no mention of the gold/silver-plated biryani, Rabri Gulab Jamun, prices, tasting reactions, or review outcomes."
+      }
+    },
+    {
+      "video_id": "WurBSP0mOmY",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.14074074074074075,
+        "text_similarity": 0.330080509185791,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only briefly notes a man and woman eating large burgers and fries, which matches a small part of the reference, but it omits almost all key details (sponsorship, challenge rules, prizes, records, milkshakes, timestamps, success rate) and includes unrelated/hallucinated elements (black background text, Star Wars character, baby)."
+      },
+      "short": {
+        "rouge_l": 0.11881188118811882,
+        "text_similarity": 0.2149181067943573,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes two people eating and talking, which is a minor visual element from the correct summary, but it omits nearly all key facts (product promotion, Whammy Burger Challenge rules and outcome, milkshake completions, and Raina's remaining time) and includes an unrelated/unsupported detail about 'watching' and a Star Wars character."
+      }
+    },
+    {
+      "video_id": "B4BVNSrUJf8",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.09589041095890412,
+        "text_similarity": 0.08946262300014496,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct summary: it describes two people in a car having a quiet conversation, omitting all key facts about the Whammy Burger challenge, its scale, strategy, comparisons to 'Man Vs. Food', and the outcome."
+      },
+      "short": {
+        "rouge_l": 0.140625,
+        "text_similarity": 0.1473633497953415,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary: it describes two people in a car and omits all key details about the Whammy Burger challenge (location, size/ingredients, challenge strategy, parallels, and outcome), therefore containing hallucinated content."
+      }
+    },
+    {
+      "video_id": "1iIOXO9k73E",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.11818181818181818,
+        "text_similarity": 0.458839476108551,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is overly generic\u2014correctly noting people eating together\u2014but omits almost all key facts (the spicy no-water challenge, creators' names and origins, specific restaurants/dishes, and the Botanico segment) and even adds an unsupported detail about rating foods."
+      },
+      "short": {
+        "rouge_l": 0.11475409836065575,
+        "text_similarity": 0.47017258405685425,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only captures generic scenes of people eating and enjoying themselves but omits almost all key facts (no-water spicy challenge, the three named Indian restaurants, escalating spice, cultural discussion, and the Botanico Mexican segment) and even adds an unmentioned element about rating the food."
+      }
+    },
+    {
+      "video_id": "1e0zfq8zksk",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.14659685863874344,
+        "text_similarity": 0.459871768951416,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only minimal visual elements (people talking/eating, camera pans, injera) but omits almost all key facts from the correct answer\u2014restaurant name/location, participants' context, specific teas, appetizers, the detailed 'Taste of Mesob' platter, and the server's traditional eating demonstration."
+      },
+      "short": {
+        "rouge_l": 0.11363636363636365,
+        "text_similarity": 0.2018999457359314,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction notes people talking, eating, and camera shots of food, but it omits most key facts from the reference\u2014no mention of Ethiopian cuisine, Mesob restaurant/Location, the 'Taste of Mesob' platter, drinks/appetizers, or learning to eat with injera\u2014so it only weakly matches the summary."
+      }
+    },
+    {
+      "video_id": "S_QduJQCof0",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.1349206349206349,
+        "text_similarity": 0.32371872663497925,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only matches a few superficial elements (a couple eating and walking, night city shot) but omits nearly all key factual content from the correct answer\u2014specific locations, dishes, the croquette discussion, and the sequence of food stops\u2014and adds irrelevant details."
+      },
+      "short": {
+        "rouge_l": 0.13095238095238096,
+        "text_similarity": 0.3011589050292969,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only lists generic visual scenes and that a couple eats/drinks, which loosely matches the video being about a couple, but it omits almost all key factual elements (Alicante, specific dishes like chocolate con porras, tortilla de patatas, tapas, vermouth tasting, 100 Montaditos, croquettes discussion, and the closing call-to-action), so it largely fails to capture the correct summary."
+      }
+    },
+    {
+      "video_id": "eByLJB78i74",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.17094017094017094,
+        "text_similarity": 0.45686519145965576,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only the basic scene of a man and woman eating large messy burgers and enjoying themselves, but it omits virtually all key factual details (challenge name, weight, time limit, prizes, names, completion) and adds hallucinated elements (cat and purple smoke) that contradict the correct summary."
+      },
+      "short": {
+        "rouge_l": 0.16551724137931031,
+        "text_similarity": 0.4640117287635803,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only the vague scene (a man and woman eating tall messy but tasty burgers) but omits almost all key facts from the correct answer (challenge name, location, competitors' names, weight/time limit, fries, completion and recommendation) and includes a likely hallucinated detail about a cat/graphic."
+      }
+    },
+    {
+      "video_id": "W4adUBGfbmM",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.13166144200626959,
+        "text_similarity": 0.2740219831466675,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only captures generic eating visuals (masked people, bowls of noodles) but omits nearly all key factual details from the reference (location, menu items, named people, detailed reviews, kopitiam concept) and adds an unrelated ending ('sethu.com'), so it poorly matches the correct summary."
+      },
+      "short": {
+        "rouge_l": 0.09248554913294797,
+        "text_similarity": 0.21040202677249908,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only notes incidental visual actions (showing food, eating, people sitting) and adds unrelated details, while omitting the video's key facts about the restaurant, dishes, reviews, menu and concept; it therefore fails to match the correct summary."
+      }
+    },
+    {
+      "video_id": "qoKJoUb4o9g",
+      "video_number": "015",
+      "detailed": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.49743813276290894,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction vaguely captures a chef in a Japanese restaurant and the final skyline shot, but it omits nearly all specific facts (Chef Sho, Torasho Ramen & Charcoal Bar, timeline, signature dishes, charcoal and butchery, staff meeting) and introduces incorrect details (wrong name, 24-hour claim), so it is largely inaccurate."
+      },
+      "short": {
+        "rouge_l": 0.08695652173913043,
+        "text_similarity": 0.5506405830383301,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures a few high-level themes (all-day operation, Japanese cuisine, chef discussing the menu) but omits most key specifics from the correct answer such as signature dish prep, ingredient sourcing, staff meeting, dinner service details, and conclusion."
+      }
+    },
+    {
+      "video_id": "St8rysYXm9w",
+      "video_number": "016",
+      "detailed": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.3072218894958496,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only a few superficial visual elements (people eating, selfies, a palace exterior) but omits nearly all key events and specifics from the reference (kayaking in mangroves, Vanishing Island, guide Rui, specific dishes and desserts, the long-time fan meeting, drive back and hotel night view) and even misnames the palace, so it is largely not aligned with the correct summary."
+      },
+      "short": {
+        "rouge_l": 0.1471861471861472,
+        "text_similarity": 0.32944563031196594,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only lists isolated visual snapshots (smiling woman, dining scenes, building) and partly matches the restaurant scene, but it omits major events (kayaking in mangroves, Vanishing Island, Um Al Emarat Park lunch, traditional desserts like kanafa/date cake, being driven back to the hotel, and the night view) and even misnames the palace."
+      }
+    },
+    {
+      "video_id": "iOm5Uj7EQUE",
+      "video_number": "017",
+      "detailed": {
+        "rouge_l": 0.12865497076023394,
+        "text_similarity": 0.27331268787384033,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely different and unrelated: it describes an outdoor man eating burritos and giving a thumbs-up, whereas the correct answer details a table-side Arabic dessert preparation, the host's tasting reactions, and serving of Arabic coffee and dates; key elements are omitted and contradicted."
+      },
+      "short": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.2611583471298218,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated and factually incorrect: it describes a man eating a burrito with plastic utensils and wearing a coat, whereas the correct summary describes a server preparing a traditional Arabic dessert, the host's reactions, and subsequent coffee and dates."
+      }
+    },
+    {
+      "video_id": "zW9qFTtYpus",
+      "video_number": "018",
+      "detailed": {
+        "rouge_l": 0.14070351758793967,
+        "text_similarity": 0.39379143714904785,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general dining setting and a chef cooking on a grill, but it omits key specifics (birthday, names, restaurant, onion 'volcano', specific dishes and interactions) and adds unsupported/hallucinated details (e.g., 'Mingle with Cringle 2021', soup, a man in a black jacket)."
+      },
+      "short": {
+        "rouge_l": 0.15789473684210525,
+        "text_similarity": 0.3252212405204773,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the general dining scene, live chef cooking, and festive ending, but omits key facts (birthday celebration, restaurant name, chef Ching Ching, the flaming onion \"volcano,\" and specific dishes) and includes an irrelevant detail about a man in a black jacket."
+      }
+    },
+    {
+      "video_id": "efBgaDGpM70",
+      "video_number": "019",
+      "detailed": {
+        "rouge_l": 0.125,
+        "text_similarity": 0.5441981554031372,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only notes a man eating a large meal and mislabels the restaurant/cuisine as Guatemalan with a fabricated rating, while omitting nearly all specific details of the Texas-sized Mexican Food Challenge, its location, and the listed dishes and descriptions."
+      },
+      "short": {
+        "rouge_l": 0.14814814814814814,
+        "text_similarity": 0.3353147804737091,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only gives very generic, vague observations (man eating a meal, bowl, sandwich) and misses nearly all key specifics (location, challenge, 18 tacos, torta, quesadilla, chicharron gordita, pozole, Joel's praise), and even incorrectly mentions a burrito instead of the detailed items described."
+      }
+    },
+    {
+      "video_id": "7uJW0U7SGXc",
+      "video_number": "020",
+      "detailed": {
+        "rouge_l": 0.1506276150627615,
+        "text_similarity": 0.4820220172405243,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only captures a generic scene of people eating and mentions noodles, but it omits nearly all key specifics from the correct answer (location, restaurant name, exact dishes, communal soup, the Xi'an spinach noodles praise/five-star reaction) and even includes unmentioned details (dumplings), so it is largely incomplete and partially inaccurate."
+      },
+      "short": {
+        "rouge_l": 0.11023622047244093,
+        "text_similarity": 0.28643038868904114,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes generic scenes of people eating and talking, which partly matches the video activity but omits almost all key facts from the reference (location, restaurant name, communal soup tradition, Xi'an spinach noodles, flavor praise and five-star rating), so it is only minimally aligned."
+      }
+    },
+    {
+      "video_id": "mfveFCjol8E",
+      "video_number": "021",
+      "detailed": {
+        "rouge_l": 0.10126582278481013,
+        "text_similarity": 0.342700332403183,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the reference: it omits all key elements (the Mizaj restaurant visit, managers, detailed dishes, Amazon-themed decor, interviews, and rooftop view) and instead describes unrelated selfies and Christmas-tree scenes, constituting a complete mismatch."
+      },
+      "short": {
+        "rouge_l": 0.10596026490066225,
+        "text_similarity": 0.2503929138183594,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction describes unrelated, superficial actions (selfies, a man eating a sandwich, Christmas trees) and omits nearly all key points from the reference (Mizaj Restaurant, luxurious ambiance, specific dishes and milkshake, Amazon-themed decor, interviews with customers and the GM, rooftop view), so it is largely incorrect."
+      }
+    },
+    {
+      "video_id": "onpWsrNV8KY",
+      "video_number": "022",
+      "detailed": {
+        "rouge_l": 0.125,
+        "text_similarity": 0.30914390087127686,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures a generic resort tour and shows food/atmosphere, but it omits nearly all key specifics from the correct answer (Snow White/character dining at Artist Point, Wilderness Lodge, the geyser, named dishes/cocktails, villain appearances, and dessert parade) and even includes likely incorrect visual details, so it is a poor semantic match."
+      },
+      "short": {
+        "rouge_l": 0.11940298507462688,
+        "text_similarity": 0.2960411012172699,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is overly generic and omits almost all key specifics (Wilderness Lodge, Storybook Dining, Villains & Vice theme, geyser moment, named dishes/cocktails, Evil Queen appearance, spinning Lazy Susan, themed desserts), and even adds a likely incorrect detail (green dragon), so it only minimally matches the reference."
+      }
+    },
+    {
+      "video_id": "EUaYNOGjjr4",
+      "video_number": "023",
+      "detailed": {
+        "rouge_l": 0.1511627906976744,
+        "text_similarity": 0.3925599157810211,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only the very high-level actions (a man eating, showing plates, and giving final thoughts) but omits almost all key factual elements from the correct answer\u2014no mention of Hadramiah/Hadramout, Yemeni dishes, specific drinks, flavors, ownership notes, or detailed dining experiences\u2014so it is largely incomplete."
+      },
+      "short": {
+        "rouge_l": 0.1414141414141414,
+        "text_similarity": 0.4110189378261566,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures generic actions (eating, showing plates, giving final thoughts) but omits nearly all key facts from the correct answer\u2014no restaurant names, no specific Yemeni dishes or beverages, no comments on flavors, ownership details, or recommendation\u2014so it is mostly incomplete. "
+      }
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "topic_id": 5,
+  "topic_name": "Courtroom Proceedings",
+  "num_evaluated": 13,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.12480924098637164,
+      "rouge_l_std": 0.015351860553417042,
+      "text_similarity_mean": 0.08489029868864097,
+      "text_similarity_std": 0.09090108538952997,
+      "llm_judge_score_mean": 0.0,
+      "llm_judge_score_std": 0.0
+    },
+    "short": {
+      "rouge_l_mean": 0.0642318025117606,
+      "rouge_l_std": 0.017190816937391495,
+      "text_similarity_mean": -0.008723585794751462,
+      "text_similarity_std": 0.06615041851392701,
+      "llm_judge_score_mean": 0.0,
+      "llm_judge_score_std": 0.0
+    },
+    "cider": {
+      "cider_detailed": 0.0002218630906027838,
+      "cider_short": 5.058547441633909e-06
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "TVriGlkPexA",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.1309255079006772,
+        "text_similarity": 0.09161727130413055,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary\u2014topics, events, and details differ entirely (renewable energy vs. courtroom proceedings and censorship), so there is no semantic or factual alignment."
+      },
+      "short": {
+        "rouge_l": 0.03896103896103896,
+        "text_similarity": -0.020039401948451996,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary\u2014discussing renewable energy instead of the courtroom scene, Frank's protest, and YouTube censorship\u2014thus it omits all key facts and injects unrelated content."
+      }
+    },
+    {
+      "video_id": "Z_6JBsE07b8",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.1315068493150685,
+        "text_similarity": -0.036454085260629654,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct answer: it describes a sustainable energy documentary while the ground truth details courtroom proceedings, victims' impact statements, and the defendant's remarks. There is no overlap in content, facts, or themes."
+      },
+      "short": {
+        "rouge_l": 0.0625,
+        "text_similarity": -0.06812229752540588,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct answer\u2014discussing renewable energy rather than the courtroom proceedings, victim impact statements, defendant Skolman's crimes and statements, or the judge's response\u2014omitting all key facts and introducing unrelated content."
+      }
+    },
+    {
+      "video_id": "u0IZ4j1g25s",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.11961722488038276,
+        "text_similarity": -0.008010901510715485,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct summary\u2014covering renewable energy rather than the Chandler Halderson murder trial\u2014omitting all key facts and introducing completely different content."
+      },
+      "short": {
+        "rouge_l": 0.09900990099009901,
+        "text_similarity": -0.03428763151168823,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct summary\u2014discussing renewable energy instead of the trial verdict, evidence, and reactions\u2014so it fails to capture any key facts from the reference."
+      }
+    },
+    {
+      "video_id": "xwZ2K8b_pBw",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.12616822429906543,
+        "text_similarity": 0.12366034090518951,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated and contradicts the correct answer: it discusses urban gardening while the reference describes a New York courtroom incident involving an AI-generated avatar and subsequent legal/ethical implications, so all key facts are missing."
+      },
+      "short": {
+        "rouge_l": 0.07547169811320754,
+        "text_similarity": -0.029284005984663963,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct answer\u2014covering urban gardening rather than the courtroom AI-avatar incident\u2014and omits all key facts from the reference."
+      }
+    },
+    {
+      "video_id": "2B_e7fvwi90",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.13541666666666666,
+        "text_similarity": 0.15599825978279114,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary: the reference concerns Lyle Menendez's testimony about sexual abuse, whereas the prediction discusses climate change and agriculture, omitting all key facts and introducing unrelated content."
+      },
+      "short": {
+        "rouge_l": 0.07547169811320756,
+        "text_similarity": 0.010961886495351791,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary: it discusses climate change and agriculture rather than Lyle Menendez's testimony and the Menendez Brothers case, omitting all key elements and introducing unrelated content."
+      }
+    },
+    {
+      "video_id": "5yNgC39Q2HE",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.09523809523809525,
+        "text_similarity": 0.21784639358520508,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct answer: it describes a renewable energy video rather than the Hothi v. Musk court proceedings, omitting all legal details and introducing content not present in the reference."
+      },
+      "short": {
+        "rouge_l": 0.06521739130434782,
+        "text_similarity": 0.10674646496772766,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct answer (court proceedings in Hothi v. Musk) and omits all key factual elements; it introduces unrelated content about renewable energy, constituting a complete mismatch."
+      }
+    },
+    {
+      "video_id": "9U_cQz-7sT4",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.11386138613861385,
+        "text_similarity": 0.08242803066968918,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the reference: it describes a technology product overview rather than a Supreme Court confirmation hearing, omitting all key facts and introducing fabricated content."
+      },
+      "short": {
+        "rouge_l": 0.06837606837606838,
+        "text_similarity": -0.024334240704774857,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary; it describes a tech product pitch rather than Senator Cruz's questioning of Judge Ketanji Brown Jackson about legal standing and her refusal to answer hypotheticals, omitting all key facts."
+      }
+    },
+    {
+      "video_id": "gTBoJ9W8zQ8",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.15267175572519084,
+        "text_similarity": 0.2587178945541382,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely different and unrelated: it describes a generic informational video structure and omits all factual details about the courtroom confrontation, detectives, accusations, and contempt proceedings described in the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.08247422680412372,
+        "text_similarity": -0.050115808844566345,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a generic, unrelated summary and does not mention any of the key factual elements from the correct answer (cross-examination, Pettis admitting threats, identification of Lee Lankford, contempt and recess), so it is completely incorrect."
+      }
+    },
+    {
+      "video_id": "hXN6cDKyk4g",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.10526315789473684,
+        "text_similarity": 0.11362141370773315,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated: it discusses renewable energy technologies while the correct answer summarizes a talk on civil litigation practice, legal skills, settlements, courtroom experience, and professional management; it omits all key points and contradicts the topic."
+      },
+      "short": {
+        "rouge_l": 0.03802281368821293,
+        "text_similarity": 0.018838733434677124,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated\u2014about renewable energy\u2014while the correct answer discusses civil litigation practice, so it fails to capture any key elements or meaning of the reference."
+      }
+    },
+    {
+      "video_id": "DelhQUg8eH4",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.1390728476821192,
+        "text_similarity": -0.02962675504386425,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct summary: it describes a climate change documentary, while the correct answer summarizes a prosecutor's opening about Carl Miller's alleged drug distribution, fleeing, and assault on an undercover officer, with no substantive overlap or shared facts."
+      },
+      "short": {
+        "rouge_l": 0.05161290322580645,
+        "text_similarity": -0.1018909215927124,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the video summary\u2014discussing climate change rather than the criminal case, witnesses, flight, injury, license plate, or forensic cocaine evidence\u2014so it does not match any key facts."
+      }
+    },
+    {
+      "video_id": "k28NMpEkuRU",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.14141414141414144,
+        "text_similarity": -0.028326116502285004,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated, describing renewable energy trends instead of the specific October 27, 2020 burglary/assault incident; it omits all key factual elements and introduces unrelated content."
+      },
+      "short": {
+        "rouge_l": 0.056074766355140186,
+        "text_similarity": -0.09277746826410294,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary, omitting all key facts about the vandalism, theft, arrest, and identification, and instead discusses unrelated renewable energy topics."
+      }
+    },
+    {
+      "video_id": "RHq_CJJDpUY",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.12025316455696201,
+        "text_similarity": 0.11828549206256866,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated and contradictory to the correct answer: it describes digital marketing content while the correct summary details a lecture on criminal appeals, appellate strategy, and case anecdotes, so it omits all key factual elements."
+      },
+      "short": {
+        "rouge_l": 0.04587155963302752,
+        "text_similarity": 0.1188720241189003,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct answer\u2014it discusses digital marketing rather than criminal appeals, appellate advocacy, or any of the key points, cases, and recommendations presented in the reference."
+      }
+    },
+    {
+      "video_id": "L_dJ23CLzTo",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.1111111111111111,
+        "text_similarity": 0.043816644698381424,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct answer\u2014it describes climate change rather than witness preparation for trials\u2014omitting all key points and introducing completely different content."
+      },
+      "short": {
+        "rouge_l": 0.07594936708860761,
+        "text_similarity": 0.05202605202794075,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer discusses climate change mitigation and expert interviews, which is entirely unrelated to the correct answer about witness preparation and mock cross-examinations for trials; there is no semantic overlap."
+      }
+    }
+  ]
+}

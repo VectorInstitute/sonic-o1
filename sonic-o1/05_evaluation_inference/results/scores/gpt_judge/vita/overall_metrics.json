@@ -1,0 +1,967 @@
+{
+  "model": "vita",
+  "experiment_name": null,
+  "tasks": {
+    "t1": {
+      "task_name": "task1_summarization",
+      "topics": {
+        "01_Patient-Doctor_Consultations": {
+          "detailed": {
+            "rouge_l_mean": 0.18318130776099747,
+            "rouge_l_std": 0.03225905953804732,
+            "text_similarity_mean": 0.6311115380376577,
+            "text_similarity_std": 0.12020099465121203,
+            "llm_judge_score_mean": 4.4375,
+            "llm_judge_score_std": 1.9675095298371492
+          },
+          "short": {
+            "rouge_l_mean": 0.1455187433538585,
+            "rouge_l_std": 0.043595164884913946,
+            "text_similarity_mean": 0.5966578889638186,
+            "text_similarity_std": 0.11866269116284082,
+            "llm_judge_score_mean": 4.625,
+            "llm_judge_score_std": 1.8328597873268975
+          },
+          "cider": {
+            "cider_detailed": 0.0015259818704718953,
+            "cider_short": 8.408981972568481e-08
+          }
+        },
+        "02_Job_Interviews": {
+          "detailed": {
+            "rouge_l_mean": 0.17161127959851832,
+            "rouge_l_std": 0.05987582471498147,
+            "text_similarity_mean": 0.5347255897663888,
+            "text_similarity_std": 0.15921034305189596,
+            "llm_judge_score_mean": 3.7142857142857144,
+            "llm_judge_score_std": 2.353171257258255
+          },
+          "short": {
+            "rouge_l_mean": 0.11628935614321217,
+            "rouge_l_std": 0.0688778884422564,
+            "text_similarity_mean": 0.48025289674599964,
+            "text_similarity_std": 0.18075138026024073,
+            "llm_judge_score_mean": 3.238095238095238,
+            "llm_judge_score_std": 2.307436464682994
+          },
+          "cider": {
+            "cider_detailed": 0.0014003574868755439,
+            "cider_short": 4.248111907526933e-06
+          }
+        },
+        "03_Parent-Teacher_Conferences": {
+          "detailed": {
+            "rouge_l_mean": 0.16082569221595414,
+            "rouge_l_std": 0.03449315447183439,
+            "text_similarity_mean": 0.5431475469635593,
+            "text_similarity_std": 0.17267026310256103,
+            "llm_judge_score_mean": 4.222222222222222,
+            "llm_judge_score_std": 2.57240820062005
+          },
+          "short": {
+            "rouge_l_mean": 0.12106656262525745,
+            "rouge_l_std": 0.041731072698195856,
+            "text_similarity_mean": 0.53617771073348,
+            "text_similarity_std": 0.18131621798534184,
+            "llm_judge_score_mean": 3.7777777777777777,
+            "llm_judge_score_std": 2.27438772116208
+          },
+          "cider": {
+            "cider_detailed": 1.189591900183577e-10,
+            "cider_short": 1.0062106177342642e-10
+          }
+        },
+        "04_Customer_Service_Interactions": {
+          "detailed": {
+            "rouge_l_mean": 0.17161476004647824,
+            "rouge_l_std": 0.019597963438031635,
+            "text_similarity_mean": 0.5067648788293203,
+            "text_similarity_std": 0.12741427034224717,
+            "llm_judge_score_mean": 1.7333333333333334,
+            "llm_judge_score_std": 0.7717224601860151
+          },
+          "short": {
+            "rouge_l_mean": 0.0966406439039364,
+            "rouge_l_std": 0.04581433735880539,
+            "text_similarity_mean": 0.40629379053910575,
+            "text_similarity_std": 0.16134110159263715,
+            "llm_judge_score_mean": 2.066666666666667,
+            "llm_judge_score_std": 0.9285592184789413
+          },
+          "cider": {
+            "cider_detailed": 0.0030767370521127078,
+            "cider_short": 1.4258431635755508e-06
+          }
+        },
+        "05_Courtroom_Proceedings": {
+          "detailed": {
+            "rouge_l_mean": 0.14545318978397168,
+            "rouge_l_std": 0.02672541090070346,
+            "text_similarity_mean": 0.40652413150438893,
+            "text_similarity_std": 0.15978500365653767,
+            "llm_judge_score_mean": 1.7692307692307692,
+            "llm_judge_score_std": 1.309952797378954
+          },
+          "short": {
+            "rouge_l_mean": 0.08321978009288443,
+            "rouge_l_std": 0.062110968631903705,
+            "text_similarity_mean": 0.422925137843077,
+            "text_similarity_std": 0.21197353893683576,
+            "llm_judge_score_mean": 1.7692307692307692,
+            "llm_judge_score_std": 1.2498520622516862
+          },
+          "cider": {
+            "cider_detailed": 0.0033937890896166218,
+            "cider_short": 2.8383387896276597e-09
+          }
+        },
+        "06_Emergency_Response_Scenarios": {
+          "detailed": {
+            "rouge_l_mean": 0.1681398597711745,
+            "rouge_l_std": 0.03439786035929087,
+            "text_similarity_mean": 0.519610270857811,
+            "text_similarity_std": 0.13228025667201218,
+            "llm_judge_score_mean": 2.7,
+            "llm_judge_score_std": 1.4177446878757827
+          },
+          "short": {
+            "rouge_l_mean": 0.10724833953350665,
+            "rouge_l_std": 0.03920240746981716,
+            "text_similarity_mean": 0.43727378472685813,
+            "text_similarity_std": 0.1073295231283786,
+            "llm_judge_score_mean": 2.75,
+            "llm_judge_score_std": 1.3738631664034087
+          },
+          "cider": {
+            "cider_detailed": 0.0030016131164437134,
+            "cider_short": 0.001013228908884941
+          }
+        },
+        "07_Public_Transportation_Conflicts": {
+          "detailed": {
+            "rouge_l_mean": 0.15609242986056263,
+            "rouge_l_std": 0.01961978881585708,
+            "text_similarity_mean": 0.5269871928862163,
+            "text_similarity_std": 0.08646566292835295,
+            "llm_judge_score_mean": 2.0,
+            "llm_judge_score_std": 1.0690449676496976
+          },
+          "short": {
+            "rouge_l_mean": 0.10035951056737383,
+            "rouge_l_std": 0.039849249446732134,
+            "text_similarity_mean": 0.396715620798724,
+            "text_similarity_std": 0.10390401176717076,
+            "llm_judge_score_mean": 1.7857142857142858,
+            "llm_judge_score_std": 0.6738557951469003
+          },
+          "cider": {
+            "cider_detailed": 9.04238033125483e-34,
+            "cider_short": 9.445547149130169e-17
+          }
+        },
+        "08_Workplace_Team_Meetings": {
+          "detailed": {
+            "rouge_l_mean": 0.14228255657751956,
+            "rouge_l_std": 0.03295182611742299,
+            "text_similarity_mean": 0.4311644467525184,
+            "text_similarity_std": 0.18878293980908345,
+            "llm_judge_score_mean": 2.5,
+            "llm_judge_score_std": 2.179449471770337
+          },
+          "short": {
+            "rouge_l_mean": 0.09770685122794527,
+            "rouge_l_std": 0.0414819810211011,
+            "text_similarity_mean": 0.39609092846512794,
+            "text_similarity_std": 0.18640869175023914,
+            "llm_judge_score_mean": 2.4166666666666665,
+            "llm_judge_score_std": 1.4409680388158819
+          },
+          "cider": {
+            "cider_detailed": 0.0003948299396740116,
+            "cider_short": 2.7960343953389366e-08
+          }
+        },
+        "09_HousingApartment_Tours": {
+          "detailed": {
+            "rouge_l_mean": 0.17009399373339443,
+            "rouge_l_std": 0.029535981764889023,
+            "text_similarity_mean": 0.426934194440643,
+            "text_similarity_std": 0.13449117581192213,
+            "llm_judge_score_mean": 2.5833333333333335,
+            "llm_judge_score_std": 1.076903998610007
+          },
+          "short": {
+            "rouge_l_mean": 0.10788605945383505,
+            "rouge_l_std": 0.04799627734032344,
+            "text_similarity_mean": 0.39349150999138754,
+            "text_similarity_std": 0.13644915044081132,
+            "llm_judge_score_mean": 2.625,
+            "llm_judge_score_std": 1.1836560592784826
+          },
+          "cider": {
+            "cider_detailed": 0.002613171112423008,
+            "cider_short": 4.996543675838321e-06
+          }
+        },
+        "10_Restaurant_Service_Encounters": {
+          "detailed": {
+            "rouge_l_mean": 0.1716475719887819,
+            "rouge_l_std": 0.03716669220028244,
+            "text_similarity_mean": 0.4643171591603238,
+            "text_similarity_std": 0.16788896410807838,
+            "llm_judge_score_mean": 2.260869565217391,
+            "llm_judge_score_std": 1.62098712020063
+          },
+          "short": {
+            "rouge_l_mean": 0.10374829411518402,
+            "rouge_l_std": 0.08964500720723173,
+            "text_similarity_mean": 0.35520354496396106,
+            "text_similarity_std": 0.17526280129585242,
+            "llm_judge_score_mean": 2.347826086956522,
+            "llm_judge_score_std": 1.6045775728039946
+          },
+          "cider": {
+            "cider_detailed": 0.00034752508359328605,
+            "cider_short": 6.98870675768535e-07
+          }
+        },
+        "11_Mental_Health_Counseling": {
+          "detailed": {
+            "rouge_l_mean": 0.1756496468856078,
+            "rouge_l_std": 0.055599423380437676,
+            "text_similarity_mean": 0.5535178711781135,
+            "text_similarity_std": 0.1790253744035483,
+            "llm_judge_score_mean": 3.6923076923076925,
+            "llm_judge_score_std": 1.7269187938956652
+          },
+          "short": {
+            "rouge_l_mean": 0.13373509770888348,
+            "rouge_l_std": 0.04978412884313178,
+            "text_similarity_mean": 0.548556598333212,
+            "text_similarity_std": 0.1413237975335489,
+            "llm_judge_score_mean": 3.5384615384615383,
+            "llm_judge_score_std": 1.4472990555559062
+          },
+          "cider": {
+            "cider_detailed": 0.004291931823527321,
+            "cider_short": 0.01928754518527722
+          }
+        },
+        "12_Community_Town_Halls": {
+          "detailed": {
+            "rouge_l_mean": 0.14059717797460627,
+            "rouge_l_std": 0.03530031449867325,
+            "text_similarity_mean": 0.3431492756224341,
+            "text_similarity_std": 0.13876641228879524,
+            "llm_judge_score_mean": 2.2777777777777777,
+            "llm_judge_score_std": 1.1928283640879938
+          },
+          "short": {
+            "rouge_l_mean": 0.08604279783597953,
+            "rouge_l_std": 0.035629166819959125,
+            "text_similarity_mean": 0.3783178888261318,
+            "text_similarity_std": 0.16928211210237132,
+            "llm_judge_score_mean": 2.2222222222222223,
+            "llm_judge_score_std": 0.9749960430435692
+          },
+          "cider": {
+            "cider_detailed": 0.030779937342039026,
+            "cider_short": 2.9037986133885453e-07
+          }
+        },
+        "13_Olympics": {
+          "detailed": {
+            "rouge_l_mean": 0.16564184994349382,
+            "rouge_l_std": 0.0297871958464498,
+            "text_similarity_mean": 0.4978002763312796,
+            "text_similarity_std": 0.1313626662250004,
+            "llm_judge_score_mean": 2.0869565217391304,
+            "llm_judge_score_std": 1.2824244525002282
+          },
+          "short": {
+            "rouge_l_mean": 0.12518718100562226,
+            "rouge_l_std": 0.049987892248876085,
+            "text_similarity_mean": 0.4499506833760635,
+            "text_similarity_std": 0.1475839436871811,
+            "llm_judge_score_mean": 2.347826086956522,
+            "llm_judge_score_std": 1.6839058026988767
+          },
+          "cider": {
+            "cider_detailed": 0.020968231650462833,
+            "cider_short": 0.014492225985348755
+          }
+        }
+      },
+      "aggregated_across_topics": {
+        "detailed": {
+          "rouge_l_mean": 0.16329471662623543,
+          "text_similarity_mean": 0.49121187479466577,
+          "llm_judge_score_mean": 2.767524379188259
+        },
+        "short": {
+          "rouge_l_mean": 0.10958840135134454,
+          "text_similarity_mean": 0.44599292186976514,
+          "llm_judge_score_mean": 2.7315759491344775
+        },
+        "cider": {
+          "cider_detailed_mean": 0.005522623514323013,
+          "cider_short_mean": 0.0026772903706091225
+        }
+      }
+    },
+    "t2": {
+      "task_name": "task2_mcq",
+      "topics": {
+        "01_Patient-Doctor_Consultations": {
+          "accuracy": 0.803921568627451,
+          "correct": 82,
+          "total": 102,
+          "rationale": {
+            "rouge_l_mean": 0.2673793581712462,
+            "rouge_l_std": 0.08775670585279896,
+            "text_similarity_mean": 0.7130860835313797,
+            "text_similarity_std": 0.12348624791883556,
+            "llm_judge_score_mean": 7.598039215686274,
+            "llm_judge_score_std": 3.3055503054698083
+          },
+          "rationale_cider": 0.11466286315754119
+        },
+        "02_Job_Interviews": {
+          "accuracy": 0.92,
+          "correct": 92,
+          "total": 100,
+          "rationale": {
+            "rouge_l_mean": 0.26818350023408727,
+            "rouge_l_std": 0.07052487313022397,
+            "text_similarity_mean": 0.7015232771635056,
+            "text_similarity_std": 0.10111488515791524,
+            "llm_judge_score_mean": 8.86,
+            "llm_judge_score_std": 2.126123232552619
+          },
+          "rationale_cider": 0.07501478402090704
+        },
+        "03_Parent-Teacher_Conferences": {
+          "accuracy": 0.8956521739130435,
+          "correct": 206,
+          "total": 230,
+          "rationale": {
+            "rouge_l_mean": 0.2576564591112143,
+            "rouge_l_std": 0.07961572840595653,
+            "text_similarity_mean": 0.7246508673481319,
+            "text_similarity_std": 0.10505197837290237,
+            "llm_judge_score_mean": 8.421739130434782,
+            "llm_judge_score_std": 2.509192927883062
+          },
+          "rationale_cider": 0.10337802253222166
+        },
+        "04_Customer_Service_Interactions": {
+          "accuracy": 0.7435897435897436,
+          "correct": 29,
+          "total": 39,
+          "rationale": {
+            "rouge_l_mean": 0.25717345809965103,
+            "rouge_l_std": 0.06780472132228962,
+            "text_similarity_mean": 0.7252262953000191,
+            "text_similarity_std": 0.10100412746199532,
+            "llm_judge_score_mean": 6.923076923076923,
+            "llm_judge_score_std": 3.2215987063649116
+          },
+          "rationale_cider": 0.13599822183937949
+        },
+        "05_Courtroom_Proceedings": {
+          "accuracy": 0.8695652173913043,
+          "correct": 100,
+          "total": 115,
+          "rationale": {
+            "rouge_l_mean": 0.2611356181422376,
+            "rouge_l_std": 0.08080245657381803,
+            "text_similarity_mean": 0.7070405228306418,
+            "text_similarity_std": 0.12893378916120538,
+            "llm_judge_score_mean": 7.973913043478261,
+            "llm_judge_score_std": 2.911628468789356
+          },
+          "rationale_cider": 0.059350781731614524
+        },
+        "06_Emergency_Response_Scenarios": {
+          "accuracy": 0.7931034482758621,
+          "correct": 69,
+          "total": 87,
+          "rationale": {
+            "rouge_l_mean": 0.2524409660545311,
+            "rouge_l_std": 0.07999252191699774,
+            "text_similarity_mean": 0.7144164381784269,
+            "text_similarity_std": 0.12797409224465636,
+            "llm_judge_score_mean": 7.609195402298851,
+            "llm_judge_score_std": 3.3057119560739987
+          },
+          "rationale_cider": 0.05822624524874384
+        },
+        "07_Public_Transportation_Conflicts": {
+          "accuracy": 0.8431372549019608,
+          "correct": 43,
+          "total": 51,
+          "rationale": {
+            "rouge_l_mean": 0.2402531830559861,
+            "rouge_l_std": 0.06610207724992924,
+            "text_similarity_mean": 0.7174292539849001,
+            "text_similarity_std": 0.09917421357384576,
+            "llm_judge_score_mean": 7.333333333333333,
+            "llm_judge_score_std": 3.422341055571989
+          },
+          "rationale_cider": 0.06728369306518786
+        },
+        "08_Workplace_Team_Meetings": {
+          "accuracy": 0.8507462686567164,
+          "correct": 57,
+          "total": 67,
+          "rationale": {
+            "rouge_l_mean": 0.24794067105278816,
+            "rouge_l_std": 0.05337747868704915,
+            "text_similarity_mean": 0.7342945862172255,
+            "text_similarity_std": 0.11834751078046848,
+            "llm_judge_score_mean": 8.447761194029852,
+            "llm_judge_score_std": 2.2611817151529103
+          },
+          "rationale_cider": 0.06222439393404657
+        },
+        "09_HousingApartment_Tours": {
+          "accuracy": 0.7596899224806202,
+          "correct": 98,
+          "total": 129,
+          "rationale": {
+            "rouge_l_mean": 0.25685181186407746,
+            "rouge_l_std": 0.08116376154249771,
+            "text_similarity_mean": 0.684234094943187,
+            "text_similarity_std": 0.14172388611512127,
+            "llm_judge_score_mean": 7.0310077519379846,
+            "llm_judge_score_std": 3.4907141147546956
+          },
+          "rationale_cider": 0.08827060023913144
+        },
+        "10_Restaurant_Service_Encounters": {
+          "accuracy": 0.6444444444444445,
+          "correct": 58,
+          "total": 90,
+          "rationale": {
+            "rouge_l_mean": 0.24386326485061863,
+            "rouge_l_std": 0.06370697782717592,
+            "text_similarity_mean": 0.6945160885651906,
+            "text_similarity_std": 0.12667271216490042,
+            "llm_judge_score_mean": 6.488888888888889,
+            "llm_judge_score_std": 3.5063258530339594
+          },
+          "rationale_cider": 0.13548373922736232
+        },
+        "11_Mental_Health_Counseling": {
+          "accuracy": 0.8769230769230769,
+          "correct": 57,
+          "total": 65,
+          "rationale": {
+            "rouge_l_mean": 0.24022078692555274,
+            "rouge_l_std": 0.06845966230912771,
+            "text_similarity_mean": 0.7402177361341623,
+            "text_similarity_std": 0.09709719691497741,
+            "llm_judge_score_mean": 8.538461538461538,
+            "llm_judge_score_std": 2.347351522801311
+          },
+          "rationale_cider": 0.10995157464080006
+        },
+        "12_Community_Town_Halls": {
+          "accuracy": 0.8465608465608465,
+          "correct": 160,
+          "total": 189,
+          "rationale": {
+            "rouge_l_mean": 0.24952757194093617,
+            "rouge_l_std": 0.07280245401825701,
+            "text_similarity_mean": 0.6991952616701681,
+            "text_similarity_std": 0.11412151059114252,
+            "llm_judge_score_mean": 8.015873015873016,
+            "llm_judge_score_std": 2.675533256399041
+          },
+          "rationale_cider": 0.06313281409752575
+        },
+        "13_Olympics": {
+          "accuracy": 0.7536231884057971,
+          "correct": 52,
+          "total": 69,
+          "rationale": {
+            "rouge_l_mean": 0.23491928924439515,
+            "rouge_l_std": 0.06348402358778706,
+            "text_similarity_mean": 0.7247067715810693,
+            "text_similarity_std": 0.09902297682323857,
+            "llm_judge_score_mean": 7.101449275362318,
+            "llm_judge_score_std": 3.3019314836606366
+          },
+          "rationale_cider": 0.04755439113869333
+        }
+      },
+      "aggregated_across_topics": {
+        "accuracy_mean": 0.8154582426285283,
+        "rationale": {
+          "rouge_l_mean": 0.25211891836517863,
+          "text_similarity_mean": 0.713887482880616,
+          "llm_judge_score_mean": 7.718672208681694
+        }
+      }
+    },
+    "t3": {
+      "task_name": "task3_temporal_localization",
+      "topics": {
+        "01_Patient-Doctor_Consultations": {
+          "mean_iou": 0.0348162671671364,
+          "std_iou": 0.12600695599104955,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.041353383458646614,
+            "count": 11,
+            "total": 266
+          },
+          "R@0.5": {
+            "recall": 0.03759398496240601,
+            "count": 10,
+            "total": 266
+          },
+          "R@0.7": {
+            "recall": 0.007518796992481203,
+            "count": 2,
+            "total": 266
+          },
+          "mae": {
+            "start_mean": 169.81368796992484,
+            "end_mean": 3685.539533834586,
+            "average_mean": 1927.6766109022556
+          },
+          "rationale": {
+            "rouge_l_mean": 0.24669788793451727,
+            "rouge_l_std": 0.1138268626444423,
+            "text_similarity_mean": 0.44953603665099334,
+            "text_similarity_std": 0.19231654538664766,
+            "llm_judge_score_mean": 3.5601503759398496,
+            "llm_judge_score_std": 2.7307340126903186
+          },
+          "rationale_cider": 0.31449686067022425
+        },
+        "02_Job_Interviews": {
+          "mean_iou": 0.026085090170237288,
+          "std_iou": 0.1036035070015144,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.04,
+            "count": 10,
+            "total": 250
+          },
+          "R@0.5": {
+            "recall": 0.012,
+            "count": 3,
+            "total": 250
+          },
+          "R@0.7": {
+            "recall": 0.008,
+            "count": 2,
+            "total": 250
+          },
+          "mae": {
+            "start_mean": 121.25368399999999,
+            "end_mean": 123.71622,
+            "average_mean": 122.48495199999999
+          },
+          "rationale": {
+            "rouge_l_mean": 0.22341265181941883,
+            "rouge_l_std": 0.10206172287185152,
+            "text_similarity_mean": 0.4104600582420826,
+            "text_similarity_std": 0.17732432144475568,
+            "llm_judge_score_mean": 3.768,
+            "llm_judge_score_std": 2.8344622064864438
+          },
+          "rationale_cider": 0.2807422932394935
+        },
+        "03_Parent-Teacher_Conferences": {
+          "mean_iou": 0.023133479771761153,
+          "std_iou": 0.09257947283068967,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.03207547169811321,
+            "count": 17,
+            "total": 530
+          },
+          "R@0.5": {
+            "recall": 0.013207547169811321,
+            "count": 7,
+            "total": 530
+          },
+          "R@0.7": {
+            "recall": 0.0018867924528301887,
+            "count": 1,
+            "total": 530
+          },
+          "mae": {
+            "start_mean": 175.6921679245283,
+            "end_mean": 176.91987924528303,
+            "average_mean": 176.30602358490563
+          },
+          "rationale": {
+            "rouge_l_mean": 0.21384367291248413,
+            "rouge_l_std": 0.09755577512617385,
+            "text_similarity_mean": 0.4187140709773268,
+            "text_similarity_std": 0.18346345936512104,
+            "llm_judge_score_mean": 3.550943396226415,
+            "llm_judge_score_std": 2.640441832774907
+          },
+          "rationale_cider": 0.26636397893073654
+        },
+        "04_Customer_Service_Interactions": {
+          "mean_iou": 0.012276520967606676,
+          "std_iou": 0.069056725628153,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.017391304347826087,
+            "count": 2,
+            "total": 115
+          },
+          "R@0.5": {
+            "recall": 0.008695652173913044,
+            "count": 1,
+            "total": 115
+          },
+          "R@0.7": {
+            "recall": 0.0,
+            "count": 0,
+            "total": 115
+          },
+          "mae": {
+            "start_mean": 85.88990434782609,
+            "end_mean": 86.44927826086956,
+            "average_mean": 86.16959130434783
+          },
+          "rationale": {
+            "rouge_l_mean": 0.2399602700207573,
+            "rouge_l_std": 0.12362679082021771,
+            "text_similarity_mean": 0.4390256497523059,
+            "text_similarity_std": 0.1682863046924854,
+            "llm_judge_score_mean": 3.9565217391304346,
+            "llm_judge_score_std": 2.4720746588832276
+          },
+          "rationale_cider": 0.48495696361853313
+        },
+        "05_Courtroom_Proceedings": {
+          "mean_iou": 0.014429311937864675,
+          "std_iou": 0.08166943562082464,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.017595307917888565,
+            "count": 6,
+            "total": 341
+          },
+          "R@0.5": {
+            "recall": 0.011730205278592375,
+            "count": 4,
+            "total": 341
+          },
+          "R@0.7": {
+            "recall": 0.002932551319648094,
+            "count": 1,
+            "total": 341
+          },
+          "mae": {
+            "start_mean": 129.43099413489736,
+            "end_mean": 131.10984457478006,
+            "average_mean": 130.2704193548387
+          },
+          "rationale": {
+            "rouge_l_mean": 0.21150269888212025,
+            "rouge_l_std": 0.10747597764414231,
+            "text_similarity_mean": 0.4068772337615184,
+            "text_similarity_std": 0.20625080429955567,
+            "llm_judge_score_mean": 3.865102639296188,
+            "llm_judge_score_std": 2.6671646952258703
+          },
+          "rationale_cider": 0.2655127929676634
+        },
+        "06_Emergency_Response_Scenarios": {
+          "mean_iou": 0.007085167456917317,
+          "std_iou": 0.04305546668118958,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.01195219123505976,
+            "count": 3,
+            "total": 251
+          },
+          "R@0.5": {
+            "recall": 0.0,
+            "count": 0,
+            "total": 251
+          },
+          "R@0.7": {
+            "recall": 0.0,
+            "count": 0,
+            "total": 251
+          },
+          "mae": {
+            "start_mean": 64.64671314741037,
+            "end_mean": 97.37343027888446,
+            "average_mean": 81.0100717131474
+          },
+          "rationale": {
+            "rouge_l_mean": 0.2355621778255831,
+            "rouge_l_std": 0.10997663414556948,
+            "text_similarity_mean": 0.46836198885661673,
+            "text_similarity_std": 0.16683894799006097,
+            "llm_judge_score_mean": 4.4063745019920315,
+            "llm_judge_score_std": 2.7546048377107546
+          },
+          "rationale_cider": 0.4550442615280766
+        },
+        "07_Public_Transportation_Conflicts": {
+          "mean_iou": 0.005557380002332883,
+          "std_iou": 0.04050203924917381,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.009259259259259259,
+            "count": 1,
+            "total": 108
+          },
+          "R@0.5": {
+            "recall": 0.0,
+            "count": 0,
+            "total": 108
+          },
+          "R@0.7": {
+            "recall": 0.0,
+            "count": 0,
+            "total": 108
+          },
+          "mae": {
+            "start_mean": 137.42092592592593,
+            "end_mean": 137.9675092592593,
+            "average_mean": 137.6942175925926
+          },
+          "rationale": {
+            "rouge_l_mean": 0.20142226223245518,
+            "rouge_l_std": 0.10000832536260715,
+            "text_similarity_mean": 0.4376192559764065,
+            "text_similarity_std": 0.165913330621487,
+            "llm_judge_score_mean": 4.324074074074074,
+            "llm_judge_score_std": 2.60280725835446
+          },
+          "rationale_cider": 0.3233961605065266
+        },
+        "08_Workplace_Team_Meetings": {
+          "mean_iou": 0.014592569165849141,
+          "std_iou": 0.05821668252190972,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.013157894736842105,
+            "count": 2,
+            "total": 152
+          },
+          "R@0.5": {
+            "recall": 0.0,
+            "count": 0,
+            "total": 152
+          },
+          "R@0.7": {
+            "recall": 0.0,
+            "count": 0,
+            "total": 152
+          },
+          "mae": {
+            "start_mean": 165.41743421052635,
+            "end_mean": 261.4480263157895,
+            "average_mean": 213.4327302631579
+          },
+          "rationale": {
+            "rouge_l_mean": 0.21896737535856117,
+            "rouge_l_std": 0.10544681205345176,
+            "text_similarity_mean": 0.42781452079744714,
+            "text_similarity_std": 0.1910867435940994,
+            "llm_judge_score_mean": 3.5723684210526314,
+            "llm_judge_score_std": 2.4644898417431955
+          },
+          "rationale_cider": 0.2762179984939463
+        },
+        "09_HousingApartment_Tours": {
+          "mean_iou": 0.02395489868043287,
+          "std_iou": 0.1017764001145895,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.03125,
+            "count": 12,
+            "total": 384
+          },
+          "R@0.5": {
+            "recall": 0.015625,
+            "count": 6,
+            "total": 384
+          },
+          "R@0.7": {
+            "recall": 0.005208333333333333,
+            "count": 2,
+            "total": 384
+          },
+          "mae": {
+            "start_mean": 51.45444010416667,
+            "end_mean": 53.130901041666675,
+            "average_mean": 52.29267057291667
+          },
+          "rationale": {
+            "rouge_l_mean": 0.22481156291770152,
+            "rouge_l_std": 0.0902807754699873,
+            "text_similarity_mean": 0.44709907212442584,
+            "text_similarity_std": 0.17978769958556784,
+            "llm_judge_score_mean": 4.3828125,
+            "llm_judge_score_std": 2.554982144068803
+          },
+          "rationale_cider": 0.37331665015783333
+        },
+        "10_Restaurant_Service_Encounters": {
+          "mean_iou": 0.017369014119677666,
+          "std_iou": 0.08638484460158181,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.026041666666666668,
+            "count": 5,
+            "total": 192
+          },
+          "R@0.5": {
+            "recall": 0.005208333333333333,
+            "count": 1,
+            "total": 192
+          },
+          "R@0.7": {
+            "recall": 0.005208333333333333,
+            "count": 1,
+            "total": 192
+          },
+          "mae": {
+            "start_mean": 96.42035937500002,
+            "end_mean": 125.54452604166666,
+            "average_mean": 110.98244270833332
+          },
+          "rationale": {
+            "rouge_l_mean": 0.20654658960380232,
+            "rouge_l_std": 0.09699334273056497,
+            "text_similarity_mean": 0.4067714703317809,
+            "text_similarity_std": 0.20049973730966958,
+            "llm_judge_score_mean": 4.072916666666667,
+            "llm_judge_score_std": 2.9056152233888244
+          },
+          "rationale_cider": 0.20509648438169722
+        },
+        "11_Mental_Health_Counseling": {
+          "mean_iou": 0.01143475430600169,
+          "std_iou": 0.06277337056467443,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.013605442176870748,
+            "count": 2,
+            "total": 147
+          },
+          "R@0.5": {
+            "recall": 0.006802721088435374,
+            "count": 1,
+            "total": 147
+          },
+          "R@0.7": {
+            "recall": 0.0,
+            "count": 0,
+            "total": 147
+          },
+          "mae": {
+            "start_mean": 56.40015646258504,
+            "end_mean": 54.45187755102042,
+            "average_mean": 55.426017006802724
+          },
+          "rationale": {
+            "rouge_l_mean": 0.20934857680960223,
+            "rouge_l_std": 0.08797766511883365,
+            "text_similarity_mean": 0.4426830817318084,
+            "text_similarity_std": 0.19052344865290088,
+            "llm_judge_score_mean": 3.6122448979591835,
+            "llm_judge_score_std": 2.8960422902346767
+          },
+          "rationale_cider": 0.2455850860018005
+        },
+        "12_Community_Town_Halls": {
+          "mean_iou": 0.022749612705579892,
+          "std_iou": 0.09909391848753331,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.03728070175438596,
+            "count": 17,
+            "total": 456
+          },
+          "R@0.5": {
+            "recall": 0.013157894736842105,
+            "count": 6,
+            "total": 456
+          },
+          "R@0.7": {
+            "recall": 0.0043859649122807015,
+            "count": 2,
+            "total": 456
+          },
+          "mae": {
+            "start_mean": 222.91731140350876,
+            "end_mean": 195.16923684210525,
+            "average_mean": 209.04327412280702
+          },
+          "rationale": {
+            "rouge_l_mean": 0.22111880652020724,
+            "rouge_l_std": 0.12267751388353941,
+            "text_similarity_mean": 0.3959376864317037,
+            "text_similarity_std": 0.1996046285645569,
+            "llm_judge_score_mean": 3.526315789473684,
+            "llm_judge_score_std": 2.9281169516829664
+          },
+          "rationale_cider": 0.24651081127689833
+        },
+        "13_Olympics": {
+          "mean_iou": 0.018371212121212257,
+          "std_iou": 0.09702128569715425,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.03409090909090909,
+            "count": 3,
+            "total": 88
+          },
+          "R@0.5": {
+            "recall": 0.022727272727272728,
+            "count": 2,
+            "total": 88
+          },
+          "R@0.7": {
+            "recall": 0.0,
+            "count": 0,
+            "total": 88
+          },
+          "mae": {
+            "start_mean": 45.8040909090909,
+            "end_mean": 46.008568181818184,
+            "average_mean": 45.90632954545454
+          },
+          "rationale": {
+            "rouge_l_mean": 0.21756180113707393,
+            "rouge_l_std": 0.1036313793367782,
+            "text_similarity_mean": 0.47521503847515717,
+            "text_similarity_std": 0.19729245761377828,
+            "llm_judge_score_mean": 3.6136363636363638,
+            "llm_judge_score_std": 2.67323356367348
+          },
+          "rationale_cider": 0.20955587876456452
+        }
+      },
+      "aggregated_across_topics": {
+        "mean_iou": 0.0178350214286623,
+        "mae_average": 257.59195005165844,
+        "R@0.3": 0.025004117872497546,
+        "R@0.5": 0.011288354728508178,
+        "R@0.7": 0.0027031363341466813,
+        "rationale": {
+          "rouge_l_mean": 0.22082741030571418,
+          "text_similarity_mean": 0.4327780895468903,
+          "llm_judge_score_mean": 3.8624201050344245
+        }
+      }
+    }
+  }
+}

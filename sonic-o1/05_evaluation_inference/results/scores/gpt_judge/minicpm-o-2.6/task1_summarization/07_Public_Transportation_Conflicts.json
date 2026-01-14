@@ -1,0 +1,253 @@
+{
+  "topic_id": 7,
+  "topic_name": "Public Transportation Conflicts",
+  "num_evaluated": 14,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.14239363983121875,
+      "rouge_l_std": 0.022572253324974857,
+      "text_similarity_mean": 0.5229383472885404,
+      "text_similarity_std": 0.1136727153298864,
+      "llm_judge_score_mean": 2.2142857142857144,
+      "llm_judge_score_std": 1.4725377234348787
+    },
+    "short": {
+      "rouge_l_mean": 0.1060891025068583,
+      "rouge_l_std": 0.08054667806783257,
+      "text_similarity_mean": 0.4302914972816195,
+      "text_similarity_std": 0.14763039549209356,
+      "llm_judge_score_mean": 2.142857142857143,
+      "llm_judge_score_std": 1.4568627181693672
+    },
+    "cider": {
+      "cider_detailed": 0.003256004929427736,
+      "cider_short": 1.9099983647360507e-10
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.1351981351981352,
+        "text_similarity": 0.41871461272239685,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the airport setting and that officers interact with a seated man, but it omits virtually all key facts from the reference (the sexual-touch allegation, the man's escalating confrontation, refusal to ID, handcuffing/arrest, and subsequent conviction/sentence) and incorrectly portrays the scene as calm."
+      },
+      "short": {
+        "rouge_l": 0.10062893081761007,
+        "text_similarity": 0.37144750356674194,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only the very general scene (a man interacting with officers and being restrained) but omits all key facts from the correct answer\u2014including the alleged touching of a 14-year-old, the man's denials/insults/refusal to comply, the vibrator remark, and the subsequent arrest and sentencing\u2014making it highly incomplete."
+      }
+    },
+    {
+      "video_id": "qqxS7qmVq1k",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.1982758620689655,
+        "text_similarity": 0.7793285250663757,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main events (captain asked to turn off a body camera, exit from the vehicle, arrest after failing field sobriety, and administrative leave) but omits key details about the sergeant explicitly refusing due to departmental body-camera policy, his rank/oath remarks and quoted insistence on impartiality, and it introduces slight role/clarity ambiguity."
+      },
+      "short": {
+        "rouge_l": 0.3619047619047619,
+        "text_similarity": 0.6845998764038086,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures main events (captain asking to turn off camera, alleged drunk driving stop, failing the sobriety test, and being placed on paid leave) but omits the sergeant's refusal and its stated rationale and the captain's arrest, and adds unclear/extra details (swerving and denying turning off the camera)."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.11691022964509394,
+        "text_similarity": 0.4584674835205078,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only generic elements (nighttime police scene, tense interactions, handcuffing) but omits almost all key facts and specifics from the correct answer (bar fight, the missing dog Louie, identities like Millie's husband, details of arrests and outcomes) and includes vague or extraneous details, so it is not a faithful summary."
+      },
+      "short": {
+        "rouge_l": 0.07547169811320754,
+        "text_similarity": 0.41403067111968994,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures very general actions (officers interacting, detentions, interviews) but omits most key facts\u2014assault over a missing dog, identities/charges (battery, trespassing, disorderly intoxication), negotiation by the handcuffed driver, and the victim's decision not to press charges\u2014so it is incomplete."
+      }
+    },
+    {
+      "video_id": "kawE4sHVzyY",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.13394919168591224,
+        "text_similarity": 0.3791744112968445,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes the setting and appearance of a person in a checkered shirt, but it omits the central conflict about mask noncompliance, threats of police/fines, the cameraperson's warnings, the mediator's intervention, and the elderly man ultimately wearing a mask, so it fails to capture the video's main events."
+      },
+      "short": {
+        "rouge_l": 0.1090909090909091,
+        "text_similarity": 0.18937325477600098,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only describes vague gestures and scene elements and omits nearly all key facts from the reference (mask confrontation, aggression, police warning, intervention, mask compliance and Singapore mandate), so it fails to capture the video's main events."
+      }
+    },
+    {
+      "video_id": "GDa0K7KdRxc",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.12690355329949238,
+        "text_similarity": 0.4724193811416626,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction notes visual layout and a person near a Grab scooter and mentions general safety dialogue, but it omits key facts from the reference (the near-hit, dangerous high speed on a shared pathway, the pedestrian's intent to report to police, the rider's distressed apologies and \u2018earning a living\u2019 plea, the near-miss couple, and the final decision not to file a report), and adds irrelevant split-screen/indoor details."
+      },
+      "short": {
+        "rouge_l": 0.058252427184466014,
+        "text_similarity": 0.430431991815567,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes superficial visual elements (night views, a person in green by a Grab scooter and the channel) and omits the core events: the near-hit, confrontation, threat to report to police, repeated apologies and explanation about earning a living, a prior near-miss with a couple, and the final warning."
+      }
+    },
+    {
+      "video_id": "0nbHeJCBE8I",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.125,
+        "text_similarity": 0.49071961641311646,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely fails to capture the video's core narrative\u2014an escalating refund dispute with explicit dialogue, profanity, and a staff member walking away\u2014and instead describes unrelated close-ups of registers, shelves, and inventory; only the brief kitchen scene matches, so it is mostly incorrect."
+      },
+      "short": {
+        "rouge_l": 0.05128205128205129,
+        "text_similarity": 0.27323269844055176,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only lists generic scene labels and misses all key facts about the customer complaint, refund demand, staff inability, escalating confrontation, and the final smile, so it fails to capture the video's main events."
+      }
+    },
+    {
+      "video_id": "N5ozLOqBFmU",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.1745635910224439,
+        "text_similarity": 0.5788842439651489,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely contradicts and omits the reference: the correct answer describes erratic, near-miss driving by a white BMW with dashcam commentary about drinking and calling police, while the prediction describes a post-collision scene with damaged stationary vehicles and debris\u2014a hallucinated event and missing key details."
+      },
+      "short": {
+        "rouge_l": 0.0970873786407767,
+        "text_similarity": 0.4229147732257843,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction incorrectly describes a rear-end crash and debris (hallucinated) and omits key facts about erratic/drunk-suspected driving, near-misses, continued swerving, and the decision to report to police; only 'white car' matches."
+      }
+    },
+    {
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.12639405204460966,
+        "text_similarity": 0.5119789838790894,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the airport setting and that some people appear distressed, but it omits virtually all key events from the reference\u2014no mention of the missed flight disturbance, heated confrontation, arrest/handcuffing, police vehicle interactions, medical complaints, or the airline refusing rebooking."
+      },
+      "short": {
+        "rouge_l": 0.04477611940298508,
+        "text_similarity": 0.4221670627593994,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is overly vague and only notes a person interacting at an airport and a Southwest agent; it omits key facts about the missed flight, yelling, resistance, arrest, companion's denied rebooking, and accusations/medical pleas, so it fails to capture the video's main events."
+      }
+    },
+    {
+      "video_id": "QPj9DLtfr0Y",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.13953488372093023,
+        "text_similarity": 0.5962625741958618,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction notes setting and the woman in striped pants but omits the central content: her heated, confrontational monologue, specific quoted lines, interactions (e.g., references to Trump, police, and the man on his phone) and the audible station announcements; it also adds extraneous details (stationary car, social media logos) not present in the reference."
+      },
+      "short": {
+        "rouge_l": 0.10416666666666667,
+        "text_similarity": 0.3093574643135071,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction notes the woman's appearance and that other passengers remain quiet, but it omits the core events\u2014her shouting, confrontational insults (e.g. 'Are you nuts?'), criticism of a man for using his phone, and her societal remarks\u2014so it fails to capture the video's main content."
+      }
+    },
+    {
+      "video_id": "5SK-v2Plt-s",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.16201117318435754,
+        "text_similarity": 0.6348076462745667,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the urban setting and a general concern about cycling safety, but it omits major factual elements from the reference (the red bicycle, lack of helmet, dangerous weaving, the motorcyclist pulling up at a red light and verbally confronting the cyclist, instructing him to use the left lane, and mentioning the recording). It also includes likely hallucinated details (social media overlay and channel name) not present in the correct summary."
+      },
+      "short": {
+        "rouge_l": 0.12903225806451613,
+        "text_similarity": 0.6495693325996399,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the broad themes (motorcyclist, cyclist in heavy traffic, and safety concerns) but omits several key facts from the reference\u2014no mention of the young man on a red bicycle, lack of helmet/dangerous weaving, the red-light confrontation, the motorcyclist recording the incident, or the cyclist's dismissive reaction and expressed concern for his life."
+      }
+    },
+    {
+      "video_id": "Z0kkGJ9ajBU",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.11692307692307692,
+        "text_similarity": 0.3591511845588684,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only describes incidental visual elements (close-up of an arm, seat, logos, and text overlays) and omits the central contentious encounter, dialogue, money-throwing, and xenophobic insults described in the correct answer, so it largely fails to capture the video's core content."
+      },
+      "short": {
+        "rouge_l": 0.0,
+        "text_similarity": 0.2740233242511749,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction lists unrelated visual elements and social media text, failing to capture any of the key events, accusations, dialogue, or xenophobic content described in the correct summary."
+      }
+    },
+    {
+      "video_id": "EIJJ8-ve2M0",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.14123006833712984,
+        "text_similarity": 0.47370094060897827,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction omits the central incident\u2014 the confrontation between a handicapped passenger and the bus driver, his statements about being handicapped and a paying customer, and the driver's responses\u2014only describing generic interior shots and overlays, so it fails to capture the video's main content."
+      },
+      "short": {
+        "rouge_l": 0.07476635514018692,
+        "text_similarity": 0.377569317817688,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction lists generic visual elements of a bus interior and omits all key factual elements from the correct answer\u2014there is no mention of the handicapped passenger, the ramp conflict, the driver's behavior/language, or the passenger's complaints about fare and service."
+      }
+    },
+    {
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.13623978201634876,
+        "text_similarity": 0.4886418581008911,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the setting, the woman's agitation, bodycam footage, and that she is taken into a police vehicle, but it omits major factual elements from the correct answer\u2014her aggressive demands, admission of drug use/anxiety meds, refusal to leave, arrest for disorderly conduct, violent resistance/struggle, and transport to detention\u2014so it is an incomplete summary."
+      },
+      "short": {
+        "rouge_l": 0.1515151515151515,
+        "text_similarity": 0.6503942012786865,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction notes the woman interacting with police at the Delta Sky Club and being placed in a police vehicle, but it omits key facts from the reference\u2014her erratic behavior, claims about drugs/medication and distrust, inability to pay/find purse, active resistance, arrest for disorderly conduct, and transport to detention."
+      }
+    },
+    {
+      "video_id": "sKWUL4M5V1c",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.16037735849056606,
+        "text_similarity": 0.6788854002952576,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general setting (indoor garage, payment machine, frustrated drivers) but omits critical specifics from the reference\u2014there is no mention of the woman with an $88 monthly pass, the $25 'Assisted Lost Pass Fee', the helpline being closed, the intercom operator denying membership and insisting on payment or reversing, or the offer to pay\u2014so it is an incomplete and less accurate summary."
+      },
+      "short": {
+        "rouge_l": 0.1272727272727273,
+        "text_similarity": 0.5549694895744324,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes a parking garage and adds unrelated details (blue pillar, manual cancellation) while omitting all key events from the correct answer\u2014traffic jam, the blue car's failed monthly pass and $25 fee, disconnected customer service, intercom refusal, and the offered payment\u2014so it is largely incorrect."
+      }
+    }
+  ]
+}

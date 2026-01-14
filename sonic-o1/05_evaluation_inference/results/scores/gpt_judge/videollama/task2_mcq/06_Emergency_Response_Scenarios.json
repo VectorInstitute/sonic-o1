@@ -1,0 +1,1587 @@
+{
+  "topic_id": 6,
+  "topic_name": "Emergency Response Scenarios",
+  "num_evaluated": 87,
+  "aggregated_metrics": {
+    "accuracy": 0.5517241379310345,
+    "correct": 48,
+    "total": 87,
+    "rationale": {
+      "rouge_l_mean": 0.17476187246783262,
+      "rouge_l_std": 0.08408820562994003,
+      "text_similarity_mean": 0.5450273703398376,
+      "text_similarity_std": 0.2050354861397699,
+      "llm_judge_score_mean": 4.942528735632184,
+      "llm_judge_score_std": 4.075032816563667
+    },
+    "rationale_cider": 0.0313288343449389
+  },
+  "per_entry_results": [
+    {
+      "video_id": "gBhOus8Wuzk",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 37.0
+      },
+      "question": "Based on the officer's description of the child's condition and the physical intervention demonstrated, what were the primary indicators suggesting a choking hazard, prompting his urgent response?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20454545454545456,
+        "text_similarity": 0.6742167472839355,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction fails to mention the key cue of excessive drooling/unresponsiveness emphasized by the officer and instead hallucinates a visible foreign object and rapid shallow breathing; it only correctly notes the urgency of the officer's intervention."
+      }
+    },
+    {
+      "video_id": "rFt3suhRtvU",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Given the early morning timing and environmental conditions of the Hillside Fire, what primary challenge did firefighters face in ensuring resident safety, as exemplified by Chief Jager?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.015037593984962409,
+        "text_similarity": 0.19835634529590607,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted response is only a placeholder and provides no substantive content from the video; it fails to state that the primary challenge was alerting sleeping residents during a fast-moving, early-morning fire (e.g., Chief Jager forcing entry), so it does not match the correct answer."
+      }
+    },
+    {
+      "video_id": "rFt3suhRtvU",
+      "video_number": "002",
+      "segment": {
+        "start": 150.0,
+        "end": 239.0
+      },
+      "question": "Based on Battalion Chief Ager's explanation and the visual evidence of the command post, what is the primary strategic function of the Incident Command Post (ICP) during a large-scale fire response?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.05970149253731343,
+        "text_similarity": 0.08152348548173904,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a placeholder phrase and provides no substantive content; it does not state the ICP's primary function of strategic 'big picture' planning, resource management, and briefing support described in the correct answer."
+      }
+    },
+    {
+      "video_id": "C-hqpGKsbss",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the specific medical assessments heard, like 'airways intact' and '30 beats per minute,' combined with the consistent use of both ground and air transport for casualties, which phase of Tactical Combat Casualty Care (TCCC) is being primarily demonstrated?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.09876543209876543,
+        "text_similarity": 0.5874241590499878,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction mentions ongoing care and evacuation but incorrectly labels the phase as TFC (Tactical Field Care) rather than TACEVAC (Tactical Evacuation Care), so it gets minimal credit for capturing evacuation activity but is factually wrong on the key phase identification."
+      }
+    },
+    {
+      "video_id": "C-hqpGKsbss",
+      "video_number": "003",
+      "segment": {
+        "start": 150.0,
+        "end": 294.0
+      },
+      "question": "Considering diverse patient injury descriptions and instructions regarding 'stable' vs. 'not stable' patients, what critical process is being practiced in this simulated scenario?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1787709497206704,
+        "text_similarity": 0.5440472960472107,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction identifies triage and stabilization but omits the key mass-casualty context (multiple patients, '3 down', prioritization cues) and introduces unsupported details about COVID precautions and a single casualty, reducing semantic alignment with the correct answer."
+      }
+    },
+    {
+      "video_id": "SFR6R4dUreQ",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 49.0
+      },
+      "question": "Considering the precarious environment and the officer's verbal approach, what was the primary tactical goal of his reassuring language and personal disclosure to the distressed woman?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.17721518987341772,
+        "text_similarity": 0.5938354730606079,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies the primary tactical goal\u2014establishing rapport and de-escalating suicidal intent\u2014to prevent her from jumping; it omits some specific details (introductions, mentioning kids, repeated assurances, and the 'not worth it' line) but preserves the core meaning."
+      }
+    },
+    {
+      "video_id": "g7PTAoiQktI",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 41.0
+      },
+      "question": "Integrating the imagery of severe vehicle damage with the CFA Deputy Chief Officer's statement, what is highlighted as a significant demand on CFA's resources during long weekends?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3,
+        "text_similarity": 0.5935990810394287,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction vaguely concludes there is a significant demand on CFA resources but fails to specify that motor vehicle collisions are the primary cause, and it includes irrelevant/hallucinated details (woman in an orange jumpsuit) instead of the correct imagery of heavily damaged vehicles and rescue operations."
+      }
+    },
+    {
+      "video_id": "5yVdvfRNsUQ",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 42.0
+      },
+      "question": "Considering the diverse roles mentioned, such as pilots, air traffic controllers, and mechanics, what common skill or value is highlighted as critical for achieving mission success in Army National Guard aviation?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.14516129032258066,
+        "text_similarity": 0.48907530307769775,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly captures the emphasis on attention to detail but omits the equally important theme of teamwork/coordination across roles and adds a specific maintenance-scene detail not supported by the reference."
+      }
+    },
+    {
+      "video_id": "uBZMMLsGY5U",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 114.0
+      },
+      "question": "What specific reason is provided by the dispatcher for the individuals' initial entry into the water?",
+      "answer_correct": 0,
+      "gt_answer": "E",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.0923076923076923,
+        "text_similarity": 0.41055840253829956,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the correct answer: the dispatcher said a 'party that just jumped into the water' and gave no reason, whereas the predicted 'accidental slip or fall from the Riverwalk' introduces unfounded, contradictory details."
+      }
+    },
+    {
+      "video_id": "UV8NVVsXnKs",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 125.0
+      },
+      "question": "Based on the on-screen START triage criteria and the simulated emergency response shown, which patient presentation would be classified as \"IMMEDIATE (Red)\"?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12903225806451613,
+        "text_similarity": 0.6443799734115601,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer contradicts the correct answer: it describes a conscious patient with normal respirations who is following commands, which does not meet the 'IMMEDIATE (Red)' criterion (not following simple commands) stated in the reference."
+      }
+    },
+    {
+      "video_id": "Hm9Jasupk3k",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the suspect's agitated state and the officers' persistent commands, what was the primary immediate threat associated with the umbrella?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.2692307692307692,
+        "text_similarity": 0.8235305547714233,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer correctly identifies the primary immediate threat\u2014that the umbrella could be used to cause injury\u2014and notes the suspect's agitation; however, it omits specific supporting details from the correct answer (refusal to drop it, brandishing/swinging, and officers' taser response) that reinforce the weapon perception."
+      }
+    },
+    {
+      "video_id": "Hm9Jasupk3k",
+      "video_number": "009",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the individual's paradoxical command to \"put pressure on me\" while being restrained, what does this most strongly indicate about his mental or emotional state?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.33333333333333337,
+        "text_similarity": 0.5682336688041687,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies severe agitated delirium/psychological crisis and notes confusion/distress, matching the core conclusion; it omits mention of the accompanying paradoxical statements and behavioral inconsistencies that support this diagnosis."
+      }
+    },
+    {
+      "video_id": "Hm9Jasupk3k",
+      "video_number": "009",
+      "segment": {
+        "start": 510.0,
+        "end": 657.0
+      },
+      "question": "Considering the visible struggle on the store floor and the later charges, what specific form of non-compliance did officers initially encounter when trying to secure the individual?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.19672131147540983,
+        "text_similarity": 0.7403062582015991,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer correctly identifies active physical resistance as the initial form of non-compliance, matching the core of the reference; however, it omits supporting details (officers' commands/counting, attempts to lift/secure into the vehicle) and the explicit 'resisting arrest' charge that confirm the resistance."
+      }
+    },
+    {
+      "video_id": "Hm9Jasupk3k",
+      "video_number": "009",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "What is happening in the video and audio?",
+      "answer_correct": 0,
+      "gt_answer": "E",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.02298850574712644,
+        "text_similarity": -0.0534697026014328,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer describes a specific scene and details (man on floor, gun, dialogue) that are unrelated to the correct answer 'Failed to generate MCQ'; it is incorrect and introduces unsupported content."
+      }
+    },
+    {
+      "video_id": "Hm9Jasupk3k",
+      "video_number": "009",
+      "segment": {
+        "start": 510.0,
+        "end": 656.183
+      },
+      "question": "Given the individual's persistent physical non-compliance and the verbal commands issued by the officers during the attempt to secure him in the patrol car, which charge is most directly supported by these specific actions?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.21897810218978103,
+        "text_similarity": 0.6699496507644653,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly and succinctly identifies 'resisting arrest' as the charge most directly supported by the individual's physical non-compliance and the officers' attempts to secure him, matching the core meaning of the reference."
+      }
+    },
+    {
+      "video_id": "pkiBzUdhsV0",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What specific driver action immediately prompted the officer to escalate from verbal commands to physical intervention and explicitly state the existence of arrest warrants?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3541666666666667,
+        "text_similarity": 0.746502161026001,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately identifies the driver's attempt to operate the vehicle as the immediate trigger for escalation and the officer's mention of warrants, but it omits the specific quoted command and timestamps and adds a minor speculative phrase about fleeing."
+      }
+    },
+    {
+      "video_id": "pkiBzUdhsV0",
+      "video_number": "010",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering the officer's repeated commands and explanation of the individual's actions, what key behavior most directly prompted the decision to physically remove her from the vehicle?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.2616822429906542,
+        "text_similarity": 0.6295158863067627,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly and concisely identifies the immediate trigger\u2014the driver's refusal/attempt to drive off after being instructed to stop\u2014which matches the ground truth without adding errors."
+      }
+    },
+    {
+      "video_id": "pkiBzUdhsV0",
+      "video_number": "010",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the officer's verbal commands and the observed circumstances, what is the primary reason for denying the suspect access to her vehicle for her juice?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.26373626373626374,
+        "text_similarity": 0.7489212155342102,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately conveys the officer's primary concern\u2014potential weapons/hidden items due to tinted windows and the suspect's behavior\u2014matching the reference's emphasis on officer safety and control."
+      }
+    },
+    {
+      "video_id": "pkiBzUdhsV0",
+      "video_number": "010",
+      "segment": {
+        "start": 510.0,
+        "end": 692.0
+      },
+      "question": "Based on the officer's explicit explanation, what is the primary purpose of inventorying the detainee's personal belongings before transporting her to the cellblock?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.05555555555555556,
+        "text_similarity": 0.6497879028320312,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately paraphrases the officer's stated purpose\u2014creating a record of belongings to ensure accountability and return\u2014matching the correct answer's meaning. It omits no key elements and contains no contradictions."
+      }
+    },
+    {
+      "video_id": "8QAyE9Ai3eE",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "According to Micaiah's account, what specific event led to the school staff calling the police and initiating the confrontation?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.18947368421052632,
+        "text_similarity": 0.6631767749786377,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction directly contradicts the correct answer: Micaiah explicitly states she entered to take pictures after being told no and that staff called the police, whereas the prediction falsely claims her account is inconsistent with the video and presents a different sequence."
+      }
+    },
+    {
+      "video_id": "8QAyE9Ai3eE",
+      "video_number": "011",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "According to the administrator's statements, what specific action by the student immediately led to his decision to physically restrain her?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.22916666666666669,
+        "text_similarity": 0.7136031985282898,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the key causal element\u2014the student reaching for her backpack (taken/held by the administrator) after being told 'don't touch him'\u2014which led to the physical restraint; it omits the exact timestamps and the later reinforcing quote but preserves the essential meaning."
+      }
+    },
+    {
+      "video_id": "8QAyE9Ai3eE",
+      "video_number": "011",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the administrator's explicit statement, what precipitating event directly leads to the decision to take the individual into custody?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2153846153846154,
+        "text_similarity": 0.4880583882331848,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the correct answer: the administrator explicitly cites physical contact ('you put your hands on [the] administrator') as the reason for custody, whereas the prediction incorrectly attributes it to offensive language."
+      }
+    },
+    {
+      "video_id": "8QAyE9Ai3eE",
+      "video_number": "011",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Considering the intense resistance described and the officer's specific comment, what was the primary reason for handcuffing the individual in the front instead of the back?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.09638554216867469,
+        "text_similarity": 0.6558904647827148,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately paraphrases the correct answer, stating that the subject's continuous struggle made rear handcuffing unsafe or impossible, which matches the officer's explanation and described resistance."
+      }
+    },
+    {
+      "video_id": "8QAyE9Ai3eE",
+      "video_number": "011",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Why does Deputy Cook explicitly state Micaiah's age of 18 immediately before explaining her destination and legal process?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.02409638554216867,
+        "text_similarity": 0.12029161304235458,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a placeholder phrase and provides no explanation or content from the video; it fails to state that her age determines she will be processed as an adult and taken to branch jail rather than juvenile court."
+      }
+    },
+    {
+      "video_id": "8QAyE9Ai3eE",
+      "video_number": "011",
+      "segment": {
+        "start": 870.0,
+        "end": 912.0
+      },
+      "question": "Why is the act of securing Micaiah with a seatbelt, as described, particularly significant given her specific charges?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.18823529411764706,
+        "text_similarity": 0.5024580955505371,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately and concisely preserves the original meaning: securing the seatbelt is about maintaining control and ensuring safe transport in light of the subject's violent resistance/charges."
+      }
+    },
+    {
+      "video_id": "Zd-Rmez7gNY",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the visible intravenous line insertion and the verbalized fluid rate of 30 to 50 mL per hour, what is the most likely initial purpose of establishing this IV in a field emergency setting?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.10084033613445378,
+        "text_similarity": 0.5432674884796143,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction asserts the IV was for immediate high-dose antibiotic administration, which contradicts the cited 30\u201350 mL/hr rate that indicates a KVO/slow maintenance purpose; while IVs can later deliver antibiotics, this low rate is insufficient for immediate high-dose delivery."
+      }
+    },
+    {
+      "video_id": "Zd-Rmez7gNY",
+      "video_number": "012",
+      "segment": {
+        "start": 150.0,
+        "end": 326.0
+      },
+      "question": "Considering the multiple locations and types of care shown, what is the primary objective of conducting this Mass Casualty (MASCAL) drill on the FOSS?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.13559322033898305,
+        "text_similarity": 0.5684686303138733,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction partly matches by identifying training on medical care and evacuation, but it omits the stated goal of improving force protection and efficiency in caring for personnel and includes a hallucinated detail about counting money that is not in the correct answer."
+      }
+    },
+    {
+      "video_id": "OvTcX2gdpBg",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Integrating the initial dispatch reports and the bodycam footage, what primary fireground operation is most accurately represented in the interior video?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.026315789473684213,
+        "text_similarity": 0.15017029643058777,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a non-substantive placeholder and does not identify the primary operation (initial interior attack) nor cite dispatch/bodycam evidence (working fire, second-floor smoke/fire, advancing crews and visible flames), so it fails to match the correct answer."
+      }
+    },
+    {
+      "video_id": "OvTcX2gdpBg",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "What is the most likely immediate reason for instructing to check the first floor after ventilation and fire knockdown?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.24999999999999997,
+        "text_similarity": 0.5122242569923401,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer succinctly and accurately reflects the correct answer\u2019s immediate reasons\u2014locating potential victims and determining whether the fire has spread to lower levels\u2014without omitting key elements."
+      }
+    },
+    {
+      "video_id": "OvTcX2gdpBg",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Integrating visual evidence of the environment with the ongoing verbal reports, what is the most significant aspect of the fire event being described?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18749999999999997,
+        "text_similarity": 0.45242661237716675,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction describes a car in fog and a flashlight and omits all references to smoke, flames, firefighter audio cues, and an exterior-originating fire from the correct answer, instead introducing hallucinated details that contradict the reference."
+      }
+    },
+    {
+      "video_id": "OvTcX2gdpBg",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 644.0
+      },
+      "question": "Considering the low visibility from smoke/steam, audible water deployment, and radio communications, what primary emergency response action are firefighters undertaking?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3013698630136986,
+        "text_similarity": 0.6970007419586182,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction recognizes low visibility, water deployment, and radio communications but contradicts the core conclusion: it wrongly states the primary action is establishing evacuation routes instead of actively suppressing an interior structural fire, omitting the key factual element."
+      }
+    },
+    {
+      "video_id": "otPeB76zpy8",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Despite his criticism of 'tyrants' at the work release facility, the speaker intends to pray for both 'inmates and staff.' What shared underlying condition does he imply for these two groups?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.24742268041237114,
+        "text_similarity": 0.6417676210403442,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately restates the correct answer's meaning: both inmates and staff are portrayed as suffering under a tyrannical/oppressive system and thus share similar hardships and injustices."
+      }
+    },
+    {
+      "video_id": "otPeB76zpy8",
+      "video_number": "014",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Based on the interaction, why does the filmer refuse to provide identification, despite acknowledging he is on 'state property'?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1616161616161616,
+        "text_similarity": 0.6301947832107544,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly captures that he refuses ID because he feels not legally compelled to comply unless ordered, but it misstates his location belief\u2014he actually acknowledges being on 'state property' while disputing it as a 'state facility,' not claiming a public easement or non-state-controlled land."
+      }
+    },
+    {
+      "video_id": "otPeB76zpy8",
+      "video_number": "014",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "What is the fundamental disagreement between the camera person and the security officer regarding the nature of the property and permissible activities?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.7871161699295044,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the core disagreement\u2014whether the area is open public property versus a restricted state correctional facility\u2014but omits specific details such as the camera person's appeals to 'state easement/free speech/praying' and the officer citing the facility sign and trespass implications."
+      }
+    },
+    {
+      "video_id": "otPeB76zpy8",
+      "video_number": "014",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Based on the officer's statements and the visual context, what is the primary legal justification asserted by the officer for demanding the filmer to leave?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.125,
+        "text_similarity": 0.5788495540618896,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction emphasizes traffic/safety, which is only a later, secondary remark; it omits the officer's primary legal justification that the location is a state/correctional facility and the threat of arrest for trespassing, so it fails to match the correct answer."
+      }
+    },
+    {
+      "video_id": "otPeB76zpy8",
+      "video_number": "014",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "What specific legal basis does the police officer explicitly state for requiring the individual to provide identification in Alabama?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.25396825396825395,
+        "text_similarity": 0.8027079701423645,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and succinctly paraphrases the correct answer, preserving the exact legal basis that the officer cited (Alabama state law) for requiring identification."
+      }
+    },
+    {
+      "video_id": "otPeB76zpy8",
+      "video_number": "014",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Considering the officer's repeated references to a 'government facility' and 'correctional facilities,' combined with the final instruction to leave, what specific offense is the officer ultimately threatening if the individual remains?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21276595744680848,
+        "text_similarity": 0.7788195610046387,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies trespassing as the threatened offense, but it introduces an unsupported detail about 'calling the cops' and frames the location as a 'restricted public area' rather than matching the officer's explicit statement that the person would 'go to jail for trespassing' at a government/correctional facility."
+      }
+    },
+    {
+      "video_id": "otPeB76zpy8",
+      "video_number": "014",
+      "segment": {
+        "start": 1050.0,
+        "end": 1194.0
+      },
+      "question": "Considering the officer's initial warnings and the setting, why is 'the other side of the road' likely still an insufficient distance for the individual?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2476190476190476,
+        "text_similarity": 0.757005512714386,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately and concisely restates the correct answer's point that the facility's legal/security perimeter can include adjacent public rights-of-way, preserving meaning with no added or missing facts."
+      }
+    },
+    {
+      "video_id": "TmFJuTuc5JY",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Despite initial reports and a bystander account, which specific physical actions against the boyfriend were explicitly denied by him when speaking with police?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.19999999999999998,
+        "text_similarity": 0.4280959367752075,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly notes he denied being pushed into the wall, but it omits that he also explicitly denied being hit (e.g., with headphones) and the broader denial of both pushing and hitting, so it is incomplete."
+      }
+    },
+    {
+      "video_id": "TmFJuTuc5JY",
+      "video_number": "015",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Despite denying physical assault when questioned by the officer, what specific action does the woman admit to taking towards the man that could be perceived as physical contact?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2247191011235955,
+        "text_similarity": 0.6366117596626282,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction preserves the general idea that a personal item was used and could be perceived as physical contact, but it contradicts the key factual detail\u2014she said she grabbed his headphones, not that she threw an item\u2014so it introduces a significant inaccuracy."
+      }
+    },
+    {
+      "video_id": "TmFJuTuc5JY",
+      "video_number": "015",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Despite Shikari's insistence that she only 'grabbed those headphones, but not physically' and was merely arguing, what is the most likely basis for the police arresting her for assault?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.1492537313432836,
+        "text_similarity": 0.5947404503822327,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only states that she was arrested for assault and describes irrelevant video details, but it fails to mention the key factual basis\u2014that grabbing the headphones was treated as physical contact (supported by video/domestic-violence context)\u2014so it does not match the correct answer."
+      }
+    },
+    {
+      "video_id": "TmFJuTuc5JY",
+      "video_number": "015",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Throughout the arrest, the woman expresses disbelief and asks multiple procedural questions. What is the overarching reason provided by the officers for these immediate steps?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.0916030534351145,
+        "text_similarity": 0.491407573223114,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies that the officers cite standard policy requiring jail and a judge, but it omits the nuance that this is framed as routine procedure (not due to resistance) and introduces a specific \"physical altercation\" detail not stated in the reference."
+      }
+    },
+    {
+      "video_id": "TmFJuTuc5JY",
+      "video_number": "015",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Based on the woman's repeated inquiries and the officers' responses, what fundamental aspect of the legal process regarding her arrest does she consistently misunderstand?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.15999999999999998,
+        "text_similarity": 0.5845338106155396,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction fails to identify the key misunderstanding about needing to see a judge and not being able to bail out that night; instead it speculates about overnight stays and adds irrelevant/hallucinated details (airport, bag search). It therefore does not align with the correct answer's core point."
+      }
+    },
+    {
+      "video_id": "TmFJuTuc5JY",
+      "video_number": "015",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Despite the suspect's claim of a mere argument with her boyfriend, why is she informed she cannot bail out tonight and must see a judge?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.02409638554216867,
+        "text_similarity": 0.14246858656406403,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a placeholder phrase and provides no substantive explanation; it fails to state the domestic violence charge, mandatory hold, or requirement to see a judge as given in the correct answer."
+      }
+    },
+    {
+      "video_id": "TmFJuTuc5JY",
+      "video_number": "015",
+      "segment": {
+        "start": 1050.0,
+        "end": 1083.0
+      },
+      "question": "In the context of the reported fourth-degree domestic violence incident, why would determining the precise ownership of the phones be a critical step for the officers?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.10989010989010987,
+        "text_similarity": 0.7932205200195312,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly identifies the evidence-collection reason but omits the equally important safety/prevention rationale (preventing suspect contact/harassment and enforcing no-contact orders) emphasized in the correct answer."
+      }
+    },
+    {
+      "video_id": "YqMu4oI6df4",
+      "video_number": "016",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the civilian car's position, the visible police presence, and the speaker's conclusion, what is the most probable type of incident being addressed?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.5694729089736938,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction notes police presence but fails to identify the central detail that the speaker concluded the man was a drunk driver and that the car was off the road; instead it invents a drug/suspicious-activity explanation, contradicting and omitting key facts from the correct answer."
+      }
+    },
+    {
+      "video_id": "YqMu4oI6df4",
+      "video_number": "016",
+      "segment": {
+        "start": 150.0,
+        "end": 345.0
+      },
+      "question": "Based on visual cues and the commentator's observations, what specific details about the civilian vehicle raise suspicion regarding its status or the circumstances of the stop?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.20253164556962025,
+        "text_similarity": 0.48756277561187744,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the two key suspicions\u2014no visible license plate and the vehicle being improperly positioned on a grassy/central area\u2014but it substitutes 'median' for the commentator's phrasing 'wrong side of the Black River Boulevard' (a minor location wording mismatch)."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the initial call and the evidence presented by the male, what was his primary stated reason for preventing the female from leaving the house?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.15,
+        "text_similarity": 0.5806493163108826,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and concisely captures the primary reason\u2014the man prevented her leaving to keep her safe due to her texts expressing intent to harm herself\u2014faithfully reflecting the correct answer."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "What combination of Jennifer's statements and displayed evidence most directly influenced the officer's decision to physically prevent her from re-entering the house?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.03448275862068966,
+        "text_similarity": 0.12839512526988983,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer contains only a generic placeholder and provides no substantive details from the video; it fails to mention the texts about suicidal intent, Jennifer's refusal to explain, or her attempt to re-enter the house that directly prompted the officer's intervention."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the officer's lone presence, the escalating physical struggle in the doorway, and the woman's combative behavior, what is the most likely reason for the officer's repeated calls for an additional unit?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.124031007751938,
+        "text_similarity": 0.35544997453689575,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly senses that additional help is needed for the escalating struggle, but it omits the primary rationale\u2014officer safety and the need for more personnel to gain control\u2014and erroneously emphasizes equipment, which the correct answer rejects."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Based on the verbal exchange and observed police actions, what is the most likely reason the screaming individual was placed in handcuffs?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18705035971223022,
+        "text_similarity": 0.6352529525756836,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately reflects the reference: the individual was screaming and resisting, posed a safety threat, and there is evidence of a prior assault\u2014justifying police restraint and handcuffing to protect others and detain the suspect."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Based on the officer's explanation, what initial concern led to the physical interaction with the individual, and how did the situation evolve?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.26666666666666666,
+        "text_similarity": 0.39632922410964966,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction incorrectly states the incident began as disorderly conduct/excessive noise rather than a Baker Act prompted by suicidal texts, and it omits the officer's account that the individual 'swung back' and began fighting; only the resistance aspect is partially present."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "The officer noted the suspect was 'nice' during a prior Baker Act. What best explains her escalated verbal aggression and physical resistance during the current incident?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.125,
+        "text_similarity": 0.3465788662433624,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction notes increased severity compared to the prior encounter but fails to identify the specific trigger described in the correct answer (the husband's messages and the officer confronting her) and introduces unsupported psychiatric speculation rather than the factual catalyst given."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "What operational challenge in emergency situations is most clearly demonstrated by the speaker's radio channel changing during a struggle, hindering communication?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2574257425742575,
+        "text_similarity": 0.47086793184280396,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately conveys the core issue\u2014the radio switching to the wrong channel during a struggle causing a communication breakdown and illustrating the challenge of maintaining effective communication in chaotic environments\u2014so it preserves the meaning of the correct answer."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Despite the injured individual's assertion of being 'good,' what primary concern is addressed by the responder's orientation questions about location and time?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.050632911392405056,
+        "text_similarity": 0.16361793875694275,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is just a placeholder phrase and provides no substantive explanation; it fails to state that the orientation questions assess altered mental status or possible traumatic brain injury after head trauma, so it does not match the correct answer."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "Given the officer's confirmed injury and the subject being placed on 'suicide watch,' what immediate legal or procedural objective does the request for text messages containing 'suicide statements' primarily serve?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.10526315789473682,
+        "text_similarity": 0.386288583278656,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is incorrect and contradicts the transcript: the texts were requested to document suicide statements to justify an involuntary mental health evaluation/suicide watch, not to support a worker's compensation claim for the officer's injury."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "segment": {
+        "start": 1590.0,
+        "end": 1622.0
+      },
+      "question": "What critical detail from the narration most strongly implies the significant risk or danger present during the 'wild encounter'?",
+      "answer_correct": 0,
+      "gt_answer": "B",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.18823529411764703,
+        "text_similarity": 0.6834350824356079,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only restates that 'wild encounter' implies danger, but it fails to mention the critical detail\u2014the civilian ('male fianc\u00e9') assisting the officer\u2014which is the stronger, concrete indicator of heightened risk described in the correct answer."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Which passenger-provided detail, when considered with the driver's earlier statements, most likely raised the officer's suspicion about the vehicle's recent acquisition?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.27999999999999997,
+        "text_similarity": 0.6264973878860474,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction references the driver's acquisition statement but fails to identify the key inconsistency (driver said 'Friday' vs passenger 'last weekend') and instead hallucinates an unrelated detail about lack of ID, omitting the primary reason for suspicion."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "What pivotal action by the suspect immediately transformed the interaction from a verbal instruction phase to an urgent use-of-force command sequence?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.19999999999999998,
+        "text_similarity": 0.5920862555503845,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer is incorrect and omits the key factual trigger: the correct answer specifies that the suspect dropped a gun, which directly caused the escalation; the prediction instead blames noncompliance, contradicting the transcript."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Integrating the police radio codes and direct officer statements, what immediate sequence of events led to the suspect's apprehension?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.26373626373626374,
+        "text_similarity": 0.7211436033248901,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately and concisely restates the chronological events\u2014weapon dropped during a foot pursuit, the suspect was tased, then attempted to enter an unrelated car\u2014matching the correct answer without adding or omitting key details."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "According to the officer's explanation, what is the specific reason the second individual is being detained?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18045112781954886,
+        "text_similarity": 0.6934479475021362,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer directly contradicts the transcript: detainment was due to the partner fleeing and dropping a gun, while the suspended license was only the reason for the initial stop; the prediction omits the gun/fleeing reason and misattributes detainment to the license."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Given the officer's statement about interrupting a crack deal, what most logically infers the significance of the \"box\" discovered?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.33707865168539325,
+        "text_similarity": 0.8603826761245728,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer faithfully paraphrases the correct answer's inference that the concealed box, in the context of an interrupted crack deal, likely held contraband; it preserves the original meaning without adding or omitting key facts."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "What is the primary investigative objective in comparing the serial number on the found cell phone box with the suspect's personal phone?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.12,
+        "text_similarity": 0.685341477394104,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the primary objective\u2014establishing a link between the suspect and a potentially illicit or unrecovered phone\u2014preserving the meaning of the reference; omitted contextual details do not change the core intent."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Given the arrest for 'ran from the police' and the officer's subsequent clarification of the interview's scope, what primary legal principle is being upheld?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.10752688172043012,
+        "text_similarity": 0.3999749422073364,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the core principle: distinguishing administrative/internal (use-of-force) inquiries from criminal investigations, matching the correct answer's meaning and intent."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Throughout the interrogations, what key tactic does the officer primarily employ to challenge the suspects' repeated denials of ownership for the seized items?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.6905239820480347,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly identifies the primary use of physical evidence to challenge denials but fails to explicitly mention recorded evidence (e.g., 'It's on camera') and introduces 'observed behavior,' which is not emphasized in the correct answer."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "segment": {
+        "start": 1410.0,
+        "end": 1520.0
+      },
+      "question": "Based on the patient's complaint of leg numbness and the concern regarding him 'ending up above the coat,' what is the primary injury suspected by responders?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.11428571428571428,
+        "text_similarity": 0.3641422986984253,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer correctly identifies spinal cord injury as the primary suspected injury given the leg numbness; although the correct answer adds details about immobilization and precautions, the prediction captures the main, relevant conclusion."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the woman's varying accounts of her activities and location, combined with her physical gestures, what best explains the officer's suspicion that she is 'concerned about what's in your pockets'?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.18018018018018017,
+        "text_similarity": 0.7485796213150024,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the core reason for suspicion\u2014repeated reaching/touching of pockets combined with evasive answers\u2014but it omits the additional context about her inconsistent statements regarding the vacant apartment and the substance's location."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Given the woman's nervous demeanor, repeated hand movements towards her pockets despite warnings, and the subsequent discovery of an item by the officer, what is the most likely underlying reason for her distress?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1746031746031746,
+        "text_similarity": 0.3438798785209656,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction attributes her distress to needing a bathroom, which contradicts the officer's warnings and the subsequent discovery/search of a small white item and field test kit; it omits the key evidence suggesting she was concealing or disposing contraband."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Based on the officers' escalating commands and the individual's actions, what specific behavior most directly led to her physical restraint for resisting?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2,
+        "text_similarity": 0.558525562286377,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures a general notion of noncompliance leading to restraint but fails to identify the key factual behavior\u2014repeatedly reaching into her pants/hands in pockets despite explicit warnings\u2014and adds an unsupported detail (sitting back down)."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Considering the individual's verbal complaints about pain and prior injuries, why do officers apply a hobble restraint to her ankles?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.0547945205479452,
+        "text_similarity": 0.22202351689338684,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction contradicts the reference: the hobble was applied to restrain movement and control perceived resistance/prevent struggling or flight, not to stabilize a pre-existing ankle injury, so it omits key facts and introduces an unfounded motive."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "What underlying medical concern is repeatedly emphasized by the individual, directly influencing the officers' handling strategy for safe movement?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1746031746031746,
+        "text_similarity": 0.6362956762313843,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction identifies a medical complaint (tight neck restraints) that is mentioned in the reference but omits and contradicts the key factual element\u2014the individual\u2019s repeatedly stated ankle hardware/pain as the primary impediment affecting movement\u2014so it is largely incorrect."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "What is the most plausible reason the officer puts on gloves immediately before helping the woman into the police vehicle, considering her recent complaints about bodily fluids and the constraints on her mobility?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.20618556701030927,
+        "text_similarity": 0.7644184827804565,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and succinctly captures the primary reason given in the correct answer \u2014 the officer dons gloves as a precaution against exposure to the woman's reported bodily fluids \u2014 preserving the original meaning without adding or contradicting details."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Considering the woman's repeated complaints about physical inability and pain, what is the officer's consistent approach to her stated difficulties during the transport process?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.25373134328358204,
+        "text_similarity": 0.7169811725616455,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly notes that the officer ultimately helps and remains objective about documentation, but it wrongly characterizes his initial attitude as immediately empathetic and providing unprompted aid\u2014omitting his early dismissive instructions and delay before offering physical assistance."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "segment": {
+        "start": 1410.0,
+        "end": 1458.0
+      },
+      "question": "Given the woman's injury, her accusatory statements, and the officer's specific response about documentation, what is the officer's primary underlying motivation?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.21212121212121213,
+        "text_similarity": 0.5678696632385254,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the correct answer's emphasis on proper procedure/record-keeping for legal reasons and protecting departmental liability, with no missing or added content."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Considering the patient's reported 'bad back,' 'knee gave out,' and accusations of 'manhandling,' what primary factor appears to hinder her cooperation during the transfer attempts?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3191489361702128,
+        "text_similarity": 0.8493345975875854,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction acknowledges the patient's pain reports but contradicts the reference by asserting deliberate resistance/escape, which adds an unfounded motive and overlooks the reference's conclusion that physical discomfort\u2014not intentional noncompliance\u2014is the primary barrier."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "segment": {
+        "start": 1410.0,
+        "end": 1457.717
+      },
+      "question": "Based on the woman's accusation of potential harm and the officer's request for future injury documentation, what is the most likely reason for the officer's emphasis on documentation?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.1761006289308176,
+        "text_similarity": 0.675498902797699,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction captures the core inference\u2014that documentation is emphasized for legal reasons and implies possible force during the arrest\u2014but it omits specific supporting details from the correct answer (the subsequent 'resisting arrest with violence' charge and the officer's procedural, non\u2011empathetic phrasing)."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What primarily explains the officer's persistent skepticism about the boyfriend's presence, given the daughter's denials and the officer's past observations?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.28,
+        "text_similarity": 0.6064639687538147,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction attributes the officer's skepticism to sounds in the house and the daughter's excuse about cats, omitting the key fact that the officer had previously witnessed her lie about Stringer; this fails to capture the primary, explicitly stated reason and adds unfounded detail."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering the officer's stated prior experience with the woman's honesty and his current auditory observations, what element of her current statement is most directly challenged?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.15827338129496404,
+        "text_similarity": 0.3876965641975403,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is irrelevant and does not address the officer's auditory observation or the contradiction with the woman's denial; it omits key facts and introduces unrelated details, so it fails to match the correct answer."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the resident's statements and officers' internal discussions, what was the primary justification for the warrantless home entry?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2549019607843137,
+        "text_similarity": 0.659165620803833,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction notes the mother's information about a firearm motivating entry, but it omits the key fact that officers heard movement inside and downplays the exigent safety threat\u2014both central to the warrantless entry justification."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "What combination of communicated circumstances did the officers articulate as justification for potentially entering the home without a warrant?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.11267605633802819,
+        "text_similarity": 0.48709848523139954,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "Incorrect \u2014 the reference specifies the justification as the mother's information, an asserted 'exigent circumstances' rationale, and a domestic-arrest context, whereas the prediction claims an active arrest warrant, which contradicts and omits the key cited reasons."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Based on the legal counsel's advice, why did they hesitate to authorize immediate entry into the residence despite the reported safe word and a bond violation?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.20253164556962025,
+        "text_similarity": 0.6568698883056641,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly states the counsel required confirmation of active harm or visible injury for exigent entry; it is concise but omits explicitly noting that the safe word and bond violation were deemed insufficient evidence."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Given the woman's agitated demeanor and the previous interactions mentioned by the officer, what is the most likely underlying reason for the police presence and their refusal to let her re-enter her home?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18691588785046728,
+        "text_similarity": 0.7589190006256104,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies protection from a partner, securing the residence, and the past domestic violence context. It omits mention of officer liability concerns and the explicit refusal/getting a warrant detail, which are minor but relevant specifics."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Given the officers' statements about being there for 'protection' and the conflicting claims regarding a 'safe word,' what was the most likely reason for police being dispatched to the residence?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3401360544217687,
+        "text_similarity": 0.8350053429603577,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the key points: officers present for 'protection', the 'safe word' as a distress signal, and the conclusion that police were likely investigating a domestic disturbance; it paraphrases the correct answer without omitting facts or introducing contradictions (the minor mention of vehicles is harmless)."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Given the subject's repeated assertion, 'I never said the safe word,' and her accusation that someone 'blatantly lied' to the police, what is the most probable discrepancy between the initial emergency report and the subject's perspective?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.1782178217821782,
+        "text_similarity": 0.5623838901519775,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately conveys the key discrepancy: authorities were told of a dangerous emergency while the subject maintains it was a consensual, pre-arranged situation that was not a real emergency."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "Considering the sheriff's message to Tyree, the officers' statements upon his apprehension, and Tyree's own comments, what is the most probable underlying reason for the police intervention and his subsequent arrest?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.027027027027027025,
+        "text_similarity": 0.11961504071950912,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a placeholder phrase and provides no substantive content from the video; it fails to mention key facts (being on bond, prohibited presence, alleged assault, or the deputy's voicemail) and thus does not match the correct answer."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "question": "Given Tyree's immediate arrest, his earnest explanation, and the officer's comment about 'her house,' what is the most probable underlying legal situation?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.052631578947368425,
+        "text_similarity": 0.12772664427757263,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a non-substantive placeholder and fails to state that Tyree likely violated a court-issued injunction/protective or restraining order, so it does not match the correct answer."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "segment": {
+        "start": 1770.0,
+        "end": 1935.0
+      },
+      "question": "Based on Ashanti's dialogue at the segment's beginning and the charges later disclosed, what conclusion can be drawn regarding the events immediately preceding the officer's offer of AC?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.022222222222222223,
+        "text_similarity": 0.24071821570396423,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is only a generic placeholder and provides no substantive details or reasoning; it fails to mention Ashanti's denial, the handcuffing/offering of AC, or the assault/resisting charges, so it does not match the correct answer."
+      }
+    }
+  ]
+}

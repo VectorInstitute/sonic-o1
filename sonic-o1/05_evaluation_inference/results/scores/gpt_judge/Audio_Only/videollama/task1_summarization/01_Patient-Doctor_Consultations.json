@@ -1,0 +1,285 @@
+{
+  "topic_id": 1,
+  "topic_name": "Patient-Doctor Consultations",
+  "num_evaluated": 16,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.10238697161129176,
+      "rouge_l_std": 0.02164036356709343,
+      "text_similarity_mean": 0.19549510662909597,
+      "text_similarity_std": 0.12077127282244246,
+      "llm_judge_score_mean": 0.0625,
+      "llm_judge_score_std": 0.24206145913796356
+    },
+    "short": {
+      "rouge_l_mean": 0.08648643305496354,
+      "rouge_l_std": 0.041098960548371054,
+      "text_similarity_mean": 0.14080409239977598,
+      "text_similarity_std": 0.11747146412962867,
+      "llm_judge_score_mean": 0.25,
+      "llm_judge_score_std": 0.5590169943749475
+    },
+    "cider": {
+      "cider_detailed": 3.1490218235699e-05,
+      "cider_short": 4.998913272962167e-09
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "STnLNbRHYhw",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.11594202898550723,
+        "text_similarity": 0.31257128715515137,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct answer: it describes wartime/conflict conversations and empathy, whereas the correct answer details a medical student teaching how to take patient histories (ICE, WIPER, SOCRATES, etc.), so it omits and contradicts all key content."
+      },
+      "short": {
+        "rouge_l": 0.12195121951219515,
+        "text_similarity": 0.20638194680213928,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the reference: the correct summary describes a medical history-taking guide (ICE, WIPER, SOCRATES, JAMTHREADS, HEADSSS, etc.), while the prediction discusses war/conflict and empathy, omitting all key factual elements and introducing unrelated content."
+      }
+    },
+    {
+      "video_id": "6PAwe6jndns",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.09836065573770492,
+        "text_similarity": 0.23500578105449677,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated and contradictory to the correct summary: it describes a wartime personal reflection rather than an interactive English practice simulating a patient-receptionist dialogue, omitting all key elements of the original video."
+      },
+      "short": {
+        "rouge_l": 0.08695652173913043,
+        "text_similarity": 0.15461719036102295,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated and factually contradicts the correct summary; it describes a war/military reflection instead of an interactive English doctor's office practice, omitting all key elements."
+      }
+    },
+    {
+      "video_id": "WR5dACe-spg",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.09454545454545456,
+        "text_similarity": 0.2506328225135803,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only notes a man speaking and mentions irrelevant sound effects, but it fails to capture the video's central message about doctors' calming presence, collaborative communication, and building patient trust, and even introduces unsupported details (whip/wind), making it largely incorrect and incomplete."
+      },
+      "short": {
+        "rouge_l": 0.1212121212121212,
+        "text_similarity": 0.13619601726531982,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only notes a man speaking with sound effects and misses all key content about the doctor's message\u2014communication, empathy, patient trust, and listening\u2014so it fails to capture the correct answer's substance."
+      }
+    },
+    {
+      "video_id": "5KcshgQ45XU",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.12979351032448377,
+        "text_similarity": 0.2196461707353592,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary: it discusses general self-care and mindfulness rather than Nurse Kim McDonald, her professional background, and the detailed surgical consultation process, omitting all key facts and introducing unrelated content."
+      },
+      "short": {
+        "rouge_l": 0.08196721311475409,
+        "text_similarity": 0.11394383758306503,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary: it discusses self-care and mindfulness while omitting all factual elements about Nurse Kim McDonald, her role, background, training with Dr. Jugenberg, and the consultation goals described in the correct answer."
+      }
+    },
+    {
+      "video_id": "junFruKQWI0",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.10774410774410774,
+        "text_similarity": 0.3355157971382141,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated and contradictory to the correct summary; it describes a prisoner-of-war narrative whereas the correct answer details a medical lecture on doctor\u2013patient communication, omitting all key elements of the reference."
+      },
+      "short": {
+        "rouge_l": 0.04687499999999999,
+        "text_similarity": 0.2424558848142624,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated\u2014describing a POW and war narration\u2014while the correct answer summarizes communication skills in doctor\u2013patient interactions; it omits all key points and contradicts the topic."
+      }
+    },
+    {
+      "video_id": "afTFvR7pRqg",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.12844036697247707,
+        "text_similarity": 0.20081619918346405,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary: it describes an environmental/recycling beach-cleanup video rather than nurse testimonials and recruitment at Hackensack University Medical Center, omitting all key details and introducing incorrect content."
+      },
+      "short": {
+        "rouge_l": 0.0,
+        "text_similarity": -0.005029086023569107,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated\u2014it mentions environmental activities (recycling, beach clean-up) rather than the hospital nursing themes of professional growth, teamwork, pride, and Magnet-level care, omitting all key elements."
+      }
+    },
+    {
+      "video_id": "NiGj1YBR4Y4",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.12048192771084337,
+        "text_similarity": 0.09923075884580612,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the reference: it describes a war/military narrative and musical scenes, omitting all healthcare details, facilities, prices, and personal medical experiences from the correct answer, and includes hallucinated content."
+      },
+      "short": {
+        "rouge_l": 0.099009900990099,
+        "text_similarity": -0.04931396618485451,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary about healthcare costs and services in Siem Reap, omitting all key facts and introducing unrelated content about music and emotions."
+      }
+    },
+    {
+      "video_id": "9DJXPJsuPsc",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.09646302250803859,
+        "text_similarity": 0.2926677167415619,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is generic and unrelated, describing an organizational testimonial rather than the video's detailed patient-advocacy content about neurofibromatosis, self-advocacy strategies, communication techniques, and appointment preparation; it omits all key factual elements and introduces hallucinated details."
+      },
+      "short": {
+        "rouge_l": 0.07368421052631578,
+        "text_similarity": 0.2941697835922241,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is a generic, positive testimonial and fails to capture any specific content from the reference (neurofibromatosis, patient self-advocacy, concrete communication tactics); it also introduces incorrect details about a product/service and organizational gratitude."
+      }
+    },
+    {
+      "video_id": "Lu_yCNjFZmU",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.1195219123505976,
+        "text_similarity": 0.45246899127960205,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is about documentation and record-keeping, which is entirely different from the correct answer's focus on Marissa Furie's PhysioPlus program about communication skills, patient-centered care, and topics like cross-cultural and personality-specific communication, so it fails to match the content."
+      },
+      "short": {
+        "rouge_l": 0.17475728155339804,
+        "text_similarity": 0.4021751582622528,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction discusses medical documentation and regulatory compliance, which is unrelated to the correct summary about a communication training program; it omits all key points from the reference and introduces unsupported content."
+      }
+    },
+    {
+      "video_id": "KjUhUHfcT_w",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.146031746031746,
+        "text_similarity": -0.0403897762298584,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary: it describes a speech on recycling rather than the Botox consultation, omitting all key details about dosages, treatment areas, and the procedure."
+      },
+      "short": {
+        "rouge_l": 0.14414414414414414,
+        "text_similarity": -0.049081966280937195,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct summary (it describes recycling and sustainability), omitting all key factual details about the Botox treatment plan and thus is incorrect."
+      }
+    },
+    {
+      "video_id": "Xu67ngXWLXI",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.08219178082191782,
+        "text_similarity": 0.14145421981811523,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated and incorrect: it describes a war speech while the correct answer discusses declining trust in medicine, the ABIM Trust Initiative, and technology's role in patient-provider relationships. It omits all key factual elements and introduces hallucinated content."
+      },
+      "short": {
+        "rouge_l": 0.08823529411764706,
+        "text_similarity": 0.1359809935092926,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated\u2014it describes a war/conflict narrative\u2014whereas the correct answer summarizes declining trust in medicine, the ABIM Trust Initiative, and technology's role; it omits all key points and introduces hallucinated content."
+      }
+    },
+    {
+      "video_id": "6vqzBk6z6U4",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.08421052631578947,
+        "text_similarity": 0.23456689715385437,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer describes a fictitious war narrative about violence and emotional toll, which is entirely unrelated to the video's detailed medical-education themes (patient encounters, clinical skills, administrative nuances, and physician self-care), thus omitting and contradicting all key elements."
+      },
+      "short": {
+        "rouge_l": 0.05172413793103448,
+        "text_similarity": 0.23693139851093292,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct summary\u2014it depicts a war/conflict narrative rather than medical training, omitting all key points about clinical skills, doctor-patient relationships, professional development, and burnout."
+      }
+    },
+    {
+      "video_id": "htFE6LPBdHY",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.07239819004524886,
+        "text_similarity": 0.13874739408493042,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the reference: it describes personal life goals and travel instead of any of the medical/GP consultation details (wound care, diabetes, triage, leg health, advocacy) present in the correct answer, omitting all key factual elements."
+      },
+      "short": {
+        "rouge_l": 0.034883720930232565,
+        "text_similarity": 0.10614892840385437,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary, offering personal aspirations instead of any of the key points about GP appointments, wound/leg management, triage, photos, or advocacy, and thus fails to match the content."
+      }
+    },
+    {
+      "video_id": "zq-hPiBgadw",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.08211143695014664,
+        "text_similarity": 0.16567549109458923,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is unrelated to the correct summary, presenting a speech about a fictitious war and empathy rather than any details about Dr. Tolchin, ethics consultations, Yale programs, protocols, or outcomes, and thus omits and contradicts all key content."
+      },
+      "short": {
+        "rouge_l": 0.09009009009009009,
+        "text_similarity": 0.16594697535037994,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer is a vague, high-level summary (empathy/education) that only loosely echoes the correct answer's emphasis on education, but it omits nearly all key specifics (hub-and-spokes model, ethics consultations, Center initiatives, ICU walk rounds, COVID triage/escalation protocol, and equity monitoring)."
+      }
+    },
+    {
+      "video_id": "cOpdhlVsyM8",
+      "video_number": "015",
+      "detailed": {
+        "rouge_l": 0.07106598984771573,
+        "text_similarity": 0.05875764787197113,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated, describing an environmental speech, while the correct answer summarizes a neurology webinar on video consultations; it omits all key details and introduces hallucinated content."
+      },
+      "short": {
+        "rouge_l": 0.07526881720430106,
+        "text_similarity": 0.05245690047740936,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is entirely unrelated to the correct summary, describing recycling and environmental advocacy instead of the webinar on tele-neurology, thus missing all key content and facts."
+      }
+    },
+    {
+      "video_id": "YJFNgX2pmAw",
+      "video_number": "016",
+      "detailed": {
+        "rouge_l": 0.08888888888888888,
+        "text_similarity": 0.030554307624697685,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated to the correct summary: it describes an environmental speech about recycling, while the correct answer details doctors discussing using NHS Near Me for medical student consultations and teaching benefits."
+      },
+      "short": {
+        "rouge_l": 0.09302325581395347,
+        "text_similarity": 0.10888548195362091,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely unrelated\u2014it describes a speech about recycling/environmental responsibility, while the correct summary concerns NHS Near Me medical student consultations; it omits all key details."
+      }
+    }
+  ]
+}

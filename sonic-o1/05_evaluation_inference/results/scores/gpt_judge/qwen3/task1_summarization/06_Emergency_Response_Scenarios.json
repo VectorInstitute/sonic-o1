@@ -1,0 +1,349 @@
+{
+  "topic_id": 6,
+  "topic_name": "Emergency Response Scenarios",
+  "num_evaluated": 20,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.2277334010271749,
+      "rouge_l_std": 0.048963740085165255,
+      "text_similarity_mean": 0.6864487200975418,
+      "text_similarity_std": 0.12773485860908715,
+      "llm_judge_score_mean": 5.1,
+      "llm_judge_score_std": 2.1656407827707715
+    },
+    "short": {
+      "rouge_l_mean": 0.2362205214316866,
+      "rouge_l_std": 0.061924179801017866,
+      "text_similarity_mean": 0.6382859408855438,
+      "text_similarity_std": 0.11944400393215013,
+      "llm_judge_score_mean": 5.45,
+      "llm_judge_score_std": 1.9868316486305528
+    },
+    "cider": {
+      "cider_detailed": 0.00615018385086958,
+      "cider_short": 0.005662754357492989
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "gBhOus8Wuzk",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.33250620347394544,
+        "text_similarity": 0.8037898540496826,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main event (a Warren officer saving a choking baby) but contains several inaccuracies and additions: it mislabels the footage as bodycam (reference cites dashcam then bodycam at the end), specifies the Heimlich rather than back blows/other first aid, and introduces a seizure and an interview that are not supported by the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.3728813559322034,
+        "text_similarity": 0.7281321287155151,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures most main facts (car pulled over, baby choking, mother rushing to hospital, child transported and improving) but incorrectly states the officer performed the Heimlich instead of back blows and omits the officer's name and the detail about saliva clearing the airway, making it factually inaccurate on key medical details."
+      }
+    },
+    {
+      "video_id": "rFt3suhRtvU",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.23316062176165803,
+        "text_similarity": 0.7748888731002808,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the main themes (chiefs' interviews, rapid spread, evacuation challenges, resource strain, and the ICP's coordinating role) but omits many key factual specifics from the reference\u2014e.g., the 2019 Hillside Fire name, ~200 acres burned, six homes destroyed/eighteen damaged, Red Flag conditions, ~1:30 AM dispatch and Highway 18 descent, forced-entry rescues, Wildwood Park ICP location, and the credited hand crew\u2014which reduces completeness."
+      },
+      "short": {
+        "rouge_l": 0.2711864406779661,
+        "text_similarity": 0.7383885383605957,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the general operational themes (response, Battalion Chiefs, and the ICP) and the video's portrayal, but it omits key factual details from the reference\u2014year, acreage, homes destroyed/damaged, Red Flag wind/dry conditions, the chiefs' forced-entry evacuations, and the specific firefighter tactics that prevented further spread."
+      }
+    },
+    {
+      "video_id": "C-hqpGKsbss",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.20705882352941174,
+        "text_similarity": 0.7901568412780762,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the main events\u2014joint U.S./Japanese MEDEVAC exercise, movement of a simulated casualty, use of MV-22 Ospreys, and treatment by U.S. Navy medical personnel\u2014but omits specific details from the reference (e.g., ambulance transport on a dirt road, IV fluids and BVM use, and face-mask protocols) and hedges certain identifications."
+      },
+      "short": {
+        "rouge_l": 0.2043795620437956,
+        "text_similarity": 0.6641453504562378,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main idea\u2014a joint U.S.-Japan simulated medical evacuation with treatment and ground/air coordination\u2014but it omits key specifics such as MV-22 Ospreys, multiple casualties/stretcher transfers, and IV administration, and adds minor unsupported detail (physical examination)."
+      }
+    },
+    {
+      "video_id": "SFR6R4dUreQ",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.3031578947368421,
+        "text_similarity": 0.8650815486907959,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the core events, dialogue, and outcome (including the officer's personal appeal and the referral to a hospital and helpline), but it omits specific details about the officer climbing onto the narrow, slippery exterior framework and the subsequent physical assistance by other officers, and adds minor visual/frame details not present in the reference."
+      },
+      "short": {
+        "rouge_l": 0.3783783783783784,
+        "text_similarity": 0.7215151786804199,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the core events (NYPD Lieutenant Kim calming a woman on the Brooklyn Bridge and her being helped and taken for evaluation) but omits key facts that he climbed onto a precarious metal structure and risked his life and that she was brought back over the railing; it also adds a likely hallucination about a public service announcement and uses the inaccurate term 'physiological evaluation.'"
+      }
+    },
+    {
+      "video_id": "g7PTAoiQktI",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.30392156862745096,
+        "text_similarity": 0.8399722576141357,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The predicted answer closely matches the reference in substance, capturing the PSA tone, Garry Cook's message, the CFA volunteers' response, and the final appeal to drivers; however it introduces an unsupported detail (the car hitting a tree) and omits a few specific visual elements (e.g., kangaroo sign, shattered windshield/crushed roof)."
+      },
+      "short": {
+        "rouge_l": 0.34710743801652894,
+        "text_similarity": 0.7364050149917603,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction conveys the core messages\u2014higher risk on long weekends, frequent CFA involvement, volunteers witnessing severe consequences, and a safety plea\u2014but it omits specifics such as the Labor Day statistic, the rural-road context, and the described rescue-scene visuals (orange jumpsuits/severely damaged vehicle)."
+      }
+    },
+    {
+      "video_id": "5yVdvfRNsUQ",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.22222222222222224,
+        "text_similarity": 0.7543962597846985,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the general theme and visual coverage of aviation roles (pilots, mechanics, ATC, varied terrain), but it omits key spoken testimonials and detailed responsibilities (e.g., the pilot and controller quotes and the controller's tower/radar/radio duties) and introduces unsupported details (Chinook water-dropping) not present in the reference."
+      },
+      "short": {
+        "rouge_l": 0.24590163934426235,
+        "text_similarity": 0.7744044065475464,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately captures the main roles (pilots, mechanics, controllers), teamwork, skills, and pride in service, but it omits specific details such as the pilot's emphasis on drive/mutual support, the controller's tower/radar/radio elements, the mechanic's maintenance/attention-to-detail examples, and the video\u2019s emphasis on precise decision-making."
+      }
+    },
+    {
+      "video_id": "uBZMMLsGY5U",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.22105263157894736,
+        "text_similarity": 0.7213246822357178,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the rescue actions and equipment used and the teamwork, but it omits the crucial fact that five people were rescued (focusing on a single victim) and adds unverified details (video length, weather, promotional screen), so it is incomplete and partially inaccurate."
+      },
+      "short": {
+        "rouge_l": 0.28169014084507044,
+        "text_similarity": 0.6625292301177979,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly conveys a rescue using a flotation device and a successful pull from the water, but it misstates details (single person vs five rescued), introduces likely inaccuracies (ropes/stretcher vs a red strap and yellow ladder-like aid), and omits key facts about multiple victims and civilian assistance."
+      }
+    },
+    {
+      "video_id": "UV8NVVsXnKs",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.3023255813953489,
+        "text_similarity": 0.8604867458343506,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction accurately conveys the main points\u2014the LAX AIREX multi-agency exercise, LAFD involvement, START triage, color-coded tagging, movement to treatment tarps, and inter-agency coordination\u2014but it omits some specific details from the reference (the 60-second triage requirement, bar-coded tags used for tracking/accountability, and some precise triage criteria and acknowledgments of partner agencies)."
+      },
+      "short": {
+        "rouge_l": 0.2608695652173913,
+        "text_similarity": 0.6933209896087646,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main elements (LAX exercise, START rapid triage, four color categories, and color-coded treatment areas) and adds coordination across agencies, but it omits key specifics from the reference such as LAFD/AIREX and the April 2022 timing, the under-60-second triage metric and the detail that tags also served as tracking tools."
+      }
+    },
+    {
+      "video_id": "Hm9Jasupk3k",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.1869918699186992,
+        "text_similarity": 0.6124347448348999,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies a bodycam-recorded arrest and that the person is placed into a police vehicle, but it omits key details from the reference (the officer's struggle to seat the uncooperative individual, repeated commands, on-screen charges, and the officer thanking the person) while adding likely incorrect specifics (location, date, clothing/umbrella, being pinned to the floor and driven away)."
+      },
+      "short": {
+        "rouge_l": 0.2033898305084746,
+        "text_similarity": 0.5401099920272827,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction captures the main arc (an agitated individual resisting arrest and being transported by police), but it omits key details from the reference (officer commands, prolonged struggle, on-screen charges) and adds specific scene details (Safeway, shirtless, long object, on-store-floor arrest) that are not in the correct answer."
+      }
+    },
+    {
+      "video_id": "pkiBzUdhsV0",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.22151898734177214,
+        "text_similarity": 0.4947693347930908,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the general escalation and restraint sequence (refusal, struggle, subdual, placement in police vehicle) but omits many key facts from the reference\u2014three outstanding warrants, the suspect biting the officer, taser warnings, the property inventory including $60 and jewelry, the suspect demanding 'juice', footwear checks\u2014and adds unverified details (rainy day, struggle for keys)."
+      },
+      "short": {
+        "rouge_l": 0.1857142857142857,
+        "text_similarity": 0.456331342458725,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly summarizes the high-level sequence (traffic stop, noncompliant female driver, struggle, restraint and transport) but omits numerous specific and relevant facts from the reference (identity and outstanding warrants, attempted drive-off and biting, denial of 'juice', property inventory including $60, cellblock item restrictions, shoe search, and seatbelting)."
+      }
+    },
+    {
+      "video_id": "8QAyE9Ai3eE",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.18787878787878787,
+        "text_similarity": 0.504640519618988,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the main sequence (student's confrontation, escalation, restraint, and charges) but includes incorrect/hallucinated details (wrong name/spelled differently, specific date, bodycam claim, nicotine possession) and omits several key facts from the reference (administrator names, transport to adult jail, property removal and head injury)."
+      },
+      "short": {
+        "rouge_l": 0.21538461538461537,
+        "text_similarity": 0.7186152338981628,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main events\u2014an 18-year-old student becoming combative, being handcuffed and arrested at school, and charged with resisting and battery\u2014but omits specifics about the initial bag-search struggle with administrators, being restrained by staff, the involvement of two officers and profanity, and being told she'd go to adult jail and escorted to a patrol car."
+      }
+    },
+    {
+      "video_id": "Zd-Rmez7gNY",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.22813688212927757,
+        "text_similarity": 0.583354115486145,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly describes the MASCAL exercise details (casualty removal, med tent treatment, loading and transport) but introduces a significant, unsupported additional segment on financial literacy with named personnel and misnames the site, representing major hallucinated content."
+      },
+      "short": {
+        "rouge_l": 0.16901408450704225,
+        "text_similarity": 0.5675308108329773,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction accurately describes the mass-casualty drill and medical evacuation aspects from the correct answer, but it adds unrelated, unsupported content about a financial literacy program and website, which is a hallucination and reduces overall correctness."
+      }
+    },
+    {
+      "video_id": "OvTcX2gdpBg",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.20689655172413793,
+        "text_similarity": 0.7841552495956421,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly captures the helmet-camera perspective, dense smoke, low visibility, and that it was a 2nd-alarm row-home fire on West Jackson Street, but it adds unsupported specifics (a March 24, 2021 date, a kitchen fire, and a retirement photo/tribute) and omits key operational details from the reference such as the aggressive hose-line knockdown, overhaul/hot-spot checks, and the mention of Captain 994."
+      },
+      "short": {
+        "rouge_l": 0.19696969696969696,
+        "text_similarity": 0.8470519781112671,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly notes a multi-unit fire in York that reached a second alarm and features helmet-cam footage in a smoke-filled building, but it omits key facts about the aggressive interior attack, fire knockdown, extensive overhaul/hotspot checks, and prolonged operations, and adds an unrelated/unsupported detail about a retirement photo."
+      }
+    },
+    {
+      "video_id": "otPeB76zpy8",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.20370370370370372,
+        "text_similarity": 0.6877536773681641,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the basic confrontation (person with a Bible claiming public/First Amendment rights and an officer questioning trespass/ID), but it omits critical facts such as the subject initially refusing ID then under duress giving his name/DOB/residence, the explicit arrest threat, and the man only shifting position rather than driving away; it also hallucinates a vehicle departure and sunset ending."
+      },
+      "short": {
+        "rouge_l": 0.2111801242236025,
+        "text_similarity": 0.6598497629165649,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the core interaction (person praying/filming, claiming public property, officer insisting on trespass and demanding ID, and a rights-focused conversation) but omits several key facts from the reference\u2014wrong facility label, no mention of two separate officers, the subject's identity and duress in providing it, explicit threat of arrest, and his subsequent relocation."
+      }
+    },
+    {
+      "video_id": "TmFJuTuc5JY",
+      "video_number": "015",
+      "detailed": {
+        "rouge_l": 0.17301038062283738,
+        "text_similarity": 0.5596510171890259,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the general scene (bodycam footage of an agitated woman escorted and placed into a police vehicle) but omits many key facts from the correct answer (identity/date, alleged headset strike/push, denials, cooperation then handcuffing, Miranda reading, search of belongings, charge/24-hour hold and case clearance). It also adds an unsupported detail about her saying she has a lawyer and will press charges."
+      },
+      "short": {
+        "rouge_l": 0.18556701030927833,
+        "text_similarity": 0.5407640933990479,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the general scene (body camera footage, a woman escorted and placed in a police vehicle while disputing custody/rights) but omits key factual elements from the correct answer\u2014such as the allegation she hit her boyfriend with headphones, the denials by both parties, the arrest/handcuffing for fourth\u2011degree domestic violence, and that the case was later cleared\u2014making it incomplete."
+      }
+    },
+    {
+      "video_id": "YqMu4oI6df4",
+      "video_number": "016",
+      "detailed": {
+        "rouge_l": 0.270042194092827,
+        "text_similarity": 0.8309313058853149,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the main elements \u2014 a nighttime police traffic stop at Myrtle St and Black River Blvd with flashing patrol cars, officers around a dark sedan, and the narrator's speculation about drunk driving, non-cooperation, and a missing plate. It omits the explicit 'Rome Police Department' label and the exact count of two patrol vehicles, and adds minor unverified details (grass verge, door open, camera zoom)."
+      },
+      "short": {
+        "rouge_l": 0.205607476635514,
+        "text_similarity": 0.7657052278518677,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures all key elements of the correct answer \u2014 nighttime police scene with multiple patrol cars and flashing lights, a parked civilian vehicle suspected of drunk driving, an officer interacting with an uncooperative individual, and the Myrtle St/Black River Blvd location \u2014 and adds harmless specific details without contradiction."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "detailed": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.5244439840316772,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the general scene (bodycam, domestic dispute, arrival of police/EMS and a physical struggle), but omits many key facts from the reference\u2014such as the injured female officer's jammed finger and head knot and hospital transport, the suspect crying/claiming she was hit versus the officer saying the suspect struck her, the suspect being placed on suicide watch, and arranging to obtain texts and statements."
+      },
+      "short": {
+        "rouge_l": 0.19999999999999998,
+        "text_similarity": 0.581230878829956,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the general setting (domestic dispute, physical altercation, police and emergency presence) but omits many key facts from the reference\u2014most importantly the injured female officer and paramedics, the suspect's distress and claim the officer hit her, the officer's statement about being swung on, the hospital/suicide-watch decisions, and the planned evidence collection\u2014while adding an unsupported detail about a porch."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "detailed": {
+        "rouge_l": 0.23952095808383234,
+        "text_similarity": 0.6491262912750244,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the broad outline of a traffic stop, arrest, and vehicle search but omits key facts (a passenger named Lorenzo who fled, a chase and tasing, discovery of a second gun/cash/masks, Miranda warnings) and introduces incorrect or hallucinated details (truck color/type, race, a pinning altercation), so it is largely inaccurate."
+      },
+      "short": {
+        "rouge_l": 0.20740740740740743,
+        "text_similarity": 0.43798238039016724,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only captures the initial traffic stop and that someone was handcuffed, but it omits most key events (Lorenzo fleeing, chase, tasing, Mirandize, searches and evidence found) and misattributes the struggle to the driver rather than the passenger, so it is largely incomplete and partially inaccurate."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "detailed": {
+        "rouge_l": 0.17349397590361446,
+        "text_similarity": 0.5724655985832214,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level sequence (approach, restraint, medical evaluation, and re-transport) but omits most critical details from the reference\u2014drug use and evidence, the woman\u2019s medical claims and behavior, admission of trespassing, specifics of cuffing/medical treatment, and listed charges\u2014and includes an unsupported characterization of the incident as a \"standard\" procedure."
+      },
+      "short": {
+        "rouge_l": 0.1923076923076923,
+        "text_similarity": 0.48859164118766785,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the high-level arc (arrest, restraint, hospital transport) but omits many key facts from the correct answer\u2014substance use and bizarre behavior, admission of trespassing, detailed restraint and medical complaints, stretcher transfer, and the listed charges\u2014making it incomplete."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "detailed": {
+        "rouge_l": 0.15625,
+        "text_similarity": 0.5151515007019043,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the basic scene of a distressed woman denying someone is in the house and both she and a man being arrested, but it omits critical context (no-contact order, mother\u2019s call, names Tyree/Stringer and Ashanti, dispatcher ruling on exigent circumstances, warrant/entry attempts, K-9 threat, phone contact, arrest at gunpoint, securing the home, and the legal outcomes) and even adds an unsupported date."
+      },
+      "short": {
+        "rouge_l": 0.1894736842105263,
+        "text_similarity": 0.44311463832855225,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the basic sequence\u2014officers respond, a woman denies another's presence, a heated exchange, and both are arrested\u2014but it omits many critical facts (the no-contact order, refusal to allow a search and dispatch ruling, warrant/forced entry and gunpoint arrest details, Ashanti's resisting charge, securing the house, and later sentencing/probation outcomes)."
+      }
+    }
+  ]
+}

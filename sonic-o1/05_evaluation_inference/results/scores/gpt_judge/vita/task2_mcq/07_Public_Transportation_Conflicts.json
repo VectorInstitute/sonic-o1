@@ -1,0 +1,939 @@
+{
+  "topic_id": 7,
+  "topic_name": "Public Transportation Conflicts",
+  "num_evaluated": 51,
+  "aggregated_metrics": {
+    "accuracy": 0.8431372549019608,
+    "correct": 43,
+    "total": 51,
+    "rationale": {
+      "rouge_l_mean": 0.2402531830559861,
+      "rouge_l_std": 0.06610207724992924,
+      "text_similarity_mean": 0.7174292539849001,
+      "text_similarity_std": 0.09917421357384576,
+      "llm_judge_score_mean": 7.333333333333333,
+      "llm_judge_score_std": 3.422341055571989
+    },
+    "rationale_cider": 0.06728369306518786
+  },
+  "per_entry_results": [
+    {
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Considering the details of the reported incident and the man's actions, what primary objective do officers aim to achieve by repeatedly instructing him to \"relax\" while under investigation?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.14062499999999997,
+        "text_similarity": 0.6309998035430908,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the primary objective\u2014creating a calm environment to enable effective questioning, obtain accurate information, and secure the subject's cooperation\u2014matching the reference meaning without adding or contradicting details."
+      }
+    },
+    {
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering the individual's repeated accusations of steroid use against the officers, what is the most prominent aspect of the officers' response towards him?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.688366174697876,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately conveys the officers' calm, dismissive response and lack of engagement, matching the core of the reference; it omits specific quoted lines and the explicit note that they continued the investigation."
+      }
+    },
+    {
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the detained man's repeated complaints and the officer's responses, what best summarizes the core points of contention in their interaction?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.27184466019417475,
+        "text_similarity": 0.7204218506813049,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes a dispute over detention duration but misstates the amenity (says 'food' instead of water) and omits that the officer confirms detention and they are awaiting a 'check out' while explicitly denying water access, making it factually inaccurate and incomplete."
+      }
+    },
+    {
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "What legal condition, repeatedly affirmed by the officer, best explains the subject's inability to leave despite his protests?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3333333333333333,
+        "text_similarity": 0.6902031302452087,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately conveys the officer's core legal claim\u2014that the subject is under investigation and thus cannot leave\u2014and preserves the meaning of the correct answer; the added note about the subject's protests does not contradict or omit key facts."
+      }
+    },
+    {
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Despite being repeatedly informed of detention, what underlying reason does the man imply for his persistent questions about the legality of his detainment?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.32653061224489793,
+        "text_similarity": 0.8598285913467407,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately paraphrases the correct answer, capturing that the man thinks being 'under investigation' or mere suspicion is insufficient legal justification for detention without specific evidence or probable cause."
+      }
+    },
+    {
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "What immediate action by the individual prompted the officer's decision to physically restrain him, given the prior warnings?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.27027027027027023,
+        "text_similarity": 0.7744637727737427,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the key cause\u2014reaching into the backpack despite warnings\u2014which directly led the officer to physically restrain him; differences are minor omissions of timing and the phone remark but do not change the meaning."
+      }
+    },
+    {
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Considering the officers' initial refusal to state the arrest reason, what charge is later explicitly given and how does the individual immediately justify his behavior?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2222222222222222,
+        "text_similarity": 0.8183667659759521,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction correctly identifies the later explicit charge as harassment and accurately states that the individual immediately justified his behavior by invoking his First Amendment/free speech rights, matching the reference's key points."
+      }
+    },
+    {
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Considering the visual context of a public transportation hub and the recurring auditory announcement, what specific concern about the individual's activity is most likely implied by the police presence?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.23076923076923075,
+        "text_similarity": 0.7374760508537292,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the correct answer's main implication\u2014that the police presence was likely due to loitering or unattended baggage at a transit hub\u2014and is a faithful, concise paraphrase of the original reasoning."
+      }
+    },
+    {
+      "video_id": "Mm32ybfcCwM",
+      "video_number": "001",
+      "segment": {
+        "start": 1410.0,
+        "end": 1497.0
+      },
+      "question": "Considering the man's initial complaint about 'unacceptable behavior,' the officer's advice, and the subsequent court ruling, what likely precipitated the man's arrest?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.5217391304347826,
+        "text_similarity": 0.8166483044624329,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer accurately captures the core inference that the arrest was for disruptive conduct likely related to substance abuse, aligning with the court ruling; it only slightly misstates the officer's exact advice (framing it as seeking help rather than 'not to incriminate himself'), but preserves the overall meaning."
+      }
+    },
+    {
+      "video_id": "qqxS7qmVq1k",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 43.0
+      },
+      "question": "Based on the sergeant's refusal and verbal statements, what ethical principle did he prioritize over the captain's request to turn off his body camera?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.16949152542372883,
+        "text_similarity": 0.5421206951141357,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the core ethical principle\u2014prioritizing impartial law enforcement and public trust by adhering to policy/professional standards. It omits the explicit mention of the sergeant's oath and the phrasing about avoiding accountability or favoritism toward a superior."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "According to the bartender's detailed account, what specifically instigated the physical altercation at the bar?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.20618556701030932,
+        "text_similarity": 0.7643431425094604,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately restates that the altercation was triggered by the individuals refusing to leave after being asked and notes the shirt ripping, matching the correct answer's meaning and details."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Within the provided segment, what behavior primarily characterizes the woman in the green top's interaction with the officers and her companions?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.23913043478260873,
+        "text_similarity": 0.7142324447631836,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly identifies her heightened emotional state, repeated frustration, and attempts to leave, matching the main behavior, but it omits the specific complaint about being denied restroom access and adds an unverified detail about warnings from officers."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the statements from the witnesses and the officer's subsequent directives, why was the individual in the green shirt placed into custody?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.32558139534883723,
+        "text_similarity": 0.7958109378814697,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly identifies that the green shirt assaulted the white shirt, but it misattributes who intervened (claims a woman intervened to defend her brother) and omits the officer's immediate order to detain the green shirt, introducing a hallucinated detail and leaving out a key factual element."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Considering the distressed woman's emotional state and continuous interruptions, what is the officer's primary de-escalation strategy?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.21052631578947367,
+        "text_similarity": 0.626617431640625,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately captures the officer's main de-escalation strategy\u2014validating her emotions and explaining the need for cooperation\u2014though it omits the officer's exact phrasing and the explicit emphasis on a shared positive outcome (allowing her to go home)."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "The second officer emphasizes that familial relationships are crucial to her investigation. What is the most likely reason for this focus?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.205607476635514,
+        "text_similarity": 0.7895559072494507,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer captures the core idea that familial relationships influence witness statements and are important for an accurate investigation; it omits only the explicit mention of the officer referencing a 'fight' and the potential impact on charges, which are minor details."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Based on both witness accounts, what triggered the initial physical altercation between the gentleman in the white shirt and the bartender?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.25,
+        "text_similarity": 0.6979658007621765,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly notes the argument/comment and that the bartender's drinks were taken followed by a political remark, but it omits the key detail that the gentleman threw the first punch and downplays the bartender's quoted comment by calling it an 'insult.'"
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "Despite the initial victim's stated desire to press assault charges, what led to the police proceeding only with a trespassing charge against the green-shirt individual?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.24347826086956526,
+        "text_similarity": 0.6100870370864868,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly conveys that another party decided to pursue only trespassing, but it omits the bartender's initial desire to press assault charges and misattributes authority (implying a uniformed person rather than the manager/owner in a white shirt), so key facts are missing or incorrect."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Based on the officer's instructions to the initial victim and his subsequent interaction with the two women, what was the primary legal action being taken against the individuals involved in the altercation?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2882882882882883,
+        "text_similarity": 0.8318906426429749,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction contradicts key facts: it claims the male assailant was arrested (the correct answer says he was to be trespassed) and misattributes the non-prosecution form to the two women, whereas the officer confirmed trespassing the individuals and noted a non-prosecution form must be signed for the battery; only the leaving/trespass aspect for the women is partially captured."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "question": "Considering his brother's arrest and the man's subsequent repeated requests for the wallet, what is the primary purpose of the man's persistent attempts to retrieve it?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20253164556962028,
+        "text_similarity": 0.6403583288192749,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately paraphrases the correct answer's intent\u2014retrieving the wallet to obtain funds for his brother's bail\u2014without adding or contradicting any facts."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1770.0,
+        "end": 1980.0
+      },
+      "question": "Based on the officer's explanation, what combination of factors led to the female's arrest for disorderly intoxication?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3013698630136986,
+        "text_similarity": 0.8037093281745911,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately reflects the officer's stated reasons\u2014public intoxication and uncooperative/'very mouthy' behavior\u2014and the added note about noncompliance/disturbance is a reasonable restatement of being uncooperative, so it fully matches the correct answer."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1950.0,
+        "end": 2160.0
+      },
+      "question": "What is the primary purpose behind the booking officer's questions regarding the arrestee's medical history, including head injuries and mental illness?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.3174603174603175,
+        "text_similarity": 0.8082401156425476,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately and completely matches the correct answer's primary purpose\u2014identifying health risks to ensure safety, appropriate care, and monitoring during detention\u2014without adding incorrect details."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 2130.0,
+        "end": 2178.0
+      },
+      "question": "Considering the female's stated charge of disorderly intoxication and the medical screening she undergoes upon arrival, what is the main purpose of the officer's questions about head injuries, mental illness, diabetes, and seizures?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.3053435114503817,
+        "text_similarity": 0.8365485668182373,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately restates that the questions aim to identify medical issues requiring immediate attention and to protect her health and safety given the disorderly intoxication charge, effectively matching the correct answer's intent."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "question": "What is the primary reason the male suspect was released while the two women were arrested, despite allegations of his involvement in a physical altercation?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.14,
+        "text_similarity": 0.6362670660018921,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes the women were arrested on separate offenses and the man was released without charges, but it omits the key fact that the victim 'does not want to press charges' and introduces an unconfirmed charge (public intoxication), misattributing the man's release to not being accused of those offenses rather than the victim's refusal to press charges."
+      }
+    },
+    {
+      "video_id": "wvwuAc_Wx0k",
+      "video_number": "003",
+      "segment": {
+        "start": 2130.0,
+        "end": 2177.325
+      },
+      "question": "During booking, what is the primary purpose of the officer asking the female suspect about medical conditions like head injuries or diabetes?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20512820512820512,
+        "text_similarity": 0.7259232997894287,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the primary purpose\u2014identifying immediate health risks to ensure the suspect's safety and provide necessary medical attention\u2014matching the reference meaningfully and completely."
+      }
+    },
+    {
+      "video_id": "kawE4sHVzyY",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the verbal exchange, what is the core justification the man provides for not consistently wearing his mask?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.7256077527999878,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the correct answer: the reference states he repeatedly cites inability to breathe as his reason, while the prediction falsely claims he said he wasn't targeting anyone and implies a deliberate choice, adding hallucinatory content."
+      }
+    },
+    {
+      "video_id": "kawE4sHVzyY",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 246.0
+      },
+      "question": "The video shows an elderly man engaged in a verbal altercation. Based on his own statements and the dialogue, what is the primary reason he offers for potentially not complying with public mask-wearing rules?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.23684210526315794,
+        "text_similarity": 0.7601553201675415,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately paraphrases the correct answer by stating the man cannot breathe and thus cannot wear a mask, preserving the original meaning and key detail from the cited quote."
+      }
+    },
+    {
+      "video_id": "GDa0K7KdRxc",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 133.0
+      },
+      "question": "What broader safety issue does the filmer emphasize regarding the GrabFood rider's conduct, in addition to the personal near-miss?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.21818181818181817,
+        "text_similarity": 0.6007043719291687,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the filmer's main concern\u2014danger to other pedestrians from the rider's excessive speed and riding on the pathway\u2014matching the correct answer's emphasis on a near-miss and unsafe location."
+      }
+    },
+    {
+      "video_id": "0nbHeJCBE8I",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 74.0
+      },
+      "question": "Based on the customer's demands for both a replacement and a refund, and the employee's explanation, what is the most likely reason for the customer's increasing agitation at the drive-thru?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.26666666666666666,
+        "text_similarity": 0.6374150514602661,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately captures the core cause\u2014the employee's inability to provide a refund or replacement for the specific item\u2014which matches the correct answer's reasoning, and its omission of verbatim quotes does not change the meaning."
+      }
+    },
+    {
+      "video_id": "N5ozLOqBFmU",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the erratic driving observed and the camera car occupants' commentary within the tunnel, what did they identify as the most likely primary cause of the white BMW's dangerous behavior?",
+      "answer_correct": 0,
+      "gt_answer": "A",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.28205128205128205,
+        "text_similarity": 0.7257922887802124,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction directly contradicts the explicit on-camera commentary that the driver was drinking; it omits the key intoxication claim and instead hallucinates a mechanical cause, so it is incorrect."
+      }
+    },
+    {
+      "video_id": "N5ozLOqBFmU",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 212.0
+      },
+      "question": "What caused the abrupt cessation of the dashcam footage, immediately following continuous commentary on dangerous driving and a distinct sound?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.26804123711340205,
+        "text_similarity": 0.845862627029419,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly concludes the footage stopped due to a collision and notes the impact sound, but it omits the visual evidence (dashcam shaking/dislodging and interior view) and the commentators' prior warnings that the correct answer includes."
+      }
+    },
+    {
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "What was the primary source of conflict leading to the passenger's escalated behavior and eventual arrest?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.21875,
+        "text_similarity": 0.7841825485229492,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction accurately identifies missing the flight and resulting frustration/non-compliance as the cause of the disturbance; it adds a minor unverified detail about officers helping find another flight, but otherwise matches the core explanation."
+      }
+    },
+    {
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "Considering the woman's verbalized distress, the officer's instructions, and the subsequent physical interaction, what is the most plausible explanation for her sustained outcry about her arm?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.12244897959183672,
+        "text_similarity": 0.4323302209377289,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer asserts a definite severe arm injury from a fall, which contradicts the reference that attributes her sustained outcry to extreme emotional distress and likely disproportionate reactions; it omits the key context of emotional amplification and introduces an unfounded causal claim."
+      }
+    },
+    {
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the companion's description of the passenger's past behavior and the airline's decision to cancel their travel, what was the primary underlying factor contributing to the conflict?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.26000000000000006,
+        "text_similarity": 0.694886326789856,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer faithfully captures the core point: the passenger's repeated disruptive, non-compliant behavior led the airline to cancel her travel, matching the correct answer's conclusion that her actions were the primary factor."
+      }
+    },
+    {
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "What specific action or concern, directly referenced by officers, contradicts the arrested individual's stated willingness to cooperate during transport?",
+      "answer_correct": 1,
+      "gt_answer": "D",
+      "pred_answer": "D",
+      "rationale_metrics": {
+        "rouge_l": 0.18604651162790697,
+        "text_similarity": 0.7286192178726196,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction captures the key contradiction that officers were concerned she might kick, which conflicts with her stated willingness to cooperate, but it misstates a factual detail by saying her feet were 'not restrained' rather than that they were being held/put in to prevent kicking."
+      }
+    },
+    {
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "Based on the police officer's statements and the woman's distressed reactions, what was the primary reason for her being detained and denied flight by the airline?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.2589928057553957,
+        "text_similarity": 0.7473239898681641,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes a prior issue with Southwest but wrongly attributes the denial to the woman's mother and omits the key fact that the woman refused to comply and leave, introducing an unfounded detail and contradicting the officer's stated reason."
+      }
+    },
+    {
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "What reason did airline staff implicitly give for Southwest refusing to fly the woman, prior to her subsequent arrest?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.20224719101123598,
+        "text_similarity": 0.7748376131057739,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the central implication from the correct answer\u2014that airline staff attributed Southwest's refusal to the woman's disruptive behavior and attitude\u2014so it preserves the original meaning without adding or omitting key facts."
+      }
+    },
+    {
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "question": "What primary concern, evident from her escalating pleas and questions, does the arrested woman express about her immediate situation?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.15384615384615383,
+        "text_similarity": 0.6345112919807434,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction captures the main concern\u2014seeking release and contacting someone for help\u2014but omits key specifics from the correct answer about wanting to get home, asking how much it costs to get out, and her stated unfamiliarity with Tampa and the release process."
+      }
+    },
+    {
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "question": "Considering the woman's escalating distress and specific verbal appeals, what is her primary articulated fear about being taken to jail?",
+      "answer_correct": 0,
+      "gt_answer": "D",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.20754716981132074,
+        "text_similarity": 0.5737839341163635,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction is largely incorrect: the correct answer emphasizes acute medical fears (heart attack, passing out/dying, lightheadedness) as reasons she 'cannot go to jail,' whereas the prediction invents concerns about being in an unfamiliar city, lack of support, and legal fees\u2014details not present and contradicting the stated medical emergency. It omits the key medical claims and adds hallucinated motivations."
+      }
+    },
+    {
+      "video_id": "VXpleTpMH_M",
+      "video_number": "008",
+      "segment": {
+        "start": 1410.0,
+        "end": 1605.0
+      },
+      "question": "Based on the woman's verbal statements and escalating physical distress in the police vehicle, what is the most likely immediate medical concern?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2272727272727273,
+        "text_similarity": 0.6478928923606873,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies an exacerbation of a pre-existing medical condition and the need for immediate attention, but it omits specific symptomatic details (imminent fainting, lightheadedness, shortness of breath) cited in the correct answer."
+      }
+    },
+    {
+      "video_id": "QPj9DLtfr0Y",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 66.0
+      },
+      "question": "Given the woman's aggressive remarks, what specific actions of other passengers does she perceive as disrespectful or confrontational?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.19780219780219782,
+        "text_similarity": 0.7178130149841309,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the core grievances\u2014passengers using phones and making eye contact/staring at her\u2014matching the correct answer's meaning."
+      }
+    },
+    {
+      "video_id": "5SK-v2Plt-s",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 58.0
+      },
+      "question": "Based on the motorcyclist's advice and the cyclist's demonstrated behavior, what cycling practice was most strongly warned against due to its immediate danger?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2206896551724138,
+        "text_similarity": 0.7822433710098267,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the main warning \u2014 cycling between cars in active traffic is very dangerous and should be avoided \u2014 and notes the cyclist's demonstrated behavior, matching the core of the correct answer without adding or omitting key facts."
+      }
+    },
+    {
+      "video_id": "Z0kkGJ9ajBU",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 69.0
+      },
+      "question": "The passenger repeatedly accuses the driver of specific negative behaviors and makes racially charged statements. Which of the driver's verbal responses *directly refutes* one of the passenger's accusations about his conduct?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2898550724637681,
+        "text_similarity": 0.8376956582069397,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The predicted answer accurately identifies the same driver utterance ('I'm not scolding you') and correctly explains that it denies and therefore directly refutes the passenger's accusation of scolding."
+      }
+    },
+    {
+      "video_id": "EIJJ8-ve2M0",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 95.0
+      },
+      "question": "According to the man in the wheelchair, what is the primary reason for his frustration and anger towards the bus driver?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.2823529411764706,
+        "text_similarity": 0.765129566192627,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The prediction correctly identifies the primary reason\u2014the driver\u2019s failure to assist with the ramp\u2014but omits ancillary details from the reference (his complaint about being a paying customer and the note that the durian announcement was unrelated)."
+      }
+    },
+    {
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "question": "Based on the staff's initial report and the woman's subsequent statements, what best explains her current erratic and avoidant behavior?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.5784103870391846,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly identifies anxiety and substance use as the primary explanation and notes distrust, matching the core of the reference; however it introduces the specific drug 'Xanax' (not stated in the correct answer) and omits the staff's initial observation that she appeared 'high,' so it slightly overstates and leaves out a supporting detail."
+      }
+    },
+    {
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "question": "After acknowledging her unauthorized presence in the Delta Sky Club, the woman explicitly refused to explain her reasons. What underlying sentiment most likely influenced her decision to enter and her subsequent non-compliance?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.19354838709677422,
+        "text_similarity": 0.7128543257713318,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction contradicts the correct answer by attributing the behavior to misunderstanding despite the woman explicitly saying she was aware of the rules, and it omits the key motive that her perceived victimhood/negative treatment justified her violation and noncompliance."
+      }
+    },
+    {
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "question": "Considering the woman's initial demands, her subsequent actions at the gate, and the officers' comments, what can be inferred about the escalation of her disruptive behavior?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.22033898305084748,
+        "text_similarity": 0.6958818435668945,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction captures the key escalation\u2014from being denied access for financial reasons to resisting officers and trying to force entry\u2014but it adds an unsupported detail about demanding water and omits the officers' characterization and explicit physical pushing past staff, so it is mostly correct but not fully precise."
+      }
+    },
+    {
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "question": "Following her denial of boarding and access to water, what cumulative behavior ultimately led to the woman's arrest?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.31168831168831174,
+        "text_similarity": 0.8912005424499512,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures a general escalation leading to arrest but contradicts and omits key facts: she was given water (not denied), became physically aggressive (pushed an officer) and repeatedly refused to comply/leave, whereas the prediction only cites verbal abuse and refusal to stop talking."
+      }
+    },
+    {
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "question": "According to the officer's direct statements, what was the primary reason for the woman's arrest?",
+      "answer_correct": 0,
+      "gt_answer": "C",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.27777777777777773,
+        "text_similarity": 0.4476512670516968,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts the officer's explicit statement\u2014he said she was arrested for disorderly conduct\u2014so claiming lack of ID as the primary reason is incorrect and adds unfounded detail."
+      }
+    },
+    {
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "question": "Despite her repeated verbal protests and physical resistance, what do the officers' responses and actions consistently indicate about the immediate plan for the woman?",
+      "answer_correct": 1,
+      "gt_answer": "C",
+      "pred_answer": "C",
+      "rationale_metrics": {
+        "rouge_l": 0.16296296296296295,
+        "text_similarity": 0.6774848699569702,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly conveys that she is being detained and will be transported to a detention facility and notes officers' disregard for her protests, but it omits specific details that immediate cuff removal is denied and that officers promise to address her needs (e.g., remove cuffs, provide water/restroom) only once inside the facility."
+      }
+    },
+    {
+      "video_id": "lyIQTccawy0",
+      "video_number": "013",
+      "segment": {
+        "start": 1050.0,
+        "end": 1093.0
+      },
+      "question": "What is the most likely reason the officer repeatedly instructs the woman to comply, considering her expressed needs and the eventual charge?",
+      "answer_correct": 1,
+      "gt_answer": "A",
+      "pred_answer": "A",
+      "rationale_metrics": {
+        "rouge_l": 0.2,
+        "text_similarity": 0.7456523180007935,
+        "llm_judge_score": 9,
+        "llm_judge_justification": "The predicted answer correctly identifies that the officer was trying to prevent resistance and manage the woman's behavior, linking this to the disorderly conduct charge; the only minor issue is the phrasing about a \"more severe charge of disorderly conduct,\" which is slightly imprecise but does not change the core meaning."
+      }
+    },
+    {
+      "video_id": "sKWUL4M5V1c",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 131.0
+      },
+      "question": "What is the primary reason the intercom operator states the woman's monthly parking pass is invalid at this exit, despite her regular payment?",
+      "answer_correct": 1,
+      "gt_answer": "B",
+      "pred_answer": "B",
+      "rationale_metrics": {
+        "rouge_l": 0.3140495867768595,
+        "text_similarity": 0.862524151802063,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately captures the primary reason given by the operator\u2014that the pass is for a different company/not managed by this facility\u2014matching the reference explanation without adding or omitting key details."
+      }
+    }
+  ]
+}

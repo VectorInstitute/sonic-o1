@@ -1,0 +1,4066 @@
+{
+  "topic_id": 4,
+  "topic_name": "Customer Service Interactions",
+  "num_evaluated": 115,
+  "aggregated_metrics": {
+    "mean_iou": 0.012276520967606676,
+    "std_iou": 0.069056725628153,
+    "median_iou": 0.0,
+    "R@0.3": {
+      "recall": 0.017391304347826087,
+      "count": 2,
+      "total": 115
+    },
+    "R@0.5": {
+      "recall": 0.008695652173913044,
+      "count": 1,
+      "total": 115
+    },
+    "R@0.7": {
+      "recall": 0.0,
+      "count": 0,
+      "total": 115
+    },
+    "mae": {
+      "start_mean": 85.88990434782609,
+      "end_mean": 86.44927826086956,
+      "average_mean": 86.16959130434783
+    },
+    "rationale": {
+      "rouge_l_mean": 0.2399602700207573,
+      "rouge_l_std": 0.12362679082021771,
+      "text_similarity_mean": 0.4390256497523059,
+      "text_similarity_std": 0.1682863046924854,
+      "llm_judge_score_mean": 3.9565217391304346,
+      "llm_judge_score_std": 2.4720746588832276
+    },
+    "rationale_cider": 0.48495696361853313
+  },
+  "per_question_results": [
+    {
+      "question_id": "001",
+      "question": "After the receptionist lists the luxurious features like an infinity pool and Michelin star chef, when does he clarify that those features are for the hotel next door?",
+      "video_id": "PRzkzJuo6mI",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 142.0
+      },
+      "gt_interval": {
+        "start": 18.509,
+        "end": 19.631
+      },
+      "pred_interval": {
+        "start": 25.0,
+        "end": 30.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 6.491,
+        "end": 10.369,
+        "average": 8.43
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21428571428571427,
+        "text_similarity": 0.34082651138305664,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the 'after' relationship (that the clarification comes after the list), but it omits the specific timestamps (6.429\u201316.626s and 18.509\u201319.631s) given in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the customer asks why he didn't receive a wake-up call, when does the receptionist admit that he forgot?",
+      "video_id": "PRzkzJuo6mI",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 142.0
+      },
+      "gt_interval": {
+        "start": 52.451,
+        "end": 53.912
+      },
+      "pred_interval": {
+        "start": 67.0,
+        "end": 72.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 14.549,
+        "end": 18.088,
+        "average": 16.3185
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17857142857142858,
+        "text_similarity": 0.603561520576477,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction correctly captures the key factual content and the 'after' temporal relation (the receptionist admits forgetting after the customer's question); the lack of explicit timestamps does not affect semantic correctness."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the receptionist finishes processing the customer's first credit card payment and says 'All done, thank you', when is the next time he asks the customer if they want to pay by credit card?",
+      "video_id": "PRzkzJuo6mI",
+      "video_number": "001",
+      "segment": {
+        "start": 0.0,
+        "end": 142.0
+      },
+      "gt_interval": {
+        "start": 67.013,
+        "end": 68.153
+      },
+      "pred_interval": {
+        "start": 98.0,
+        "end": 104.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 30.986999999999995,
+        "end": 35.846999999999994,
+        "average": 33.416999999999994
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2894736842105263,
+        "text_similarity": 0.5854735970497131,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly indicates that the receptionist asks again immediately after processing the first payment and saying 'All done, thank you,' but it omits the precise timestamps (67.013\u201368.153s) provided in the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the customer says 'I'm still hungry, man.', when does the chef begin preparing the kaedama noodles?",
+      "video_id": "JJOTu9IkiUo",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 32.0
+      },
+      "gt_interval": {
+        "start": 5.121,
+        "end": 11.2
+      },
+      "pred_interval": {
+        "start": 24.6,
+        "end": 25.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 19.479,
+        "end": 13.8,
+        "average": 16.639499999999998
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.26666666666666666,
+        "text_similarity": 0.5414427518844604,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly indicates the chef starts after the customer's line, but incorrectly asserts it happens 'immediately'; the ground truth shows a ~2.16s gap (customer ends at 2.96s, chef starts at 5.121s)."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the chef finishes adding the kaedama noodles into the customer's bowl, when does the chef say 'Enjoy'?",
+      "video_id": "JJOTu9IkiUo",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 32.0
+      },
+      "gt_interval": {
+        "start": 12.8,
+        "end": 13.272
+      },
+      "pred_interval": {
+        "start": 27.8,
+        "end": 28.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 15.0,
+        "end": 14.728,
+        "average": 14.864
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2162162162162162,
+        "text_similarity": 0.5596790909767151,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly captures the causal/temporal relation (the chef says 'Enjoy' after finishing adding the noodles), but it omits the precise timing details and duration provided in the ground truth."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the customer says 'Gochisousama', when does the chef present the next dish and say 'Next, rice'?",
+      "video_id": "JJOTu9IkiUo",
+      "video_number": "002",
+      "segment": {
+        "start": 0.0,
+        "end": 32.0
+      },
+      "gt_interval": {
+        "start": 17.396,
+        "end": 18.457
+      },
+      "pred_interval": {
+        "start": 30.0,
+        "end": 30.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 12.604,
+        "end": 11.742999999999999,
+        "average": 12.173499999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.33333333333333337,
+        "text_similarity": 0.7060073614120483,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation that the chef speaks 'Next, rice' immediately after the customer says 'Gochisousama', but it omits the precise timestamps provided in the ground truth (16.576\u201317.376s and 17.396\u201318.457s)."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man approaches the streamer and begins whispering threats, when does the streamer apologize?",
+      "video_id": "4PyTLRh7k5w",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 40.0
+      },
+      "gt_interval": {
+        "start": 17.876,
+        "end": 18.557
+      },
+      "pred_interval": {
+        "start": 25.0,
+        "end": 26.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.123999999999999,
+        "end": 7.443000000000001,
+        "average": 7.2835
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.13333333333333333,
+        "text_similarity": 0.5057538747787476,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation that the apology occurs after the man finishes whispering threats, but it omits the specific timestamps provided in the ground truth (streamer apologizes at ~17.876\u201318.557s) and lacks precise timing detail."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man first tells the streamer he's 'fucking with the mob over here' and to 'leave now', when is the next time the man tells the streamer he's not gone yet?",
+      "video_id": "4PyTLRh7k5w",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 40.0
+      },
+      "gt_interval": {
+        "start": 24.666,
+        "end": 27.83
+      },
+      "pred_interval": {
+        "start": 34.0,
+        "end": 35.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 9.334,
+        "end": 7.170000000000002,
+        "average": 8.252
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1558441558441558,
+        "text_similarity": 0.35808178782463074,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction is related but incomplete: it gives a vague, action-based cue ('after the streamer stands up and starts to walk away') instead of the next utterance/timestamp and omits the quoted line, so it fails to match the correct answer's explicit event/time."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the man explicitly tells the streamer 'The sooner you leave, the better,' when does the streamer stand up and start to walk away?",
+      "video_id": "4PyTLRh7k5w",
+      "video_number": "003",
+      "segment": {
+        "start": 0.0,
+        "end": 40.0
+      },
+      "gt_interval": {
+        "start": 28.9,
+        "end": 31.0
+      },
+      "pred_interval": {
+        "start": 39.0,
+        "end": 40.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 10.100000000000001,
+        "end": 9.0,
+        "average": 9.55
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27692307692307694,
+        "text_similarity": 0.6309431791305542,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states the qualitative relation (it happens after the man speaks) but fails to provide the key factual details\u2014specific timestamps (28.9s / 31.0s)\u2014so it does not answer the 'when' concretely."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the driver asks \"Do you guys speak English?\", when does the McDonald's employee respond by asking \"Como se llama?\" (What is your name?)",
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 25.274,
+        "end": 27.498
+      },
+      "pred_interval": {
+        "start": 12.0,
+        "end": 13.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 13.274000000000001,
+        "end": 14.498000000000001,
+        "average": 13.886000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.46428571428571425,
+        "text_similarity": 0.6079984307289124,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives a drastically incorrect timestamp (12\u201313s) for the employee response versus the correct 25.274\u201327.498s and fails to preserve the temporal relation that the response immediately follows the driver's question, so it is essentially wrong."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the McDonald's employee asks if the McDoubles are 'solo' or 'combo', when does the driver respond with 'Combo, s\u00ed'?",
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 60.47,
+        "end": 62.335
+      },
+      "pred_interval": {
+        "start": 15.0,
+        "end": 16.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 45.47,
+        "end": 46.335,
+        "average": 45.9025
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2909090909090909,
+        "text_similarity": 0.4229851961135864,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer has the correct phrase but gives a completely incorrect timestamp (15\u201316s vs. the correct ~60.47\u201362.34s) and thus fails the key temporal alignment required."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the driver requests an extra McDouble as 'solito' (alone), when does the McDonald's employee confirm the order with \"Solo, s\u00ed?\"",
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 120.924,
+        "end": 123.087
+      },
+      "pred_interval": {
+        "start": 18.0,
+        "end": 19.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 102.924,
+        "end": 104.087,
+        "average": 103.50550000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4074074074074074,
+        "text_similarity": 0.6237761378288269,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction identifies the correct utterance but gives completely wrong timestamps (18\u201319s vs. ~120\u2013123s) and fails to reflect that the confirmation immediately follows the driver request, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker asks about having two more McDouble combos, when does the speaker confirm the total order by saying 'So, all three McDoubles'?",
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 240.0
+      },
+      "gt_interval": {
+        "start": 178.65,
+        "end": 182.054
+      },
+      "pred_interval": {
+        "start": 195.0,
+        "end": 196.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 16.349999999999994,
+        "end": 13.945999999999998,
+        "average": 15.147999999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.09090909090909091,
+        "text_similarity": 0.2134399563074112,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted time (195.0s) does not match the correct target interval (178.65\u2013182.054s) and is much later; it also omits the anchor timing and the stated temporal relation, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes saying 'Gracias', when does the speaker say 'I went to McDonald's in Puerto Rico'?",
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 240.0
+      },
+      "gt_interval": {
+        "start": 218.853,
+        "end": 222.597
+      },
+      "pred_interval": {
+        "start": 234.0,
+        "end": 235.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 15.146999999999991,
+        "end": 12.402999999999992,
+        "average": 13.774999999999991
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.046511627906976744,
+        "text_similarity": 0.07143250852823257,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted timestamp (234.0s) is about 15s later than the correct start (218.853s) and contradicts the 'immediately after' relation, so it is incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker asks '1 hour?', when does the speaker ask 'Can you call someone who knows English?'",
+      "video_id": "8CH6fOieGP4",
+      "video_number": "004",
+      "segment": {
+        "start": 150.0,
+        "end": 240.0
+      },
+      "gt_interval": {
+        "start": 158.966,
+        "end": 159.907
+      },
+      "pred_interval": {
+        "start": 237.0,
+        "end": 238.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 78.03399999999999,
+        "end": 78.09299999999999,
+        "average": 78.06349999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.04761904761904762,
+        "text_similarity": 0.01844683289527893,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamp (237.0s) is far from the correct target interval (158.966\u2013159.907s) and thus is incorrect and contradicts the reference which states the target occurs shortly after the anchor (148.966\u2013150.966s)."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the speaker states that the next train will depart in 20 minutes, when does the bullet train to Pohang arrive at the platform?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 25.0,
+        "end": 27.0
+      },
+      "pred_interval": {
+        "start": 17.0,
+        "end": 20.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 8.0,
+        "end": 7.0,
+        "average": 7.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.09523809523809522,
+        "text_similarity": 0.21756814420223236,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction merely restates the anchor speech and fails to provide the event timestamps or state that the bullet train arrives shortly after the anchor speech; it does not answer when the target visual event occurs."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker mentions the weather is super hot, when does he describe Pohang as having the largest steel manufacturing company?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 110.0,
+        "end": 115.0
+      },
+      "pred_interval": {
+        "start": 135.0,
+        "end": 140.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 25.0,
+        "end": 25.0,
+        "average": 25.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.08695652173913043,
+        "text_similarity": 0.06662893295288086,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly indicates the description follows the comment about heat, but it fails to provide any timing information or the specific timestamps and durations given in the correct answer, omitting key factual details."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker says that the whole place is a seafood fish market, when does he state that the town's landscape is beautiful?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 184.833,
+        "end": 187.2
+      },
+      "pred_interval": {
+        "start": 195.0,
+        "end": 198.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 10.167000000000002,
+        "end": 10.800000000000011,
+        "average": 10.483500000000006
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11764705882352941,
+        "text_similarity": 0.06681525707244873,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly conveys the sequence (the beautiful landscape comment follows the fish market remark) but omits the key timing details provided in the reference (specific end/start timestamps and explicit note that the target speech begins after the anchor finishes)."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker states that the whole place is a seafood fish market, when does he describe the town landscape as beautiful?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 185.0,
+        "end": 187.0
+      },
+      "pred_interval": {
+        "start": 235.0,
+        "end": 240.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 50.0,
+        "end": 53.0,
+        "average": 51.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4642857142857143,
+        "text_similarity": 0.7457493543624878,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the sequence\u2014that he first calls it a seafood fish market and then describes the town as beautiful\u2014but it omits the specific timestamps and explicit temporal labeling (the target occurs after the anchor) present in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes saying 'I think we just go ahead with this', when is the interior of the small shop first shown?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 201.5,
+        "end": 202.5
+      },
+      "pred_interval": {
+        "start": 260.0,
+        "end": 265.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 58.5,
+        "end": 62.5,
+        "average": 60.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.33898305084745767,
+        "text_similarity": 0.5847082138061523,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly states that the shop interior appears after the speaker finishes, preserving the main point, but it omits the precise timing (201.5\u2013202.5s) and the immediate transition detail given in the reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "While the Korean woman is serving food at the table, when does she add rice to one of the bowls?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 256.2,
+        "end": 263.0
+      },
+      "pred_interval": {
+        "start": 270.0,
+        "end": 275.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 13.800000000000011,
+        "end": 12.0,
+        "average": 12.900000000000006
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28,
+        "text_similarity": 0.7172242403030396,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly states that the rice is added during the serving process, but it omits the precise timing information (the rice addition from ~256.2s to ~263.0s within the serving interval), which the correct answer provides."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man says his dish was cold raw fish, when does he describe the other dish?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 343.0,
+        "end": 346.8
+      },
+      "pred_interval": {
+        "start": 345.0,
+        "end": 350.0
+      },
+      "iou": 0.2571428571428588,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.0,
+        "end": 3.1999999999999886,
+        "average": 2.5999999999999943
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14285714285714288,
+        "text_similarity": 0.20318758487701416,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the relation that the other dish is described after the cold raw fish, but it omits the precise timestamps and the explicit mention that the description includes the sauce, so it lacks key details from the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man says 'For now, we are leaving Pohang', when does he announce their arrival at Gyeongju?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 461.5,
+        "end": 464.0
+      },
+      "pred_interval": {
+        "start": 360.0,
+        "end": 365.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 101.5,
+        "end": 99.0,
+        "average": 100.25
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.07594936708860758,
+        "text_similarity": 0.5016201734542847,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly conveys the temporal relation (arrival announced after leaving Pohang) but omits all specific timestamps, event identifiers, and additional factual details provided in the correct answer, making it largely incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the man announces the train to Gyeongju, when does he explain the KTX pass limitations and their plan to hop on?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 424.233,
+        "end": 436.9
+      },
+      "pred_interval": {
+        "start": 370.0,
+        "end": 375.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 54.233000000000004,
+        "end": 61.89999999999998,
+        "average": 58.06649999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.19672131147540986,
+        "text_similarity": 0.430305540561676,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly indicates the explanation occurs after the Gyeongju announcement but omits all precise timing and detailed sequence information (the specific timestamps and duration), so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man states that the area is actually the Shilla Dynasty, when does he mention that it has tombs, temples, and historical sites?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 533.0,
+        "end": 538.466
+      },
+      "pred_interval": {
+        "start": 546.0,
+        "end": 552.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 13.0,
+        "end": 13.533999999999992,
+        "average": 13.266999999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24000000000000002,
+        "text_similarity": 0.5717126131057739,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation that the mention of tombs, temples, and historical sites comes after the 'Shilla dynasty' statement, but it omits the specific timestamps provided in the correct answer (524.233\u2013526.566s and 533.0\u2013538.466s)."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the man finishes talking about the firehouse and ambulance, when does he mention they are on their way to Gyeongju Eopseong?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 550.0,
+        "end": 556.566
+      },
+      "pred_interval": {
+        "start": 573.0,
+        "end": 580.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 23.0,
+        "end": 23.43399999999997,
+        "average": 23.216999999999985
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23529411764705885,
+        "text_similarity": 0.5528464913368225,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (he says it after talking about the firehouse and ambulance) but omits the key factual details\u2014the specific start/end timestamps (E1: 544.066\u2013549.8s; E2: 550.0\u2013556.566s) requested in the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the man hits his head, when does he continue explaining about the Gyeongju Eopseong Fortress?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 636.333,
+        "end": 640.733
+      },
+      "pred_interval": {
+        "start": 609.0,
+        "end": 610.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 27.33299999999997,
+        "end": 30.732999999999947,
+        "average": 29.03299999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.13043478260869565,
+        "text_similarity": 0.3887883424758911,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly states the relation (he resumes after hitting his head) but fails to provide the requested timing details (the specific timestamps given in the correct answer), so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker explains the meaning of the Hancha on the gate, when does he start describing the reconstruction of the wall?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 690.0,
+        "end": 821.0
+      },
+      "gt_interval": {
+        "start": 706.5,
+        "end": 715.0
+      },
+      "pred_interval": {
+        "start": 725.0,
+        "end": 734.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 18.5,
+        "end": 19.0,
+        "average": 18.75
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21739130434782608,
+        "text_similarity": 0.5194568634033203,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly conveys that the wall reconstruction is described after the Hancha explanation, but it omits the specific timestamps and the detail that this occurs after the anchor completes, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker mentions it is 9 PM and most shops are closed, when does he first point out a cat?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 690.0,
+        "end": 821.0
+      },
+      "gt_interval": {
+        "start": 745.0,
+        "end": 748.7
+      },
+      "pred_interval": {
+        "start": 769.0,
+        "end": 770.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 24.0,
+        "end": 21.299999999999955,
+        "average": 22.649999999999977
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1702127659574468,
+        "text_similarity": 0.3787879943847656,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly states that the cat is pointed out after the speaker mentions 9 PM and shops being closed, preserving the core relation, but it omits the specific event timestamps and the detailed event segmentation provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the speaker finishes stating that they have done their visit to the tomb of the Kings, when does he explain their travel plans to the KTX station?",
+      "video_id": "ZSe4U5PLKHU",
+      "video_number": "005",
+      "segment": {
+        "start": 690.0,
+        "end": 821.0
+      },
+      "gt_interval": {
+        "start": 778.0,
+        "end": 788.0
+      },
+      "pred_interval": {
+        "start": 805.0,
+        "end": 810.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 27.0,
+        "end": 22.0,
+        "average": 24.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28571428571428575,
+        "text_similarity": 0.40281468629837036,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly states that the explanation follows the tomb-visit remark, but it omits the precise timestamps and the important detail that the explanation occurs almost immediately after the anchor finishes."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker explains the cause of the container rollover, when does someone speak in a foreign language?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 35.6,
+        "end": 40.8
+      },
+      "pred_interval": {
+        "start": 195.0,
+        "end": 196.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 159.4,
+        "end": 155.2,
+        "average": 157.3
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.32653061224489793,
+        "text_similarity": 0.5755913257598877,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gets the temporal relation ('after') but gives a completely wrong timestamp (195.0s vs 8.6\u201333.0s) and omits the correct foreign-speech interval (35.6\u201340.8s), even incorrectly claiming it occurs 'immediately after.'"
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker remarks that someone 'sounds very angry', when does he ask about the approximate weight of the container?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 54.0,
+        "end": 56.6
+      },
+      "pred_interval": {
+        "start": 197.0,
+        "end": 198.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 143.0,
+        "end": 141.4,
+        "average": 142.2
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.375,
+        "text_similarity": 0.49556559324264526,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction preserves the 'after' relation but gives completely incorrect timestamps (197s/198s vs correct ~41.5\u201343.1s and ~54.0\u201356.6s) and wrongly implies the events are nearly simultaneous rather than ~12s apart."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the tow truck starts lifting the container, when does the speaker open the left side storage compartment?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 206.5,
+        "end": 208.0
+      },
+      "pred_interval": {
+        "start": 204.0,
+        "end": 205.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.5,
+        "end": 3.0,
+        "average": 2.75
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4814814814814815,
+        "text_similarity": 0.7207402586936951,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction preserves the 'after' relation but gives incorrect timestamps for both events (predicts tow lift at 204.0s vs ground-truth 187.0\u2013199.0s, and compartment opening at 205.0s vs ground-truth 206.5\u2013208.0s), so it is factually inaccurate."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the person finishes screwing the pin into the shackle, when does he pick up the heavy-duty sling from the ground?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 156.0,
+        "end": 157.0
+      },
+      "pred_interval": {
+        "start": 235.0,
+        "end": 240.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 79.0,
+        "end": 83.0,
+        "average": 81.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.39215686274509803,
+        "text_similarity": 0.5327925682067871,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly states the temporal relation (that the sling is picked up after the pin is screwed) but omits the key factual timestamps (156.0s pickup and 157.0s fully held) given in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the crane truck is lifting the container, when is the container fully upright and vertical?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 199.0,
+        "end": 201.0
+      },
+      "pred_interval": {
+        "start": 260.0,
+        "end": 265.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 61.0,
+        "end": 64.0,
+        "average": 62.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3,
+        "text_similarity": 0.5996717810630798,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states the relation (the container is upright during the lift) but omits the key factual timing details (E1 at 170.0s, E2 at 199.0s, stabilization by 201.0s) requested by the question."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the person talking to the orange shirt guy and others, explains that they post wreck recoveries on YouTube, when does the person in the black shirt start listening about where to place the container?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 275.074,
+        "end": 288.776
+      },
+      "pred_interval": {
+        "start": 300.0,
+        "end": 305.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 24.925999999999988,
+        "end": 16.22399999999999,
+        "average": 20.57499999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3050847457627119,
+        "text_similarity": 0.4337880313396454,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly conveys the temporal relation (that the black-shirted person listens after the YouTube explanation) but omits the key factual details\u2014specific start/end timestamps and duration\u2014that are present in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man says 'Go ahead and boom up with it', when does the boom of the tow truck begin to lift the container segment?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 444.0,
+        "end": 451.0
+      },
+      "pred_interval": {
+        "start": 345.0,
+        "end": 346.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 99.0,
+        "end": 105.0,
+        "average": 102.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1923076923076923,
+        "text_similarity": 0.2804410457611084,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction directly contradicts the reference timestamps: the correct answer shows the lift begins much later (visual lifting starts at 444.0s and initial lift completes at 451.0s), whereas the prediction asserts it begins immediately after the speech, which is false and omits the provided timings."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man says 'Pull him up', when does the tow truck's main boom begin to lift the container segment higher, as seen from the top of the container?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 367.6,
+        "end": 379.0
+      },
+      "pred_interval": {
+        "start": 350.0,
+        "end": 351.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 17.600000000000023,
+        "end": 28.0,
+        "average": 22.80000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20689655172413793,
+        "text_similarity": 0.2763306200504303,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states the boom lifts after the man says 'Pull him up,' but it is vague and omits the key factual timestamps and duration (lift starts at 367.6s and continues until 379.0s) provided in the reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the man says 'Okay, now we're going to go in with both cables, okay?', when does the container begin its main rotation (barrel roll) to an upright position?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 499.0,
+        "end": 509.0
+      },
+      "pred_interval": {
+        "start": 355.0,
+        "end": 356.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 144.0,
+        "end": 153.0,
+        "average": 148.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.11111111111111112,
+        "text_similarity": 0.3071054220199585,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction is directionally correct (rotation occurs after the remark) but is vague and omits the key timing details given in the correct answer (rotation starting at ~499.0s and continuing until ~509.0s), so it fails to provide the required specificity."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the container shifts abruptly with a loud noise, when does the narrator say 'Downward Y'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 537.3,
+        "end": 541.7
+      },
+      "pred_interval": {
+        "start": 542.0,
+        "end": 543.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 4.7000000000000455,
+        "end": 1.2999999999999545,
+        "average": 3.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.45,
+        "text_similarity": 0.6606874465942383,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction preserves the order (narrator after the container shift) but gives incorrect, hallucinated timestamps (predicts the shift at 542.0s instead of ~533.0s and places the narrator immediately after rather than at 537.6\u2013541.7s), so key factual timing details are wrong."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the worker finishes hitting the trailer leg with a tool, when does the narrator say 'Don't remove all pressure, hold on'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 598.705,
+        "end": 601.0
+      },
+      "pred_interval": {
+        "start": 607.0,
+        "end": 608.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 8.294999999999959,
+        "end": 7.0,
+        "average": 7.6474999999999795
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.52,
+        "text_similarity": 0.5711829662322998,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction identifies the correct event but gives a timestamp (607.0s) that contradicts the reference interval (598.705s\u2013601.000s) and thus is temporally inaccurate; it also omits the relation to the worker finishing at 584.8s."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the narrator says 'Boom down a little bit', when does the narrator say 'It might be shifted'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 625.0,
+        "end": 627.6
+      },
+      "pred_interval": {
+        "start": 610.0,
+        "end": 611.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 15.0,
+        "end": 16.600000000000023,
+        "average": 15.800000000000011
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.6222222222222222,
+        "text_similarity": 0.7580376267433167,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer gives a timestamp (610.0s) that is earlier than the correct first utterance (615.0\u2013620.0s) and contradicts the ground-truth timing (625.0\u2013627.6s); the temporal relation and timing are therefore incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man in the black t-shirt states that the load is leaning, when does he point to the leaning container?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 686.137,
+        "end": 690.141
+      },
+      "pred_interval": {
+        "start": 725.0,
+        "end": 726.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 38.863000000000056,
+        "end": 35.85900000000004,
+        "average": 37.36100000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.30769230769230765,
+        "text_similarity": 0.5898607969284058,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly captures the key temporal relation that the pointing occurs after the statement, but it omits the precise event intervals/timestamps (E1: 682.137\u2013686.0 and E3: 686.137\u2013690.141) given in the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the supervisor asks to lift the container so they can put the landing gears down, when does the crane begin lifting the container?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 741.301,
+        "end": 750.32
+      },
+      "pred_interval": {
+        "start": 734.0,
+        "end": 735.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.301000000000045,
+        "end": 15.32000000000005,
+        "average": 11.310500000000047
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18867924528301888,
+        "text_similarity": 0.6003804206848145,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly states that the crane lifts after the supervisor's request, but it omits the key factual details and timestamps given in the correct answer (E4: 703.9\u2013717.8s; E6: 741.301\u2013750.32s)."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "While the supervisor explains the plan to move the container to the dock, when does he make a wide hand gesture?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 792.0,
+        "end": 795.0
+      },
+      "pred_interval": {
+        "start": 789.0,
+        "end": 790.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.0,
+        "end": 5.0,
+        "average": 4.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28571428571428575,
+        "text_similarity": 0.5382571816444397,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states the gesture occurs during the supervisor's explanation, but it omits the key timing details (gesture 792\u2013795s during explanation 781.985\u2013799s) required by the question, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man with the white helmet says to start booming in, when does someone ask about connecting the yargo?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 1008.0,
+        "end": 1010.0
+      },
+      "pred_interval": {
+        "start": 925.0,
+        "end": 926.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 83.0,
+        "end": 84.0,
+        "average": 83.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.12765957446808512,
+        "text_similarity": 0.182814359664917,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states the target occurs after the anchor but wrongly implies it happens 'right after' and omits the precise timestamps; the actual target is much later (starts at 1008.0s), so the timing claim is inaccurate."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the first person mentions the foot 'shifted', when is the next time someone states that something is 'severely shifted'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 1071.5,
+        "end": 1073.5
+      },
+      "pred_interval": {
+        "start": 945.0,
+        "end": 946.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 126.5,
+        "end": 127.5,
+        "average": 127.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2,
+        "text_similarity": 0.5689934492111206,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction is factually consistent in saying the 'severely shifted' remark occurs after the earlier 'shifted' mention, but it fails to provide the key factual details (the explicit identification and timestamps of the next instance at 1071.5\u20131073.5s) required by the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After someone says 'Let me lower my lines', when does a person state 'That's severely shifted'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 870.0,
+        "end": 1080.0
+      },
+      "gt_interval": {
+        "start": 1071.5,
+        "end": 1072.5
+      },
+      "pred_interval": {
+        "start": 947.0,
+        "end": 948.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 124.5,
+        "end": 124.5,
+        "average": 124.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.08888888888888889,
+        "text_similarity": 0.1809765100479126,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly indicates the anchor precedes the target, but it omits the precise timestamps and misleadingly claims the target is 'just before' (implying immediate adjacency) instead of occurring about 14 seconds later as in the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker initially states the trailer is 'severely shifted', when does he explain that the weight inside the container shifted?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1144.71,
+        "end": 1145.79
+      },
+      "pred_interval": {
+        "start": 1056.0,
+        "end": 1062.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 88.71000000000004,
+        "end": 83.78999999999996,
+        "average": 86.25
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22727272727272727,
+        "text_similarity": 0.37279388308525085,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation ('after') but omits key factual elements from the reference\u2014specific event timestamps and the explanation/conclusion details\u2014making it incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the speaker asks 'What do you recommend?', when does he confirm the proposed solution to 'put it on the floor'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1206.028,
+        "end": 1212.074
+      },
+      "pred_interval": {
+        "start": 1147.0,
+        "end": 1153.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 59.02800000000002,
+        "end": 59.07400000000007,
+        "average": 59.051000000000045
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.33333333333333337,
+        "text_similarity": 0.4701361060142517,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly states that the confirmation occurs after the question, but it omits the specific event timestamps and the exact confirmation phrasing provided in the correct answer, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After someone asks 'It's batteries?', when is the cargo confirmed and the realization made, 'Oh, that's why.'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1050.0,
+        "end": 1260.0
+      },
+      "gt_interval": {
+        "start": 1246.67,
+        "end": 1253.332
+      },
+      "pred_interval": {
+        "start": 1189.0,
+        "end": 1193.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 57.67000000000007,
+        "end": 60.33200000000011,
+        "average": 59.00100000000009
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.36,
+        "text_similarity": 0.5684673190116882,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (the cargo confirmation and 'Oh, that's why' occur after 'It's batteries?') but omits the specific event references and timestamps given in the correct answer, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker gives detailed instructions to start going in with the 'white' to get the counterweight away from the truck, when is the next time he says \"Keep going with your white\"?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1532.4,
+        "end": 1533.221
+      },
+      "pred_interval": {
+        "start": 1425.0,
+        "end": 1430.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 107.40000000000009,
+        "end": 103.221,
+        "average": 105.31050000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27906976744186046,
+        "text_similarity": 0.41559186577796936,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly states the phrase occurs after the initial instruction, preserving the core relation, but it is overly vague and omits the specific identification/timestamp that it is the first 'Keep going with your white' following E1."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the speaker finishes asking \"You're right there, right?\", when does the immediate response \"No\" occur?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1565.122,
+        "end": 1570.383
+      },
+      "pred_interval": {
+        "start": 1465.0,
+        "end": 1470.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 100.12200000000007,
+        "end": 100.38300000000004,
+        "average": 100.25250000000005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14634146341463414,
+        "text_similarity": 0.4222187101840973,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly captures the relational meaning that 'No' is an immediate reply occurring right after the question (matches the 'once_finished' relation), but it omits the specific timestamps given in the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the speaker states that he wants the counterweight in position correctly, when does he instruct to \"Go ahead and hook up your glad hands\"?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1410.0,
+        "end": 1620.0
+      },
+      "gt_interval": {
+        "start": 1610.073,
+        "end": 1618.113
+      },
+      "pred_interval": {
+        "start": 1505.0,
+        "end": 1510.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 105.07300000000009,
+        "end": 108.11300000000006,
+        "average": 106.59300000000007
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.32653061224489793,
+        "text_similarity": 0.3769090175628662,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (the instruction occurs after the statement), but it omits the specific timestamps and precise timing information provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the instructor finishes connecting the green glad hand, when does he ask if the other line has pressure?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1637.142,
+        "end": 1638.3
+      },
+      "pred_interval": {
+        "start": 1625.0,
+        "end": 1630.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 12.142000000000053,
+        "end": 8.299999999999955,
+        "average": 10.221000000000004
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4166666666666667,
+        "text_similarity": 0.6790295839309692,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly indicates the question occurs after the connection, but it gives an incorrect finish timestamp (1625.0s vs 1595.0s) and fails to provide the actual ask time (1637.1\u20131638.3s), making it inaccurate and incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the instructor asks the learner 'You got it, mijo?', when does the video transition to an outdoor scene of a crane truck?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1664.5,
+        "end": 1665.0
+      },
+      "pred_interval": {
+        "start": 1640.0,
+        "end": 1645.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 24.5,
+        "end": 20.0,
+        "average": 22.25
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2641509433962264,
+        "text_similarity": 0.46159157156944275,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction preserves the overall temporal relation ('after') but the timestamps are substantially incorrect (about 20 seconds earlier than the reference) and it fails to match the correct scene-start/fully-established times."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the crane operator says 'Okay, boom up', when does the crane boom visibly begin its upward movement?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1590.0,
+        "end": 1800.0
+      },
+      "gt_interval": {
+        "start": 1748.0,
+        "end": 1758.0
+      },
+      "pred_interval": {
+        "start": 1650.0,
+        "end": 1655.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 98.0,
+        "end": 103.0,
+        "average": 100.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3333333333333333,
+        "text_similarity": 0.5200179815292358,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only preserves the coarse ordering (boom starts after the speech) but gives completely wrong timestamps (1650.0/1655.0 vs correct 1747.5/1748.0), misstates the delay, and omits the continued movement duration, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the speaker first says 'Cable down', when does another speaker confirm 'he wants it down right there'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1770.0,
+        "end": 1970.0
+      },
+      "gt_interval": {
+        "start": 1823.031,
+        "end": 1826.484
+      },
+      "pred_interval": {
+        "start": 185.0,
+        "end": 186.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1638.031,
+        "end": 1640.484,
+        "average": 1639.2575
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24489795918367344,
+        "text_similarity": 0.5117647647857666,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes a confirmation occurs but incorrectly states it was 'immediately' after; the ground truth shows the confirmation happens much later (~1823s vs 1772s) and includes timestamps the prediction omits."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After a speaker asks 'Where do you guys want it at? Here or pushed over?', when does another speaker state 'That's better that way we have space on both sides'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1770.0,
+        "end": 1970.0
+      },
+      "gt_interval": {
+        "start": 1856.007,
+        "end": 1870.795
+      },
+      "pred_interval": {
+        "start": 193.0,
+        "end": 194.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1663.007,
+        "end": 1676.795,
+        "average": 1669.901
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.09375,
+        "text_similarity": 0.12375061213970184,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (that the second speaker speaks after the question), but it omits the key factual details provided in the correct answer\u2014namely the precise speaker labels and timestamps\u2014so it is incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After a speaker announces 'Our job's complete', when does the speaker say 'Thanks for watching, guys'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1770.0,
+        "end": 1970.0
+      },
+      "gt_interval": {
+        "start": 1954.262,
+        "end": 1955.164
+      },
+      "pred_interval": {
+        "start": 197.0,
+        "end": 198.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1757.262,
+        "end": 1757.164,
+        "average": 1757.213
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4150943396226416,
+        "text_similarity": 0.657338559627533,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation that the 'Thanks for watching, guys' line occurs after 'Our job's complete', but it omits the precise timestamps and adds an unverified claim that a different speaker says the line, making it incomplete and partially inaccurate."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man with the hat says the container weighs '36,000 pounds', when does the man behind the camera reply 'I figured'?",
+      "video_id": "XpoGIOZg_NE",
+      "video_number": "006",
+      "segment": {
+        "start": 1230.0,
+        "end": 1440.0
+      },
+      "gt_interval": {
+        "start": 1264.1,
+        "end": 1264.6
+      },
+      "pred_interval": {
+        "start": 1395.0,
+        "end": 1402.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 130.9000000000001,
+        "end": 137.4000000000001,
+        "average": 134.1500000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22641509433962265,
+        "text_similarity": 0.41513389348983765,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (the reply occurs after the hat-wearer's statement) but omits the precise start/end timestamps and the explicit 'next' relation provided in the correct answer, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the female speaker (Rochelle) introduces herself as a French instructor, when does she introduce the owners of the cafe?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 13.064,
+        "end": 21.271
+      },
+      "pred_interval": {
+        "start": 25.0,
+        "end": 30.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 11.936,
+        "end": 8.729,
+        "average": 10.3325
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.28571428571428564,
+        "text_similarity": 0.5178602933883667,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly conveys the temporal relation (that the owners are introduced after Rochelle's self-introduction) but omits the specific start/end timestamps and duration details provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once Natasha finishes discussing tips and service quality as differences, when does Christophe add that takeout is more democratized in the US?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 114.933,
+        "end": 119.987
+      },
+      "pred_interval": {
+        "start": 145.0,
+        "end": 150.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 30.066999999999993,
+        "end": 30.013000000000005,
+        "average": 30.04
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2,
+        "text_similarity": 0.4992746114730835,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation that Christophe speaks after Natasha and states the content about takeout, but it omits the required precise timing (E1/E2 timestamps 113.974s and 114.933\u2013119.987s) requested by the question, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once Christophe finishes stating that ordering food via pickup or apps is normal for US customers, when does Natasha compare French and US idioms for dinner plans?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 163.274,
+        "end": 169.0
+      },
+      "pred_interval": {
+        "start": 165.0,
+        "end": 170.0
+      },
+      "iou": 0.5947071067499258,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 1,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 1.725999999999999,
+        "end": 1.0,
+        "average": 1.3629999999999995
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2264150943396226,
+        "text_similarity": 0.4959098696708679,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states the relation (Natasha compares after Christophe), but it omits the key temporal details (the start/end timestamps 163.274s\u2013169.0s and Christophe's finish at 161.0s), so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man explains that clients are used to ordering directly via apps or pickup, when does the woman state how they phrase dinner plans in France?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 168.0,
+        "end": 169.8
+      },
+      "pred_interval": {
+        "start": 235.0,
+        "end": 240.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 67.0,
+        "end": 70.19999999999999,
+        "average": 68.6
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14035087719298245,
+        "text_similarity": 0.36754584312438965,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation ('after') but omits the requested timing details and the exact quoted phrase, so it fails to provide the key factual elements in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the woman finishes asking about customer service differences, when does the man explain why clients return to their restaurant?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 184.7,
+        "end": 194.9
+      },
+      "pred_interval": {
+        "start": 260.0,
+        "end": 270.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 75.30000000000001,
+        "end": 75.1,
+        "average": 75.2
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27272727272727276,
+        "text_similarity": 0.48110902309417725,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (he speaks once she finishes), but it omits the specific timestamps (184.7s\u2013194.9s) given in the correct answer, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the woman asks for steak and fries, when does the waiter ask how she would like her steak cooked?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 348.8,
+        "end": 350.2
+      },
+      "pred_interval": {
+        "start": 280.0,
+        "end": 290.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 68.80000000000001,
+        "end": 60.19999999999999,
+        "average": 64.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16666666666666669,
+        "text_similarity": 0.4780333638191223,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation ('after') but omits the key factual details\u2014the precise timestamps (348.8s\u2013350.2s) and the woman's utterance timing\u2014so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the woman finishes saying that customers are unhappy because there are no pastries, when does the video show the dessert display case?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 347.5,
+        "end": 353.5
+      },
+      "pred_interval": {
+        "start": 345.0,
+        "end": 346.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.5,
+        "end": 7.5,
+        "average": 5.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.27586206896551724,
+        "text_similarity": 0.4565403163433075,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly conveys the temporal relation that the display appears immediately after she finishes speaking, but it omits the precise timestamps (start at 347.5s and end at 353.5s) and duration given in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the man finishes explaining that managing during COVID was complicated, when does the video show a close-up of a salad?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 370.0,
+        "end": 375.8
+      },
+      "pred_interval": {
+        "start": 405.0,
+        "end": 406.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 35.0,
+        "end": 30.19999999999999,
+        "average": 32.599999999999994
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.22222222222222224,
+        "text_similarity": 0.34168100357055664,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation ('after') but omits critical factual details\u2014specific start/end timestamps and duration of the salad close-up\u2014so it is incomplete. It also provides no timing evidence as in the ground truth."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the man finishes giving examples of how customers customize their dishes, when does the video show a close-up of a fresh salad?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 469.0,
+        "end": 472.0
+      },
+      "pred_interval": {
+        "start": 415.0,
+        "end": 416.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 54.0,
+        "end": 56.0,
+        "average": 55.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21818181818181817,
+        "text_similarity": 0.4561786353588104,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (the salad appears after the man's examples) but omits the key factual details (the timestamps 445.0s for the end of examples and 469.0\u2013472.0s for the close-up) required by the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man talks about average restaurant closing times in France, when does the woman holding the baby say, 'Il y a plus personne'?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 566.0
+      },
+      "gt_interval": {
+        "start": 525.0,
+        "end": 526.0
+      },
+      "pred_interval": {
+        "start": 546.0,
+        "end": 547.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 21.0,
+        "end": 21.0,
+        "average": 21.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2909090909090909,
+        "text_similarity": 0.5121375322341919,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly states the temporal relation ('after') and identifies the speaker, but it omits the specific timestamps and event details provided in the correct answer, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the woman on the left finishes asking viewers to subscribe, when does she say, 'A bient\u00f4t les amis, au revoir!'?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 566.0
+      },
+      "gt_interval": {
+        "start": 539.1,
+        "end": 540.1
+      },
+      "pred_interval": {
+        "start": 563.0,
+        "end": 564.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 23.899999999999977,
+        "end": 23.899999999999977,
+        "average": 23.899999999999977
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3225806451612903,
+        "text_similarity": 0.48777782917022705,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives a single timestamp (563.0s) that is ~23.9s later than the correct start time (539.1s) and omits the E1 timing and the 'once_finished' relation, so it is essentially incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the woman on the left finishes saying, 'A bient\u00f4t les amis, au revoir!', when does the man say, 'A bient\u00f4t!'?",
+      "video_id": "om_ivG8uNC8",
+      "video_number": "007",
+      "segment": {
+        "start": 510.0,
+        "end": 566.0
+      },
+      "gt_interval": {
+        "start": 540.3,
+        "end": 540.7
+      },
+      "pred_interval": {
+        "start": 564.0,
+        "end": 565.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 23.700000000000045,
+        "end": 24.299999999999955,
+        "average": 24.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2903225806451613,
+        "text_similarity": 0.518604576587677,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly states the man speaks after the woman, but it gives an incorrect and single timestamp (564.0s) rather than the precise start/end times (woman 539.1\u2013540.1s; man 540.3\u2013540.7s), so it is factually inaccurate and incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man in the cowboy hat states that the machine took his money, when does the customer service representative deny taking his money?",
+      "video_id": "8xW-m_bmpv4",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 47.0
+      },
+      "gt_interval": {
+        "start": 5.355,
+        "end": 7.317
+      },
+      "pred_interval": {
+        "start": 12.6,
+        "end": 13.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 7.244999999999999,
+        "end": 6.083,
+        "average": 6.664
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.13636363636363635,
+        "text_similarity": 0.2578059434890747,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives a denial start at 12.6s, which is far from the correct interval of 5.355\u20137.317s; this is a significant temporal mismatch and contradicts the reference timing. No partial alignment other than identifying a denial is present."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "While the customer service representative is explaining to print the receipt and take it to the register, when does the man in the cowboy hat realize his mistake?",
+      "video_id": "8xW-m_bmpv4",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 47.0
+      },
+      "gt_interval": {
+        "start": 34.561,
+        "end": 37.088
+      },
+      "pred_interval": {
+        "start": 25.8,
+        "end": 26.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 8.761,
+        "end": 10.888000000000002,
+        "average": 9.8245
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1917808219178082,
+        "text_similarity": 0.440538227558136,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "Completely incorrect: the correct realization occurs at ~34.56s when he says 'Oh, I see the receipt' (34.561\u201337.088s), whereas the prediction incorrectly places it at 25.8s with the phrase 'Oh ok.'"
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the man says 'Thank you', when does he hang up the phone?",
+      "video_id": "8xW-m_bmpv4",
+      "video_number": "008",
+      "segment": {
+        "start": 0.0,
+        "end": 47.0
+      },
+      "gt_interval": {
+        "start": 42.542,
+        "end": 46.917
+      },
+      "pred_interval": {
+        "start": 45.7,
+        "end": 46.0
+      },
+      "iou": 0.06857142857142792,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.1580000000000013,
+        "end": 0.9170000000000016,
+        "average": 2.0375000000000014
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14285714285714288,
+        "text_similarity": 0.4464448094367981,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction gives a single time (45.7s) within the overall action window but contradicts the reference which states the hang-up begins immediately at 42.542s and completes by 46.917s; it thus misstates the timing and omits the immediate start and smile details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man in the suit asks the police officer to call for more car crews, when do additional police officers enter the room?",
+      "video_id": "04khRfp_tY0",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 160.0
+      },
+      "gt_interval": {
+        "start": 50.147,
+        "end": 51.357
+      },
+      "pred_interval": {
+        "start": 125.0,
+        "end": 130.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 74.85300000000001,
+        "end": 78.643,
+        "average": 76.748
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4827586206896552,
+        "text_similarity": 0.5785746574401855,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly conveys the temporal relation ('shortly after') but omits the key factual details (the precise start/end timestamps for both events) given in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the first police officer repeatedly asks the man in the suit to leave the building, when does the man in the suit state he has asked for IDs?",
+      "video_id": "04khRfp_tY0",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 160.0
+      },
+      "gt_interval": {
+        "start": 41.399,
+        "end": 42.261
+      },
+      "pred_interval": {
+        "start": 140.0,
+        "end": 145.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 98.601,
+        "end": 102.739,
+        "average": 100.67
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3582089552238806,
+        "text_similarity": 0.6231955885887146,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly restates that the man says he has asked for IDs, but it omits the precise timestamps and the 'next' relation provided in the correct answer, making it incomplete."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the man in the suit shouts 'Ambulance!' for the last time, when is he informed that he is under arrest?",
+      "video_id": "04khRfp_tY0",
+      "video_number": "009",
+      "segment": {
+        "start": 0.0,
+        "end": 160.0
+      },
+      "gt_interval": {
+        "start": 93.222,
+        "end": 98.204
+      },
+      "pred_interval": {
+        "start": 150.0,
+        "end": 155.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 56.778000000000006,
+        "end": 56.79600000000001,
+        "average": 56.787000000000006
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23333333333333334,
+        "text_similarity": 0.6089451909065247,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly states the temporal relation (the arrest is communicated after the final 'Ambulance!' shout) but omits the specific timestamps and exact timing details provided in the reference."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man (father) tells the woman to use 'Find my iPhone', when does she claim that her 'Find my iPhone' is on?",
+      "video_id": "eJlc_GV2yx8",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 73.0
+      },
+      "gt_interval": {
+        "start": 24.916,
+        "end": 26.539
+      },
+      "pred_interval": {
+        "start": 59.6,
+        "end": 60.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 34.684,
+        "end": 33.661,
+        "average": 34.1725
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.05405405405405406,
+        "text_similarity": 0.13956129550933838,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted time (59.6s) is completely inconsistent with the correct target interval (24.916\u201326.539s) and thus is incorrect; it omits the anchor and target timings given in the reference."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the father accuses the hotel employee of being disrespectful, when does the woman loudly demand proof of ownership for the phone?",
+      "video_id": "eJlc_GV2yx8",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 73.0
+      },
+      "gt_interval": {
+        "start": 46.531,
+        "end": 48.456
+      },
+      "pred_interval": {
+        "start": 63.4,
+        "end": 64.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 16.869,
+        "end": 15.543999999999997,
+        "average": 16.2065
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.08888888888888889,
+        "text_similarity": 0.20726853609085083,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted time (63.4s) contradicts the reference, which places the woman's loud demand at 46.531\u201348.456s; the prediction is therefore incorrect and misaligned with the ground truth."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the father finishes asking if the hotel employee saw him come down the elevator, when does the employee state he is trying to help?",
+      "video_id": "eJlc_GV2yx8",
+      "video_number": "010",
+      "segment": {
+        "start": 0.0,
+        "end": 73.0
+      },
+      "gt_interval": {
+        "start": 34.953,
+        "end": 35.755
+      },
+      "pred_interval": {
+        "start": 71.8,
+        "end": 72.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 36.846999999999994,
+        "end": 36.245,
+        "average": 36.54599999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.10810810810810811,
+        "text_similarity": 0.4447011947631836,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted timestamp (71.8s) is completely inconsistent with the correct timing (34.953\u201335.755s); it does not match or approximate the reference answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the waiter says \"I put it on your table, so it's yours now\", when does the woman respond \"Oh, but we haven't even ordered yet\"?",
+      "video_id": "vuIap3d2WHg",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 93.0
+      },
+      "gt_interval": {
+        "start": 12.631,
+        "end": 14.134
+      },
+      "pred_interval": {
+        "start": 53.0,
+        "end": 54.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 40.369,
+        "end": 39.866,
+        "average": 40.1175
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.06779661016949153,
+        "text_similarity": 0.30818721652030945,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly restates the woman's reply but fails to provide any timing information or the specified temporal relation (timestamps/directly after the anchor), so it is incomplete relative to the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the waiter serves a small amount of food onto the woman's plate, when does he completely walk away from her table?",
+      "video_id": "vuIap3d2WHg",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 93.0
+      },
+      "gt_interval": {
+        "start": 56.5,
+        "end": 59.0
+      },
+      "pred_interval": {
+        "start": 67.0,
+        "end": 68.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 10.5,
+        "end": 9.0,
+        "average": 9.75
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1754385964912281,
+        "text_similarity": 0.3975050449371338,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only restates that he walks away after serving and gives no timing or completion details; it omits the key timestamps (56.5s\u201359.0s) and thus fails to answer the question precisely."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the waiter asks 'What would you like?', when does the woman respond 'Oh, I'm not sure'?",
+      "video_id": "vuIap3d2WHg",
+      "video_number": "011",
+      "segment": {
+        "start": 0.0,
+        "end": 93.0
+      },
+      "gt_interval": {
+        "start": 20.78,
+        "end": 23.062
+      },
+      "pred_interval": {
+        "start": 79.0,
+        "end": 80.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 58.22,
+        "end": 56.938,
+        "average": 57.579
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16,
+        "text_similarity": 0.32854562997817993,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly states that the woman replies with 'Oh, I'm not sure,' but it fails to provide the required timing (timestamps) and the note that the response follows the question after a short pause, omitting key factual details."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the narrator describes the shocking video of the customer throwing soup, when does the video actually show the customer throwing the soup?",
+      "video_id": "Q3Qzgs5WuvE",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 67.0
+      },
+      "gt_interval": {
+        "start": 12.2,
+        "end": 12.8
+      },
+      "pred_interval": {
+        "start": 45.0,
+        "end": 46.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 32.8,
+        "end": 33.2,
+        "average": 33.0
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.17391304347826086,
+        "text_similarity": 0.5336076021194458,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is factually incorrect\u2014the correct video shows the throw at 12.2\u201312.8s (after the narrator segment), whereas the prediction of 45.0s contradicts the ground truth and omits key timing details."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the manager states the warmth of the soup was not enough to burn her, when does she mention her eyes stinging and burning from the spices?",
+      "video_id": "Q3Qzgs5WuvE",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 67.0
+      },
+      "gt_interval": {
+        "start": 28.6,
+        "end": 31.8
+      },
+      "pred_interval": {
+        "start": 53.0,
+        "end": 54.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 24.4,
+        "end": 22.2,
+        "average": 23.299999999999997
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2222222222222222,
+        "text_similarity": 0.5536861419677734,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is factually incorrect about the timing \u2014 the manager's comment about stinging/burning eyes occurs from ~28.6\u201331.8s (after the 20.6\u201323.6s warmth remark), not at 53.0s, so the timestamp is substantially wrong."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the manager offers to help the customer under the condition of not yelling or cussing, when does she state that was the moment the soup was thrown?",
+      "video_id": "Q3Qzgs5WuvE",
+      "video_number": "012",
+      "segment": {
+        "start": 0.0,
+        "end": 67.0
+      },
+      "gt_interval": {
+        "start": 54.939,
+        "end": 57.442
+      },
+      "pred_interval": {
+        "start": 57.0,
+        "end": 58.0
+      },
+      "iou": 0.14439725579875864,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.061,
+        "end": 0.5579999999999998,
+        "average": 1.3094999999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.24489795918367346,
+        "text_similarity": 0.4225161075592041,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The predicted time (57.0s) falls within the correct E2 interval (54.939\u201357.442s), so it partially matches, but it omits the precise event spans for E1/E2 and the stated relation ('once_finished'), making it incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the text 'My neck and shoulders were tired from writing a paper on the future of Thailand's nightlife industry' appears, when does the text 'Therefore, I visited a quiet massage shop nearby the five-star hotel where I stay' appear?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 20.3,
+        "end": 29.0
+      },
+      "pred_interval": {
+        "start": 1.0,
+        "end": 2.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 19.3,
+        "end": 27.0,
+        "average": 23.15
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.16216216216216214,
+        "text_similarity": 0.2610524296760559,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives completely different timestamps (1.0s and 2.0s) and omits disappearance times, which contradicts the ground truth (anchor 8.4\u201312.0s, target 20.3\u201329.0s); it only preserves the order. "
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the woman opens the door of the massage shop, when does she say 'Please wait for 10 minutes'?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 51.5,
+        "end": 52.5
+      },
+      "pred_interval": {
+        "start": 14.0,
+        "end": 15.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 37.5,
+        "end": 37.5,
+        "average": 37.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.21428571428571427,
+        "text_similarity": 0.36531996726989746,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction gives completely different timestamps (14.0s/15.0s) than the reference (43.8\u201344.5s and 51.5\u201352.5s); although both place the speech after the door opening, the timing details are largely incorrect and thus incorrect overall."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the narrator confirms 'I am from Korea', when does the text 'She was already happy to dance just because I was in the same room with her' appear?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 171.5,
+        "end": 179.0
+      },
+      "pred_interval": {
+        "start": 19.0,
+        "end": 20.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 152.5,
+        "end": 159.0,
+        "average": 155.75
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20000000000000004,
+        "text_similarity": 0.4460821747779846,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only preserves the relative order (text appears after the narrator) but the timestamps are completely incorrect (19.0/20.0s vs correct 168.5\u2013169.5s and 171.5\u2013179.0s) and it omits the disappearance time, so it is largely inaccurate."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the woman adjusts her hair, when does she pick up her phone from the table to check it?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 180.0,
+        "end": 182.0
+      },
+      "pred_interval": {
+        "start": 235.0,
+        "end": 240.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 55.0,
+        "end": 58.0,
+        "average": 56.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.4888888888888888,
+        "text_similarity": 0.49212419986724854,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (she picks up the phone after adjusting her hair) but fails to provide the required timing details (180.0s\u2013182.0s), omitting key factual elements from the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the male voice asks if the woman is from Korea and she replies, when does the male voice clarify 'South Korea'?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 327.429,
+        "end": 330.112
+      },
+      "pred_interval": {
+        "start": 246.0,
+        "end": 248.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 81.42899999999997,
+        "end": 82.11200000000002,
+        "average": 81.7705
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.42307692307692313,
+        "text_similarity": 0.6669553518295288,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly captures the order (the male clarifies 'South Korea' after her reply) but omits the key factual detail of the precise timing intervals provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the woman finishes saying 'No, I don't', when does she say 'Just a little bit'?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 150.0,
+        "end": 360.0
+      },
+      "gt_interval": {
+        "start": 192.645,
+        "end": 203.424
+      },
+      "pred_interval": {
+        "start": 257.0,
+        "end": 259.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 64.35499999999999,
+        "end": 55.57599999999999,
+        "average": 59.96549999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.46511627906976755,
+        "text_similarity": 0.3557785451412201,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (that 'Just a little bit' follows 'No, I don't') but omits the key factual timestamps given in the correct answer and thus fails to answer the 'when' precisely."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the man being massaged asks 'Can I go now?', when does the other person reply 'Yes, you can.'?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 494.118,
+        "end": 497.0
+      },
+      "pred_interval": {
+        "start": 495.0,
+        "end": 496.0
+      },
+      "iou": 0.34698126301179677,
+      "recall_at_threshold": {
+        "R@0.3": 1,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 0.882000000000005,
+        "end": 1.0,
+        "average": 0.9410000000000025
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.08888888888888889,
+        "text_similarity": 0.17978544533252716,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly captures that the reply occurs immediately after the question and preserves the semantic relation, but it omits the precise timestamps and detailed interval boundaries provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the man says 'My dear wife, let's go to the hotel.', when does he then say 'Oh, good.'?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 392.548,
+        "end": 393.0
+      },
+      "pred_interval": {
+        "start": 507.0,
+        "end": 508.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 114.452,
+        "end": 115.0,
+        "average": 114.726
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1276595744680851,
+        "text_similarity": 0.1901569813489914,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction accurately conveys the same temporal relation\u2014'Oh, good.' occurs immediately after the line\u2014matching the reference's 'once_finished' timing; no factual elements are omitted or contradicted."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "Once the man says 'You said you weren't working.', when does the other man reply 'I'm not.'?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 330.0,
+        "end": 540.0
+      },
+      "gt_interval": {
+        "start": 448.839,
+        "end": 451.3
+      },
+      "pred_interval": {
+        "start": 510.0,
+        "end": 511.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 61.161,
+        "end": 59.69999999999999,
+        "average": 60.430499999999995
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.0425531914893617,
+        "text_similarity": 0.18816806375980377,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly captures the key relation that the reply occurs immediately after the first utterance, but it omits the precise timestamps and the note about capturing the complete spoken phrase."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the person repeatedly comments about the 'T-shirt', when does the child say 'Hello'?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 711.49,
+        "end": 711.61
+      },
+      "pred_interval": {
+        "start": 695.0,
+        "end": 696.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 16.49000000000001,
+        "end": 15.610000000000014,
+        "average": 16.05000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1702127659574468,
+        "text_similarity": 0.5430614352226257,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly indicates the child's 'Hello' occurs after the T-shirt comment but falsely asserts it happens 'right after' and omits the timestamps; the ground truth shows an ~12-second gap, so the timing claim is misleading."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "After the woman states 'I don't know if it's beautiful or not', when does she say that the item is 'too small'?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 781.28,
+        "end": 782.18
+      },
+      "pred_interval": {
+        "start": 730.0,
+        "end": 731.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 51.27999999999997,
+        "end": 51.17999999999995,
+        "average": 51.22999999999996
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1724137931034483,
+        "text_similarity": 0.27948641777038574,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction contradicts the ground truth timing: the correct answer gives precise timestamps showing 'It's too small' occurs about 10.8 seconds after the uncertainty, whereas the prediction claims she says it immediately and omits the timestamps."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the man first says 'You have to spend a lot of money', when does he offer a 'discount'?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 690.0,
+        "end": 900.0
+      },
+      "gt_interval": {
+        "start": 859.78,
+        "end": 862.65
+      },
+      "pred_interval": {
+        "start": 745.0,
+        "end": 746.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 114.77999999999997,
+        "end": 116.64999999999998,
+        "average": 115.71499999999997
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.46666666666666673,
+        "text_similarity": 0.5489351749420166,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states the event occurs after, but incorrectly claims it happens \"right after\" and omits the provided timestamps; the ground truth shows a substantial ~33.7s gap between the two events."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the woman finishes saying 'Up to you', when does she fully lower her left hand to her side?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 903.0
+      },
+      "gt_interval": {
+        "start": 891.32,
+        "end": 892.0
+      },
+      "pred_interval": {
+        "start": 873.2,
+        "end": 874.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 18.120000000000005,
+        "end": 18.0,
+        "average": 18.060000000000002
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.1702127659574468,
+        "text_similarity": 0.4947512447834015,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly states the hand is lowered after the speech, but it omits the key timing details given in the reference (start at 891.32s and fully down by 892.0s), so it is incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Before the woman starts saying 'Whatever you want', when does she raise her left hand again?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 903.0
+      },
+      "gt_interval": {
+        "start": 896.3,
+        "end": 897.0
+      },
+      "pred_interval": {
+        "start": 895.6,
+        "end": 896.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 0.6999999999999318,
+        "end": 1.0,
+        "average": 0.8499999999999659
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.37209302325581395,
+        "text_similarity": 0.24221988022327423,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly states the raise occurs before she says 'Whatever you want', but it omits the key factual timestamps (896.3\u2013897.0s for the raise and 899.08s for the speech) provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the woman finishes saying 'Whatever you want', when does she begin to say 'Okay'?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 903.0
+      },
+      "gt_interval": {
+        "start": 900.7,
+        "end": 903.0
+      },
+      "pred_interval": {
+        "start": 896.0,
+        "end": 896.4
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 4.7000000000000455,
+        "end": 6.600000000000023,
+        "average": 5.650000000000034
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.13953488372093023,
+        "text_similarity": 0.468545138835907,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is factually correct in order (she says 'Okay' after 'Whatever you want') but omits all critical timing details given in the correct answer (start/end times and cut-off), so it is incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the man asks why the masseuse has no customers, when does she explain that there are many massage shops?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 510.0,
+        "end": 720.0
+      },
+      "gt_interval": {
+        "start": 531.0,
+        "end": 536.0
+      },
+      "pred_interval": {
+        "start": 546.0,
+        "end": 552.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 15.0,
+        "end": 16.0,
+        "average": 15.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.38710957765579224,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction names the correct event but gives substantially different temporal boundaries (starts at 546.0s vs the reference start ~531.0s), failing to match the annotated timing and relative relation to the anchor, so it is largely incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the woman finishes extending her hand with the number, when does the outdoor street view with the pink scooter first appear?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 902.4000000000001
+      },
+      "gt_interval": {
+        "start": 878.0,
+        "end": 887.5
+      },
+      "pred_interval": {
+        "start": 875.6,
+        "end": 875.6
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.3999999999999773,
+        "end": 11.899999999999977,
+        "average": 7.149999999999977
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.044444444444444446,
+        "text_similarity": 0.24135278165340424,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction (875.6s) does not match the ground-truth target start (878.0s) and falls outside the correct target interval (878.0\u2013887.5s); although close to the anchor completion (874.8s), it is factually incorrect."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the outdoor scene with the pink scooter is shown, when does a hand reach out and touch the woman's shoulder?",
+      "video_id": "AhWGvoPRMes",
+      "video_number": "013",
+      "segment": {
+        "start": 870.0,
+        "end": 902.4000000000001
+      },
+      "gt_interval": {
+        "start": 897.5,
+        "end": 898.0
+      },
+      "pred_interval": {
+        "start": 900.0,
+        "end": 900.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.5,
+        "end": 2.0,
+        "average": 2.25
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.20833333333333331,
+        "text_similarity": 0.4053593575954437,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly indicates the event happens after the anchor but gives 900.0s, which is about 2s later than the correct full-touch time (898.0s) and omits the appearance time (897.5s) and the anchor interval, so it is close but imprecise and incomplete."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the bartender tells Em she'll get a standard G&T instead of a double, when is Em seen drinking the standard G&T?",
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 76.0,
+        "end": 79.0
+      },
+      "pred_interval": {
+        "start": 165.0,
+        "end": 167.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 89.0,
+        "end": 88.0,
+        "average": 88.5
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.3272727272727273,
+        "text_similarity": 0.6863000392913818,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly states that Em drinks the G&T after the bartender's remark, but it omits the specific timing information (76.0-79.0s) requested in the correct answer, making it incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the bartender says 'I'm going to kick you out', when does Em shout 'Screw you!'?",
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 109.471,
+        "end": 100.632
+      },
+      "pred_interval": {
+        "start": 198.0,
+        "end": 199.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 88.529,
+        "end": 98.368,
+        "average": 93.4485
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.41860465116279066,
+        "text_similarity": 0.7003151178359985,
+        "llm_judge_score": 10,
+        "llm_judge_justification": "The prediction conveys the same temporal relation as the reference\u2014Em shouts after the bartender says the line\u2014without adding or omitting factual details."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the bartender asks Em 'How are you having a fun night?', when does Em respond and complain about Jake?",
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 0.0,
+        "end": 210.0
+      },
+      "gt_interval": {
+        "start": 143.407,
+        "end": 150.133
+      },
+      "pred_interval": {
+        "start": 204.0,
+        "end": 205.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 60.59299999999999,
+        "end": 54.86699999999999,
+        "average": 57.72999999999999
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.391304347826087,
+        "text_similarity": 0.6591984629631042,
+        "llm_judge_score": 7,
+        "llm_judge_justification": "The prediction correctly conveys the temporal relation ('after') and the content of Em's response, but it omits the specific timestamps and event interval details provided in the correct answer."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "After the bartender introduces herself and asks the customer's name, when does the customer reply with her name?",
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 150.0,
+        "end": 220.0
+      },
+      "gt_interval": {
+        "start": 161.3,
+        "end": 162.9
+      },
+      "pred_interval": {
+        "start": 158.2,
+        "end": 160.3
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 3.1000000000000227,
+        "end": 2.5999999999999943,
+        "average": 2.8500000000000085
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.23529411764705882,
+        "text_similarity": 0.48307400941848755,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction gives different timestamps and places the customer's reply at 160.3s (during the bartender's question), contradicting the correct timeline where the reply starts at 161.3s after the question, so the key temporal relation is incorrect."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the bartender finishes explaining the law requires the customer to leave, when does she offer a safe transport option?",
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 150.0,
+        "end": 220.0
+      },
+      "gt_interval": {
+        "start": 185.1,
+        "end": 187.6
+      },
+      "pred_interval": {
+        "start": 174.9,
+        "end": 175.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 10.199999999999989,
+        "end": 12.099999999999994,
+        "average": 11.149999999999991
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2545454545454545,
+        "text_similarity": 0.350528746843338,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction preserves the sequence (offer follows the explanation) but the timestamps are significantly incorrect (predicted 174.9s/175.5s vs ground truth 177.5\u2013184.9s and 185.1\u2013187.6s), so the events are misaligned with the reference."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "After the bartender states her plan to get security to call a cab, when does she pick up the walkie-talkie?",
+      "video_id": "kzwrV3NdtM4",
+      "video_number": "014",
+      "segment": {
+        "start": 150.0,
+        "end": 220.0
+      },
+      "gt_interval": {
+        "start": 212.5,
+        "end": 214.0
+      },
+      "pred_interval": {
+        "start": 180.2,
+        "end": 180.2
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 32.30000000000001,
+        "end": 33.80000000000001,
+        "average": 33.05000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.2456140350877193,
+        "text_similarity": 0.3784389793872833,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is incorrect: it gives the wrong timestamps (180.2s vs the reference 205.4\u2013209.5s and 212.5\u2013214.0s) and wrongly states the walkie-talkie is picked up simultaneously rather than after."
+      }
+    },
+    {
+      "question_id": "001",
+      "question": "Once the woman in the green dress asks if Anna has her money, when does the man respond that they have Genesys?",
+      "video_id": "8VDvZM7QEGo",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 49.0
+      },
+      "gt_interval": {
+        "start": 24.438,
+        "end": 27.126
+      },
+      "pred_interval": {
+        "start": 36.2,
+        "end": 37.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 11.762000000000004,
+        "end": 10.373999999999999,
+        "average": 11.068000000000001
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.04545454545454545,
+        "text_similarity": 0.13594777882099152,
+        "llm_judge_score": 6,
+        "llm_judge_justification": "The prediction correctly captures the temporal relation (that the man responds after the woman's question), but it omits the precise timing details and segment boundaries given in the correct answer, so it is incomplete."
+      }
+    },
+    {
+      "question_id": "002",
+      "question": "Once the man tells them to 'Read the sign', when does the woman in the green dress acknowledge the sign?",
+      "video_id": "8VDvZM7QEGo",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 49.0
+      },
+      "gt_interval": {
+        "start": 28.499,
+        "end": 30.5
+      },
+      "pred_interval": {
+        "start": 38.4,
+        "end": 39.0
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 9.901,
+        "end": 8.5,
+        "average": 9.2005
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.0,
+        "text_similarity": 0.13249900937080383,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction correctly states she acknowledges the sign after the man\u2019s prompt, but it omits the key factual details and precise timing (that she begins almost immediately at 28.499s and finishes at 30.5s and the 'once_finished' relation)."
+      }
+    },
+    {
+      "question_id": "003",
+      "question": "During the woman in the green dress's explanation about 'Keep Calm', when does the 'Transfer Complete' notification appear on the tablet?",
+      "video_id": "8VDvZM7QEGo",
+      "video_number": "015",
+      "segment": {
+        "start": 0.0,
+        "end": 49.0
+      },
+      "gt_interval": {
+        "start": 40.0,
+        "end": 40.6
+      },
+      "pred_interval": {
+        "start": 42.0,
+        "end": 42.5
+      },
+      "iou": 0.0,
+      "recall_at_threshold": {
+        "R@0.3": 0,
+        "R@0.5": 0,
+        "R@0.7": 0
+      },
+      "mae": {
+        "start": 2.0,
+        "end": 1.8999999999999986,
+        "average": 1.9499999999999993
+      },
+      "rationale_metrics": {
+        "rouge_l": 0.14814814814814817,
+        "text_similarity": 0.2956428825855255,
+        "llm_judge_score": 8,
+        "llm_judge_justification": "The prediction correctly states the notification appears during the woman's explanation (matching the 'during' relation), but it omits the precise timing details given in the correct answer (notification at 40.0\u201340.6s within the anchor speech 36.569\u201340.982s)."
+      }
+    }
+  ]
+}

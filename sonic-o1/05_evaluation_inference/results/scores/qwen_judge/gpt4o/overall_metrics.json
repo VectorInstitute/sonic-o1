@@ -1,0 +1,267 @@
+{
+  "model": "gpt4o",
+  "experiment_name": null,
+  "tasks": {
+    "t1": {
+      "task_name": "task1_summarization",
+      "topics": {
+        "01_Patient-Doctor_Consultations": {
+          "detailed": {
+            "rouge_l_mean": 0.2497432171982689,
+            "rouge_l_std": 0.07179770648351416,
+            "text_similarity_mean": 0.7189388005062938,
+            "text_similarity_std": 0.22801047717687264,
+            "llm_judge_score_mean": 7.5,
+            "llm_judge_score_std": 2.23606797749979
+          },
+          "short": {
+            "rouge_l_mean": 0.20318145133579735,
+            "rouge_l_std": 0.08612626124976903,
+            "text_similarity_mean": 0.644159852527082,
+            "text_similarity_std": 0.2290762395178636,
+            "llm_judge_score_mean": 5.9375,
+            "llm_judge_score_std": 2.0757152381769517
+          },
+          "cider": {
+            "cider_detailed": 0.009080657635397182,
+            "cider_short": 1.626999649242062e-09
+          }
+        },
+        "02_Job_Interviews": {
+          "detailed": {
+            "rouge_l_mean": 0.25136254524098267,
+            "rouge_l_std": 0.0675779225873478,
+            "text_similarity_mean": 0.7231829031592324,
+            "text_similarity_std": 0.20032272217183636,
+            "llm_judge_score_mean": 8.095238095238095,
+            "llm_judge_score_std": 2.180099646144685
+          },
+          "short": {
+            "rouge_l_mean": 0.18425381178192665,
+            "rouge_l_std": 0.06731992366585003,
+            "text_similarity_mean": 0.5948549002586376,
+            "text_similarity_std": 0.21803533632438932,
+            "llm_judge_score_mean": 5.571428571428571,
+            "llm_judge_score_std": 1.788093652906532
+          },
+          "cider": {
+            "cider_detailed": 0.07374600294670143,
+            "cider_short": 0.0014909461744281687
+          }
+        },
+        "05_Courtroom_Proceedings": {
+          "detailed": {
+            "rouge_l_mean": 0.17233116526263645,
+            "rouge_l_std": 0.06667314641329872,
+            "text_similarity_mean": 0.382079865783453,
+            "text_similarity_std": 0.30422573581484674,
+            "llm_judge_score_mean": 3.769230769230769,
+            "llm_judge_score_std": 3.042110758966952
+          },
+          "short": {
+            "rouge_l_mean": 0.11653953421404226,
+            "rouge_l_std": 0.08137452763347958,
+            "text_similarity_mean": 0.2883607823974811,
+            "text_similarity_std": 0.320428836396047,
+            "llm_judge_score_mean": 2.769230769230769,
+            "llm_judge_score_std": 2.1892691493473397
+          },
+          "cider": {
+            "cider_detailed": 0.019601671693466844,
+            "cider_short": 2.9088754360451685e-06
+          }
+        }
+      },
+      "aggregated_across_topics": {
+        "detailed": {
+          "rouge_l_mean": 0.22447897590062935,
+          "text_similarity_mean": 0.6080671898163263,
+          "llm_judge_score_mean": 6.454822954822955
+        },
+        "short": {
+          "rouge_l_mean": 0.16799159911058878,
+          "text_similarity_mean": 0.5091251783944002,
+          "llm_judge_score_mean": 4.759386446886446
+        },
+        "cider": {
+          "cider_detailed_mean": 0.03414277742518849,
+          "cider_short_mean": 0.0004979522256212877
+        }
+      }
+    },
+    "t2": {
+      "task_name": "task2_mcq",
+      "topics": {
+        "01_Patient-Doctor_Consultations": {
+          "accuracy": 0.9705882352941176,
+          "correct": 99,
+          "total": 102,
+          "rationale": {
+            "rouge_l_mean": 0.33355196978169377,
+            "rouge_l_std": 0.10173881532855288,
+            "text_similarity_mean": 0.7697321123936597,
+            "text_similarity_std": 0.09413597002635854,
+            "llm_judge_score_mean": 8.872549019607844,
+            "llm_judge_score_std": 0.7497917178430938
+          },
+          "rationale_cider": 0.08545220641105303
+        },
+        "02_Job_Interviews": {
+          "accuracy": 1.0,
+          "correct": 100,
+          "total": 100,
+          "rationale": {
+            "rouge_l_mean": 0.3214547983681789,
+            "rouge_l_std": 0.10663685550738436,
+            "text_similarity_mean": 0.75737998098135,
+            "text_similarity_std": 0.10588668998862656,
+            "llm_judge_score_mean": 8.96,
+            "llm_judge_score_std": 0.6468384651518492
+          },
+          "rationale_cider": 0.1343445540038717
+        },
+        "05_Courtroom_Proceedings": {
+          "accuracy": 0.9565217391304348,
+          "correct": 110,
+          "total": 115,
+          "rationale": {
+            "rouge_l_mean": 0.31848207720341243,
+            "rouge_l_std": 0.10498714702944908,
+            "text_similarity_mean": 0.774787170925866,
+            "text_similarity_std": 0.11020660722666936,
+            "llm_judge_score_mean": 8.591304347826087,
+            "llm_judge_score_std": 1.1412857141336012
+          },
+          "rationale_cider": 0.06812134031498655
+        }
+      },
+      "aggregated_across_topics": {
+        "accuracy_mean": 0.9757033248081841,
+        "rationale": {
+          "rouge_l_mean": 0.32449628178442835,
+          "text_similarity_mean": 0.7672997547669586,
+          "llm_judge_score_mean": 8.807951122477977
+        }
+      }
+    },
+    "t3": {
+      "task_name": "task3_temporal_localization",
+      "topics": {
+        "01_Patient-Doctor_Consultations": {
+          "mean_iou": 0.07184759678870664,
+          "std_iou": 0.16454347818754603,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.10408921933085502,
+            "count": 28,
+            "total": 269
+          },
+          "R@0.5": {
+            "recall": 0.048327137546468404,
+            "count": 13,
+            "total": 269
+          },
+          "R@0.7": {
+            "recall": 0.007434944237918215,
+            "count": 2,
+            "total": 269
+          },
+          "mae": {
+            "start_mean": 22.111765799256514,
+            "end_mean": 3499.9971078066915,
+            "average_mean": 1761.0544368029737
+          },
+          "rationale": {
+            "rouge_l_mean": 0.34476631729820784,
+            "rouge_l_std": 0.08480609324790336,
+            "text_similarity_mean": 0.7217131126325813,
+            "text_similarity_std": 0.08769456626048237,
+            "llm_judge_score_mean": 5.773234200743494,
+            "llm_judge_score_std": 1.1425649196906198
+          },
+          "rationale_cider": 0.49653579460494857
+        },
+        "02_Job_Interviews": {
+          "mean_iou": 0.04780524925356849,
+          "std_iou": 0.12907242016959278,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.06274509803921569,
+            "count": 16,
+            "total": 255
+          },
+          "R@0.5": {
+            "recall": 0.023529411764705882,
+            "count": 6,
+            "total": 255
+          },
+          "R@0.7": {
+            "recall": 0.00784313725490196,
+            "count": 2,
+            "total": 255
+          },
+          "mae": {
+            "start_mean": 25.998674509803926,
+            "end_mean": 27.556999999999995,
+            "average_mean": 26.777837254901964
+          },
+          "rationale": {
+            "rouge_l_mean": 0.32698365210350333,
+            "rouge_l_std": 0.08988277683282889,
+            "text_similarity_mean": 0.7151265607160681,
+            "text_similarity_std": 0.0818993626701307,
+            "llm_judge_score_mean": 5.4980392156862745,
+            "llm_judge_score_std": 1.20089675579126
+          },
+          "rationale_cider": 0.4649302003773386
+        },
+        "05_Courtroom_Proceedings": {
+          "mean_iou": 0.04548413113610914,
+          "std_iou": 0.12062949301063076,
+          "median_iou": 0.0,
+          "R@0.3": {
+            "recall": 0.06705539358600583,
+            "count": 23,
+            "total": 343
+          },
+          "R@0.5": {
+            "recall": 0.02040816326530612,
+            "count": 7,
+            "total": 343
+          },
+          "R@0.7": {
+            "recall": 0.0,
+            "count": 0,
+            "total": 343
+          },
+          "mae": {
+            "start_mean": 36.243384839650155,
+            "end_mean": 36.73593294460643,
+            "average_mean": 36.4896588921283
+          },
+          "rationale": {
+            "rouge_l_mean": 0.3268960745906418,
+            "rouge_l_std": 0.08288641821332576,
+            "text_similarity_mean": 0.7490067421173563,
+            "text_similarity_std": 0.076860834808838,
+            "llm_judge_score_mean": 5.451895043731779,
+            "llm_judge_score_std": 1.1767379284485937
+          },
+          "rationale_cider": 0.3171677728036678
+        }
+      },
+      "aggregated_across_topics": {
+        "mean_iou": 0.055045659059461426,
+        "mae_average": 608.1073109833346,
+        "R@0.3": 0.07796323698535884,
+        "R@0.5": 0.030754904192160135,
+        "R@0.7": 0.005092693830940059,
+        "rationale": {
+          "rouge_l_mean": 0.33288201466411765,
+          "text_similarity_mean": 0.7286154718220019,
+          "llm_judge_score_mean": 5.5743894867205155
+        }
+      }
+    }
+  }
+}

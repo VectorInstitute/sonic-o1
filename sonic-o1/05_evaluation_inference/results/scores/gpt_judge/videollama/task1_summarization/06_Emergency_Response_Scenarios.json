@@ -1,0 +1,349 @@
+{
+  "topic_id": 6,
+  "topic_name": "Emergency Response Scenarios",
+  "num_evaluated": 20,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.15444677835913614,
+      "rouge_l_std": 0.026451900341143496,
+      "text_similarity_mean": 0.45946509689092635,
+      "text_similarity_std": 0.10399501562398826,
+      "llm_judge_score_mean": 1.65,
+      "llm_judge_score_std": 0.9096702699330126
+    },
+    "short": {
+      "rouge_l_mean": 0.13720450461089534,
+      "rouge_l_std": 0.03157264867840804,
+      "text_similarity_mean": 0.4015477493405342,
+      "text_similarity_std": 0.13594589134887297,
+      "llm_judge_score_mean": 1.85,
+      "llm_judge_score_std": 1.0136567466356647
+    },
+    "cider": {
+      "cider_detailed": 3.613418227275014e-07,
+      "cider_short": 0.011073636408911638
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "gBhOus8Wuzk",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.15333333333333332,
+        "text_similarity": 0.6384096741676331,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes an officer holding/comforting a crying child and a media segment, but omits the core facts that the baby was choking, the dashcam traffic stop, the officer administering back blows/first aid and restoring the infant's breathing, and subsequent hospital transport; it also adds an unfounded media interview detail."
+      },
+      "short": {
+        "rouge_l": 0.15730337078651682,
+        "text_similarity": 0.5476996898651123,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only mentions an officer and child and media coverage, missing critical facts that the baby was choking, the officer administered life-saving back blows, and the child was taken to hospital; it also adds irrelevant media detail not in the core summary."
+      }
+    },
+    {
+      "video_id": "rFt3suhRtvU",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.16099071207430343,
+        "text_similarity": 0.4545914828777313,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only gives a generic visual/audio description and omits virtually all key factual content from the reference (date/location, acreage, homes lost/damaged, Red Flag conditions, command decisions, evacuation challenges, and named chiefs), even adding an irrelevant detail about a police uniform."
+      },
+      "short": {
+        "rouge_l": 0.145985401459854,
+        "text_similarity": 0.4045015275478363,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer only lists superficial visual elements (a man in uniform, aerial shots, firefighters) and omits nearly all key factual details from the correct answer\u2014acreage, homes lost/damaged, Red Flag winds, evacuations/forced entries, ICP coordination, and strategic firefighting actions\u2014so it is largely incomplete."
+      }
+    },
+    {
+      "video_id": "C-hqpGKsbss",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.12994350282485878,
+        "text_similarity": 0.4327438473701477,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes generic soldier activity and a stretcher, but omits the central context of a joint U.S.\u2013JGSDF mass casualty MEDEVAC drill, specific assets (MV-22 Ospreys, ambulances), detailed medical care, and interoperability outcomes, and it adds likely irrelevant details (gun, mountain helicopter)."
+      },
+      "short": {
+        "rouge_l": 0.13740458015267176,
+        "text_similarity": 0.3858906924724579,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures a few visual elements (soldiers loading a stretcher, wounded person, helicopter) but omits the core context (a US\u2013JGSDF mass casualty drill, MV-22 Osprey/airlift, ambulance transfers, and medical treatment details) and adds irrelevant details (a man with a gun, mountain background)."
+      }
+    },
+    {
+      "video_id": "SFR6R4dUreQ",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.13506493506493508,
+        "text_similarity": 0.5046813488006592,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the basic incident (woman dangling, police rescue, hospital transport) but omits key details about the officer's risky climb, empathetic dialogue/persuasion, and the helpline display, and it includes likely inaccurate/hallucinated elements (phone call and 'watch your step' sign)."
+      },
+      "short": {
+        "rouge_l": 0.18045112781954883,
+        "text_similarity": 0.6416414380073547,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures the basic rescue and that the woman was taken for evaluation, but it omits key facts (Lieutenant Kim climbing the precarious metal structure, risking his life, and using calm, personal rapport to persuade her) and adds a likely hallucinated detail about a man with a 'watch your step' sign."
+      }
+    },
+    {
+      "video_id": "g7PTAoiQktI",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.12962962962962962,
+        "text_similarity": 0.5197789072990417,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures a few superficial visuals (people in orange uniforms, a fire truck, a crash scene) but omits the core message: a Victoria-focused safety PSA, speaker identity and warnings about long-weekend driving, accident statistics, detailed crash imagery, CFA rescue operations, and the call to action \u2014 thus failing to reflect the video's intent and key facts."
+      },
+      "short": {
+        "rouge_l": 0.11764705882352941,
+        "text_similarity": 0.29577428102493286,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes minor visual details (a person in an orange uniform at an accident) but omits the video's main messages: warnings about long-weekend crash risk, CFA response statistics, rural rescue context, and the call to prioritize safety, making it largely incomplete."
+      }
+    },
+    {
+      "video_id": "5yVdvfRNsUQ",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.1769436997319035,
+        "text_similarity": 0.5494794845581055,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only captures a few superficial visuals (helicopter/cockpit/mountain) but omits the core content about distinct roles (pilot, air traffic controller, mechanic), their duties, quotes, and teamwork emphasis, and even includes likely inaccurate details (clock tower) not present in the reference."
+      },
+      "short": {
+        "rouge_l": 0.12800000000000003,
+        "text_similarity": 0.4716365337371826,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The predicted answer lists visual shots (helicopter, cockpit, logo) that loosely match imagery in the video but fails to convey the main semantic content: descriptions of specific aviation roles, skills, personal fulfillment, and the emphasis on teamwork and precise decision-making; key factual elements are omitted."
+      }
+    },
+    {
+      "video_id": "uBZMMLsGY5U",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.2006269592476489,
+        "text_similarity": 0.5539251565933228,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction vaguely captures a water rescue (person pulled with a rope/yellow aid) but contains several incorrect/hallucinated details (officer standing on a car/one driving, life jacket, 'yellow box', background music) and omits the central facts that five individuals were rescued and the sequence of multiple coordinated extractions."
+      },
+      "short": {
+        "rouge_l": 0.18965517241379307,
+        "text_similarity": 0.5681506395339966,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only vaguely mentions a single water rescue with a rope and even adds an unrelated 'tornado' hallucination; it omits and contradicts key facts from the correct answer (five people rescued, flotation device, red strap/yellow ladder aid, verbal instructions, and civilian assistance)."
+      }
+    },
+    {
+      "video_id": "UV8NVVsXnKs",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.12531328320802004,
+        "text_similarity": 0.41695600748062134,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only describes surface visuals (airplane, people on ground, firefighters, helicopter) and omits virtually all key factual details from the correct answer\u2014no mention of the AIREX exercise, multi-agency mass-casualty simulation, START triage procedures, color/bar-coded tagging, or the exercise's purpose and outcomes."
+      },
+      "short": {
+        "rouge_l": 0.11764705882352941,
+        "text_similarity": 0.3718692362308502,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only lists visual scenes (people, firefighters, logo) and fails to convey any of the key facts from the correct answer\u2014no mention of the AIREX exercise, START triage, triage timing, color-coded categories, or treatment areas\u2014so it is largely unrelated. "
+      }
+    },
+    {
+      "video_id": "Hm9Jasupk3k",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.13513513513513514,
+        "text_similarity": 0.5291464924812317,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only vaguely captures that arrests occur but misrepresents the setting (multiple locations) and omits key facts from the reference\u2014namely the sustained struggle to load the person into an SUV, the officers' repeated commands, the on-screen charges, and the final thank\u2014while adding inconsistent details. "
+      },
+      "short": {
+        "rouge_l": 0.10218978102189782,
+        "text_similarity": 0.4697360396385193,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly identifies an arrest and officers restraining a man, but it omits major details about the prolonged struggle to place the individual into the police SUV, the officer's verbal commands/requests for cooperation, and the on-screen charge information, while adding uncertain location details not specified in the reference."
+      }
+    },
+    {
+      "video_id": "pkiBzUdhsV0",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.4251987636089325,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes a generic arrest and placement into a police car, missing most key facts (warrants, refusal/attempted escape, physical struggle and biting, Taser warnings, property inventory, shoe search, 'juice' demand, extraction and handcuffing). It also includes unrelated/possibly hallucinated details about other people in the scene."
+      },
+      "short": {
+        "rouge_l": 0.1388888888888889,
+        "text_similarity": 0.4532662034034729,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only vaguely notes an arrest and otherwise lists unrelated scenes; it omits nearly all key facts from the correct answer (warrants, resistance/biting, property inventory including $60, requests for 'juice', shoe check, and securing in police vehicle)."
+      }
+    },
+    {
+      "video_id": "8QAyE9Ai3eE",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.13970588235294118,
+        "text_similarity": 0.31759607791900635,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only notes a girl showing a phone and an officer writing, and a police car shot, but it omits virtually all key facts from the reference (school disturbance, Micaiah's verbal/physical resistance, charges, transport to adult jail, property collection), so it is largely incomplete despite minimal overlap in subjects."
+      },
+      "short": {
+        "rouge_l": 0.1437908496732026,
+        "text_similarity": 0.308219313621521,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes a girl, a uniformed man, and a police car, which loosely matches the presence of a suspect and officers, but it omits the core facts about Micaiah's verbal and physical resistance, restraint, charging/arraignment details, and escort to jail, and even introduces an unverified detail ('arrest cam')."
+      }
+    },
+    {
+      "video_id": "Zd-Rmez7gNY",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.15950920245398773,
+        "text_similarity": 0.3942747116088867,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes generic soldiers and a truck and misses the core MASCAL exercise details\u2014casualty evacuation, medical treatment, stretchers, and medics\u2014while also adding unsupported claims (e.g., 'Special Forces'), so it is largely incorrect."
+      },
+      "short": {
+        "rouge_l": 0.07017543859649122,
+        "text_similarity": 0.19129323959350586,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only lists visual details of soldiers and equipment but omits the key facts that this is a U.S. Army MASCAL exercise in Poland focused on emergency evacuation and medical treatment, and it includes an unsupported claim (Special Forces)."
+      }
+    },
+    {
+      "video_id": "OvTcX2gdpBg",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.18461538461538463,
+        "text_similarity": 0.5469120740890503,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies a building fire in York and that it was extinguished, but it gives the wrong address, omits almost all key operational details (2nd alarm, heavy rear fire, interior attack, Captain 994, helmet-cam footage, overhaul/hot spot checks), and introduces an unsupported claim about no injuries."
+      },
+      "short": {
+        "rouge_l": 0.1111111111111111,
+        "text_similarity": 0.5977610349655151,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes a fire on Jackson St in York, PA but gives the wrong address and omits nearly all key details (2nd alarm, heavy flames/smoke, aggressive interior attack, knockdown/overhaul, helmet-cam footage, prolonged operations) while adding unverified claims (unknown cause, no injuries)."
+      }
+    },
+    {
+      "video_id": "otPeB76zpy8",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.17079889807162535,
+        "text_similarity": 0.3989970088005066,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is largely unrelated and factually incorrect: it describes scenes with trees, a gas station, and cars while omitting the central events (prayer at a work-release facility, interactions with correctional officers, refusal/coerced identification, and trespass warnings) and includes hallucinated details."
+      },
+      "short": {
+        "rouge_l": 0.1497326203208556,
+        "text_similarity": 0.2879006862640381,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction only describes incidental visual details (a man by a tree, cars, sky) and omits all key events from the reference\u2014praying on a public easement, confrontation by correctional officers, demands for ID, threats of arrest, and relocation\u2014so it fails to capture the video's substantive content."
+      }
+    },
+    {
+      "video_id": "TmFJuTuc5JY",
+      "video_number": "015",
+      "detailed": {
+        "rouge_l": 0.13654618473895583,
+        "text_similarity": 0.2267754077911377,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is entirely unrelated and omits all key facts from the correct summary (Sha'Carri Richardson, the alleged airport dispute, arrest, Miranda, search, charges, and case outcome), providing only repetitive, irrelevant descriptions of a man speaking to police."
+      },
+      "short": {
+        "rouge_l": 0.08743169398907104,
+        "text_similarity": 0.19155120849609375,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is a repetitive, generic visual description and contains none of the factual details from the correct summary (allegations, denials, arrest, charges, and case outcome), so it fails to match the correct answer."
+      }
+    },
+    {
+      "video_id": "YqMu4oI6df4",
+      "video_number": "016",
+      "detailed": {
+        "rouge_l": 0.2222222222222222,
+        "text_similarity": 0.6356893181800842,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes a nighttime scene with police and flashing lights, but it inaccurately calls it a car accident and adds unspecified emergency vehicles, while omitting key facts (wrong-side parked car, missing plate, officer interaction, possible DUI) and the likely traffic stop/investigation."
+      },
+      "short": {
+        "rouge_l": 0.1935483870967742,
+        "text_similarity": 0.5888991355895996,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures general police presence and emergency lights but omits key facts about an illegally parked car, a suspected drunk driver, and an uncooperative individual, and incorrectly asserts a car crash that the reference does not mention."
+      }
+    },
+    {
+      "video_id": "iZTYW4IhjJE",
+      "video_number": "017",
+      "detailed": {
+        "rouge_l": 0.13084112149532712,
+        "text_similarity": 0.28309890627861023,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only lists generic visual scenes of people and officers and omits nearly all key factual elements from the correct answer (injuries, who said what, medical transport, suspect's distress/suicide watch, and evidence collection), so it fails to capture the video's substantive content."
+      },
+      "short": {
+        "rouge_l": 0.11560693641618495,
+        "text_similarity": 0.2411302775144577,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only notes generic visual elements (people, officers, house, fire truck) and thus captures a minor surface aspect, but it omits all key incident details (injury, paramedics, suspect distress, hospital/suicide watch, evidence collection) and fails to reflect the video's main events."
+      }
+    },
+    {
+      "video_id": "h1kzKHi25V8",
+      "video_number": "018",
+      "detailed": {
+        "rouge_l": 0.16292134831460672,
+        "text_similarity": 0.47832009196281433,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction notes generic scene elements (police, gas station, arrests) but omits almost all key events and facts from the correct answer\u2014no traffic stop details, flight and chase, shouted 'Drop the gun!', tasing, recovered weapons/evidence, Miranda/readings, or the suspects' denials\u2014so it is largely incomplete."
+      },
+      "short": {
+        "rouge_l": 0.15384615384615385,
+        "text_similarity": 0.3964983820915222,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only lists generic scene descriptions (men in/around cars, an arrest at a gas station) and repeats them, but it omits almost all key facts from the reference\u2014fleeing during a pat\u2011down, chase, tasing, specific arrests/Miranda, weapons/evidence found, and complaints while handcuffed\u2014and includes minor inaccuracies."
+      }
+    },
+    {
+      "video_id": "m_WqcYUq7xo",
+      "video_number": "019",
+      "detailed": {
+        "rouge_l": 0.16438356164383564,
+        "text_similarity": 0.4407479465007782,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only recounts a few generic shots (woman with hands behind her back, officers assisting her into vehicles) and omits nearly all key factual elements from the reference\u2014drug use/trespass, medical complaints and agitation, cuffing/leg restraint, medics/stretcher, injuries/claims, photo, and listed charges\u2014making it largely incomplete. "
+      },
+      "short": {
+        "rouge_l": 0.13513513513513514,
+        "text_similarity": 0.2319655567407608,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures a minor visual moment (a woman restrained in a vehicle and an officer present) but omits nearly all key facts from the correct summary \u2014 substance use, bizarre behavior, cuffing on the ground, medic/stretcher transport, hospital transfer, and the listed charges."
+      }
+    },
+    {
+      "video_id": "4M5SaIGldLU",
+      "video_number": "020",
+      "detailed": {
+        "rouge_l": 0.11656441717791412,
+        "text_similarity": 0.44197922945022583,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is almost entirely unrelated to the reference: it omits the no-contact order, Tyree's presence and arrest, Ashanti's resistance and subsequent legal outcomes, and instead invents an unrelated scene about getting into a car, so it is incorrect."
+      },
+      "short": {
+        "rouge_l": 0.16853932584269662,
+        "text_similarity": 0.38556987047195435,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is completely unrelated and misses all key events from the reference (no-contact order, search refusal, Tyree and Ashanti arrests, legal outcomes), instead inventing unrelated actions about getting into a car."
+      }
+    }
+  ]
+}

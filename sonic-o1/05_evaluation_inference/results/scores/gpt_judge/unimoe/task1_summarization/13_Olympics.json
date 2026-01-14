@@ -1,0 +1,397 @@
+{
+  "topic_id": 13,
+  "topic_name": "Olympics",
+  "num_evaluated": 23,
+  "aggregated_metrics": {
+    "detailed": {
+      "rouge_l_mean": 0.18735391655239605,
+      "rouge_l_std": 0.038184911980816805,
+      "text_similarity_mean": 0.701644355836122,
+      "text_similarity_std": 0.08689252318111587,
+      "llm_judge_score_mean": 1.9565217391304348,
+      "llm_judge_score_std": 1.0825999650424987
+    },
+    "short": {
+      "rouge_l_mean": 0.1733828052312299,
+      "rouge_l_std": 0.0674755968492768,
+      "text_similarity_mean": 0.6450128529382788,
+      "text_similarity_std": 0.10593780629646578,
+      "llm_judge_score_mean": 2.0,
+      "llm_judge_score_std": 0.8846517369293828
+    },
+    "cider": {
+      "cider_detailed": 0.06407578526964927,
+      "cider_short": 0.023741009252726784
+    }
+  },
+  "per_entry_results": [
+    {
+      "video_id": "y_-6TIA4JBk",
+      "video_number": "001",
+      "detailed": {
+        "rouge_l": 0.2074468085106383,
+        "text_similarity": 0.7526552081108093,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures minor elements (green-helmeted skater and a celebratory high-five) but significantly misrepresents key facts: it reverses the start strategy, omits the lapping detail, misidentifies who stopped and who capitalized on the confusion, and contains contradictory claims about victory versus finishing second."
+      },
+      "short": {
+        "rouge_l": 0.1487603305785124,
+        "text_similarity": 0.6914969682693481,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures only that a skater won/overtook the pack but contradicts key facts (says she started slow vs an aggressive sprint), misattributes who stopped, omits the lapping and the second Chinese skater securing second, and includes hallucinated details (celebration, costume colors)."
+      }
+    },
+    {
+      "video_id": "nJcoHfx6q34",
+      "video_number": "002",
+      "detailed": {
+        "rouge_l": 0.24932249322493222,
+        "text_similarity": 0.7957157492637634,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely contradicts the reference\u2014it reverses the outcome (claims Fulham won 3-1), invents goal types and sequences (bicycle kick, deflections), and misattributes scorers/spellings; it only shares a few player names, so it is mostly incorrect and hallucinatory."
+      },
+      "short": {
+        "rouge_l": 0.1386138613861386,
+        "text_similarity": 0.7752244472503662,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "Only the final 3-1 Bournemouth win matches the reference; the prediction contains multiple factual errors and contradictions (wrong scorers/teams, invented bicycle kick, extra claims about Fulham/league position) and omits correct goal details."
+      }
+    },
+    {
+      "video_id": "ZBDVZt_opds",
+      "video_number": "003",
+      "detailed": {
+        "rouge_l": 0.1592039800995025,
+        "text_similarity": 0.5714536905288696,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes a goalless half and that goalkeepers made important saves, but it largely contradicts and fabricates details\u2014misidentifying Brentford as Brighton, misnaming keepers (e.g., 'Ryan Rait' vs Raya), and adding tactical/possession claims not in the reference\u2014so it fails to match the correct events and actors."
+      },
+      "short": {
+        "rouge_l": 0.15384615384615383,
+        "text_similarity": 0.5951818227767944,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures general themes (saves, chances, goalkeeper performances, tension) but misidentifies the opponent as Brighton instead of Brentford, omits the key fact that the match remained goalless, and fails to name the crucial keepers (Kepa and Raya)."
+      }
+    },
+    {
+      "video_id": "t5Y3aSUri_k",
+      "video_number": "004",
+      "detailed": {
+        "rouge_l": 0.2379421221864952,
+        "text_similarity": 0.7948960065841675,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the basic fixture and a few events (penalty try, Murphy and Parry scoring) but misnames several players, omits many specific tries/scoring sequence, and hallucinates a last-minute try and a 26-26 draw that contradict the reference."
+      },
+      "short": {
+        "rouge_l": 0.21052631578947367,
+        "text_similarity": 0.6160850524902344,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures a few elements (Australia's opening penalty try; Fiji scoring and some Australian try-scorers), but it omits many listed scorers, misnames players, and most critically contradicts the outcome by inventing a 26-26 draw and a last-minute try, so it is largely incorrect and incomplete."
+      }
+    },
+    {
+      "video_id": "Lsyn8G6DOO8",
+      "video_number": "005",
+      "detailed": {
+        "rouge_l": 0.18095238095238095,
+        "text_similarity": 0.5829875469207764,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While it captures a couple of correct elements (course conditions and Koepka's 78), the prediction gets the round and venue wrong, misnames many players, and fabricates leaderboard positions and other facts, making it largely inaccurate."
+      },
+      "short": {
+        "rouge_l": 0.2236024844720497,
+        "text_similarity": 0.8090465068817139,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction contains a few loose overlaps (Koepka +8, mention of no birdies) but largely contradicts and hallucinates facts\u2014wrong day references, incorrect player names and scores, and incorrect leaders\u2014so it fails to match the correct summary."
+      }
+    },
+    {
+      "video_id": "dIZiOwboF_I",
+      "video_number": "006",
+      "detailed": {
+        "rouge_l": 0.2254901960784314,
+        "text_similarity": 0.7941489219665527,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction largely contradicts the reference\u2014wrong winner and scoreline, fabricates events (e.g., a successful penalty by Japan, Australia leading), and omits key Japan plays and clutch moments; only minor elements (mentions Masters, replays, physicality) align."
+      },
+      "short": {
+        "rouge_l": 0.18181818181818182,
+        "text_similarity": 0.6910730600357056,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction vaguely references interceptions and missed opportunities but omits key events (Australian tries by Masters/Talakai, Hosokawa's try, Lori Kramer's missed penalty) and contradicts the outcome by emphasizing Australian defensive dominance; it also hallucinates a player name (Imakogi vs Otsuka)."
+      }
+    },
+    {
+      "video_id": "Qcx6NxyNfI0",
+      "video_number": "007",
+      "detailed": {
+        "rouge_l": 0.19808306709265175,
+        "text_similarity": 0.6091994047164917,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures high-level elements (two fans at the MCG, commentary, crowd reactions, emotional exit) but gets key facts wrong\u2014incorrect team names, wrong score progression and final margin, and adds/unfounded details (player statistics) that contradict the reference."
+      },
+      "short": {
+        "rouge_l": 0.07633587786259542,
+        "text_similarity": 0.6149987578392029,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only matches the mention of an emotional exit but otherwise contradicts key facts: wrong teams (Dandenongas vs Melbourne/Collingwood), incorrect scores/outcome (26-24 vs a 4-point Melbourne win), and it omits major events and players (Joel Smith, Bailey Fritsch, Brodie Grundy) described in the correct answer."
+      }
+    },
+    {
+      "video_id": "8ObB4PUAk9M",
+      "video_number": "008",
+      "detailed": {
+        "rouge_l": 0.18713450292397665,
+        "text_similarity": 0.7137302756309509,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes Portugal's victory and celebratory scenes but contains major factual errors (claims goals by Eduardo and Ronaldo, a missed penalty by Griezmann) and hallucinates events while omitting key accurate moments like Rui Patricio's saves, Griezmann's saved/header attempts, Gignac's post, and Eder's decisive long-range extra-time goal."
+      },
+      "short": {
+        "rouge_l": 0.17391304347826086,
+        "text_similarity": 0.8157035708427429,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "While it correctly states Portugal won, the prediction fabricates key facts (claims goals by Eduardo and Ronaldo, and that Griezmann missed a penalty) and omits the true decisive details such as Eder's extra-time winner and the early saves/Gignac's shot\u2014major factual contradictions."
+      }
+    },
+    {
+      "video_id": "_oQqwlCdzjA",
+      "video_number": "009",
+      "detailed": {
+        "rouge_l": 0.1877551020408163,
+        "text_similarity": 0.5658495426177979,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the general sense of an intense handball match but contains major factual errors and hallucinations: wrong scorer sequence and player names, an invented commentator, and an incorrect match outcome (predicting Bar\u00e7a win 21-16 vs. the reference describing Kiel leading 18-16). These contradictions and omissions make it largely inaccurate."
+      },
+      "short": {
+        "rouge_l": 0.2156862745098039,
+        "text_similarity": 0.47379910945892334,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction vaguely references the match and early scoring but largely contradicts and hallucinates key facts: wrong final score, wrong player attributions, and it omits the 13-13 first-half tie and Kiel's second-half 18-16 lead via Bilyk and Duvnjak."
+      }
+    },
+    {
+      "video_id": "ibOXvXVxbQY",
+      "video_number": "010",
+      "detailed": {
+        "rouge_l": 0.1825726141078838,
+        "text_similarity": 0.7841896414756775,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction captures the general theme (handball match, dynamic play, Brazil winning, goalkeeper saves) but contains major factual errors and omissions\u2014wrong jersey colors, falsely describes the game as close with Argentina leading at times, omits the correct final score (Argentina 22\u2013Brazil 31), and adds unsupported details (crowd reactions, referee color)."
+      },
+      "short": {
+        "rouge_l": 0.12307692307692307,
+        "text_similarity": 0.6358027458190918,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly notes Brazil taking control and strong offensive play, but it introduces unsupported detail (Argentina led initially), omits the goalkeeper's critical saves, and wrongly characterizes the result as a close match rather than the clear 31-22 lead stated in the correct answer."
+      }
+    },
+    {
+      "video_id": "_NnIZfVwlYQ",
+      "video_number": "011",
+      "detailed": {
+        "rouge_l": 0.18666666666666668,
+        "text_similarity": 0.8350675106048584,
+        "llm_judge_score": 5,
+        "llm_judge_justification": "The prediction correctly conveys Jo\u00e3o F\u00e9lix's standout impact and that he scored an important goal, but it omits the notable acrobatic overhead\u2011kick moment and introduces several unverified/hallucinated details (a penalty, a 'first goal', interviews, stats, managerial discussion) that are not in the reference."
+      },
+      "short": {
+        "rouge_l": 0.28571428571428575,
+        "text_similarity": 0.8047417998313904,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction is vague and includes unrelated items (possession, interviews, qualification) while omitting key facts from the reference\u2014notably the acrobatic near-miss, F\u00e9lix winning free kicks/creating chances, and explicit mention of his equalizing second goal."
+      }
+    },
+    {
+      "video_id": "5gP5DfJuycw",
+      "video_number": "012",
+      "detailed": {
+        "rouge_l": 0.14782608695652172,
+        "text_similarity": 0.6780050992965698,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction vaguely identifies an NFL highlight compilation and mentions Cooper Kupp and general athleticism, but it introduces many incorrect or unmentioned players/plays (e.g., DeAndre Hopkins, J.K. Dobbins, Mahomes, Amari Cooper) and omits key specific juke/evade examples (Zay Flowers, Tua, Odell, Clyde Edwards-Helaire, Jalen Hurts, Saquon, Dalvin) from the reference, so it is largely inaccurate and incomplete."
+      },
+      "short": {
+        "rouge_l": 0.11627906976744186,
+        "text_similarity": 0.6276183128356934,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only vaguely matches one item (Cooper Kupp) but fails to capture the video's core theme of ankle\u2011breaking juke moves and omits key highlights (Zay Flowers, Jalen Hurts), while adding unrelated or hallucinated plays and a subscription prompt."
+      }
+    },
+    {
+      "video_id": "cjl592TFVhE",
+      "video_number": "013",
+      "detailed": {
+        "rouge_l": 0.16909620991253643,
+        "text_similarity": 0.7184153199195862,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures high-level themes (Canelo's tactics, body shots, conditioning, decisive finish) but omits many key factual details from the correct answer\u2014specific knockdown events and rounds, the third-round KO time, fighter introductions/weights/attire, referee and Michael Buffer announcement, and post-fight celebration\u2014so it's only a partial match."
+      },
+      "short": {
+        "rouge_l": 0.14545454545454545,
+        "text_similarity": 0.5166722536087036,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction highlights Canelo's punches and technical skills (matching mentions of body shots/uppercuts) but omits key facts about the fight timeline, opponent, knockdown/knockout, announcer, and celebration, making it incomplete and not a faithful summary."
+      }
+    },
+    {
+      "video_id": "nBnkRgkSFSg",
+      "video_number": "014",
+      "detailed": {
+        "rouge_l": 0.16309012875536483,
+        "text_similarity": 0.6892299056053162,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The predicted answer largely fabricates and contradicts events (invented late goals, false final score, and a handball incident) while omitting key details from the correct summary; it only correctly notes the teams and Salah's equalizer, so it is almost entirely incorrect."
+      },
+      "short": {
+        "rouge_l": 0.12307692307692307,
+        "text_similarity": 0.5788615942001343,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction only vaguely matches one event (Salah's equalizer) but misspells/omits the early Rodrigo goal context, ignores Aaronson's crossbar and Nunez's saved shot, and adds hallucinated items (handball controversy, 'Leeds' late goals', 2-2 draw) that contradict the reference."
+      }
+    },
+    {
+      "video_id": "KEw_Fzbk1Mw",
+      "video_number": "015",
+      "detailed": {
+        "rouge_l": 0.1958762886597938,
+        "text_similarity": 0.8054736852645874,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction is largely fabricated and contradicts the reference on key facts\u2014wrong final score, incorrect scorers and goal times, invented own goals and statistics, and incorrect managerial attribution\u2014so it does not match the correct summary."
+      },
+      "short": {
+        "rouge_l": 0.1388888888888889,
+        "text_similarity": 0.6129037737846375,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly conveys Brighton's dominance and mentions Welbeck, but it wrongly states the final score (5-0 vs 4-0), invents and duplicates scorers (De Ligt own goals) and adds fabricated stats, so it contradicts and omits key factual elements from the reference."
+      }
+    },
+    {
+      "video_id": "sVXsLrOUIYs",
+      "video_number": "016",
+      "detailed": {
+        "rouge_l": 0.13559322033898305,
+        "text_similarity": 0.7141895890235901,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction contains multiple factual errors and hallucinations (reverses who scored early, misattributes the penalty and the match winner, invents players and events) and thus fails to accurately reflect the correct summary."
+      },
+      "short": {
+        "rouge_l": 0.1846153846153846,
+        "text_similarity": 0.6321171522140503,
+        "llm_judge_score": 1,
+        "llm_judge_justification": "The prediction contradicts key facts (reverses the scorer and winner, claims the penalty was awarded to Fulham and that Fulham won 2-1) and adds hallucinated details; only the notion that West Ham scored aligns with the reference."
+      }
+    },
+    {
+      "video_id": "aN_NOATBmFk",
+      "video_number": "017",
+      "detailed": {
+        "rouge_l": 0.1702127659574468,
+        "text_similarity": 0.7883620858192444,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction matches the final outcome and general tone (Fiji beating Samoa 31-24) but contradicts and omits many key factual details from the reference (wrong halftime score, missing sequence of tries and cards) and introduces likely hallucinated player names and events, reducing factual accuracy and completeness."
+      },
+      "short": {
+        "rouge_l": 0.15483870967741936,
+        "text_similarity": 0.7490067481994629,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction matches only the outcome (Fiji win 31-24) and that Fiji scored early, but omits major events (Samoa's comeback to lead, penalties, yellow card, charge-down, disallowed lineout, last-second try by Vitallina Marini) and includes incorrect/unclear player details and sequence errors."
+      }
+    },
+    {
+      "video_id": "ahbuY9nTyfs",
+      "video_number": "018",
+      "detailed": {
+        "rouge_l": 0.1827956989247312,
+        "text_similarity": 0.5570603013038635,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction correctly captures the road-trip and match/landscape scenes, but it omits the central focus on Eddie Betts (his goals, marks, and signing for children), misidentifies participants/locations, and adds unsupported behind-the-scenes and call-to-action details."
+      },
+      "short": {
+        "rouge_l": 0.19672131147540986,
+        "text_similarity": 0.44588273763656616,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the trip and game attendance and vaguely references fan interactions, but it omits the central facts that Eddie Betts starred\u2014scoring goals and signing autographs for children\u2014and introduces unrelated items (production discussion, future plans) not in the correct answer."
+      }
+    },
+    {
+      "video_id": "__LhyCcUvhQ",
+      "video_number": "019",
+      "detailed": {
+        "rouge_l": 0.15966386554621848,
+        "text_similarity": 0.6470624208450317,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction vaguely captures goalkeeper saves and match intensity but introduces hallucinatory events (a goal by 'Nana Barazwa', invented player names) and incorrectly states the final 0-0, while omitting key factual details from the reference (Leno's early save, Mitrovic's yellow, specific Everton chances), so it is largely inaccurate."
+      },
+      "short": {
+        "rouge_l": 0.20512820512820512,
+        "text_similarity": 0.7088968753814697,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly notes Pickford's saves and missed chances/0-0, but it hallucinates a Fulham goal, misstates Mitrovic's event (saying a close miss instead of a yellow card), and omits the key detail of Demarai Gray's shot saved by Leno, making it largely inaccurate."
+      }
+    },
+    {
+      "video_id": "Dc-aD5F7hiM",
+      "video_number": "020",
+      "detailed": {
+        "rouge_l": 0.1694915254237288,
+        "text_similarity": 0.746293306350708,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The prediction contradicts core facts (wrong opponent: Valencia vs Villarreal), fabricates multiple goals/scoreline and events that did not occur, and omits the key pre-match and defensive actions described in the correct answer."
+      },
+      "short": {
+        "rouge_l": 0.13333333333333333,
+        "text_similarity": 0.6199613809585571,
+        "llm_judge_score": 0,
+        "llm_judge_justification": "The predicted answer is completely incorrect and mismatched: it describes a different fixture (Manchester United vs Valencia), a 3-0 outcome with specific goal scorers and events that contradict and hallucinate compared to the correct summary of a scoreless first half between Manchester United and Villarreal."
+      }
+    },
+    {
+      "video_id": "X52JPDIfJYk",
+      "video_number": "021",
+      "detailed": {
+        "rouge_l": 0.09868421052631579,
+        "text_similarity": 0.5865356922149658,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the video as an NFL highlights compilation emphasizing tackles and physical play, but it misidentifies key players, omits virtually all specific plays from the reference, and introduces hallucinated topics (fan experience) not present in the ground truth."
+      },
+      "short": {
+        "rouge_l": 0.13114754098360656,
+        "text_similarity": 0.4989643692970276,
+        "llm_judge_score": 4,
+        "llm_judge_justification": "The prediction captures high-level themes (plays, tackles, defensive moments, physicality) but omits most key specifics from the reference (named players, specific big hits, fumbles, and game incidents) and adds unrelated elements like fan engagement."
+      }
+    },
+    {
+      "video_id": "ZsECVscljqY",
+      "video_number": "022",
+      "detailed": {
+        "rouge_l": 0.2631578947368421,
+        "text_similarity": 0.74600750207901,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the teams and Stuart Armstrong's 64th-minute goal, but it contains major factual errors (misstating Ben White as a 24th-minute goalscorer, claiming Southampton's victory) and omits key details from the correct answer (Xhaka's 10th-minute goal assisted by Ben White and Gabriel Jesus's chances), thus significantly contradicting the reference."
+      },
+      "short": {
+        "rouge_l": 0.40963855421686746,
+        "text_similarity": 0.7663891315460205,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "The prediction correctly identifies the teams and Armstrong's 64th-minute goal and roughly notes Xhaka's early goal, but it incorrectly states Ben White scored in the 24th minute, misreports the timing of Xhaka's goal, and falsely claims Southampton won 2-1, contradicting the reference's 1-1 result."
+      }
+    },
+    {
+      "video_id": "Y4hkgiCIgmc",
+      "video_number": "023",
+      "detailed": {
+        "rouge_l": 0.2510822510822511,
+        "text_similarity": 0.661291778087616,
+        "llm_judge_score": 2,
+        "llm_judge_justification": "While the prediction matches the video's general high-energy atmosphere and highlights, it contradicts critical facts (wrong final score and incorrect lead progression), omits central outcomes from the reference, and adds likely hallucinated specifics, making it largely inaccurate."
+      },
+      "short": {
+        "rouge_l": 0.1167883211678832,
+        "text_similarity": 0.5548674464225769,
+        "llm_judge_score": 3,
+        "llm_judge_justification": "The prediction captures the fast-paced, high-energy back-and-forth nature and mentions goals and defensive plays, but it contains contradictory and incorrect scoring (final score 18-24 vs correct 33-31), omits key details about goalkeeper saves and Flensburg extending their lead, and thus is factually inaccurate and incomplete."
+      }
+    }
+  ]
+}
