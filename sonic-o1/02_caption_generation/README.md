@@ -1,4 +1,12 @@
-# WhisperX Caption Generation Setup
+# Caption Generation with WhisperX
+
+This directory handles automatic caption generation for videos that don't have captions available from YouTube. It uses WhisperX for high-quality transcription with word-level timestamps.
+
+## Prerequisites
+
+Before running this step, you must have completed the data curation step (see [01_data_curation](../01_data_curation/)):
+- Downloaded videos and audio files in `dataset/videos/` and `dataset/audios/`
+- Generated `needs_whisper.txt` files listing audio files requiring transcription
 
 ## Installation
 
@@ -12,13 +20,13 @@ cd ffmpeg-6.0
 
 # Configure and build
 export TMPDIR=~/scratch
-./configure --prefix=/projects/aixpert/users/ahmadradw/.local --enable-shared --disable-static --disable-x86asm
+./configure --prefix=../.local --enable-shared --disable-static --disable-x86asm
 make -j4
 make install
 
 # Add to environment permanently
-echo 'export PKG_CONFIG_PATH=/projects/aixpert/users/ahmadradw/.local/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
-echo 'export LD_LIBRARY_PATH=/projects/aixpert/users/ahmadradw/.local/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
+echo 'export PKG_CONFIG_PATH=../.local/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=../.local/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -42,8 +50,8 @@ echo 'export NLTK_DATA=~/scratch/nltk_data' >> ~/.bashrc
 
 ### 3. Install WhisperX with uv pip (bypasses dependency issues)
 ```bash
-# Navigate to your project
-cd /projects/aixpert/users/ahmadradw/VideoQA-Agentic
+# Navigate to working directory (note: sonic-o1/sonic-o1)
+cd /path/to/sonic-o1/sonic-o1
 
 # Activate environment
 source .venv/bin/activate
@@ -89,6 +97,27 @@ python -c "import whisperx; print('WhisperX works')"
 python -c "import torch; print(f'cuDNN version: {torch.backends.cudnn.version()}')"
 ```
 
+## Configuration
+
+Edit [config_whisper.yaml](config_whisper.yaml) to customize:
+- Model settings (model size, device, language)
+- Dataset paths
+- Specific topics to process
+- Output format options
+
+### Key Configuration Options
+
+```yaml
+model:
+  name: "large-v2"        # Model size: tiny, base, small, medium, large-v2, large-v3
+  device: "cuda"          # cuda or cpu
+  language: "en"          # Force English (recommended to avoid misdetection)
+
+dataset:
+  root: "dataset"         # Path to dataset directory from 01_data_curation
+  topics: []              # Leave empty to process all, or specify topics
+```
+
 ## Usage
 
 ### Request GPU node (SLURM) and ensure code running
@@ -106,37 +135,31 @@ export TORCH_HOME=~/scratch/.torch
 export NLTK_DATA=~/scratch/nltk_data
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(python -c "import nvidia.cudnn; print(nvidia.cudnn.__path__[0])")/lib
 
-cd VideoAudioRepDataset
+# 4. Navigate to caption generation directory
+cd /path/to/sonic-o1/sonic-o1/02_caption_generation
 ```
 
 ### Process All Topics
 ```bash
-python process_whisper_captions.py --dataset-root .
+python whisper_captionGen.py
 ```
 
 ### Process Specific Topics
+Edit [config_whisper.yaml](config_whisper.yaml) to specify topics:
+```yaml
+dataset:
+  topics:
+    - 01_Patient-Doctor_Consultations
+    - 02_Job_Interviews
+```
+Then run:
 ```bash
-python process_whisper_captions.py \
-    --dataset-root . \
-    --topics 01_Patient-Doctor_Consultations 02_Job_Interviews
+python whisper_captionGen.py
 ```
 
-### Choose Different Model Size
+### Use Different Configuration File
 ```bash
-# Faster but less accurate
-python process_whisper_captions.py --model base
-
-# Most accurate (default)
-python process_whisper_captions.py --model large-v2
-
-# Even newer model
-python process_whisper_captions.py --model large-v3
-```
-
-### Force English language (recommended)
-```bash
-# Add language='en' in the script to avoid misdetection
-python process_whisper_captions.py --model large-v2
+python whisper_captionGen.py --config my_config.yaml
 ```
 
 ## Model Size Comparison
@@ -224,21 +247,21 @@ python -c "import nltk; nltk.download('punkt_tab', download_dir='~/scratch/nltk_
 
 **Problem**: Detects Welsh (cy) instead of English
 
-**Solution**: Add `language='en'` to transcribe call in script:
-```python
-result = model.transcribe(audio, batch_size=16, language='en')
+**Solution**: Set language in [config_whisper.yaml](config_whisper.yaml):
+```yaml
+model:
+  language: "en"
 ```
 
 ### 6. CUDA Out of Memory
 
 **Problem**: `CUDA out of memory`
 
-**Solution**:
-```bash
-# Use smaller model
-python process_whisper_captions.py --model base
-
-# Or use int8 compute (modify script: compute_type="int8")
+**Solution**: Use smaller model or int8 compute in [config_whisper.yaml](config_whisper.yaml):
+```yaml
+model:
+  name: "base"              # Use smaller model
+  compute_type: "int8"      # Use int8 for less memory
 ```
 
 ### 7. PyTorch version conflicts
@@ -258,22 +281,24 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## Quality Verification
 
-Compare generated captions with your existing ones:
+After processing, verify the generated captions:
 ```bash
-# View existing caption
-cat dataset/captions/01_Patient-Doctor_Consultations/caption_020.srt
+# View generated caption
+cat dataset/captions/01_Patient-Doctor_Consultations/caption_001.srt
 
-# Test on single file
-python whisper_test.py
+# Check how many captions were generated
+ls dataset/captions/01_Patient-Doctor_Consultations/caption_*.srt | wc -l
 ```
+
+The script automatically skips videos that already have captions (controlled by `skip_existing` in config).
 
 ## Environment Variables Summary
 
 Add these to your `~/.bashrc` for permanent setup:
 ```bash
 # FFmpeg
-export PKG_CONFIG_PATH=/projects/aixpert/users/ahmadradw/.local/lib/pkgconfig:$PKG_CONFIG_PATH
-export LD_LIBRARY_PATH=/projects/aixpert/users/ahmadradw/.local/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=../.local/lib/pkgconfig:$PKG_CONFIG_PATH
+export LD_LIBRARY_PATH=../.local/lib:$LD_LIBRARY_PATH
 
 # Cache directories (avoid disk quota)
 export UV_CACHE_DIR=~/scratch/.uv_cache

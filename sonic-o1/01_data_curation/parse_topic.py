@@ -1,3 +1,27 @@
+"""
+Topic Parsing and Video Download Script
+
+IMPORTANT PREREQUISITE:
+Before running this script, you MUST:
+
+1. Create a 'videos_QualityAnnotated' directory in your base directory
+2. Structure it following the template in ../huggingface_review_template/
+3. Manually review and quality-annotate metadata from youtube_metadata_scraper.py output
+4. Ensure each video in the metadata has a 'Qualitylabel' field set to "Good" for videos
+   that should be included in the final dataset
+
+This script filters videos based on:
+- Qualitylabel == "Good"
+- copyright_notice == "creativeCommon"
+- Language: English (default_language or default_audio_language)
+
+The script will:
+- Load metadata from videos_QualityAnnotated/<topic_name>/<topic_name>_metadata.json
+- Download filtered videos, extract audio, and download captions
+- Create a balanced dataset across demographics and durations
+- Track videos needing Whisper transcription in needs_whisper.txt files
+"""
+
 import json
 import os
 import subprocess
@@ -543,9 +567,24 @@ if __name__ == "__main__":
     
     # Create processor
     processor = VideoDatasetProcessor(base_dir, max_count=MAX_COUNT)
-    
+
     # Path to videos_QualityAnnotated directory (must be created from user)
     quality_annotated_dir = os.path.join(base_dir, "videos_QualityAnnotated")
+
+    # CRITICAL CHECK: Ensure videos_QualityAnnotated directory exists
+    if not os.path.exists(quality_annotated_dir):
+        print(f"\n{'='*60}")
+        print("ERROR: videos_QualityAnnotated directory not found!")
+        print(f"{'='*60}")
+        print(f"\nExpected location: {quality_annotated_dir}")
+        print("\nBEFORE RUNNING THIS SCRIPT, YOU MUST:")
+        print("1. Create the 'videos_QualityAnnotated' directory")
+        print("2. Review metadata from youtube_metadata_scraper.py output")
+        print("3. Add 'Qualitylabel' field to videos you want to include")
+        print("4. Structure it following ../huggingface_review_template/")
+        print("\nSee README.md for detailed instructions.")
+        print(f"{'='*60}\n")
+        sys.exit(1)
     
     # Get all topic directories
     topic_dirs = sorted([d for d in os.listdir(quality_annotated_dir) 

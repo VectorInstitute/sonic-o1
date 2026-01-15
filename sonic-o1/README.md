@@ -24,13 +24,20 @@ Each stage is self-contained with its own configuration, scripts, and documentat
 
 This repository contains the **pipeline code only**. Dataset and annotations are available separately on HuggingFace.
 
+**Important:** After cloning, you'll have a nested structure: `sonic-o1/sonic-o1/`
+- First `sonic-o1/` - The git repository root
+- Second `sonic-o1/` - The working directory containing all pipeline code
+
 ```
-sonic-o1/
-├── 01_data_curation/              # YouTube video collection and filtering
-├── 02_caption_generation/         # WhisperX-based transcription
-├── 03_demographics_annotation/    # Character demographics extraction
-├── 04_vqa_generation/             # Multi-task VQA generation
-└── 05_evaluation_inference/       # Model evaluation framework
+sonic-o1/                          # Git repository root
+└── sonic-o1/                      # Working directory (cd here to run commands)
+    ├── 01_data_curation/          # YouTube video collection and filtering
+    ├── 02_caption_generation/     # WhisperX-based transcription
+    ├── 03_demographics_annotation/# Character demographics extraction
+    ├── 04_vqa_generation/         # Multi-task VQA generation
+    ├── 05_evaluation_inference/   # Model evaluation framework
+    ├── dataset/                   # Downloaded from HuggingFace
+    └── vqa/                       # Downloaded from HuggingFace
 ```
 
 **Note:** The following directories are NOT included in this repository and should be downloaded from HuggingFace:
@@ -53,7 +60,9 @@ sonic-o1/
 ```bash
 # Clone the repository
 git clone https://github.com/VectorInstitute/sonic-o1.git
-cd sonic-o1/sonic-o1  # Navigate into the inner sonic-o1 directory
+
+# Navigate to working directory (note the nested structure)
+cd sonic-o1/sonic-o1
 
 # Download dataset and VQA annotations from HuggingFace
 # Using huggingface-cli (recommended)
@@ -223,8 +232,9 @@ python run_evaluation.py \
 **Supported Models:**
 - VideoLLaMA2
 - VITA
+- Gemini
+- GPT
 - Uni-MoE variants
-- Claude Sonnet (via API)
 - Custom model integration
 
 **Metrics:**
@@ -335,9 +345,11 @@ If you just want to evaluate models on the dataset:
 ```bash
 # 1. Clone this repository
 git clone https://github.com/VectorInstitute/sonic-o1.git
-cd sonic-o1/sonic-o1  # Navigate to inner directory
 
-# 2. Download dataset from HuggingFace
+# 2. Navigate to working directory
+cd sonic-o1/sonic-o1
+
+# 3. Download dataset from HuggingFace
 pip install huggingface_hub
 huggingface-cli download vector-institute/sonic-o1 --repo-type dataset --local-dir ./
 
