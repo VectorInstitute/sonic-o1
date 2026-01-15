@@ -4,7 +4,7 @@ A comprehensive pipeline for creating and evaluating video question answering (V
 
 ## Overview
 
-Sonic-O1 provides a systematic approach to building high-quality VQA datasets across 13+ real-world topics including healthcare consultations, job interviews, emergency scenarios, and more. The pipeline leverages state-of-the-art language models (Claude, GPT-4) to generate three types of VQA tasks:
+Sonic-O1 provides a systematic approach to building high-quality VQA datasets across 13+ real-world topics including healthcare consultations, job interviews, emergency scenarios, and more. The pipeline leverages state-of-the-art language models (Gemini, GPT-4) to generate three types of VQA tasks:
 
 - **Task 1**: Video Summarization (short & detailed summaries with temporal timelines)
 - **Task 2**: Multiple Choice Questions (MCQs with distractors)
@@ -195,7 +195,7 @@ See [03_demographics_annotation/README.md](03_demographics_annotation/README.md)
 
 ### 04: VQA Generation
 
-Generates three types of VQA tasks using agentic workflows with Claude/GPT-4.
+Generates three types of VQA tasks using agentic workflows with Gemini
 
 ```bash
 cd 04_vqa_generation
