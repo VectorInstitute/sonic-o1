@@ -487,7 +487,7 @@ def merge_entries_keep_good(existing_entries: List[Dict], new_entries: List[Dict
 def main():
     """Main entry point"""
     parser = argparse.ArgumentParser(description='VQA Generation System')
-    parser.add_argument('--config', type=str, default='config/vqa_config.yaml',
+    parser.add_argument('--config', type=str, default='04_vqa_generation/config/vqa_config.yaml',
                        help='Path to configuration file')
     parser.add_argument('--topics', type=str, default=None,
                        help='Comma-separated topic IDs (e.g., "1,2,3")')
