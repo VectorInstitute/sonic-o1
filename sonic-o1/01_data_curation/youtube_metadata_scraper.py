@@ -60,7 +60,7 @@ def load_config(config_path: str = None) -> Dict:
 CONFIG = load_config()
 
 if CONFIG:
-    API_KEY = os.environ['YT_SCRAP_API3']
+    API_KEY = os.environ['YT_SCRAP_API']
     BASE_DIR = CONFIG['directories']['base_dir']
     VIDEOS_DIR = os.path.join(BASE_DIR, CONFIG['directories']['videos_dir'])
 else:

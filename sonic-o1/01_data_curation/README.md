@@ -36,7 +36,7 @@ All required Python packages are already included in the project's [requirements
 1. Get a YouTube Data API v3 key from [Google Cloud Console](https://console.cloud.google.com/)
 2. Create a `.env` file in this directory:
 ```bash
-YT_SCRAP_API3=your_youtube_api_key_here
+YT_SCRAP_API=your_youtube_api_key_here
 ```
 
 ### Configuration
