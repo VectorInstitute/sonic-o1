@@ -1,0 +1,155 @@
+# VQA Generation Configuration
+# Gemini API Settings
+gemini:
+  api_key: "${GEMINI_API_KEY}"  # Set via environment variable
+  model_name: "gemini-2.5-flash"
+  temperature: 0.3
+  retry_attempts: 3
+  retry_delay: 20  # Base delay in seconds (will use exponential backoff)
+  file_processing_timeout: 7200  # 2 hours for large files
+  max_output_tokens: 2048
+  
+# Video Processing Settings
+video:
+  # Segment duration settings per task
+  summarization_segment_duration: 600  # 10 minutes for summarization (will be merged)
+  mcq_segment_duration: 180  # 3 minutes for MCQ (each treated independently)
+  temporal_localization_segment_duration: 180  # 3 minutes for temporal localization
+  segment_overlap: 30  # Overlap between segments in seconds (30 sec)
+  
+# File size thresholds for processing strategy
+file_processing:
+  inline_threshold_mb: 20  # Files >20MB use File API
+  max_transcript_length: 25000  # characters
+
+# Rate Limiting (CRITICAL for avoiding 429 errors)
+rate_limit:
+  delay_between_videos: 45  # seconds to wait between processing videos
+  delay_after_segment: 10  # seconds to wait after processing each segment
+  delay_after_long_video: 90  # extra seconds after videos > 30 minutes
+  long_video_threshold: 1800  # seconds (30 minutes)
+  delay_after_api_call: 15  # seconds to wait after each Gemini call
+  max_retries_on_rate_limit: 5  # retry attempts for rate limit errors
+  rate_limit_backoff_multiplier: 2  # exponential backoff multiplier
+
+# Task 1: Summarization Settings
+summarization:
+  constraints:
+    max_words_detailed: 300
+    max_words_segment: 120
+    timeline_items_min: 5
+    timeline_items_max: 12
+    glossary_items_min: 5
+    glossary_items_max: 12
+    summary_short_bullets: 5
+
+# Task 2: MCQ Settings
+mcq:
+  num_options: 5  # Always 5 options (4 + "Not enough evidence")
+  questions_per_segment: 1  # How many MCQs per segment
+  
+  # Controlled vocabulary for evidence tags
+  evidence_tags:
+    - signage
+    - uniforms
+    - lanyards
+    - whiteboard
+    - computers
+    - desks
+    - cash_register
+    - beds
+    - medical_monitors
+    - altar
+    - pews
+    - shelves
+    - shopping_carts
+    - menus
+    - stage
+    - spotlights
+    - microphone
+    - blackboard
+    - projector
+    - kitchen_appliances
+    - stove
+    - sink
+    - fridge
+    - transport_seats
+    - overhead_bins
+    - train_doors
+    - night_sky
+    - rain
+    - snow
+    - sunlight
+    - crowd_cheering
+    - sirens
+    - police_lights
+  
+# Task 3: Temporal Localization Settings
+temporal_localization:
+  questions_per_segment: 3  # Number of temporal questions per 3-min segment
+  
+  # Temporal relation distribution (optional - for balanced generation)
+  temporal_relations:
+    after: 0.25  # 25% of questions use "after" relation
+    once_finished: 0.25  # 25% use "once_finished"
+    next: 0.20  # 20% use "next"
+    during: 0.15  # 15% use "during"
+    before: 0.15  # 15% use "before" 
+  
+  # Minimum confidence for temporal localization
+  min_confidence: 0.5
+  
+  # Abstention threshold (if confidence below this, consider abstaining)
+  abstention_threshold: 0.3
+  judge_enabled: true  # Enable GPT-4V validation
+  judge_model: "gpt-4o"  # OpenAI model: "gpt-4o", "gpt-4-turbo", or "gpt-4-vision-preview"
+  judge_frame_count: 48  # Number of frames to sample for validation
+  judge_frame_strategy: "uniform"  # Frame sampling: "uniform", "keyframes", or "adaptive"
+  max_timestamp_deviation: 30.0  # Max seconds allowed for timestamp corrections
+
+# Demographics Settings
+demographics:
+  # Keep original categories from metadata
+  categories:
+    race:
+      - White
+      - Black
+      - Asian
+      - Indigenous
+      - Arab
+      - Hispanic
+    gender:
+      - Male
+      - Female
+    age:
+      - "Young (18-24)"
+      - "Middle (25-39)"
+      - "Older adults (40+)"
+    language:
+      - English
+      - Hindi
+      - Arabic
+      - Spanish
+      - Chinese
+  
+  # Minimum confidence for demographics (0-1)
+  min_confidence: 0.6
+# Dataset Paths
+paths:
+  dataset_root: "dataset"
+  metadata_file: "metadata_enhanced.json"
+  videos_dir: "videos"
+  audios_dir: "audios"
+  captions_dir: "captions"
+  output_dir: "vqa"
+
+# Processing Options
+processing:
+  save_raw_responses: true  # Save raw Gemini responses for debugging
+  skip_existing: true  # Skip videos that already have VQA generated
+  parallel_processing: false  # Set to true for faster processing (careful with API limits)
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_file: "vqa_generation.log"
