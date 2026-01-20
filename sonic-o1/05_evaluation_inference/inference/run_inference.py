@@ -255,7 +255,7 @@ class InferenceRunner:
             response = response[start:end+1]
         
         return response
-        
+            
     def _generate_with_retry(
             self,
             video_path: Path,
@@ -268,24 +268,27 @@ class InferenceRunner:
             """Generate response with retry logic, JSON parsing, and validation"""
             if topic_name:
                 self.current_topic_name = topic_name
-
+            
             # Apply model capability filters
             supports_video = self.model_config.get('supports_video', True)
             supports_audio = self.model_config.get('supports_audio', True)
+            use_captions = self.model_config.get('use_captions', False)
             
+            # For video/audio inputs to the model
             actual_video_path = video_path if supports_video else None
             actual_audio_path = audio_path if supports_audio else None
+            
+            # IMPORTANT: Keep original video_path for caption discovery
+            # even if model doesn't use video frames
             
             max_attempts = self.retry_config['max_attempts']
             
             # Determine retry strategy from config
-            # Models specify their retry strategy type in config
             retry_strategy = self.model_config.get('retry_strategy', 'auto')
             
             # Auto-detect strategy if not explicitly set
             if retry_strategy == 'auto':
                 is_api_model = 'api_key_env' in self.model_config
-                # API models default to 'fps', local models default to 'frame_count'
                 retry_strategy = 'fps' if is_api_model else 'frame_count'
             
             # Get fallback options based on strategy
@@ -324,11 +327,15 @@ class InferenceRunner:
                         max_frames = frame_options[min(attempt, len(frame_options) - 1)]
                         max_caption_chunks = caption_options[min(attempt, len(caption_options) - 1)]
                         
-                        # Discover caption path for GPT-4o (needs topic context)
+                        # Discover caption path for GPT-4o
                         caption_path = None
-                        if self.model_config.get('use_captions', False) and actual_video_path:
-                            # topic_name needs to be passed to this method - see Step 3
-                            caption_path = self._get_caption_path_for_video(actual_video_path, self.current_topic_name)
+                        if use_captions and video_path:
+                            caption_path = self._get_caption_path_for_video(video_path, self.current_topic_name)
+                            
+                            if caption_path:
+                                logger.info(f"Discovered caption path: {caption_path}")
+                            else:
+                                logger.warning(f"Could not discover caption path for {video_path}")
                         
                         preprocessing = {
                             'max_frames': max_frames,
@@ -341,8 +348,10 @@ class InferenceRunner:
                         logger.info(f"Attempt {attempt + 1}/{max_attempts}: max_frames={max_frames}, max_caption_chunks={max_caption_chunks}")
                         
                         start_time = time.time()
+                        
+                        # Model will handle whether to use it for frames based on supports_video
                         response = self.model.generate(
-                            frames=str(actual_video_path) if actual_video_path else None,
+                            frames=str(video_path) if video_path else None,  # ← Pass video_path, not actual_video_path
                             audio=str(actual_audio_path) if actual_audio_path else None,
                             prompt=prompt,
                             max_frames=max_frames,

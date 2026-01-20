@@ -433,7 +433,7 @@ class Phi4(BaseModel):
             # Check for OOM
             if "out of memory" in error_msg.lower() or "CUDA out of memory" in error_msg:
                 logger.error(f"OOM error: {error_msg[:200]}...")
-                self._clear_memory
+                self._clear_memory()
                 if torch.cuda.is_available():
                     torch.cuda.empty_cache()
                 raise RuntimeError(f"Out of memory: {e}")

@@ -62,7 +62,7 @@ def run_inference(
     
     cmd = [
         sys.executable,
-        "inference/run_inference.py",
+        "05_evaluation_inference/inference/run_inference.py",
         "--model", model,
         "--tasks", *full_task_names,  # Use full names
         "--topics", *topics,
@@ -119,7 +119,7 @@ def run_metrics(
     
     cmd = [
         sys.executable,
-        "metrics/compute_metrics.py",
+        "05_evaluation_inference/metrics/compute_metrics.py",
         "--model", model,
         "--tasks", *tasks,
         "--topics", *topics,
@@ -187,7 +187,7 @@ def main():
     parser.add_argument(
         "--config",
         type=str,
-        default="configs/models_config.yaml",
+        default="05_evaluation_inference/configs/models_config.yaml",
         help="Path to models configuration file"
     )
     parser.add_argument(
