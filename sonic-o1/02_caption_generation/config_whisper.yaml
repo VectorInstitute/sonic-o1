@@ -1,0 +1,29 @@
+# WhisperX Configuration for Caption Generation
+
+# Dataset paths
+dataset:
+  root: "dataset"
+  # Specific topics to process (leave empty to process all)
+  topics: []
+  # Example:
+  # topics:
+  #   - 01_Patient-Doctor_Consultations
+  #   - 02_Job_Interviews
+
+# Model settings
+model:
+  name: "large-v2"  # Options: tiny, base, small, medium, large-v2, large-v3
+  device: "cuda"    # Options: cuda, cpu
+  compute_type: "float16"  # Options: float16, int8 (GPU) or float32 (CPU)
+  language: "en"    # Force language (en for English, or null for auto-detect)
+  batch_size: 16
+
+# Output settings
+output:
+  save_json: true   # Save detailed JSON alongside SRT
+  max_chars_per_line: 42  # YouTube-style line breaking
+
+# Processing options
+processing:
+  skip_existing: true  # Skip videos that already have captions
+  verbose: true        # Print detailed progress

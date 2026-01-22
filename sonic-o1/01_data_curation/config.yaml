@@ -1,0 +1,52 @@
+# YouTube Metadata Scraper Configuration
+api_settings:
+  rate_limit_delay: 1  # seconds between API calls
+  max_results_per_query: 80
+
+directories:
+  base_dir: "."
+  videos_dir: "videos_Unfiltered"
+
+collection_settings:
+  videos_per_topic: 100  # Increased from 50 to get more after filtering
+  videos_per_query: 15   # Increased from 5 to retrieve more before filtering
+  sort_order: "quality_score"
+  video_duration: "any"  # Options: short, medium, long, any
+  caption_text_limit: 5000
+  max_videos_per_topic: 25
+
+search_settings:
+  relevance_language: "en"
+  include_caption_text: true
+  remove_duplicates: true
+  years_back: 5
+  video_license: 'creativeCommon'  
+
+# Duration categories reference
+duration_categories:
+  short: "30s - 5min"
+  medium: "5min - 20min"
+  long: "20min - 60min"
+
+# Demographics used for search variations
+demographics:
+  race:
+    - White
+    - Black
+    - Asian
+    - Indigenous
+    - Arab
+    - Hispanic
+  gender:
+    - Male
+    - Female
+  age:
+    - "Young (18-24)"
+    - "Middle (25-39)"
+    - "Older adults (40+)"
+  language:
+    - English
+    - Hindi
+    - Arabic
+    - Spanish
+    - Chinese
