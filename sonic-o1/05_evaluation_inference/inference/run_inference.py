@@ -853,9 +853,9 @@ class InferenceRunner:
     def save_predictions(self, task: str, topic_name: str, predictions: List[Dict]):
         """Save predictions to JSON"""
         if self.experiment_name:
-            output_dir = Path('results/predictions') / self.experiment_name / self.model_name / task
+            output_dir = Path('05_evaluation_inference/results/predictions') / self.experiment_name / self.model_name / task
         else:
-            output_dir = Path('results/predictions') / self.model_name / task
+            output_dir = Path('05_evaluation_inference/results/predictions') / self.model_name / task
         
         output_dir.mkdir(parents=True, exist_ok=True)
         output_file = output_dir / f'{topic_name}.json'
@@ -929,9 +929,9 @@ class InferenceRunner:
             return
         
         if self.experiment_name:
-            failed_log_dir = Path('results/failed_logs') / self.experiment_name / self.model_name
+            failed_log_dir = Path('05_evaluation_inference/results/failed_logs') / self.experiment_name / self.model_name
         else:
-            failed_log_dir = Path('results/failed_logs') / self.model_name
+            failed_log_dir = Path('05_evaluation_inference/results/failed_logs') / self.model_name
         
         failed_log_dir.mkdir(parents=True, exist_ok=True)
         

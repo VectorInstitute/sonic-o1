@@ -3,8 +3,8 @@ dataset_path: "dataset"
 vqa_path: "vqa"
 
 results:
-  predictions_path: "results/predictions"
-  scores_path: "results/scores"
+  predictions_path: "05_evaluation_inference/results/predictions"
+  scores_path: "05_evaluation_inference/results/scores"
   
 # Tasks to evaluate
 tasks:
@@ -46,7 +46,7 @@ retry:
 
 metrics:
   # LLM Judge Model Configuration
-  llm_judge_model: "Qwen/Qwen3-8B"  #  "Qwen/Qwen3-8B" / "gpt-5-mini"
+  llm_judge_model: "gpt-5-mini"  #  "Qwen/Qwen3-8B" / "gpt-5-mini"
   
   # Multi-GPU Distribution
   llm_judge_device_map: "auto"  # Options: "auto", "balanced", or custom dict
@@ -92,7 +92,7 @@ models:
   - name: "qwen3"
     class: "Qwen3Omni"
     model_path: "Qwen/Qwen3-Omni-30B-A3B-Instruct"
-    supports_video: true
+    supports_video: false
     supports_audio: true
     #audio_format: "wav"
     use_thinking: false
@@ -218,7 +218,7 @@ models:
     # Multimodal mode: both frames and captions
     supports_video: true
     supports_audio: false
-    use_captions: false
+    use_captions: true
     
     # Retry strategy: 'frame_count_caption', 'frame_count', 'fps', or 'auto'
     retry_strategy: "frame_count_caption"
