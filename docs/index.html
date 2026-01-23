@@ -1,0 +1,1019 @@
+<!-- docs/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SONIC-O1: A SOcial Natural Interaction Corpus for Omnimodal Video Understanding</title>
+  <meta name="description" content="SONIC-O1: A SOcial Natural Interaction Corpus for Omnimodal Video Understanding" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <!-- Sticky top nav -->
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <!-- Logos BEFORE brand -->
+      <div class="topbar-logos">
+        <img src="assets/VectorLogo_Black.png" alt="Vector Institute" class="logo-img" />
+        <img src="assets/AIXPERTLogo.png" alt="AIXPERT" class="logo-img" />
+      </div>
+      
+      <a class="brand" href="#top" aria-label="SONIC-O1 Home">
+        <span class="brand-mark">↗</span>
+        <span class="brand-name">SONIC-O1</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Site navigation">
+        <a href="#abstract">Abstract</a>
+        <a href="#overview">Overview</a>
+        <a href="#dataset">Dataset</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#results">Results</a>
+        <a href="#per-topic">Per-topic</a>
+        <a href="#fairness">Fairness</a>
+        <a href="#conclusion">Conclusion</a>
+        <a href="#quickstart">Quick Start</a>
+        <a href="#citation">BibTeX</a>
+      </nav>
+    </div>
+  </header>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <!-- Hero text - centered -->
+        <div class="hero-text">
+          <h1 class="title">SONIC-O1: A SOcial Natural Interaction Corpus for<br/>Omnimodal Video Understanding</h1>
+          
+          <p class="authors">
+            <a href="https://scholar.google.com/citations?user=Fmhn-MQAAAAJ&hl=en" target="_blank" rel="noreferrer">Ahmed Y. Radwan</a><sup>1</sup>,
+            <a href="https://scholar.google.ca/citations?user=FZRIusYAAAAJ&hl=en" target="_blank" rel="noreferrer">Christos Emmanouildis</a><sup>2</sup>,
+            <a href="https://scholar.google.ca/citations?user=WAljqloAAAAJ&hl=en" target="_blank" rel="noreferrer">Hina Tabassum</a><sup>3</sup>,
+            <a href="https://scholar.google.com/citations?user=o1XZyLMAAAAJ&hl=en" target="_blank" rel="noreferrer">Deval Pandya</a><sup>1</sup>,
+            <a href="https://scholar.google.com/citations?user=chcz7RMAAAAJ&hl=en" target="_blank" rel="noreferrer">Shaina Raza</a><sup>1</sup>
+          </p>
+          
+          <p class="affiliations">
+            <sup>1</sup>Vector Institute, Canada &nbsp;&nbsp;
+            <sup>2</sup>University of Groningen, The Netherlands &nbsp;&nbsp;
+            <sup>3</sup>York University, Canada &nbsp;&nbsp;
+          </p>
+
+          <!-- Action buttons -->
+          <div class="button-row">
+            <a class="btn btn-primary" target="_blank" rel="noreferrer"
+               href="https://arxiv.org/abs/XXXX.XXXXX">
+              <img src="assets/arxiv-logo.png" alt="" class="btn-icon" />
+              arXiv
+            </a>
+            <a class="btn btn-primary" target="_blank" rel="noreferrer"
+               href="https://huggingface.co/datasets/vector-institute/sonic-o1">
+              <img src="assets/hf-logo.svg" alt="" class="btn-icon" />
+              Dataset
+            </a>
+            <a class="btn btn-primary" target="_blank" rel="noreferrer"
+               href="https://github.com/VectorInstitute/sonic-o1">
+              <img src="assets/GitHub_Logo.png" alt="" class="btn-icon" />
+              Code
+            </a>
+            <a class="btn" target="_blank" rel="noreferrer"
+               href="https://huggingface.co/spaces/vector-institute/sonic-o1-leaderboard">
+              <img src="assets/hf-logo.svg" alt="" class="btn-icon" />
+              Leaderboard
+            </a>
+            <a class="btn" href="#citation">BibTeX</a>
+          </div>
+
+          <p class="lead">
+            SONIC-O1 is the first open evaluation suite for real-world, long-form audio-video interactions,
+            targeting <strong>global comprehension</strong>, <strong>fine-grained reasoning</strong>, and 
+            <strong>temporal grounding</strong> — with demographic metadata for <strong>fairness analysis</strong>.
+          </p>
+
+          <!-- Statistics badges -->
+          <div class="badge-row" aria-label="At-a-glance statistics">
+            <span class="pill">231 videos</span>
+            <span class="pill">~60 hours</span>
+            <span class="pill">4,958 human-verified QAs</span>
+            <span class="pill">13 conversational domains</span>
+            <span class="pill">3 evaluation tasks</span>
+          </div>
+        </div>
+
+        <!-- Teaser figure - large and prominent -->
+        <div class="hero-figure">
+          <figure>
+            <img src="assets/Teaser_Figure.png" alt="SONIC-O1 benchmark overview showing three evaluation tasks: summarization, multiple-choice QA, and temporal localization with demographic metadata" />
+            <figcaption>
+              <strong>Figure 1.</strong> SONIC-O1 benchmark overview. Three example tasks: (Top) Video Summarization requiring
+              global comprehension; (Middle) Multiple-Choice Question (MCQ) with evidence-grounded reasoning; (Bottom) Temporal Localization
+              with precise event timing. Demographic metadata (race, gender, age) shown beneath each video segment enables fairness-aware evaluation
+              across 13 conversational domains.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- ABSTRACT -->
+    <section id="abstract" class="section">
+      <h2>Abstract</h2>
+      <div class="abstract-box">
+        <p>
+          Real-world deployment of multimodal video models requires understanding not just <em>what</em> happens but <em>when</em>, 
+          and performing reliably across diverse user populations—yet current benchmarks focus on short clips, rarely test temporal 
+          grounding, and omit demographic fairness evaluation.
+        </p>
+        <p>
+          We introduce <strong>SONIC-O1</strong>, a benchmark of <strong>231 videos</strong> (≈60 hours) spanning 
+          <strong>13 conversational domains</strong> (medical consultations, job interviews, courtroom proceedings) with 
+          <strong>4,958 human-verified annotations</strong> and demographic metadata (race/gender/age). SONIC-O1 evaluates 
+          three complementary capabilities: <strong>summarization</strong> (global comprehension), <strong>multiple-choice QA</strong> 
+          (fine-grained reasoning), and <strong>temporal localization</strong> (identifying when events occur).
+        </p>
+        <p>
+          Results reveal a disconnect: Gemini 3.0 Pro achieves <strong>96.4% MCQ accuracy</strong> and generates high-quality 
+          rationales, yet attains only <strong>25.3% recall at IoU≥0.5</strong> for temporal localization—meaning it can identify 
+          and explain events but cannot reliably pinpoint when they occur. Performance further degrades on demographic slices: 
+          Black and Indigenous groups show systematically lower scores across most models and tasks.
+        </p>
+        <p>
+          SONIC-O1 provides an open evaluation suite targeting temporally grounded, socially robust multimodal understanding 
+          for high-stakes applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="section">
+      <h2>Overview</h2>
+      <div class="grid-4">
+        <div class="stat">
+          <div class="stat-value">231</div>
+          <div class="stat-label">Videos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">~60h</div>
+          <div class="stat-label">Total Duration</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">4,958</div>
+          <div class="stat-label">Human-Verified QAs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Evaluation Tasks</div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3 class="h3">What SONIC-O1 Evaluates</h3>
+          <ul class="bullets">
+            <li><strong>Global comprehension</strong> — Summarization of long-form interactions</li>
+            <li><strong>Fine-grained reasoning</strong> — Multiple-choice QA with evidence grounding</li>
+            <li><strong>Temporal grounding</strong> — Event localization with precise timestamps</li>
+            <li><strong>Demographic robustness</strong> — Performance across race, age, and gender slices</li>
+          </ul>
+          <p class="muted">
+            Unlike prior benchmarks that focus on short clips or single modalities, SONIC-O1 evaluates 
+            <strong>omnimodal understanding</strong> (audio + video) on realistic, long-duration interactions 
+            from high-stakes domains.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Quick Links</h3>
+          <div class="link-list">
+            <a target="_blank" rel="noreferrer" href="https://huggingface.co/datasets/vector-institute/sonic-o1">
+              <img src="assets/hf-logo.svg" alt="" class="link-icon" />
+              Hugging Face Dataset
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://huggingface.co/spaces/vector-institute/sonic-o1-leaderboard">
+              <img src="assets/hf-logo.svg" alt="" class="link-icon" />
+              Leaderboard
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/VectorInstitute/sonic-o1">
+              <img src="assets/GitHub_Logo.png" alt="" class="link-icon" />
+              GitHub Repository
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://arxiv.org/abs/XXXX.XXXXX">
+              <img src="assets/arxiv-logo.png" alt="" class="link-icon" />
+              arXiv Paper
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATASET -->
+    <section id="dataset" class="section">
+      <h2>Dataset</h2>
+      
+      <div class="two-col">
+        <figure class="figure">
+          <img src="assets/Sunburst_Topics.png" alt="Sunburst chart showing the distribution of 13 conversational topics across 5 domains" />
+          <figcaption>
+            <strong>Figure 2.</strong> Video categories. SONIC-O1 covers 5 key domains and 13 sub-class video types spanning
+            professional, educational, legal/civic, service-oriented, and community/public health interactions.
+          </figcaption>
+        </figure>
+        <div>
+          <h3 class="h3">13 Conversational Topics</h3>
+          <div class="topic-list">
+            <div class="topic-category">
+              <h4>Professional</h4>
+              <ul class="compact">
+                <li>Job Interviews</li>
+                <li>Workplace Team Meetings</li>
+              </ul>
+            </div>
+            <div class="topic-category">
+              <h4>Educational</h4>
+              <ul class="compact">
+                <li>Parent-Teacher Conferences</li>
+              </ul>
+            </div>
+            <div class="topic-category">
+              <h4>Legal / Civic</h4>
+              <ul class="compact">
+                <li>Courtroom Proceedings</li>
+                <li>Community Town Halls</li>
+              </ul>
+            </div>
+            <div class="topic-category">
+              <h4>Service-Oriented</h4>
+              <ul class="compact">
+                <li>Customer Service</li>
+                <li>Restaurant Service</li>
+                <li>Housing/Apartment Tours</li>
+              </ul>
+            </div>
+            <div class="topic-category">
+              <h4>Community / Public Health</h4>
+              <ul class="compact">
+                <li>Medical (Patient-Doctor)</li>
+                <li>Emergency Response</li>
+                <li>Public Transportation Conflicts</li>
+                <li>Mental Health Counseling</li>
+                <li>Olympics (Sports)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="figure-grid-2">
+        <figure class="figure">
+          <img src="assets/plot_duration_category_by_topic_videos.png" alt="Bar chart showing video duration distribution across topics with short, medium, and long videos" />
+          <figcaption>
+            <strong>Figure 3.</strong> Video duration distribution by topic. SONIC-O1 spans short (&lt;5 min), medium (5-20 min), 
+            and long (20-60 min) videos across all conversational domains.
+          </figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="assets/plot_category_task_distribution_topics.png" alt="Bar chart showing distribution of summarization, MCQ, and temporal localization questions across topics" />
+          <figcaption>
+            <strong>Figure 4.</strong> Question type distribution over topics. Each domain includes annotations for all three 
+            evaluation tasks: summarization, multiple-choice QA, and temporal localization.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="info-box">
+        <h3 class="h3">Demographic Coverage</h3>
+        <p>
+          SONIC-O1 includes demographic annotations across:
+        </p>
+        <ul class="bullets">
+          <li><strong>Race/Ethnicity:</strong> White, Black, Asian, Hispanic, Indigenous, Arab</li>
+          <li><strong>Gender:</strong> Male, Female</li>
+          <li><strong>Age:</strong> 18-24, 25-39, 40+</li>
+        </ul>
+        <p class="muted small">
+          All demographic labels are annotated from observable characteristics via AI-assisted human review, 
+          enabling systematic fairness evaluation across demographic groups.
+        </p>
+      </div>
+    </section>
+
+    <!-- TASKS -->
+    <section id="tasks" class="section">
+      <h2>Evaluation Tasks</h2>
+      <p class="section-intro">
+        SONIC-O1 evaluates three complementary capabilities: <strong>global comprehension</strong> (summarization),
+        <strong>fine-grained reasoning</strong> (MCQ), and <strong>temporal grounding</strong> (localization).
+      </p>
+      
+      <div class="task-grid">
+        <article class="task-card">
+          <div class="task-header">
+            <div class="task-number">Task 1</div>
+            <h3>Video Summarization</h3>
+          </div>
+          <p class="task-description">
+            Generate narrative summaries capturing key events, actions, and outcomes across full videos 
+            (up to 60 minutes). Tests global comprehension and ability to synthesize information across 
+            long temporal spans.
+          </p>
+          <div class="task-metrics">
+            <strong>Metrics:</strong>
+            <ul class="compact">
+              <li>LLM-as-Judge score (0–10)</li>
+              <li>ROUGE-L</li>
+              <li>Cosine similarity</li>
+            </ul>
+          </div>
+          <div class="task-stats">
+            <span class="pill-small">231 instances</span>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <div class="task-header">
+            <div class="task-number">Task 2</div>
+            <h3>Multiple-Choice QA</h3>
+          </div>
+          <p class="task-description">
+            Answer questions about 3-minute video segments with four answer choices plus "Not enough evidence" option. 
+            Requires fine-grained comprehension and evidence-grounded reasoning across audio-visual modalities.
+          </p>
+          <div class="task-metrics">
+            <strong>Metrics:</strong>
+            <ul class="compact">
+              <li>Accuracy (%)</li>
+              <li>Rationale quality (LLM judge)</li>
+            </ul>
+          </div>
+          <div class="task-stats">
+            <span class="pill-small">1,335 instances</span>
+          </div>
+        </article>
+
+        <article class="task-card">
+          <div class="task-header">
+            <div class="task-number">Task 3</div>
+            <h3>Temporal Localization</h3>
+          </div>
+          <p class="task-description">
+            Localize events in time with start/end timestamps and temporal relations (before/during/after). 
+            Tests whether models can identify not just <em>what</em> happens but <em>when</em> it occurs.
+          </p>
+          <div class="task-metrics">
+            <strong>Metrics:</strong>
+            <ul class="compact">
+              <li>Recall@IoU (R@0.3, R@0.5, R@0.7)</li>
+              <li>Mean IoU (mIoU)</li>
+              <li>Mean Absolute Error (MAE)</li>
+            </ul>
+          </div>
+          <div class="task-stats">
+            <span class="pill-small">3,392 instances</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- RESULTS -->
+    <section id="results" class="section">
+      <h2>Results</h2>
+      <p class="section-intro">
+        We evaluate 6 state-of-the-art multimodal models on SONIC-O1. Closed-source models (Gemini 3.0 Pro) 
+        consistently outperform open-source alternatives, though temporal localization remains challenging for all systems.
+      </p>
+
+      <div class="table-wrap" role="region" aria-label="Main results table" tabindex="0">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th class="center">LLM Params</th>
+              <th class="center">Summarization<br/><span class="metric-desc">Score (0–10) ↑</span></th>
+              <th class="center">MCQ<br/><span class="metric-desc">Accuracy (%) ↑</span></th>
+              <th class="center">Temporal<br/><span class="metric-desc">R@0.5 (%) ↑</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight">
+              <td><a target="_blank" rel="noreferrer" href="https://deepmind.google/technologies/gemini/">Gemini 3.0 Pro †</a></td>
+              <td class="center">—</td>
+              <td class="center"><strong>7.07</strong></td>
+              <td class="center"><strong>96.4</strong></td>
+              <td class="center"><strong>25.3</strong></td>
+            </tr>
+            <tr>
+              <td><a target="_blank" rel="noreferrer" href="https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct">Qwen3-Omni</a></td>
+              <td class="center">30B</td>
+              <td class="center">5.72</td>
+              <td class="center">93.6</td>
+              <td class="center">2.8</td>
+            </tr>
+            <tr>
+              <td><a target="_blank" rel="noreferrer" href="https://arxiv.org/abs/2511.12609">UniMoE-2.0-Omni</a></td>
+              <td class="center">33B</td>
+              <td class="center">4.71</td>
+              <td class="center">88.2</td>
+              <td class="center">1.0</td>
+            </tr>
+            <tr>
+              <td><a target="_blank" rel="noreferrer" href="https://huggingface.co/openbmb/MiniCPM-o-2_6">MiniCPM-o-2.6</a></td>
+              <td class="center">9B</td>
+              <td class="center">3.34</td>
+              <td class="center">87.4</td>
+              <td class="center">0.7</td>
+            </tr>
+            <tr>
+              <td><a target="_blank" rel="noreferrer" href="https://github.com/VITA-MLLM/VITA">VITA 1.5</a></td>
+              <td class="center">8B</td>
+              <td class="center">2.77</td>
+              <td class="center">81.5</td>
+              <td class="center">1.1</td>
+            </tr>
+            <tr>
+              <td><a target="_blank" rel="noreferrer" href="https://huggingface.co/DAMO-NLP-SG/VideoLLaMA2.1-7B-AV">VideoLLaMA2.1-7B-AV</a></td>
+              <td class="center">7B</td>
+              <td class="center">1.53</td>
+              <td class="center">54.3</td>
+              <td class="center">0.4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="table-note">
+        <strong>†</strong> Denotes closed-source model. 
+        All metrics are macro-averaged across 13 conversational topics. 
+        See the <a href="https://huggingface.co/spaces/vector-institute/sonic-o1-leaderboard" target="_blank" rel="noreferrer">live leaderboard</a> 
+        for full per-task breakdowns and latest submissions.
+      </p>
+
+      <div class="key-findings">
+        <h3 class="h3">Key Findings</h3>
+        <ul class="bullets">
+          <li>
+            <strong>Accuracy-temporal grounding disconnect:</strong> Gemini 3.0 Pro achieves 96.4% MCQ accuracy 
+            but only 25.3% R@0.5 for temporal localization, revealing that models can identify <em>what</em> happens 
+            but struggle to pinpoint <em>when</em>.
+          </li>
+          <li>
+            <strong>Temporal localization is the hardest task:</strong> Open-source models achieve &lt;3% R@0.5, 
+            with a 22% performance gap to Gemini 3.0 Pro, indicating fundamental limitations in temporal reasoning.
+          </li>
+          <li>
+            <strong>Model scale matters:</strong> Larger models (Qwen3-Omni 30B, UniMoE-2.0 33B) significantly 
+            outperform smaller variants (7-9B), though even at scale, temporal grounding remains challenging.
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-row">
+        <a class="btn btn-primary" target="_blank" rel="noreferrer"
+           href="https://huggingface.co/spaces/vector-institute/sonic-o1-leaderboard">
+          View Live Leaderboard →
+        </a>
+      </div>
+    </section>
+
+    <!-- PER-TOPIC PERFORMANCE -->
+    <section id="per-topic" class="section">
+      <h2>Per-Topic Performance</h2>
+      
+      <div class="two-col-figure">
+        <div class="col-text">
+          <p class="section-intro">
+            SONIC-O1 spans <strong>13 conversational domains</strong> across professional, civic, service-oriented,
+            and community interactions. Performance varies significantly across topics, revealing domain-specific 
+            strengths and weaknesses.
+          </p>
+          
+          <h3 class="h3">Key Observations</h3>
+          <ul class="bullets">
+            <li>
+              <strong>Structured interactions are easier:</strong> Models perform best on formal settings like 
+              medical consultations, job interviews, and courtroom proceedings where interactions follow predictable patterns.
+            </li>
+            <li>
+              <strong>High-stakes scenarios are harder:</strong> Emergency response and mental health counseling 
+              show lower scores across all models, likely due to increased perceptual complexity and emotional nuance.
+            </li>
+            <li>
+              <strong>Gemini 3.0 Pro leads consistently:</strong> Achieves the highest scores across nearly all 
+              topics, with particularly strong performance on professional and educational domains.
+            </li>
+            <li>
+              <strong>Open-source models show uneven robustness:</strong> Smaller models (VideoLLaMA2, VITA 1.5) 
+              struggle more on complex topics, while larger open-source models (Qwen3-Omni) show more stable 
+              cross-topic performance.
+            </li>
+          </ul>
+        </div>
+
+        <figure class="figure col-figure">
+          <img src="assets/spider_chart.png" alt="Radar chart showing per-topic performance across 13 conversational domains for 6 models" />
+          <figcaption>
+            <strong>Figure 6.</strong> Performance comparison across 13 conversational domains. We evaluate six MLLMs 
+            on video summarization using LLM-judge scores (0-10 scale, higher is better). Gemini 3.0 Pro consistently 
+            outperforms open-source models, while high-stakes scenarios (Emergency Response, Mental Health) prove more 
+            challenging than structured interactions (Medical, Job Interviews) across all models.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FAIRNESS ANALYSIS -->
+    <section id="fairness" class="section">
+      <h2>Fairness Analysis</h2>
+      <p class="section-intro">
+        SONIC-O1 includes demographic annotations (race, gender, age) to enable systematic fairness evaluation. 
+        Results reveal <strong>significant performance disparities</strong> across demographic groups, with 
+        Black and Indigenous participants showing consistently lower scores.
+      </p>
+
+      <h3 class="h3">Summarization Fairness (LLM-as-Judge Score, 0–10)</h3>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th class="center">White</th>
+              <th class="center">Black</th>
+              <th class="center">Asian</th>
+              <th class="center">Hispanic</th>
+              <th class="center">Indigenous</th>
+              <th class="center">Arab</th>
+              <th class="center">Gap ↓</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight">
+              <td>Gemini 3.0 Pro †</td>
+              <td class="center">6.68</td>
+              <td class="center worst">6.02</td>
+              <td class="center best">7.05</td>
+              <td class="center">6.41</td>
+              <td class="center">6.70</td>
+              <td class="center">6.90</td>
+              <td class="center">1.03</td>
+            </tr>
+            <tr>
+              <td>Qwen3-Omni</td>
+              <td class="center">5.28</td>
+              <td class="center worst">4.39</td>
+              <td class="center">5.71</td>
+              <td class="center">4.99</td>
+              <td class="center">4.13</td>
+              <td class="center best">5.95</td>
+              <td class="center">1.82</td>
+            </tr>
+            <tr>
+              <td>UniMoE-2.0-Omni</td>
+              <td class="center">4.29</td>
+              <td class="center worst">3.45</td>
+              <td class="center best">4.62</td>
+              <td class="center">3.70</td>
+              <td class="center">4.35</td>
+              <td class="center">5.00</td>
+              <td class="center">1.55</td>
+            </tr>
+            <tr>
+              <td>MiniCPM-o-2.6</td>
+              <td class="center">3.26</td>
+              <td class="center worst">2.92</td>
+              <td class="center">3.26</td>
+              <td class="center">3.04</td>
+              <td class="center best">3.61</td>
+              <td class="center">3.57</td>
+              <td class="center">0.69</td>
+            </tr>
+            <tr>
+              <td>VITA 1.5</td>
+              <td class="center">2.50</td>
+              <td class="center">2.31</td>
+              <td class="center">2.65</td>
+              <td class="center">2.21</td>
+              <td class="center worst">1.65</td>
+              <td class="center best">2.76</td>
+              <td class="center">1.11</td>
+            </tr>
+            <tr>
+              <td>VideoLLaMA2</td>
+              <td class="center">1.45</td>
+              <td class="center">1.38</td>
+              <td class="center best">1.63</td>
+              <td class="center">1.23</td>
+              <td class="center">1.04</td>
+              <td class="center worst">1.00</td>
+              <td class="center">0.63</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="h3">MCQ Fairness (Accuracy, %)</h3>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th class="center">White</th>
+              <th class="center">Black</th>
+              <th class="center">Asian</th>
+              <th class="center">Hispanic</th>
+              <th class="center">Indigenous</th>
+              <th class="center">Arab</th>
+              <th class="center">Gap ↓</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight">
+              <td>Gemini 3.0 Pro †</td>
+              <td class="center">96.9</td>
+              <td class="center">96.4</td>
+              <td class="center">97.8</td>
+              <td class="center">96.1</td>
+              <td class="center worst">94.3</td>
+              <td class="center best">98.4</td>
+              <td class="center">4.1</td>
+            </tr>
+            <tr>
+              <td>Qwen3-Omni</td>
+              <td class="center">93.3</td>
+              <td class="center">92.0</td>
+              <td class="center">96.1</td>
+              <td class="center">92.8</td>
+              <td class="center worst">77.1</td>
+              <td class="center best">96.9</td>
+              <td class="center">19.8</td>
+            </tr>
+            <tr>
+              <td>UniMoE-2.0-Omni</td>
+              <td class="center">88.9</td>
+              <td class="center">87.4</td>
+              <td class="center">89.2</td>
+              <td class="center">85.5</td>
+              <td class="center worst">80.0</td>
+              <td class="center best">95.3</td>
+              <td class="center">15.3</td>
+            </tr>
+            <tr>
+              <td>MiniCPM-o-2.6</td>
+              <td class="center">87.5</td>
+              <td class="center">86.3</td>
+              <td class="center">88.7</td>
+              <td class="center worst">81.6</td>
+              <td class="center">82.9</td>
+              <td class="center best">92.7</td>
+              <td class="center">11.1</td>
+            </tr>
+            <tr>
+              <td>VITA 1.5</td>
+              <td class="center">82.0</td>
+              <td class="center">82.2</td>
+              <td class="center">84.6</td>
+              <td class="center">79.1</td>
+              <td class="center worst">62.9</td>
+              <td class="center best">93.2</td>
+              <td class="center">30.3</td>
+            </tr>
+            <tr>
+              <td>VideoLLaMA2</td>
+              <td class="center">55.1</td>
+              <td class="center">55.0</td>
+              <td class="center">57.9</td>
+              <td class="center worst">51.0</td>
+              <td class="center">65.7</td>
+              <td class="center best">66.0</td>
+              <td class="center">15.0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="h3">Temporal Localization Fairness (Recall@0.5, %)</h3>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th class="center">White</th>
+              <th class="center">Black</th>
+              <th class="center">Asian</th>
+              <th class="center">Hispanic</th>
+              <th class="center">Indigenous</th>
+              <th class="center">Arab</th>
+              <th class="center">Gap ↓</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight">
+              <td>Gemini 3.0 Pro †</td>
+              <td class="center">22.9</td>
+              <td class="center worst">19.3</td>
+              <td class="center">30.6</td>
+              <td class="center">23.5</td>
+              <td class="center best">40.9</td>
+              <td class="center">20.4</td>
+              <td class="center">21.6</td>
+            </tr>
+            <tr>
+              <td>Qwen3-Omni</td>
+              <td class="center">2.7</td>
+              <td class="center">1.8</td>
+              <td class="center best">2.9</td>
+              <td class="center">2.3</td>
+              <td class="center worst">0.0</td>
+              <td class="center">1.6</td>
+              <td class="center">2.9</td>
+            </tr>
+            <tr>
+              <td>UniMoE-2.0-Omni</td>
+              <td class="center">1.2</td>
+              <td class="center">0.6</td>
+              <td class="center">0.6</td>
+              <td class="center worst">0.1</td>
+              <td class="center best">1.3</td>
+              <td class="center">0.2</td>
+              <td class="center">1.2</td>
+            </tr>
+            <tr>
+              <td>MiniCPM-o-2.6</td>
+              <td class="center">0.9</td>
+              <td class="center worst">0.3</td>
+              <td class="center">0.8</td>
+              <td class="center">0.2</td>
+              <td class="center worst">0.0</td>
+              <td class="center best">2.6</td>
+              <td class="center">2.6</td>
+            </tr>
+            <tr>
+              <td>VITA 1.5</td>
+              <td class="center">1.3</td>
+              <td class="center best">1.4</td>
+              <td class="center best">1.4</td>
+              <td class="center worst">0.7</td>
+              <td class="center">1.3</td>
+              <td class="center">1.2</td>
+              <td class="center">0.7</td>
+            </tr>
+            <tr>
+              <td>VideoLLaMA2</td>
+              <td class="center">0.5</td>
+              <td class="center">0.3</td>
+              <td class="center">0.4</td>
+              <td class="center worst">0.0</td>
+              <td class="center best">1.3</td>
+              <td class="center worst">0.0</td>
+              <td class="center">1.3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="table-note">
+        <strong>†</strong> Denotes closed-source model. 
+        <span class="best">■</span> Best performing group per model. 
+        <span class="worst">■</span> Worst performing group per model. 
+        <strong>Gap</strong> = difference between best and worst performing groups (lower is better).
+      </p>
+
+      <div class="key-findings">
+        <h3 class="h3">Fairness Observations</h3>
+        <ul class="bullets">
+          <li>
+            <strong>Black and Indigenous groups show systematically lower performance:</strong> Across most models 
+            and tasks, these groups consistently score below other demographic slices, indicating training data imbalances.
+          </li>
+          <li>
+            <strong>Temporal localization shows the largest disparities:</strong> Gemini 3.0 Pro achieves 40.9% R@0.5 
+            for Indigenous participants but only 19.3% for Black participants—a 21.6 point gap, the largest across all tasks.
+          </li>
+          <li>
+            <strong>Closed-source models are more robust:</strong> Gemini 3.0 Pro shows smaller demographic gaps compared 
+            to open-source alternatives, likely due to more diverse training data and safety alignment.
+          </li>
+          <li>
+            <strong>Gender and age show smaller but consistent gaps:</strong> Female participants and older adults (40+) 
+            consistently score slightly higher across all models, suggesting bias toward more formal interaction styles.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section id="conclusion" class="section section-conclusion">
+      <h2>Conclusion</h2>
+      
+      <div class="conclusion-content">
+        <p>
+          SONIC-O1 reveals that state-of-the-art multimodal models still face significant trade-offs 
+          between accuracy and human-aligned behavior. While closed-source models generally perform 
+          better overall, they exhibit weaknesses in temporal grounding. Open-source models show promise 
+          in specific areas but lack consistency.
+        </p>
+
+        <div class="highlight-box">
+          <div class="highlight-icon">🔍</div>
+          <div class="highlight-content">
+            <h3>Key Finding: The Accuracy-Temporal Grounding Disconnect</h3>
+            <p>
+              Gemini 3.0 Pro achieves <strong>96.4% MCQ accuracy</strong> and generates high-quality 
+              rationales, yet attains only <strong>25.3% recall at IoU≥0.5</strong> for temporal 
+              localization—meaning it can <strong>identify and explain events but cannot reliably 
+              pinpoint when they occur</strong>.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          Performance further degrades on demographic slices: <strong>Black and Indigenous groups show 
+          systematically lower scores</strong> across most models and tasks. Temporal localization exhibits 
+          the most severe disparities, with some models collapsing to 0.0% R@0.5 for Indigenous participants 
+          while maintaining competitive performance on other groups.
+        </p>
+
+        <p>
+          These findings expose fundamental limitations in temporal coherence and cross-modal reasoning that 
+          cannot be addressed through scaling alone. SONIC-O1 highlights the need for:
+        </p>
+
+        <ul class="bullets">
+          <li>Architectural innovations for long-form temporal grounding</li>
+          <li>Fairness-aware data collection and training procedures</li>
+          <li>Multi-objective optimization combining accuracy, temporal precision, and demographic robustness</li>
+        </ul>
+
+        <p class="conclusion-footer">
+          SONIC-O1 provides an open evaluation suite targeting <strong>temporally grounded, socially robust 
+          multimodal understanding</strong> for high-stakes applications. For additional details about 
+          evaluation methodology and experimental results, please refer to our paper.
+        </p>
+
+        <div class="button-row">
+          <a class="btn btn-primary" target="_blank" rel="noreferrer"
+             href="https://arxiv.org/abs/XXXX.XXXXX">
+            Read the Paper →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK START -->
+    <section id="quickstart" class="section">
+      <h2>Quick Start</h2>
+      <p class="section-intro">
+        The SONIC-O1 repository provides an end-to-end pipeline for data curation, annotation generation, 
+        and model evaluation. Dataset and annotations are hosted on Hugging Face.
+      </p>
+
+      <div class="code-section">
+        <h3 class="h3">Installation</h3>
+        <div class="code-card">
+          <button class="code-copy" data-target="code-install" aria-label="Copy installation code">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2z"/>
+            </svg>
+          </button>
+          <pre id="code-install"><code># Clone repository (note: nested structure)
+git clone https://github.com/VectorInstitute/sonic-o1.git
+cd sonic-o1/sonic-o1
+
+# Download dataset + annotations from Hugging Face
+pip install huggingface_hub
+huggingface-cli download vector-institute/sonic-o1 --repo-type dataset --local-dir ./
+
+# Setup Python environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements_venv.txt</code></pre>
+        </div>
+      </div>
+
+      <div class="code-section">
+        <h3 class="h3">Load Dataset</h3>
+        <div class="code-card">
+          <button class="code-copy" data-target="code-load" aria-label="Copy dataset loading code">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2z"/>
+            </svg>
+          </button>
+          <pre id="code-load"><code>from datasets import load_dataset
+
+# Load individual tasks
+ds_summ = load_dataset("vector-institute/sonic-o1", "task1_summarization")
+ds_mcq = load_dataset("vector-institute/sonic-o1", "task2_mcq")
+ds_temporal = load_dataset("vector-institute/sonic-o1", "task3_temporal_localization")
+
+# Each sample includes:
+# - video metadata (ID, topic, duration, demographics)
+# - question/prompt
+# - ground truth answer
+# - rationale (for MCQ and temporal tasks)</code></pre>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h3 class="h3">Pipeline Stages</h3>
+        <p>
+          The repository includes modular scripts for each stage of the pipeline:
+        </p>
+        <ol class="compact">
+          <li><code>01_data_curation/</code> — Video search, filtering, and metadata extraction</li>
+          <li><code>02_caption_generation/</code> — Whisper-based caption generation for videos without captions</li>
+          <li><code>03_demographics_annotation/</code> — AI-assisted demographic labeling with human verification</li>
+          <li><code>04_vqa_generation/</code> — Multi-task annotation generation (summarization, MCQ, temporal)</li>
+          <li><code>05_evaluation_inference/</code> — Model evaluation scripts and metric computation</li>
+        </ol>
+        <p class="muted small">
+          See the <a href="https://github.com/VectorInstitute/sonic-o1" target="_blank" rel="noreferrer">GitHub repository</a> 
+          for detailed documentation and usage examples.
+        </p>
+      </div>
+    </section>
+
+    <!-- CITATION -->
+    <section id="citation" class="section">
+      <h2>BibTeX</h2>
+      <p class="muted">
+        If you use SONIC-O1 in your research, please cite our paper:
+      </p>
+      
+      <div class="bibtex-section">
+        <button class="btn btn-small btn-copy" id="copyBibtex" type="button" aria-label="Copy BibTeX citation">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2z"/>
+          </svg>
+          Copy BibTeX
+        </button>
+        
+        <pre class="bibtex" id="bibtexBlock"><code>@article{sonic-o1-2025,
+          title   = {SONIC-O1: A SOcial Natural Interaction Corpus for Omnimodal Video Understanding},
+          journal = {arXiv preprint arXiv:XXXX.XXXXX},
+          year    = {2025},
+          url     = {https://huggingface.co/datasets/vector-institute/sonic-o1}
+        }</code></pre>
+        
+        <p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ACKNOWLEDGEMENTS -->
+    <section id="acknowledgements" class="section">
+      <h2>Acknowledgements</h2>
+      <div class="ack-content">
+        <p>
+          Resources used in preparing this research were provided, in part, by the Province of Ontario, 
+          the Government of Canada through CIFAR, and companies sponsoring the Vector Institute 
+          (<a href="http://www.vectorinstitute.ai/#partners" target="_blank" rel="noreferrer">http://www.vectorinstitute.ai/#partners</a>).
+        </p>
+        <p>
+          This research was funded by the European Union's Horizon Europe research and innovation programme 
+          under the AIXPERT project (Grant Agreement No. 101214389), which aims to develop an agentic, 
+          multi-layered, GenAI-powered framework for creating explainable, accountable, and transparent AI systems.
+        </p>
+        
+        <div class="ack-logos">
+          <img src="assets/VectorLogo_Black.png" alt="Vector Institute" />
+          <img src="assets/AIXPERTLogo.png" alt="AIXPERT" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="h3">Contact</h3>
+          <p>
+            For questions, collaborations, or dataset access requests, please contact:
+            <br/>
+            <a href="mailto:shaina.raza@vectorinstitute.ai">shaina.raza@vectorinstitute.ai</a>
+          </p>
+          <p>
+            Report issues: <a href="https://github.com/VectorInstitute/sonic-o1/issues" target="_blank" rel="noreferrer">GitHub Issues</a>
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="h3">Links</h3>
+          <ul class="footer-links">
+            <li><a href="https://huggingface.co/datasets/vector-institute/sonic-o1" target="_blank" rel="noreferrer">Dataset (Hugging Face)</a></li>
+            <li><a href="https://huggingface.co/spaces/vector-institute/sonic-o1-leaderboard" target="_blank" rel="noreferrer">Leaderboard</a></li>
+            <li><a href="https://github.com/VectorInstitute/sonic-o1" target="_blank" rel="noreferrer">GitHub Repository</a></li>
+            <li><a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noreferrer">arXiv Paper</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Vector Institute — SONIC-O1</p>
+        <p><a href="#top">Back to top ↑</a></p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
