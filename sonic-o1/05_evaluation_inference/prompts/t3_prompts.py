@@ -5,16 +5,15 @@ def get_t3_prompt(questions: list, segment_start: float, segment_end: float) -> 
     """
     segment_duration = segment_end - segment_start
     num_questions = len(questions)
-    
-    questions_text = "\n".join([
-        f"{q['question_id']}. {q['question']}"
-        for q in questions
-    ])
-    
+
+    questions_text = "\n".join(
+        [f"{q['question_id']}. {q['question']}" for q in questions]
+    )
+
     # Show the exact IDs expected in output
     question_ids_list = ", ".join([f'"{q["question_id"]}"' for q in questions])
-    
-    prompt = f"""You are analyzing a video segment from {segment_start:.1f}s to {segment_end:.1f}s (duration: {segment_duration:.1f}s).
+
+    return f"""You are analyzing a video segment from {segment_start:.1f}s to {segment_end:.1f}s (duration: {segment_duration:.1f}s).
 
                 QUESTIONS ({num_questions} total):
                 {questions_text}
@@ -53,4 +52,3 @@ def get_t3_prompt(questions: list, segment_start: float, segment_end: float) -> 
                 - CRITICAL: Your response MUST include these exact question_ids: {question_ids_list} and include the question_id field
                 - Return ONLY valid JSON (no markdown, no code blocks, no extra text)
                 """
-    return prompt

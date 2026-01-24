@@ -1,4 +1,5 @@
-from typing import Dict, Any
+from typing import Any, Dict
+
 
 # Main prompt for temporal localization question generation
 TEMPORAL_LOCALIZATION_PROMPT = """You are a careful video annotator creating temporal reasoning questions.
@@ -263,31 +264,34 @@ def get_temporal_localization_prompt(
     segment_info: Dict[str, Any],
     metadata: Dict[str, Any],
     transcript_text: str,
-    config: Any
+    config: Any,
 ) -> str:
     """
     Generate temporal localization prompt for a video segment.
-    
+
     Args:
         segment_info: Segment metadata with start/end times
         metadata: Video metadata
         transcript_text: Transcript for this segment
         config: Configuration object
-        
-    Returns:
+
+    Returns
+    -------
         Formatted prompt string optimized for Gemini 2.5 with thinking mode
     """
-    video_id = metadata.get('video_id', metadata.get('video_number', 'unknown'))
-    
+    video_id = metadata.get("video_id", metadata.get("video_number", "unknown"))
+
     # Calculate duration (model only sees the segment video, not full video)
-    duration = segment_info['end'] - segment_info['start']
-    
+    duration = segment_info["end"] - segment_info["start"]
+
     # Get number of questions from config
     num_questions = int(config.temporal_localization.questions_per_segment)
-    
+
     return TEMPORAL_LOCALIZATION_PROMPT.format(
         video_id=video_id,
         duration=duration,
         num_questions=num_questions,
-        transcript_text=transcript_text if transcript_text else "No transcript available"
+        transcript_text=transcript_text
+        if transcript_text
+        else "No transcript available",
     )

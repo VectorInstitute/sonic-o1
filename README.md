@@ -337,4 +337,3 @@ Common issues:
 * Open an issue on GitHub: [https://github.com/VectorInstitute/sonic-o1/issues](https://github.com/VectorInstitute/sonic-o1/issues)
 * Check individual stage README files for detailed troubleshooting
 * Review stage-specific configuration examples in `config/` directories
-

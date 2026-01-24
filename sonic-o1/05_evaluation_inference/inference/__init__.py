@@ -1,5 +1,5 @@
 """
-inference/__init__.py
+inference/__init__.py.
 
 Inference pipeline for model evaluation.
 """

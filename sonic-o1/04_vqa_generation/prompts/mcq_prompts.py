@@ -118,38 +118,45 @@ CRITICAL RULES:
 
 Now generate ONE MCQ question as a single JSON object for this segment:"""
 
+
 def get_mcq_prompt(segment_info: dict, metadata: dict, transcript: str, config) -> str:
-    """Generate MCQ prompt for a segment"""
+    """Generate MCQ prompt for a segment."""
     evidence_tags = config.mcq.evidence_tags
     num_options = config.mcq.num_options  # e.g., 5
-    
+
     # Calculate derived values
     num_content_options = num_options - 1  # e.g., 4 (excluding "Not enough evidence")
     max_index = num_options - 1  # e.g., 4
-    
+
     # Generate option letters
-    option_letters = [chr(65 + i) for i in range(num_options)]  # ['A', 'B', 'C', 'D', 'E']
+    option_letters = [
+        chr(65 + i) for i in range(num_options)
+    ]  # ['A', 'B', 'C', 'D', 'E']
     last_option_letter = option_letters[-1]  # e.g., 'E'
     second_to_last_letter = option_letters[-2]  # e.g., 'D'
-    
+
     # Calculate distribution percentage (now including "Not enough evidence" position)
     distribution_percentage = round(100 / num_options, 1)  # e.g., 20.0% for 5 options
-    
+
     # Generate extra positions text for distribution
-    extra_positions = ''
+    extra_positions = ""
     if num_content_options > 4:
         for i in range(4, num_content_options):
-            extra_positions += f"\n  * Position {option_letters[i]}: ~{distribution_percentage}%"
-    
-    evidence_tags_str = '\n'.join([f"  - {tag}" for tag in evidence_tags])
-    
+            extra_positions += (
+                f"\n  * Position {option_letters[i]}: ~{distribution_percentage}%"
+            )
+
+    evidence_tags_str = "\n".join([f"  - {tag}" for tag in evidence_tags])
+
     return MCQ_GENERATION_PROMPT.format(
-        video_id=metadata.get('video_id', 'unknown'),
-        topic_name=metadata.get('topic_name', 'Unknown'),
-        start_time=segment_info['start'],
-        end_time=segment_info['end'],
-        duration=segment_info['duration'],
-        transcript_text=transcript if transcript else "No transcript available for this segment",
+        video_id=metadata.get("video_id", "unknown"),
+        topic_name=metadata.get("topic_name", "Unknown"),
+        start_time=segment_info["start"],
+        end_time=segment_info["end"],
+        duration=segment_info["duration"],
+        transcript_text=transcript
+        if transcript
+        else "No transcript available for this segment",
         evidence_tags_list=evidence_tags_str,
         num_options=num_options,
         num_content_options=num_content_options,
@@ -157,5 +164,5 @@ def get_mcq_prompt(segment_info: dict, metadata: dict, transcript: str, config) 
         last_option_letter=last_option_letter,
         second_to_last_letter=second_to_last_letter,
         distribution_percentage=distribution_percentage,
-        extra_positions=extra_positions
+        extra_positions=extra_positions,
     )

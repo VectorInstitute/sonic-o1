@@ -8,7 +8,7 @@ gemini:
   retry_delay: 20  # Base delay in seconds (will use exponential backoff)
   file_processing_timeout: 7200  # 2 hours for large files
   max_output_tokens: 2048
-  
+
 # Video Processing Settings
 video:
   # Segment duration settings per task
@@ -16,7 +16,7 @@ video:
   mcq_segment_duration: 180  # 3 minutes for MCQ (each treated independently)
   temporal_localization_segment_duration: 180  # 3 minutes for temporal localization
   segment_overlap: 30  # Overlap between segments in seconds (30 sec)
-  
+
 # File size thresholds for processing strategy
 file_processing:
   inline_threshold_mb: 20  # Files >20MB use File API
@@ -47,7 +47,7 @@ summarization:
 mcq:
   num_options: 5  # Always 5 options (4 + "Not enough evidence")
   questions_per_segment: 1  # How many MCQs per segment
-  
+
   # Controlled vocabulary for evidence tags
   evidence_tags:
     - signage
@@ -83,22 +83,22 @@ mcq:
     - crowd_cheering
     - sirens
     - police_lights
-  
+
 # Task 3: Temporal Localization Settings
 temporal_localization:
   questions_per_segment: 3  # Number of temporal questions per 3-min segment
-  
+
   # Temporal relation distribution (optional - for balanced generation)
   temporal_relations:
     after: 0.25  # 25% of questions use "after" relation
     once_finished: 0.25  # 25% use "once_finished"
     next: 0.20  # 20% use "next"
     during: 0.15  # 15% use "during"
-    before: 0.15  # 15% use "before" 
-  
+    before: 0.15  # 15% use "before"
+
   # Minimum confidence for temporal localization
   min_confidence: 0.5
-  
+
   # Abstention threshold (if confidence below this, consider abstaining)
   abstention_threshold: 0.3
   judge_enabled: true  # Enable GPT-4V validation
@@ -131,7 +131,7 @@ demographics:
       - Arabic
       - Spanish
       - Chinese
-  
+
   # Minimum confidence for demographics (0-1)
   min_confidence: 0.6
 # Dataset Paths

@@ -1,18 +1,18 @@
-"""
-T1: Video Summarization Prompts
-"""
+"""T1: Video Summarization Prompts."""
+
 
 def get_t1_prompt(video_duration: float) -> str:
     """
     Get prompt for T1 video summarization task.
-    
+
     Args:
         video_duration: Duration of video in seconds
-        
-    Returns:
+
+    Returns
+    -------
         Prompt string
     """
-    prompt = f"""You are analyzing a video that is {video_duration:.0f} seconds long.
+    return f"""You are analyzing a video that is {video_duration:.0f} seconds long.
 
             Please provide a comprehensive analysis with the following components:
 
@@ -47,21 +47,21 @@ def get_t1_prompt(video_duration: float) -> str:
             }}
 
             Only return the JSON object, no additional text."""
-    
-    return prompt
+
 
 
 def get_t1_empathy_prompt(video_duration: float) -> str:
     """
     Get empathy-focused prompt for T1 task.
-    
+
     Args:
         video_duration: Duration of video in seconds
-        
-    Returns:
+
+    Returns
+    -------
         Empathy prompt string
     """
-    prompt = f"""You are analyzing a video that is {video_duration:.0f} seconds long.
+    return f"""You are analyzing a video that is {video_duration:.0f} seconds long.
 
                 Please provide an empathetic and emotionally aware analysis. Focus on understanding the emotional context, interpersonal dynamics, and human elements in the content.
 
@@ -78,5 +78,4 @@ def get_t1_empathy_prompt(video_duration: float) -> str:
                 }}
 
                 Only return the JSON object, no additional text."""
-    
-    return prompt
+

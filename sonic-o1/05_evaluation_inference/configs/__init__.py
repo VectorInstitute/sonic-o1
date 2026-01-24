@@ -1,3 +1,1 @@
-"""
-configs/__init__.py
-"""
+"""configs/__init__.py."""

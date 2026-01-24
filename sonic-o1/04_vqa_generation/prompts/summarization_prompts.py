@@ -1,6 +1,4 @@
-"""
-Task 1: Summarization prompts (map and reduce phases)
-"""
+"""Task 1: Summarization prompts (map and reduce phases)."""
 
 # MAP PHASE: Per-segment summarization
 MAP_PHASE_PROMPT = """You are a precise video segment summarizer.
@@ -152,7 +150,7 @@ OUTPUT FORMAT (JSON):
 
 CRITICAL:
 - Return ONLY valid JSON
-- No markdown, no extra text  
+- No markdown, no extra text
 - Timeline in HH:MM:SS format
 - Aim for {timeline_min}-{timeline_max} timeline items
 
@@ -246,47 +244,51 @@ Begin update:"""
 
 # Helper functions
 
+
 def get_map_prompt(segment_info: dict, metadata: dict, transcript: str, config) -> str:
-    """Generate map phase prompt for a segment"""
+    """Generate map phase prompt for a segment."""
     max_words = config.summarization.constraints.max_words_segment
-    
+
     return MAP_PHASE_PROMPT.format(
-        start_time=segment_info['start'],
-        end_time=segment_info['end'],
-        duration=segment_info['duration'],
-        title=metadata.get('title', 'Unknown'),
-        topic_name=metadata.get('topic_name', 'Unknown'),
+        start_time=segment_info["start"],
+        end_time=segment_info["end"],
+        duration=segment_info["duration"],
+        title=metadata.get("title", "Unknown"),
+        topic_name=metadata.get("topic_name", "Unknown"),
         transcript_text=transcript if transcript else "No transcript available",
-        max_words=max_words
+        max_words=max_words,
     )
+
 
 def get_initialize_prompt(first_segment: dict, video_id: str, metadata: dict) -> str:
-    """Generate prompt to initialize summary from first segment"""
+    """Generate prompt to initialize summary from first segment."""
     import json
-    
+
     return INITIALIZE_SUMMARY_PROMPT.format(
         video_id=video_id,
-        title=metadata.get('title', 'Unknown'),
-        duration=metadata.get('duration_seconds', 0),
-        first_segment_json=json.dumps(first_segment, indent=2)
+        title=metadata.get("title", "Unknown"),
+        duration=metadata.get("duration_seconds", 0),
+        first_segment_json=json.dumps(first_segment, indent=2),
     )
 
 
-def get_streaming_update_prompt(current_summary: dict, 
-                                new_segment: dict,
-                                video_id: str,
-                                metadata: dict,
-                                segment_num: int,
-                                total_segments: int,
-                                config) -> str:
-    """Generate prompt to add new segment to accumulated summary"""
+def get_streaming_update_prompt(
+    current_summary: dict,
+    new_segment: dict,
+    video_id: str,
+    metadata: dict,
+    segment_num: int,
+    total_segments: int,
+    config,
+) -> str:
+    """Generate prompt to add new segment to accumulated summary."""
     import json
-    
+
     constraints = config.summarization.constraints
-    
+
     return STREAMING_UPDATE_PROMPT.format(
         video_id=video_id,
-        title=metadata.get('title', 'Unknown'),
+        title=metadata.get("title", "Unknown"),
         segment_num=segment_num,
         total_segments=total_segments,
         current_summary_json=json.dumps(current_summary, indent=2),
@@ -296,20 +298,23 @@ def get_streaming_update_prompt(current_summary: dict,
         timeline_min=constraints.timeline_items_min,
         timeline_max=constraints.timeline_items_max,
         glossary_min=constraints.glossary_items_min,
-        glossary_max=constraints.glossary_items_max
+        glossary_max=constraints.glossary_items_max,
     )
 
-def get_reduce_prompt(video_id: str, metadata: dict, segment_summaries: list, config) -> str:
-    """Generate reduce phase prompt for merging segments"""
+
+def get_reduce_prompt(
+    video_id: str, metadata: dict, segment_summaries: list, config
+) -> str:
+    """Generate reduce phase prompt for merging segments."""
     import json
-    
+
     constraints = config.summarization.constraints
-    
+
     return REDUCE_PHASE_PROMPT.format(
         video_id=video_id,
-        title=metadata.get('title', 'Unknown'),
-        topic_name=metadata.get('topic_name', 'Unknown'),
-        duration=metadata.get('duration_seconds', 0),
+        title=metadata.get("title", "Unknown"),
+        topic_name=metadata.get("topic_name", "Unknown"),
+        duration=metadata.get("duration_seconds", 0),
         num_segments=len(segment_summaries),
         segment_summaries_json=json.dumps(segment_summaries, indent=2),
         num_bullets=constraints.summary_short_bullets,
@@ -317,24 +322,24 @@ def get_reduce_prompt(video_id: str, metadata: dict, segment_summaries: list, co
         timeline_min=constraints.timeline_items_min,
         timeline_max=constraints.timeline_items_max,
         glossary_min=constraints.glossary_items_min,
-        glossary_max=constraints.glossary_items_max
+        glossary_max=constraints.glossary_items_max,
     )
 
 
 def get_direct_prompt(video_id: str, metadata: dict, transcript: str, config) -> str:
-    """Generate direct summarization prompt for short videos"""
+    """Generate direct summarization prompt for short videos."""
     constraints = config.summarization.constraints
-    
+
     return DIRECT_SUMMARY_PROMPT.format(
         video_id=video_id,
-        title=metadata.get('title', 'Unknown'),
-        topic_name=metadata.get('topic_name', 'Unknown'),
-        duration=metadata.get('duration_seconds', 0),
+        title=metadata.get("title", "Unknown"),
+        topic_name=metadata.get("topic_name", "Unknown"),
+        duration=metadata.get("duration_seconds", 0),
         transcript_text=transcript if transcript else "No transcript available",
         num_bullets=constraints.summary_short_bullets,
         max_words_detailed=constraints.max_words_detailed,
         timeline_min=constraints.timeline_items_min,
         timeline_max=constraints.timeline_items_max,
         glossary_min=constraints.glossary_items_min,
-        glossary_max=constraints.glossary_items_max
+        glossary_max=constraints.glossary_items_max,
     )

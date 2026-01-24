@@ -1,7 +1,7 @@
 # Demographics Annotation Configuration
 
 model:
-  name: "gemini-2.5-flash"  
+  name: "gemini-2.5-flash"
   api_key: ${GEMINI_API_KEY}  # Will read from environment variable
   temperature: 0.3
   max_output_tokens: 1024
@@ -34,16 +34,16 @@ demographics:
     - "Indigenous"
     - "Arab"
     - "Hispanic"
-  
+
   genders:
     - "Male"
     - "Female"
-  
+
   age_groups:
     - "Young (18-24)"
     - "Middle (25-39)"
     - "Older adults (40+)"
-  
+
   languages:
     - "English"
     - "Hindi"
@@ -55,27 +55,27 @@ processing:
   batch_size: 5
   save_interval: 10
   use_cache: true
-  
+
   # Video processing limits
   file_processing_timeout: 7200  # Max time (seconds) to wait for Google File API processing (2 hours)
   max_video_duration: 1500       # Max video duration (seconds) before auto-segmentation (55 minutes)
   max_transcript_length: 25000   # Max transcript characters (to avoid token overflow)
-  
+
   # Segmentation settings (for videos longer than max_video_duration)
   segment_overlap: 60            # Overlap between segments in seconds (1 minute)
   enable_segmentation: true      # Enable automatic segmentation for long videos
-  
+
   log_level: "INFO"
   output_format: "metadata_enhanced.json"
-  
+
   # File patterns
   video_pattern: "video_{number}.mp4"
   audio_pattern: "audio_{number}.m4a"
   caption_pattern: "caption_{number}.srt"
-  
+
   # Multimodal processing
   prefer_video_with_audio: false  # Send both video AND separate audio (all files together)
-  
+
   # Output settings
   save_raw_responses: true
   create_backup: true

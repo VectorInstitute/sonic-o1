@@ -5,7 +5,7 @@ vqa_path: "vqa"
 results:
   predictions_path: "05_evaluation_inference/results/predictions"
   scores_path: "05_evaluation_inference/results/scores"
-  
+
 # Tasks to evaluate
 tasks:
   - task1_summarization
@@ -40,20 +40,20 @@ retry:
   max_attempts: 4  # Increase to 4 to match 4 fallback options
   fps_fallback: [1, 0.5, 0.25]  # Keep for reference (if needed for API models)
   frame_count_fallback: [256, 128, 64, 32]  # NEW: Your desired fallback
-  audio_chunks_fallback: [null, 64, 32, 16] 
-  audio_chunk_duration_sec: 10.0                  
+  audio_chunks_fallback: [null, 64, 32, 16]
+  audio_chunk_duration_sec: 10.0
 
 
 metrics:
   # LLM Judge Model Configuration
   llm_judge_model: "gpt-5-mini"  #  "Qwen/Qwen3-8B" / "gpt-5-mini"
-  
+
   # Multi-GPU Distribution
   llm_judge_device_map: "auto"  # Options: "auto", "balanced", or custom dict
-  
+
   # Precision
   llm_judge_dtype: "bfloat16"  # Options: "bfloat16", "float16", "float32", "auto"
-  
+
   # Optional: Memory limits per GPU (in GiB)
   # Uncomment and adjust if you want to reserve GPU memory for other models
   llm_judge_max_memory:
@@ -61,13 +61,13 @@ metrics:
     1: "30GiB"  # GPU 1: Can use up to 40GB
     2: "30GiB"  # GPU 2: Can use up to 40GB
     3: "30GiB"  # GPU 3: Can use up to 40GB
-  
+
   # Generation Configuration
   llm_judge_generation:
     temperature: 0.0     # 0 = deterministic, >0 = stochastic
     top_p: 0.95           # Nucleus sampling
     max_new_tokens: 32768   # Max response length
-  
+
   iou_thresholds: [0.3, 0.5, 0.7]
 
 # Empathy Evaluation
@@ -88,7 +88,7 @@ models:
       top_p: 0.95
       top_k: 40
       max_output_tokens: 8192
-  
+
   - name: "qwen3"
     class: "Qwen3Omni"
     model_path: "Qwen/Qwen3-Omni-30B-A3B-Instruct"
@@ -98,10 +98,10 @@ models:
     use_thinking: false
     device_map: "auto"
     dtype: "bfloat16"
-    gpu_memory_utilization: 0.75  
+    gpu_memory_utilization: 0.75
     attn_implementation: "sdpa"
     max_frames: 256
-    min_frames: 32 
+    min_frames: 32
     generation_config:
       temperature: 0.7
       top_p: 0.95
@@ -113,24 +113,24 @@ models:
     supports_video: true
     supports_audio: true
     audio_format: m4a
-    
+
     # Device configuration
     device: cuda
     dtype: bfloat16  # or torch.bfloat16
     attn_implementation: sdpa  # or 'flash_attention_2' if flash-attn installed
-    
+
     # Audio processing
     audio_sample_rate: 16000
     audio_mono: true
-    
+
     # Model initialization
     init_vision: true
     init_audio: true
     init_tts: false
     language: en
     min_frames: 32
-    max_frames: 256     
-  
+    max_frames: 256
+
     # Generation configuration
     generation_config:
       temperature: 0.7
@@ -140,22 +140,22 @@ models:
   - name: "unimoe"
     class: "UniMoe"
     model_path: "HIT-TMG/Uni-MoE-2.0-Omni"
-    
+
     # Optional: Path to Uni-MoE package if not in PYTHONPATH
     unimoe_package_path: "05_evaluation_inference/external_repos/Uni-MoE/Uni-MoE-2"
-    
+
     supports_video: true
     supports_audio: true
     audio_format: "wav"
-    
+
     # Device configuration
     #device: "cuda:0"
     device: "auto"
     dtype: "bfloat16"  # or "float16", "float32"
-    
+
     # Frame sampling limits (spatial, not temporal)
     max_frames: 256
-    min_frames: 32 
+    min_frames: 32
     # Generation configuration
     generation_config:
       temperature: 0.7
@@ -166,19 +166,19 @@ models:
     class: "VITA"
     model_path: "VITA-MLLM/VITA-1.5"
     vita_repo_path: "05_evaluation_inference/external_repos/VITA"
-    
+
     supports_video: true
     supports_audio: true
-    
+
     model_type: "qwen2p5_instruct"
     conv_mode: "qwen2p5_instruct"
-    
+
     max_frames: 64
     min_frames: 32
     video_framerate: 1
     image_aspect_ratio: "pad"
 
-    
+
     generation_config:
       temperature: 0.7
       top_p: 0.95
@@ -189,15 +189,15 @@ models:
     class: "VideoLLaMA2"
     model_path: "DAMO-NLP-SG/VideoLLaMA2.1-7B-AV"
     videollama_repo_path: "05_evaluation_inference/external_repos/VideoLLaMA2"
-    
+
     supports_video: false
     supports_audio: true
     audio_format: "wav"
-    
+
     # Device configuration
     device_map: "auto"
     dtype: "bfloat16"
-    
+
     # Frame config
     max_frames: 128
     min_frames: 16
@@ -214,28 +214,28 @@ models:
     class: "GPT4o"
     api_key_env: "OPENAI_API_KEY"
     model_version: "gpt-4o"
-    
+
     # Multimodal mode: both frames and captions
     supports_video: true
     supports_audio: false
     use_captions: true
-    
+
     # Retry strategy: 'frame_count_caption', 'frame_count', 'fps', or 'auto'
     retry_strategy: "frame_count_caption"
-    
+
     # Frame configuration
     max_frames: 128
     image_detail: "auto"
-    
+
     # Retry configuration with progressive degradation
     retry_override:
       frame_count_fallback: [128, 64, 32, 16]
       caption_chunks_fallback: [null, 32, 16, 8]
-    
+
     # API retry settings
     retry_attempts: 3
     retry_delay: 2
-    
+
     # Generation configuration
     generation_config:
       temperature: 0.7
@@ -245,21 +245,21 @@ models:
   - name: "phi4"
     class: "Phi4"
     model_path: "microsoft/Phi-4-multimodal-instruct"
-    
+
     supports_video: true
     supports_audio: true
     audio_format: "m4a"  # Supports m4a, wav, mp3, etc.
-    
+
     # Device configuration
     device_map: "auto"  # Multi-GPU distribution
     torch_dtype: "bfloat16"  # Explicit dtype (or "auto" for flexibility)
-    attn_implementation: "sdpa"  
+    attn_implementation: "sdpa"
     trust_remote_code: true
-    
+
     # Frame config
-    max_frames: 128  
-    min_frames: 8   
-    
+    max_frames: 128
+    min_frames: 8
+
     # Audio config
     audio_sample_rate: 16000  # Phi-4's audio encoder requirement
     audio_mono: true          # Speech models use mono

@@ -1,8 +1,8 @@
-"""
-Demographics expansion utility - transform metadata format to VQA format
-"""
+"""Demographics expansion utility - transform metadata format to VQA format."""
+
 import logging
-from typing import Dict, List, Any
+from typing import Any, Dict, List
+
 
 logger = logging.getLogger(__name__)
 
@@ -10,55 +10,56 @@ logger = logging.getLogger(__name__)
 class DemographicsExpander:
     """
     Expand demographics from metadata format to VQA format with individual counts.
-    
+
     Takes human-reviewed demographics from metadata_enhanced.json and transforms them
     into the VQA format with individual counting per segment.
     """
-    
+
     def __init__(self, config):
         """
         Initialize expander with configuration.
-        
+
         Args:
             config: Configuration object
         """
         self.config = config
         self.demographics_categories = config.demographics.categories
-    
-    def build_expansion_prompt(self, 
-                              metadata_demographics: Dict[str, List[str]],
-                              segment_info: Dict = None) -> str:
+
+    def build_expansion_prompt(
+        self, metadata_demographics: Dict[str, List[str]], segment_info: Dict = None
+    ) -> str:
         """
         Build prompt for Gemini to expand demographics with counting.
-        
+
         Args:
             metadata_demographics: Demographics from metadata_enhanced.json
                 Format: {"race": ["Arab"], "gender": ["Male"], "age": ["Young (18-24)"], "language": ["English"]}
             segment_info: Optional segment information (start, end times)
-            
-        Returns:
+
+        Returns
+        -------
             Prompt string for Gemini
         """
-        race_list = metadata_demographics.get('race', [])
-        gender_list = metadata_demographics.get('gender', [])
-        age_list = metadata_demographics.get('age', [])
-        language_list = metadata_demographics.get('language', [])
-        
+        race_list = metadata_demographics.get("race", [])
+        gender_list = metadata_demographics.get("gender", [])
+        age_list = metadata_demographics.get("age", [])
+        language_list = metadata_demographics.get("language", [])
+
         segment_context = ""
         if segment_info:
             segment_context = f"""
-This is a SEGMENT of the full video from {segment_info['start']}s to {segment_info['end']}s.
+This is a SEGMENT of the full video from {segment_info["start"]}s to {segment_info["end"]}s.
 Only count individuals visible/audible in THIS segment.
 """
-        
-        prompt = f"""You are analyzing video content for demographics annotation.
+
+        return f"""You are analyzing video content for demographics annotation.
 
                 HUMAN-REVIEWED DEMOGRAPHICS (Ground Truth):
                 The video contains individuals with these demographic characteristics:
-                - Race/Ethnicity: {', '.join(race_list) if race_list else 'Not specified'}
-                - Gender: {', '.join(gender_list) if gender_list else 'Not specified'}
-                - Age: {', '.join(age_list) if age_list else 'Not specified'}
-                - Language: {', '.join(language_list) if language_list else 'Not specified'}
+                - Race/Ethnicity: {", ".join(race_list) if race_list else "Not specified"}
+                - Gender: {", ".join(gender_list) if gender_list else "Not specified"}
+                - Age: {", ".join(age_list) if age_list else "Not specified"}
+                - Language: {", ".join(language_list) if language_list else "Not specified"}
 
                 {segment_context}
 
@@ -93,7 +94,7 @@ Only count individuals visible/audible in THIS segment.
                 "demographics": [
                     {{
                     "race": "Arab",
-                    "gender": "Male", 
+                    "gender": "Male",
                     "age": "Young (18-24)",
                     "language": "English",
                     "count": 2
@@ -101,7 +102,7 @@ Only count individuals visible/audible in THIS segment.
                     {{
                     "race": "White",
                     "gender": "Female",
-                    "age": "Middle (25-39)", 
+                    "age": "Middle (25-39)",
                     "language": "English",
                     "count": 1
                     }}
@@ -121,25 +122,25 @@ Only count individuals visible/audible in THIS segment.
                 - Confidence should be 0.8+ if you're using the provided demographics correctly
 
                 Begin analysis:"""
-        
-        return prompt
-    
+
+
     def parse_demographics_response(self, response_text: str) -> Dict[str, Any]:
         """
         Parse Gemini's response and validate demographics format.
-        
+
         Args:
             response_text: JSON response from Gemini
-            
-        Returns:
+
+        Returns
+        -------
             Parsed and validated demographics dict
         """
         import json
-        
+
         try:
             # Clean response
             response_text = response_text.strip()
-            
+
             # Remove markdown code blocks if present
             if "```json" in response_text:
                 start = response_text.find("```json") + 7
@@ -151,80 +152,89 @@ Only count individuals visible/audible in THIS segment.
                 end = response_text.rfind("```")
                 if end > start:
                     response_text = response_text[start:end]
-            
+
             # Parse JSON
             data = json.loads(response_text.strip())
-            
+
             # Validate structure
-            if 'demographics' not in data:
+            if "demographics" not in data:
                 logger.error("Missing 'demographics' field in response")
                 return self._get_empty_demographics()
-            
-            if not isinstance(data['demographics'], list):
+
+            if not isinstance(data["demographics"], list):
                 logger.error("'demographics' field is not a list")
                 return self._get_empty_demographics()
-            
+
             # Validate each demographic entry
             validated_demographics = []
             total_count = 0
             unknown_count = 0
-            
-            for entry in data['demographics']:
+
+            for entry in data["demographics"]:
                 if not isinstance(entry, dict):
                     continue
-                
+
                 # Ensure required fields
-                if 'count' not in entry:
+                if "count" not in entry:
                     logger.warning(f"Missing 'count' in demographic entry: {entry}")
                     continue
-                
+
                 # Convert count to int if needed
                 try:
-                    count = int(entry['count'])
+                    count = int(entry["count"])
                 except (ValueError, TypeError):
                     logger.warning(f"Invalid count value: {entry.get('count')}")
                     count = 0
-                
+
                 # Check for "Unknown" usage
-                race = entry.get('race', 'Unknown')
-                gender = entry.get('gender', 'Unknown')
-                age = entry.get('age', 'Unknown')
-                language = entry.get('language', 'Unknown')
-                
+                race = entry.get("race", "Unknown")
+                gender = entry.get("gender", "Unknown")
+                age = entry.get("age", "Unknown")
+                language = entry.get("language", "Unknown")
+
                 # Count how many unknowns in this entry
-                if race == 'Unknown' or gender == 'Unknown' or age == 'Unknown' or language == 'Unknown':
+                if (
+                    race == "Unknown"
+                    or gender == "Unknown"
+                    or age == "Unknown"
+                    or language == "Unknown"
+                ):
                     unknown_count += 1
                     logger.warning(f"Entry contains 'Unknown' values: {entry}")
-                
+
                 validated_entry = {
-                    'race': race,
-                    'gender': gender,
-                    'age': age,
-                    'language': language,
-                    'count': count
+                    "race": race,
+                    "gender": gender,
+                    "age": age,
+                    "language": language,
+                    "count": count,
                 }
-                
+
                 validated_demographics.append(validated_entry)
                 total_count += count
-            
+
             # Log warning if too many unknowns
             if unknown_count > 0:
-                logger.warning(f"{unknown_count} demographic entries contain 'Unknown' values - model may be too conservative")
-            
-            confidence = float(data.get('confidence', 0.0))
-            
+                logger.warning(
+                    f"{unknown_count} demographic entries contain 'Unknown' values - model may be too conservative"
+                )
+
+            confidence = float(data.get("confidence", 0.0))
+
             # Reduce confidence if too many unknowns
             if unknown_count > len(validated_demographics) / 2:
-                logger.warning("More than 50% of entries have Unknown values, reducing confidence")
+                logger.warning(
+                    "More than 50% of entries have Unknown values, reducing confidence"
+                )
                 confidence *= 0.5
-            
+
             return {
-                'demographics': validated_demographics,
-                'total_individuals': data.get('total_individuals', total_count),
-                'confidence': confidence,
-                'explanation': data.get('explanation', '')
+                "demographics": validated_demographics,
+                "total_individuals": data.get("total_individuals", total_count),
+                "confidence": confidence,
+                "explanation": data.get("explanation", ""),
             }
-            
+
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse demographics JSON: {e}")
             logger.debug(f"Response text: {response_text[:500]}...")
@@ -232,27 +242,29 @@ Only count individuals visible/audible in THIS segment.
         except Exception as e:
             logger.error(f"Error parsing demographics response: {e}")
             return self._get_empty_demographics()
-    
+
     def _get_empty_demographics(self) -> Dict[str, Any]:
-        """Return empty demographics structure"""
+        """Return empty demographics structure."""
         return {
-            'demographics': [],
-            'total_individuals': 0,
-            'confidence': 0.0,
-            'explanation': 'Failed to parse demographics'
+            "demographics": [],
+            "total_individuals": 0,
+            "confidence": 0.0,
+            "explanation": "Failed to parse demographics",
         }
-    
-    def merge_segment_demographics(self, 
-                                  segment_demographics: List[Dict[str, Any]]) -> Dict[str, Any]:
+
+    def merge_segment_demographics(
+        self, segment_demographics: List[Dict[str, Any]]
+    ) -> Dict[str, Any]:
         """
         Merge demographics from multiple segments for video-level summary.
-        
+
         Uses maximum count seen across all segments (conservative approach).
-        
+
         Args:
             segment_demographics: List of demographics dicts from each segment
-            
-        Returns:
+
+        Returns
+        -------
             Merged demographics dict
         """
         # Track unique demographic combinations and their max counts
@@ -260,40 +272,40 @@ Only count individuals visible/audible in THIS segment.
         total_max = 0
         all_explanations = []
         min_confidence = 1.0
-        
+
         for seg_demo in segment_demographics:
-            for entry in seg_demo.get('demographics', []):
+            for entry in seg_demo.get("demographics", []):
                 # Create key from demographic attributes
                 key = (
-                    entry.get('race', 'Unknown'),
-                    entry.get('gender', 'Unknown'),
-                    entry.get('age', 'Unknown'),
-                    entry.get('language', 'Unknown')
+                    entry.get("race", "Unknown"),
+                    entry.get("gender", "Unknown"),
+                    entry.get("age", "Unknown"),
+                    entry.get("language", "Unknown"),
                 )
-                
-                count = entry.get('count', 0)
-                
+
+                count = entry.get("count", 0)
+
                 # Keep maximum count seen for this combination
-                if key not in demographic_map or count > demographic_map[key]['count']:
+                if key not in demographic_map or count > demographic_map[key]["count"]:
                     demographic_map[key] = entry.copy()
-            
+
             # Track total
-            total_max = max(total_max, seg_demo.get('total_individuals', 0))
-            
+            total_max = max(total_max, seg_demo.get("total_individuals", 0))
+
             # Collect explanations
-            if seg_demo.get('explanation'):
-                all_explanations.append(seg_demo['explanation'])
-            
+            if seg_demo.get("explanation"):
+                all_explanations.append(seg_demo["explanation"])
+
             # Track minimum confidence
-            min_confidence = min(min_confidence, seg_demo.get('confidence', 1.0))
-        
+            min_confidence = min(min_confidence, seg_demo.get("confidence", 1.0))
+
         # Convert back to list
         merged_demographics = list(demographic_map.values())
-        
+
         return {
-            'demographics': merged_demographics,
-            'total_individuals': total_max,
-            'confidence': min_confidence,
-            'explanation': f"Merged from {len(segment_demographics)} segments. " + 
-                          " | ".join(all_explanations[:2])
+            "demographics": merged_demographics,
+            "total_individuals": total_max,
+            "confidence": min_confidence,
+            "explanation": f"Merged from {len(segment_demographics)} segments. "
+            + " | ".join(all_explanations[:2]),
         }

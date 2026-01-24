@@ -1,35 +1,33 @@
-"""
-Prompts for GPT-4V Temporal Question Validation
-"""
-from typing import Dict, Any
+"""Prompts for GPT-4V Temporal Question Validation."""
+
 import json
+from typing import Any, Dict
 
 
 def build_validation_prompt(
-    question: Dict[str, Any],
-    segment_info: Dict[str, Any],
-    transcript_text: str = ""
+    question: Dict[str, Any], segment_info: Dict[str, Any], transcript_text: str = ""
 ) -> str:
     """
     Build GPT-4V validation prompt for a temporal question.
-    
+
     Args:
         question: The temporal question to validate
         segment_info: Segment metadata (start, end)
         transcript_text: Optional transcript text
-        
-    Returns:
+
+    Returns
+    -------
         Formatted validation prompt
     """
-    segment_start = segment_info['start']
-    segment_end = segment_info['end']
+    segment_start = segment_info["start"]
+    segment_end = segment_info["end"]
     segment_duration = segment_end - segment_start
-    
-    answer = question.get('answer', {})
-    start_s = answer.get('start_s')
-    end_s = answer.get('end_s')
-    
-    prompt = f"""You are validating a temporal localization question for a video segment.
+
+    answer = question.get("answer", {})
+    start_s = answer.get("start_s")
+    end_s = answer.get("end_s")
+
+    return f"""You are validating a temporal localization question for a video segment.
 
 ═══════════════════════════════════════════════════════════════════════════
 SEGMENT INFORMATION
@@ -74,7 +72,7 @@ VALIDATION CRITERIA
    - If end_s cuts off the event prematurely → provide correction
 
 3. **TEMPORAL RELATIONSHIP**
-   - Stated relation: {question.get('temporal_relation', 'unknown')}
+   - Stated relation: {question.get("temporal_relation", "unknown")}
    - Does this relationship make sense between anchor and target?
    - Relations:
      * "after" = target occurs sometime after anchor completes
@@ -168,14 +166,14 @@ Example 4 - Invalid question, wrong temporal relation:
 
 Begin your validation. Respond with ONLY the JSON object."""
 
-    return prompt
 
 
 def build_batch_validation_system_prompt() -> str:
     """
     System prompt for GPT-4V judge validation.
-    
-    Returns:
+
+    Returns
+    -------
         System prompt string
     """
     return """You are an expert video analyst specializing in temporal event validation.

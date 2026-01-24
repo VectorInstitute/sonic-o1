@@ -1,14 +1,12 @@
-"""
-Prompt templates for demographics annotation
-"""
+"""Prompt templates for demographics annotation."""
 
-SYSTEM_PROMPT = """You are a demographics annotation specialist for academic research. 
-Your task is to analyze multimodal media content (video, audio, and text captions/transcripts) 
+SYSTEM_PROMPT = """You are a demographics annotation specialist for academic research.
+Your task is to analyze multimodal media content (video, audio, and text captions/transcripts)
 and identify the demographic characteristics of ALL individuals who appear visually or speak.
 
 You must be objective, accurate, and avoid making assumptions based on stereotypes.
 
-CRITICAL: Return ONLY valid JSON that can be directly parsed. No explanations outside 
+CRITICAL: Return ONLY valid JSON that can be directly parsed. No explanations outside
 the JSON structure."""
 
 MAIN_PROMPT_TEMPLATE = """Analyze this MULTIMODAL media to identify demographics of ALL people who appear visually or speak.
@@ -25,7 +23,7 @@ You have access to multiple modalities for this analysis:
 3. TRANSCRIPT/CAPTIONS: Text representation of spoken content
 {transcript_preview}
 
-IMPORTANT: Use ALL available modalities together for the most accurate analysis. 
+IMPORTANT: Use ALL available modalities together for the most accurate analysis.
 Cross-reference visual, audio, and text cues to identify and confirm demographics.
 
 ---
@@ -62,24 +60,24 @@ DEMOGRAPHIC CATEGORIES TO IDENTIFY:
 
 1. RACE/ETHNICITY (select all that apply):
    - White: European descent appearance
-   - Black: African descent appearance 
+   - Black: African descent appearance
    - Asian: East/Southeast/South Asian appearance
    - Indigenous: Native American/Aboriginal appearance
    - Arab: Middle Eastern/North African appearance
    - Hispanic: Latin American appearance
    - **Note:** Primarily visual assessment. Audio-only inference should have LOW confidence unless very strong accent indicators.
-   
+
 2. GENDER (select all that apply):
    - Male: Masculine presenting individuals OR deep vocal pitch
    - Female: Feminine presenting individuals OR high vocal pitch
    - **Use visual cues first, audio cues second**
-   
+
 3. AGE GROUPS (select all that apply):
    - Young (18-24): Visual appearance OR youthful voice
    - Middle (25-39): Visual appearance OR mature voice
    - Older adults (40+): Visual appearance OR older voice characteristics
    - **Combine visual and audio cues for best accuracy**
-   
+
 4. LANGUAGE (select all spoken):
    - Identify all languages and distinct accents heard
    - Use audio AND transcript to confirm
@@ -139,11 +137,11 @@ Perform this analysis internally but DO NOT include in your response:
 
 1. **Individual Identification:**
    - List each person: "Person 1 (visible + speaking), Person 2 (voice only), Person 3 (visible only)"
-   
+
 2. **Per-Individual Demographics:**
    - Person 1: Race [visual], Gender [visual+audio], Age [visual+audio], Language [audio+transcript]
    - Person 2: Gender [audio], Age [audio], Language [audio+transcript]
-   
+
 3. **Aggregate Demographics:**
    - Unique races: [from all individuals]
    - Unique genders: [from all individuals]
@@ -190,8 +188,8 @@ CRITICAL REMINDERS:
 
 
 def get_validation_prompt() -> str:
-    """Get prompt for validating/fixing JSON output"""
-    return """The following text should be valid JSON but may have formatting issues. 
+    """Get prompt for validating/fixing JSON output."""
+    return """The following text should be valid JSON but may have formatting issues.
     Please return ONLY the corrected valid JSON with no additional text:
-    
+
     {response}"""

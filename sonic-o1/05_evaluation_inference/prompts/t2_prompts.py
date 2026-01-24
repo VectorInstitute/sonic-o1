@@ -1,21 +1,21 @@
-"""
-T2: Question Answering Prompts
-"""
+"""T2: Question Answering Prompts."""
+
 
 def get_t2_prompt(question: str, options: list) -> str:
     """
     Get prompt for T2 multiple choice question answering task.
-    
+
     Args:
         question: The question text
         options: List of answer options (e.g., ["(A) ...", "(B) ...", ...])
-        
-    Returns:
+
+    Returns
+    -------
         Prompt string
     """
     options_text = "\n".join(options)
-    
-    prompt = f"""You are analyzing a video segment to answer a multiple choice question.
+
+    return f"""You are analyzing a video segment to answer a multiple choice question.
 
             QUESTION:
             {question}
@@ -43,5 +43,4 @@ def get_t2_prompt(question: str, options: list) -> str:
             - CRITICAL: include all fields in the JSON and ensure proper formatting espicially answer_letter
 
             Only return the JSON object, no additional text."""
-                
-    return prompt
+
