@@ -295,8 +295,8 @@ If you use this dataset or pipeline in your research, please cite:
 
 ```bibtex
 @article{sonic-o1-2025,
-  title = {SONIC-O1: A SOcial Natural Interaction Corpus for Omnimodal Video Understanding},
-  note  = {Paper coming soon}
+  title   = {SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding},
+  year    = {2026},
 }
 ```
 
