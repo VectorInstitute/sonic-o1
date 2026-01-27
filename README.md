@@ -1,4 +1,4 @@
-# SONIC-O1: A SOcial Natural Interaction Corpus for Omnimodal Video Understanding
+# SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding
 
 [![Hugging Face Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/vector-institute/sonic-o1)
 [![Leaderboard](https://img.shields.io/badge/HuggingFace-Leaderboard-blue?logo=huggingface&logoColor=black)](https://huggingface.co/spaces/vector-institute/sonic-o1-leaderboard)
