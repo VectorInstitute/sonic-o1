@@ -1,5 +1,6 @@
 """
-inference/run_inference.py
+inference/run_inference.py.
+
 Main inference pipeline for model evaluation with resume capability.
 """
 
@@ -22,10 +23,11 @@ from tqdm import tqdm
 load_dotenv()
 sys.path.append(str(Path(__file__).parent.parent))
 
-from prompts.t1_prompts import get_t1_empathy_prompt, get_t1_prompt
-from prompts.t2_prompts import get_t2_prompt
-from prompts.t3_prompts import get_t3_prompt
-from utils.segmenter import VideoSegmenter
+# Local package imports after path setup (required for script/CLI usage)
+from prompts.t1_prompts import get_t1_empathy_prompt, get_t1_prompt  # noqa: E402
+from prompts.t2_prompts import get_t2_prompt  # noqa: E402
+from prompts.t3_prompts import get_t3_prompt  # noqa: E402
+from utils.segmenter import VideoSegmenter  # noqa: E402
 
 
 logging.basicConfig(
@@ -37,7 +39,14 @@ logger = logging.getLogger(__name__)
 class InferenceRunner:
     """Run inference for model evaluation with resume capability."""
 
-    def __init__(self, config_path: str, experiment_name: Optional[str] = None):
+    def __init__(self, config_path: str, experiment_name: Optional[str] = None) -> None:
+        """
+        Initialize runner from a YAML config file.
+
+        Args:
+            config_path: Path to models configuration YAML.
+            experiment_name: Optional experiment label for organizing outputs.
+        """
         with open(config_path, "r") as f:
             self.config = yaml.safe_load(f)
 
@@ -93,8 +102,8 @@ class InferenceRunner:
             return self.video_metadata[video_id].get("duration_category", "medium")
         return "medium"
 
-    def load_model(self, model_name: str):
-        """Load specified model."""
+    def load_model(self, model_name: str) -> None:
+        """Load specified model from config and initialize it."""
         model_config = None
         for m in self.config["models"]:
             if m["name"] == model_name:
@@ -107,36 +116,37 @@ class InferenceRunner:
         self.model_config = model_config
         model_class = model_config["class"]
 
+        # Lazy imports: load only the selected model (env-dependent, avoids heavy deps)
         if model_class == "Gemini":
-            from models.gemini import Gemini
+            from models.gemini import Gemini  # noqa: PLC0415
 
             self.model = Gemini(model_name, model_config)
         elif model_class == "Qwen3Omni":
-            from models.qwen3 import Qwen3Omni
+            from models.qwen3 import Qwen3Omni  # noqa: PLC0415
 
             self.model = Qwen3Omni(model_name, model_config)
         elif model_class == "MiniCPM":
-            from models.minicpm import MiniCPM
+            from models.minicpm import MiniCPM  # noqa: PLC0415
 
             self.model = MiniCPM(model_name, model_config)
         elif model_class == "UniMoe":
-            from models.unimoe import UniMoe
+            from models.unimoe import UniMoe  # noqa: PLC0415
 
             self.model = UniMoe(model_name, model_config)
         elif model_class == "VITA":
-            from models.vita import VITA
+            from models.vita import VITA  # noqa: PLC0415
 
             self.model = VITA(model_name, model_config)
         elif model_class == "VideoLLaMA2":
-            from models.videollama import VideoLLaMA2
+            from models.videollama import VideoLLaMA2  # noqa: PLC0415
 
             self.model = VideoLLaMA2(model_name, model_config)
         elif model_class == "Phi4":
-            from models.phi4 import Phi4
+            from models.phi4 import Phi4  # noqa: PLC0415
 
             self.model = Phi4(model_name, model_config)
         elif model_class == "GPT4o":
-            from models.gpt4o import GPT4o
+            from models.gpt4o import GPT4o  # noqa: PLC0415
 
             self.model = GPT4o(model_name, model_config)
         else:
@@ -145,6 +155,7 @@ class InferenceRunner:
         self.model.load()
         self.model_name = model_name
 
+        # --- KEPT FOR LEGACY COMPATIBILITY (NOT USED IN O1) ---
         # if not model_config.get('supports_video', True):
         #    self.frame_sampler = FrameSampler()
 
@@ -403,7 +414,7 @@ class InferenceRunner:
 
                     start_time = time.time()
 
-                    # Model will handle whether to use it for frames based on supports_video
+                    # Model uses frames or not based on supports_video
                     response = self.model.generate(
                         frames=str(video_path)
                         if video_path
@@ -468,14 +479,15 @@ class InferenceRunner:
                     output = json.loads(response_clean)
                 except json.JSONDecodeError as e:
                     try:
-                        from json_repair import repair_json
+                        # Optional dep: only import when repair is needed
+                        from json_repair import repair_json  # noqa: PLC0415
 
                         repaired_json = repair_json(
                             response_clean, return_objects=False
                         )
                         output = json.loads(repaired_json)
                     except Exception:
-                        raise ValueError(f"JSON parsing failed: {e}")
+                        raise ValueError(f"JSON parsing failed: {e}") from e
 
                 is_valid, validation_msg = self.validate_output(output, task_type)
                 if not is_valid:
@@ -1053,8 +1065,8 @@ class InferenceRunner:
 
         return result
 
-    def save_failed_log(self):
-        """Save log of failed entries."""
+    def save_failed_log(self) -> None:
+        """Save log of failed entries to a JSON file."""
         if not self.failed_entries:
             return
 
@@ -1084,12 +1096,23 @@ class InferenceRunner:
         model_name: str,
         tasks: List[str],
         topics: List[str],
-        enable_empathy: bool = None,
+        enable_empathy: Optional[bool] = None,
         dry_run: bool = False,
         overwrite: bool = False,
         retry_failed: bool = False,
-    ):
-        """Run inference for specified model, tasks, and topics."""
+    ) -> None:
+        """
+        Run inference for specified model, tasks, and topics.
+
+        Args:
+            model_name: Name of the model (must exist in config).
+            tasks: List of task identifiers to run.
+            topics: List of topic names to process.
+            enable_empathy: If True/False, override config; if None, use config.
+            dry_run: If True, skip actual model loading and inference.
+            overwrite: If True, recompute even when predictions exist.
+            retry_failed: If True, retry only previously failed entries.
+        """
         self.model_name = model_name
         if enable_empathy is None:
             enable_empathy = self.config.get("empathy", {}).get("enabled", False)
@@ -1123,8 +1146,6 @@ class InferenceRunner:
 
                 except Exception as e:
                     logger.error(f"Error processing {task} - {topic}: {e}")
-                    import traceback
-
                     traceback.print_exc()
                     continue
 
@@ -1149,18 +1170,16 @@ class InferenceRunner:
     ) -> Optional[Path]:
         """
         Get caption path for a video (full or segment).
-        Extracts video number from either pattern and builds caption path.
+
+        Extracts video number from path stem and builds caption file path.
 
         Args:
-            video_path: Path to video file (full video or segment)
-            topic_name: Topic name for building caption path
+            video_path: Path to video file (full video or segment).
+            topic_name: Topic name for building caption path.
 
-        Returns
-        -------
-            Path to caption file if it exists, None otherwise
+        Returns:
+            Path to caption file if it exists, None otherwise.
         """
-        import re
-
         video_name = video_path.stem
 
         # Try pattern 1: "video_001"
@@ -1187,10 +1206,8 @@ class InferenceRunner:
 
 
 if __name__ == "__main__":
-    import argparse
-
     parser = argparse.ArgumentParser(description="Run model inference")
-    parser.add_argument("--config", type=str, default="configs/models_config.yaml")
+    parser.add_argument("--config", type=str, default="models_config.yaml")
     parser.add_argument("--model", type=str, required=True)
     parser.add_argument("--tasks", nargs="+", default=None)
     parser.add_argument("--topics", nargs="+", default=None)

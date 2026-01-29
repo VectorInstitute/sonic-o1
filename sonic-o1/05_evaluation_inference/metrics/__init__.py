@@ -1,5 +1,6 @@
-"""
-metrics/__init__.py.
+"""metrics/__init__.py
 
-metrics pipeline for model scoring.
+Metrics pipeline for model scoring.
+
+Author: SONIC-O1 Team
 """

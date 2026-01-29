@@ -1,4 +1,9 @@
-"""VQA Generation Models."""
+"""__init__.py.
+
+VQA Generation Models.
+
+Author: SONIC-O1 Team
+"""
 
 from .base_gemini import BaseGeminiClient
 from .mcq_model import MCQModel

@@ -1,20 +1,16 @@
 #!/usr/bin/env python3
-"""
-Standardize Demographics in VQA Files
-This script standardizes demographic values across all VQA JSON files to ensure
-consistency with the canonical categories defined in vqa_config.yaml.
+"""standardize_demographics.py.
 
-Fixes:
-- Maps variant race/ethnicity terms to canonical values (e.g., "South Asian" -> "Asian")
-- Standardizes gender terms
-- Converts age descriptors to numeric brackets (e.g., "Young (18-24)" -> "18-24")
-- Normalizes language variants (e.g., "English American accent" -> "English")
-- Removes "Unknown" entries where possible
+Standardize demographic values across VQA JSON files to match canonical
+categories in vqa_config.yaml. Maps variant race/gender/age/language
+terms to canonical values and removes "Unknown" where possible.
 
 Usage:
-    python standardize_demographics.py --config config/vqa_config.yaml --dry-run
-    python standardize_demographics.py --config config/vqa_config.yaml
+    python standardize_demographics.py --config vqa_config.yaml --dry-run
+    python standardize_demographics.py --config vqa_config.yaml
     python standardize_demographics.py --topics 10,11 --dry-run
+
+Author: SONIC-O1 Team
 """
 
 import argparse
@@ -52,8 +48,21 @@ class Config:
 
 
 def load_config(config_path: str) -> Config:
-    """Load configuration from YAML file."""
-    with open(config_path, "r") as f:
+    """Load configuration from YAML file.
+
+    Args:
+        config_path: Path to config file. If relative, resolved relative
+            to this script's directory.
+
+    Returns
+    -------
+        Config object with nested attribute access.
+    """
+    config_file = Path(config_path)
+    if not config_file.is_absolute():
+        config_file = Path(__file__).parent / config_path
+
+    with open(config_file, "r") as f:
         config_dict = yaml.safe_load(f)
     return Config(config_dict)
 
@@ -305,14 +314,13 @@ class DemographicsStandardizer:
                 # Map to Unknown
                 return "Unknown", True
 
-        elif category == "age":
+        elif category == "age" and (
+            "under" in value_lower
+            or "child" in value_lower
+            or value_lower.startswith("young (under")
+        ):
             # Handle children - map to youngest bracket
-            if (
-                "under" in value_lower
-                or "child" in value_lower
-                or value_lower.startswith("young (under")
-            ):
-                value_lower = "young (18-24)"
+            value_lower = "young (18-24)"
 
         # Select appropriate mappings
         if category == "race":
@@ -730,14 +738,14 @@ class DemographicsStandardizer:
 
 
 def main():
-    """Main entry point."""
+    """Run main entry point."""
     parser = argparse.ArgumentParser(
         description="Standardize Demographics in VQA Files"
     )
     parser.add_argument(
         "--config",
         type=str,
-        default="config/vqa_config.yaml",
+        default="vqa_config.yaml",
         help="Path to configuration file",
     )
     parser.add_argument(

@@ -1,5 +1,6 @@
 """
 Configuration Loader Utility
+
 Loads and provides access to configuration from YAML files.
 """
 
@@ -16,7 +17,7 @@ logger = logging.getLogger(__name__)
 class ConfigLoader:
     """Load and manage configuration from YAML."""
 
-    def __init__(self, config_path: str = "configs/models_config.yaml"):
+    def __init__(self, config_path: str = "models_config.yaml"):
         """
         Initialize config loader.
 
@@ -157,7 +158,7 @@ def get_config(config_path: Optional[str] = None) -> ConfigLoader:
 
     if _config_instance is None:
         if config_path is None:
-            config_path = "configs/models_config.yaml"
+            config_path = "models_config.yaml"
         _config_instance = ConfigLoader(config_path)
 
     return _config_instance

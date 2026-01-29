@@ -1,12 +1,81 @@
 # Demographics Annotation with Gemini
 
+## Overview
+
 This directory handles automatic demographics annotation for videos using Google's Gemini multimodal model. It analyzes videos, audio, and captions to extract demographic information (race, gender, age, language) of people appearing in the videos.
+
+### Directory Structure
+
+```
+03_demographics_annotation/
+├── run_annotation.py      # Main annotation pipeline script
+├── config_loader.py        # Configuration loader (YAML + .env)
+├── config.yaml            # Configuration file
+├── model.py               # Gemini API wrapper
+├── prompts.py             # Prompt templates
+├── README.md              # This file
+│
+└── dataset/              # Output directory (from 01_data_curation)
+    └── videos/<topic_name>/
+        ├── video_001.mp4
+        ├── metadata.json
+        └── metadata_enhanced.json  # Generated output
+```
+
+### Pipeline Workflow
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│ Step 1: Demographics Annotation                                     │
+│ ──────────────────────────────────────────────────────────────────  │
+│ Input:  dataset/videos/<topic>/                                     │
+│         dataset/audios/<topic>/                                     │
+│         dataset/captions/<topic>/                                   │
+│ Output: dataset/videos/<topic>/metadata_enhanced.json               │
+│         ├── demographics_detailed: {race, gender, age, language}    │
+│         ├── demographics_confidence: confidence scores              │
+│         └── demographics_annotation: metadata                       │
+└─────────────────────────────────────────────────────────────────────┘
+                                ↓
+┌─────────────────────────────────────────────────────────────────────┐
+│ Step 2: Next Steps                                                  │
+│ ──────────────────────────────────────────────────────────────────  │
+│ • Check metadata_enhanced.json for demographic annotations          │
+│ • Use --retry-failed to reprocess videos with empty demographics    │
+│ • Proceed to 04_* directory for VQA generation                      │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### Features
+
+- **Multimodal Analysis**: Combines video, audio, and transcript data
+- **Automatic Segmentation**: Handles long videos (>25 min) by splitting
+- **Checkpoint/Resume**: Saves progress every N videos
+- **Retry Failed**: Reprocess videos with empty demographics
+- **Rate Limiting**: Configurable delays to avoid API limits
+- **Error Handling**: Retries, validation, and graceful degradation
+
+### Quality Control
+
+The pipeline includes built-in quality assurance mechanisms:
+
+- **Validation**: Ensures demographics match allowed categories from config
+- **Confidence Filtering**: Filters low-confidence annotations based on `min_confidence` threshold
+- **Retry Logic**: Automatically retries failed API calls (up to `retry_attempts`)
+- **Checkpointing**: Saves progress periodically to prevent data loss on interruption
+- **Comprehensive Logging**: Detailed logs for debugging and quality monitoring
+- **Error Recovery**: Graceful handling of API errors, timeouts, and invalid responses
 
 ## Prerequisites
 
 Before running this step, you must have completed:
-1. **Data Curation** (see [01_data_curation](../01_data_curation/)) - Downloaded videos and audio
-2. **Caption Generation** (see [02_caption_generation](../02_caption_generation/)) - Generated captions for all videos
+
+1. **Data Curation** (see [01_data_curation](../01_data_curation/))
+   - Downloaded videos and audio files
+   - Generated metadata.json files
+
+2. **Caption Generation** (see [02_caption_generation](../02_caption_generation/))
+   - Generated captions for all videos (SRT format)
 
 Your `dataset/` directory should have this structure:
 ```
@@ -20,31 +89,29 @@ dataset/
     └── caption_001.srt
 ```
 
-## Required Packages
+3. **API Setup**
+   1. **Get Gemini API Key**
+      - Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
+      - Create or select a project
+      - Generate an API key
 
-All required Python packages are already included in the project's [requirements_venv.txt](../../requirements_venv.txt):
-- `google-generativeai` - Gemini API
-- `python-dotenv` - Environment variable management
-- `pyyaml` - Configuration file parsing
-- `tqdm` - Progress bars
+   2. **Set API Key**
+      Create a `.env` file in this directory:
+      ```bash
+      GEMINI_API_KEY=your_gemini_api_key_here
+      ```
 
-## API Setup
+      Or export it as an environment variable:
+      ```bash
+      export GEMINI_API_KEY=your_gemini_api_key_here
+      ```
 
-### Get Gemini API Key
-1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Create or select a project
-3. Generate an API key
+## Installation
 
-### Set API Key
-Create a `.env` file in this directory:
-```bash
-GEMINI_API_KEY=your_gemini_api_key_here
-```
+### Required Packages
 
-Or export it as an environment variable:
-```bash
-export GEMINI_API_KEY=your_gemini_api_key_here
-```
+All required Python packages are already included in the project's
+[requirements_venv.txt](../../requirements_venv.txt):
 
 ## Configuration
 
@@ -63,7 +130,7 @@ model:
 ### Dataset Settings
 ```yaml
 dataset:
-  base_path: "dataset"      # Path to dataset directory
+  base_path: "../dataset"   # Path to dataset directory
   topics:                   # Topics to process (or leave empty for all)
     - "01_Patient-Doctor_Consultations"
     - "02_Job_Interviews"
@@ -76,6 +143,11 @@ processing:
   save_interval: 10         # Save checkpoint every N videos
   max_video_duration: 1500  # Max duration before segmentation (25 min)
   enable_segmentation: true # Auto-segment long videos
+  prefer_video_with_audio: false  # Send both video AND audio
+
+  # Output settings
+  save_raw_responses: true  # Save raw API responses for debugging
+  create_backup: true       # Create backup before overwriting metadata
 ```
 
 ### Rate Limiting
@@ -83,12 +155,13 @@ processing:
 rate_limit:
   delay_between_videos: 15      # Seconds between videos
   delay_after_long_video: 60    # Extra delay after long videos
-  long_video_threshold: 1800    # Threshold for "long" video (30 min)
+  long_video_threshold: 1800     # Threshold for "long" video (30 min)
 ```
 
 ## Usage
 
-**IMPORTANT**: Always run the annotation script from the project root (sonic-o1/sonic-o1 directory) so relative paths work correctly.
+**IMPORTANT**: Always run the annotation script from the project root
+(sonic-o1/sonic-o1 directory) so relative paths work correctly.
 
 ### Process All Topics
 
@@ -115,18 +188,17 @@ Then run:
 python 03_demographics_annotation/run_annotation.py
 ```
 
-### Test Single Video
-
-To test on a single video before processing everything:
+### Process Single Topic
 
 ```bash
-# Edit test_single_video.py to set topic and video number
-# Lines 25-26:
-#   topic = "01_Patient-Doctor_Consultations"
-#   video_number = "015"
+python 03_demographics_annotation/run_annotation.py --topic "01_Patient-Doctor_Consultations"
+```
 
-# Run test from project root
-python 03_demographics_annotation/test_single_video.py
+### Retry Failed Videos
+
+Reprocess videos with empty demographics:
+```bash
+python 03_demographics_annotation/run_annotation.py --retry-failed
 ```
 
 ### Use Custom Configuration
@@ -135,9 +207,39 @@ python 03_demographics_annotation/test_single_video.py
 python 03_demographics_annotation/run_annotation.py --config path/to/custom_config.yaml
 ```
 
+### Command-Line Arguments
+
+The script supports several command-line arguments:
+
+| Argument | Description | Example |
+|----------|-------------|---------|
+| `--config` | Path to configuration file (default: `config.yaml`) | `--config my_config.yaml` |
+| `--topic` | Process specific topic only | `--topic "01_Patient-Doctor_Consultations"` |
+| `--api-key` | Override Gemini API key from config/env | `--api-key "your_key_here"` |
+| `--no-cache` | Reprocess all videos even if already done | `--no-cache` |
+| `--retry-failed` | Only reprocess videos with empty demographics | `--retry-failed` |
+
+**Examples:**
+
+```bash
+# Process single topic with custom config
+python 03_demographics_annotation/run_annotation.py \
+  --topic "01_Patient-Doctor_Consultations" \
+  --config custom_config.yaml
+
+# Retry failed videos with API key override
+python 03_demographics_annotation/run_annotation.py \
+  --retry-failed \
+  --api-key "new_api_key"
+
+# Reprocess all videos (ignore checkpoints)
+python 03_demographics_annotation/run_annotation.py --no-cache
+```
+
 ## Output
 
-The script creates `metadata_enhanced.json` files in each topic directory with demographic annotations:
+The script creates `metadata_enhanced.json` files in each topic directory
+with demographic annotations:
 
 ```json
 {
@@ -149,8 +251,19 @@ The script creates `metadata_enhanced.json` files in each topic directory with d
     "age": ["Middle (25-39)"],
     "language": ["English"]
   },
-  "raw_response": "...",
-  "processing_timestamp": "2024-01-14T12:00:00"
+  "demographics_confidence": {
+    "race": {"Asian": 0.9, "White": 0.85},
+    "gender": {"Male": 0.95, "Female": 0.9},
+    "age": {"Middle (25-39)": 0.8},
+    "language": {"English": 1.0}
+  },
+  "demographics_annotation": {
+    "model": "gemini-2.5-flash",
+    "annotated_at": "2024-01-14 12:00:00",
+    "individuals_count": 2,
+    "modalities_used": ["video", "audio", "transcript"],
+    "explanation": "Video shows 2 individuals having a conversation..."
+  }
 }
 ```
 
@@ -159,93 +272,37 @@ The script creates `metadata_enhanced.json` files in each topic directory with d
 dataset/
 └── videos/<topic_name>/
     ├── metadata.json                           # Original metadata
-    ├── metadata_enhanced.json                  # With demographics annotations
-    └── metadata_enhanced_checkpoint.json       # Checkpoint for resume
+    ├── metadata_enhanced.json                  # With demographics
+    ├── metadata_enhanced_checkpoint.json       # Checkpoint (auto-deleted)
+    └── raw_responses/                          # Raw API responses (optional)
+        └── video_001_response.json
 ```
 
 ## Checkpoint and Resume
 
-The script automatically saves checkpoints every N videos (configured by `save_interval`). If the script is interrupted:
+The script automatically saves checkpoints every N videos (configured by
+`save_interval`). If the script is interrupted:
 
-1. **Resume automatically** - Just run the script again, it will detect the checkpoint and continue where it left off
-2. **Start fresh** - Delete the `metadata_enhanced_checkpoint.json` file in the topic directory
+1. **Resume automatically** - Just run the script again, it will detect
+   the checkpoint and continue where it left off
 
-```bash
-# To start fresh on a specific topic
-rm dataset/videos/01_Patient-Doctor_Consultations/metadata_enhanced_checkpoint.json
-```
+2. **Start fresh** - To restart processing from the beginning:
+   ```bash
+   # Delete checkpoint file for a specific topic
+   rm dataset/videos/01_Patient-Doctor_Consultations/metadata_enhanced_checkpoint.json
 
-## Examples
+   # Or delete all checkpoints
+   find dataset/videos -name "metadata_enhanced_checkpoint.json" -delete
 
-### Example 1: Process All Topics
+   # Then run the script normally
+   python 03_demographics_annotation/run_annotation.py
+   ```
 
-```bash
-# 1. Navigate to working directory
-cd /path/to/sonic-o1/sonic-o1
+   **Note**: Starting fresh will reprocess all videos in the topic. If you want
+   to keep existing annotations and only process new videos, don't delete the
+   checkpoint - the script will automatically skip already-processed videos.
 
-# 2. Set API key (if not in .env)
-export GEMINI_API_KEY=your_key_here
 
-# 3. Run annotation
-python 03_demographics_annotation/run_annotation.py
-```
-
-### Example 2: Process Only New Topics
-
-Edit [config.yaml](config.yaml):
-```yaml
-dataset:
-  topics:
-    - "11_Mental_Health_Counseling"
-    - "12_Community_Town_Halls"
-```
-
-Run:
-```bash
-python 03_demographics_annotation/run_annotation.py
-```
-
-### Example 3: Test Single Video First
-
-```bash
-# Edit test_single_video.py to set your test video
-# topic = "02_Job_Interviews"
-# video_number = "005"
-
-# Run test
-python 03_demographics_annotation/test_single_video.py
-```
-
-Expected output:
-```
-================================================================================
-MULTIMODAL DEMOGRAPHICS ANNOTATION TEST
-================================================================================
-Topic: 02_Job_Interviews
-Item Number: 005
-Model: gemini-2.5-flash
-================================================================================
-
-File Paths:
-  Video:    dataset/videos/02_Job_Interviews/video_005.mp4
-  Audio:    dataset/audios/02_Job_Interviews/audio_005.m4a
-  Caption:  dataset/captions/02_Job_Interviews/caption_005.srt
-
-Processing...
-[Success] Demographics extracted
-```
-
-### Example 4: Resume After Interruption
-
-```bash
-# If script was interrupted, just run again
-python 03_demographics_annotation/run_annotation.py
-
-# Output will show:
-# "Found checkpoint file: metadata_enhanced_checkpoint.json"
-# "Loaded 15 processed videos from checkpoint"
-# "Resuming from video 16/25"
-```
 
 ## Processing Time
 
@@ -298,7 +355,12 @@ rate_limit:
 
 **Problem**: Some videos have empty `demographics_detailed`
 
-**Solution**: The script automatically retries failed videos. Check the log file:
+**Solution**: Use the retry flag to reprocess failed videos:
+```bash
+python 03_demographics_annotation/run_annotation.py --retry-failed
+```
+
+Check the log file:
 ```bash
 cat 03_demographics_annotation/demographics_annotation.log
 ```
@@ -325,41 +387,55 @@ model:
   timeout: 120  # Increase from 60 seconds
 ```
 
-## Quality Control
-
-The script includes built-in quality checks:
-
-1. **Validation**: Ensures demographics match allowed categories
-2. **Retry Logic**: Automatically retries failed videos
-3. **Checkpointing**: Saves progress to prevent data loss
-4. **Logging**: Detailed logs for debugging
-
 ### Check Annotation Quality
 
+You can verify the quality and completeness of annotations using these commands:
+
+**Count videos with successful annotations:**
 ```bash
-# Count videos with demographics
+# Count how many videos have non-empty demographics_detailed
 jq '[.[] | select(.demographics_detailed != null)] | length' \
   dataset/videos/01_Patient-Doctor_Consultations/metadata_enhanced.json
+```
+This counts videos where `demographics_detailed` exists and is not null. A video
+is considered successfully annotated if it has at least one demographic category
+(race, gender, age, or language) with non-empty values.
 
-# View specific annotation
+**View a specific video's annotation:**
+```bash
+# View full annotation for video_001
 jq '.[] | select(.video_number == "001")' \
   dataset/videos/01_Patient-Doctor_Consultations/metadata_enhanced.json
 ```
+This displays the complete annotation for a specific video, including:
+- `demographics_detailed`: Lists of detected demographics per category
+- `demographics_confidence`: Confidence scores (0.0-1.0) for each detection
+- `demographics_annotation`: Metadata including model used, timestamp, individual count, and explanation
 
-## File Descriptions
+**Check for videos with empty demographics:**
+```bash
+# Find videos that failed annotation (empty demographics)
+jq '[.[] | select(.demographics_detailed.race == [] and .demographics_detailed.gender == [] and .demographics_detailed.age == [] and .demographics_detailed.language == [])] | length' \
+  dataset/videos/01_Patient-Doctor_Consultations/metadata_enhanced.json
+```
+This identifies videos that need reprocessing with `--retry-failed`.
 
-- [run_annotation.py](run_annotation.py) - Main annotation pipeline script
-- [test_single_video.py](test_single_video.py) - Test script for single video
-- [config.yaml](config.yaml) - Configuration file
-- [config_loader.py](config_loader.py) - Configuration loader
-- [model.py](model.py) - Gemini API wrapper and demographics extraction
-- [prompts.py](prompts.py) - System and user prompts for the model
-- [.env](.env) - Environment variables (API keys)
+## Files
+
+- `run_annotation.py` - Main annotation pipeline script
+- `config.yaml` - Configuration file
+- `config_loader.py` - Configuration loader with .env support
+- `model.py` - Gemini API wrapper and demographics extraction
+- `prompts.py` - System and user prompts for the model
+- `.env` - Environment variables (API keys) - create this file
 
 ## Notes
 
 - The script processes videos in order by video number
 - Already processed videos are skipped automatically
-- Raw model responses are saved for debugging if `save_raw_responses: true`
+- Raw model responses are saved for debugging if
+  `save_raw_responses: true`
 - Backups are created before overwriting if `create_backup: true`
-- All paths are relative to the project root, so always run from the sonic-o1/sonic-o1 directory (the inner sonic-o1 directory that contains the pipeline code)
+- All paths are relative to the project root, so always run from the
+  sonic-o1/sonic-o1 directory (the inner sonic-o1 directory that
+  contains the pipeline code)

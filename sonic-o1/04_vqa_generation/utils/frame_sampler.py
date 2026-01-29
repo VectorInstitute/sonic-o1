@@ -1,13 +1,15 @@
-"""
-Frame Sampler Utility.
+"""frame_sampler.py.
 
-Extracts sample frames from video segments for GPT-4V validation.
-Uses PyAV for direct video frame extraction (faster and more reliable than FFmpeg subprocess).
+Extract sample frames from video segments for GPT-4V validation.
+Uses PyAV for frame extraction (faster than FFmpeg subprocess).
+
+Author: SONIC-O1 Team
 """
 
 import logging
 import shutil
 import tempfile
+import traceback
 from pathlib import Path
 from typing import List, Tuple
 
@@ -42,7 +44,7 @@ class FrameSampler:
         scratch_base.mkdir(parents=True, exist_ok=True)
         self.temp_dir = Path(tempfile.mkdtemp(prefix="frames_", dir=scratch_base))
         self._cleaned_up = False
-        logger.info(f"Frame sampler temporary directory: {self.temp_dir}")
+        logger.info("Frame sampler temp dir: %s", self.temp_dir)
 
     def sample_frames_from_segment(
         self,
@@ -64,7 +66,8 @@ class FrameSampler:
 
         Returns
         -------
-            List of paths to extracted frame images
+        list of Path
+            Paths to extracted frame images.
         """
         try:
             if strategy == "uniform":
@@ -79,10 +82,10 @@ class FrameSampler:
                 return self._sample_adaptive_frames(
                     video_path, segment_start, segment_end, num_frames
                 )
-            raise ValueError(f"Unknown sampling strategy: {strategy}")
+            raise ValueError("Unknown sampling strategy: %s" % strategy)
 
         except Exception as e:
-            logger.error(f"Error sampling frames: {e}")
+            logger.error("Error sampling frames: %s", e)
             return []
 
     def _sample_uniform_frames(
@@ -98,7 +101,7 @@ class FrameSampler:
         # Ensure temp directory exists
         if not self.temp_dir.exists():
             self.temp_dir.mkdir(parents=True, exist_ok=True)
-            logger.warning(f"Temp dir didn't exist, recreated: {self.temp_dir}")
+            logger.warning("Temp dir recreated: %s", self.temp_dir)
 
         # Add epsilon buffer
         epsilon = 0.1
@@ -119,7 +122,9 @@ class FrameSampler:
 
             for i, timestamp in enumerate(timestamps):
                 try:
-                    frame_path = self.temp_dir / f"frame_{i:03d}_t{timestamp:.2f}s.jpg"
+                    frame_path = (
+                        self.temp_dir / "frame_%03d_t%.2fs.jpg" % (i, timestamp)
+                    )
 
                     # Convert timestamp to PTS
                     pts = int(timestamp / float(time_base))
@@ -134,31 +139,31 @@ class FrameSampler:
                         img.save(str(frame_path), "JPEG", quality=95)
                         if frame_path.exists():
                             frame_paths.append(frame_path)
-                            logger.debug(f"Extracted frame at {timestamp:.2f}s")
+                            logger.debug("Extracted frame at %.2fs", timestamp)
                             frame_found = True
                         else:
-                            logger.warning(
-                                f"Frame saved but file doesn't exist: {frame_path}"
-                            )
+                            logger.warning("Frame saved but missing: %s", frame_path)
                         break
 
                     if not frame_found:
-                        logger.warning(f"No frame decoded at {timestamp:.2f}s")
+                        logger.warning("No frame at %.2fs", timestamp)
 
                 except Exception as e:
-                    logger.warning(f"Failed to extract frame at {timestamp:.2f}s: {e}")
-                    import traceback
-
-                    logger.warning(f"Traceback: {traceback.format_exc()}")
+                    logger.warning("Failed frame at %.2fs: %s", timestamp, e)
+                    logger.warning("Traceback: %s", traceback.format_exc())
                     continue
 
             container.close()
 
         except Exception as e:
-            logger.error(f"Error opening video: {e}")
+            logger.error("Error opening video: %s", e)
             return []
 
-        logger.info(f"Extracted {len(frame_paths)}/{num_frames} uniform frames")
+        logger.info(
+            "Extracted %d/%d uniform frames",
+            len(frame_paths),
+            num_frames,
+        )
         return frame_paths
 
     def _sample_keyframes(
@@ -193,10 +198,8 @@ class FrameSampler:
 
                 # Only keyframes
                 if frame.key_frame:
-                    frame_path = (
-                        self.temp_dir
-                        / f"keyframe_{keyframe_count:03d}_t{frame_time:.2f}s.jpg"
-                    )
+                    name = "keyframe_%03d_t%.2fs.jpg" % (keyframe_count, frame_time)
+                    frame_path = self.temp_dir / name
                     img = frame.to_image()
                     img.save(str(frame_path), quality=95)
                     frame_paths.append(frame_path)
@@ -207,7 +210,7 @@ class FrameSampler:
 
             container.close()
 
-            logger.info(f"Extracted {len(frame_paths)} keyframes")
+            logger.info("Extracted %d keyframes", len(frame_paths))
 
             # Supplement if needed
             if len(frame_paths) < num_frames:
@@ -221,7 +224,7 @@ class FrameSampler:
                 frame_paths.extend(uniform_frames)
 
         except Exception as e:
-            logger.error(f"Error extracting keyframes: {e}")
+            logger.error("Error extracting keyframes: %s", e)
             return self._sample_uniform_frames(
                 video_path, segment_start, segment_end, num_frames
             )
@@ -286,7 +289,9 @@ class FrameSampler:
             for i, timestamp in enumerate(sorted(timestamps)):
                 try:
                     frame_path = (
-                        self.temp_dir / f"adaptive_frame_{i:03d}_t{timestamp:.2f}s.jpg"
+                        self.temp_dir
+                        / "adaptive_frame_%03d_t%.2fs.jpg"
+                        % (i, timestamp)
                     )
 
                     pts = int(timestamp / float(time_base))
@@ -299,22 +304,41 @@ class FrameSampler:
                         break
 
                 except Exception as e:
-                    logger.error(f"Error at {timestamp:.2f}s: {e}")
+                    logger.error("Error at %.2fs: %s", timestamp, e)
                     continue
 
             container.close()
 
         except Exception as e:
-            logger.error(f"Error with adaptive sampling: {e}")
+            logger.error("Error adaptive sampling: %s", e)
             return []
 
-        logger.info(f"Extracted {len(frame_paths)} adaptive frames")
+        logger.info("Extracted %d adaptive frames", len(frame_paths))
         return frame_paths
 
     def sample_frames_at_timestamps(
-        self, video_path: Path, timestamps: List[float], segment_start: float = 0.0
+        self,
+        video_path: Path,
+        timestamps: List[float],
+        segment_start: float = 0.0,
     ) -> List[Tuple[float, Path]]:
-        """Sample frames at specific timestamps using PyAV."""
+        """
+        Sample frames at specific timestamps using PyAV.
+
+        Args
+        ----
+        video_path : Path
+            Path to video file.
+        timestamps : list of float
+            Timestamps in seconds.
+        segment_start : float
+            Segment start (for relative naming).
+
+        Returns
+        -------
+        list of (float, Path)
+            (timestamp, frame_path) pairs.
+        """
         frame_data = []
 
         try:
@@ -330,7 +354,8 @@ class FrameSampler:
                     relative_time = timestamp - segment_start
                     frame_path = (
                         self.temp_dir
-                        / f"verify_t{timestamp:.2f}s_rel{relative_time:.2f}s.jpg"
+                        / "verify_t%.2fs_rel%.2fs.jpg"
+                        % (timestamp, relative_time)
                     )
 
                     pts = int(timestamp / float(time_base))
@@ -340,20 +365,20 @@ class FrameSampler:
                         img = frame.to_image()
                         img.save(str(frame_path), quality=95)
                         frame_data.append((timestamp, frame_path))
-                        logger.debug(f"Extracted frame at {timestamp:.2f}s")
+                        logger.debug("Extracted frame at %.2fs", timestamp)
                         break
 
                 except Exception as e:
-                    logger.error(f"Error at {timestamp:.2f}s: {e}")
+                    logger.error("Error at %.2fs: %s", timestamp, e)
                     continue
 
             container.close()
 
         except Exception as e:
-            logger.error(f"Error sampling timestamps: {e}")
+            logger.error("Error sampling timestamps: %s", e)
             return []
 
-        logger.info(f"Extracted {len(frame_data)} verification frames")
+        logger.info("Extracted %d verification frames", len(frame_data))
         return frame_data
 
     def cleanup(self):
@@ -364,7 +389,7 @@ class FrameSampler:
         try:
             if self.temp_dir and self.temp_dir.exists():
                 shutil.rmtree(self.temp_dir)
-                logger.info(f"Cleaned up frame sampler temp directory: {self.temp_dir}")
+                logger.info("Cleaned up frame sampler temp: %s", self.temp_dir)
                 self._cleaned_up = True
         except Exception as e:
-            logger.warning(f"Failed to cleanup frame sampler temp dir: {e}")
+            logger.warning("Failed to cleanup frame sampler: %s", e)

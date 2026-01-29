@@ -1,6 +1,10 @@
+"""T3 prompts for LLM evaluation."""
+
+
 def get_t3_prompt(questions: list, segment_start: float, segment_end: float) -> str:
     """
     Build a clear, general prompt for temporal localization (T3) tasks.
+
     Handles any number of questions, with clear structure and flexible output.
     """
     segment_duration = segment_end - segment_start

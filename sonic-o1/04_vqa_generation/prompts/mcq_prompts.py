@@ -1,3 +1,4 @@
+"""Prompts for MCQ generation."""
 MCQ_GENERATION_PROMPT = """You are a meticulous multimodal annotator creating challenging multiple-choice questions that test deep understanding of the content.
 
 SEGMENT INFORMATION:

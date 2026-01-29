@@ -1,4 +1,9 @@
-"""Configuration loader for YAML-based config with .env support."""
+"""config_loader.py.
+
+Configuration loader for YAML-based config with .env support.
+
+Author: SONIC-O1 Team
+"""
 
 import logging
 import os
@@ -17,9 +22,17 @@ logger = logging.getLogger(__name__)
 
 
 class ConfigLoader:
-    """Load and validate configuration from YAML file with environment variable support."""
+    """Load and validate configuration from YAML file.
+
+    Supports environment variable substitution.
+    """
 
     def __init__(self, config_path: str = "config.yaml"):
+        """Initialize configuration loader.
+
+        Args:
+            config_path: Path to YAML configuration file.
+        """
         self.config_path = Path(config_path)
         if not self.config_path.is_absolute():
             self.config_path = Path(__file__).parent / config_path
@@ -96,6 +109,11 @@ class Config:
     """Unified configuration class with .env support."""
 
     def __init__(self, config_path: str = "config.yaml"):
+        """Initialize configuration from YAML file.
+
+        Args:
+            config_path: Path to YAML configuration file.
+        """
         loader = ConfigLoader(config_path)
         # Store the raw config from loader
         self.raw_config = loader.config
@@ -124,6 +142,9 @@ class Config:
 
         # Demographics settings
         demo_cfg = loader.get_demographics_config()
+        self.demographic_categories = demo_cfg.get(
+            "categories", ["race", "gender", "age", "language"]
+        )
         self.races = demo_cfg.get("races", [])
         self.genders = demo_cfg.get("genders", [])
         self.age_groups = demo_cfg.get("age_groups", [])
@@ -140,6 +161,11 @@ class Config:
         self.video_pattern = proc_cfg.get("video_pattern", "video_{number}.mp4")
         self.audio_pattern = proc_cfg.get("audio_pattern", "audio_{number}.m4a")
         self.caption_pattern = proc_cfg.get("caption_pattern", "caption_{number}.srt")
+
+        # Supported video file extensions
+        self.video_extensions = proc_cfg.get(
+            "video_extensions", [".mp4", ".avi", ".mov", ".webm", ".mkv", ".m4v"]
+        )
 
         # Multimodal processing settings
         self.file_processing_timeout = proc_cfg.get("file_processing_timeout", 7200)
@@ -177,7 +203,7 @@ class Config:
             "videos": self.base_path / "videos" / topic,
             "audios": self.base_path / "audios" / topic,
             "captions": self.base_path / "captions" / topic,
-            "metadata": self.base_path / "videos" / topic / "metadata.json",
+            "metadata": (self.base_path / "videos" / topic / "metadata.json"),
         }
 
     def get_file_path(self, topic: str, file_type: str, number: str) -> Path:

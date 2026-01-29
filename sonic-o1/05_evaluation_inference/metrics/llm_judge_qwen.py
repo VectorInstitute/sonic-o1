@@ -1,10 +1,11 @@
-"""
-LLM-as-Judge Implementation using Qwen3-8B
-Evaluates semantic similarity, factual correctness, and completeness
-Self-contained implementation for text-only evaluation with multi-GPU support
-Reads configuration from models_config.yaml.
+"""llm_judge_qwen.py
+
+LLM-as-Judge using Qwen3: text-only evaluation with multi-GPU support.
+
+Author: SONIC-O1 Team
 """
 
+import gc
 import json
 import logging
 from pathlib import Path
@@ -19,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 
 def load_config(config_path: str = "models_config.yaml") -> Dict[str, Any]:
-    """Load configuration from YAML file."""
+    """Load configuration from YAML file; search parent dirs if path not found."""
     config_file = Path(config_path)
 
     # Try to find config in common locations
@@ -39,7 +40,7 @@ def load_config(config_path: str = "models_config.yaml") -> Dict[str, Any]:
 
 
 class LLMJudge:
-    """LLM-as-Judge evaluator using Qwen3-8B for text-only evaluation with multi-GPU support."""
+    """LLM-as-Judge using Qwen3-8B for text-only evaluation (multi-GPU)."""
 
     SYSTEM_PROMPT = """You are an intelligent and fair evaluator AI that specializes in assessing the correctness and semantic alignment between ground truth answers and predicted responses for question-answering tasks, including those based on video content.
 
@@ -151,7 +152,7 @@ class LLMJudge:
                 memory_gb = props.total_memory / 1024**3
                 logger.info(f"    GPU {i}: {props.name} ({memory_gb:.1f} GB)")
 
-    def load(self):
+    def load(self) -> None:
         """Load model and tokenizer with multi-GPU support."""
         try:
             logger.info(f"Loading LLM Judge from {self.model_path}...")
@@ -186,9 +187,9 @@ class LLMJudge:
             logger.info("LLM Judge loaded successfully")
 
         except Exception as e:
-            raise RuntimeError(f"Failed to load LLM Judge model: {e}")
+            raise RuntimeError(f"Failed to load LLM Judge model: {e}") from e
 
-    def unload(self):
+    def unload(self) -> None:
         """Unload model to free memory."""
         if self.model is not None:
             del self.model
@@ -202,8 +203,6 @@ class LLMJudge:
             for i in range(torch.cuda.device_count()):
                 with torch.cuda.device(i):
                     torch.cuda.empty_cache()
-
-        import gc
 
         gc.collect()
 
@@ -231,9 +230,8 @@ class LLMJudge:
             top_p: Nucleus sampling parameter (uses config default if None)
             max_new_tokens: Maximum tokens to generate (uses config default if None)
 
-        Returns
-        -------
-            Dict with 'score' (0-10) and 'justification' (str)
+        Returns:
+            Dict with "score" (0-10) and "justification" (str).
         """
         # Lazy load if needed
         if self.model is None or self.tokenizer is None:
@@ -330,12 +328,11 @@ class LLMJudge:
         Args:
             response_text: Raw model output
 
-        Returns
-        -------
-            Dict with score and justification
+        Returns:
+            Dict with "score" and "justification".
         """
         try:
-            # NEW: Handle thinking blocks
+            # Handle thinking blocks
             if "</think>" in response_text:
                 response_text = response_text.split("</think>")[-1].strip()
 
@@ -391,15 +388,14 @@ class LLMJudge:
         Evaluate multiple question-answer pairs.
 
         Args:
-            evaluations: List of dicts with 'question', 'correct_answer', 'predicted_answer'
+            evaluations: List of dicts with question, correct_answer, predicted_answer
             task_type: Type of task
             temperature: Generation temperature (uses config default if None)
             top_p: Nucleus sampling parameter (uses config default if None)
             max_new_tokens: Max tokens per generation (uses config default if None)
 
-        Returns
-        -------
-            List of evaluation results
+        Returns:
+            List of evaluation results (score and justification per item).
         """
         results = []
 
@@ -453,7 +449,7 @@ def evaluate_with_llm_judge(
     dtype: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
-    Convenience function for single evaluation.
+    Evaluate single instance.
 
     Args:
         question: The question
@@ -463,9 +459,8 @@ def evaluate_with_llm_judge(
         device_map: Device mapping strategy (reads from config if None)
         dtype: torch dtype string (reads from config if None)
 
-    Returns
-    -------
-        Dict with score and justification
+    Returns:
+        Dict with "score" and "justification".
     """
     judge = LLMJudge(model_path=model_path, device_map=device_map, dtype=dtype)
     judge.load()

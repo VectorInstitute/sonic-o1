@@ -1,7 +1,7 @@
-"""
-models/videollama.py
+"""videollama.py
 VideoLLaMA2 implementation following BaseModel pattern.
-Self-contained with all VideoLLaMA2-specific logic.
+
+Author: SONIC-O1 Team
 """
 
 import logging
@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 class VideoLLaMA2(BaseModel):
     """VideoLLaMA2 wrapper following BaseModel pattern."""
 
-    def __init__(self, model_name: str, config: Dict[str, Any]):
+    def __init__(self, model_name: str, config: Dict[str, Any]) -> None:
         super().__init__(model_name, config)
 
         self.model_path = config.get("model_path", "DAMO-NLP-SG/VideoLLaMA2.1-7B-AV")
@@ -45,7 +45,7 @@ class VideoLLaMA2(BaseModel):
         self.tokenizer = None
         self._original_max_frames = None
 
-    def load(self):
+    def load(self) -> None:
         """Load VideoLLaMA2 model."""
         if self.videollama_repo_path:
             repo_path = os.path.expanduser(self.videollama_repo_path)
@@ -102,8 +102,7 @@ class VideoLLaMA2(BaseModel):
             video_path: Input video path
             output_dir: Output directory (default: creates 'converted' subdir)
 
-        Returns
-        -------
+        Returns:
             Path to converted video
         """
         if output_dir is None:
@@ -150,8 +149,7 @@ class VideoLLaMA2(BaseModel):
         Args:
             video_path: Original video path
 
-        Returns
-        -------
+        Returns:
             Path to compatible video (original or converted), or None if incompatible
         """
         try:
@@ -358,7 +356,7 @@ class VideoLLaMA2(BaseModel):
                 temp_merged_file.unlink()
                 logger.info(f"Cleaned up temporary file: {temp_merged_file}")
 
-    def unload(self):
+    def unload(self) -> None:
         """Unload model and restore MAX_FRAMES."""
         logger.info("Unloading VideoLLaMA2 model...")
 

@@ -167,7 +167,6 @@ Example 4 - Invalid question, wrong temporal relation:
 Begin your validation. Respond with ONLY the JSON object."""
 
 
-
 def build_batch_validation_system_prompt() -> str:
     """
     System prompt for GPT-4V judge validation.

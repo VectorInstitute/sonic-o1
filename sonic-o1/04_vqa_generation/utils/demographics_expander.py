@@ -1,5 +1,12 @@
-"""Demographics expansion utility - transform metadata format to VQA format."""
+"""demographics_expander.py.
 
+Transform metadata demographics to VQA format with per-segment counting.
+Uses human-reviewed demographics from metadata_enhanced.json.
+
+Author: SONIC-O1 Team
+"""
+
+import json
 import logging
 from typing import Any, Dict, List
 
@@ -8,16 +15,10 @@ logger = logging.getLogger(__name__)
 
 
 class DemographicsExpander:
-    """
-    Expand demographics from metadata format to VQA format with individual counts.
-
-    Takes human-reviewed demographics from metadata_enhanced.json and transforms them
-    into the VQA format with individual counting per segment.
-    """
+    """Expand metadata demographics to VQA format with individual counts."""
 
     def __init__(self, config):
-        """
-        Initialize expander with configuration.
+        """Initialize expander with configuration.
 
         Args:
             config: Configuration object
@@ -26,15 +27,16 @@ class DemographicsExpander:
         self.demographics_categories = config.demographics.categories
 
     def build_expansion_prompt(
-        self, metadata_demographics: Dict[str, List[str]], segment_info: Dict = None
+        self,
+        metadata_demographics: Dict[str, List[str]],
+        segment_info: Dict = None,
     ) -> str:
-        """
-        Build prompt for Gemini to expand demographics with counting.
+        """Build prompt for Gemini to expand demographics with counting.
 
         Args:
-            metadata_demographics: Demographics from metadata_enhanced.json
-                Format: {"race": ["Arab"], "gender": ["Male"], "age": ["Young (18-24)"], "language": ["English"]}
-            segment_info: Optional segment information (start, end times)
+            metadata_demographics: From metadata_enhanced.json; keys race,
+                gender, age, language; values lists of strings.
+            segment_info: Optional dict with start/end times.
 
         Returns
         -------
@@ -45,12 +47,19 @@ class DemographicsExpander:
         age_list = metadata_demographics.get("age", [])
         language_list = metadata_demographics.get("language", [])
 
+        ", ".join(race_list) if race_list else "Not specified"
+        ", ".join(gender_list) if gender_list else "Not specified"
+        ", ".join(age_list) if age_list else "Not specified"
+        ", ".join(language_list) if language_list else "Not specified"
+
         segment_context = ""
         if segment_info:
-            segment_context = f"""
-This is a SEGMENT of the full video from {segment_info["start"]}s to {segment_info["end"]}s.
-Only count individuals visible/audible in THIS segment.
-"""
+            seg_start = segment_info["start"]
+            seg_end = segment_info["end"]
+            segment_context = (
+                f"\nThis is a SEGMENT from {seg_start}s to {seg_end}s.\n"
+                "Only count individuals visible/audible in THIS segment.\n"
+            )
 
         return f"""You are analyzing video content for demographics annotation.
 
@@ -123,7 +132,6 @@ Only count individuals visible/audible in THIS segment.
 
                 Begin analysis:"""
 
-
     def parse_demographics_response(self, response_text: str) -> Dict[str, Any]:
         """
         Parse Gemini's response and validate demographics format.
@@ -135,8 +143,6 @@ Only count individuals visible/audible in THIS segment.
         -------
             Parsed and validated demographics dict
         """
-        import json
-
         try:
             # Clean response
             response_text = response_text.strip()
@@ -176,14 +182,14 @@ Only count individuals visible/audible in THIS segment.
 
                 # Ensure required fields
                 if "count" not in entry:
-                    logger.warning(f"Missing 'count' in demographic entry: {entry}")
+                    logger.warning("Missing 'count' in entry: %s", entry)
                     continue
 
                 # Convert count to int if needed
                 try:
                     count = int(entry["count"])
                 except (ValueError, TypeError):
-                    logger.warning(f"Invalid count value: {entry.get('count')}")
+                    logger.warning("Invalid count: %s", entry.get("count"))
                     count = 0
 
                 # Check for "Unknown" usage
@@ -200,7 +206,7 @@ Only count individuals visible/audible in THIS segment.
                     or language == "Unknown"
                 ):
                     unknown_count += 1
-                    logger.warning(f"Entry contains 'Unknown' values: {entry}")
+                    logger.warning("Entry contains Unknown: %s", entry)
 
                 validated_entry = {
                     "race": race,
@@ -216,16 +222,15 @@ Only count individuals visible/audible in THIS segment.
             # Log warning if too many unknowns
             if unknown_count > 0:
                 logger.warning(
-                    f"{unknown_count} demographic entries contain 'Unknown' values - model may be too conservative"
+                    "%d entries contain Unknown - model may be conservative",
+                    unknown_count,
                 )
 
             confidence = float(data.get("confidence", 0.0))
 
             # Reduce confidence if too many unknowns
             if unknown_count > len(validated_demographics) / 2:
-                logger.warning(
-                    "More than 50% of entries have Unknown values, reducing confidence"
-                )
+                logger.warning(">50%% entries have Unknown, reducing confidence")
                 confidence *= 0.5
 
             return {
@@ -236,11 +241,11 @@ Only count individuals visible/audible in THIS segment.
             }
 
         except json.JSONDecodeError as e:
-            logger.error(f"Failed to parse demographics JSON: {e}")
-            logger.debug(f"Response text: {response_text[:500]}...")
+            logger.error("Failed to parse demographics JSON: %s", e)
+            logger.debug("Response: %s...", response_text[:500])
             return self._get_empty_demographics()
         except Exception as e:
-            logger.error(f"Error parsing demographics response: {e}")
+            logger.error("Error parsing demographics: %s", e)
             return self._get_empty_demographics()
 
     def _get_empty_demographics(self) -> Dict[str, Any]:
@@ -285,8 +290,10 @@ Only count individuals visible/audible in THIS segment.
 
                 count = entry.get("count", 0)
 
-                # Keep maximum count seen for this combination
-                if key not in demographic_map or count > demographic_map[key]["count"]:
+                # Keep maximum count for this combination
+                if key not in demographic_map or count > demographic_map[key].get(
+                    "count", 0
+                ):
                     demographic_map[key] = entry.copy()
 
             # Track total
@@ -306,6 +313,8 @@ Only count individuals visible/audible in THIS segment.
             "demographics": merged_demographics,
             "total_individuals": total_max,
             "confidence": min_confidence,
-            "explanation": f"Merged from {len(segment_demographics)} segments. "
-            + " | ".join(all_explanations[:2]),
+            "explanation": (
+                "Merged from %d segments. " % len(segment_demographics)
+                + " | ".join(all_explanations[:2])
+            ),
         }

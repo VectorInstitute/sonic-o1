@@ -1,6 +1,8 @@
 """
-Production-grade PyAV-based multimodal processing for Qwen3-Omni
+Production-grade PyAV-based multimodal processing for Qwen3-Omni.
+
 Drop-in replacement for qwen_omni_utils.process_mm_info
+
 Features:
 - Memory-efficient video frame sampling (streams frames, no OOM)
 - Fast audio loading with automatic truncation for context limits
@@ -54,19 +56,19 @@ SAMPLE_RATE = 16000
 # ============================================================================
 @lru_cache(maxsize=1024)
 def round_by_factor(number: int, factor: int) -> int:
-    """Returns the closest integer to 'number' that is divisible by 'factor'."""
+    """Return the closest integer to 'number' that is divisible by 'factor'."""
     return round(number / factor) * factor
 
 
 @lru_cache(maxsize=1024)
 def ceil_by_factor(number: int, factor: int) -> int:
-    """Returns the smallest integer >= 'number' that is divisible by 'factor'."""
+    """Return the smallest integer >= 'number' that is divisible by 'factor'."""
     return math.ceil(number / factor) * factor
 
 
 @lru_cache(maxsize=1024)
 def floor_by_factor(number: int, factor: int) -> int:
-    """Returns the largest integer <= 'number' that is divisible by 'factor'."""
+    """Return the largest integer <= 'number' that is divisible by 'factor'."""
     return math.floor(number / factor) * factor
 
 
@@ -80,6 +82,7 @@ def smart_resize(
 ) -> Tuple[int, int]:
     """
     Calculate optimal resize dimensions maintaining aspect ratio.
+
     Results are cached for performance.
     """
     h_bar = max(factor, round_by_factor(height, factor))

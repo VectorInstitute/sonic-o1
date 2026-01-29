@@ -19,11 +19,11 @@ def _run_cmd(cmd, timeout: int = 300) -> subprocess.CompletedProcess:
             text=True,
             timeout=timeout,
         )
-    except FileNotFoundError as e:
+    except FileNotFoundError:
         raise EnvironmentError(
             "ffmpeg/ffprobe not found. Make sure FFmpeg is installed "
             "and available on PATH."
-        ) from e
+        )
 
     if result.returncode != 0:
         logger.error("Command failed: %s", result.stderr)
@@ -45,10 +45,10 @@ class VideoSegmenter:
                     stderr=subprocess.DEVNULL,
                     check=False,
                 )
-            except FileNotFoundError as e:
+            except FileNotFoundError:
                 raise EnvironmentError(
                     f"{bin_name} not found. Install FFmpeg and ensure it is on PATH."
-                ) from e
+                )
 
     # -------------------------------------------------------------------------
     # Duration helpers

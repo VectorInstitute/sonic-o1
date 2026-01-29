@@ -1,6 +1,8 @@
-"""
-Main Metrics Computation Script
-Orchestrates evaluation for all tasks and topics.
+"""compute_metrics.py
+
+Main metrics computation: orchestrates evaluation for all tasks and topics.
+
+Author: SONIC-O1 Team
 """
 
 import argparse
@@ -8,15 +10,13 @@ import json
 import logging
 import sys
 from pathlib import Path
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
+
+sys.path.append(str(Path(__file__).parent.parent))
 
 from t1_metrics import evaluate_t1_topic
 from t2_metrics import evaluate_t2_topic
 from t3_metrics import evaluate_t3_topic
-
-
-sys.path.append(str(Path(__file__).parent.parent))
-
 from utils.config_loader import get_config
 
 
@@ -34,8 +34,8 @@ def load_existing_topic_results(
     topics: List[str],
     judge_dir: str,
     experiment_name: Optional[str] = None,
-) -> dict:
-    """Load previously computed topic results."""
+) -> Dict[str, Any]:
+    """Load previously computed topic results from per-topic JSON files."""
     existing_results = {}
 
     for topic in topics:
@@ -65,8 +65,8 @@ def load_existing_topic_results(
     return existing_results
 
 
-def get_task_mapping(config):
-    """Get task mapping from config."""
+def get_task_mapping(config: Any) -> Dict[str, str]:
+    """Get task key to full name from config (e.g. t1 -> task1_summarization)."""
     tasks = config.get("tasks", [])
     mapping = {}
     for i, task in enumerate(tasks, 1):
@@ -82,21 +82,29 @@ def compute_metrics_for_model(
     predictions_path: Path,
     output_path: Path,
     use_llm_judge: bool = True,
-    config=None,
+    config: Optional[Any] = None,
     experiment_name: Optional[str] = None,
-):
+) -> Dict[str, Any]:
     """
     Compute metrics for all tasks and topics for a model.
 
     Args:
-        model_name: Name of the model
-        tasks: List of task names to evaluate
-        topics: List of topics to evaluate
-        vqa_path: Path to VQA ground truth directory
-        predictions_path: Path to predictions directory
-        output_path: Path to save results
-        use_llm_judge: Whether to use LLM judge
+        model_name: Name of the model to evaluate.
+        tasks: List of task keys (e.g. t1, t2, t3) to evaluate.
+        topics: List of topic names to evaluate.
+        vqa_path: Path to VQA ground truth directory.
+        predictions_path: Path to predictions directory.
+        output_path: Path to save results.
+        use_llm_judge: Whether to use LLM judge.
+        config: ConfigLoader instance (from get_config).
+        experiment_name: Optional experiment label for paths.
+
+    Returns:
+        Aggregated results dict with tasks and overall metrics.
     """
+    if config is None:
+        raise ValueError("config is required for compute_metrics_for_model")
+
     logger.info(f"Computing metrics for model: {model_name}")
     task_mapping = get_task_mapping(config)
     judge_name = config.get_llm_judge_model()
@@ -111,14 +119,88 @@ def compute_metrics_for_model(
     else:
         raise ValueError(f"Unknown judge name: {judge_name}")
 
-    results = {"model": model_name, "experiment_name": experiment_name, "tasks": {}}
+    if experiment_name:
+        overall_output_path = (
+            output_path
+            / judge_dir
+            / experiment_name
+            / model_name
+            / "overall_metrics.json"
+        )
+    else:
+        overall_output_path = (
+            output_path / judge_dir / model_name / "overall_metrics.json"
+        )
+
+    if overall_output_path.exists():
+        try:
+            with open(overall_output_path, "r") as f:
+                results = json.load(f)
+                logger.info(f"Loaded existing results from {overall_output_path}")
+                logger.info(f"Existing tasks: {list(results.get('tasks', {}).keys())}")
+                # Ensure tasks dict exists
+                if "tasks" not in results:
+                    results["tasks"] = {}
+        except Exception as e:
+            logger.warning(f"Could not load existing results: {e}, creating new")
+            results = {
+                "model": model_name,
+                "experiment_name": experiment_name,
+                "tasks": {},
+            }
+    else:
+        logger.info("Creating new results file (no existing file found)")
+        results = {"model": model_name, "experiment_name": experiment_name, "tasks": {}}
+
+    # Reconstruct missing tasks from per-topic JSONs
+    all_possible_tasks = ["t1", "t2", "t3"]
+    missing_tasks = [
+        t for t in all_possible_tasks if t not in results.get("tasks", {})
+    ]
+
+    if missing_tasks:
+        logger.info(f"Attempting to reconstruct missing tasks: {missing_tasks}")
+        for missing_task in missing_tasks:
+            task_name = task_mapping.get(missing_task)
+            if not task_name:
+                continue
+
+            logger.info(f"  Reconstructing {missing_task} ({task_name})...")
+
+            # Load all available per-topic results for this task
+            all_topics_for_task = config.get_topics()
+            existing_topic_results = load_existing_topic_results(
+                output_path,
+                model_name,
+                task_name,
+                all_topics_for_task,
+                judge_dir,
+                experiment_name,
+            )
+
+            if existing_topic_results:
+                # Reconstruct task with aggregated metrics
+                reconstructed_task = {
+                    "task_name": task_name,
+                    "topics": existing_topic_results,
+                    "aggregated_across_topics": aggregate_topic_metrics(
+                        existing_topic_results, missing_task
+                    ),
+                }
+                results["tasks"][missing_task] = reconstructed_task
+                logger.info(
+                    f"  Reconstructed {missing_task} with "
+                    f"{len(existing_topic_results)} topics"
+                )
+            else:
+                logger.warning(f"  No per-topic results found for {missing_task}")
 
     for task_key in tasks:
         task_name = task_mapping[task_key]
         logger.info(f"Evaluating task: {task_name}")
 
         task_results = {"task_name": task_name, "topics": {}}
-        all_topics_for_aggregation = config.get_topics()  # Get all possible topics
+        all_topics_for_aggregation = config.get_topics()
         existing_results = load_existing_topic_results(
             output_path,
             model_name,
@@ -215,20 +297,6 @@ def compute_metrics_for_model(
 
         results["tasks"][task_key] = task_results
 
-    # Save overall results
-    if experiment_name:
-        overall_output_path = (
-            output_path
-            / judge_dir
-            / experiment_name
-            / model_name
-            / "overall_metrics.json"
-        )
-    else:
-        overall_output_path = (
-            output_path / judge_dir / model_name / "overall_metrics.json"
-        )
-
     overall_output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with open(overall_output_path, "w") as f:
@@ -239,7 +307,9 @@ def compute_metrics_for_model(
     return results
 
 
-def aggregate_topic_metrics(topic_metrics: dict, task_key: str) -> dict:
+def aggregate_topic_metrics(
+    topic_metrics: Dict[str, Any], task_key: str
+) -> Dict[str, Any]:
     """Aggregate metrics across all topics for a task."""
     if not topic_metrics:
         return {}
@@ -368,8 +438,13 @@ def aggregate_topic_metrics(topic_metrics: dict, task_key: str) -> dict:
     return aggregated
 
 
-def main():
-    """Main entry point."""
+def main() -> int:
+    """
+    Parse arguments, load config, and compute metrics for selected models.
+
+    Returns:
+        Exit code: 0 on success, 1 on failure or invalid options.
+    """
     parser = argparse.ArgumentParser(description="Compute evaluation metrics")
 
     parser.add_argument("--model", type=str, help="Model name to evaluate")
@@ -384,7 +459,7 @@ def main():
     parser.add_argument(
         "--config",
         type=str,
-        default="configs/models_config.yaml",
+        default="models_config.yaml",
         help="Path to configuration file",
     )
     parser.add_argument(

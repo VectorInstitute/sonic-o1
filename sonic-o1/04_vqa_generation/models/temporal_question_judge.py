@@ -1,11 +1,14 @@
-"""
+"""temporal_question_judge.py.
+
 GPT-4V Temporal Question Judge.
 
-Validates temporal localization questions by:
+Validate temporal localization questions by:
 1. Checking if timestamps are within segment bounds
 2. Verifying events exist in the video frames
 3. Validating temporal relationships
 4. Attempting to fix correctable errors
+
+Author: SONIC-O1 Team
 """
 
 import base64
@@ -42,9 +45,8 @@ class TemporalQuestionJudge:
 
         # GPT-4V model to use
         self.model = getattr(config, "judge_model", "gpt-4o") if config else "gpt-4o"
-
-        # Validation thresholds
-        self.max_timestamp_deviation = 5.0  # seconds tolerance for fixing timestamps
+        # Validation thresholds (seconds tolerance for fixing timestamps)
+        self.max_timestamp_deviation = 5.0
 
     def validate_segment_questions(
         self,
@@ -57,21 +59,21 @@ class TemporalQuestionJudge:
         Validate all questions for a segment.
 
         Args:
-            questions: List of temporal questions to validate
-            segment_info: Segment metadata (start, end, duration)
-            frame_paths: List of sampled frame paths from segment
-            transcript_text: Optional transcript text for the segment
+            questions: List of temporal questions to validate.
+            segment_info: Segment metadata (start, end, duration).
+            frame_paths: List of sampled frame paths from segment.
+            transcript_text: Optional transcript text for the segment.
 
         Returns
         -------
-            Tuple of (valid_questions, validation_stats)
+            Tuple of (valid_questions, validation_stats).
         """
         segment_start = segment_info["start"]
         segment_end = segment_info["end"]
-        segment_end - segment_start
 
         logger.info(
-            f"Validating {len(questions)} questions for segment [{segment_start}, {segment_end}]"
+            f"Validating {len(questions)} questions for segment "
+            f"[{segment_start}, {segment_end}]"
         )
 
         valid_questions = []
@@ -99,14 +101,11 @@ class TemporalQuestionJudge:
                 if question.get("abstained", False):
                     stats["reasons"]["abstained"] += 1
                     stats["dropped"] += 1
-                    logger.info(
-                        f"Question {i + 1} was abstained by generator, dropping"
-                    )
+                    logger.info(f"Question {i + 1} abstained by generator, dropping")
                     continue
 
-                if (
-                    question.get("rationale_model")
-                    == "Failed to generate temporal question"
+                if question.get("rationale_model") == (
+                    "Failed to generate temporal question"
                 ):
                     stats["reasons"]["failed_generation"] += 1
                     stats["dropped"] += 1
@@ -143,7 +142,8 @@ class TemporalQuestionJudge:
                 stats["reasons"]["judge_error"] += 1
 
         logger.info(
-            f"Validation complete: {stats['valid']} valid, {stats['fixed']} fixed, {stats['dropped']} dropped"
+            f"Validation complete: {stats['valid']} valid, "
+            f"{stats['fixed']} fixed, {stats['dropped']} dropped"
         )
         return valid_questions, stats
 
@@ -159,11 +159,8 @@ class TemporalQuestionJudge:
 
         Returns
         -------
-            Dict with keys:
-            - valid: bool
-            - question: corrected question dict (if valid)
-            - fixed: bool (True if timestamps were corrected)
-            - reason: str (if invalid)
+            Dict with keys: valid (bool), question (corrected dict if valid),
+            fixed (bool), reason (str if invalid).
         """
         segment_start = segment_info["start"]
         segment_end = segment_info["end"]
@@ -181,34 +178,34 @@ class TemporalQuestionJudge:
                 "message": "Missing timestamps",
             }
 
-        # CRITICAL CHECK: Are timestamps in ABSOLUTE time instead of SEGMENT-RELATIVE time?
+        # CRITICAL: Are timestamps ABSOLUTE vs SEGMENT-RELATIVE?
         # If start_s >= segment_start, it's likely absolute time
         is_absolute = False
         if start_s >= segment_start and end_s <= segment_end:
-            # Timestamps are in absolute video time, need to convert to segment-relative
+            # Absolute video time; convert to segment-relative
             is_absolute = True
-            logger.warning(
-                f"Detected absolute timestamps: [{start_s}, {end_s}], converting to relative"
-            )
+            logger.warning(f"Absolute timestamps [{start_s}, {end_s}], converting")
 
         # Check if timestamps are within segment bounds (for relative time)
-        if not is_absolute:
-            if start_s < 0 or end_s > segment_duration:
-                # Check if adding segment_start would put them in bounds (model might have used absolute time)
-                if (
-                    segment_start <= start_s <= segment_end
-                    and segment_start <= end_s <= segment_end
-                ):
-                    is_absolute = True
-                    logger.warning(
-                        f"Timestamps [{start_s}, {end_s}] seem to be absolute, converting"
-                    )
-                else:
-                    return {
-                        "valid": False,
-                        "reason": "out_of_bounds",
-                        "message": f"Timestamps [{start_s}, {end_s}] out of segment bounds [0, {segment_duration}]",
-                    }
+        if not is_absolute and (start_s < 0 or end_s > segment_duration):
+            # Maybe model used absolute time; check bounds
+            if (
+                segment_start <= start_s <= segment_end
+                and segment_start <= end_s <= segment_end
+            ):
+                is_absolute = True
+                logger.warning(
+                    f"Timestamps [{start_s}, {end_s}] seem to be absolute, converting"
+                )
+            else:
+                return {
+                    "valid": False,
+                    "reason": "out_of_bounds",
+                    "message": (
+                        f"Timestamps [{start_s}, {end_s}] out of "
+                        f"bounds [0, {segment_duration}]"
+                    ),
+                }
 
         # Convert absolute to relative if needed
         if is_absolute:
@@ -222,7 +219,8 @@ class TemporalQuestionJudge:
             question["answer"]["end_s"] = end_s_relative
 
             logger.info(
-                f"Converted timestamps: absolute [{original_start}, {original_end}] → relative [{start_s_relative:.2f}, {end_s_relative:.2f}]"
+                f"Converted: absolute [{original_start}, {original_end}] "
+                f"→ relative [{start_s_relative:.2f}, {end_s_relative:.2f}]"
             )
 
             return {
@@ -245,9 +243,10 @@ class TemporalQuestionJudge:
                     corrected = gpt4v_result["corrected_timestamps"]
                     question["answer"]["start_s"] = corrected["start_s"]
                     question["answer"]["end_s"] = corrected["end_s"]
-                    question["rationale_model"] += (
-                        f" [Judge corrected: {gpt4v_result.get('correction_reason', 'timestamps adjusted')}]"
+                    reason = gpt4v_result.get(
+                        "correction_reason", "timestamps adjusted"
                     )
+                    question["rationale_model"] += f" [Judge corrected: {reason}]"
 
                     return {
                         "valid": True,
@@ -274,7 +273,9 @@ class TemporalQuestionJudge:
                 "valid": True,
                 "question": question,
                 "fixed": False,
-                "message": f"GPT-4V error, keeping question with valid timestamps: {e}",
+                "message": (
+                    f"GPT-4V error, keeping question with valid timestamps: {e}"
+                ),
             }
 
     def _validate_with_gpt4v(
@@ -289,15 +290,11 @@ class TemporalQuestionJudge:
 
         Returns
         -------
-            Dict with keys:
-            - valid: bool
-            - reason: str (if invalid)
-            - corrected_timestamps: dict (if timestamps need correction)
-            - correction_reason: str
+            Dict with keys: valid (bool), reason (str), corrected_timestamps
+            (dict), correction_reason (str).
         """
         segment_start = segment_info["start"]
-        segment_end = segment_info["end"]
-        segment_end - segment_start
+        segment_info["end"]
 
         # Build the validation prompt
         prompt = self._build_validation_prompt(question, segment_info, transcript_text)
@@ -317,8 +314,10 @@ class TemporalQuestionJudge:
                         ts_part = frame_filename.split("_t")[1].split("s")[0]
                         absolute_time = float(ts_part)
                         relative_time = absolute_time - segment_start
-                        timestamp_info = f" (absolute: {absolute_time:.2f}s, relative: {relative_time:.2f}s)"
-                    except:
+                        timestamp_info = (
+                            f" (abs: {absolute_time:.2f}s, rel: {relative_time:.2f}s)"
+                        )
+                    except (ValueError, IndexError):
                         pass
 
                 image_contents.append(
@@ -335,7 +334,7 @@ class TemporalQuestionJudge:
                 image_contents.append(
                     {
                         "type": "text",
-                        "text": f"[Frame {i + 1}/{len(frame_paths)}{timestamp_info}]",
+                        "text": (f"[Frame {i + 1}/{len(frame_paths)}{timestamp_info}]"),
                     }
                 )
 
@@ -350,7 +349,10 @@ class TemporalQuestionJudge:
         messages = [
             {
                 "role": "system",
-                "content": "You are an expert video analyst validating temporal localization questions. You must provide responses in valid JSON format.",
+                "content": (
+                    "You are an expert video analyst validating temporal "
+                    "localization questions. Respond in valid JSON."
+                ),
             },
             {
                 "role": "user",
@@ -448,4 +450,3 @@ class TemporalQuestionJudge:
                 }}
 
                 Respond with ONLY the JSON object, no other text."""
-

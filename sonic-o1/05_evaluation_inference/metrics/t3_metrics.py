@@ -1,6 +1,8 @@
-"""
-T3 Metrics: Temporal Localization Evaluation
-Computes IoU, Mean IoU, Recall@θ, MAE, and LLM-as-Judge for rationales.
+"""t3_metrics.py
+
+T3 metrics: temporal localization (IoU, Recall@θ, MAE, LLM-as-Judge for rationales).
+
+Author: SONIC-O1 Team
 """
 
 import json
@@ -18,7 +20,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 logger = logging.getLogger(__name__)
 
 
-def make_key(entry):
+def make_key(entry: Dict[str, Any]) -> tuple:
+    """Create unique key for an entry (video_id, video_number, segment start, end)."""
     seg = entry["segment"]
     return (
         entry["video_id"],
@@ -35,16 +38,17 @@ class T3Metrics:
         self,
         use_llm_judge: bool = True,
         embedding_model: str = "all-MiniLM-L6-v2",
-        iou_thresholds: List[float] = None,
+        iou_thresholds: Optional[List[float]] = None,
         judge_name: str = "gpt",
-    ):
+    ) -> None:
         """
         Initialize T3 metrics.
 
         Args:
-            use_llm_judge: Whether to use LLM judge for rationale evaluation
-            embedding_model: Model for computing text similarity
-            iou_thresholds: IoU thresholds for Recall@θ computation
+            use_llm_judge: Whether to use LLM judge for rationale evaluation.
+            embedding_model: Model for computing text similarity.
+            iou_thresholds: IoU thresholds for Recall@θ (default [0.3, 0.5, 0.7]).
+            judge_name: Judge backend: "gpt" or "qwen".
         """
         if iou_thresholds is None:
             iou_thresholds = [0.3, 0.5, 0.7]
@@ -54,13 +58,14 @@ class T3Metrics:
         self.iou_thresholds = iou_thresholds
 
         self.use_llm_judge = use_llm_judge
+        # Lazy import: load only selected judge backend (env-dependent)
         if use_llm_judge:
             if judge_name == "gpt":
-                from llm_judge_gpt import LLMJudge
+                from llm_judge_gpt import LLMJudge  # noqa: PLC0415
 
                 self.llm_judge = LLMJudge()
             elif judge_name == "qwen":
-                from llm_judge_qwen import LLMJudge
+                from llm_judge_qwen import LLMJudge  # noqa: PLC0415
 
                 self.llm_judge = LLMJudge()
             else:
@@ -73,14 +78,13 @@ class T3Metrics:
         Compute Intersection over Union (IoU) for temporal segments.
 
         Args:
-            gt_start: Ground truth start time (seconds)
-            gt_end: Ground truth end time (seconds)
-            pred_start: Predicted start time (seconds)
-            pred_end: Predicted end time (seconds)
+            gt_start: Ground truth start time (seconds).
+            gt_end: Ground truth end time (seconds).
+            pred_start: Predicted start time (seconds).
+            pred_end: Predicted end time (seconds).
 
-        Returns
-        -------
-            IoU score (0-1)
+        Returns:
+            IoU score in [0, 1].
         """
         # Compute intersection
         intersection_start = max(gt_start, pred_start)
@@ -106,14 +110,13 @@ class T3Metrics:
         Compute Mean Absolute Error for start, end, and average.
 
         Args:
-            gt_start: Ground truth start time
-            gt_end: Ground truth end time
-            pred_start: Predicted start time
-            pred_end: Predicted end time
+            gt_start: Ground truth start time.
+            gt_end: Ground truth end time.
+            pred_start: Predicted start time.
+            pred_end: Predicted end time.
 
-        Returns
-        -------
-            Tuple of (start_mae, end_mae, avg_mae)
+        Returns:
+            Tuple of (start_mae, end_mae, avg_mae).
         """
         start_mae = abs(gt_start - pred_start)
         end_mae = abs(gt_end - pred_end)
@@ -144,13 +147,12 @@ class T3Metrics:
         Evaluate a single temporal localization question.
 
         Args:
-            ground_truth: Ground truth question entry
-            prediction: Predicted question entry (the question object itself, not wrapped)
-            segment_info: Segment information (video_id, etc.)
+            ground_truth: Ground truth question entry.
+            prediction: Predicted question entry (question object, not wrapped).
+            segment_info: Segment information (video_id, video_number, segment).
 
-        Returns
-        -------
-            Dict with all metrics, or None if prediction failed
+        Returns:
+            Dict with all metrics, or None if prediction failed.
         """
         results = {
             "question_id": ground_truth["question_id"],
@@ -231,12 +233,11 @@ class T3Metrics:
         Evaluate all temporal questions for a topic.
 
         Args:
-            ground_truth_path: Path to ground truth JSON
-            prediction_path: Path to prediction JSON
+            ground_truth_path: Path to ground truth JSON.
+            prediction_path: Path to prediction JSON.
 
-        Returns
-        -------
-            Dict with aggregated metrics
+        Returns:
+            Dict with topic_id, topic_name, num_evaluated, aggregated_metrics.
         """
         # Load data
         with open(ground_truth_path, "r") as f:
@@ -442,18 +443,22 @@ def evaluate_t3_topic(
     prediction_path: str,
     output_path: str,
     use_llm_judge: bool = True,
-    iou_thresholds: List[float] = None,
+    iou_thresholds: Optional[List[float]] = None,
     judge_name: str = "gpt",
-):
+) -> Dict[str, Any]:
     """
-    Convenience function to evaluate a single topic.
+    Evaluate T3 (temporal localization) for a single topic.
 
     Args:
-        ground_truth_path: Path to ground truth JSON
-        prediction_path: Path to prediction JSON
-        output_path: Where to save results
-        use_llm_judge: Whether to use LLM judge
-        iou_thresholds: IoU thresholds for recall computation
+        ground_truth_path: Path to ground truth JSON.
+        prediction_path: Path to prediction JSON.
+        output_path: Where to save results.
+        use_llm_judge: Whether to use LLM judge.
+        iou_thresholds: IoU thresholds for recall (default [0.3, 0.5, 0.7]).
+        judge_name: Judge backend: "gpt" or "qwen".
+
+    Returns:
+        Results dict with aggregated_metrics and per_question_results.
     """
     if iou_thresholds is None:
         iou_thresholds = [0.3, 0.5, 0.7]

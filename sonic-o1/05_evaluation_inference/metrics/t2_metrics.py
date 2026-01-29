@@ -1,6 +1,8 @@
-"""
-T2 Metrics: Question Answering (MCQ) Evaluation
-Computes accuracy, ROUGE-L, CIDEr, text similarity, and LLM-as-Judge for rationales.
+"""t2_metrics.py
+
+T2 metrics: MCQ (accuracy, ROUGE-L, text similarity, LLM-as-Judge for rationales).
+
+Author: SONIC-O1 Team
 """
 
 import json
@@ -18,7 +20,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 logger = logging.getLogger(__name__)
 
 
-def make_key(entry):
+def make_key(entry: Dict[str, Any]) -> tuple:
+    """Create unique key for an entry (video_id, video_number, segment start, end)."""
     seg = entry["segment"]
     return (
         entry["video_id"],
@@ -36,26 +39,28 @@ class T2Metrics:
         use_llm_judge: bool = True,
         embedding_model: str = "all-MiniLM-L6-v2",
         judge_name: str = "gpt",
-    ):
+    ) -> None:
         """
         Initialize T2 metrics.
 
         Args:
-            use_llm_judge: Whether to use LLM judge for rationale evaluation
-            embedding_model: Model for computing text similarity
+            use_llm_judge: Whether to use LLM judge for rationale evaluation.
+            embedding_model: Model for computing text similarity.
+            judge_name: Judge backend: "gpt" or "qwen".
         """
         self.rouge_scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
         self.cider_scorer = Cider()
         self.embedding_model = SentenceTransformer(embedding_model)
 
         self.use_llm_judge = use_llm_judge
+        # Lazy import: load only selected judge backend (env-dependent)
         if use_llm_judge:
             if judge_name == "gpt":
-                from llm_judge_gpt import LLMJudge
+                from llm_judge_gpt import LLMJudge  # noqa: PLC0415
 
                 self.llm_judge = LLMJudge()
             elif judge_name == "qwen":
-                from llm_judge_qwen import LLMJudge
+                from llm_judge_qwen import LLMJudge  # noqa: PLC0415
 
                 self.llm_judge = LLMJudge()
             else:
@@ -66,12 +71,11 @@ class T2Metrics:
         Compute exact match accuracy.
 
         Args:
-            ground_truth_answer: Ground truth answer (letter or index)
-            predicted_answer: Predicted answer
+            ground_truth_answer: Ground truth answer (letter or index).
+            predicted_answer: Predicted answer.
 
-        Returns
-        -------
-            1 if correct, 0 if incorrect
+        Returns:
+            1 if correct, 0 if incorrect.
         """
         # Normalize answers (handle both letter and index format)
         gt_normalized = str(ground_truth_answer).strip().upper()
@@ -99,19 +103,17 @@ class T2Metrics:
         Evaluate a single question entry.
 
         Args:
-            ground_truth: Ground truth entry
-            prediction: Predicted entry
+            ground_truth: Ground truth entry.
+            prediction: Predicted entry.
 
-        Returns
-        -------
-            Dict with all metrics, or None if prediction failed
+        Returns:
+            Dict with all metrics, or None if prediction failed.
         """
         # Skip failed predictions
         if "error" in prediction or "outputs" not in prediction:
-            logger.warning(
-                f"Skipping failed entry: video={prediction.get('video_id', 'unknown')}, "
-                f"segment={prediction.get('segment', 'unknown')}"
-            )
+            vid = prediction.get("video_id", "unknown")
+            seg = prediction.get("segment", "unknown")
+            logger.warning(f"Skipping failed entry: video={vid}, segment={seg}")
             return None
 
         results = {
@@ -179,12 +181,11 @@ class T2Metrics:
         Evaluate all questions for a topic.
 
         Args:
-            ground_truth_path: Path to ground truth JSON
-            prediction_path: Path to prediction JSON
+            ground_truth_path: Path to ground truth JSON.
+            prediction_path: Path to prediction JSON.
 
-        Returns
-        -------
-            Dict with aggregated metrics
+        Returns:
+            Dict with topic_id, topic_name, num_evaluated, aggregated_metrics.
         """
         # Load data
         with open(ground_truth_path, "r") as f:
@@ -325,15 +326,19 @@ def evaluate_t2_topic(
     output_path: str,
     use_llm_judge: bool = True,
     judge_name: str = "gpt",
-):
+) -> Dict[str, Any]:
     """
-    Convenience function to evaluate a single topic.
+    Evaluate T2 (MCQ) for a single topic.
 
     Args:
-        ground_truth_path: Path to ground truth JSON
-        prediction_path: Path to prediction JSON
-        output_path: Where to save results
-        use_llm_judge: Whether to use LLM judge
+        ground_truth_path: Path to ground truth JSON.
+        prediction_path: Path to prediction JSON.
+        output_path: Where to save results.
+        use_llm_judge: Whether to use LLM judge.
+        judge_name: Judge backend: "gpt" or "qwen".
+
+    Returns:
+        Results dict with aggregated_metrics and per_entry_results.
     """
     logger.info(f"Evaluating T2: {Path(ground_truth_path).stem}")
 

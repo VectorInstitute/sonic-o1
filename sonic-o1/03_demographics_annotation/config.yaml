@@ -27,6 +27,13 @@ dataset:
     - "13_Olympics"
 
 demographics:
+  # Category keys used in demographics_detailed and demographics_confidence
+  categories:
+    - "race"
+    - "gender"
+    - "age"
+    - "language"
+
   races:
     - "White"
     - "Black"
@@ -72,6 +79,15 @@ processing:
   video_pattern: "video_{number}.mp4"
   audio_pattern: "audio_{number}.m4a"
   caption_pattern: "caption_{number}.srt"
+
+  # Supported video file extensions (for determining if file is a video)
+  video_extensions:
+    - ".mp4"
+    - ".avi"
+    - ".mov"
+    - ".webm"
+    - ".mkv"
+    - ".m4v"
 
   # Multimodal processing
   prefer_video_with_audio: false  # Send both video AND separate audio (all files together)

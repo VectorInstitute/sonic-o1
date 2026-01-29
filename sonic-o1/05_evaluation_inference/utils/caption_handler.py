@@ -1,5 +1,6 @@
 """
 utils/caption_handler.py
+
 Parse and chunk SRT caption files for models that support text input.
 """
 
@@ -18,6 +19,7 @@ logger = logging.getLogger(__name__)
 class CaptionHandler:
     """
     Handle SRT caption files with sentence-level chunking support.
+
     Any model with use_captions=True can use this utility.
     """
 
@@ -194,7 +196,6 @@ class CaptionHandler:
 
         # Clean up sentences
         return [s.strip() for s in sentences if s.strip()]
-
 
     def get_caption_text_for_segment(
         self,
@@ -400,6 +401,7 @@ class CaptionHandler:
     ) -> Optional[Path]:
         """
         Auto-discover caption file path from video file path.
+
         Handles both full videos and segments.
 
         Examples

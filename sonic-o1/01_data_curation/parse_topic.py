@@ -11,7 +11,6 @@ import os
 import subprocess
 import sys
 import traceback
-
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -375,7 +374,9 @@ class VideoDatasetProcessor:
                 f"videos with diversity optimization..."
             )
 
-            duration_demo_groups = self._calculate_duration_distribution(filtered_videos)
+            duration_demo_groups = self._calculate_duration_distribution(
+                filtered_videos
+            )
             adjusted_targets = self._calculate_target_counts(
                 needed_count, duration_demo_groups
             )
@@ -392,9 +393,8 @@ class VideoDatasetProcessor:
 
             print(f"✓ Selected {len(selected)} videos with diversity")
 
-        selected = self._assign_numbers_and_stats(selected, start_number)
+        return self._assign_numbers_and_stats(selected, start_number)
 
-        return selected
 
     def download_video(self, video_id: str, output_path: str) -> bool:
         """Download video using yt-dlp (max 1080p).
@@ -576,7 +576,13 @@ class VideoDatasetProcessor:
         print(f"  Current: {current_count}/{self.max_count} videos")
         print(f"  Need to add: {needed_count} videos\n")
 
-        return (topic_name, current_count, existing_video_ids, next_number, needed_count)
+        return (
+            topic_name,
+            current_count,
+            existing_video_ids,
+            next_number,
+            needed_count,
+        )
 
     def _load_and_filter_videos(
         self, topic_metadata_path: str, existing_video_ids: Set[str]
@@ -592,12 +598,9 @@ class VideoDatasetProcessor:
             List of filtered video metadata.
         """
         metadata = self.load_metadata(topic_metadata_path)
-        filtered = self.filter_videos(metadata, existing_video_ids)
-        return filtered
+        return self.filter_videos(metadata, existing_video_ids)
 
-    def _download_video_assets(
-        self, video: Dict, topic_name: str
-    ) -> str | None:
+    def _download_video_assets(self, video: Dict, topic_name: str) -> str | None:
         """Download video, extract audio, and download captions for a single video.
 
         Args:
@@ -611,9 +614,7 @@ class VideoDatasetProcessor:
         video_id = video["video_id"]
         video_num = video["video_number"]
 
-        print(
-            f"\n--- Processing video {video_num}/{self.max_count}: {video_id} ---"
-        )
+        print(f"\n--- Processing video {video_num}/{self.max_count}: {video_id} ---")
 
         video_path = self.videos_dir / topic_name / f"video_{video_num}.mp4"
         audio_path = self.audios_dir / topic_name / f"audio_{video_num}.m4a"
@@ -639,8 +640,11 @@ class VideoDatasetProcessor:
         return None
 
     def _save_topic_metadata_and_summary(
-        self, topic_name: str, merged_metadata: List[Dict], needs_whisper: List[str],
-        selected_count: int
+        self,
+        topic_name: str,
+        merged_metadata: List[Dict],
+        needs_whisper: List[str],
+        selected_count: int,
     ):
         """Save all metadata files and print final summary.
 

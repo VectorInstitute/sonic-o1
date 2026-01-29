@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
-"""
-Fill Empty Demographics in VQA Files
-This script fills empty demographics arrays in task1, task2, and task3 VQA JSON files
-by using the DemographicsExpander with Gemini to analyze video/audio content.
+"""fill_empty_demographics.py.
 
-OPTIMIZATION:
-- Task 3 generates demographics for segments via API
-- Task 2 reuses demographics from Task 3 (same segments, Task 3 is reviewed and correct)
-- Task 1 generates demographics for full videos via API
+Fill empty demographics arrays in task1, task2, and task3 VQA JSON files
+using DemographicsExpander with Gemini. Task 3 generates per-segment;
+Task 2 reuses Task 3 demographics; Task 1 generates for full videos.
 
 Usage:
-    python fill_empty_demographics.py --config config/vqa_config.yaml
-    python fill_empty_demographics.py --config config/vqa_config.yaml --dry-run
+    python fill_empty_demographics.py --config vqa_config.yaml
+    python fill_empty_demographics.py --config vqa_config.yaml --dry-run
     python fill_empty_demographics.py --topics 10,11 --dry-run
+
+Author: SONIC-O1 Team
 """
 
 import argparse
@@ -37,13 +35,16 @@ try:
         load_dotenv(env_path)
         print(f"Loaded environment variables from {env_path}")
 except ImportError:
-    print("python-dotenv not installed, ensure GEMINI_API_KEY is set in environment")
+    print("python-dotenv not installed; set GEMINI_API_KEY in environment")
 
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("fill_demographics.log"), logging.StreamHandler()],
+    handlers=[
+        logging.FileHandler("fill_demographics.log"),
+        logging.StreamHandler(),
+    ],
 )
 logger = logging.getLogger(__name__)
 
@@ -60,8 +61,21 @@ class Config:
 
 
 def load_config(config_path: str) -> Config:
-    """Load configuration from YAML file."""
-    with open(config_path, "r") as f:
+    """Load configuration from YAML file.
+
+    Args:
+        config_path: Path to config file. If relative, resolved relative
+            to this script's directory.
+
+    Returns
+    -------
+        Config object with nested attribute access.
+    """
+    config_file = Path(config_path)
+    if not config_file.is_absolute():
+        config_file = Path(__file__).parent / config_path
+
+    with open(config_file, "r") as f:
         config_dict = yaml.safe_load(f)
     return Config(config_dict)
 
@@ -75,7 +89,7 @@ class DemographicsFiller:
 
         Args:
             config: Configuration object
-            dry_run: If True, only report what would be done without making changes
+            dry_run: If True, only report what would be done (no changes).
         """
         self.config = config
         self.dry_run = dry_run
@@ -85,11 +99,11 @@ class DemographicsFiller:
             "task3": {"total": 0, "empty": 0, "filled": 0, "failed": 0, "reused": 0},
         }
 
-        # Import models (only if not dry-run)
+        # Lazy import: only load when not dry-run (env-dependent, avoid heavy deps)
         if not dry_run:
-            from models.base_gemini import BaseGeminiClient
-            from utils.demographics_expander import DemographicsExpander
-            from utils.video_segmenter import VideoSegmenter
+            from models.base_gemini import BaseGeminiClient  # noqa: PLC0415
+            from utils.demographics_expander import DemographicsExpander  # noqa: PLC0415
+            from utils.video_segmenter import VideoSegmenter  # noqa: PLC0415
 
             self.demographics_expander = DemographicsExpander(config)
             self.segmenter = VideoSegmenter(config)
@@ -98,7 +112,7 @@ class DemographicsFiller:
         # Load all metadata
         self.metadata_by_topic = self._load_all_metadata()
 
-        # Cache for Task 3 demographics (video_id -> {segment_key -> demographics})
+        # Cache: video_id -> {segment_key -> demographics}
         self.task3_demographics_cache = {}
 
     def _load_all_metadata(self) -> Dict[int, Dict[str, Any]]:
@@ -133,11 +147,15 @@ class DemographicsFiller:
 
                             metadata_map[topic_id] = topic_metadata
                             logger.info(
-                                f"Loaded metadata for topic {topic_id}: {len(topic_metadata)} videos"
+                                "Loaded metadata for topic %s: %d videos",
+                                topic_id,
+                                len(topic_metadata),
                             )
                         except Exception as e:
                             logger.error(
-                                f"Failed to load metadata for topic {topic_id}: {e}"
+                                "Failed to load metadata for topic %s: %s",
+                                topic_id,
+                                e,
                             )
 
         return metadata_map
@@ -195,18 +213,23 @@ class DemographicsFiller:
                         "demographics_explanation": entry.get(
                             "demographics_explanation", ""
                         ),
-                        "segment_end": segment.get("end", 0),  # Store for logging
+                        "segment_end": segment.get("end", 0),
                     }
 
             self.task3_demographics_cache[topic_id] = dict(cache)
+            n_segments = sum(len(v) for v in cache.values())
             logger.info(
-                f"Loaded Task 3 demographics cache for topic {topic_id}: "
-                f"{len(cache)} videos, {sum(len(v) for v in cache.values())} segments"
+                "Loaded Task 3 cache for topic %s: %d videos, %d segments",
+                topic_id,
+                len(cache),
+                n_segments,
             )
 
         except Exception as e:
             logger.error(
-                f"Failed to load Task 3 demographics for topic {topic_id}: {e}"
+                "Failed to load Task 3 demographics for topic %s: %s",
+                topic_id,
+                e,
             )
             self.task3_demographics_cache[topic_id] = {}
 
@@ -215,7 +238,8 @@ class DemographicsFiller:
     ) -> Optional[Dict[str, Any]]:
         """
         Get demographics from Task 3 cache for a specific segment.
-        Uses start time as key for robust matching (ignores end time differences).
+
+        Uses start time as key (ignores end time differences).
         """
         # Ensure cache is loaded
         self._load_task3_demographics(topic_id)
@@ -261,8 +285,7 @@ class DemographicsFiller:
 
         # Update cache
         self.task3_demographics_cache[topic_id][video_id][start_key] = demographics_data
-
-        logger.debug(f"Updated Task3 cache for {video_id} at start={start_key}s")
+        logger.debug("Updated Task3 cache for %s at start=%s", video_id, start_key)
 
     def get_file_paths(self, video_id: str, topic_id: int) -> Dict[str, Optional[Path]]:
         """Get paths for video, audio, and transcript files."""
@@ -278,7 +301,11 @@ class DemographicsFiller:
 
         if not topic_dir:
             logger.warning(f"Topic directory not found for topic {topic_id}")
-            return {"video_path": None, "audio_path": None, "transcript_path": None}
+            return {
+                "video_path": None,
+                "audio_path": None,
+                "transcript_path": None,
+            }
 
         # Get metadata to find video_number
         metadata = self.metadata_by_topic.get(topic_id, {}).get(video_id, {})
@@ -296,7 +323,7 @@ class DemographicsFiller:
         return {
             "video_path": video_path if video_path.exists() else None,
             "audio_path": audio_path if audio_path.exists() else None,
-            "transcript_path": transcript_path if transcript_path.exists() else None,
+            "transcript_path": (transcript_path if transcript_path.exists() else None),
         }
 
     def _load_transcript(self, transcript_path: Optional[Path]) -> str:
@@ -326,13 +353,13 @@ class DemographicsFiller:
         max_retries: int = 3,
     ) -> Optional[str]:
         """
-        Generate demographics with retry logic for empty responses (safety filter handling).
+        Generate demographics with retry for empty responses (safety filter).
 
         Args:
             media_files: List of (type, path) tuples
             prompt: Generation prompt
             video_id: Video ID for logging
-            context: Context string for logging (e.g., "Task1 video", "Task3 segment 0-210s")
+            context: Context for logging (e.g. "Task1 video", "Task3 segment")
             max_retries: Maximum number of retry attempts
 
         Returns
@@ -342,7 +369,10 @@ class DemographicsFiller:
         for attempt in range(max_retries):
             try:
                 logger.info(
-                    f"Generating demographics for {context} (attempt {attempt + 1}/{max_retries})"
+                    "Generating demographics for %s (attempt %d/%d)",
+                    context,
+                    attempt + 1,
+                    max_retries,
                 )
 
                 response_text = self.gemini_client.generate_content(
@@ -352,7 +382,10 @@ class DemographicsFiller:
                 # Check for empty response
                 if not response_text or len(response_text.strip()) < 10:
                     logger.warning(
-                        f"Empty/minimal response for {context} on attempt {attempt + 1}/{max_retries}"
+                        "Empty response for %s attempt %d/%d",
+                        context,
+                        attempt + 1,
+                        max_retries,
                     )
                     logger.warning(
                         "This is likely due to safety filters being triggered"
@@ -362,24 +395,27 @@ class DemographicsFiller:
                         # Exponential backoff: 10s, 20s, 30s
                         wait_time = 10 * (attempt + 1)
                         logger.info(
-                            f"Retrying after {wait_time}s (safety filters can be inconsistent)..."
+                            "Retrying after %ds (safety filters)...",
+                            wait_time,
                         )
                         time.sleep(wait_time)
                         continue
                     logger.error(
-                        f"Failed after {max_retries} attempts - empty responses (likely safety filter)"
+                        "Failed after %d attempts (empty/safety filter)",
+                        max_retries,
                     )
                     return None
 
                 # Got a valid response
-                logger.info(
-                    f"✓ Received valid response: {len(response_text)} characters"
-                )
+                logger.info("Received valid response: %d chars", len(response_text))
                 return response_text
 
             except Exception as e:
                 logger.error(
-                    f"Attempt {attempt + 1}/{max_retries} failed with error: {e}"
+                    "Attempt %d/%d failed: %s",
+                    attempt + 1,
+                    max_retries,
+                    e,
                 )
 
                 if attempt < max_retries - 1:
@@ -397,19 +433,22 @@ class DemographicsFiller:
         video_id = entry.get("video_id")
 
         if self.dry_run:
-            logger.info(f"[DRY-RUN] Would fill demographics for Task1 video {video_id}")
+            logger.info(
+                "[DRY-RUN] Would fill demographics for Task1 video %s",
+                video_id,
+            )
             return True
 
         try:
             # Get metadata
             metadata = self.metadata_by_topic.get(topic_id, {}).get(video_id, {})
             if not metadata:
-                logger.error(f"No metadata found for video {video_id}")
+                logger.error("No metadata found for video %s", video_id)
                 return False
 
             human_demographics = metadata.get("demographics_detailed_reviewed", {})
             if not human_demographics:
-                logger.warning(f"No human-reviewed demographics for {video_id}")
+                logger.warning("No human-reviewed demographics for %s", video_id)
                 return False
 
             # Get file paths
@@ -435,7 +474,11 @@ class DemographicsFiller:
 
             # Generate demographics with retry
             response_text = self._generate_with_retry(
-                media_files, prompt, video_id, f"Task1 video {video_id}", max_retries=3
+                media_files,
+                prompt,
+                video_id,
+                f"Task1 video {video_id}",
+                max_retries=3,
             )
 
             if not response_text:
@@ -448,22 +491,28 @@ class DemographicsFiller:
             # Update entry
             entry["demographics"] = demographics_data.get("demographics", [])
 
+            n_entries = len(entry["demographics"])
+            conf = demographics_data.get("confidence", 0)
             logger.info(
-                f"✓ Filled demographics for Task1 video {video_id}: "
-                f"{len(entry['demographics'])} entries, "
-                f"confidence={demographics_data.get('confidence', 0):.2f}"
+                "Filled Task1 video %s: %d entries conf=%.2f",
+                video_id,
+                n_entries,
+                conf,
             )
 
             return True
 
         except Exception as e:
             logger.error(
-                f"Failed to fill Task1 demographics for {video_id}: {e}", exc_info=True
+                "Failed to fill Task1 demographics for %s: %s",
+                video_id,
+                e,
+                exc_info=True,
             )
             return False
 
     def fill_task3_demographics(self, entry: Dict[str, Any], topic_id: int) -> bool:
-        """Fill demographics for Task 3 (Temporal Localization) - segment level."""
+        """Fill demographics for Task 3 (Temporal Localization) - segment."""
         video_id = entry.get("video_id")
         segment = entry.get("segment", {})
         start_time = segment.get("start", 0)
@@ -471,8 +520,10 @@ class DemographicsFiller:
 
         if self.dry_run:
             logger.info(
-                f"[DRY-RUN] Would fill demographics for Task3 video {video_id} "
-                f"segment {start_time}-{end_time}s"
+                "[DRY-RUN] Would fill Task3 video %s segment %s-%ss",
+                video_id,
+                start_time,
+                end_time,
             )
             return True
 
@@ -483,12 +534,12 @@ class DemographicsFiller:
             # Get metadata
             metadata = self.metadata_by_topic.get(topic_id, {}).get(video_id, {})
             if not metadata:
-                logger.error(f"No metadata found for video {video_id}")
+                logger.error("No metadata for video %s", video_id)
                 return False
 
             human_demographics = metadata.get("demographics_detailed_reviewed", {})
             if not human_demographics:
-                logger.warning(f"No human-reviewed demographics for {video_id}")
+                logger.warning("No human-reviewed demographics for %s", video_id)
                 return False
 
             # Get file paths
@@ -497,7 +548,9 @@ class DemographicsFiller:
 
             # Create video segment
             video_segments = self.segmenter.segment_video(
-                paths["video_path"], duration, task_type="temporal_localization"
+                paths["video_path"],
+                duration,
+                task_type="temporal_localization",
             )
 
             # Find the matching segment
@@ -509,7 +562,10 @@ class DemographicsFiller:
 
             if not seg_path or not seg_path.exists():
                 logger.error(
-                    f"Could not create segment for {video_id} at {start_time}-{end_time}s"
+                    "Could not create segment for %s at %s-%ss",
+                    video_id,
+                    start_time,
+                    end_time,
                 )
                 return False
 
@@ -517,7 +573,9 @@ class DemographicsFiller:
             audio_seg_path = None
             if paths["audio_path"]:
                 audio_segments = self.segmenter.segment_audio(
-                    paths["audio_path"], duration, task_type="temporal_localization"
+                    paths["audio_path"],
+                    duration,
+                    task_type="temporal_localization",
                 )
                 for seg in audio_segments:
                     if seg["start"] == start_time and seg["end"] == end_time:
@@ -536,7 +594,8 @@ class DemographicsFiller:
 
             # Build prompt
             prompt = self.demographics_expander.build_expansion_prompt(
-                human_demographics, segment_info={"start": start_time, "end": end_time}
+                human_demographics,
+                segment_info={"start": start_time, "end": end_time},
             )
 
             # Prepare media files
@@ -565,7 +624,7 @@ class DemographicsFiller:
                 media_files,
                 prompt,
                 video_id,
-                f"Task3 video {video_id} segment {start_time}-{end_time}s",
+                "Task3 video %s segment %s-%ss" % (video_id, start_time, end_time),
                 max_retries=3,
             )
 
@@ -597,18 +656,26 @@ class DemographicsFiller:
                 topic_id, video_id, start_time, end_time, cache_data
             )
 
+            n_ent = len(entry["demographics"])
+            conf = demographics_data.get("confidence", 0)
             logger.info(
-                f"✓ Filled demographics for Task3 video {video_id} segment {start_time}-{end_time}s: "
-                f"{len(entry['demographics'])} entries, "
-                f"confidence={demographics_data.get('confidence', 0):.2f}"
+                "Filled Task3 %s segment %s-%ss: %d entries conf=%.2f",
+                video_id,
+                start_time,
+                end_time,
+                n_ent,
+                conf,
             )
 
             return True
 
         except Exception as e:
             logger.error(
-                f"Failed to fill Task3 demographics for {video_id} "
-                f"segment {start_time}-{end_time}s: {e}",
+                "Failed Task3 %s segment %s-%ss: %s",
+                video_id,
+                start_time,
+                end_time,
+                e,
                 exc_info=True,
             )
             return False
@@ -619,19 +686,18 @@ class DemographicsFiller:
                 try:
                     self.segmenter.cleanup_segments(video_segments)
                 except Exception as e:
-                    logger.warning(f"Failed to cleanup video segments: {e}")
+                    logger.warning("Failed to cleanup video segments: %s", e)
 
             if audio_segments:
                 try:
                     self.segmenter.cleanup_segments(audio_segments)
                 except Exception as e:
-                    logger.warning(f"Failed to cleanup audio segments: {e}")
+                    logger.warning("Failed to cleanup audio segments: %s", e)
 
     def process_json_file(self, json_path: Path, task_name: str) -> Dict[str, int]:
-        """
-        Process a single VQA JSON file and fill empty demographics.
+        """Process a single VQA JSON file and fill empty demographics.
 
-        For Task 2: ALWAYS overwrites demographics from Task 3 when available (Task 3 is reviewed and correct).
+        Task 2: overwrites demographics from Task 3 when available.
         """
         logger.info(f"\n{'=' * 80}")
         logger.info(f"Processing {json_path.name}")
@@ -643,7 +709,13 @@ class DemographicsFiller:
                 data = json.load(f)
         except Exception as e:
             logger.error(f"Failed to load {json_path}: {e}")
-            return {"total": 0, "empty": 0, "filled": 0, "failed": 0, "reused": 0}
+            return {
+                "total": 0,
+                "empty": 0,
+                "filled": 0,
+                "failed": 0,
+                "reused": 0,
+            }
 
         topic_id = data.get("topic_id")
         data.get("topic_name")
@@ -657,10 +729,11 @@ class DemographicsFiller:
             "reused": 0,
         }
 
-        # For Task 2: Check ALL entries for Task 3 matches (not just empty ones)
+        # For Task 2: check all entries for Task 3 matches
         if task_name == "task2":
             logger.info(
-                f"Task 2: Checking ALL {len(entries)} entries for Task 3 demographics to copy"
+                "Task 2: Checking %d entries for Task 3 demographics",
+                len(entries),
             )
 
             # Pre-load Task 3 cache
@@ -695,7 +768,8 @@ class DemographicsFiller:
                     self.stats["task2"]["reused"] += 1
 
             logger.info(
-                f"✓ Updated {updated_count} Task 2 entries with Task 3 demographics"
+                "Updated %d Task 2 entries with Task 3 demographics",
+                updated_count,
             )
             stats["filled"] = updated_count
             stats["reused"] = updated_count
@@ -731,7 +805,7 @@ class DemographicsFiller:
             logger.info(f"✓ No empty demographics found in {json_path.name}")
             return stats
 
-        logger.info(f"Found {len(empty_indices)} entries with empty demographics")
+        logger.info("Found %d entries with empty demographics", len(empty_indices))
 
         # Process each empty entry
         for i in empty_indices:
@@ -776,10 +850,7 @@ class DemographicsFiller:
         return stats
 
     def process_all_tasks(self, topic_filter: Optional[List[int]] = None):
-        """
-        Process all VQA task directories.
-        OPTIMIZED: Processes Task 3 first, then Task 1, then Task 2 (which reuses from Task 3).
-        """
+        """Process all VQA task dirs. Order: Task 3, Task 1, Task 2."""
         output_dir = Path(self.config.paths.output_dir)
 
         if not output_dir.exists():
@@ -792,7 +863,7 @@ class DemographicsFiller:
             "task3": output_dir / "task3_temporal_localization",
         }
 
-        # IMPORTANT: Process Task 3 first, then Task 1, then Task 2 (which reuses from Task 3)
+        # Order: Task 3, Task 1, Task 2 (Task 2 reuses Task 3)
         task_order = ["task3", "task1", "task2"]
 
         for task_name in task_order:
@@ -878,12 +949,12 @@ class DemographicsFiller:
 
 
 def main():
-    """Main entry point."""
+    """Run main entry point."""
     parser = argparse.ArgumentParser(description="Fill Empty Demographics in VQA Files")
     parser.add_argument(
         "--config",
         type=str,
-        default="config/vqa_config.yaml",
+        default="vqa_config.yaml",
         help="Path to configuration file",
     )
     parser.add_argument(
@@ -931,9 +1002,7 @@ def main():
         logger.info("DRY RUN MODE - No changes will be made")
         logger.info("=" * 80)
 
-    logger.info(
-        "\nOPTIMIZATION: Task 3 will be processed first, then Task 1, then Task 2 reuses demographics from Task 3"
-    )
+    logger.info("\nOPTIMIZATION: Task 3 first, then Task 1, then Task 2 reuses Task 3")
     logger.info("This will significantly reduce API calls!\n")
 
     filler.process_all_tasks(topic_filter)

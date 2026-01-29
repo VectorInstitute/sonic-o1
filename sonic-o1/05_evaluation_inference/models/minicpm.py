@@ -1,6 +1,7 @@
-"""
-models/minicpm.py
+"""minicpm.py
 MiniCPM-o-2.6 implementation with omni multimodal support.
+
+Author: SONIC-O1 Team
 """
 
 import logging
@@ -14,7 +15,6 @@ try:
     import librosa
     import numpy as np
     import torch
-    from PIL import Image
     from transformers import AutoModel, AutoTokenizer
 except ImportError as e:
     raise ImportError(
@@ -31,11 +31,12 @@ logger = logging.getLogger(__name__)
 class MiniCPM(BaseModel):
     """
     MiniCPM-o-2.6 wrapper with omni multimodal support.
+
     Processes video frames and audio chunks in a specialized format.
     Automatically calculates optimal FPS based on max_frames limit.
     """
 
-    def __init__(self, model_name: str, config: Dict[str, Any]):
+    def __init__(self, model_name: str, config: Dict[str, Any]) -> None:
         super().__init__(model_name, config)
 
         # Model configuration
@@ -63,7 +64,7 @@ class MiniCPM(BaseModel):
         self.default_max_frames = config.get("max_frames", 256)
 
         logger.info(
-            f"MiniCPM initialized with default frame limits: {self.default_min_frames}-{self.default_max_frames}"
+            f"MiniCPM frame limits: {self.default_min_frames}-{self.default_max_frames}"
         )
         # Model settings
         self.init_vision = config.get("init_vision", True)
@@ -74,7 +75,7 @@ class MiniCPM(BaseModel):
         self.model = None
         self.tokenizer = None
 
-    def load(self):
+    def load(self) -> None:
         """Load the MiniCPM-o-2.6 model and tokenizer."""
         try:
             logger.info(f"Loading MiniCPM-o-2.6 model from {self.model_path}")
@@ -104,14 +105,14 @@ class MiniCPM(BaseModel):
     def _calculate_optimal_fps(self, duration: float) -> float:
         """
         Calculate optimal FPS to stay within max_frames limit.
+
         Always uses 1.0 fps unless it would exceed max_frames.
 
         Args:
-            duration: Video duration in seconds
+            duration: Video duration in seconds.
 
-        Returns
-        -------
-            Optimal FPS value (frames per second)
+        Returns:
+            Optimal FPS value (frames per second).
         """
         # Start with 1 fps (1 frame per second)
         target_fps = 1.0
@@ -306,11 +307,10 @@ class MiniCPM(BaseModel):
             prompt: Text prompt for generation
             fps: Ignored - kept for API compatibility
             video_category: Unused
-            **kwargs: Additional generation parameters
+            **kwargs: Additional generation parameters.
 
-        Returns
-        -------
-            Generated text response
+        Returns:
+            Generated text response.
         """
         if self.model is None or self.tokenizer is None:
             raise RuntimeError("Model not loaded. Call load() first.")
@@ -402,7 +402,7 @@ class MiniCPM(BaseModel):
             logger.error(f"Generation failed: {e}", exc_info=True)
             raise RuntimeError(f"Generation failed: {e}")
 
-    def unload(self):
+    def unload(self) -> None:
         """Clean up model resources."""
         if self.model is not None:
             del self.model

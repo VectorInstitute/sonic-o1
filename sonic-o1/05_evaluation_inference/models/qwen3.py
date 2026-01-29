@@ -1,6 +1,7 @@
-"""
-models/qwen3_omni.py
+"""qwen3.py
 Qwen3-Omni implementation with vLLM for efficient inference.
+
+Author: SONIC-O1 Team
 """
 
 import gc
@@ -34,13 +35,14 @@ logger = logging.getLogger(__name__)
 class Qwen3Omni(BaseModel):
     """
     Qwen3-Omni wrapper with vLLM for efficient multi-GPU inference.
+
     Supports both Instruct and Thinking variants with audio chunking.
     """
 
     AUDIO_TOKENS_PER_SEC = 25
     VIDEO_TOKENS_PER_FRAME = 250
 
-    def __init__(self, model_name: str, config: Dict[str, Any]):
+    def __init__(self, model_name: str, config: Dict[str, Any]) -> None:
         super().__init__(model_name, config)
 
         self.model_path = config.get("model_path", "Qwen/Qwen3-Omni-30B-A3B-Instruct")
@@ -120,7 +122,8 @@ class Qwen3Omni(BaseModel):
             logger.error(f"Failed to reload engine: {e}")
             raise RuntimeError(f"Could not recover from engine crash: {e}")
 
-    def load(self):
+    def load(self) -> None:
+        """Load the Qwen3 model with vLLM."""
         try:
             self._clear_vllm_cache()
 
@@ -172,6 +175,7 @@ class Qwen3Omni(BaseModel):
     ) -> str:
         """
         Generate response from video and/or audio.
+
         Supports modality ablation: video-only, audio-only, or both.
 
         Args:
@@ -182,11 +186,10 @@ class Qwen3Omni(BaseModel):
             video_category: Ignored (kept for API compatibility)
             max_frames: Maximum frames to use (set by external retry)
             max_audio_chunks: Maximum audio chunks (set by external retry)
-            **kwargs: Additional generation parameters
+            **kwargs: Additional generation parameters.
 
-        Returns
-        -------
-            Generated text response
+        Returns:
+            Generated text response.
         """
         if self.llm is None or self.processor is None:
             try:
@@ -389,7 +392,7 @@ class Qwen3Omni(BaseModel):
             logger.error(f"Generation failed: {e}", exc_info=True)
             raise RuntimeError(f"Generation failed: {e}")
 
-    def unload(self):
+    def unload(self) -> None:
         """Aggressively cleanup vLLM to prevent zombie processes."""
         if self.llm is not None:
             try:
@@ -438,6 +441,7 @@ class Qwen3Omni(BaseModel):
         logger.info("Model unloaded, memory cleared, and child processes terminated")
 
     def get_model_info(self) -> Dict[str, Any]:
+        """Get model information and configuration."""
         info = super().get_model_info()
         info.update(
             {
@@ -458,4 +462,5 @@ class Qwen3Omni(BaseModel):
         return info
 
     def get_statistics(self) -> Dict[str, Any]:
+        """Get model statistics."""
         return self.stats

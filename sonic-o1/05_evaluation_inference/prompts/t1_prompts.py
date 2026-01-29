@@ -49,7 +49,6 @@ def get_t1_prompt(video_duration: float) -> str:
             Only return the JSON object, no additional text."""
 
 
-
 def get_t1_empathy_prompt(video_duration: float) -> str:
     """
     Get empathy-focused prompt for T1 task.
@@ -78,4 +77,3 @@ def get_t1_empathy_prompt(video_duration: float) -> str:
                 }}
 
                 Only return the JSON object, no additional text."""
-

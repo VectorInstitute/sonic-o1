@@ -1,3 +1,4 @@
+"""Prompts for temporal localization."""
 from typing import Any, Dict
 
 

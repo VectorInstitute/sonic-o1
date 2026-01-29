@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
-"""
-Process audio files that need captions using WhisperX
+"""whisper_captionGen.py.
+
+Process audio files that need captions using WhisperX.
+
 Generates YouTube-style SRT captions for videos without existing captions.
+
+Author: SONIC-O1 Team
 """
 
+import argparse
 import gc
 import json
+import traceback
 from pathlib import Path
 from typing import Dict, List
 
@@ -31,7 +37,8 @@ def format_timestamp(seconds: float) -> str:
 
 def segments_to_srt(segments: List[Dict], max_chars_per_line: int = 42) -> str:
     """
-    Convert WhisperX segments to SRT format
+    Convert WhisperX segments to SRT format.
+
     Similar to YouTube caption style with line breaking.
     """
     srt_lines = []
@@ -219,15 +226,11 @@ def process_topic(topic_path: Path, config: Dict):
         except Exception as e:
             print(f"[ERROR] Failed to process {video_id}: {e}")
             if config["processing"]["verbose"]:
-                import traceback
-
                 traceback.print_exc()
 
 
 def main():
-    """Main processing function."""
-    import argparse
-
+    """Run main processing function."""
     parser = argparse.ArgumentParser(
         description="Generate captions for videos using WhisperX"
     )
@@ -277,8 +280,6 @@ def main():
         except Exception as e:
             print(f"[ERROR] Failed to process topic {topic_dir.name}: {e}")
             if config["processing"]["verbose"]:
-                import traceback
-
                 traceback.print_exc()
 
     print(f"\n{'=' * 60}")

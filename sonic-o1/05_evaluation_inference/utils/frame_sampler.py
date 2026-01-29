@@ -1,5 +1,6 @@
 """
 utils/frame_sampler.py
+
 Extract frames from videos for image-based models using PyAV.
 """
 

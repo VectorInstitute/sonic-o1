@@ -1,6 +1,8 @@
-"""
-T1 Metrics: Video Summarization Evaluation
-Computes ROUGE-L, CIDEr, text similarity, and LLM-as-Judge scores.
+"""t1_metrics.py
+
+T1 metrics: video summarization (ROUGE-L, CIDEr, text similarity, LLM-as-Judge).
+
+Author: SONIC-O1 Team
 """
 
 import json
@@ -26,13 +28,14 @@ class T1Metrics:
         use_llm_judge: bool = True,
         embedding_model: str = "all-MiniLM-L6-v2",
         judge_name: str = "gpt",
-    ):
+    ) -> None:
         """
         Initialize T1 metrics.
 
         Args:
-            use_llm_judge: Whether to use LLM judge evaluation
-            embedding_model: Model for computing text similarity
+            use_llm_judge: Whether to use LLM judge evaluation.
+            embedding_model: Model for computing text similarity.
+            judge_name: Judge backend: "gpt" or "qwen".
         """
         self.rouge_scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
         self.cider_scorer = Cider()
@@ -40,13 +43,14 @@ class T1Metrics:
 
         self.use_llm_judge = use_llm_judge
         logger.info(f"LLM Judge name: {judge_name}")
+        # Lazy import: load only selected judge backend (env-dependent)
         if use_llm_judge:
             if judge_name == "gpt":
-                from llm_judge_gpt import LLMJudge
+                from llm_judge_gpt import LLMJudge  # noqa: PLC0415
 
                 self.llm_judge = LLMJudge()
             elif judge_name == "qwen":
-                from llm_judge_qwen import LLMJudge
+                from llm_judge_qwen import LLMJudge  # noqa: PLC0415
 
                 self.llm_judge = LLMJudge()
             else:
@@ -57,12 +61,11 @@ class T1Metrics:
         Compute ROUGE-L F1 score.
 
         Args:
-            reference: Ground truth text
-            prediction: Predicted text
+            reference: Ground truth text.
+            prediction: Predicted text.
 
-        Returns
-        -------
-            ROUGE-L F1 score (0-1)
+        Returns:
+            ROUGE-L F1 score in [0, 1].
         """
         scores = self.rouge_scorer.score(reference, prediction)
         return scores["rougeL"].fmeasure
@@ -72,12 +75,11 @@ class T1Metrics:
         Compute CIDEr score for a set of summaries.
 
         Args:
-            references: List of ground truth summaries
-            predictions: List of predicted summaries
+            references: List of ground truth summaries.
+            predictions: List of predicted summaries.
 
-        Returns
-        -------
-            Average CIDEr score
+        Returns:
+            Average CIDEr score.
         """
         # CIDEr expects dict format: {id: [text]}
         gts = {i: [ref] for i, ref in enumerate(references)}
@@ -91,12 +93,11 @@ class T1Metrics:
         Compute cosine similarity between embeddings.
 
         Args:
-            reference: Ground truth text
-            prediction: Predicted text
+            reference: Ground truth text.
+            prediction: Predicted text.
 
-        Returns
-        -------
-            Cosine similarity (0-1)
+        Returns:
+            Cosine similarity in [0, 1].
         """
         ref_embedding = self.embedding_model.encode([reference])
         pred_embedding = self.embedding_model.encode([prediction])
@@ -111,12 +112,11 @@ class T1Metrics:
         Evaluate a single video entry.
 
         Args:
-            ground_truth: Ground truth entry
-            prediction: Predicted entry
+            ground_truth: Ground truth entry.
+            prediction: Predicted entry.
 
-        Returns
-        -------
-            Dict with all metrics, or None if prediction failed
+        Returns:
+            Dict with all metrics, or None if prediction failed.
         """
         # Skip failed predictions
         if "error" in prediction or "outputs" not in prediction:
@@ -194,12 +194,11 @@ class T1Metrics:
         Evaluate all entries for a topic.
 
         Args:
-            ground_truth_path: Path to ground truth JSON
-            prediction_path: Path to prediction JSON
+            ground_truth_path: Path to ground truth JSON.
+            prediction_path: Path to prediction JSON.
 
-        Returns
-        -------
-            Dict with aggregated metrics
+        Returns:
+            Dict with topic_id, topic_name, num_evaluated, aggregated_metrics.
         """
         # Load data
         with open(ground_truth_path, "r") as f:
@@ -288,12 +287,11 @@ class T1Metrics:
         Compute CIDEr scores for a topic.
 
         Args:
-            ground_truth_path: Path to ground truth JSON
-            prediction_path: Path to prediction JSON
+            ground_truth_path: Path to ground truth JSON.
+            prediction_path: Path to prediction JSON.
 
-        Returns
-        -------
-            Dict with CIDEr scores for detailed and short summaries
+        Returns:
+            Dict with cider_detailed and cider_short.
         """
         with open(ground_truth_path, "r") as f:
             ground_truth = json.load(f)
@@ -341,15 +339,19 @@ def evaluate_t1_topic(
     output_path: str,
     use_llm_judge: bool = True,
     judge_name: str = "gpt",
-):
+) -> Dict[str, Any]:
     """
-    Convenience function to evaluate a single topic.
+    Evaluate T1 (summarization) for a single topic.
 
     Args:
-        ground_truth_path: Path to ground truth JSON
-        prediction_path: Path to prediction JSON
-        output_path: Where to save results
-        use_llm_judge: Whether to use LLM judge
+        ground_truth_path: Path to ground truth JSON.
+        prediction_path: Path to prediction JSON.
+        output_path: Where to save results.
+        use_llm_judge: Whether to use LLM judge.
+        judge_name: Judge backend: "gpt" or "qwen".
+
+    Returns:
+        Results dict with aggregated_metrics and per_entry_results.
     """
     logger.info(f"Evaluating T1: {Path(ground_truth_path).stem}")
 

@@ -1,6 +1,7 @@
-"""
-models/gpt4o.py
+"""gpt4o.py
 GPT-4o implementation with video frames and caption support.
+
+Author: SONIC-O1 Team
 """
 
 import base64
@@ -13,8 +14,8 @@ from typing import Any, Dict, List, Optional, Union
 
 try:
     from openai import OpenAI
-except ImportError:
-    raise ImportError("Please install openai: pip install openai")
+except ImportError as e:
+    raise ImportError("Please install openai: pip install openai") from e
 
 from utils.caption_handler import CaptionHandler
 from utils.frame_sampler import FrameSampler
@@ -27,13 +28,14 @@ logger = logging.getLogger(__name__)
 
 class GPT4o(BaseModel):
     """
-    GPT-4o wrapper with support for:
+    GPT-4o wrapper with multimodal support.
+
     - Video frames (extracted and encoded as images)
     - Captions (from SRT files)
     - Multimodal (frames + captions).
     """
 
-    def __init__(self, model_name: str, config: Dict[str, Any]):
+    def __init__(self, model_name: str, config: Dict[str, Any]) -> None:
         super().__init__(model_name, config)
 
         # Model capabilities
@@ -82,7 +84,7 @@ class GPT4o(BaseModel):
         self.frame_sampler = None
         self.caption_handler = None
 
-    def load(self):
+    def load(self) -> None:
         """Initialize OpenAI client and handlers."""
         try:
             self.client = OpenAI(api_key=self.api_key)
@@ -105,7 +107,7 @@ class GPT4o(BaseModel):
             )
 
         except Exception as e:
-            raise RuntimeError(f"Failed to load GPT-4o: {e}")
+            raise RuntimeError(f"Failed to load GPT-4o: {e}") from e
 
     def generate(
         self,
@@ -133,11 +135,10 @@ class GPT4o(BaseModel):
             max_caption_chunks: Maximum caption chunks (for retry logic)
             caption_path: Optional explicit caption file path
             segment: Optional segment info {'start': float, 'end': float} for caption filtering
-            **kwargs: Additional generation parameters
+            **kwargs: Additional generation parameters.
 
-        Returns
-        -------
-            Generated text response
+        Returns:
+            Generated text response.
         """
         if self.client is None:
             raise RuntimeError("Client not loaded. Call load() first.")
@@ -272,12 +273,11 @@ class GPT4o(BaseModel):
                     error_str = str(e)
 
                     # Handle rate limits
-                    if "429" in error_str or "rate_limit" in error_str.lower():
-                        if attempt < self.retry_attempts - 1:
-                            wait_time = (attempt + 1) * 5
-                            logger.warning(f"Rate limit hit, waiting {wait_time}s...")
-                            time.sleep(wait_time)
-                            continue
+                    if ("429" in error_str or "rate_limit" in error_str.lower()) and attempt < self.retry_attempts - 1:
+                        wait_time = (attempt + 1) * 5
+                        logger.warning(f"Rate limit hit, waiting {wait_time}s...")
+                        time.sleep(wait_time)
+                        continue
 
                     # Handle context length errors
                     if (
@@ -285,7 +285,7 @@ class GPT4o(BaseModel):
                         or "maximum context" in error_str.lower()
                     ):
                         logger.error(f"Context length exceeded: {e}")
-                        raise RuntimeError(f"Context length exceeded: {e}")
+                        raise RuntimeError(f"Context length exceeded: {e}") from e
 
                     logger.warning(f"Generation attempt {attempt + 1} failed: {e}")
                     if attempt < self.retry_attempts - 1:
@@ -294,7 +294,7 @@ class GPT4o(BaseModel):
                         raise
 
         except Exception as e:
-            raise RuntimeError(f"Generation failed: {e}")
+            raise RuntimeError(f"Generation failed: {e}") from e
 
     def _extract_frames(self, video_path: Path, num_frames: int) -> List[Path]:
         """
@@ -302,11 +302,10 @@ class GPT4o(BaseModel):
 
         Args:
             video_path: Path to video file
-            num_frames: Number of frames to extract
+            num_frames: Number of frames to extract.
 
-        Returns
-        -------
-            List of paths to extracted frame images
+        Returns:
+            List of paths to extracted frame images.
         """
         if self.frame_sampler is None:
             raise RuntimeError("Frame sampler not initialized")
@@ -327,19 +326,18 @@ class GPT4o(BaseModel):
         Encode image file to base64 string.
 
         Args:
-            image_path: Path to image file
+            image_path: Path to image file.
 
-        Returns
-        -------
-            Base64 encoded string
+        Returns:
+            Base64 encoded string.
         """
         try:
             with open(image_path, "rb") as f:
                 return base64.b64encode(f.read()).decode("utf-8")
         except Exception as e:
-            raise RuntimeError(f"Failed to encode image {image_path}: {e}")
+            raise RuntimeError(f"Failed to encode image {image_path}: {e}") from e
 
-    def unload(self):
+    def unload(self) -> None:
         """Clean up resources."""
         # Cleanup frame sampler
         if self.frame_sampler is not None:

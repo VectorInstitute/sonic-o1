@@ -1,11 +1,7 @@
-"""
-models/phi4.py.
+"""phi4.py
+Phi-4 Multimodal implementation (microsoft/Phi-4-multimodal-instruct).
 
-Phi-4 Multimodal implementation following BaseModel pattern.
-Self-contained with all Phi-4-specific logic.
-
-Based on microsoft/Phi-4-multimodal-instruct
-https://huggingface.co/microsoft/Phi-4-multimodal-instruct
+Author: SONIC-O1 Team
 """
 
 import logging
@@ -26,7 +22,7 @@ logger = logging.getLogger(__name__)
 class Phi4(BaseModel):
     """Phi-4 Multimodal wrapper following BaseModel pattern."""
 
-    def __init__(self, model_name: str, config: Dict[str, Any]):
+    def __init__(self, model_name: str, config: Dict[str, Any]) -> None:
         super().__init__(model_name, config)
 
         self.model_path = config.get(
@@ -66,7 +62,7 @@ class Phi4(BaseModel):
             "total_frames_processed": 0,
         }
 
-    def load(self):
+    def load(self) -> None:
         """Load Phi-4 model and processor."""
         try:
             from transformers import (
@@ -137,8 +133,7 @@ class Phi4(BaseModel):
             video_path: Path to video file
             max_frames: Maximum number of frames to extract
 
-        Returns
-        -------
+        Returns:
             List of PIL Images
         """
         try:
@@ -206,13 +201,13 @@ class Phi4(BaseModel):
     def _load_audio(self, audio_path: Union[str, Path]) -> Tuple[np.ndarray, int]:
         """
         Load audio from file with automatic format detection.
+
         Supports m4a, mp3, wav, flac, etc.
 
         Args:
             audio_path: Path to audio file
 
-        Returns
-        -------
+        Returns:
             Tuple of (audio_array, sample_rate)
         """
         try:
@@ -252,8 +247,7 @@ class Phi4(BaseModel):
             max_chunks: Maximum number of chunks (None = no chunking)
             chunk_duration_sec: Duration of each chunk in seconds
 
-        Returns
-        -------
+        Returns:
             Tuple of (chunked_audio, sample_rate)
         """
         if max_chunks is None:
@@ -300,8 +294,7 @@ class Phi4(BaseModel):
             max_audio_chunks: Maximum audio chunks (set by external retry)
             **kwargs: Additional generation parameters
 
-        Returns
-        -------
+        Returns:
             Generated text response
         """
         if self.model is None or self.processor is None:
@@ -477,7 +470,7 @@ class Phi4(BaseModel):
             logger.error(f"Unexpected error: {e}", exc_info=True)
             raise RuntimeError(f"Generation failed: {e}")
 
-    def unload(self):
+    def unload(self) -> None:
         """Unload model and free memory."""
         logger.info("Unloading Phi-4 model...")
 

@@ -1,6 +1,10 @@
-"""
-Main Evaluation Orchestrator
+"""run_evaluation.py
+Main Evaluation Orchestrator.
+
 Coordinates inference and metrics computation for model evaluation.
+Run from repository root; supports single or multiple models, tasks, and topics.
+
+Author: SONIC-O1 Team
 """
 
 import argparse
@@ -29,25 +33,25 @@ def run_inference(
     config_path: str,
     skip_existing: bool = True,
     experiment_name: Optional[str] = None,
-    additional_args: List[str] = None,
+    additional_args: Optional[List[str]] = None,
 ) -> int:
     """
-    Run inference for a model.
+    Run inference for a model via subprocess.
 
     Args:
-        model: Model name
-        tasks: List of tasks (t1, t2, t3)
-        topics: List of topics to evaluate
-        dataset_path: Path to dataset
-        vqa_path: Path to VQA ground truth
-        output_path: Path to save predictions
-        config_path: Path to models config
-        skip_existing: Skip already processed entries
-        additional_args: Additional arguments to pass
+        model: Model name to run.
+        tasks: List of task identifiers (t1, t2, t3) or full names.
+        topics: List of topic names to evaluate.
+        dataset_path: Path to the dataset root.
+        vqa_path: Path to VQA ground-truth data.
+        output_path: Path to write predictions.
+        config_path: Path to models configuration YAML.
+        skip_existing: If True, skip already processed entries.
+        experiment_name: Optional experiment label for organizing outputs.
+        additional_args: Extra CLI arguments for the inference script.
 
-    Returns
-    -------
-        Return code (0 for success)
+    Returns:
+        Process return code (0 on success, non-zero on failure).
     """
     logger.info("=" * 80)
     logger.info(f"STEP 1: Running inference for model '{model}'")
@@ -81,7 +85,7 @@ def run_inference(
     if not skip_existing:
         cmd.append("--overwrite")
 
-    if additional_args:
+    if additional_args is not None:
         cmd.extend(additional_args)
 
     logger.info(f"Running: {' '.join(cmd)}")
@@ -105,18 +109,18 @@ def run_metrics(
     experiment_name: Optional[str] = None,
 ) -> int:
     """
-    Compute metrics for a model.
+    Compute metrics for a model via subprocess.
 
     Args:
-        model: Model name
-        tasks: List of tasks
-        topics: List of topics
-        config_path: Path to config file
-        use_llm_judge: Whether to use LLM judge
+        model: Model name whose predictions to evaluate.
+        tasks: List of task identifiers to compute metrics for.
+        topics: List of topic names.
+        config_path: Path to models configuration YAML.
+        use_llm_judge: If True, run LLM judge evaluation.
+        experiment_name: Optional experiment label for locating results.
 
-    Returns
-    -------
-        Return code (0 for success)
+    Returns:
+        Process return code (0 on success, non-zero on failure).
     """
     logger.info("=" * 80)
     logger.info(f"STEP 2: Computing metrics for model '{model}'")
@@ -155,8 +159,13 @@ def run_metrics(
     return 0
 
 
-def main():
-    """Main entry point."""
+def main() -> int:
+    """
+    Parse arguments, load config, and run inference and/or metrics for selected models.
+
+    Returns:
+        Exit code: 0 if all models succeed, 1 on failure or invalid options.
+    """
     parser = argparse.ArgumentParser(
         description="Evaluation Pipeline - Run inference and compute metrics",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -193,7 +202,7 @@ def main():
     parser.add_argument(
         "--config",
         type=str,
-        default="05_evaluation_inference/configs/models_config.yaml",
+        default="05_evaluation_inference/models_config.yaml",
         help="Path to models configuration file",
     )
     parser.add_argument(

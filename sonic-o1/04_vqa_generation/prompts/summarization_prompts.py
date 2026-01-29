@@ -1,5 +1,7 @@
 """Task 1: Summarization prompts (map and reduce phases)."""
 
+import json
+
 # MAP PHASE: Per-segment summarization
 MAP_PHASE_PROMPT = """You are a precise video segment summarizer.
 
@@ -262,8 +264,6 @@ def get_map_prompt(segment_info: dict, metadata: dict, transcript: str, config) 
 
 def get_initialize_prompt(first_segment: dict, video_id: str, metadata: dict) -> str:
     """Generate prompt to initialize summary from first segment."""
-    import json
-
     return INITIALIZE_SUMMARY_PROMPT.format(
         video_id=video_id,
         title=metadata.get("title", "Unknown"),
@@ -282,8 +282,6 @@ def get_streaming_update_prompt(
     config,
 ) -> str:
     """Generate prompt to add new segment to accumulated summary."""
-    import json
-
     constraints = config.summarization.constraints
 
     return STREAMING_UPDATE_PROMPT.format(
@@ -306,8 +304,6 @@ def get_reduce_prompt(
     video_id: str, metadata: dict, segment_summaries: list, config
 ) -> str:
     """Generate reduce phase prompt for merging segments."""
-    import json
-
     constraints = config.summarization.constraints
 
     return REDUCE_PHASE_PROMPT.format(

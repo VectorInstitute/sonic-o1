@@ -1,4 +1,9 @@
-"""Task 1: Video Summarization Model."""
+"""summarization_model.py.
+
+Task 1: Video Summarization Model.
+
+Author: SONIC-O1 Team
+"""
 
 import json
 import logging
@@ -48,14 +53,14 @@ class SummarizationModel(BaseGeminiClient):
         Process a video and generate summarization VQA entry.
 
         Args:
-            video_path: Path to video file
-            audio_path: Path to audio file (optional)
-            transcript_path: Path to transcript/caption file (optional)
-            metadata: Video metadata from metadata_enhanced.json
+            video_path: Path to video file.
+            audio_path: Path to audio file (optional).
+            transcript_path: Path to transcript/caption file (optional).
+            metadata: Video metadata from metadata_enhanced.json.
 
         Returns
         -------
-            VQA entry dict for Task 1
+            VQA entry dict for Task 1.
         """
         try:
             video_id = metadata.get("video_id", metadata.get("video_number", "unknown"))
@@ -70,12 +75,13 @@ class SummarizationModel(BaseGeminiClient):
                 else:
                     category = "long"
                 logger.warning(
-                    f"Video {video_id}: No valid category in metadata, "
-                    f"determined as '{category}' based on duration ({duration}s)"
+                    f"Video {video_id}: no valid category, "
+                    f"using '{category}' from duration ({duration}s)"
                 )
 
             print(
-                f"Processing video {video_id} for summarization (duration: {duration}s, category: {category})"
+                f"Processing video {video_id} for summarization "
+                f"(duration: {duration}s, category: {category})"
             )
 
             if category == "short":
@@ -138,7 +144,8 @@ class SummarizationModel(BaseGeminiClient):
 
         if not summary_data or summary_data.get("confidence", 0) == 0:
             logger.error(
-                f"FAILED to generate valid summary for {video_id} after {max_attempts} attempts"
+                f"FAILED to generate summary for {video_id} "
+                f"after {max_attempts} attempts"
             )
             summary_data = self._get_default_summary()
 
@@ -158,7 +165,6 @@ class SummarizationModel(BaseGeminiClient):
             "demographics": demographics.get("demographics", []),
             "confidence": summary_data.get("confidence", 0.0),
         }
-
 
     def _process_segmented_video(
         self,
@@ -242,7 +248,6 @@ class SummarizationModel(BaseGeminiClient):
             "confidence": merged_summary.get("confidence", 0.0),
         }
 
-
     def _generate_segment_summary(
         self,
         segment_info: Dict,
@@ -250,10 +255,11 @@ class SummarizationModel(BaseGeminiClient):
         transcript_text: str,
         metadata: Dict[str, Any],
     ) -> Dict[str, Any]:
-        """MAP phase: Generate summary for one segment with retry on JSON parse failure."""
+        """MAP: Generate summary for one segment with retry on JSON parse."""
         seg_num = segment_info["segment_number"]
         print(
-            f"Generating summary for segment {seg_num} ({segment_info['start']}s-{segment_info['end']}s)"
+            f"Generating summary for segment {seg_num} "
+            f"({segment_info['start']}s-{segment_info['end']}s)"
         )
 
         max_attempts = 2
@@ -298,7 +304,8 @@ class SummarizationModel(BaseGeminiClient):
 
                 total_size = sum(p.stat().st_size for _, p in media_files if p.exists())
                 print(
-                    f"Calling Gemini with {len(media_files)} files, total {total_size / 1024 / 1024:.1f}MB"
+                    f"Calling Gemini with {len(media_files)} files, "
+                    f"total {total_size / 1024 / 1024:.1f}MB"
                 )
 
                 response_text = self.generate_content(
@@ -309,14 +316,16 @@ class SummarizationModel(BaseGeminiClient):
                 if summary_data.get("confidence", 0) > 0:
                     return summary_data
                 logger.warning(
-                    f"Segment {seg_num} parsing failed on attempt {attempt + 1}/{max_attempts}"
+                    f"Segment {seg_num} parse failed "
+                    f"attempt {attempt + 1}/{max_attempts}"
                 )
                 if attempt < max_attempts - 1:
                     time.sleep(3)
 
             except Exception as e:
                 logger.error(
-                    f"Segment {seg_num} generation failed on attempt {attempt + 1}/{max_attempts}: {e}"
+                    f"Segment {seg_num} failed "
+                    f"attempt {attempt + 1}/{max_attempts}: {e}"
                 )
                 if attempt < max_attempts - 1:
                     time.sleep(3)
@@ -327,9 +336,12 @@ class SummarizationModel(BaseGeminiClient):
         return self._get_default_segment_summary()
 
     def _merge_segment_summaries(
-        self, video_id: str, metadata: Dict[str, Any], segment_summaries: List[Dict]
+        self,
+        video_id: str,
+        metadata: Dict[str, Any],
+        segment_summaries: List[Dict],
     ) -> Dict[str, Any]:
-        """REDUCE phase: Incrementally build summary by adding segments one at a time."""
+        """REDUCE: Build summary by adding segments one at a time."""
         print(f"Streaming accumulation for {len(segment_summaries)} segments")
 
         if not segment_summaries:
@@ -369,7 +381,7 @@ class SummarizationModel(BaseGeminiClient):
     def _initialize_summary_from_segment(
         self, first_segment: Dict, video_id: str, metadata: Dict[str, Any]
     ) -> Dict[str, Any]:
-        """Convert first segment into initial video-level summary structure with retry."""
+        """Convert first segment to video-level summary with retry."""
         safe_metadata = self._sanitize_metadata_for_prompt(metadata)
         max_attempts = 3
 
@@ -380,7 +392,7 @@ class SummarizationModel(BaseGeminiClient):
 
                 if not response_text or not response_text.strip():
                     logger.warning(
-                        f"Empty response on attempt {attempt + 1}, using direct conversion"
+                        f"Empty response attempt {attempt + 1}, using direct conversion"
                     )
                     if attempt == max_attempts - 1:
                         return self._direct_convert_segment_to_summary(first_segment)
@@ -392,7 +404,8 @@ class SummarizationModel(BaseGeminiClient):
                 if summary_data.get("confidence", 0) > 0:
                     return summary_data
                 logger.warning(
-                    f"Initialize attempt {attempt + 1}/{max_attempts} failed for {video_id}"
+                    f"Initialize attempt {attempt + 1}/{max_attempts} "
+                    f"failed for {video_id}"
                 )
                 if attempt < max_attempts - 1:
                     time.sleep(5)
@@ -450,7 +463,8 @@ class SummarizationModel(BaseGeminiClient):
                 if summary_data.get("confidence", 0) > 0:
                     return summary_data
                 logger.warning(
-                    f"Merge attempt {attempt + 1}/{max_attempts} failed for segment {segment_num}"
+                    f"Merge attempt {attempt + 1}/{max_attempts} "
+                    f"failed for segment {segment_num}"
                 )
                 if attempt < max_attempts - 1:
                     time.sleep(5)
@@ -468,9 +482,11 @@ class SummarizationModel(BaseGeminiClient):
         summary_text = segment.get("summary", "")
 
         lines = [
-            l.strip().lstrip("•-* ") for l in summary_text.split("\n") if l.strip()
+            line.strip().lstrip("•-* ")
+            for line in summary_text.split("\n")
+            if line.strip()
         ]
-        bullet_points = [l for l in lines if len(l) > 10][:5]
+        bullet_points = [line for line in lines if len(line) > 10][:5]
 
         if not bullet_points and summary_text:
             bullet_points = [summary_text[:200]]
@@ -488,9 +504,9 @@ class SummarizationModel(BaseGeminiClient):
         new_summary = new_segment.get("summary", "")
         if new_summary:
             lines = [
-                l.strip().lstrip("•-* ")
-                for l in new_summary.split("\n")
-                if l.strip() and len(l) > 10
+                line.strip().lstrip("•-* ")
+                for line in new_summary.split("\n")
+                if line.strip() and len(line) > 10
             ]
             current["summary_short"].extend(lines[:3])
 
@@ -545,7 +561,7 @@ class SummarizationModel(BaseGeminiClient):
             human_demographics = metadata.get("demographics_detailed_reviewed", {})
             if not human_demographics:
                 logger.warning(
-                    f"No human-reviewed demographics found for {metadata.get('video_id')}"
+                    f"No human-reviewed demographics for {metadata.get('video_id')}"
                 )
                 return {"demographics": [], "total_individuals": 0, "confidence": 0.0}
 
@@ -565,10 +581,7 @@ class SummarizationModel(BaseGeminiClient):
                 prompt += f"\n\nTRANSCRIPT SUMMARY:\n{transcript_text[:2000]}"
 
             response_text = self.generate_content(media_files, prompt, video_fps=0.25)
-            return self.demographics_expander.parse_demographics_response(
-                response_text
-            )
-
+            return self.demographics_expander.parse_demographics_response(response_text)
 
         except Exception as e:
             logger.error(f"Failed to get video demographics: {e}", exc_info=True)
@@ -638,6 +651,78 @@ class SummarizationModel(BaseGeminiClient):
         text = re.sub(r"(\})\s+(\"\w+\":)", r"\1,\2", text)
         return re.sub(r",\s*,", r",", text)
 
+    def _extract_json_from_markdown(self, text: str) -> str:
+        """Extract JSON from markdown code blocks."""
+        text = text.strip()
+        if "```json" in text:
+            start = text.find("```json") + 7
+            end = text.rfind("```")
+            if end > start:
+                return text[start:end].strip()
+        elif "```" in text:
+            start = text.find("```") + 3
+            end = text.rfind("```")
+            if end > start:
+                return text[start:end].strip()
+        return text
+
+    def _log_json_error_details(
+        self, error: json.JSONDecodeError, corrected_text: str, original_text: str
+    ) -> None:
+        """Log detailed JSON error information."""
+        error_line = getattr(error, "lineno", 0)
+        error_col = getattr(error, "colno", 0)
+
+        if error_line > 0:
+            lines = corrected_text.split("\n")
+            start_line = max(0, error_line - 3)
+            end_line = min(len(lines), error_line + 2)
+
+            logger.error(f"Error at line {error_line}, column {error_col}:")
+            for i in range(start_line, end_line):
+                if i < len(lines):
+                    marker = " >>> " if i == error_line - 1 else "     "
+                    logger.error(f"{marker}Line {i + 1}: {lines[i][:200]}")
+
+        debug_file = Path(f"debug_json_error_{int(time.time())}.txt")
+        with open(debug_file, "w") as f:
+            f.write("=== ORIGINAL ===\n")
+            f.write(original_text)
+            f.write("\n\n=== CORRECTED ===\n")
+            f.write(corrected_text)
+        logger.error(f"Saved problematic JSON to {debug_file}")
+
+    def _parse_json_with_retry(self, response_text: str) -> Optional[Dict[str, Any]]:
+        """Parse JSON with auto-fix retry and error logging."""
+        try:
+            return json.loads(response_text)
+        except json.JSONDecodeError as e:
+            logger.warning(f"JSON decode error, attempting auto-fix: {e}")
+            corrected_text = self._fix_common_json_errors(response_text)
+
+            try:
+                data = json.loads(corrected_text)
+                logger.info("Successfully fixed JSON formatting!")
+                return data
+            except json.JSONDecodeError as e2:
+                logger.error(f"JSON still invalid after auto-fix: {e2}")
+                self._log_json_error_details(e2, corrected_text, response_text)
+                return None
+
+    def _normalize_parsed_data(self, data: Any) -> Optional[Dict[str, Any]]:
+        """Normalize parsed data to dict format."""
+        if isinstance(data, list):
+            if len(data) > 0 and isinstance(data[0], dict):
+                logger.warning("API returned list, extracting first element")
+                return data[0]
+            logger.error("API returned invalid list format")
+            return None
+
+        if not isinstance(data, dict):
+            logger.error(f"Parsed data is not a dict, got {type(data)}")
+            return None
+
+        return data
 
     def _parse_summary_response(self, response_text: str) -> Dict[str, Any]:
         """Parse summary response from Gemini with enhanced error handling."""
@@ -646,76 +731,22 @@ class SummarizationModel(BaseGeminiClient):
                 logger.warning("Empty summary response received")
                 return self._get_default_summary()
 
-            response_text = response_text.strip()
+            cleaned_text = self._extract_json_from_markdown(response_text)
+            data = self._parse_json_with_retry(cleaned_text)
 
-            if "```json" in response_text:
-                start = response_text.find("```json") + 7
-                end = response_text.rfind("```")
-                if end > start:
-                    response_text = response_text[start:end]
-            elif "```" in response_text:
-                start = response_text.find("```") + 3
-                end = response_text.rfind("```")
-                if end > start:
-                    response_text = response_text[start:end]
+            if data is None:
+                return self._get_default_summary()
 
-            response_text = response_text.strip()
-
-            try:
-                data = json.loads(response_text)
-            except json.JSONDecodeError as e:
-                logger.warning(f"JSON decode error, attempting auto-fix: {e}")
-
-                corrected_text = self._fix_common_json_errors(response_text)
-
-                try:
-                    data = json.loads(corrected_text)
-                    logger.info("Successfully fixed JSON formatting!")
-                except json.JSONDecodeError as e2:
-                    logger.error(f"JSON still invalid after auto-fix: {e2}")
-
-                    error_line = getattr(e2, "lineno", 0)
-                    error_col = getattr(e2, "colno", 0)
-
-                    if error_line > 0:
-                        lines = corrected_text.split("\n")
-                        start_line = max(0, error_line - 3)
-                        end_line = min(len(lines), error_line + 2)
-
-                        logger.error(f"Error at line {error_line}, column {error_col}:")
-                        for i in range(start_line, end_line):
-                            if i < len(lines):
-                                marker = " >>> " if i == error_line - 1 else "     "
-                                logger.error(f"{marker}Line {i + 1}: {lines[i][:200]}")
-
-                    debug_file = Path(f"debug_json_error_{int(time.time())}.txt")
-                    with open(debug_file, "w") as f:
-                        f.write("=== ORIGINAL ===\n")
-                        f.write(response_text)
-                        f.write("\n\n=== CORRECTED ===\n")
-                        f.write(corrected_text)
-                    logger.error(f"Saved problematic JSON to {debug_file}")
-
-                    return self._get_default_summary()
-
-            if isinstance(data, list):
-                if len(data) > 0 and isinstance(data[0], dict):
-                    logger.warning("API returned list, extracting first element")
-                    data = data[0]
-                else:
-                    logger.error("API returned invalid list format")
-                    return self._get_default_summary()
-
-            if not isinstance(data, dict):
-                logger.error(f"Parsed data is not a dict, got {type(data)}")
+            normalized_data = self._normalize_parsed_data(data)
+            if normalized_data is None:
                 return self._get_default_summary()
 
             return {
-                "summary_short": data.get("summary_short", []),
-                "summary_detailed": data.get("summary_detailed", ""),
-                "timeline": data.get("timeline", []),
-                "glossary": data.get("glossary", []),
-                "confidence": float(data.get("confidence", 0.0)),
+                "summary_short": normalized_data.get("summary_short", []),
+                "summary_detailed": normalized_data.get("summary_detailed", ""),
+                "timeline": normalized_data.get("timeline", []),
+                "glossary": normalized_data.get("glossary", []),
+                "confidence": float(normalized_data.get("confidence", 0.0)),
             }
 
         except Exception as e:
@@ -729,71 +760,23 @@ class SummarizationModel(BaseGeminiClient):
                 logger.warning("Empty response text received")
                 return self._get_default_segment_summary()
 
-            response_text = response_text.strip()
+            cleaned_text = self._extract_json_from_markdown(response_text)
+            data = self._parse_json_with_retry(cleaned_text)
 
-            if "```json" in response_text:
-                start = response_text.find("```json") + 7
-                end = response_text.rfind("```")
-                if end > start:
-                    response_text = response_text[start:end]
-            elif "```" in response_text:
-                start = response_text.find("```") + 3
-                end = response_text.rfind("```")
-                if end > start:
-                    response_text = response_text[start:end]
+            if data is None:
+                return self._get_default_segment_summary()
 
-            response_text = response_text.strip()
-
-            try:
-                data = json.loads(response_text)
-            except json.JSONDecodeError as e:
-                logger.warning(
-                    f"JSON decode error in segment, attempting auto-fix: {e}"
-                )
-
-                corrected_text = self._fix_common_json_errors(response_text)
-
-                try:
-                    data = json.loads(corrected_text)
-                    logger.info("Successfully fixed segment JSON formatting!")
-                except json.JSONDecodeError as e2:
-                    logger.error(f"Segment JSON still invalid after auto-fix: {e2}")
-
-                    error_line = getattr(e2, "lineno", 0)
-                    if error_line > 0:
-                        lines = corrected_text.split("\n")
-                        start_line = max(0, error_line - 3)
-                        end_line = min(len(lines), error_line + 2)
-
-                        logger.error(f"Error at line {error_line}:")
-                        for i in range(start_line, end_line):
-                            if i < len(lines):
-                                marker = " >>> " if i == error_line - 1 else "     "
-                                logger.error(f"{marker}Line {i + 1}: {lines[i][:200]}")
-
-                    return self._get_default_segment_summary()
-
-            if isinstance(data, list):
-                if len(data) > 0 and isinstance(data[0], dict):
-                    logger.warning(
-                        "API returned list in segment, extracting first element"
-                    )
-                    data = data[0]
-                else:
-                    logger.error("API returned invalid list format in segment")
-                    return self._get_default_segment_summary()
-
-            if not isinstance(data, dict):
-                logger.error(f"Segment data is not a dict, got {type(data)}")
+            normalized_data = self._normalize_parsed_data(data)
+            if normalized_data is None:
                 return self._get_default_segment_summary()
 
             return {
-                "segment_start": data.get("segment_start", ""),
-                "segment_end": data.get("segment_end", ""),
-                "summary": data.get("summary", ""),
-                "mini_timeline": data.get("mini_timeline", []),
-                "entities": data.get("entities", []),
-                "confidence": float(data.get("confidence", 0.0)),
+                "segment_start": normalized_data.get("segment_start", ""),
+                "segment_end": normalized_data.get("segment_end", ""),
+                "summary": normalized_data.get("summary", ""),
+                "mini_timeline": normalized_data.get("mini_timeline", []),
+                "entities": normalized_data.get("entities", []),
+                "confidence": float(normalized_data.get("confidence", 0.0)),
             }
 
         except Exception as e:

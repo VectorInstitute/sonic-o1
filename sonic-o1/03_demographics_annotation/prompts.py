@@ -1,4 +1,9 @@
-"""Prompt templates for demographics annotation."""
+"""prompts.py.
+
+Prompt templates for demographics annotation.
+
+Author: SONIC-O1 Team
+"""
 
 SYSTEM_PROMPT = """You are a demographics annotation specialist for academic research.
 Your task is to analyze multimodal media content (video, audio, and text captions/transcripts)

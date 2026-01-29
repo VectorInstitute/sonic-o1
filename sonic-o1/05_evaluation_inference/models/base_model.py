@@ -1,6 +1,8 @@
-"""
-Base model class for evaluation framework.
-All model implementations should inherit from this class.
+"""base_model.py
+
+Abstract base class for all multimodal models in the evaluation framework.
+
+Author: SONIC-O1 Team
 """
 
 from abc import ABC, abstractmethod
@@ -17,13 +19,13 @@ class BaseModel(ABC):
     the abstract methods.
     """
 
-    def __init__(self, model_name: str, config: Dict[str, Any]):
+    def __init__(self, model_name: str, config: Dict[str, Any]) -> None:
         """
         Initialize the base model.
 
         Args:
-            model_name: Name of the model
-            config: Configuration dictionary from models_config.yaml
+            model_name: Name of the model.
+            config: Configuration dict from models_config.yaml.
         """
         self.model_name = model_name
         self.config = config
@@ -32,19 +34,14 @@ class BaseModel(ABC):
         self.supports_audio = config.get("supports_audio", True)
 
     @abstractmethod
-    def load(self):
+    def load(self) -> None:
         """
         Initialize and load the model.
 
-        This method should:
-        - Load model weights
-        - Initialize processors/tokenizers
-        - Set up any required configurations
-        - Move model to appropriate device
+        Load model weights, processors/tokenizers, and move to device.
 
-        Raises
-        ------
-            Exception: If model loading fails
+        Raises:
+            Exception: If model loading fails.
         """
         pass
 
@@ -73,35 +70,28 @@ class BaseModel(ABC):
                 - Audio file path
                 - None if audio not available
             prompt: Text prompt for the model
-            fps: Optional FPS for video processing (used by video models for memory optimization)
-            video_category: Optional video length category for timeout/memory optimization:
+            fps: Optional FPS for video (used by video models for memory).
+            video_category: Optional video length category for timeout/memory:
                 - 'short': < 5 minutes
                 - 'medium': 5-20 minutes
                 - 'long': > 20 minutes
-            **kwargs: Additional model-specific parameters such as:
-                - temperature: Sampling temperature
-                - max_tokens: Maximum generation length
-                - top_p: Nucleus sampling parameter
+            **kwargs: Additional model-specific parameters (e.g. temperature,
+                max_tokens, top_p).
 
-        Returns
-        -------
-            str: Model's text response
+        Returns:
+            Model's text response.
 
-        Raises
-        ------
-            Exception: If generation fails
+        Raises:
+            Exception: If generation fails.
         """
         pass
 
     @abstractmethod
-    def unload(self):
+    def unload(self) -> None:
         """
         Clean up model resources.
 
-        This method should:
-        - Clear model from memory
-        - Release GPU memory
-        - Close any open file handles
+        Clear model from memory, release GPU memory, close file handles.
         """
         pass
 
@@ -115,11 +105,10 @@ class BaseModel(ABC):
 
         Args:
             frames: Input frames
-            **kwargs: Additional preprocessing parameters
+            **kwargs: Additional preprocessing parameters.
 
-        Returns
-        -------
-            Preprocessed frames in model-specific format
+        Returns:
+            Preprocessed frames in model-specific format.
         """
         return frames
 
@@ -131,11 +120,10 @@ class BaseModel(ABC):
 
         Args:
             audio: Input audio
-            **kwargs: Additional preprocessing parameters
+            **kwargs: Additional preprocessing parameters.
 
-        Returns
-        -------
-            Preprocessed audio in model-specific format
+        Returns:
+            Preprocessed audio in model-specific format.
         """
         return audio
 
@@ -146,11 +134,10 @@ class BaseModel(ABC):
         This is an optional method that can be overridden for custom postprocessing.
 
         Args:
-            output: Raw model output
+            output: Raw model output.
 
-        Returns
-        -------
-            str: Cleaned and formatted output text
+        Returns:
+            Cleaned and formatted output text.
         """
         if isinstance(output, str):
             return output.strip()
@@ -160,9 +147,8 @@ class BaseModel(ABC):
         """
         Get model information.
 
-        Returns
-        -------
-            Dictionary containing model metadata
+        Returns:
+            Dict with name, supports_video, supports_audio, config.
         """
         return {
             "name": self.model_name,
@@ -172,4 +158,5 @@ class BaseModel(ABC):
         }
 
     def __repr__(self) -> str:
+        """Return string representation of the model."""
         return f"{self.__class__.__name__}(model_name='{self.model_name}')"

@@ -43,4 +43,3 @@ def get_t2_prompt(question: str, options: list) -> str:
             - CRITICAL: include all fields in the JSON and ensure proper formatting espicially answer_letter
 
             Only return the JSON object, no additional text."""
-

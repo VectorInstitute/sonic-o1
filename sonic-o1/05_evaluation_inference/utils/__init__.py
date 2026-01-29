@@ -1,12 +1,13 @@
 """
-utils/__init__.py
+utils/__init__.py.
+
 Utility functions for evaluation.
 """
 
-from .config_loader import ConfigLoader, get_config
-from .frame_sampler import FrameSampler
-from .mm_process_pyav import process_mm_info_pyav as process_mm_info
-from .segmenter import VideoSegmenter
+from utils.config_loader import ConfigLoader, get_config
+from utils.frame_sampler import FrameSampler
+from utils.mm_process_pyav import process_mm_info_pyav as process_mm_info
+from utils.segmenter import VideoSegmenter
 
 
 __all__ = [

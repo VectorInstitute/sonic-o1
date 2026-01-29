@@ -1,8 +1,17 @@
-"""Model interface for demographics annotation using Gemini."""
+"""model.py.
+
+Model interface for demographics annotation using Gemini.
+
+Author: SONIC-O1 Team
+"""
 
 import json
 import logging
 import os
+import re
+import shutil
+import subprocess
+import tempfile
 import time
 from datetime import datetime
 from pathlib import Path
@@ -10,6 +19,7 @@ from typing import Any, Dict, List, Optional
 
 from google import genai
 from google.genai import types
+from prompts import MAIN_PROMPT_TEMPLATE
 
 
 logger = logging.getLogger(__name__)
@@ -48,6 +58,7 @@ class DemographicsAnnotator:
     ) -> Dict[str, Any]:
         """
         Process media files (video, audio, transcript) for demographics annotation.
+
         Automatically handles videos longer than the limit by segmenting.
 
         Args:
@@ -67,21 +78,17 @@ class DemographicsAnnotator:
                 logger.error(error_msg)
                 return self._get_error_response(error_msg)
 
-            # Check if video needs segmentation (but NOT if this is already a segment)
+            # Check if video needs segmentation
+            # (but NOT if this is already a segment)
             primary_media = video_path if video_path else audio_path
-            is_video = primary_media.suffix.lower() in [
-                ".mp4",
-                ".avi",
-                ".mov",
-                ".webm",
-                ".mkv",
-                ".m4v",
-            ]
+            is_video = primary_media.suffix.lower() in config.video_extensions
 
-            # Only segment if: it's a video, it's too long, AND it's not already a segment
+            # Only segment if: it's a video, it's too long,
+            # AND it's not already a segment
             if is_video and duration > self.max_video_duration and not _is_segment:
                 logger.warning(
-                    f"Video duration ({duration}s) exceeds limit ({self.max_video_duration}s). "
+                    f"Video duration ({duration}s) exceeds limit "
+                    f"({self.max_video_duration}s). "
                     f"Will segment and process in chunks."
                 )
                 return self._process_long_video_segmented(
@@ -110,14 +117,16 @@ class DemographicsAnnotator:
 
             if use_file_api:
                 logger.info(
-                    f"Using File API for large media (total size: {total_size / (1024 * 1024):.2f}MB)"
+                    f"Using File API for large media (total size: "
+                    f"{total_size / (1024 * 1024):.2f}MB)"
                 )
                 response_text = self._process_large_media_multimodal(
                     media_files, prompt
                 )
             else:
                 logger.info(
-                    f"Using inline processing for small media (total size: {total_size / (1024 * 1024):.2f}MB)"
+                    f"Using inline processing for small media "
+                    f"(total size: {total_size / (1024 * 1024):.2f}MB)"
                 )
                 response_text = self._process_small_media_multimodal(
                     media_files, prompt
@@ -148,24 +157,23 @@ class DemographicsAnnotator:
         Process videos longer than the limit by segmenting into chunks.
 
         Strategy:
-        1. Split video into overlapping segments (e.g., 50min segments with 5min overlap)
+        1. Split video into overlapping segments
+           (e.g., 50min segments with 5min overlap)
         2. Process each segment
         3. Aggregate results with deduplication
         """
         try:
-            import shutil
-            import subprocess
-            import tempfile
-
             duration = metadata.get("duration_seconds", 0)
             segment_duration = (
                 self.max_video_duration - 300
             )  # 50 minutes (leaving 5min buffer)
-            overlap = 60  # 1 minute overlap to catch people across boundaries
+            # 1 minute overlap to catch people across boundaries
+            overlap = 60
 
             num_segments = int(duration / segment_duration) + 1
             logger.info(
-                f"Splitting {duration}s video into {num_segments} segments of ~{segment_duration}s each"
+                f"Splitting {duration}s video into {num_segments} segments "
+                f"of ~{segment_duration}s each"
             )
 
             temp_dir = Path(tempfile.mkdtemp(prefix="video_segments_"))
@@ -181,7 +189,9 @@ class DemographicsAnnotator:
                     )
 
                     logger.info(
-                        f"Processing segment {i + 1}/{num_segments}: {start_time}s to {start_time + segment_duration_actual}s"
+                        f"Processing segment {i + 1}/{num_segments}: "
+                        f"{start_time}s to "
+                        f"{start_time + segment_duration_actual}s"
                     )
 
                     # Create segment filename
@@ -202,13 +212,16 @@ class DemographicsAnnotator:
                             "-t",
                             str(segment_duration_actual),
                             "-c",
-                            "copy",  # Fast: just copy streams without re-encoding
+                            # Fast: just copy streams without re-encoding
+                            "copy",
                             "-avoid_negative_ts",
                             "1",
                             str(segment_video_path),
                         ]
 
-                        result = subprocess.run(cmd, capture_output=True, text=True)
+                        result = subprocess.run(
+                            cmd, capture_output=True, text=True, check=False
+                        )
                         if result.returncode != 0:
                             logger.error(f"FFmpeg error: {result.stderr}")
                             raise Exception(f"Failed to create video segment {i}")
@@ -234,7 +247,9 @@ class DemographicsAnnotator:
                             str(segment_audio_path),
                         ]
 
-                        result = subprocess.run(cmd, capture_output=True, text=True)
+                        result = subprocess.run(
+                            cmd, capture_output=True, text=True, check=False
+                        )
                         if result.returncode != 0:
                             logger.warning(
                                 f"Could not create audio segment: {result.stderr}"
@@ -256,7 +271,8 @@ class DemographicsAnnotator:
                             ) as f:
                                 f.write(segment_transcript)
 
-                    # Process this segment (with _is_segment=True to prevent re-segmentation)
+                    # Process this segment (with _is_segment=True to prevent
+                    # re-segmentation)
                     segment_metadata = metadata.copy()
                     segment_metadata["duration_seconds"] = segment_duration_actual
                     segment_metadata["segment_info"] = {
@@ -272,7 +288,8 @@ class DemographicsAnnotator:
                         transcript_path=segment_transcript_path,
                         metadata=segment_metadata,
                         config=config,
-                        _is_segment=True,  # THIS IS THE KEY FIX - prevents re-segmentation
+                        # THIS IS THE KEY FIX - prevents re-segmentation
+                        _is_segment=True,
                     )
 
                     all_demographics.append(segment_demographics)
@@ -308,7 +325,6 @@ class DemographicsAnnotator:
                 content = f.read()
 
             # Simple SRT parser
-            import re
 
             segments = content.strip().split("\n\n")
             extracted = []
@@ -318,9 +334,11 @@ class DemographicsAnnotator:
                 if len(lines) < 3:
                     continue
 
-                # Parse timestamp line (format: 00:00:10,500 --> 00:00:13,000)
+                # Parse timestamp line
+                # Format: 00:00:10,500 --> 00:00:13,000
                 timestamp_match = re.search(
-                    r"(\d{2}):(\d{2}):(\d{2}),(\d{3})\s*-->\s*(\d{2}):(\d{2}):(\d{2}),(\d{3})",
+                    r"(\d{2}):(\d{2}):(\d{2}),(\d{3})\s*-->\s*"
+                    r"(\d{2}):(\d{2}):(\d{2}),(\d{3})",
                     lines[1],
                 )
                 if timestamp_match:
@@ -345,6 +363,7 @@ class DemographicsAnnotator:
     ) -> Dict[str, Any]:
         """
         Aggregate demographics from multiple segments with deduplication.
+
         Uses voting/confidence averaging to merge results.
         """
         # Collect all demographics and confidences
@@ -382,7 +401,8 @@ class DemographicsAnnotator:
             ):
                 all_languages[lang] = max(all_languages.get(lang, 0), conf)
 
-            # Track max individuals seen in any segment - FIX: ensure it's an integer
+            # Track max individuals seen in any segment
+            # FIX: ensure it's an integer
             individuals_count = seg_result.get("demographics_annotation", {}).get(
                 "individuals_count", 0
             )
@@ -431,7 +451,8 @@ class DemographicsAnnotator:
                 max_length = getattr(config, "max_transcript_length", 50000)
                 if len(transcript_text) > max_length:
                     logger.info(
-                        f"Truncating transcript from {len(transcript_text)} to {max_length} chars"
+                        f"Truncating transcript from "
+                        f"{len(transcript_text)} to {max_length} chars"
                     )
                     transcript_text = transcript_text[:max_length] + "\n...[truncated]"
         return transcript_text
@@ -470,9 +491,8 @@ class DemographicsAnnotator:
                     if uploaded_files[i].state == "PROCESSING":
                         all_processed = False
                     elif uploaded_files[i].state == "FAILED":
-                        raise Exception(
-                            f"File processing failed: {getattr(uploaded_files[i], 'error', 'Unknown error')}"
-                        )
+                        error_msg = getattr(uploaded_files[i], "error", "Unknown error")
+                        raise Exception(f"File processing failed: {error_msg}")
 
                 if not all_processed:
                     time.sleep(10)
@@ -582,13 +602,14 @@ class DemographicsAnnotator:
 
     def _build_prompt(self, metadata: Dict[str, Any], transcript_text: str) -> str:
         """Build the analysis prompt with transcript embedded."""
-        from prompts import MAIN_PROMPT_TEMPLATE
-
         # Prepare transcript section
         if transcript_text:
             transcript_preview = f"TRANSCRIPT/CAPTIONS:\n{transcript_text}"
         else:
-            transcript_preview = "No transcript available. Analyze based on visual and audio content only."
+            transcript_preview = (
+                "No transcript available. Analyze based on visual and "
+                "audio content only."
+            )
 
         return MAIN_PROMPT_TEMPLATE.format(
             title=metadata.get("title", "Unknown"),
@@ -598,7 +619,6 @@ class DemographicsAnnotator:
             model_name=self.config.model_name,
             timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         )
-
 
     def _parse_response(self, response_text: str) -> Dict[str, Any]:
         """Parse and validate JSON response."""
@@ -643,17 +663,11 @@ class DemographicsAnnotator:
                     # Add default structure if missing
                     if field == "demographics_detailed":
                         data[field] = {
-                            "race": [],
-                            "gender": [],
-                            "age": [],
-                            "language": [],
+                            c: [] for c in self.config.demographic_categories
                         }
                     elif field == "demographics_confidence":
                         data[field] = {
-                            "race": {},
-                            "gender": {},
-                            "age": {},
-                            "language": {},
+                            c: {} for c in self.config.demographic_categories
                         }
                     elif field == "demographics_annotation":
                         data[field] = {
@@ -687,12 +701,12 @@ class DemographicsAnnotator:
 
         filtered_data = data.copy()
 
-        for category in ["race", "gender", "age", "language"]:
+        for category in self.config.demographic_categories:
             if category in data["demographics_confidence"]:
                 # Filter confidence scores
                 filtered_conf = {
                     k: v
-                    for k, v in data["demographics_confidence"][category].items()
+                    for k, v in (data["demographics_confidence"][category].items())
                     if v >= min_confidence
                 }
                 filtered_data["demographics_confidence"][category] = filtered_conf
@@ -707,19 +721,11 @@ class DemographicsAnnotator:
 
     def _get_error_response(self, error_msg: str) -> Dict[str, Any]:
         """Return error response structure."""
+        empty_list = {c: [] for c in self.config.demographic_categories}
+        empty_dict = {c: {} for c in self.config.demographic_categories}
         return {
-            "demographics_detailed": {
-                "race": [],
-                "gender": [],
-                "age": [],
-                "language": [],
-            },
-            "demographics_confidence": {
-                "race": {},
-                "gender": {},
-                "age": {},
-                "language": {},
-            },
+            "demographics_detailed": empty_list,
+            "demographics_confidence": empty_dict,
             "demographics_annotation": {
                 "model": self.config.model_name,
                 "annotated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),

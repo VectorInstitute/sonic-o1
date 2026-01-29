@@ -1,7 +1,7 @@
-"""
-models/unimoe.py
+"""unimoe.py
 Uni-MoE-2.0-Omni implementation with video and audio support.
-Supports both single-GPU and multi-GPU inference.
+
+Author: SONIC-O1 Team
 """
 
 import logging
@@ -29,10 +29,11 @@ logger = logging.getLogger(__name__)
 class UniMoe(BaseModel):
     """
     Uni-MoE-2.0-Omni wrapper with native video and audio support.
+
     Supports both single-GPU and multi-GPU inference modes.
     """
 
-    def __init__(self, model_name: str, config: Dict[str, Any]):
+    def __init__(self, model_name: str, config: Dict[str, Any]) -> None:
         super().__init__(model_name, config)
 
         # Model configuration
@@ -130,7 +131,7 @@ class UniMoe(BaseModel):
             logger.warning(f"DeepSpeed initialization warning: {e}")
             # Continue anyway - might still work
 
-    def load(self):
+    def load(self) -> None:
         """Load the Uni-MoE model and processor."""
         try:
             logger.info(f"Loading Uni-MoE model from {self.model_path}")
@@ -205,8 +206,7 @@ class UniMoe(BaseModel):
             video_path: Input video path
             output_dir: Output directory (default: creates 'converted' subdir)
 
-        Returns
-        -------
+        Returns:
             Path to converted video
         """
         import subprocess
@@ -251,13 +251,13 @@ class UniMoe(BaseModel):
     def _check_video_compatibility(self, video_path: Path) -> Optional[Path]:
         """
         Check if video is compatible with Decord.
+
         If AV1, automatically convert to H.264.
 
         Args:
             video_path: Original video path
 
-        Returns
-        -------
+        Returns:
             Path to compatible video (original or converted)
         """
         import subprocess
@@ -332,8 +332,7 @@ class UniMoe(BaseModel):
             max_audio_chunks: Unused for Uni-MoE
             **kwargs: Additional generation parameters
 
-        Returns
-        -------
+        Returns:
             Generated text response
         """
         if self.model is None or self.processor is None:
@@ -519,7 +518,7 @@ class UniMoe(BaseModel):
             logger.error(f"Generation failed: {e}", exc_info=True)
             raise RuntimeError(f"Generation failed: {e}")
 
-    def unload(self):
+    def unload(self) -> None:
         """Clean up model resources."""
         if self.model is not None:
             del self.model

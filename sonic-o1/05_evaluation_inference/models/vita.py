@@ -1,8 +1,7 @@
-"""
-models/vita.py.
-
+"""vita.py
 VITA-1.5 implementation following BaseModel pattern.
-Self-contained with all VITA-specific logic.
+
+Author: SONIC-O1 Team
 """
 
 import logging
@@ -29,7 +28,9 @@ IMAGE_TOKEN_INDEX = -200
 
 
 class ForceFirstToken(LogitsProcessor):
-    def __init__(self, token_id: int):
+    """Logits processor to force the first generated token."""
+
+    def __init__(self, token_id: int) -> None:
         self.token_id = token_id
         self.used = False
 
@@ -44,7 +45,7 @@ class ForceFirstToken(LogitsProcessor):
 class VITA(BaseModel):
     """VITA-1.5 wrapper following BaseModel pattern."""
 
-    def __init__(self, model_name: str, config: Dict[str, Any]):
+    def __init__(self, model_name: str, config: Dict[str, Any]) -> None:
         super().__init__(model_name, config)
 
         self.model_path = config.get("model_path", "VITA-MLLM/VITA-1.5")
@@ -92,9 +93,8 @@ class VITA(BaseModel):
             video_path: Input video path
             output_dir: Output directory (default: creates 'converted' subdir)
 
-        Returns
-        -------
-            Path to converted video
+        Returns:
+            Path to converted video.
         """
         import subprocess
 
@@ -141,11 +141,10 @@ class VITA(BaseModel):
         If AV1, automatically convert to H.264.
 
         Args:
-            video_path: Original video path
+            video_path: Original video path.
 
-        Returns
-        -------
-            Path to compatible video (original or converted)
+        Returns:
+            Path to compatible video (original or converted).
         """
         import subprocess
 
@@ -195,7 +194,7 @@ class VITA(BaseModel):
                 logger.error(f"  ✗ Failed to detect codec: {probe_error}")
                 return None
 
-    def load(self):
+    def load(self) -> None:
         """Load VITA model."""
         # Add VITA repo to path if specified
         if self.vita_repo_path:
@@ -587,7 +586,7 @@ class VITA(BaseModel):
             logger.error(f"Generation failed: {e}")
             raise RuntimeError(f"Generation failed: {e}")
 
-    def unload(self):
+    def unload(self) -> None:
         """Unload model and free memory."""
         logger.info("Unloading VITA model...")
 

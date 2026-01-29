@@ -1,14 +1,21 @@
-"""Task 3: Temporal Action Localization (Open-Ended) Generation Model."""
+"""temporal_localization_model.py.
+
+Task 3: Temporal Action Localization (Open-Ended) Generation Model.
+
+Author: SONIC-O1 Team
+"""
 
 import base64
 import json
 import logging
 import os
+import re
+import subprocess
 import sys
 import tempfile
 import time
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 import openai
 from prompts.temporal_judge_prompts import (
@@ -93,14 +100,13 @@ class TemporalLocalizationModel(BaseGeminiClient):
         Process a video and generate temporal localization VQA entries.
 
         Args:
-            video_path: Path to video file
-            audio_path: Path to audio file (optional)
-            transcript_path: Path to transcript/caption file (optional)
-            metadata: Video metadata from metadata_enhanced.json
+            video_path: Path to video file.
+            audio_path: Path to audio file (optional).
+            transcript_path: Path to transcript/caption file (optional).
+            metadata: Video metadata from metadata_enhanced.json.
 
-        Returns
-        -------
-            List of VQA entry dicts for Task 3 (one entry per segment, each with multiple questions)
+        Returns:
+            List of VQA entry dicts for Task 3 (one per segment, multi-Q).
         """
         # Track segments to cleanup AFTER processing completes
         video_segments = None
@@ -111,7 +117,8 @@ class TemporalLocalizationModel(BaseGeminiClient):
             duration = metadata.get("duration_seconds", 0)
 
             logger.info(
-                f"Processing video {video_id} for temporal localization (duration: {duration}s)"
+                f"Processing video {video_id} for temporal localization "
+                f"(duration: {duration}s)"
             )
 
             # Always segment videos into 3-minute chunks
@@ -158,9 +165,11 @@ class TemporalLocalizationModel(BaseGeminiClient):
                     )
                     continue
 
-            logger.info(
-                f"Generated {len(temporal_entries)} segment entries (with {sum(e['num_questions'] for e in temporal_entries)} total questions) for video {video_id}"
-            )
+                nq = sum(e["num_questions"] for e in temporal_entries)
+                logger.info(
+                    f"Generated {len(temporal_entries)} segment entries "
+                    f"({nq} questions) for video {video_id}"
+                )
             return temporal_entries
 
         except Exception as e:
@@ -205,7 +214,8 @@ class TemporalLocalizationModel(BaseGeminiClient):
         for attempt in range(self.max_retries):
             try:
                 logger.info(
-                    f"Attempt {attempt + 1}/{self.max_retries}: Generating temporal questions for {video_id} segment {seg_num}"
+                    f"Attempt {attempt + 1}/{self.max_retries}: "
+                    f"Generating temporal Qs for {video_id} seg {seg_num}"
                 )
 
                 result = self._generate_temporal_questions_for_segment(
@@ -214,7 +224,8 @@ class TemporalLocalizationModel(BaseGeminiClient):
 
                 if result:
                     logger.info(
-                        f"✓ Successfully generated temporal questions for segment {seg_num} on attempt {attempt + 1}"
+                        f"✓ Generated temporal Qs for segment {seg_num} "
+                        f"on attempt {attempt + 1}"
                     )
                     return result
                 last_error = "Empty result"
@@ -231,9 +242,167 @@ class TemporalLocalizationModel(BaseGeminiClient):
                     time.sleep(delay)
 
         logger.error(
-            f"✗ Failed to generate temporal questions for segment {seg_num} after {self.max_retries} attempts. Last error: {last_error}"
+            f"✗ Failed temporal Qs for segment {seg_num} after "
+            f"{self.max_retries} attempts. Last error: {last_error}"
         )
         return None
+
+    def _prepare_segment_media_files(
+        self, segment_info: Dict, audio_path: Optional[Path]
+    ) -> List[tuple]:
+        """Prepare media files list for segment processing."""
+        media_files = []
+        seg_path = segment_info["segment_path"]
+        if seg_path.exists():
+            video_extensions = [".mp4", ".avi", ".mov", ".webm", ".mkv", ".m4v"]
+            if seg_path.suffix.lower() in video_extensions:
+                media_files.append(("video", seg_path))
+            else:
+                media_files.append(("audio", seg_path))
+
+        if audio_path and audio_path.exists():
+            media_files.append(("audio", audio_path))
+
+        return media_files
+
+    def _build_question_entry(
+        self, q_data: Dict, q_idx: int, segment_start: float
+    ) -> Dict[str, Any]:
+        """Build a single question entry with absolute timestamps."""
+        question_id = f"{(q_idx + 1):03d}"
+        answer = q_data.get("answer", {})
+        answer_start_relative = answer.get("start_s")
+        answer_end_relative = answer.get("end_s")
+
+        answer_start_absolute = None
+        answer_end_absolute = None
+        if answer_start_relative is not None:
+            answer_start_absolute = round(segment_start + answer_start_relative, 3)
+        if answer_end_relative is not None:
+            answer_end_absolute = round(segment_start + answer_end_relative, 3)
+
+        return {
+            "question_id": question_id,
+            "question": q_data.get("question", ""),
+            "temporal_relation": q_data.get("temporal_relation", "after"),
+            "anchor_event": q_data.get("anchor_event", ""),
+            "target_event": q_data.get("target_event", ""),
+            "answer": {
+                "start_s": answer_start_absolute,
+                "end_s": answer_end_absolute,
+            },
+            "requires_audio": q_data.get("requires_audio", False),
+            "confidence": q_data.get("confidence", 0.0),
+            "abstained": q_data.get("abstained", False),
+            "rationale_model": q_data.get("rationale_model", ""),
+        }
+
+    def _build_questions_list(
+        self, questions_data: List[Dict], segment_start: float
+    ) -> List[Dict[str, Any]]:
+        """Build questions list with IDs and absolute timestamps."""
+        questions_list = []
+        for q_idx, q_data in enumerate(questions_data):
+            question_entry = self._build_question_entry(q_data, q_idx, segment_start)
+            questions_list.append(question_entry)
+        return questions_list
+
+    def _calculate_segment_confidence(self, questions_list: List[Dict]) -> float:
+        """Calculate segment-level confidence as average of questions."""
+        if not questions_list:
+            return 0.0
+        return sum(q["confidence"] for q in questions_list) / len(questions_list)
+
+    def _setup_judge_validation(
+        self, segment_info: Dict, video_id: str, seg_num: int
+    ) -> List[Path]:
+        """Set up GPT-4V judge validation by sampling frames."""
+        video_path = segment_info.get("segment_path")
+        if not video_path or not Path(video_path).exists():
+            return []
+
+        logger.info(f"Judge video path: {video_path}")
+        logger.info(f"Judge video exists: True")
+        logger.info(f"Judge video size: {Path(video_path).stat().st_size} bytes")
+
+        result = subprocess.run(
+            [
+                "ffprobe",
+                "-v",
+                "error",
+                "-show_entries",
+                "format=duration",
+                "-of",
+                "default=noprint_wrappers=1:nokey=1",
+                str(video_path),
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        actual_duration = float(result.stdout.strip())
+        frame_end = min(
+            actual_duration, segment_info["end"] - segment_info["start"]
+        )
+
+        cfg = self.config.temporal_localization
+        frame_paths = self.frame_sampler.sample_frames_from_segment(
+            video_path=Path(video_path),
+            segment_start=0.0,
+            segment_end=frame_end,
+            num_frames=self.judge_frame_count,
+            strategy=cfg.judge_frame_strategy,
+        )
+
+        return frame_paths
+
+    def _apply_judge_validation(
+        self,
+        entry: Dict[str, Any],
+        segment_info: Dict,
+        frame_paths: List[Path],
+        transcript_text: str,
+    ) -> None:
+        """Apply GPT-4V judge validation to questions."""
+        if not frame_paths:
+            return
+
+        validated_questions, validation_stats = self._validate_questions(
+            entry["questions"],
+            {
+                "start": segment_info["start"],
+                "end": segment_info["end"],
+            },
+            frame_paths,
+            transcript_text,
+        )
+
+        entry["questions"] = validated_questions
+        entry["num_questions"] = len(validated_questions)
+        entry["validation"] = validation_stats
+        entry["validation"]["judge_used"] = True
+
+        if validation_stats["total"] > 0:
+            val_rate = validation_stats["valid"] / validation_stats["total"]
+            entry["confidence"] = round(
+                entry["confidence"] * (0.7 + 0.3 * val_rate), 3
+            )
+
+        v, t, f = (
+            validation_stats["valid"],
+            validation_stats["total"],
+            validation_stats["fixed"],
+        )
+        logger.info(f"✓ {v}/{t} valid, {f} fixed")
+
+    def _cleanup_frame_paths(self, frame_paths: List[Path]) -> None:
+        """Clean up temporary frame files."""
+        for fp in frame_paths:
+            try:
+                if fp.exists():
+                    fp.unlink()
+            except Exception as e:
+                logger.debug(f"Failed to delete frame {fp}: {e}")
 
     def _generate_temporal_questions_for_segment(
         self,
@@ -242,138 +411,58 @@ class TemporalLocalizationModel(BaseGeminiClient):
         transcript_text: str,
         metadata: Dict[str, Any],
     ) -> Optional[Dict[str, Any]]:
-        """Generate multiple temporal questions for a video segment - returns ONE entry with questions list."""
+        """
+        Generate temporal questions for segment.
+
+        Returns one entry with questions list.
+        """
         video_id = metadata.get("video_id", metadata.get("video_number", "unknown"))
         seg_num = segment_info["segment_number"]
 
         logger.info(
-            f"Generating {self.questions_per_segment} temporal questions for {video_id} segment {seg_num}"
+            f"Generating {self.questions_per_segment} temporal Qs "
+            f"for {video_id} segment {seg_num}"
         )
 
         try:
-            # Build temporal localization prompt
             prompt = get_temporal_localization_prompt(
                 segment_info, metadata, transcript_text, self.config
             )
 
-            # Prepare media files
-            media_files = []
-            seg_path = segment_info["segment_path"]
-            if seg_path.exists():
-                # Determine if it's video or audio
-                if seg_path.suffix.lower() in [
-                    ".mp4",
-                    ".avi",
-                    ".mov",
-                    ".webm",
-                    ".mkv",
-                    ".m4v",
-                ]:
-                    media_files.append(("video", seg_path))
-                else:
-                    media_files.append(("audio", seg_path))
-
-            if audio_path and audio_path.exists():
-                media_files.append(("audio", audio_path))
-
-            # Generate temporal questions
+            media_files = self._prepare_segment_media_files(segment_info, audio_path)
             response_text = self.generate_content(media_files, prompt, video_fps=0.5)
-            print(
-                f"🔍 Segment {seg_num}: start={segment_info['start']}, end={segment_info['end']}, duration={segment_info['end'] - segment_info['start']}"
+
+            seg_path = segment_info["segment_path"]
+            dur = segment_info["end"] - segment_info["start"]
+            logger.info(
+                f"Segment {seg_num}: start={segment_info['start']}, "
+                f"end={segment_info['end']}, duration={dur}"
             )
-            print(f"📹 Segment file path: {seg_path}")
-            print(f"📹 Segment file exists: {seg_path.exists()}")
-            if seg_path.exists():
-                import subprocess
-
-                result = subprocess.run(
-                    [
-                        "ffprobe",
-                        "-v",
-                        "error",
-                        "-show_entries",
-                        "format=duration",
-                        "-of",
-                        "default=noprint_wrappers=1:nokey=1",
-                        str(seg_path),
-                    ],
-                    capture_output=True,
-                    text=True,
-                )
-                actual_duration = float(result.stdout.strip())
-                print(f"📹 ACTUAL segment file duration: {actual_duration}s")
-                print(f"📹 EXPECTED duration: {segment_info['duration']}s")
-
-            print(f"📝 RAW MODEL RESPONSE:\n{response_text}")
 
             questions_data = self._parse_temporal_response(response_text)
 
             for i, q in enumerate(questions_data):
+                ans = q.get("answer", {})
                 logger.info(
-                    f"Question {i + 1}: start_s={q.get('answer', {}).get('start_s')}, end_s={q.get('answer', {}).get('end_s')}"
+                    f"Question {i + 1}: start_s={ans.get('start_s')}, "
+                    f"end_s={ans.get('end_s')}"
                 )
 
-            # Get demographics for this segment (shared across all questions)
             demographics_data = self._get_segment_demographics(
                 segment_info, seg_path, audio_path, transcript_text, metadata
             )
 
-            # Build questions list with IDs and absolute timestamps
-            questions_list = []
-            segment_start = segment_info["start"]  # Get segment start time
+            segment_start = segment_info["start"]
+            questions_list = self._build_questions_list(questions_data, segment_start)
+            segment_confidence = self._calculate_segment_confidence(questions_list)
 
-            for q_idx, q_data in enumerate(questions_data):
-                # Generate question ID with zero-padded index
-                question_id = f"{(q_idx + 1):03d}"  # 001, 002, 003
-
-                # Get answer times (relative to segment)
-                answer_start_relative = q_data.get("answer", {}).get("start_s")
-                answer_end_relative = q_data.get("answer", {}).get("end_s")
-
-                # Convert to absolute times (relative to full video)
-                answer_start_absolute = None
-                answer_end_absolute = None
-                if answer_start_relative is not None:
-                    answer_start_absolute = round(
-                        segment_start + answer_start_relative, 3
-                    )
-                if answer_end_relative is not None:
-                    answer_end_absolute = round(segment_start + answer_end_relative, 3)
-
-                question_entry = {
-                    "question_id": question_id,
-                    "question": q_data.get("question", ""),
-                    "temporal_relation": q_data.get("temporal_relation", "after"),
-                    "anchor_event": q_data.get("anchor_event", ""),
-                    "target_event": q_data.get("target_event", ""),
-                    "answer": {
-                        "start_s": answer_start_absolute,  # Absolute timestamp
-                        "end_s": answer_end_absolute,  # Absolute timestamp
-                    },
-                    "requires_audio": q_data.get("requires_audio", False),
-                    "confidence": q_data.get("confidence", 0.0),
-                    "abstained": q_data.get("abstained", False),
-                    "rationale_model": q_data.get("rationale_model", ""),
-                }
-
-                questions_list.append(question_entry)
-
-            # Calculate segment-level confidence (average of all questions)
-            segment_confidence = 0.0
-            if questions_list:
-                segment_confidence = sum(q["confidence"] for q in questions_list) / len(
-                    questions_list
-                )
-
-            # Build single entry for this segment
             entry = {
                 "video_id": video_id,
                 "video_number": metadata.get("video_number", video_id),
                 "segment": {"start": segment_info["start"], "end": segment_info["end"]},
-                "questions": questions_list,  # List of questions
+                "questions": questions_list,
                 "num_questions": len(questions_list),
-                "confidence": round(segment_confidence, 3),  # Segment-level confidence
-                # Segment-level demographics (shared across all questions)
+                "confidence": round(segment_confidence, 3),
                 "demographics": demographics_data.get("demographics", []),
                 "demographics_total_individuals": demographics_data.get(
                     "total_individuals", 0
@@ -386,86 +475,17 @@ class TemporalLocalizationModel(BaseGeminiClient):
                 logger.info(f"[{video_id} seg {seg_num}] Validating with GPT-4V...")
                 frame_paths = []
                 try:
-                    video_path = segment_info.get("segment_path")
-                    logger.info(f"🔍 Judge video path: {video_path}")
-                    logger.info(
-                        f"🔍 Judge video exists: {Path(video_path).exists() if video_path else False}"
+                    frame_paths = self._setup_judge_validation(
+                        segment_info, video_id, seg_num
                     )
-                    if video_path and Path(video_path).exists():
-                        logger.info(
-                            f"🔍 Judge video size: {Path(video_path).stat().st_size} bytes"
+                    if frame_paths:
+                        self._apply_judge_validation(
+                            entry, segment_info, frame_paths, transcript_text
                         )
-
-                    if video_path and Path(video_path).exists():
-                        import subprocess
-
-                        result = subprocess.run(
-                            [
-                                "ffprobe",
-                                "-v",
-                                "error",
-                                "-show_entries",
-                                "format=duration",
-                                "-of",
-                                "default=noprint_wrappers=1:nokey=1",
-                                str(video_path),
-                            ],
-                            capture_output=True,
-                            text=True,
-                        )
-                        actual_duration = float(result.stdout.strip())
-                        frame_end = min(
-                            actual_duration, segment_info["end"] - segment_info["start"]
-                        )
-
-                        frame_paths = self.frame_sampler.sample_frames_from_segment(
-                            video_path=Path(video_path),
-                            segment_start=0.0,  # Segment file always starts at 0
-                            segment_end=frame_end,  # Duration of segment file
-                            num_frames=self.judge_frame_count,
-                            strategy=self.config.temporal_localization.judge_frame_strategy,
-                        )
-
-                        if frame_paths:
-                            validated_questions, validation_stats = (
-                                self._validate_questions(
-                                    entry["questions"],
-                                    {
-                                        "start": segment_info["start"],
-                                        "end": segment_info["end"],
-                                    },
-                                    frame_paths,
-                                    transcript_text,
-                                )
-                            )
-                            entry["questions"] = validated_questions
-                            entry["num_questions"] = len(validated_questions)
-                            entry["validation"] = validation_stats
-                            entry["validation"]["judge_used"] = True
-
-                            if validation_stats["total"] > 0:
-                                val_rate = (
-                                    validation_stats["valid"]
-                                    / validation_stats["total"]
-                                )
-                                entry["confidence"] = round(
-                                    entry["confidence"] * (0.7 + 0.3 * val_rate), 3
-                                )
-
-                            logger.info(
-                                f"✓ {validation_stats['valid']}/{validation_stats['total']} valid, {validation_stats['fixed']} fixed"
-                            )
                 except Exception as e:
                     logger.error(f"Validation error: {e}")
-
                 finally:
-                    # Clean up ONLY the frames from this segment
-                    for fp in frame_paths:
-                        try:
-                            if fp.exists():
-                                fp.unlink()
-                        except Exception as e:
-                            logger.debug(f"Failed to delete frame {fp}: {e}")
+                    self._cleanup_frame_paths(frame_paths)
 
             return entry
 
@@ -474,7 +494,7 @@ class TemporalLocalizationModel(BaseGeminiClient):
                 f"Failed to generate temporal questions for segment {seg_num}: {e}",
                 exc_info=True,
             )
-            return None  # Return None to trigger retry
+            return None
 
     def _get_segment_demographics(
         self,
@@ -490,7 +510,7 @@ class TemporalLocalizationModel(BaseGeminiClient):
             human_demographics = metadata.get("demographics_detailed_reviewed", {})
             if not human_demographics:
                 logger.warning(
-                    f"No human-reviewed demographics found for {metadata.get('video_id')}"
+                    f"No human-reviewed demographics for {metadata.get('video_id')}"
                 )
                 return {
                     "demographics": [],
@@ -608,7 +628,7 @@ class TemporalLocalizationModel(BaseGeminiClient):
     def _convert_rationale_to_absolute(
         self, rationale: str, segment_start: float
     ) -> str:
-        import re
+        """Convert relative timestamps in rationale to absolute timestamps."""
 
         def replace_timestamp(match):
             timestamp_str = match.group(1)
@@ -620,11 +640,87 @@ class TemporalLocalizationModel(BaseGeminiClient):
                     return f"{int(absolute)}.0s"
                 formatted = f"{absolute:.3f}".rstrip("0").rstrip(".")
                 return f"{formatted}s"
-            except:
+            except (ValueError, TypeError):
                 return match.group(0)
 
         pattern = r"(?:^|(?<=[\s=,\(\.]))(\d+\.?\d*)s(?=[\s,\.\)\-–]|$)"
         return re.sub(pattern, replace_timestamp, rationale)
+
+    def _fix_double_converted_timestamps(
+        self,
+        start_s: float,
+        end_s: float,
+        segment_start: float,
+        segment_end: float,
+        segment_duration: float,
+        question_idx: int,
+    ) -> Optional[Tuple[float, float]]:
+        """Fix double-converted timestamps (absolute that was converted again)."""
+        if start_s > segment_end or end_s > segment_end:
+            test_start = start_s - segment_start
+            test_end = end_s - segment_start
+
+            if (
+                0 <= test_start <= segment_duration
+                and 0 <= test_end <= segment_duration
+            ):
+                logger.warning(
+                    f"Q{question_idx + 1}: Double-converted [{start_s}, "
+                    f"{end_s}] → relative [{test_start:.1f}, {test_end:.1f}]"
+                )
+                return test_start, test_end
+        return None
+
+    def _fix_absolute_timestamps(
+        self,
+        start_s: float,
+        end_s: float,
+        segment_start: float,
+        segment_end: float,
+        question_idx: int,
+    ) -> Optional[Tuple[float, float]]:
+        """Convert absolute timestamps to relative if in segment range."""
+        if (
+            start_s >= segment_start
+            and start_s < segment_end
+            and end_s > segment_start
+            and end_s <= segment_end
+        ):
+            logger.warning(
+                f"Q{question_idx + 1}: Absolute timestamps [{start_s}, "
+                f"{end_s}] → converting to relative"
+            )
+            return start_s - segment_start, end_s - segment_start
+        return None
+
+    def _check_relative_bounds(
+        self,
+        start_s: float,
+        end_s: float,
+        segment_duration: float,
+        question_idx: int,
+    ) -> bool:
+        """Check if relative timestamps are within valid bounds."""
+        if start_s < 0 or end_s > segment_duration or start_s >= end_s:
+            logger.warning(
+                f"Q{question_idx + 1}: Out of bounds [{start_s:.1f}, "
+                f"{end_s:.1f}] (segment: 0-{segment_duration}s)"
+            )
+            return False
+        return True
+
+    def _apply_gpt4v_corrections(
+        self, question: Dict, gpt_result: Dict, question_idx: int
+    ) -> bool:
+        """Apply GPT-4V timestamp corrections if available."""
+        if gpt_result.get("corrected_timestamps"):
+            corrected = gpt_result["corrected_timestamps"]
+            question["answer"]["start_s"] = corrected["start_s"]
+            question["answer"]["end_s"] = corrected["end_s"]
+            reason = gpt_result.get("correction_reason", "adjusted")[:50]
+            question["rationale_model"] += f" [Judge: {reason}]"
+            return True
+        return False
 
     def _validate_questions(
         self,
@@ -632,7 +728,7 @@ class TemporalLocalizationModel(BaseGeminiClient):
         segment_info: Dict,
         frame_paths: List[Path],
         transcript_text: str,
-    ) -> tuple:
+    ) -> Tuple[List[Dict], Dict[str, Any]]:
         """Validate questions, fix absolute timestamps, drop invalid."""
         segment_start = segment_info["start"]
         segment_end = segment_info["end"]
@@ -668,79 +764,39 @@ class TemporalLocalizationModel(BaseGeminiClient):
                     )
                     continue
 
-                # Detect if Gemini output absolute instead of relative timestamps
                 fixed = False
 
-                # Strategy: Timestamps after YOUR conversion should be:
-                # - In range [segment_start, segment_end] for absolute
-                # - OR in range [0, segment_duration] for relative that wasn't converted yet
-                #
-                # We detect Gemini mistakes by checking if timestamps look like they're
-                # in the segment's absolute range when they should already be absolute
-                # (i.e., Gemini gave us absolute, we added segment_start, now they're way off)
-
-                if segment_start > 0:  # Not first segment (can't detect for segment 0)
-                    # Check if timestamps are suspiciously high (likely double-converted)
-                    # OR if they look like segment-relative absolute times
-
-                    # Case 1: Way too high - definitely double-converted
-                    if start_s > segment_end or end_s > segment_end:
-                        # These are likely double-converted: Gemini gave absolute, we added segment_start
-                        # Try converting back
-                        test_start = start_s - segment_start
-                        test_end = end_s - segment_start
-
-                        # Check if this makes sense
-                        if (
-                            0 <= test_start <= segment_duration
-                            and 0 <= test_end <= segment_duration
-                        ):
-                            logger.warning(
-                                f"Q{i + 1}: Double-converted timestamps [{start_s}, {end_s}] → fixing to relative [{test_start:.1f}, {test_end:.1f}]"
-                            )
-                            start_s = test_start
-                            end_s = test_end
-                            q["answer"]["start_s"] = start_s
-                            q["answer"]["end_s"] = end_s
-                            q["rationale_model"] += " [Judge: fixed double-conversion]"
-                            fixed = True
-                        else:
-                            # Can't fix, drop it
-                            stats["dropped"] += 1
-                            stats["reasons"]["out_of_bounds"] = (
-                                stats["reasons"].get("out_of_bounds", 0) + 1
-                            )
-                            logger.warning(
-                                f"Q{i + 1}: Unfixable out of bounds [{start_s}, {end_s}]"
-                            )
-                            continue
-
-                    # Case 2: In segment absolute range - Gemini gave absolute, we converted correctly
-                    # BUT need to convert to relative for bounds checking
-                    elif (
-                        start_s >= segment_start
-                        and start_s < segment_end
-                        and end_s > segment_start
-                        and end_s <= segment_end
-                    ):
-                        logger.warning(
-                            f"Q{i + 1}: Absolute timestamps detected [{start_s}, {end_s}] → converting to relative"
-                        )
-                        start_s = start_s - segment_start
-                        end_s = end_s - segment_start
+                # Fix timestamp conversion issues
+                if segment_start > 0:
+                    # Try fixing double-converted timestamps
+                    fixed_times = self._fix_double_converted_timestamps(
+                        start_s, end_s, segment_start, segment_end, segment_duration, i
+                    )
+                    if fixed_times:
+                        start_s, end_s = fixed_times
                         q["answer"]["start_s"] = start_s
                         q["answer"]["end_s"] = end_s
-                        q["rationale_model"] += " [Judge: absolute→relative]"
+                        q["rationale_model"] += " [Judge: fixed double-conversion]"
                         fixed = True
+                    else:
+                        # Try fixing absolute timestamps
+                        fixed_times = self._fix_absolute_timestamps(
+                            start_s, end_s, segment_start, segment_end, i
+                        )
+                        if fixed_times:
+                            start_s, end_s = fixed_times
+                            q["answer"]["start_s"] = start_s
+                            q["answer"]["end_s"] = end_s
+                            q["rationale_model"] += " [Judge: absolute→relative]"
+                            fixed = True
 
-                # Now check bounds on what should be RELATIVE timestamps
-                if start_s < 0 or end_s > segment_duration or start_s >= end_s:
+                # Check bounds on relative timestamps
+                if not self._check_relative_bounds(
+                    start_s, end_s, segment_duration, i
+                ):
                     stats["dropped"] += 1
                     stats["reasons"]["out_of_bounds"] = (
                         stats["reasons"].get("out_of_bounds", 0) + 1
-                    )
-                    logger.warning(
-                        f"Q{i + 1}: Out of bounds after fixing [{start_s:.1f}, {end_s:.1f}] (segment: 0-{segment_duration}s)"
                     )
                     continue
 
@@ -754,20 +810,16 @@ class TemporalLocalizationModel(BaseGeminiClient):
                         stats["dropped"] += 1
                         reason = gpt_result.get("reason", "gpt4v_rejected")
                         stats["reasons"][reason] = stats["reasons"].get(reason, 0) + 1
-                        logger.warning(
-                            f"Q{i + 1}: GPT-4V rejected - {gpt_result.get('message', '')[:100]}"
-                        )
+                        msg = gpt_result.get("message", "")[:100]
+                        logger.warning(f"Q{i + 1}: GPT-4V rejected - {msg}")
                         continue
 
-                    if gpt_result.get("corrected_timestamps"):
-                        corrected = gpt_result["corrected_timestamps"]
-                        q["answer"]["start_s"] = corrected["start_s"]
-                        q["answer"]["end_s"] = corrected["end_s"]
-                        q["rationale_model"] += (
-                            f" [Judge: {gpt_result.get('correction_reason', 'adjusted')[:50]}]"
-                        )
+                    if self._apply_gpt4v_corrections(q, gpt_result, i):
                         fixed = True
-                # After all validation passes, convert back to absolute
+                        start_s = q["answer"]["start_s"]
+                        end_s = q["answer"]["end_s"]
+
+                # Convert back to absolute timestamps
                 answer_start_absolute = round(segment_start + start_s, 3)
                 answer_end_absolute = round(segment_start + end_s, 3)
 
@@ -776,7 +828,7 @@ class TemporalLocalizationModel(BaseGeminiClient):
                 q["rationale_model"] = self._convert_rationale_to_absolute(
                     q["rationale_model"], segment_start
                 )
-                # Question passed validation
+
                 valid_questions.append(q)
                 stats["valid"] += 1
                 if fixed:
@@ -793,12 +845,13 @@ class TemporalLocalizationModel(BaseGeminiClient):
                 )
 
         logger.info(
-            f"Validation: {stats['valid']} valid, {stats['fixed']} fixed, {stats['dropped']} dropped"
+            f"Validation: {stats['valid']} valid, {stats['fixed']} fixed, "
+            f"{stats['dropped']} dropped"
         )
         return valid_questions, stats
 
     def _parse_temporal_response(self, response_text: str) -> List[Dict[str, Any]]:
-        """Parse temporal localization response from Gemini - ORIGINAL VERSION."""
+        """Parse temporal localization response from Gemini."""
         try:
             response_text = response_text.strip()
 
@@ -868,7 +921,8 @@ class TemporalLocalizationModel(BaseGeminiClient):
             temporal_relation = question_data.get("temporal_relation", "after")
             if temporal_relation not in valid_relations:
                 logger.warning(
-                    f"Invalid temporal_relation '{temporal_relation}', defaulting to 'after'"
+                    f"Invalid temporal_relation '{temporal_relation}', "
+                    f"defaulting to 'after'"
                 )
                 temporal_relation = "after"
 

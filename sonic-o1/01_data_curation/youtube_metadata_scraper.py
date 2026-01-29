@@ -25,6 +25,7 @@ from youtube_transcript_api._errors import (
 
 try:
     import yaml
+
     YAML_AVAILABLE = True
 except ImportError:
     YAML_AVAILABLE = False
@@ -425,10 +426,7 @@ class YouTubeMetadataScraper:
             return False
 
         min_views = 100 if is_scarce_topic else 500
-        if views < min_views:
-            return False
-
-        return True
+        return not views < min_views
 
     def _detect_clickbait_patterns(self, title: str) -> tuple:
         """Detect clickbait patterns in title.
@@ -540,7 +538,13 @@ class YouTubeMetadataScraper:
         }
 
     def _detect_spam_and_suspicious_patterns(
-        self, title: str, channel_title: str, views: int, likes: int, comments: int, engagement_rate: float
+        self,
+        title: str,
+        channel_title: str,
+        views: int,
+        likes: int,
+        comments: int,
+        engagement_rate: float,
     ) -> Dict:
         """Detect spam and suspicious engagement patterns.
 
@@ -587,7 +591,9 @@ class YouTubeMetadataScraper:
             "very_low_engagement": very_low_engagement,
         }
 
-    def _calculate_engagement_metrics(self, views: int, likes: int, comments: int) -> Dict:
+    def _calculate_engagement_metrics(
+        self, views: int, likes: int, comments: int
+    ) -> Dict:
         """Calculate engagement metrics.
 
         Args:
@@ -711,15 +717,16 @@ class YouTubeMetadataScraper:
         -------
             True if video should be hard rejected, False otherwise.
         """
-        hard_reject = (
+        return (
             is_extreme_clickbait
             or spam_flags["has_spam"]
             or spam_flags["suspicious_engagement"]
             or not spam_flags["has_valid_channel"]
-            or (title_issues["excessive_caps"] and title_issues["excessive_punctuation"])
+            or (
+                title_issues["excessive_caps"] and title_issues["excessive_punctuation"]
+            )
         )
 
-        return hard_reject
 
     def filter_quality_videos(
         self, videos_data: List[Dict], topic_id: int | None = None
@@ -749,11 +756,15 @@ class YouTubeMetadataScraper:
             channel_title = video.get("channel_title", "")
 
             # Step 1: Validate basic metrics
-            if not self._validate_basic_video_metrics(video, is_scarce_topic, is_topic7):
+            if not self._validate_basic_video_metrics(
+                video, is_scarce_topic, is_topic7
+            ):
                 continue
 
             # Step 2: Calculate engagement metrics
-            engagement_metrics = self._calculate_engagement_metrics(views, likes, comments)
+            engagement_metrics = self._calculate_engagement_metrics(
+                views, likes, comments
+            )
             engagement_rate = engagement_metrics["engagement_rate"]
             like_ratio = engagement_metrics["like_ratio"]
             comment_ratio = engagement_metrics["comment_ratio"]
@@ -897,9 +908,7 @@ class YouTubeMetadataScraper:
         video_details = self.get_video_details(new_video_ids)
         print(f"  Retrieved details for {len(video_details)} new videos")
 
-        filtered_videos = self.filter_quality_videos(
-            video_details, topic_id=topic_id
-        )
+        filtered_videos = self.filter_quality_videos(video_details, topic_id=topic_id)
         print(f"  After quality filtering: {len(filtered_videos)} videos")
 
         for video in filtered_videos:

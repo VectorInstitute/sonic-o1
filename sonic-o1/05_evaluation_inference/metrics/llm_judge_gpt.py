@@ -1,6 +1,8 @@
-"""
-LLM-as-Judge Implementation using GPT-5-mini
-Evaluates semantic similarity, factual correctness, and completeness.
+"""llm_judge_gpt.py
+
+LLM-as-Judge using GPT: semantic similarity, factual correctness, completeness.
+
+Author: SONIC-O1 Team
 """
 
 import json
@@ -91,9 +93,8 @@ class LLMJudge:
             predicted_answer: Model's predicted answer
             task_type: Type of task (for logging purposes)
 
-        Returns
-        -------
-            Dict with 'score' (0-10) and 'justification' (str)
+        Returns:
+            Dict with "score" (0-10) and "justification" (str).
         """
         user_prompt = f"""Please evaluate the following video-based question-answer pair:
 
@@ -129,7 +130,8 @@ class LLMJudge:
                 json_end = response_text.find("```", json_start)
                 response_text = response_text[json_start:json_end].strip()
 
-                from json_repair import repair_json
+                # Optional dep: only import when repair is needed
+                from json_repair import repair_json  # noqa: PLC0415
 
                 repaired_json = repair_json(response_text, return_objects=False)
                 response_text = json.loads(repaired_json)
@@ -163,12 +165,11 @@ class LLMJudge:
         Evaluate multiple question-answer pairs.
 
         Args:
-            evaluations: List of dicts with 'question', 'correct_answer', 'predicted_answer'
+            evaluations: List of dicts with question, correct_answer, predicted_answer
             task_type: Type of task
 
-        Returns
-        -------
-            List of evaluation results
+        Returns:
+            List of evaluation results (score and justification per item).
         """
         results = []
         for i, eval_item in enumerate(evaluations):
@@ -193,7 +194,7 @@ def evaluate_with_llm_judge(
     model: str = "gpt-4o-mini",
 ) -> Dict[str, Any]:
     """
-    Convenience function for single evaluation.
+    Evaluate single instance.
 
     Args:
         question: The question
@@ -202,9 +203,8 @@ def evaluate_with_llm_judge(
         api_key: OpenAI API key
         model: Model to use
 
-    Returns
-    -------
-        Dict with score and justification
+    Returns:
+        Dict with "score" and "justification".
     """
     judge = LLMJudge(api_key=api_key, model=model)
     return judge.evaluate(question, correct_answer, predicted_answer)

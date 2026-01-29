@@ -1,4 +1,9 @@
-"""Main script to run demographics annotation pipeline."""
+"""run_annotation.py.
+
+Main script to run demographics annotation pipeline.
+
+Author: SONIC-O1 Team
+"""
 
 import argparse
 import json
@@ -22,11 +27,33 @@ class AnnotationPipeline:
     """Main pipeline for processing videos."""
 
     def __init__(self, config_path: str = "config.yaml"):
+        """Initialize the annotation pipeline.
+
+        Args:
+            config_path: Path to configuration YAML file.
+        """
         self.config = Config(config_path)
         self.setup_logging()
         self.annotator = DemographicsAnnotator(self.config)
         self.logger = logging.getLogger(__name__)
         self.checkpoint_file = None
+
+    def setup_logging(self):
+        """Set up logging based on configuration."""
+        handlers = []
+
+        if self.config.console_output:
+            handlers.append(logging.StreamHandler())
+
+        if self.config.file_output:
+            log_path = Path(__file__).parent / self.config.log_file
+            handlers.append(logging.FileHandler(log_path))
+
+        logging.basicConfig(
+            level=logging.INFO, format=self.config.log_format, handlers=handlers
+        )
+        logging.getLogger("httpx").setLevel(logging.WARNING)
+        logging.getLogger("google.generativeai").setLevel(logging.WARNING)
 
     def _get_checkpoint_path(self, output_dir: Path) -> Path:
         """Get consistent checkpoint file path."""
@@ -73,8 +100,7 @@ class AnnotationPipeline:
             return True
 
         # Check if it has the expected fields with actual values
-        required_fields = ["race", "gender", "age", "language"]
-        for field in required_fields:
+        for field in self.config.demographic_categories:
             value = demographics_detailed.get(field)
             # If field exists and has non-empty list, demographics exist
             if value and isinstance(value, list) and len(value) > 0:
@@ -94,29 +120,13 @@ class AnnotationPipeline:
 
         return failed_indices
 
-    def setup_logging(self):
-        """Setup logging based on configuration."""
-        handlers = []
-
-        if self.config.console_output:
-            handlers.append(logging.StreamHandler())
-
-        if self.config.file_output:
-            log_path = Path(__file__).parent / self.config.log_file
-            handlers.append(logging.FileHandler(log_path))
-
-        logging.basicConfig(
-            level=logging.INFO, format=self.config.log_format, handlers=handlers
-        )
-        logging.getLogger("httpx").setLevel(logging.WARNING)
-        logging.getLogger("google.generativeai").setLevel(logging.WARNING)
-
     def process_topic(self, topic: str, retry_failed: bool = False) -> Dict[str, Any]:
         """Process all videos in a topic.
 
         Args:
             topic: Topic name to process
-            retry_failed: If True, only reprocess videos with empty demographics
+            retry_failed: If True, only reprocess videos with empty
+                demographics
         """
         self.logger.info(f"Processing topic: {topic}")
         if retry_failed:
@@ -211,7 +221,8 @@ class AnnotationPipeline:
             video_number = video_metadata.get("video_number", f"{idx + 1:03d}")
 
             self.logger.info(
-                f"Processing video {idx + 1}/{len(metadata_list)} (video_{video_number})"
+                f"Processing video {idx + 1}/{len(metadata_list)} "
+                f"(video_{video_number})"
             )
 
             # Get file paths using config patterns
@@ -298,7 +309,8 @@ class AnnotationPipeline:
                 self._save_checkpoint(paths["videos"], enhanced_metadata)
 
             # Rate limiting between videos
-            if idx < indices_to_process[-1]:  # Don't wait after last video
+            # Don't wait after last video
+            if idx < indices_to_process[-1]:
                 # Get video duration from metadata
                 video_duration = video_metadata.get("duration", 0)
 
@@ -347,7 +359,7 @@ class AnnotationPipeline:
 
 
 def main():
-    """Main entry point."""
+    """Run main entry point."""
     parser = argparse.ArgumentParser(description="Run demographics annotation pipeline")
     parser.add_argument(
         "--config", type=str, default="config.yaml", help="Path to configuration file"
@@ -379,32 +391,39 @@ def main():
     # Check API key
     if not pipeline.config.api_key:
         pipeline.logger.error(
-            "API key not provided. Set GEMINI_API_KEY environment variable or update config.yaml"
+            "API key not provided. Set GEMINI_API_KEY environment "
+            "variable or update config.yaml"
+        )
+        sys.exit(1)
+
+    # Validate topic early (if specified)
+    if args.topic and args.topic not in pipeline.config.topics:
+        pipeline.logger.error(
+            f"Topic '{args.topic}' not found in configuration. "
+            f"Available topics: {', '.join(pipeline.config.topics)}"
         )
         sys.exit(1)
 
     # Process topics
-    if args.topic:
-        # Process single topic
-        if args.topic not in pipeline.config.topics:
-            pipeline.logger.error(f"Topic {args.topic} not found in configuration")
-            sys.exit(1)
-        result = pipeline.process_topic(args.topic, retry_failed=args.retry_failed)
-        print(f"Completed processing: {result}")
-    else:
-        # Process all topics
-        results = []
-        for topic in pipeline.config.topics:
-            try:
-                result = pipeline.process_topic(topic, retry_failed=args.retry_failed)
-                results.append(result)
-            except Exception as e:
-                pipeline.logger.error(
-                    f"Failed to process topic {topic}: {e}", exc_info=True
-                )
-                results.append({"topic": topic, "error": str(e)})
+    results = []
+    topics_to_process = [args.topic] if args.topic else pipeline.config.topics
 
-        # Save summary report
+    if len(topics_to_process) == 0:
+        pipeline.logger.error("No topics to process")
+        sys.exit(1)
+
+    for topic in topics_to_process:
+        try:
+            result = pipeline.process_topic(topic, retry_failed=args.retry_failed)
+            results.append(result)
+        except Exception as e:
+            pipeline.logger.error(
+                f"Failed to process topic {topic}: {e}", exc_info=True
+            )
+            results.append({"topic": topic, "error": str(e)})
+
+    # Save summary report if processing multiple topics
+    if len(topics_to_process) > 1:
         report_path = (
             Path(pipeline.config.base_path) / "demographics_annotation_report.json"
         )
@@ -420,8 +439,9 @@ def main():
                 f,
                 indent=2,
             )
-
-        print(f"Completed all topics. Report saved to {report_path}")
+        pipeline.logger.info(f"Completed all topics. Report saved to {report_path}")
+    else:
+        pipeline.logger.info(f"Completed processing: {results[0]}")
 
 
 if __name__ == "__main__":

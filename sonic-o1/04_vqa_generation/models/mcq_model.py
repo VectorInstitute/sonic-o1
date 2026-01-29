@@ -1,4 +1,9 @@
-"""Task 2: MCQ (Multiple Choice Questions) Generation Model."""
+"""mcq_model.py.
+
+Task 2: MCQ (Multiple Choice Questions) Generation Model.
+
+Author: SONIC-O1 Team
+"""
 
 import json
 import logging
@@ -46,22 +51,20 @@ class MCQModel(BaseGeminiClient):
         Process a video and generate MCQ VQA entries (one per segment).
 
         Args:
-            video_path: Path to video file
-            audio_path: Path to audio file (optional)
-            transcript_path: Path to transcript/caption file (optional)
-            metadata: Video metadata from metadata_enhanced.json
+            video_path: Path to video file.
+            audio_path: Path to audio file (optional).
+            transcript_path: Path to transcript/caption file (optional).
+            metadata: Video metadata from metadata_enhanced.json.
 
         Returns
         -------
-            List of VQA entry dicts for Task 2 (one per segment)
+            List of VQA entry dicts for Task 2 (one per segment).
         """
         try:
             video_id = metadata.get("video_id", metadata.get("video_number", "unknown"))
             duration = metadata.get("duration_seconds", 0)
 
-            logger.info(
-                f"Processing video {video_id} for MCQ generation (duration: {duration}s)"
-            )
+            logger.info(f"Processing video {video_id} for MCQ (duration: {duration}s)")
 
             # Always segment videos (even short ones get 1 MCQ)
             video_segments = self.segmenter.segment_video(
@@ -137,7 +140,8 @@ class MCQModel(BaseGeminiClient):
         seg_num = segment_info["segment_number"]
 
         logger.info(
-            f"Generating MCQ for {video_id} segment {seg_num} ({segment_info['start']}s-{segment_info['end']}s)"
+            f"Generating MCQ for {video_id} segment {seg_num} "
+            f"({segment_info['start']}s-{segment_info['end']}s)"
         )
 
         max_attempts = 3
@@ -173,13 +177,19 @@ class MCQModel(BaseGeminiClient):
 
                 # On retry, add explicit JSON validation instructions
                 if attempt > 0:
-                    prompt += "\n\nPREVIOUS ATTEMPT RETURNED INVALID JSON. Critical requirements:\n"
+                    prompt += (
+                        "\n\nPREVIOUS ATTEMPT RETURNED INVALID JSON. "
+                        "Critical requirements:\n"
+                    )
                     prompt += f"- Return ONLY valid JSON with exactly {self.num_options} options\n"
                     prompt += (
                         "- Use commas between all properties/elements except the last\n"
                     )
                     prompt += f"- Last option MUST be '({self.option_letters[-1]}) Not enough evidence'\n"
-                    prompt += f"- Include both 'answer_index' (0-{self.num_options - 1}) and 'answer_letter' (A-{self.option_letters[-1]})\n"
+                    prompt += (
+                        f"- Include 'answer_index' (0-{self.num_options - 1}) "
+                        f"and 'answer_letter' (A-{self.option_letters[-1]})\n"
+                    )
                     prompt += "- Use double quotes for all strings\n"
                     prompt += "- No trailing commas before closing brackets\n"
 
@@ -189,7 +199,7 @@ class MCQModel(BaseGeminiClient):
                 )
                 mcq_data = self._parse_mcq_response(response_text)
 
-                # Check if parsing succeeded (confidence > 0 and rationale is not failure message)
+                # Check if parsing succeeded (confidence > 0 and rationale valid)
                 if (
                     mcq_data.get("confidence", 0) > 0
                     and mcq_data.get("rationale", "") != "Failed to generate MCQ"
@@ -247,7 +257,6 @@ class MCQModel(BaseGeminiClient):
             "confidence": mcq_data.get("confidence", 0.0),
         }
 
-
     def _get_segment_demographics(
         self,
         segment_info: Dict,
@@ -262,7 +271,7 @@ class MCQModel(BaseGeminiClient):
             human_demographics = metadata.get("demographics_detailed_reviewed", {})
             if not human_demographics:
                 logger.warning(
-                    f"No human-reviewed demographics found for {metadata.get('video_id')}"
+                    f"No human-reviewed demographics for {metadata.get('video_id')}"
                 )
                 return {
                     "demographics": [],
@@ -323,103 +332,130 @@ class MCQModel(BaseGeminiClient):
                 "explanation": f"Error generating demographics: {str(e)}",
             }
 
+    def _extract_json_from_markdown(self, text: str) -> str:
+        """Extract JSON from markdown code blocks."""
+        text = text.strip()
+        if "```json" in text:
+            start = text.find("```json") + 7
+            end = text.rfind("```")
+            if end > start:
+                return text[start:end].strip()
+        elif "```" in text:
+            start = text.find("```") + 3
+            end = text.rfind("```")
+            if end > start:
+                return text[start:end].strip()
+        return text
+
+    def _normalize_mcq_data(self, data: Any) -> Optional[Dict[str, Any]]:
+        """Normalize parsed data to dict format."""
+        if isinstance(data, list):
+            if len(data) > 0 and isinstance(data[0], dict):
+                logger.warning("API returned list, extracting first element")
+                return data[0]
+            logger.error("API returned invalid list format")
+            return None
+
+        if not isinstance(data, dict):
+            logger.error(f"Parsed data is not a dict, got {type(data)}")
+            return None
+
+        return data
+
+    def _normalize_options_count(self, options: List[str]) -> List[str]:
+        """Normalize options count to expected num_options."""
+        expected_num_options = self.num_options
+
+        if len(options) != expected_num_options:
+            logger.warning(
+                f"MCQ has {len(options)} options, expected {expected_num_options}"
+            )
+            # Pad with "Not enough evidence" if needed
+            while len(options) < expected_num_options:
+                last_letter = self.option_letters[len(options)]
+                options.append(f"({last_letter}) Not enough evidence")
+            options = options[:expected_num_options]
+
+        # Ensure last option is "Not enough evidence"
+        last_letter = self.option_letters[-1]
+        if "Not enough evidence" not in options[-1].lower():
+            options[-1] = f"({last_letter}) Not enough evidence"
+
+        return options
+
+    def _format_option_with_letter(self, option: str, letter: str) -> str:
+        """Format option with letter prefix, removing any existing prefix."""
+        cleaned = option.strip()
+        # Remove any existing letter prefix
+        for existing_letter in self.option_letters:
+            if cleaned.startswith(f"({existing_letter})"):
+                cleaned = cleaned[3:].strip()
+                break
+        return f"({letter}) {cleaned}"
+
+    def _format_options_with_letters(self, options: List[str]) -> List[str]:
+        """Format all options with correct letter prefixes."""
+        formatted = []
+        for i, option in enumerate(options):
+            letter = self.option_letters[i]
+            formatted.append(self._format_option_with_letter(option, letter))
+        return formatted
+
+    def _validate_answer_fields(
+        self, data: Dict[str, Any]
+    ) -> tuple[int, str]:
+        """Validate and normalize answer_index and answer_letter."""
+        expected_num_options = self.num_options
+        answer_index = int(data.get("answer_index", expected_num_options - 1))
+        max_index = expected_num_options - 1
+
+        if answer_index < 0 or answer_index > max_index:
+            logger.warning(
+                f"Invalid answer_index {answer_index}, defaulting to {max_index}"
+            )
+            answer_index = max_index
+
+        answer_letter = data.get("answer_letter", self.option_letters[answer_index])
+        expected_letter = self.option_letters[answer_index]
+
+        if answer_letter != expected_letter:
+            logger.warning(
+                f"Mismatch answer_letter={answer_letter}, "
+                f"answer_index={answer_index} (expected {expected_letter})"
+            )
+            answer_letter = expected_letter
+
+        return answer_index, answer_letter
+
     def _parse_mcq_response(self, response_text: str) -> Dict[str, Any]:
         """Parse MCQ response from Gemini."""
         try:
-            response_text = response_text.strip()
+            cleaned_text = self._extract_json_from_markdown(response_text)
+            data = json.loads(cleaned_text)
 
-            # Remove markdown code blocks
-            if "```json" in response_text:
-                start = response_text.find("```json") + 7
-                end = response_text.rfind("```")
-                if end > start:
-                    response_text = response_text[start:end]
-            elif "```" in response_text:
-                start = response_text.find("```") + 3
-                end = response_text.rfind("```")
-                if end > start:
-                    response_text = response_text[start:end]
-
-            response_text = response_text.strip()
-            data = json.loads(response_text)
-
-            if isinstance(data, list):
-                if len(data) > 0 and isinstance(data[0], dict):
-                    logger.warning("API returned list, extracting first element")
-                    data = data[0]
-                else:
-                    logger.error("API returned invalid list format")
-                    return self._get_default_mcq()
-
-            if not isinstance(data, dict):
-                logger.error(f"Parsed data is not a dict, got {type(data)}")
+            normalized_data = self._normalize_mcq_data(data)
+            if normalized_data is None:
                 return self._get_default_mcq()
 
-            # Validate structure - use config's num_options
-            options = data.get("options", [])
-            expected_num_options = self.num_options
+            # Normalize options count and format
+            options = normalized_data.get("options", [])
+            options = self._normalize_options_count(options)
+            formatted_options = self._format_options_with_letters(options)
 
-            if len(options) != expected_num_options:
-                logger.warning(
-                    f"MCQ has {len(options)} options instead of {expected_num_options}"
-                )
-                # Pad with "Not enough evidence" if needed
-                while len(options) < expected_num_options:
-                    last_letter = self.option_letters[len(options)]
-                    options.append(f"({last_letter}) Not enough evidence")
-                options = options[:expected_num_options]
-
-            # Ensure last option is "Not enough evidence" (with or without letter)
-            last_letter = self.option_letters[-1]
-            if "Not enough evidence" not in options[-1].lower():
-                options[-1] = f"({last_letter}) Not enough evidence"
-
-            # Ensure all options have letters - add if missing
-            formatted_options = []
-            for i, opt in enumerate(options):
-                opt = opt.strip()
-                letter = self.option_letters[i]
-                # Check if option already has a letter prefix
-                if not opt.startswith(f"({letter})"):
-                    # Remove any existing letter prefix first
-                    for existing_letter in self.option_letters:
-                        if opt.startswith(f"({existing_letter})"):
-                            opt = opt[3:].strip()
-                            break
-                    opt = f"({letter}) {opt}"
-                formatted_options.append(opt)
-
-            answer_index = int(data.get("answer_index", expected_num_options - 1))
-            max_index = expected_num_options - 1
-
-            if answer_index < 0 or answer_index > max_index:
-                logger.warning(
-                    f"Invalid answer_index {answer_index}, defaulting to {max_index}"
-                )
-                answer_index = max_index
-
-            # Get or derive answer_letter
-            answer_letter = data.get("answer_letter", self.option_letters[answer_index])
-
-            # Validate answer_letter matches answer_index
-            expected_letter = self.option_letters[answer_index]
-            if answer_letter != expected_letter:
-                logger.warning(
-                    f"Mismatch: answer_letter={answer_letter}, answer_index={answer_index} (expected {expected_letter}). Using index."
-                )
-                answer_letter = expected_letter
+            # Validate answer fields
+            answer_index, answer_letter = self._validate_answer_fields(normalized_data)
 
             return {
-                "question": data.get(
+                "question": normalized_data.get(
                     "question", "What is happening in the video and audio?"
                 ),
                 "options": formatted_options,
                 "answer_index": answer_index,
                 "answer_letter": answer_letter,
-                "rationale": data.get("rationale", ""),
-                "evidence_tags": data.get("evidence_tags", []),
-                "requires_audio": bool(data.get("requires_audio", False)),
-                "confidence": float(data.get("confidence", 0.0)),
+                "rationale": normalized_data.get("rationale", ""),
+                "evidence_tags": normalized_data.get("evidence_tags", []),
+                "requires_audio": bool(normalized_data.get("requires_audio", False)),
+                "confidence": float(normalized_data.get("confidence", 0.0)),
             }
 
         except json.JSONDecodeError as e:
@@ -429,7 +465,8 @@ class MCQModel(BaseGeminiClient):
         except Exception as e:
             logger.error(f"Error parsing MCQ response: {e}")
             logger.debug(
-                f"Response text (first 500 chars): {response_text[:500] if response_text else 'None'}..."
+                f"Response (500 chars): "
+                f"{response_text[:500] if response_text else 'None'}..."
             )
             return self._get_default_mcq()
 

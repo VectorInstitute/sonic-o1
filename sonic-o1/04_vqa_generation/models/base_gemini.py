@@ -1,4 +1,9 @@
-"""Base Gemini API client - reusable logic for all VQA tasks."""
+"""base_gemini.py.
+
+Base Gemini API client - reusable logic for all VQA tasks.
+
+Author: SONIC-O1 Team
+"""
 
 import logging
 import os
@@ -66,20 +71,21 @@ class BaseGeminiClient:
         Generate content using Gemini with multimodal inputs.
 
         Args:
-            media_files: List of tuples (media_type, Path) - e.g., [('video', path), ('audio', path)]
-            prompt: Text prompt for generation
-            video_fps: FPS for video sampling (default: 1.0)
+            media_files: List of (media_type, Path), e.g. [('video', path)].
+            prompt: Text prompt for generation.
+            video_fps: FPS for video sampling (default: 1.0).
 
         Returns
         -------
-            Generated text response
+            Generated text response.
         """
         # Calculate total size to determine processing method
         total_size = sum(os.path.getsize(path) for _, path in media_files)
 
         if total_size > self.inline_threshold:
             logger.info(
-                f"Using File API for large media (size: {total_size / (1024 * 1024):.2f}MB)"
+                f"Using File API for large media "
+                f"(size: {total_size / (1024 * 1024):.2f}MB)"
             )
             return self._process_with_file_api(media_files, prompt, video_fps)
         logger.info(
@@ -120,9 +126,9 @@ class BaseGeminiClient:
                 if not all_processed:
                     time.sleep(10)
                     wait_time += 10
-                    if wait_time % 60 == 0:  # Log every minute
+                    if wait_time % 60 == 0:
                         logger.info(
-                            f"Still waiting for file processing... ({wait_time}s elapsed)"
+                            f"Still waiting for file processing ({wait_time}s elapsed)"
                         )
 
             if not all_processed:
@@ -170,7 +176,7 @@ class BaseGeminiClient:
                         raise
         finally:
             # Cleanup uploaded files
-            for media_type, uploaded_file in uploaded_files:
+            for _, uploaded_file in uploaded_files:
                 try:
                     self.client.files.delete(name=uploaded_file.name)
                     logger.debug(f"Deleted uploaded file: {uploaded_file.name}")
@@ -199,7 +205,8 @@ class BaseGeminiClient:
                     )
                 )
                 logger.info(
-                    f"Added {media_type} ({mime_type}) as inline data with fps={video_fps}"
+                    f"Added {media_type} ({mime_type}) as inline "
+                    f"data with fps={video_fps}"
                 )
             else:
                 parts.append(

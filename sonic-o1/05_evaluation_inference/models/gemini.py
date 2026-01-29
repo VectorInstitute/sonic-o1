@@ -1,6 +1,8 @@
-"""
-models/gemini.py
-Gemini 3.0 Pro implementation adapted from working Gemini 2.5 code.
+"""gemini.py
+
+Gemini 3.0 Pro implementation with native video and audio support.
+
+Author: SONIC-O1 Team
 """
 
 import logging
@@ -13,8 +15,10 @@ from typing import Any, Dict, Literal, Optional
 try:
     from google import genai
     from google.genai import types
-except ImportError:
-    raise ImportError("Please install google-genai: pip install google-genai")
+except ImportError as e:
+    raise ImportError(
+        "Please install google-genai: pip install google-genai"
+    ) from e
 
 from .base_model import BaseModel
 
@@ -35,7 +39,7 @@ class Gemini(BaseModel):
         "long": 1800,  # 30 minutes - videos over 20 minutes
     }
 
-    def __init__(self, model_name: str, config: Dict[str, Any]):
+    def __init__(self, model_name: str, config: Dict[str, Any]) -> None:
         super().__init__(model_name, config)
 
         self.supports_video = True
@@ -81,11 +85,10 @@ class Gemini(BaseModel):
                 - 'short': < 5 minutes
                 - 'medium': 5-20 minutes
                 - 'long': > 20 minutes
-                - None: uses default timeout
+                - None: uses default timeout.
 
-        Returns
-        -------
-            Timeout in seconds
+        Returns:
+            Timeout in seconds.
         """
         if category is None:
             return self.default_timeout
@@ -101,14 +104,14 @@ class Gemini(BaseModel):
     def _estimate_timeout_from_file(self, video_path: Path) -> int:
         """
         Estimate timeout based on file size as a fallback.
+
         Rule of thumb: ~1 second per MB + base timeout of 180s.
 
         Args:
-            video_path: Path to video file
+            video_path: Path to video file.
 
-        Returns
-        -------
-            Estimated timeout in seconds
+        Returns:
+            Estimated timeout in seconds.
         """
         try:
             file_size_mb = video_path.stat().st_size / (1024 * 1024)
@@ -132,13 +135,14 @@ class Gemini(BaseModel):
             logger.warning(f"Could not estimate timeout from file: {e}")
             return self.default_timeout
 
-    def load(self):
+    def load(self) -> None:
+        """Load the Gemini model and initialize client."""
         try:
             os.environ["GEMINI_API_KEY"] = self.api_key
             self.client = genai.Client()
             logger.info("Loaded Gemini 3.0 Pro Preview")
         except Exception as e:
-            raise RuntimeError(f"Failed to load Gemini client: {e}")
+            raise RuntimeError(f"Failed to load Gemini client: {e}") from e
 
     def generate(
         self,
@@ -162,11 +166,10 @@ class Gemini(BaseModel):
                 - 'short': < 5 minutes (180s timeout)
                 - 'medium': 5-20 minutes (600s timeout)
                 - 'long': > 20 minutes (1800s timeout)
-            **kwargs: Additional generation parameters
+            **kwargs: Additional generation parameters.
 
-        Returns
-        -------
-            Generated text response
+        Returns:
+            Generated text response.
         """
         if self.client is None:
             raise RuntimeError("Client not loaded. Call load() first.")
@@ -202,7 +205,7 @@ class Gemini(BaseModel):
             return self.postprocess_output(response_text)
 
         except Exception as e:
-            raise RuntimeError(f"Generation failed: {e}")
+            raise RuntimeError(f"Generation failed: {e}") from e
 
     def _process_with_file_api(
         self,
@@ -322,17 +325,19 @@ class Gemini(BaseModel):
 
         finally:
             # Cleanup uploaded files
-            for media_type, uploaded_file in uploaded_files:
+            for _, uploaded_file in uploaded_files:
                 try:
                     self.client.files.delete(name=uploaded_file.name)
                     logger.debug(f"Deleted uploaded file: {uploaded_file.name}")
                 except Exception as e:
                     logger.warning(f"Failed to delete file {uploaded_file.name}: {e}")
 
-    def unload(self):
+    def unload(self) -> None:
+        """Unload the model and clean up resources."""
         self.client = None
 
     def get_model_info(self) -> Dict[str, Any]:
+        """Get model information and configuration."""
         info = super().get_model_info()
         info.update(
             {
