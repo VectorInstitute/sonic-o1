@@ -1,7 +1,8 @@
-"""
-utils/caption_handler.py
+"""caption_handler.py.
 
 Parse and chunk SRT caption files for models that support text input.
+
+Author: SONIC-O1 Team
 """
 
 import logging

@@ -1,7 +1,8 @@
-"""
-utils/__init__.py.
+"""__init__.py.
 
 Utility functions for evaluation.
+
+Author: SONIC-O1 Team
 """
 
 from utils.config_loader import ConfigLoader, get_config

@@ -1,7 +1,8 @@
-"""
-utils/frame_sampler.py
+"""frame_sampler.py.
 
 Extract frames from videos for image-based models using PyAV.
+
+Author: SONIC-O1 Team
 """
 
 import logging

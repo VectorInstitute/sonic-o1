@@ -1,21 +1,11 @@
-"""
-Production-grade PyAV-based multimodal processing for Qwen3-Omni.
+"""mm_process_pyav.py.
 
-Drop-in replacement for qwen_omni_utils.process_mm_info
+Production-grade PyAV-based multimodal processing for video, audio, and image data.
 
-Features:
-- Memory-efficient video frame sampling (streams frames, no OOM)
-- Fast audio loading with automatic truncation for context limits
-- Metadata caching for repeated operations
-- Optimized resampling and resizing
-Usage:
-    from mm_process_pyav import process_mm_info_pyav.
+Features memory-efficient frame sampling, optimized audio loading with chunking,
+and metadata caching. Drop-in replacement for qwen_omni_utils.process_mm_info.
 
-    audios, images, videos = process_mm_info_pyav(
-        conversation,
-        use_audio_in_video=False,
-        max_audio_duration=None  # Auto-truncate if needed
-    )
+Author: SONIC-O1 Team
 """
 
 import math

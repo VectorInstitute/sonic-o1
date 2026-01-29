@@ -1,7 +1,8 @@
-"""
-utils/audio_processor.py.
+"""audio_processor.py.
 
 Shared audio chunking utilities for VITA and Qwen3.
+
+Author: SONIC-O1 Team
 """
 
 import logging

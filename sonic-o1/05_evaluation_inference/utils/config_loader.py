@@ -1,7 +1,8 @@
-"""
-Configuration Loader Utility
+"""config_loader.py.
 
 Loads and provides access to configuration from YAML files.
+
+Author: SONIC-O1 Team
 """
 
 import logging

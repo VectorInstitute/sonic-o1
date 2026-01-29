@@ -1,4 +1,9 @@
-"""Segment videos and audio using ffmpeg/ffprobe."""
+"""segmenter.py.
+
+Segment videos and audio using ffmpeg/ffprobe for processing long media files.
+
+Author: SONIC-O1 Team
+"""
 
 import logging
 import subprocess
