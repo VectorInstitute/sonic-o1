@@ -2,7 +2,8 @@
 
 [![Hugging Face Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/vector-institute/sonic-o1)
 [![Leaderboard](https://img.shields.io/badge/HuggingFace-Leaderboard-blue?logo=huggingface&logoColor=black)](https://huggingface.co/spaces/vector-institute/sonic-o1-leaderboard)
-[![Paper](https://img.shields.io/badge/Paper-Coming%20Soon-lightgrey)](#citation)
+[![arXiv](https://img.shields.io/badge/arXiv-2601.21666-b31b1b.svg)](https://arxiv.org/abs/2601.21666)
+[![BibTeX](https://img.shields.io/badge/BibTeX-Citation-lightgrey)](#citation)
 [![Contact](https://img.shields.io/badge/Contact-shaina.raza%40vectorinstitute.ai-green)](mailto:shaina.raza@vectorinstitute.ai)
 
 
@@ -294,9 +295,11 @@ Each stage uses YAML configuration files:
 If you use this dataset or pipeline in your research, please cite:
 
 ```bibtex
-@article{sonic-o1-2026,
-  title   = {SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding},
-  year    = {2026},
+@article{radwan2026sonico1,
+  title={SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding},
+  author={Radwan, Ahmed Y and Emmanouilidis, Christos and Tabassum, Hina and Pandya, Deval and Raza, Shaina},
+  journal={arXiv preprint arXiv:2601.21666},
+  year={2026}
 }
 ```
 
