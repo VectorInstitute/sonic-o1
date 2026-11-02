@@ -4,63 +4,218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding</title>
-  <meta name="description" content="SONIC-O1: Open-source benchmark for evaluating multimodal AI and large language models on real-world audio-video understanding, temporal localization, and video question answering with comprehensive fairness analysis" />
+  <title>SONIC-O1 (EMNLP 2026): A Real-World Audio-Video Understanding Benchmark for Multimodal LLMs</title>
+  <meta name="description" content="SONIC-O1 (EMNLP 2026 Main): an open, fully human-verified benchmark for evaluating multimodal large language models on real-world audio-video understanding — summarization, multiple-choice QA, and temporal localization — with demographic fairness analysis. 231 videos, ~60 hours, 4,958 QAs, 13 domains." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://vectorinstitute.github.io/sonic-o1/" />
+
+  <!-- Open Graph (LinkedIn, Slack, Facebook, etc.) -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="SONIC-O1" />
+  <meta property="og:title" content="SONIC-O1: A Real-World Benchmark for Evaluating Multimodal LLMs on Audio-Video Understanding (EMNLP 2026)" />
+  <meta property="og:description" content="Open benchmark for audio-video understanding: summarization, MCQ, and temporal localization across 13 real-world domains, with demographic fairness analysis. Accepted at EMNLP 2026 Main." />
+  <meta property="og:url" content="https://vectorinstitute.github.io/sonic-o1/" />
+  <meta property="og:image" content="https://vectorinstitute.github.io/sonic-o1/assets/Teaser_Figure.png" />
+  <meta property="og:image:alt" content="SONIC-O1 benchmark overview: summarization, multiple-choice QA, and temporal localization tasks with demographic metadata" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SONIC-O1: Audio-Video Understanding Benchmark for Multimodal LLMs (EMNLP 2026)" />
+  <meta name="twitter:description" content="231 videos, ~60h, 4,958 human-verified QAs across 13 real-world domains. Summarization, MCQ, temporal localization + fairness analysis." />
+  <meta name="twitter:image" content="https://vectorinstitute.github.io/sonic-o1/assets/Teaser_Figure.png" />
+
+  <!-- Google Scholar / Zotero / Mendeley (Highwire Press tags) -->
+  <meta name="citation_title" content="SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding" />
+  <meta name="citation_author" content="Radwan, Ahmed Y." />
+  <meta name="citation_author" content="Emmanouilidis, Christos" />
+  <meta name="citation_author" content="Tabassum, Hina" />
+  <meta name="citation_author" content="Pandya, Deval" />
+  <meta name="citation_author" content="Raza, Shaina" />
+  <meta name="citation_publication_date" content="2026/10" />
+  <meta name="citation_conference_title" content="Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing" />
+  <meta name="citation_publisher" content="Association for Computational Linguistics" />
+  <meta name="citation_firstpage" content="17786" />
+  <meta name="citation_lastpage" content="17825" />
+  <meta name="citation_isbn" content="979-8-89176-459-0" />
+  <meta name="citation_doi" content="10.18653/2026.emnlp-main.767" />
+  <meta name="citation_abstract_html_url" content="https://aclanthology.org/2026.emnlp-main.767/" />
+  <meta name="citation_pdf_url" content="https://aclanthology.org/2026.emnlp-main.767.pdf" />
+
   <link rel="stylesheet" href="style.css" />
   <script defer src="main.js"></script>
 
-  <!-- Structured Data for SEO -->
+  <!-- EMNLP announcement bar + venue line (move into style.css if you prefer) -->
+  <style>
+    .announce {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem 0.75rem;
+      padding: 0.6rem 1rem;
+      background: linear-gradient(90deg, #b31b1b, #ed1c24);
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      text-align: center;
+    }
+    .announce-tag {
+      display: inline-block;
+      padding: 0.1rem 0.55rem;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .announce a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .announce a:hover { opacity: 0.85; }
+    .venue {
+      margin: 0.25rem 0 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #b31b1b;
+    }
+    @media (prefers-color-scheme: dark) {
+      .venue { color: #ff6b6b; }
+    }
+  </style>
+
+  <!-- Structured data: paper + dataset + code (Google, Google Dataset Search, AI search engines) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding",
-    "description": "Comprehensive benchmark for evaluating multimodal AI on real-world audio-video understanding, temporal localization, and video question answering with fairness analysis",
-    "keywords": ["multimodal AI", "video understanding", "audio-video analysis", "temporal localization", "video question answering", "AI fairness", "large language models", "MLLM evaluation"],
-    "author": [
+    "@graph": [
       {
-        "@type": "Person",
-        "name": "Ahmed Y. Radwan",
-        "affiliation": {"@type": "Organization", "name": "Vector Institute"}
+        "@type": "ScholarlyArticle",
+        "@id": "https://vectorinstitute.github.io/sonic-o1/#paper",
+        "headline": "SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding",
+        "name": "SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding",
+        "alternativeHeadline": "SONIC-O1 (EMNLP 2026 Main)",
+        "abstract": "Multimodal Large Language Models (MLLMs) have become a major focus in recent AI research, but their ability to process sequential audio-video data remains underexplored. We introduce SONIC-O1, a comprehensive, fully human-verified benchmark spanning 13 real-world conversational domains with 4,958 annotations and demographic metadata. SONIC-O1 evaluates MLLMs on open-ended summarization, multiple-choice question answering, and temporal localization with supporting rationales. Experiments across commercial and open-source models reveal a 22.6% performance gap in temporal localization between the best commercial and best open-source systems, and performance further degrades across demographic groups.",
+        "url": "https://aclanthology.org/2026.emnlp-main.767/",
+        "mainEntityOfPage": "https://vectorinstitute.github.io/sonic-o1/",
+        "sameAs": [
+          "https://aclanthology.org/2026.emnlp-main.767/",
+          "https://arxiv.org/abs/2601.21666"
+        ],
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "DOI",
+          "value": "10.18653/2026.emnlp-main.767"
+        },
+        "image": "https://vectorinstitute.github.io/sonic-o1/assets/Teaser_Figure.png",
+        "inLanguage": "en",
+        "datePublished": "2026-10",
+        "pagination": "17786-17825",
+        "isPartOf": {
+          "@type": "Book",
+          "name": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+          "isbn": "979-8-89176-459-0",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Association for Computational Linguistics",
+            "url": "https://www.aclweb.org/"
+          }
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Association for Computational Linguistics"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Ahmed Y. Radwan",
+            "sameAs": "https://scholar.google.com/citations?user=Fmhn-MQAAAAJ",
+            "affiliation": {"@type": "Organization", "name": "Vector Institute"}
+          },
+          {
+            "@type": "Person",
+            "name": "Christos Emmanouilidis",
+            "sameAs": "https://scholar.google.ca/citations?user=FZRIusYAAAAJ",
+            "affiliation": {"@type": "Organization", "name": "University of Groningen"}
+          },
+          {
+            "@type": "Person",
+            "name": "Hina Tabassum",
+            "sameAs": "https://scholar.google.ca/citations?user=WAljqloAAAAJ",
+            "affiliation": {"@type": "Organization", "name": "York University"}
+          },
+          {
+            "@type": "Person",
+            "name": "Deval Pandya",
+            "sameAs": "https://scholar.google.com/citations?user=o1XZyLMAAAAJ",
+            "affiliation": {"@type": "Organization", "name": "Vector Institute"}
+          },
+          {
+            "@type": "Person",
+            "name": "Shaina Raza",
+            "sameAs": "https://scholar.google.com/citations?user=chcz7RMAAAAJ",
+            "affiliation": {"@type": "Organization", "name": "Vector Institute"}
+          }
+        ],
+        "keywords": ["SONIC-O1", "EMNLP 2026", "multimodal large language models", "MLLM benchmark", "audio-video understanding", "omnimodal", "video question answering", "temporal localization", "temporal grounding", "video summarization", "AI fairness", "demographic bias"],
+        "about": ["Multimodal AI", "Video Understanding", "Audio-Video Analysis", "Machine Learning Benchmarks", "AI Fairness"],
+        "funder": [
+          {"@type": "Organization", "name": "Vector Institute"},
+          {"@type": "Organization", "name": "European Union Horizon Europe (AIXPERT, Grant Agreement No. 101214389)"}
+        ]
       },
       {
-        "@type": "Person",
-        "name": "Christos Emmanouilidis",
-        "affiliation": {"@type": "Organization", "name": "University of Groningen"}
+        "@type": "Dataset",
+        "@id": "https://vectorinstitute.github.io/sonic-o1/#dataset",
+        "name": "SONIC-O1",
+        "alternateName": "SONIC-O1 Audio-Video Understanding Benchmark",
+        "description": "SONIC-O1 is a fully human-verified benchmark for evaluating multimodal large language models on real-world audio-video understanding. It contains 231 videos (~60 hours) across 13 conversational domains (e.g., job interviews, medical consultations, courtroom proceedings, emergency response) with 4,958 annotations for three tasks: video summarization, multiple-choice question answering with rationales, and temporal localization. Demographic metadata (race, gender, age) enables fairness evaluation.",
+        "url": "https://huggingface.co/datasets/vector-institute/sonic-o1",
+        "sameAs": "https://vectorinstitute.github.io/sonic-o1/",
+        "isAccessibleForFree": true,
+        "license": {
+          "@type": "CreativeWork",
+          "name": "Vector Institute License",
+          "url": "https://huggingface.co/datasets/vector-institute/sonic-o1"
+        },
+        "inLanguage": "en",
+        "creator": {
+          "@type": "Organization",
+          "name": "Vector Institute",
+          "url": "https://vectorinstitute.ai/"
+        },
+        "citation": {"@id": "https://vectorinstitute.github.io/sonic-o1/#paper"},
+        "keywords": ["audio-video benchmark", "video question answering", "temporal localization", "video summarization", "multimodal evaluation", "fairness", "demographic metadata"],
+        "distribution": {
+          "@type": "DataDownload",
+          "contentUrl": "https://huggingface.co/datasets/vector-institute/sonic-o1"
+        }
       },
       {
-        "@type": "Person",
-        "name": "Hina Tabassum",
-        "affiliation": {"@type": "Organization", "name": "York University"}
-      },
-      {
-        "@type": "Person",
-        "name": "Deval Pandya",
-        "affiliation": {"@type": "Organization", "name": "Vector Institute"}
-      },
-      {
-        "@type": "Person",
-        "name": "Shaina Raza",
-        "affiliation": {"@type": "Organization", "name": "Vector Institute"}
+        "@type": "SoftwareSourceCode",
+        "@id": "https://vectorinstitute.github.io/sonic-o1/#code",
+        "name": "SONIC-O1 evaluation suite",
+        "codeRepository": "https://github.com/VectorInstitute/sonic-o1",
+        "programmingLanguage": "Python",
+        "description": "End-to-end pipeline for SONIC-O1: data curation, caption generation, demographic annotation, QA generation, and model evaluation.",
+        "citation": {"@id": "https://vectorinstitute.github.io/sonic-o1/#paper"}
       }
-    ],
-    "datePublished": "2026",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Vector Institute"
-    },
-    "about": [
-      "Multimodal AI",
-      "Video Understanding",
-      "Audio-Video Analysis",
-      "Machine Learning Benchmarks",
-      "AI Fairness"
-    ],
-    "url": "https://vectorinstitute.github.io/sonic-o1"
+    ]
   }
   </script>
 </head>
 <body>
+  <!-- EMNLP acceptance banner -->
+  <div class="announce" role="note">
+    <span class="announce-tag">Accepted</span>
+    <span>SONIC-O1 has been accepted to the <strong>EMNLP 2026 Main Conference</strong></span>
+    <a href="https://aclanthology.org/2026.emnlp-main.767/" target="_blank" rel="noreferrer">Read the paper →</a>
+  </div>
+
   <!-- Sticky top nav -->
   <header class="topbar" id="top">
     <div class="topbar-inner">
@@ -99,9 +254,11 @@
         <div class="hero-text">
           <h1 class="title">SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding</h1>
 
+          <p class="venue">EMNLP 2026 · Main Conference · Budapest, Hungary</p>
+
           <p class="authors">
             <a href="https://scholar.google.com/citations?user=Fmhn-MQAAAAJ&hl=en" target="_blank" rel="noreferrer">Ahmed Y. Radwan</a><sup>1</sup>,
-            <a href="https://scholar.google.ca/citations?user=FZRIusYAAAAJ&hl=en" target="_blank" rel="noreferrer">Christos Emmanouildis</a><sup>2</sup>,
+            <a href="https://scholar.google.ca/citations?user=FZRIusYAAAAJ&hl=en" target="_blank" rel="noreferrer">Christos Emmanouilidis</a><sup>2</sup>,
             <a href="https://scholar.google.ca/citations?user=WAljqloAAAAJ&hl=en" target="_blank" rel="noreferrer">Hina Tabassum</a><sup>3</sup>,
             <a href="https://scholar.google.com/citations?user=o1XZyLMAAAAJ&hl=en" target="_blank" rel="noreferrer">Deval Pandya</a><sup>1</sup>,
             <a href="https://scholar.google.com/citations?user=chcz7RMAAAAJ&hl=en" target="_blank" rel="noreferrer">Shaina Raza</a><sup>1</sup>
@@ -116,9 +273,9 @@
           <!-- Action buttons -->
           <div class="button-row">
             <a class="btn btn-primary" target="_blank" rel="noreferrer"
-               href="https://arxiv.org/abs/2601.21666">
-              <img src="assets/arxiv-logo.png" alt="" class="btn-icon" />
-              arXiv
+               href="https://aclanthology.org/2026.emnlp-main.767/">
+              <img src="assets/acl-logo.png" alt="" class="btn-icon" />
+              EMNLP 2026
             </a>
             <a class="btn btn-primary" target="_blank" rel="noreferrer"
                href="https://huggingface.co/datasets/vector-institute/sonic-o1">
@@ -176,15 +333,15 @@
       <h2>Abstract</h2>
       <div class="abstract-box">
         <p>
-          Multimodal Large Language Models (MLLMs) have become a major focus in recent AI research. However, most existing 
-          work still centers on static image understanding, while their ability to process sequential audio-video data remains 
-          underexplored. This gap highlights the need for a high-quality benchmark to systematically evaluate MLLM performance 
+          Multimodal Large Language Models (MLLMs) have become a major focus in recent AI research. However, most existing
+          work still centers on static image understanding, while their ability to process sequential audio-video data remains
+          underexplored. This gap highlights the need for a high-quality benchmark to systematically evaluate MLLM performance
           in dynamic, temporally grounded settings.
         </p>
         <p>
-          We introduce <strong>SONIC-O1</strong>, a comprehensive, fully human-verified benchmark spanning <strong>13</strong> 
-          real-world conversational domains with <strong>4,958</strong> annotations and demographic metadata. SONIC-O1 evaluates 
-          MLLMs on key tasks, including open-ended summarization, multiple-choice question answering, and temporal localization 
+          We introduce <strong>SONIC-O1</strong>, a comprehensive, fully human-verified benchmark spanning <strong>13</strong>
+          real-world conversational domains with <strong>4,958</strong> annotations and demographic metadata. SONIC-O1 evaluates
+          MLLMs on key tasks, including open-ended summarization, multiple-choice question answering, and temporal localization
           with supporting rationales (reasoning).
         </p>
         <p>
@@ -250,9 +407,9 @@
               <img src="assets/GitHub_Logo.png" alt="" class="link-icon" />
               GitHub Repository
             </a>
-            <a target="_blank" rel="noreferrer" href="https://arxiv.org/abs/2601.21666">
-              <img src="assets/arxiv-logo.png" alt="" class="link-icon" />
-              arXiv Paper
+            <a target="_blank" rel="noreferrer" href="https://aclanthology.org/2026.emnlp-main.767/">
+              <img src="assets/acl-logo.png" alt="" class="link-icon" />
+              EMNLP 2026 Paper
             </a>
           </div>
         </div>
@@ -432,7 +589,7 @@
     <section id="results" class="section">
       <h2>Results</h2>
       <p class="section-intro">
-        We evaluate <strong>8 state-of-the-art multimodal models</strong> on SONIC-O1.Closed-source models (Gemini 3.0 Pro)
+        We evaluate <strong>8 state-of-the-art multimodal models</strong> on SONIC-O1. Closed-source models (Gemini 3.0 Pro)
         consistently outperform open-source alternatives, though temporal localization remains challenging for all systems.
       </p>
 
@@ -613,88 +770,87 @@
             </tr>
           </thead>
           <tbody>
-            <tbody>
-              <tr class="highlight">
-                <td>Gemini 3.0 Pro †</td>
-                <td class="center">6.68</td>
-                <td class="center worst">6.02</td>
-                <td class="center best">7.05</td>
-                <td class="center">6.41</td>
-                <td class="center">6.70</td>
-                <td class="center">6.90</td>
-                <td class="center">1.03</td>
-              </tr>
-              <tr>
-                <td>Qwen3-Omni</td>
-                <td class="center">5.28</td>
-                <td class="center">4.39</td>
-                <td class="center">5.71</td>
-                <td class="center">4.99</td>
-                <td class="center worst">4.13</td>
-                <td class="center best">5.95</td>
-                <td class="center">1.82</td>
-              </tr>
-              <tr>
-                <td>UniMoE-2.0</td>
-                <td class="center">4.29</td>
-                <td class="center worst">3.45</td>
-                <td class="center">4.62</td>
-                <td class="center">3.70</td>
-                <td class="center">4.35</td>
-                <td class="center best">5.00</td>
-                <td class="center">1.55</td>
-              </tr>
-              <tr>
-                <td>MiniCPM-o-2.6</td>
-                <td class="center">3.26</td>
-                <td class="center worst">2.92</td>
-                <td class="center">3.26</td>
-                <td class="center">3.04</td>
-                <td class="center best">3.61</td>
-                <td class="center">3.57</td>
-                <td class="center">0.69</td>
-              </tr>
-              <tr>
-                <td>Baichuan-Omni 1.5</td>
-                <td class="center">3.22</td>
-                <td class="center">2.55</td>
-                <td class="center">3.61</td>
-                <td class="center worst">2.44</td>
-                <td class="center">3.70</td>
-                <td class="center best">4.29</td>
-                <td class="center">1.85</td>
-              </tr>
-              <tr>
-                <td>OLA</td>
-                <td class="center">4.27</td>
-                <td class="center worst">3.60</td>
-                <td class="center">4.29</td>
-                <td class="center">3.62</td>
-                <td class="center">4.39</td>
-                <td class="center best">4.76</td>
-                <td class="center">1.16</td>
-              </tr>
-              <tr>
-                <td>VITA 1.5</td>
-                <td class="center">2.50</td>
-                <td class="center">2.31</td>
-                <td class="center">2.65</td>
-                <td class="center">2.21</td>
-                <td class="center worst">1.65</td>
-                <td class="center best">2.76</td>
-                <td class="center">1.11</td>
-              </tr>
-              <tr>
-                <td>VideoLLaMA2</td>
-                <td class="center">1.45</td>
-                <td class="center">1.38</td>
-                <td class="center best">1.63</td>
-                <td class="center">1.23</td>
-                <td class="center">1.04</td>
-                <td class="center worst">1.00</td>
-                <td class="center">0.63</td>
-              </tr>
-            </tbody>
+            <tr class="highlight">
+              <td>Gemini 3.0 Pro †</td>
+              <td class="center">6.68</td>
+              <td class="center worst">6.02</td>
+              <td class="center best">7.05</td>
+              <td class="center">6.41</td>
+              <td class="center">6.70</td>
+              <td class="center">6.90</td>
+              <td class="center">1.03</td>
+            </tr>
+            <tr>
+              <td>Qwen3-Omni</td>
+              <td class="center">5.28</td>
+              <td class="center">4.39</td>
+              <td class="center">5.71</td>
+              <td class="center">4.99</td>
+              <td class="center worst">4.13</td>
+              <td class="center best">5.95</td>
+              <td class="center">1.82</td>
+            </tr>
+            <tr>
+              <td>UniMoE-2.0</td>
+              <td class="center">4.29</td>
+              <td class="center worst">3.45</td>
+              <td class="center">4.62</td>
+              <td class="center">3.70</td>
+              <td class="center">4.35</td>
+              <td class="center best">5.00</td>
+              <td class="center">1.55</td>
+            </tr>
+            <tr>
+              <td>MiniCPM-o-2.6</td>
+              <td class="center">3.26</td>
+              <td class="center worst">2.92</td>
+              <td class="center">3.26</td>
+              <td class="center">3.04</td>
+              <td class="center best">3.61</td>
+              <td class="center">3.57</td>
+              <td class="center">0.69</td>
+            </tr>
+            <tr>
+              <td>Baichuan-Omni 1.5</td>
+              <td class="center">3.22</td>
+              <td class="center">2.55</td>
+              <td class="center">3.61</td>
+              <td class="center worst">2.44</td>
+              <td class="center">3.70</td>
+              <td class="center best">4.29</td>
+              <td class="center">1.85</td>
+            </tr>
+            <tr>
+              <td>OLA</td>
+              <td class="center">4.27</td>
+              <td class="center worst">3.60</td>
+              <td class="center">4.29</td>
+              <td class="center">3.62</td>
+              <td class="center">4.39</td>
+              <td class="center best">4.76</td>
+              <td class="center">1.16</td>
+            </tr>
+            <tr>
+              <td>VITA 1.5</td>
+              <td class="center">2.50</td>
+              <td class="center">2.31</td>
+              <td class="center">2.65</td>
+              <td class="center">2.21</td>
+              <td class="center worst">1.65</td>
+              <td class="center best">2.76</td>
+              <td class="center">1.11</td>
+            </tr>
+            <tr>
+              <td>VideoLLaMA2</td>
+              <td class="center">1.45</td>
+              <td class="center">1.38</td>
+              <td class="center best">1.63</td>
+              <td class="center">1.23</td>
+              <td class="center">1.04</td>
+              <td class="center worst">1.00</td>
+              <td class="center">0.63</td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
@@ -802,88 +958,99 @@
       <div class="table-wrap">
         <table class="table">
           <thead>
-            <tbody>
-              <tr class="highlight">
-                <td>Gemini 3.0 Pro †</td>
-                <td class="center">23.0</td>
-                <td class="center worst">19.5</td>
-                <td class="center">30.7</td>
-                <td class="center">23.8</td>
-                <td class="center best">40.9</td>
-                <td class="center">21.1</td>
-                <td class="center">21.4</td>
-              </tr>
-              <tr>
-                <td>Qwen3-Omni</td>
-                <td class="center">2.6</td>
-                <td class="center">1.8</td>
-                <td class="center best">2.9</td>
-                <td class="center">2.3</td>
-                <td class="center worst">0.0</td>
-                <td class="center">1.6</td>
-                <td class="center">2.9</td>
-              </tr>
-              <tr>
-                <td>UniMoE-2.0</td>
-                <td class="center">1.2</td>
-                <td class="center">0.6</td>
-                <td class="center">0.6</td>
-                <td class="center worst">0.1</td>
-                <td class="center best">1.3</td>
-                <td class="center">0.2</td>
-                <td class="center">1.2</td>
-              </tr>
-              <tr>
-                <td>MiniCPM-o-2.6</td>
-                <td class="center">0.9</td>
-                <td class="center">0.3</td>
-                <td class="center">0.8</td>
-                <td class="center">0.2</td>
-                <td class="center worst">0.0</td>
-                <td class="center best">2.6</td>
-                <td class="center">2.6</td>
-              </tr>
-              <tr>
-                <td>Baichuan-Omni 1.5</td>
-                <td class="center">1.3</td>
-                <td class="center">0.8</td>
-                <td class="center">1.6</td>
-                <td class="center">0.8</td>
-                <td class="center best">5.8</td>
-                <td class="center worst">0.3</td>
-                <td class="center">5.5</td>
-              </tr>
-              <tr>
-                <td>OLA</td>
-                <td class="center worst">1.2</td>
-                <td class="center">1.7</td>
-                <td class="center">1.3</td>
-                <td class="center">1.4</td>
-                <td class="center best">9.2</td>
-                <td class="center">1.4</td>
-                <td class="center">8.0</td>
-              </tr>
-              <tr>
-                <td>VITA 1.5</td>
-                <td class="center best">1.4</td>
-                <td class="center best">1.4</td>
-                <td class="center best">1.4</td>
-                <td class="center worst">0.8</td>
-                <td class="center">1.3</td>
-                <td class="center">1.2</td>
-                <td class="center">0.6</td>
-              </tr>
-              <tr>
-                <td>VideoLLaMA2</td>
-                <td class="center">0.5</td>
-                <td class="center">0.3</td>
-                <td class="center">0.4</td>
-                <td class="center worst">0.0</td>
-                <td class="center best">1.3</td>
-                <td class="center worst">0.0</td>
-                <td class="center">1.3</td>
-              </tr>
-            </tbody>
+            <tr>
+              <th>Model</th>
+              <th class="center">White</th>
+              <th class="center">Black</th>
+              <th class="center">Asian</th>
+              <th class="center">Hispanic</th>
+              <th class="center">Indigenous</th>
+              <th class="center">Arab</th>
+              <th class="center">Gap ↓</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight">
+              <td>Gemini 3.0 Pro †</td>
+              <td class="center">23.0</td>
+              <td class="center worst">19.5</td>
+              <td class="center">30.7</td>
+              <td class="center">23.8</td>
+              <td class="center best">40.9</td>
+              <td class="center">21.1</td>
+              <td class="center">21.4</td>
+            </tr>
+            <tr>
+              <td>Qwen3-Omni</td>
+              <td class="center">2.6</td>
+              <td class="center">1.8</td>
+              <td class="center best">2.9</td>
+              <td class="center">2.3</td>
+              <td class="center worst">0.0</td>
+              <td class="center">1.6</td>
+              <td class="center">2.9</td>
+            </tr>
+            <tr>
+              <td>UniMoE-2.0</td>
+              <td class="center">1.2</td>
+              <td class="center">0.6</td>
+              <td class="center">0.6</td>
+              <td class="center worst">0.1</td>
+              <td class="center best">1.3</td>
+              <td class="center">0.2</td>
+              <td class="center">1.2</td>
+            </tr>
+            <tr>
+              <td>MiniCPM-o-2.6</td>
+              <td class="center">0.9</td>
+              <td class="center">0.3</td>
+              <td class="center">0.8</td>
+              <td class="center">0.2</td>
+              <td class="center worst">0.0</td>
+              <td class="center best">2.6</td>
+              <td class="center">2.6</td>
+            </tr>
+            <tr>
+              <td>Baichuan-Omni 1.5</td>
+              <td class="center">1.3</td>
+              <td class="center">0.8</td>
+              <td class="center">1.6</td>
+              <td class="center">0.8</td>
+              <td class="center best">5.8</td>
+              <td class="center worst">0.3</td>
+              <td class="center">5.5</td>
+            </tr>
+            <tr>
+              <td>OLA</td>
+              <td class="center worst">1.2</td>
+              <td class="center">1.7</td>
+              <td class="center">1.3</td>
+              <td class="center">1.4</td>
+              <td class="center best">9.2</td>
+              <td class="center">1.4</td>
+              <td class="center">8.0</td>
+            </tr>
+            <tr>
+              <td>VITA 1.5</td>
+              <td class="center best">1.4</td>
+              <td class="center best">1.4</td>
+              <td class="center best">1.4</td>
+              <td class="center worst">0.8</td>
+              <td class="center">1.3</td>
+              <td class="center">1.2</td>
+              <td class="center">0.6</td>
+            </tr>
+            <tr>
+              <td>VideoLLaMA2</td>
+              <td class="center">0.5</td>
+              <td class="center">0.3</td>
+              <td class="center">0.4</td>
+              <td class="center worst">0.0</td>
+              <td class="center best">1.3</td>
+              <td class="center worst">0.0</td>
+              <td class="center">1.3</td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <p class="table-note">
@@ -941,15 +1108,15 @@
           </div>
         </div>
         <p>
-          We also observe <strong>persistent demographic disparities across models</strong>, emphasizing 
-          the need for more equitable multimodal evaluation. Performance degrades across demographic groups, 
-          with <strong>Black and Indigenous participants showing systematically lower scores</strong> across 
-          most models and tasks. Temporal localization exhibits the most severe disparities, with some models 
-          collapsing to 0.0% R@0.5 for Indigenous participants while maintaining 40.9% for the same group 
+          We also observe <strong>persistent demographic disparities across models</strong>, emphasizing
+          the need for more equitable multimodal evaluation. Performance degrades across demographic groups,
+          with <strong>Black and Indigenous participants showing systematically lower scores</strong> across
+          most models and tasks. Temporal localization exhibits the most severe disparities, with some models
+          collapsing to 0.0% R@0.5 for Indigenous participants while maintaining 40.9% for the same group
           with Gemini.
         </p>
         <p>
-          Overall, SONIC-O1 offers a practical testbed for measuring robustness and fairness in realistic 
+          Overall, SONIC-O1 offers a practical testbed for measuring robustness and fairness in realistic
           audio-video scenarios, and we hope it will guide future work on:
         </p>
         <ul class="bullets">
@@ -964,12 +1131,10 @@
           suite (dataset with diverse video durations, evaluation scripts, interactive leaderboard) under a research license for reproducibility and community
           development in audio-video AI research.
         </p>
-      </div>
-    </section>
 
         <div class="button-row">
           <a class="btn btn-primary" target="_blank" rel="noreferrer"
-             href="https://arxiv.org/abs/2601.21666">
+             href="https://aclanthology.org/2026.emnlp-main.767/">
             Read the Paper →
           </a>
         </div>
@@ -993,17 +1158,17 @@
             </svg>
           </button>
           <pre id="code-install"><code># Clone repository (note: nested structure)
-            git clone https://github.com/VectorInstitute/sonic-o1.git
-            cd sonic-o1/sonic-o1
+git clone https://github.com/VectorInstitute/sonic-o1.git
+cd sonic-o1/sonic-o1
 
-            # Download dataset + annotations from Hugging Face
-            pip install huggingface_hub
-            huggingface-cli download vector-institute/sonic-o1 --repo-type dataset --local-dir ./
+# Download dataset + annotations from Hugging Face
+pip install huggingface_hub
+huggingface-cli download vector-institute/sonic-o1 --repo-type dataset --local-dir ./
 
-            # Setup Python environment
-            python -m venv .venv
-            source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-            pip install -r requirements_venv.txt</code></pre>
+# Setup Python environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements_venv.txt</code></pre>
         </div>
       </div>
 
@@ -1017,16 +1182,16 @@
           </button>
           <pre id="code-load"><code>from datasets import load_dataset
 
-            # Load individual tasks
-            ds_summ = load_dataset("vector-institute/sonic-o1", "task1_summarization")
-            ds_mcq = load_dataset("vector-institute/sonic-o1", "task2_mcq")
-            ds_temporal = load_dataset("vector-institute/sonic-o1", "task3_temporal_localization")
+# Load individual tasks
+ds_summ = load_dataset("vector-institute/sonic-o1", "task1_summarization")
+ds_mcq = load_dataset("vector-institute/sonic-o1", "task2_mcq")
+ds_temporal = load_dataset("vector-institute/sonic-o1", "task3_temporal_localization")
 
-            # Each sample includes:
-            # - video metadata (ID, topic, duration, demographics)
-            # - question/prompt
-            # - ground truth answer
-            # - rationale (for MCQ and temporal tasks)</code></pre>
+# Each sample includes:
+# - video metadata (ID, topic, duration, demographics)
+# - question/prompt
+# - ground truth answer
+# - rationale (for MCQ and temporal tasks)</code></pre>
         </div>
       </div>
 
@@ -1064,12 +1229,27 @@
           Copy BibTeX
         </button>
 
-        <pre class="bibtex" id="bibtexBlock"><code>@article{radwan2026sonico1,
-          title={SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding},
-          author={Radwan, Ahmed Y and Emmanouilidis, Christos and Tabassum, Hina and Pandya, Deval and Raza, Shaina},
-          journal={arXiv preprint arXiv:2601.21666},
-          year={2026}
-        } </code></pre>
+        <pre class="bibtex" id="bibtexBlock"><code>@inproceedings{radwan-etal-2026-sonic,
+    title = "{SONIC}-{O}1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding",
+    author = "Radwan, Ahmed Y.  and
+      Emmanouilidis, Christos  and
+      Tabassum, Hina  and
+      Pandya, Deval  and
+      Raza, Shaina",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Jessy  and
+      Elliott, Desmond",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.emnlp-main.767/",
+    doi = "10.18653/2026.emnlp-main.767",
+    pages = "17786--17825",
+    ISBN = "979-8-89176-459-0",
+}</code></pre>
 
         <p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p>
       </div>
@@ -1118,7 +1298,8 @@
             <li><a href="https://huggingface.co/datasets/vector-institute/sonic-o1" target="_blank" rel="noreferrer">Dataset (Hugging Face)</a></li>
             <li><a href="https://huggingface.co/spaces/vector-institute/sonic-o1-leaderboard" target="_blank" rel="noreferrer">Leaderboard</a></li>
             <li><a href="https://github.com/VectorInstitute/sonic-o1" target="_blank" rel="noreferrer">GitHub Repository</a></li>
-            <li><a href="https://arxiv.org/abs/2601.21666" target="_blank" rel="noreferrer">arXiv Paper</a></li>
+            <li><a href="https://aclanthology.org/2026.emnlp-main.767/" target="_blank" rel="noreferrer">EMNLP 2026 Paper</a></li>
+            <li><a href="https://arxiv.org/abs/2601.21666" target="_blank" rel="noreferrer">arXiv Preprint</a></li>
           </ul>
         </div>
       </div>
