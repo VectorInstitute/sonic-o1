@@ -2,7 +2,7 @@
 
 [![Hugging Face Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/vector-institute/sonic-o1)
 [![Leaderboard](https://img.shields.io/badge/HuggingFace-Leaderboard-blue?logo=huggingface&logoColor=black)](https://huggingface.co/spaces/vector-institute/sonic-o1-leaderboard)
-[![arXiv](https://img.shields.io/badge/arXiv-2601.21666-b31b1b.svg)](https://arxiv.org/abs/2601.21666)
+[![Paper](https://img.shields.io/badge/EMNLP-2026-ED1C24.svg)](https://aclanthology.org/2026.emnlp-main.767/)
 [![BibTeX](https://img.shields.io/badge/BibTeX-Citation-lightgrey)](#citation)
 [![Contact](https://img.shields.io/badge/Contact-shaina.raza%40vectorinstitute.ai-green)](mailto:shaina.raza@vectorinstitute.ai)
 
@@ -295,11 +295,26 @@ Each stage uses YAML configuration files:
 If you use this dataset or pipeline in your research, please cite:
 
 ```bibtex
-@article{radwan2026sonico1,
-  title={SONIC-O1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding},
-  author={Radwan, Ahmed Y and Emmanouilidis, Christos and Tabassum, Hina and Pandya, Deval and Raza, Shaina},
-  journal={arXiv preprint arXiv:2601.21666},
-  year={2026}
+@inproceedings{radwan-etal-2026-sonic,
+    title = "{SONIC}-{O}1: A Real-World Benchmark for Evaluating Multimodal Large Language Models on Audio-Video Understanding",
+    author = "Radwan, Ahmed Y.  and
+      Emmanouilidis, Christos  and
+      Tabassum, Hina  and
+      Pandya, Deval  and
+      Raza, Shaina",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Jessy  and
+      Elliott, Desmond",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.emnlp-main.767/",
+    doi = "10.18653/2026.emnlp-main.767",
+    pages = "17786--17825",
+    ISBN = "979-8-89176-459-0",
 }
 ```
 
